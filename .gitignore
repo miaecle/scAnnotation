@@ -1,0 +1,30 @@
+# Secrets
+.env
+*.key
+
+# Large data — store elsewhere (e.g. Zenodo, GCS, local)
+Datasets/
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Claude Code session files
+.claude/
+claude_call

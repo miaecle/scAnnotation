@@ -1,0 +1,51 @@
+description: >
+  PBMC broad lineage marker panel.
+  Covers the 8 major cell types in the PBMC CiteSeq reference dataset
+  (celltype.l1): B, CD4 T, CD8 T, NK, Mono, DC, other T, other.
+
+# Positive markers: one or more should be present for the relevant cell type.
+positive:
+  # T cell lineage
+  - CD3D
+  - CD3E
+  - CD3G
+  # CD4 T
+  - CD4
+  - IL7R
+  - CCR7
+  - FOXP3    # Treg
+  # CD8 T
+  - CD8A
+  - CD8B
+  # NK
+  - GNLY
+  - NKG7
+  - NCAM1    # CD56
+  - KLRD1
+  # B cell
+  - CD79A
+  - CD79B
+  - MS4A1    # CD20
+  - IGKC
+  # Monocyte
+  - CD14
+  - LYZ
+  - CST3
+  - S100A8
+  - S100A9
+  - FCGR3A   # CD16 (non-classical mono / NK)
+  # DC
+  - FCER1A
+  - CLEC10A
+  - HLA-DRA
+  - HLA-DRB1
+  # Platelet / other
+  - PPBP
+  - PF4
+
+# Negative markers: known to be absent in most major PBMC types.
+# Flag if unexpectedly present (may indicate doublets or contamination).
+negative:
+  - HBA1     # erythrocyte contamination
+  - HBA2
+  - HBB

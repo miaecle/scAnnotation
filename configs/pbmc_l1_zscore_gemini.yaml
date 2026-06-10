@@ -1,0 +1,53 @@
+# Axis 3: conservative + HB + TCR/Ig VDJ filtering
+# Axis 4: top-500 by z-score (cell-specific markers)
+# Axis 2: single cell
+# LLM: Gemini 2.0 Flash
+
+dataset_path: Datasets/PBMC_CiteSeqRef/pbmc_citeseq_ref_2021.h5ad
+tissue: PBMC
+
+global_metrics:
+  n_top_hvg: 2000
+  min_cells_pct: 0.01
+  compute_gini: true
+  gini_scope: hvg
+
+filter:
+  exclude_mt: true
+  exclude_ribo: true
+  exclude_low_expr: true
+  exclude_hb: true
+  exclude_tcr_ig: true
+  exclude_sex_chr: false
+  gini_min: null
+
+selection:
+  strategy: zscore
+  n_top: 500
+  n_top_secondary: 50
+  modalities: [rna, adt]
+  marker_panel_path: null
+
+input:
+  mode: single_cell
+  knn_k: 20
+  knn_use_rep: X_pca
+
+llm:
+  backend: gemini
+  model: gemini-2.0-flash
+  temperature: 0.0
+  max_tokens: 512
+  api_key_env: GOOGLE_API_KEY
+
+evaluation:
+  label_col: celltype.l1
+  n_per_class: 5
+  seed: 42
+  strategies: [exact, keyword]
+  judge_backend: null
+
+output:
+  results_dir: results
+  experiment_name: pbmc_l1_zscore500_gemini_flash
+  save_results: true
