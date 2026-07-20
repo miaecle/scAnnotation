@@ -164,7 +164,7 @@ def _group_aggregate(adata: ad.AnnData, cell_indices, layer: str) -> np.ndarray:
 # Score functions
 # ---------------------------------------------------------------------------
 
-def score_by_expr(adata: ad.AnnData, cell_indices, layer: str = "lognorm") -> pd.Series:
+def score_by_expr(adata: ad.AnnData, cell_indices, layer: str = "lognorm", mask_zeros: bool = True) -> pd.Series:
     """Normalized expression score.
 
     Score = aggregated layer value via :func:`_group_aggregate`.  Entries with
@@ -179,11 +179,14 @@ def score_by_expr(adata: ad.AnnData, cell_indices, layer: str = "lognorm") -> pd
         ``pd.Series`` indexed by feature name.
     """
     expr = _group_aggregate(adata, cell_indices, layer)
-    scores = np.where(expr > 0, expr, -np.inf)
+    if mask_zeros:
+        scores = np.where(expr > 0, expr, -np.inf)
+    else:
+        scores = expr
     return _to_series(scores, adata)
 
 
-def score_by_zscore(adata: ad.AnnData, cell_indices, layer: str = "lognorm") -> pd.Series:
+def score_by_zscore(adata: ad.AnnData, cell_indices, layer: str = "lognorm", mask_zeros: bool = True) -> pd.Series:
     """Z-score of group expression relative to the population.
 
     Group expression is computed via :func:`_group_aggregate`.  Z-score is
@@ -211,11 +214,14 @@ def score_by_zscore(adata: ad.AnnData, cell_indices, layer: str = "lognorm") -> 
     mean_e = adata.var["mean_expr"].values.astype(float)
     std_e = adata.var["std_expr"].values.astype(float)
     z = (expr - mean_e) / np.where(std_e > 0, std_e, 1.0)
-    scores = np.where(expr > 0, z, -np.inf)
+    if mask_zeros:
+        scores = np.where(expr > 0, z, -np.inf)
+    else:
+        scores = z
     return _to_series(scores, adata)
 
 
-def score_by_tfidf(adata: ad.AnnData, cell_indices, layer: str = "lognorm") -> pd.Series:
+def score_by_tfidf(adata: ad.AnnData, cell_indices, layer: str = "lognorm", mask_zeros: bool = True) -> pd.Series:
     """TF-IDF score computed on mean pre-transform expression.
 
     - TF  = ``norm_mean / Σ norm_mean`` where ``norm_mean = mean(expm1(layer))``
@@ -253,7 +259,10 @@ def score_by_tfidf(adata: ad.AnnData, cell_indices, layer: str = "lognorm") -> p
         return _to_series(np.full(adata.n_vars, -np.inf), adata)
     idf = adata.var["idf"].values.astype(float)
     tf = norm_mean / total
-    scores = np.where(norm_mean > 0, tf * idf, -np.inf)
+    if mask_zeros:
+        scores = np.where(norm_mean > 0, tf * idf, -np.inf)
+    else:
+        scores = tf * idf
     return _to_series(scores, adata)
 
 
@@ -262,6 +271,7 @@ def score_by_de(
     cell_indices,
     layer: str = "lognorm",
     min_pct_group: float = 0.1,
+    mask_zeros: bool = True
 ) -> pd.Series:
     """Log fold-change of a cell group vs the rest of the population.
 
@@ -302,7 +312,10 @@ def score_by_de(
     mean_rest = (mean_all * n_total - mean_group * n_group) / max(n_total - n_group, 1)
 
     log_fc = mean_group - mean_rest
-    scores = np.where(pct_group >= min_pct_group, log_fc, -np.inf)
+    if mask_zeros:
+        scores = np.where(pct_group >= min_pct_group, log_fc, -np.inf)
+    else:
+        scores = log_fc
     return _to_series(scores, adata)
 
 
@@ -317,6 +330,7 @@ def compute_scores(
     gene_mask: Optional[np.ndarray] = None,
     min_pct_group: float = 0.1,
     layer: str = "lognorm",
+    mask_zeros: bool = True,
 ) -> pd.Series:
     """Compute per-feature scores for a cell or group of cells.
 
@@ -344,13 +358,13 @@ def compute_scores(
         ValueError: Unknown strategy or missing ``adata.var`` columns.
     """
     if strategy == "expr":
-        scores = score_by_expr(adata, cell_indices, layer=layer)
+        scores = score_by_expr(adata, cell_indices, layer=layer, mask_zeros=mask_zeros)
     elif strategy == "zscore":
-        scores = score_by_zscore(adata, cell_indices, layer=layer)
+        scores = score_by_zscore(adata, cell_indices, layer=layer, mask_zeros=mask_zeros)
     elif strategy == "tfidf":
-        scores = score_by_tfidf(adata, cell_indices, layer=layer)
+        scores = score_by_tfidf(adata, cell_indices, layer=layer, mask_zeros=mask_zeros)
     elif strategy == "de":
-        scores = score_by_de(adata, cell_indices, layer=layer, min_pct_group=min_pct_group)
+        scores = score_by_de(adata, cell_indices, layer=layer, min_pct_group=min_pct_group, mask_zeros=mask_zeros)
     else:
         raise ValueError(
             f"Unknown strategy: {strategy!r}. Choose: expr | zscore | tfidf | de"

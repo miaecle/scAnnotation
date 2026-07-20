@@ -215,14 +215,16 @@ def score_gene_programs(
     if method == "ucell":
         return _score_ucell(adata, cell_indices, programs_in_data, gene_mask, min_genes)
 
-    z = compute_scores(adata, cell_indices, "zscore", gene_mask)
+    z = compute_scores(adata, cell_indices, "zscore", gene_mask, mask_zeros=False)
+    assert np.all(np.isfinite(z[gene_mask])), "infinite z-scores identified"
 
     # Precompute bin mapping once — shared across all programs in this call
     if method == "tirosh":
         rng = np.random.default_rng(random_state)
-        bin_ids = _gene_to_bin(z)
+        mean_expr = adata.var["mean_expr"][gene_mask]
+        bin_ids = _gene_to_bin(mean_expr)
         gene_to_bin_map = {g: int(b) for g, b in bin_ids.items() if not np.isnan(b)}
-        bin_pool = _build_background_pool(z)
+        bin_pool = _build_background_pool(mean_expr)
 
     out: dict = {}
     for subtype, genes in programs_in_data.items():
@@ -230,10 +232,17 @@ def score_gene_programs(
         if len(valid) < min_genes:
             out[subtype] = float("nan")
             continue
+
         prog_score = float(z[valid].mean())
         if method == "tirosh":
             ctrl = _sample_background(valid, gene_to_bin_map, bin_pool, n_background, rng)
-            ctrl_score = float(z[ctrl].mean()) if ctrl else 0.0
+
+            if ctrl:
+                ctrl_vals = z[ctrl].values
+                assert np.all(np.isfinite(ctrl_vals)), "infinite z-scores identified in control genes"
+                ctrl_score = float(ctrl_vals.mean())
+            else:
+                ctrl_score = 0.0
             out[subtype] = prog_score - ctrl_score
         else:
             out[subtype] = prog_score
@@ -310,7 +319,15 @@ def _score_ucell(
     # Z-score the cell against the full population — uses pre-computed mean_expr /
     # std_expr, consistent with mean_z and tirosh.  No mask here so N is the full
     # set of expressed genes and ranks are comparable across programs.
-    z_unmasked = compute_scores(adata, cell_indices, "zscore", gene_mask=None)
+    #
+    # mask_zeros=False is required for correctness: with masking, unexpressed genes
+    # become -inf, which .rank() still orders (so ranks span all n_vars genes) while
+    # N below counts only the finite ones.  The mismatched denominator pushed scores
+    # far outside [0, 1] and made them scale with each cell's expressed-gene count.
+    # Unmasked, every z is finite, N == len(ranks), and unexpressed genes are ordered
+    # by their z-score instead of collapsing into a single bottom tie.
+    z_unmasked = compute_scores(adata, cell_indices, "zscore", gene_mask=None, mask_zeros=False)
+
     # Rank descending: rank 1 = highest z-score (most cell-specific)
     ranks = z_unmasked.rank(ascending=False, method="average")
     N = int(np.isfinite(z_unmasked.values).sum())  # genes with a finite z-score
@@ -332,11 +349,12 @@ def _score_ucell(
             g for g in genes
             if g in ranks.index
             and (allowed is None or g in allowed)
-            and np.isfinite(z_unmasked.get(g, float("nan")))
         ]
+        
         if len(valid) < min_genes or N == 0:
             out[subtype] = float("nan")
             continue
+            
         n = len(valid)
         sum_ranks = float(ranks[valid].sum())
         u_norm = 1.0 - (sum_ranks - n * (n + 1) / 2) / (n * N)
