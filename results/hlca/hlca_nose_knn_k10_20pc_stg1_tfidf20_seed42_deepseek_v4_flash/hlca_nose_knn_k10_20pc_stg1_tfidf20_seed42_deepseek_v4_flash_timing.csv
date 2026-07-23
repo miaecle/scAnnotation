@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+hlca_nose_knn_k10_20pc_stg1_tfidf20_seed42_deepseek_v4_flash,2026-07-14 15:29:30,2026-07-14 15:33:49,259.49439573287964,4.324906595547994

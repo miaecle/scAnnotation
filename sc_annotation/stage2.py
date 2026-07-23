@@ -2,7 +2,8 @@
 
 Workflow
 --------
-1. :func:`make_gemini_json_caller` — build a reusable JSON-mode caller (once per session).
+1. :func:`make_gemini_json_caller` / :func:`make_openai_json_caller` — build a reusable
+   JSON-mode caller (once per session).
 2. :func:`query_subtype_programs` — ask the LLM for fine-grained subtype programs based
    on a stage-1 label. Also includes commonly confused neighboring cell types so pathway
    scoring can confirm or override the stage-1 call.
@@ -15,65 +16,413 @@ Workflow
 from __future__ import annotations
 
 import json
+import time
 from typing import Optional
 
 import numpy as np
+import pandas as pd
 import anndata as ad
 
 
 # ─── Backend factory ────────────────────────────────────────────────────────
 
+
+def _fmt_numeric(value: float, decimals: int = 3) -> str:
+    return f"{value:.{decimals}f}"
+
+
+def _extract_first_json_object(text: str) -> dict:
+    """Parse a JSON object, tolerating extra text around the first object."""
+    text = text.strip()
+    try:
+        parsed = json.loads(text)
+    except json.JSONDecodeError as exc:
+        if "Extra data" not in str(exc):
+            raise
+
+        depth = 0
+        in_string = False
+        escape = False
+        for i, ch in enumerate(text):
+            if escape:
+                escape = False
+                continue
+            if ch == "\\":
+                escape = True
+                continue
+            if ch == '"':
+                in_string = not in_string
+                continue
+            if in_string:
+                continue
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+            if depth == 0:
+                parsed = json.loads(text[: i + 1])
+                break
+        else:
+            raise
+    if not isinstance(parsed, dict):
+        raise ValueError(f"Expected a JSON object, got {type(parsed).__name__}. Raw response: {text!r}")
+    return parsed
+
+
+def _validate_programs_payload(programs: dict) -> dict[str, dict[str, object]]:
+    """Validate the strict stage-2 schema returned by the LLM.
+
+    Expected form:
+    ``{subtype_name: {"genes": [...], "description": "..."}}``.
+    """
+    if not isinstance(programs, dict):
+        raise TypeError(
+            f"Expected stage-2 programs to be a dict, got {type(programs).__name__}: {programs!r}"
+        )
+
+    validated: dict[str, dict[str, object]] = {}
+    for subtype, info in programs.items():
+        if not isinstance(info, dict):
+            raise TypeError(
+                "Each stage-2 subtype entry must be a dict with 'genes' and 'description'; "
+                f"got {type(info).__name__} for {subtype!r}: {info!r}"
+            )
+
+        if "genes" not in info or "description" not in info:
+            raise ValueError(
+                f"Stage-2 subtype {subtype!r} must include both 'genes' and 'description': {info!r}"
+            )
+
+        genes = info["genes"]
+        description = info["description"]
+
+        if not isinstance(genes, list):
+            raise TypeError(
+                f"Stage-2 subtype {subtype!r} has non-list genes payload {type(genes).__name__}: {genes!r}"
+            )
+        if not isinstance(description, str) or not description.strip():
+            raise ValueError(
+                f"Stage-2 subtype {subtype!r} has missing/empty description: {description!r}"
+            )
+
+        cleaned_genes = []
+        for gene in genes:
+            if not isinstance(gene, str) or not gene.strip():
+                raise ValueError(
+                    f"Stage-2 subtype {subtype!r} contains an invalid gene entry: {gene!r}"
+                )
+            cleaned_genes.append(gene.strip())
+
+        if not cleaned_genes:
+            raise ValueError(f"Stage-2 subtype {subtype!r} has an empty genes list.")
+
+        validated[str(subtype)] = {
+            "genes": cleaned_genes,
+            "description": description.strip(),
+        }
+
+    if not validated:
+        raise ValueError("Stage-2 program payload is empty.")
+
+    return validated
+
+
 def make_gemini_json_caller(
-    model: str = "gemini-2.5-flash",
+    model: str = "gemini-3.5-flash",
     api_key: str | None = None,
     max_output_tokens: int = 8192,
     thinking_budget: int | None = 0,
+    use_context_cache: bool = False,
+    context_cache_ttl_seconds: int = 3600,
+    max_retries: int = 3,
+    base_sleep: float = 2.0,
+    max_sleep: float = 30.0,
 ):
-    """Return a callable ``(prompt, system_message) -> dict`` that queries Gemini in JSON mode.
+    """Return a callable ``(prompt, system_message, cached_user_prefix=None, cache_key=None) -> dict``.
 
     Using ``response_mime_type='application/json'`` activates constrained decoding,
     which guarantees structurally valid JSON output regardless of content length.
 
     Args:
-        model: Gemini model ID (e.g. ``'gemini-2.5-flash'``, ``'gemini-2.0-flash'``).
+        model: Gemini model ID (e.g. ``'gemini-3.5-flash'``, ``'gemini-3.0-flash'``).
         api_key: Google API key. Reads ``GOOGLE_API_KEY`` env var if ``None``.
         max_output_tokens: Total output token budget for each call.
         thinking_budget:
             ``0``    — disable thinking entirely (recommended for structured lookups;
-                       avoids the Gemini 2.5 series consuming most of the output budget
+                       avoids the Gemini 3.5 series consuming most of the output budget
                        on hidden chain-of-thought before a single JSON token is written).
-            ``None`` — use the model default (problematic on 2.5-series with small budgets).
+            ``None`` — use the model default (problematic on 3.5-series with small budgets).
             ``int>0`` — explicit cap for tasks that benefit from light reasoning.
     """
     from google import genai
     from google.genai import types as _gtypes
 
     client = genai.Client(api_key=api_key)
+    context_cache_names: dict[str, str | None] = {}
+    usage_history: list[dict] = []
+    last_usage: dict | None = None
+    if context_cache_ttl_seconds <= 0:
+        raise ValueError("context_cache_ttl_seconds must be > 0.")
 
-    def _call(prompt: str, system_message: str = "") -> dict:
+    def _is_cache_too_small_error(exc: Exception) -> bool:
+        msg = str(exc)
+        return "Cached content is too small" in msg or "min_total_token_count" in msg
+
+    def _make_cache_lookup_key(system_message: str, cached_user_prefix: str | None, cache_key: str | None) -> str:
+        if cache_key:
+            return cache_key
+        return f"sys::{system_message}\nuser::{cached_user_prefix or ''}"
+
+    def _get_cached_content_name(
+        system_message: str,
+        cached_user_prefix: str | None = None,
+        cache_key: str | None = None,
+    ) -> str | None:
+        if not use_context_cache:
+            return None
+        if not system_message and not cached_user_prefix:
+            return None
+
+        lookup_key = _make_cache_lookup_key(system_message, cached_user_prefix, cache_key)
+        if lookup_key in context_cache_names:
+            return context_cache_names[lookup_key]
+
+        try:
+            cache_cfg: dict = {
+                "ttl": f"{context_cache_ttl_seconds}s",
+            }
+            if system_message:
+                cache_cfg["system_instruction"] = system_message
+            if cached_user_prefix:
+                cache_cfg["contents"] = cached_user_prefix
+            cached_content = client.caches.create(
+                model=model,
+                config=_gtypes.CreateCachedContentConfig(**cache_cfg),
+            )
+            cache_name = getattr(cached_content, "name", None)
+            if not cache_name:
+                raise RuntimeError(f"Gemini cache creation returned no name. Raw response: {cached_content!r}")
+        except Exception as exc:
+            if _is_cache_too_small_error(exc):
+                context_cache_names[lookup_key] = None
+                return None
+            raise
+
+        context_cache_names[lookup_key] = cache_name
+        return cache_name
+
+    def _to_int(value) -> int | None:
+        if value is None:
+            return None
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return None
+
+    def _record_usage(resp, cache_used: bool) -> None:
+        nonlocal last_usage
+        usage = getattr(resp, "usage_metadata", None)
+        payload = {
+            "provider": "gemini",
+            "backend": "GeminiJSONCaller",
+            "model": model,
+            "input_tokens": _to_int(getattr(usage, "prompt_token_count", None)),
+            "output_tokens": _to_int(getattr(usage, "candidates_token_count", None)),
+            "total_tokens": _to_int(getattr(usage, "total_token_count", None)),
+            "cached_input_tokens": _to_int(getattr(usage, "cached_content_token_count", None)),
+            "thoughts_tokens": _to_int(getattr(usage, "thoughts_token_count", None)),
+            "cache_used": bool(cache_used),
+            "recorded_at_unix": time.time(),
+        }
+        usage_history.append(payload)
+        last_usage = payload
+
+    def _call(
+        prompt: str,
+        system_message: str = "",
+        cached_user_prefix: str | None = None,
+        cache_key: str | None = None,
+    ) -> dict:
         cfg: dict = dict(
             max_output_tokens=max_output_tokens,
             temperature=0.0,
             response_mime_type="application/json",
         )
-        if system_message:
+        cache_name = _get_cached_content_name(
+            system_message=system_message,
+            cached_user_prefix=cached_user_prefix,
+            cache_key=cache_key,
+        )
+        if cache_name:
+            cfg["cached_content"] = cache_name
+        elif system_message:
             cfg["system_instruction"] = system_message
         if thinking_budget is not None:
             cfg["thinking_config"] = _gtypes.ThinkingConfig(thinking_budget=thinking_budget)
 
-        resp = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=_gtypes.GenerateContentConfig(**cfg),
-        )
-        try:
-            return json.loads(resp.text)
-        except json.JSONDecodeError as exc:
-            raise ValueError(
-                f"Gemini returned invalid JSON: {exc}\n\n"
-                f"Raw response (first 500 chars):\n{resp.text[:500]}"
-            ) from exc
+        contents = prompt
+        if cached_user_prefix and not cache_name:
+            contents = f"{cached_user_prefix}\n\n{prompt}" if prompt else cached_user_prefix
 
+        last_error: Exception | None = None
+        total_attempts = max_retries + 1
+        for attempt in range(total_attempts):
+            try:
+                resp = client.models.generate_content(
+                    model=model,
+                    contents=contents,
+                    config=_gtypes.GenerateContentConfig(**cfg),
+                )
+                _record_usage(resp, cache_used=bool(cache_name))
+                text = (resp.text or "").strip()
+                if not text:
+                    raise ValueError("Gemini returned an empty response.")
+
+                try:
+                    return _extract_first_json_object(text)
+                except Exception as exc:
+                    raise ValueError(
+                        f"Gemini returned invalid JSON: {exc}\n\nRaw response:\n{text}"
+                    ) from exc
+            except Exception as exc:
+                last_error = exc
+                if attempt == max_retries:
+                    break
+
+                sleep_s = min(base_sleep * (2 ** attempt), max_sleep)
+                print(
+                    f"Stage-2 Gemini JSON query failed ({type(exc).__name__}: {exc}). "
+                    f"Retrying {attempt + 1}/{max_retries} after {sleep_s:.1f}s..."
+                )
+                time.sleep(sleep_s)
+
+        raise RuntimeError(
+            f"Stage-2 Gemini JSON query failed after {total_attempts} attempts."
+            f"Raw prompt:\n{prompt}\n\n"
+        ) from last_error
+
+    def _get_last_usage() -> dict | None:
+        return dict(last_usage) if last_usage is not None else None
+
+    def _get_usage_history() -> list[dict]:
+        return [dict(item) for item in usage_history]
+
+    _call.get_last_usage = _get_last_usage
+    _call.get_usage_history = _get_usage_history
+    return _call
+
+
+def make_openai_json_caller(
+    model: str = "gpt-4o",
+    api_key: str | None = None,
+    base_url: str | None = None,
+    max_output_tokens: int = 8192,
+    max_retries: int = 3,
+    base_sleep: float = 2.0,
+    max_sleep: float = 30.0,
+):
+    """Return a callable ``(prompt, system_message, cached_user_prefix=None, cache_key=None) -> dict``.
+
+    This works for OpenAI-compatible APIs such as OpenAI and DeepSeek.
+    """
+    import openai
+
+    client = openai.OpenAI(api_key=api_key, base_url=base_url) if base_url else openai.OpenAI(api_key=api_key)
+    usage_history: list[dict] = []
+    last_usage: dict | None = None
+    provider = "deepseek" if base_url and "deepseek" in base_url else "openai"
+    supports_response_format = True
+
+    def _to_int(value) -> int | None:
+        if value is None:
+            return None
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return None
+
+    def _record_usage(resp) -> None:
+        nonlocal last_usage
+        usage = getattr(resp, "usage", None)
+        prompt_details = getattr(usage, "prompt_tokens_details", None)
+        completion_details = getattr(usage, "completion_tokens_details", None)
+        payload = {
+            "provider": provider,
+            "backend": "OpenAIJSONCaller",
+            "model": model,
+            "input_tokens": _to_int(getattr(usage, "prompt_tokens", None)),
+            "output_tokens": _to_int(getattr(usage, "completion_tokens", None)),
+            "total_tokens": _to_int(getattr(usage, "total_tokens", None)),
+            "cached_input_tokens": _to_int(getattr(prompt_details, "cached_tokens", None)),
+            "reasoning_tokens": _to_int(getattr(completion_details, "reasoning_tokens", None)),
+            "audio_input_tokens": _to_int(getattr(prompt_details, "audio_tokens", None)),
+            "audio_output_tokens": _to_int(getattr(completion_details, "audio_tokens", None)),
+            "recorded_at_unix": time.time(),
+        }
+        usage_history.append(payload)
+        last_usage = payload
+
+    def _call(
+        prompt: str,
+        system_message: str = "",
+        cached_user_prefix: str | None = None,
+        cache_key: str | None = None,
+    ) -> dict:
+        nonlocal supports_response_format
+        messages = []
+        if system_message:
+            messages.append({"role": "system", "content": system_message})
+
+        contents = prompt
+        if cached_user_prefix:
+            contents = f"{cached_user_prefix}\n\n{prompt}" if prompt else cached_user_prefix
+        messages.append({"role": "user", "content": contents})
+
+        last_error: Exception | None = None
+        total_attempts = max_retries + 1
+        for attempt in range(total_attempts):
+            try:
+                kwargs: dict = dict(
+                    model=model,
+                    messages=messages,
+                    max_tokens=max_output_tokens,
+                    temperature=0.0,
+                )
+                if supports_response_format:
+                    kwargs["response_format"] = {"type": "json_object"}
+                resp = client.chat.completions.create(**kwargs)
+                _record_usage(resp)
+                text = (resp.choices[0].message.content or "").strip()
+                if not text:
+                    raise ValueError("OpenAI-compatible backend returned an empty response.")
+                return _extract_first_json_object(text)
+            except Exception as exc:
+                if supports_response_format and "response_format" in str(exc).lower():
+                    supports_response_format = False
+                last_error = exc
+                if attempt == max_retries:
+                    break
+
+                sleep_s = min(base_sleep * (2 ** attempt), max_sleep)
+                print(
+                    f"Stage-2 JSON query failed ({type(exc).__name__}: {exc}). "
+                    f"Retrying {attempt + 1}/{max_retries} after {sleep_s:.1f}s..."
+                )
+                time.sleep(sleep_s)
+
+        raise RuntimeError(
+            f"Stage-2 JSON query failed after {total_attempts} attempts.\n"
+            f"Raw prompt:\n{prompt}\n\n"
+        ) from last_error
+
+    def _get_last_usage() -> dict | None:
+        return dict(last_usage) if last_usage is not None else None
+
+    def _get_usage_history() -> list[dict]:
+        return [dict(item) for item in usage_history]
+
+    _call.get_last_usage = _get_last_usage
+    _call.get_usage_history = _get_usage_history
     return _call
 
 
@@ -89,7 +438,7 @@ def query_subtype_programs(
     stage1_label: str,
     json_caller,
     tissue: str = "PBMC",
-    n_genes: int = 50,
+    n_genes: int = 30,
     stage1_reasoning: str | None = None,
 ) -> dict:
     """Query the LLM for fine-grained subtype programs based on a stage-1 annotation.
@@ -122,9 +471,7 @@ def query_subtype_programs(
         if stage1_reasoning
         else ""
     )
-    prompt = (
-        f'A single cell in {tissue} was annotated in a first pass as: "{stage1_label}"\n'
-        f"{reasoning_block}"
+    cached_user_prefix = (
         f"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.\n\n"
         f"Return a JSON object with gene programs for:\n"
         f"  1. The fine-grained subtypes of this cell type commonly found in {tissue}.\n"
@@ -134,10 +481,40 @@ def query_subtype_programs(
         f'  "genes": list anywhere from 20 to {n_genes} genes most specifically UPREGULATED in that '
         f"subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)\n"
         f'  "description": one-sentence biological description\n\n'
-        f"Include 5–8 subtypes total. Focus on subtypes commonly found in {tissue}.\n"
+        f"Include 3-5 subtypes total. Focus on subtypes commonly found in {tissue}.\n"
         f"Return only the JSON."
     )
-    return json_caller(prompt, _PROGRAM_SYSTEM)
+    prompt = (
+        f'A single cell in {tissue} was annotated in a first pass as: "{stage1_label}"\n'
+        f"{reasoning_block}"
+    )
+    last_error: Exception | None = None
+    max_schema_attempts = 3
+    for attempt in range(max_schema_attempts):
+        raw_programs = json_caller(
+            prompt,
+            _PROGRAM_SYSTEM,
+            cached_user_prefix=cached_user_prefix,
+            cache_key=f"stage2_program_query::{tissue}::{n_genes}",
+        )
+        try:
+            return _validate_programs_payload(raw_programs)
+        except Exception as exc:
+            last_error = exc
+            if attempt == max_schema_attempts - 1:
+                break
+            sleep_s = min(2.0 * (2 ** attempt), 10.0)
+            print(
+                f"Stage-2 program schema validation failed ({type(exc).__name__}: {exc}). "
+                f"Retrying {attempt + 2}/{max_schema_attempts} after {sleep_s:.1f}s..."
+            )
+            time.sleep(sleep_s)
+
+    raise RuntimeError(
+        f"Stage-2 program query returned invalid schema after {max_schema_attempts} attempts.\n"
+        f"Expected each subtype to include both 'genes' and 'description'.\n"
+        f"Raw prompt:\n{prompt}\n\n"
+    ) from last_error
 
 
 # ─── Step 2: filter programs to panel ───────────────────────────────────────
@@ -150,6 +527,7 @@ def filter_programs_to_panel(programs: dict, adata: ad.AnnData) -> dict:
     Returns:
         ``{subtype: [genes_in_panel, ...]}``.
     """
+    programs = _validate_programs_payload(programs)
     symbols = (
         set(adata.var["gene_symbol"].dropna().values)
         if "gene_symbol" in adata.var.columns
@@ -232,7 +610,6 @@ def score_gene_programs(
         if len(valid) < min_genes:
             out[subtype] = float("nan")
             continue
-
         prog_score = float(z[valid].mean())
         if method == "tirosh":
             ctrl = _sample_background(valid, gene_to_bin_map, bin_pool, n_background, rng)
@@ -319,15 +696,7 @@ def _score_ucell(
     # Z-score the cell against the full population — uses pre-computed mean_expr /
     # std_expr, consistent with mean_z and tirosh.  No mask here so N is the full
     # set of expressed genes and ranks are comparable across programs.
-    #
-    # mask_zeros=False is required for correctness: with masking, unexpressed genes
-    # become -inf, which .rank() still orders (so ranks span all n_vars genes) while
-    # N below counts only the finite ones.  The mismatched denominator pushed scores
-    # far outside [0, 1] and made them scale with each cell's expressed-gene count.
-    # Unmasked, every z is finite, N == len(ranks), and unexpressed genes are ordered
-    # by their z-score instead of collapsing into a single bottom tie.
     z_unmasked = compute_scores(adata, cell_indices, "zscore", gene_mask=None, mask_zeros=False)
-
     # Rank descending: rank 1 = highest z-score (most cell-specific)
     ranks = z_unmasked.rank(ascending=False, method="average")
     N = int(np.isfinite(z_unmasked.values).sum())  # genes with a finite z-score
@@ -350,11 +719,9 @@ def _score_ucell(
             if g in ranks.index
             and (allowed is None or g in allowed)
         ]
-        
         if len(valid) < min_genes or N == 0:
             out[subtype] = float("nan")
             continue
-            
         n = len(valid)
         sum_ranks = float(ranks[valid].sum())
         u_norm = 1.0 - (sum_ranks - n * (n + 1) / 2) / (n * N)
@@ -376,6 +743,7 @@ def build_stage2_prompt(
     tissue: str = "PBMC",
     n_genes: int = 30,
     n_proteins: int = 15,
+    cell_type_list: list | None = None,
 ) -> str:
     """Build a stage-2 cell type refinement prompt.
 
@@ -415,7 +783,7 @@ def build_stage2_prompt(
     if genes_by_expr:
         parts.append(f"\nTop {n_genes} genes by raw expression:")
         for rank, (gene, val) in enumerate(genes_by_expr[:n_genes], 1):
-            parts.append(f"  {rank:3d}. {gene:<10s}  ({int(val)})")
+            parts.append(f"  {rank:3d}. {gene:<10s}  ({_fmt_numeric(val)})")
 
     if genes_by_zscore:
         parts.append(
@@ -449,11 +817,24 @@ def build_stage2_prompt(
     for subtype, score in valid:
         parts.append(f"  {subtype:<25s}: {score:+.3f}")
 
-    parts.append(
-        "\nConsidering all of the above — genes (across all scoring methods), "
-        "surface proteins, pathway scores, and the stage-1 reasoning — "
-        "confirm or correct the stage-1 annotation and give the most specific subtype. "
-        "Trust direct gene/protein evidence over the stage-1 label when they conflict.\n"
-        "Line 1: final cell type / subtype.  Line 2: brief rationale (<100 words)."
-    )
+    if cell_type_list:
+        parts.append(
+            "\nChoose the cell type from the following list (output exactly one of these names in Line 1):\n"
+            + ", ".join(cell_type_list)
+        )
+        parts.append(
+            "\nConsidering all of the above — genes (across all scoring methods), "
+            "surface proteins, pathway scores, and the stage-1 reasoning — "
+            "confirm or correct the stage-1 annotation by choosing the most appropriate subtype from the list above. "
+            "Trust direct gene/protein evidence over the stage-1 label when they conflict.\n"
+            "Line 1: final cell type (from the list above).  Line 2: brief rationale (<100 words)."
+        )
+    else:
+        parts.append(
+            "\nConsidering all of the above — genes (across all scoring methods), "
+            "surface proteins, pathway scores, and the stage-1 reasoning — "
+            "confirm or correct the stage-1 annotation and give the most specific subtype. "
+            "Trust direct gene/protein evidence over the stage-1 label when they conflict.\n"
+            "Line 1: final cell type / subtype.  Line 2: brief rationale (<100 words)."
+        )
     return "\n".join(parts)

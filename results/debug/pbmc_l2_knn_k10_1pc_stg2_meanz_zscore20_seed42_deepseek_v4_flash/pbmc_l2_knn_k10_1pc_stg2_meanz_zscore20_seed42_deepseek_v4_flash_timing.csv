@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_1pc_stg2_meanz_zscore20_seed42_deepseek_v4_flash,2026-07-21 16:27:32,2026-07-21 16:30:30,178.125718832016,2.9687619805336

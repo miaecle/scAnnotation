@@ -23,7 +23,7 @@ filter:
 
 selection:
   strategy: expr
-  n_top: 500
+  n_top: 200
   n_top_secondary: 50
   modalities: [rna, adt]
   marker_panel_path: null

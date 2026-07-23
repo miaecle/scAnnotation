@@ -3,7 +3,7 @@
 # Axis 2: single cell
 # LLM: Gemini 2.0 Flash
 
-dataset_path: Datasets/PBMC_CiteSeqRef/pbmc_citeseq_ref_2021.h5ad
+dataset_path: scAnnotation_Datasets\Datasets\PBMC_CiteSeqRef\pbmc_citeseq_ref_2021.h5ad
 tissue: PBMC
 
 global_metrics:
@@ -35,19 +35,19 @@ input:
 
 llm:
   backend: gemini
-  model: gemini-2.0-flash
+  model: gemini-2.5-flash
   temperature: 0.0
-  max_tokens: 512
+  max_tokens: 2048
   api_key_env: GOOGLE_API_KEY
 
 evaluation:
   label_col: celltype.l1
-  n_per_class: 5
+  n_per_class: 1
   seed: 42
-  strategies: [exact, keyword]
-  judge_backend: null
+  strategies: [exact, keyword, llm_judge]
+  judge_backend: gemini
 
 output:
-  results_dir: results
+  results_dir: results/pmbc_l1_zscore_gemini_flash_exp9
   experiment_name: pbmc_l1_zscore500_gemini_flash
   save_results: true

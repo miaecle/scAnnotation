@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import TYPE_CHECKING, Any, Callable
 
 import numpy as np
 import pandas as pd
@@ -11,6 +12,9 @@ from sklearn.metrics import (
     classification_report,
     confusion_matrix,
 )
+from tqdm import tqdm
+
+from .backends.base import complete_with_retry
 
 if TYPE_CHECKING:
     from .backends.base import LLMBackend
@@ -198,21 +202,232 @@ def keyword_accuracy(
         pred_lower = pred_ct.lower()
         if any(tok and tok in pred_lower for tok in true_tokens):
             correct += 1
-    return correct / len(y_true) if y_true else 0.0
+
+    keyword_accuracy = correct / len(y_true) if y_true else 0.0
+    return keyword_accuracy
 
 
 _LLM_JUDGE_SYSTEM = (
-    "You are evaluating single-cell annotation results. "
-    "Decide whether a predicted cell type is semantically equivalent to the "
-    "true cell type. Answer ONLY with 'yes' or 'no', nothing else."
+    "You are an expert in single-cell annotation evaluating cell type label "
+    "consistency. Provide brief reasoning, then end with a line formatted "
+    "exactly as Judgment: [Category]. The category must be one of: "
+    "Major correct, Subtype correct, Partially correct, Incorrect."
 )
 
-_LLM_JUDGE_TEMPLATE = (
-    "True cell type: {true}\n"
-    "Predicted cell type: {pred}\n"
-    "Are these the same cell type (allowing for minor naming differences)? "
-    "Answer yes or no."
+_LLM_JUDGE_BINARY_SYSTEM = (
+    "You are an expert in single-cell annotation evaluating cell type label "
+    "consistency. Compare the reference label and predicted label, then answer "
+    "with exactly one token: YES or NO."
 )
+
+_LLM_JUDGE_TEMPLATE_PREFIX = (
+    "I am working on a single-cell transcriptomic cell type annotation task. "
+    "The reference label (A) may be an abbreviation or a marker-based "
+    "description of a cell type. Both the reference label (A) and the model's "
+    "predicted label (B) have been standardized and mapped to Cell Ontology "
+    "terms whenever possible. As an expert in single-cell annotation, please "
+    "evaluate whether my model's predicted label (B) is accurate, according "
+    "to the following criteria:\n"
+    "- Major correct: A and B belong to the same major cell type category "
+    "(e.g., T cells), but are different subtypes (e.g., CD4+ vs CD8+), or A "
+    "is a subtype of B, and B is the major category of A (e.g., A = CD4+ T "
+    "cells, B = T cells);\n"
+    "- Subtype correct: A and B refer to the same cell subtype, despite "
+    "differences in naming conventions (e.g., abbreviation vs marker gene "
+    "expression), or B is a subtype of A (e.g., A = B cells, B = "
+    "class-switched memory B cells);\n"
+    "- Partially correct: B contains multiple possible cell types (e.g., "
+    "\"celltypeA or celltypeB\"), and one of them matches A (either Major or "
+    "Subtype correct), but others are incorrect or unrelated, making the "
+    "prediction ambiguous;\n"
+    "- Incorrect: B and A belong to entirely different cell lineages (e.g., "
+    "labeling a neuron as an epithelial cell), or B includes multiple "
+    "predictions and none of them match A;\n"
+    "Please follow the output format below:\n"
+    "- First, provide a brief reasoning explaining your judgment.\n"
+    "- End with a line formatted exactly as Judgment: [Category], where the "
+    "category must be one of: Major correct / Subtype correct / Partially "
+    "correct / Incorrect.\n"
+    "- Example output:\n"
+    "Reasoning: A and B are both T cell types, but A is CD4+ and B is CD8+, "
+    "indicating different subtypes within the same major category.\n"
+    "Judgment: Major correct\n"
+)
+
+_LLM_JUDGE_CASE_TEMPLATE = (
+    "Now evaluate the following case:\n"
+    "Reference label (A): {true}\n"
+    "Predicted label (B): {pred}"
+)
+
+_LLM_JUDGE_TEMPLATE = _LLM_JUDGE_TEMPLATE_PREFIX + _LLM_JUDGE_CASE_TEMPLATE
+
+_LLM_JUDGE_BINARY_TEMPLATE_PREFIX = (
+    "I am working on a single-cell transcriptomic cell type annotation task. "
+    "The reference label (GT) may be an abbreviation or a marker-based "
+    "description of a cell type. The model prediction (PRED) has been "
+    "standardized whenever possible. As an expert in single-cell annotation, "
+    "please determine whether PRED is correct for GT.\n"
+    "Evaluation rule:\n"
+    "- YES: PRED is biologically correct for GT (same subtype, equivalent name, "
+    "or an acceptable naming variant that clearly refers to the same cell type).\n"
+    "- NO: PRED is not correct for GT (different lineage/type, ambiguous mixed "
+    "prediction, or otherwise inconsistent with GT).\n"
+    "Please follow the output format strictly:\n"
+    "- Output exactly one token: YES or NO.\n"
+    "- Do not output any explanation, punctuation, or extra text.\n"
+)
+
+_LLM_JUDGE_BINARY_CASE_TEMPLATE = (
+    "Now evaluate the following case:\n"
+    "Reference label (GT): {true}\n"
+    "Predicted label (PRED): {pred}"
+)
+
+
+def _build_llm_judge_prompt(true_label: str, pred_label: str) -> str:
+    return _LLM_JUDGE_CASE_TEMPLATE.format(true=true_label, pred=pred_label)
+
+
+def _build_llm_judge_binary_prompt(true_label: str, pred_label: str) -> str:
+    return _LLM_JUDGE_BINARY_CASE_TEMPLATE.format(true=true_label, pred=pred_label)
+
+
+def _judge_complete_kwargs(backend: "LLMBackend") -> dict[str, Any] | None:
+    if backend.__class__.__name__ != "GeminiBackend":
+        return None
+    return {
+        "cached_user_prefix": _LLM_JUDGE_TEMPLATE_PREFIX,
+        "cache_key": "llm_judge_template_v1",
+    }
+
+
+def _judge_binary_complete_kwargs(backend: "LLMBackend") -> dict[str, Any] | None:
+    if backend.__class__.__name__ != "GeminiBackend":
+        return None
+    return {
+        "cached_user_prefix": _LLM_JUDGE_BINARY_TEMPLATE_PREFIX,
+        "cache_key": "llm_judge_binary_template_v1",
+    }
+
+_LLM_JUDGMENT_SCORES = {
+    "Subtype correct": 1.0,
+    "Major correct": 0.5,
+    "Partially correct": 0.25,
+    "Incorrect": 0.0,
+}
+
+
+def _validate_llm_judge_output_strict(response: str) -> None:
+    """Validate strict rubric-judge output format.
+
+    Required structure:
+    - At least two non-empty lines.
+    - First line starts with ``Reasoning:``.
+    - Last line starts with ``Judgment:``.
+    - Judgment value is exactly one of the rubric labels.
+    """
+    text = str(response).strip()
+    if not text:
+        raise ValueError("LLM judge response is empty.")
+
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if len(lines) < 2:
+        raise ValueError(
+            "LLM judge response must contain at least two lines: "
+            "'Reasoning: ...' and 'Judgment: ...'."
+        )
+
+    if not lines[0].lower().startswith("reasoning:"):
+        raise ValueError("LLM judge response must start with 'Reasoning:'.")
+
+    if not lines[-1].lower().startswith("judgment:"):
+        raise ValueError("LLM judge response must end with 'Judgment:'.")
+
+    candidate = lines[-1].split(":", 1)[1].strip().strip(".。*` ")
+    if candidate not in _LLM_JUDGMENT_SCORES:
+        valid = " | ".join(_LLM_JUDGMENT_SCORES)
+        raise ValueError(
+            f"Invalid judgment label {candidate!r}. Expected one of: {valid}."
+        )
+
+
+def _validate_llm_judge_binary_output_strict(response: str) -> None:
+    """Validate strict binary-judge output format: exactly YES or NO."""
+    token = str(response).strip()
+    if token not in {"YES", "NO"}:
+        raise ValueError(
+            f"LLM binary judge response must be exactly 'YES' or 'NO', got: {response!r}"
+        )
+
+
+def parse_llm_judge_response(response: str) -> tuple[str, float, str]:
+    """Parse the rubric-based LLM judge response.
+
+    Returns a tuple of ``(judgment, score, reasoning)``. The response must
+    contain a valid ``Judgment: ...`` line; otherwise a ``ValueError`` is raised.
+    """
+    text = str(response).strip()
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+
+    judgment: str | None = None
+    judgment_line_idx: int | None = None
+    judgment_marker_pos: int | None = None
+    for idx in range(len(lines) - 1, -1, -1):
+        line = lines[idx]
+        lower_line = line.lower()
+        marker_pos = lower_line.rfind("judgment:")
+        if marker_pos < 0:
+            continue
+
+        candidate = line[marker_pos + len("judgment:") :].strip().strip(".。*` ")
+        for valid in _LLM_JUDGMENT_SCORES:
+            if candidate.lower().startswith(valid.lower()):
+                judgment = valid
+                judgment_line_idx = idx
+                judgment_marker_pos = marker_pos
+                break
+        if judgment is not None:
+            break
+
+    if judgment is None:
+        valid = " | ".join(_LLM_JUDGMENT_SCORES)
+        raise ValueError(
+            "Could not parse LLM judge response. Expected a final line like "
+            f"'Judgment: <{valid}>', got: {response!r}"
+        )
+
+    reasoning_lines = []
+    for idx, line in enumerate(lines):
+        if judgment_line_idx is not None and idx == judgment_line_idx:
+            assert judgment_marker_pos is not None
+            prefix = line[:judgment_marker_pos].strip()
+            if prefix:
+                if prefix.lower().startswith("reasoning:"):
+                    reasoning_lines.append(prefix.split(":", 1)[1].strip())
+                else:
+                    reasoning_lines.append(prefix)
+            break
+        if line.lower().startswith("reasoning:"):
+            reasoning_lines.append(line.split(":", 1)[1].strip())
+        else:
+            reasoning_lines.append(line)
+    reasoning = "\n".join(part for part in reasoning_lines if part).strip()
+
+    return judgment, _LLM_JUDGMENT_SCORES[judgment], reasoning
+
+
+def parse_llm_judge_binary_response(response: str) -> tuple[str, int]:
+    """Parse binary LLM-judge response into a YES/NO decision and 0/1 score."""
+    text = str(response).strip()
+    if text == "YES":
+        return "YES", 1
+    if text == "NO":
+        return "NO", 0
+    raise ValueError(
+        "Could not parse LLM binary judge response. Expected 'YES' or 'NO', "
+        f"got: {response!r}"
+    )
 
 
 def llm_judge_accuracy(
@@ -220,12 +435,12 @@ def llm_judge_accuracy(
     y_pred: list[str],
     backend: "LLMBackend",
     auto_extract: bool = True,
+    usage_sink: Callable[[dict[str, Any]], None] | None = None,
 ) -> float:
-    """LLM-as-judge accuracy.
+    """LLM-as-judge average rubric score.
 
     Uses the provided backend to decide, for each (true, pred) pair, whether
-    the prediction is semantically correct.  The LLM is prompted to answer
-    ``yes`` or ``no`` only.
+    the prediction is correct under a four-level rubric.
 
     Args:
         y_true: Ground-truth cell type labels.
@@ -235,16 +450,60 @@ def llm_judge_accuracy(
         auto_extract: If True, extract first line from each ``y_pred`` entry.
 
     Returns:
-        Fraction of pairs judged as correct, in [0, 1].
+        Mean rubric score in [0, 1].
     """
-    correct = 0
-    for true, pred in zip(y_true, y_pred):
+    scores: list[float] = []
+    complete_kwargs = _judge_complete_kwargs(backend)
+    for i, (true, pred) in enumerate(zip(y_true, y_pred)):
         pred_ct = extract_cell_type(pred) if auto_extract else pred
-        prompt = _LLM_JUDGE_TEMPLATE.format(true=true, pred=pred_ct)
-        response = backend.complete(prompt, system_message=_LLM_JUDGE_SYSTEM)
-        if response.strip().lower().startswith("yes"):
-            correct += 1
-    return correct / len(y_true) if y_true else 0.0
+        prompt = _build_llm_judge_prompt(true, pred_ct)
+        response = complete_with_retry(
+            backend,
+            prompt,
+            system_message=_LLM_JUDGE_SYSTEM,
+            usage_sink=usage_sink,
+            complete_kwargs=complete_kwargs,
+            response_validator=_validate_llm_judge_output_strict,
+            usage_context={
+                "step": "llm_judge",
+                "phase": "evaluation",
+                "pair_index": i,
+            },
+        )
+        _, score, _ = parse_llm_judge_response(response)
+        scores.append(score)
+    return float(np.mean(scores)) if scores else 0.0
+
+
+def llm_judge_binary_accuracy(
+    y_true: list[str],
+    y_pred: list[str],
+    backend: "LLMBackend",
+    auto_extract: bool = True,
+    usage_sink: Callable[[dict[str, Any]], None] | None = None,
+) -> float:
+    """LLM-as-judge binary accuracy where the model outputs YES/NO."""
+    scores: list[int] = []
+    complete_kwargs = _judge_binary_complete_kwargs(backend)
+    for i, (true, pred) in enumerate(zip(y_true, y_pred)):
+        pred_ct = extract_cell_type(pred) if auto_extract else pred
+        prompt = _build_llm_judge_binary_prompt(true, pred_ct)
+        response = complete_with_retry(
+            backend,
+            prompt,
+            system_message=_LLM_JUDGE_BINARY_SYSTEM,
+            usage_sink=usage_sink,
+            complete_kwargs=complete_kwargs,
+            response_validator=_validate_llm_judge_binary_output_strict,
+            usage_context={
+                "step": "llm_judge_binary",
+                "phase": "evaluation",
+                "pair_index": i,
+            },
+        )
+        _, score = parse_llm_judge_binary_response(response)
+        scores.append(score)
+    return float(np.mean(scores)) if scores else 0.0
 
 
 def evaluate_all(
@@ -252,13 +511,17 @@ def evaluate_all(
     true_col: str = "true_label",
     pred_col: str = "pred_label",
     judge_backend: "LLMBackend | None" = None,
+    per_sample_df: pd.DataFrame | None = None,
+    strategies: list[str] | None = None,
+    concurrency: int = 1,
 ) -> pd.DataFrame:
     """Run all available evaluation strategies and return a summary DataFrame.
 
     Strategies computed:
     - ``exact``   : exact string match (case-insensitive, after extracting first line)
     - ``keyword`` : keyword overlap match
-    - ``llm``     : LLM-as-judge (only if ``judge_backend`` is provided)
+    - ``llm_judge`` : mean rubric score from the LLM judge (only if ``judge_backend`` is provided)
+    - ``llm_judge_binary`` : mean binary score from the LLM judge (YES=1, NO=0)
 
     Args:
         results_df: DataFrame with true and predicted label columns.
@@ -269,18 +532,194 @@ def evaluate_all(
     Returns:
         Single-row DataFrame with columns for each strategy's accuracy.
     """
-    y_true = results_df[true_col].tolist()
-    y_pred_raw = results_df[pred_col].tolist()
-    y_pred_ct = [extract_cell_type(p) for p in y_pred_raw]
-
-    records: dict[str, float] = {
-        "exact": accuracy(y_true, y_pred_ct, case_sensitive=False),
-        "keyword": keyword_accuracy(y_true, y_pred_raw, auto_extract=True),
-    }
-
-    if judge_backend is not None:
-        records["llm_judge"] = llm_judge_accuracy(
-            y_true, y_pred_raw, backend=judge_backend, auto_extract=True
+    if per_sample_df is None:
+        per_sample_df = evaluate_per_sample(
+            results_df=results_df,
+            true_col=true_col,
+            pred_col=pred_col,
+            judge_backend=judge_backend,
+            strategies=strategies,
+            concurrency=concurrency,
         )
 
+    n = len(per_sample_df)
+    records: dict[str, float] = {
+        "exact": float(per_sample_df["acc"].mean()) if n else 0.0,
+        "keyword": float(per_sample_df["keyword"].mean()) if n else 0.0,
+    }
+
+    if "llm_score" in per_sample_df.columns:
+        records["llm_judge"] = float(per_sample_df["llm_score"].mean()) if n else 0.0
+    if "llm_binary" in per_sample_df.columns:
+        records["llm_judge_binary"] = float(per_sample_df["llm_binary"].mean()) if n else 0.0
+
     return pd.DataFrame([records])
+
+
+def evaluate_per_sample(
+    results_df: pd.DataFrame,
+    true_col: str = "true_label",
+    pred_col: str = "pred_label",
+    judge_backend: "LLMBackend | None" = None,
+    usage_sink: Callable[[dict[str, Any]], None] | None = None,
+    strategies: list[str] | None = None,
+    concurrency: int = 1,
+) -> pd.DataFrame:
+    """Compute per-sample evaluation outcomes.
+
+    Returns columns:
+    - ``acc``: exact match after case-insensitive normalization
+    - ``keyword``: keyword overlap match
+    - ``llm_judgment``: rubric category assigned by the LLM judge
+    - ``llm_score``: numeric rubric score
+    - ``llm_reasoning``: judge rationale text
+    - ``llm_binary_judgment``: binary judge decision (YES/NO)
+    - ``llm_binary``: binary judge score (1/0)
+    """
+    y_true = results_df[true_col].tolist()
+    y_pred_raw = results_df[pred_col].tolist()
+
+    _STOPWORDS = {
+        "cell", "cells", "type", "types", "the", "and", "or", "of",
+        "in", "a", "an", "is", "are", "be", "with", "for", "other",
+    }
+
+    acc_flags: list[int] = []
+    keyword_flags: list[int] = []
+    llm_judgments: list[str] = []
+    llm_scores: list[float] = []
+    llm_reasonings: list[str] = []
+    llm_binary_judgments: list[str] = []
+    llm_binary_scores: list[int] = []
+    enabled = set(strategies or (["llm_judge"] if judge_backend is not None else []))
+    use_llm_judge = judge_backend is not None and "llm_judge" in enabled
+    use_llm_judge_binary = judge_backend is not None and "llm_judge_binary" in enabled
+    use_any_llm_judge = use_llm_judge or use_llm_judge_binary
+    judge_complete_kwargs = _judge_complete_kwargs(judge_backend) if use_llm_judge else None
+    judge_binary_complete_kwargs = _judge_binary_complete_kwargs(judge_backend) if use_llm_judge_binary else None
+
+    max_workers = max(1, int(concurrency or 1))
+
+    def _evaluate_one(i: int, true: Any, pred_raw: Any) -> tuple[int, dict[str, Any]]:
+        true_norm = str(true).strip().lower()
+        pred_ct = extract_cell_type(str(pred_raw))
+        pred_norm = pred_ct.strip().lower()
+
+        record: dict[str, Any] = {
+            "acc": int(true_norm == pred_norm),
+        }
+
+        true_tokens = {
+            t.lower().strip("+()/αβγδ")
+            for t in str(true).split()
+            if len(t) >= 1 and t.lower() not in _STOPWORDS
+        }
+        record["keyword"] = int(any(tok and tok in pred_norm for tok in true_tokens))
+
+        if use_llm_judge:
+            try:
+                prompt = _build_llm_judge_prompt(true, pred_ct)
+                response = complete_with_retry(
+                    judge_backend,
+                    prompt,
+                    system_message=_LLM_JUDGE_SYSTEM,
+                    usage_sink=usage_sink,
+                    complete_kwargs=judge_complete_kwargs,
+                    response_validator=_validate_llm_judge_output_strict,
+                    usage_context={
+                        "step": "llm_judge",
+                        "phase": "evaluation",
+                        "sample_pos": i,
+                        "result_index": results_df.index[i],
+                    },
+                )
+                judgment, score, reasoning = parse_llm_judge_response(response)
+            except Exception as exc:
+                print(
+                    f"[Evaluation SKIP] llm_judge failed at sample_pos={i}, "
+                    f"result_index={results_df.index[i]}: {type(exc).__name__}: {exc}"
+                )
+                judgment, score, reasoning = "SKIPPED", np.nan, "Skipped due to LLM judge error."
+
+            record["llm_judgment"] = judgment
+            record["llm_score"] = score
+            record["llm_reasoning"] = reasoning
+        if use_llm_judge_binary:
+            try:
+                binary_prompt = _build_llm_judge_binary_prompt(true, pred_ct)
+                binary_response = complete_with_retry(
+                    judge_backend,
+                    binary_prompt,
+                    system_message=_LLM_JUDGE_BINARY_SYSTEM,
+                    usage_sink=usage_sink,
+                    complete_kwargs=judge_binary_complete_kwargs,
+                    response_validator=_validate_llm_judge_binary_output_strict,
+                    usage_context={
+                        "step": "llm_judge_binary",
+                        "phase": "evaluation",
+                        "sample_pos": i,
+                        "result_index": results_df.index[i],
+                    },
+                )
+                binary_judgment, binary_score = parse_llm_judge_binary_response(binary_response)
+            except Exception as exc:
+                print(
+                    f"[Evaluation SKIP] llm_judge_binary failed at sample_pos={i}, "
+                    f"result_index={results_df.index[i]}: {type(exc).__name__}: {exc}"
+                )
+                binary_judgment, binary_score = "SKIPPED", np.nan
+
+            record["llm_binary_judgment"] = binary_judgment
+            record["llm_binary"] = binary_score
+
+        return i, record
+
+    records_by_pos: list[dict[str, Any] | None] = [None] * len(y_true)
+    if max_workers == 1 or not use_any_llm_judge:
+        for i, (true, pred_raw) in enumerate(
+            tqdm(zip(y_true, y_pred_raw), total=len(y_true), desc="Evaluating samples")
+        ):
+            row_pos, record = _evaluate_one(i, true, pred_raw)
+            records_by_pos[row_pos] = record
+    else:
+        rows = list(enumerate(zip(y_true, y_pred_raw)))
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {
+                executor.submit(_evaluate_one, i, true, pred_raw): i
+                for i, (true, pred_raw) in rows
+            }
+            progress = tqdm(total=len(rows), desc="Evaluating samples", leave=True)
+            try:
+                for future in as_completed(futures):
+                    row_pos, record = future.result()
+                    records_by_pos[row_pos] = record
+                    progress.update(1)
+            finally:
+                progress.close()
+
+    for record in records_by_pos:
+        if record is None:
+            raise RuntimeError("Evaluation produced an incomplete result set.")
+        acc_flags.append(int(record["acc"]))
+        keyword_flags.append(int(record["keyword"]))
+        if use_llm_judge:
+            llm_judgments.append(str(record["llm_judgment"]))
+            llm_scores.append(record["llm_score"])
+            llm_reasonings.append(str(record["llm_reasoning"]))
+        if use_llm_judge_binary:
+            llm_binary_judgments.append(str(record["llm_binary_judgment"]))
+            llm_binary_scores.append(record["llm_binary"])
+
+    data: dict[str, list] = {
+        "acc": acc_flags,
+        "keyword": keyword_flags,
+    }
+    if use_llm_judge:
+        data["llm_judgment"] = llm_judgments
+        data["llm_score"] = llm_scores
+        data["llm_reasoning"] = llm_reasonings
+    if use_llm_judge_binary:
+        data["llm_binary_judgment"] = llm_binary_judgments
+        data["llm_binary"] = llm_binary_scores
+
+    return pd.DataFrame(data, index=results_df.index)

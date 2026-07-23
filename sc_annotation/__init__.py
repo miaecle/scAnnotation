@@ -20,6 +20,7 @@ from .config import (
     InputConfig,
     GlobalMetricsConfig,
     LLMConfig,
+    Stage2Config,
     EvaluationConfig,
     OutputConfig,
 )
@@ -33,9 +34,11 @@ from .metrics import (
     parse_results,
     keyword_accuracy,
     llm_judge_accuracy,
+    llm_judge_binary_accuracy,
+    evaluate_per_sample,
     evaluate_all,
 )
-from .backends import ClaudeBackend, GeminiBackend
+from .backends import ClaudeBackend, DeepSeekBackend, GeminiBackend, OpenRouterBackend
 
 __all__ = [
     # data
@@ -72,6 +75,7 @@ __all__ = [
     "InputConfig",
     "GlobalMetricsConfig",
     "LLMConfig",
+    "Stage2Config",
     "EvaluationConfig",
     "OutputConfig",
     # pipeline
@@ -87,8 +91,12 @@ __all__ = [
     "parse_results",
     "keyword_accuracy",
     "llm_judge_accuracy",
+    "llm_judge_binary_accuracy",
+    "evaluate_per_sample",
     "evaluate_all",
     # backends
     "ClaudeBackend",
+    "DeepSeekBackend",
     "GeminiBackend",
+    "OpenRouterBackend",
 ]

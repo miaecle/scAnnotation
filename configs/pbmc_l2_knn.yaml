@@ -1,0 +1,63 @@
+# Axis 2: kNN-smoothed (k=10) — reduces single-cell noise
+# Axis 4: z-score selection on the smoothed vector
+
+dataset_path: Datasets/PBMC_CiteSeqRef/pbmc_citeseq_ref_2021.h5ad
+tissue: PBMC
+
+global_metrics:
+  n_top_hvg: 2000
+  min_cells_pct: 0.01
+  compute_gini: false
+  gini_scope: hvg
+
+filter:
+  exclude_mt: true
+  exclude_ribo: true
+  exclude_low_expr: false
+  exclude_hb: true
+  exclude_tcr_ig: true
+  exclude_sex_chr: false
+  gini_min: null
+
+selection:
+  strategy: tfidf
+  n_top: 20
+  modalities: [rna, adt]
+
+input:
+  mode: knn_smoothed
+  knn_k: 10
+  knn_use_rep: X_pca   # PCA computed on the fly if not present in obsm
+
+llm:
+  backend: deepseek
+  model: deepseek-v4-flash
+  temperature: 0.0
+  max_tokens: 4096
+  api_key_env: DEEPSEEK_API_KEY
+  concurrency: 20
+  use_context_cache: true
+  context_cache_ttl_seconds: 3600
+
+evaluation:
+  label_col: celltype.l2
+  n_per_class: 1
+  seed: 42
+  strategies: [exact]
+  judge_backend: deepseek
+  concurrency: 20
+
+stage2:
+  mode: strict  # strict | combined
+  score_method: tirosh   # mean_z | tirosh | ucell
+  enabled: true
+  model: deepseek-v4-flash
+
+inspect:
+  enabled: true
+  cell_indices: [13748, 48, 6148]  # e.g. [13748]
+
+output:
+  results_dir: results/debug/pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp2
+  experiment_name: pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp2
+  save_results: true

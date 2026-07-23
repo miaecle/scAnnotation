@@ -1,0 +1,55 @@
+# Axis 2: kNN-smoothed (k=10) — reduces single-cell noise
+# Axis 4: z-score selection on the smoothed vector
+
+dataset_path: Datasets/HLCA/hlca_core.h5ad
+tissue: respiratory airway # lung parenchyma | nose | respiratory airway
+
+global_metrics:
+  n_top_hvg: 2000
+  min_cells_pct: 0.01
+  compute_gini: false
+  gini_scope: hvg
+
+filter:
+  exclude_mt: true
+  exclude_ribo: true
+  exclude_low_expr: false
+  exclude_hb: true
+  exclude_tcr_ig: true
+  exclude_sex_chr: false
+  gini_min: null
+
+selection:
+  strategy: tfidf
+  n_top: 20
+  modalities: [rna]
+
+input:
+  mode: single_cell
+
+llm:
+  backend: deepseek
+  model: deepseek-v4-flash
+  temperature: 0.0
+  max_tokens: 4096
+  api_key_env: DEEPSEEK_API_KEY
+  concurrency: 20
+  use_context_cache: true
+  context_cache_ttl_seconds: 3600
+
+evaluation:
+  label_col: cell_type
+  n_per_class: 20
+  seed: 42
+  strategies: [exact, keyword, llm_judge_binary]
+  judge_backend: deepseek
+  concurrency: 20
+
+stage2:
+  enabled: false
+  model: deepseek-v4-flash
+
+output:
+  results_dir: results/hlca/hlca_ra_single_cell_20pc_stg1_tfidf20_seed42_deepseek_v4_flash
+  experiment_name: hlca_ra_single_cell_20pc_stg1_tfidf20_seed42_deepseek_v4_flash
+  save_results: true

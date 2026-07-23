@@ -12,7 +12,7 @@ and writes results + a config snapshot to ``output.results_dir``.
 
 Environment variables for API keys are read from the names given in each
 config's ``llm.api_key_env`` field (e.g. ``GOOGLE_API_KEY``,
-``ANTHROPIC_API_KEY``).
+``ANTHROPIC_API_KEY``, ``DEEPSEEK_API_KEY``).
 """
 
 from __future__ import annotations
@@ -20,6 +20,11 @@ from __future__ import annotations
 import argparse
 import sys
 import os
+
+import os, sys, warnings
+warnings.filterwarnings('ignore')
+from dotenv import load_dotenv
+load_dotenv()
 
 # Add project root to path so 'sc_annotation' is importable when running
 # from the repo root without installing the package.
@@ -93,8 +98,8 @@ def main() -> None:
         sys.exit(1)
 
     print(f"\nLoading dataset: {config.dataset_path}")
-    adata = load_dataset(config.dataset_path)
-    print(f"  Loaded: {adata.shape[0]:,} cells × {adata.shape[1]:,} genes")
+    adata = load_dataset(config.dataset_path, config.tissue)
+    print(f"  Loaded: {adata.shape[0]:,} cells x {adata.shape[1]:,} genes")
 
     # ------------------------------------------------------------------ #
     # Run

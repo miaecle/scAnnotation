@@ -94,11 +94,34 @@ class InputConfig:
 @dataclass
 class LLMConfig:
     """LLM backend selection and generation parameters."""
-    backend: str = "gemini"            # gemini | claude | openai
+    backend: str = "gemini"            # gemini | claude | openai | deepseek | openrouter
     model: str = "gemini-2.0-flash"
     temperature: float = 0.0
-    max_tokens: int = 512
+    max_tokens: int = 4096
     api_key_env: Optional[str] = None  # env-var name that holds the API key
+    # Number of samples processed concurrently. 1 keeps fully serial behaviour.
+    concurrency: int = 1
+    use_context_cache: bool = False
+    context_cache_ttl_seconds: int = 3600
+
+
+@dataclass
+class Stage2Config:
+    """Optional stage-2 refinement settings."""
+    enabled: bool = False
+    model: Optional[str] = None
+    temperature: float = 0.0
+    max_tokens: int = 4096
+    mode: str = "strict"  # strict | combined
+    n_program_genes: int = 50
+    score_method: str = "tirosh"       # mean_z | tirosh | ucell
+    score_min_genes: int = 3
+    score_n_background: int = 50
+    score_random_state: int = 0
+    n_top_genes: int = 30
+    n_top_proteins: int = 15
+    program_query_max_output_tokens: int = 25600
+    program_query_thinking_budget: Optional[int] = 0
 
 
 @dataclass
@@ -107,10 +130,12 @@ class EvaluationConfig:
     label_col: str = "celltype.l1"
     n_per_class: int = 5
     seed: int = 42
-    # Matching strategies to compute: exact | keyword | llm_judge
+    # Matching strategies to compute: exact | keyword | llm_judge | llm_judge_binary
     strategies: list = field(default_factory=lambda: ["exact", "keyword"])
-    # Backend for llm_judge; None → reuse the annotation backend
+    # Backend for llm_judge / llm_judge_binary; None → reuse annotation backend
     judge_backend: Optional[str] = None
+    # Number of samples evaluated concurrently. 1 keeps fully serial behaviour.
+    concurrency: int = 1
 
 
 @dataclass
@@ -119,6 +144,18 @@ class OutputConfig:
     results_dir: str = "results"
     experiment_name: str = "experiment"
     save_results: bool = True
+
+
+@dataclass
+class InspectConfig:
+    """Optional per-cell prompt/response tracing for debugging.
+
+    When enabled, only cells whose global ``cell_idx`` appears in
+    ``cell_indices`` are traced.
+    """
+    enabled: bool = False
+    cell_indices: list[int] = field(default_factory=list)
+    save_path: Optional[str] = None
 
 
 # ---------------------------------------------------------------------------
@@ -152,8 +189,10 @@ class ExperimentConfig:
     selection: SelectionConfig = field(default_factory=SelectionConfig)
     input: InputConfig = field(default_factory=InputConfig)
     llm: LLMConfig = field(default_factory=LLMConfig)
+    stage2: Stage2Config = field(default_factory=Stage2Config)
     evaluation: EvaluationConfig = field(default_factory=EvaluationConfig)
     output: OutputConfig = field(default_factory=OutputConfig)
+    inspect: InspectConfig = field(default_factory=InspectConfig)
 
     # ------------------------------------------------------------------
     # Serialisation
@@ -162,7 +201,7 @@ class ExperimentConfig:
     @classmethod
     def from_yaml(cls, path: str) -> "ExperimentConfig":
         """Load config from a YAML file.  Unknown keys are silently ignored."""
-        with open(path) as fh:
+        with open(path, encoding="utf-8") as fh:
             d = yaml.safe_load(fh) or {}
         return cls(
             dataset_path=d.get("dataset_path", ""),
@@ -172,13 +211,15 @@ class ExperimentConfig:
             selection=SelectionConfig(**_safe_kwargs(SelectionConfig, d.get("selection", {}))),
             input=InputConfig(**_safe_kwargs(InputConfig, d.get("input", {}))),
             llm=LLMConfig(**_safe_kwargs(LLMConfig, d.get("llm", {}))),
+            stage2=Stage2Config(**_safe_kwargs(Stage2Config, d.get("stage2", {}))),
             evaluation=EvaluationConfig(**_safe_kwargs(EvaluationConfig, d.get("evaluation", {}))),
             output=OutputConfig(**_safe_kwargs(OutputConfig, d.get("output", {}))),
+            inspect=InspectConfig(**_safe_kwargs(InspectConfig, d.get("inspect", {}))),
         )
 
     def to_yaml(self, path: str) -> None:
         """Save config to a YAML file (for reproducibility snapshots)."""
-        with open(path, "w") as fh:
+        with open(path, "w", encoding="utf-8") as fh:
             yaml.dump(asdict(self), fh, default_flow_style=False, sort_keys=False)
 
     def to_dict(self) -> dict[str, Any]:
@@ -192,7 +233,10 @@ class ExperimentConfig:
             f"filter=(mt={self.filter.exclude_mt} ribo={self.filter.exclude_ribo} "
             f"lowexpr={self.filter.exclude_low_expr} gini_min={self.filter.gini_min}) "
             f"selection={self.selection.strategy}(n={self.selection.n_top}) "
-            f"llm={self.llm.backend}/{self.llm.model}"
+            f"llm={self.llm.backend}/{self.llm.model}(concurrency={self.llm.concurrency}) "
+            f"stage2={'on' if self.stage2.enabled else 'off'}({self.stage2.mode}) "
+            f"inspect={'on' if self.inspect.enabled else 'off'} "
+            f"evaluation=(label_col={self.evaluation.label_col})"
         )
 
 

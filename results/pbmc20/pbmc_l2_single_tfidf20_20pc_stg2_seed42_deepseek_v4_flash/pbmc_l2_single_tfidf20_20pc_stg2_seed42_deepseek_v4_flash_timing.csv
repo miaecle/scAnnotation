@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_single_tfidf20_20pc_stg2_seed42_deepseek_v4_flash,2026-07-15 22:48:14,2026-07-15 23:13:37,1522.8188049793243,25.38031341632207

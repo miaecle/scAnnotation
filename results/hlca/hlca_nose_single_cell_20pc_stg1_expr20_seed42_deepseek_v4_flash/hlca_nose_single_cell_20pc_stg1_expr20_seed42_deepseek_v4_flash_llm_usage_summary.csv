@@ -1,0 +1,3 @@
+step,phase,provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens
+llm_judge_binary,evaluation,deepseek,DeepSeekBackend,deepseek-v4-flash,36460,44168,80628,0,43040
+stage1_annotation,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,323304,515248,838552,290816,481033

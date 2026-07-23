@@ -1,0 +1,62 @@
+dataset_path: Datasets/PBMC_CiteSeqRef/pbmc_citeseq_ref_2021.h5ad
+tissue: PBMC
+global_metrics:
+  n_top_hvg: 2000
+  min_cells_pct: 0.01
+  compute_gini: false
+  gini_scope: hvg
+filter:
+  exclude_mt: true
+  exclude_ribo: true
+  exclude_low_expr: false
+  exclude_hb: true
+  exclude_tcr_ig: true
+  exclude_sex_chr: false
+  gini_min: null
+selection:
+  strategy: tfidf
+  n_top: 10
+  n_top_secondary: 50
+  modalities:
+  - rna
+  - adt
+  marker_panel_path: null
+input:
+  mode: single_cell
+  knn_k: 20
+  knn_use_rep: X_pca
+llm:
+  backend: deepseek
+  model: deepseek-v4-flash
+  temperature: 0.0
+  max_tokens: 4096
+  api_key_env: DEEPSEEK_API_KEY
+  concurrency: 20
+  use_context_cache: true
+  context_cache_ttl_seconds: 3600
+stage2:
+  enabled: true
+  model: deepseek-v4-flash
+  temperature: 0.0
+  max_tokens: 4096
+  n_program_genes: 50
+  score_method: tirosh
+  score_min_genes: 3
+  score_n_background: 50
+  score_random_state: 0
+  n_top_genes: 30
+  n_top_proteins: 15
+  program_query_max_output_tokens: 25600
+  program_query_thinking_budget: 0
+evaluation:
+  label_col: celltype.l2
+  n_per_class: 20
+  seed: 42
+  strategies:
+  - exact
+  judge_backend: deepseek
+  concurrency: 20
+output:
+  results_dir: results/pbmc_topgene/pbmc_l2_single_tfidf10_20pc_stg2_seed42_deepseek_v4_flash
+  experiment_name: pbmc_l2_single_tfidf10_20pc_stg2_seed42_deepseek_v4_flash
+  save_results: true

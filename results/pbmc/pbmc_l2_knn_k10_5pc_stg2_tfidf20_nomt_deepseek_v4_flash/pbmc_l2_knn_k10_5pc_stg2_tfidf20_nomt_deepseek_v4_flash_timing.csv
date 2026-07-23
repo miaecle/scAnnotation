@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_5pc_stg2_tfidf20_nomt_deepseek_v4_flash,2026-07-01 16:12:49,2026-07-01 19:38:36,12347.614237070084,205.79357061783472

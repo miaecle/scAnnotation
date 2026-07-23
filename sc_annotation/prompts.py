@@ -9,10 +9,15 @@ Respond with the cell type name in the first line, then in the second line provi
 """
 
 
+def _fmt_numeric(value: float, decimals: int = 3) -> str:
+    return f"{value:.{decimals}f}"
+
+
 def build_naive_prompt(
     genes: list[tuple[str, float]],
     proteins: list[tuple[str, float]] | None = None,
     tissue: str | None = None,
+    cell_type_list: list[str] | None = None,
 ) -> str:
     """Build a naive baseline prompt from top expressed genes (and optionally proteins).
 
@@ -31,17 +36,27 @@ def build_naive_prompt(
 
     parts.append("Top expressed genes (ranked by expression level):")
     for rank, (gene, count) in enumerate(genes, 1):
-        parts.append(f"  {rank:3d}. {gene} ({int(count)})")
+        parts.append(f"  {rank:3d}. {gene} ({_fmt_numeric(count)})")
 
     if proteins:
         parts.append("\nTop expressed surface proteins / ADT markers (ranked by count):")
         for rank, (protein, count) in enumerate(proteins, 1):
-            parts.append(f"  {rank:3d}. {protein} ({int(count)})")
+            parts.append(f"  {rank:3d}. {protein} ({_fmt_numeric(count)})")
 
-    parts.append(
-        "\nBased on the expression profile above, what is the cell type? "
-        "Respond with the cell type name in the first line, then in the second line provide very brief explanation (<100 words)."
-    )
+    if cell_type_list:
+        parts.append(
+            "\nChoose the cell type from the following list (output exactly one of these names in the first line):\n"
+            + ", ".join(cell_type_list)
+        )
+        parts.append(
+            "\nBased on the expression profile above, which cell type is this? "
+            "Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words)."
+        )
+    else:
+        parts.append(
+            "\nBased on the expression profile above, what is the cell type? "
+            "Respond with the cell type name in the first line, then in the second line provide very brief explanation (<100 words)."
+        )
 
     return "\n".join(parts)
 
@@ -53,6 +68,7 @@ def build_enriched_prompt(
     proteins: list[tuple[str, float]] | None = None,
     tissue: str | None = None,
     genes: list[tuple[str, float]] | None = None,
+    cell_type_list: list[str] | None = None,
 ) -> str:
     """Build an enriched prompt using both expression-ranked and z-score-ranked genes.
 
@@ -90,7 +106,7 @@ def build_enriched_prompt(
         "mitochondrial, ribosomal, and low-expression genes excluded):"
     )
     for rank, (gene, count) in enumerate(genes_by_expr, 1):
-        parts.append(f"  {rank:3d}. {gene} ({int(count)})")
+        parts.append(f"  {rank:3d}. {gene} ({_fmt_numeric(count)})")
 
     if genes_by_zscore:
         parts.append(
@@ -111,12 +127,22 @@ def build_enriched_prompt(
     if proteins:
         parts.append("\nTop expressed surface proteins / ADT markers (ranked by count):")
         for rank, (protein, count) in enumerate(proteins, 1):
-            parts.append(f"  {rank:3d}. {protein} ({int(count)})")
+            parts.append(f"  {rank:3d}. {protein} ({_fmt_numeric(count)})")
 
-    parts.append(
-        "\nBased on the expression profile above, what is the cell type? "
-        "Respond with the cell type name in the first line, then in the second line provide very brief explanation (<100 words)."
-    )
+    if cell_type_list:
+        parts.append(
+            "\nChoose the cell type from the following list (output exactly one of these names in the first line):\n"
+            + ", ".join(cell_type_list)
+        )
+        parts.append(
+            "\nBased on the expression profile above, which cell type is this? "
+            "Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words)."
+        )
+    else:
+        parts.append(
+            "\nBased on the expression profile above, what is the cell type? "
+            "Respond with the cell type name in the first line, then in the second line provide very brief explanation (<100 words)."
+        )
 
     return "\n".join(parts)
 
@@ -128,6 +154,7 @@ def build_marker_panel_prompt(
     proteins: list[tuple[str, float]] | None = None,
     tissue: str | None = None,
     genes: list[tuple[str, float]] | None = None,
+    cell_type_list: list[str] | None = None,
 ) -> str:
     """Build a prompt centred on a curated lineage-marker panel.
 
@@ -153,7 +180,7 @@ def build_marker_panel_prompt(
     if pos_expressed:
         parts.append("  Positive-panel markers detected (expression level):")
         for gene, count in sorted(pos_expressed, key=lambda x: -x[1]):
-            fmt = int(count) if count >= 1 else f"{count:.3f}"
+            fmt = _fmt_numeric(count)
             parts.append(f"    {gene}: {fmt}")
     else:
         parts.append("  Positive-panel markers: (none detected)")
@@ -161,22 +188,32 @@ def build_marker_panel_prompt(
     if neg_expressed:
         parts.append("  Negative-panel markers unexpectedly detected:")
         for gene, count in sorted(neg_expressed, key=lambda x: -x[1]):
-            fmt = int(count) if count >= 1 else f"{count:.3f}"
+            fmt = _fmt_numeric(count)
             parts.append(f"    {gene}: {fmt}")
 
     if top_genes:
         parts.append("\nTop additional expressed genes (supplementary context):")
         for rank, (gene, val) in enumerate(top_genes, 1):
-            fmt = int(val) if val >= 1 else f"{val:.3f}"
+            fmt = _fmt_numeric(val)
             parts.append(f"  {rank:3d}. {gene} ({fmt})")
 
     if proteins:
         parts.append("\nTop expressed surface proteins / ADT markers:")
         for rank, (protein, count) in enumerate(proteins, 1):
-            parts.append(f"  {rank:3d}. {protein} ({int(count)})")
+            parts.append(f"  {rank:3d}. {protein} ({_fmt_numeric(count)})")
 
-    parts.append(
-        "\nBased on the marker expression profile above, what is the cell type? "
-        "Respond with the cell type name in the first line, then in the second line provide very brief explanation (<100 words)."
-    )
+    if cell_type_list:
+        parts.append(
+            "\nChoose the cell type from the following list (output exactly one of these names in the first line):\n"
+            + ", ".join(cell_type_list)
+        )
+        parts.append(
+            "\nBased on the marker expression profile above, which cell type is this? "
+            "Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words)."
+        )
+    else:
+        parts.append(
+            "\nBased on the marker expression profile above, what is the cell type? "
+            "Respond with the cell type name in the first line, then in the second line provide very brief explanation (<100 words)."
+        )
     return "\n".join(parts)

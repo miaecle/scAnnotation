@@ -4,6 +4,15 @@ from __future__ import annotations
 from .base import LLMBackend
 
 
+def _to_int(value) -> int | None:
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 class ClaudeBackend(LLMBackend):
     """LLM backend powered by Anthropic Claude.
 
@@ -40,4 +49,20 @@ class ClaudeBackend(LLMBackend):
             kwargs["temperature"] = self.temperature
 
         response = self._client.messages.create(**kwargs)
+        usage = getattr(response, "usage", None)
+        input_tokens = _to_int(getattr(usage, "input_tokens", None))
+        output_tokens = _to_int(getattr(usage, "output_tokens", None))
+        total_tokens = None
+        if input_tokens is not None and output_tokens is not None:
+            total_tokens = input_tokens + output_tokens
+        self._record_usage(
+            {
+                "provider": "anthropic",
+                "input_tokens": input_tokens,
+                "output_tokens": output_tokens,
+                "total_tokens": total_tokens,
+                "cache_creation_input_tokens": _to_int(getattr(usage, "cache_creation_input_tokens", None)),
+                "cache_read_input_tokens": _to_int(getattr(usage, "cache_read_input_tokens", None)),
+            }
+        )
         return response.content[0].text.strip()

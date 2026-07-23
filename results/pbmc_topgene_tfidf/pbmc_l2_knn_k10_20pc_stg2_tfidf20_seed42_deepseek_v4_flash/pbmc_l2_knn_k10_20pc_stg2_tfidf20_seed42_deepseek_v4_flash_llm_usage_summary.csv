@@ -1,0 +1,5 @@
+step,phase,provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens
+llm_judge_binary,evaluation,deepseek,DeepSeekBackend,deepseek-v4-flash,38496,36644,75140,0,35404
+stage1_annotation,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,446000,598500,1044500,385920,564004
+stage2_program_query,annotation,deepseek,OpenAIJSONCaller,deepseek-v4-flash,178964,1494746,1673710,95616,911713
+stage2_refinement,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,1088353,566108,1654461,45952,517173

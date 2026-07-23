@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_1pc_stg2_expr20_seed42_deepseek_v4_flash,2026-07-21 16:00:28,2026-07-21 16:02:27,118.4647536277771,1.9744125604629517

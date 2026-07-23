@@ -13,7 +13,7 @@ filter:
   exclude_sex_chr: false
 
 selection:
-  strategy: zscore
+  strategy: tfidf
   n_top: 500
   modalities: [rna, adt]
 
@@ -22,7 +22,7 @@ input:
 
 llm:
   backend: gemini
-  model: gemini-2.0-flash
+  model: gemini-2.5-flash
   temperature: 0.0
   max_tokens: 512
   api_key_env: GOOGLE_API_KEY

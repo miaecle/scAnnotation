@@ -49,22 +49,57 @@ def _compute_lognorm_layer(
     Does **not** modify ``adata.X``.
     """
     if sp.issparse(X_raw):
-        X_f = X_raw.astype(float).copy()
-        cell_totals = np.asarray(X_f.sum(axis=1)).ravel()
-        safe_totals = np.where(cell_totals > 0, cell_totals, 1.0)
-        # Row-scale by target_sum / cell_total
-        scale = target_sum / safe_totals
-        X_norm = X_f.multiply(scale[:, None])
-        # log1p only on stored (non-zero) values — zeros remain zero
-        X_norm = X_norm.tocsr()
-        X_norm.data = np.log1p(X_norm.data)
-        adata.layers["lognorm"] = X_norm
+        # Use CSR + in-place row scaling to avoid large temporary allocations
+        # from sparse broadcast multiply on very large matrices.
+        X_csr = X_raw.tocsr(copy=True).astype(np.float32)
+        cell_totals = np.asarray(X_csr.sum(axis=1), dtype=np.float32).ravel()
+        safe_totals = np.where(cell_totals > 0, cell_totals, 1.0).astype(np.float32, copy=False)
+        scale = (np.float32(target_sum) / safe_totals).astype(np.float32, copy=False)
+
+        row_nnz = np.diff(X_csr.indptr)
+        X_csr.data *= np.repeat(scale, row_nnz)
+        np.log1p(X_csr.data, out=X_csr.data)
+        adata.layers["lognorm"] = X_csr
     else:
-        X_f = np.asarray(X_raw, dtype=float)
+        X_f = np.asarray(X_raw, dtype=np.float32)
         cell_totals = X_f.sum(axis=1, keepdims=True)
-        safe_totals = np.where(cell_totals > 0, cell_totals, 1.0)
-        X_norm = X_f * (target_sum / safe_totals)
-        adata.layers["lognorm"] = np.log1p(X_norm)
+        safe_totals = np.where(cell_totals > 0, cell_totals, 1.0).astype(np.float32, copy=False)
+        X_norm = X_f * (np.float32(target_sum) / safe_totals)
+        np.log1p(X_norm, out=X_norm)
+        adata.layers["lognorm"] = X_norm
+
+
+def _sparse_col_mean_std_chunked(
+    X: sp.spmatrix,
+    n_genes: int,
+    n_cells: int,
+    chunk_size: int = 5_000_000,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Compute per-gene mean/std for sparse matrices without large temporary arrays.
+
+    The implementation accumulates weighted bincounts over chunks of non-zero
+    entries, avoiding memory-heavy sparse matrix algebra that can duplicate
+    ``data`` for very large matrices.
+    """
+    X_csr = X.tocsr(copy=False)
+    idx_all = X_csr.indices
+    data_all = X_csr.data
+
+    sums = np.zeros(n_genes, dtype=np.float64)
+    sums_sq = np.zeros(n_genes, dtype=np.float64)
+
+    nnz = data_all.shape[0]
+    for start in range(0, nnz, chunk_size):
+        end = min(start + chunk_size, nnz)
+        idx = idx_all[start:end]
+        vals = data_all[start:end].astype(np.float64, copy=False)
+        sums += np.bincount(idx, weights=vals, minlength=n_genes)
+        sums_sq += np.bincount(idx, weights=vals * vals, minlength=n_genes)
+
+    mean_expr = sums / float(n_cells)
+    var_expr = np.maximum(sums_sq / float(n_cells) - mean_expr * mean_expr, 0.0)
+    std_expr = np.sqrt(var_expr)
+    return mean_expr, std_expr
 
 
 # ---------------------------------------------------------------------------
@@ -90,9 +125,7 @@ def _compute_hvg_mask(
         return np.zeros(adata.n_vars, dtype=bool)
 
     X_sub = adata.layers["lognorm"][:, expressed_mask]
-    if sp.issparse(X_sub):
-        X_sub = X_sub.copy()
-    else:
+    if not sp.issparse(X_sub):
         X_sub = np.asarray(X_sub, dtype=float)
 
     tmp = ad.AnnData(X=X_sub)
@@ -175,8 +208,7 @@ def compute_global_metrics(
     # ------------------------------------------------------------------ #
     print("INFO: Computing population statistics...")
     if sp.issparse(X_raw):
-        X_raw_csc = X_raw.tocsc()
-        pct_cells = np.diff(X_raw_csc.indptr).astype(float) / n_cells
+        pct_cells = np.asarray(X_raw.getnnz(axis=0)).ravel().astype(float) / n_cells
     else:
         pct_cells = (np.asarray(X_raw) > 0).mean(axis=0)
 
@@ -185,14 +217,10 @@ def compute_global_metrics(
     # ------------------------------------------------------------------ #
     X_ln = adata.layers["lognorm"]
     if sp.issparse(X_ln):
-        X_csc = X_ln.tocsc().astype(float)
-        mean_expr = np.asarray(X_csc.mean(axis=0)).ravel()
-        X_sq = X_csc.copy()
-        X_sq.data **= 2
-        mean_sq = np.asarray(X_sq.mean(axis=0)).ravel()
-        std_expr = np.sqrt(np.maximum(mean_sq - mean_expr ** 2, 0.0))
+        mean_expr, std_expr = _sparse_col_mean_std_chunked(X_ln, n_genes=n_genes, n_cells=n_cells)
+        X_csc = None
     else:
-        X_arr = np.asarray(X_ln, dtype=float)
+        X_arr = np.asarray(X_ln, dtype=np.float32)
         mean_expr = X_arr.mean(axis=0)
         std_expr = X_arr.std(axis=0)
         X_csc = None
@@ -229,7 +257,7 @@ def compute_global_metrics(
 
         if sp.issparse(X_ln):
             if X_csc is None:
-                X_csc = X_ln.tocsc().astype(float)
+                X_csc = X_ln.tocsc().astype(np.float32)
             for j in tqdm(gene_indices, desc=f"Gini ({gini_scope} genes)"):
                 s, e = X_csc.indptr[j], X_csc.indptr[j + 1]
                 gini_vals[j] = _gini_col(X_csc.data[s:e], n_cells)

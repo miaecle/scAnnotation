@@ -1,0 +1,4 @@
+step,phase,provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,audio_input_tokens,audio_output_tokens
+stage1_annotation,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,3606,3995,7601,1536,3461,0.0,0.0
+stage2_program_query,annotation,deepseek,OpenAIJSONCaller,deepseek-v4-flash,1944,11532,13476,1024,6110,0.0,0.0
+stage2_refinement,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,4944,2692,7636,0,2241,0.0,0.0

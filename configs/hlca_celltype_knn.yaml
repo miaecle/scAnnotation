@@ -1,0 +1,57 @@
+# Axis 2: kNN-smoothed (k=10) — reduces single-cell noise
+# Axis 4: z-score selection on the smoothed vector
+
+dataset_path: Datasets/HLCA/hlca_core.h5ad
+tissue: lung parenchyma # lung parenchyma | nose | respiratory airway
+
+global_metrics:
+  n_top_hvg: 2000
+  min_cells_pct: 0.01
+  compute_gini: false
+  gini_scope: hvg
+
+filter:
+  exclude_mt: true
+  exclude_ribo: true
+  exclude_low_expr: false
+  exclude_hb: true
+  exclude_tcr_ig: true
+  exclude_sex_chr: false
+  gini_min: null
+
+selection:
+  strategy: expr
+  n_top: 20
+  modalities: [rna]
+
+input:
+  mode: knn_smoothed
+  knn_k: 10
+  knn_use_rep: X_pca   # PCA computed on the fly if not present in obsm
+
+llm:
+  backend: deepseek
+  model: deepseek-v4-pro
+  temperature: 0.0
+  max_tokens: 4096
+  api_key_env: DEEPSEEK_API_KEY
+  concurrency: 20
+  use_context_cache: true
+  context_cache_ttl_seconds: 3600
+
+evaluation:
+  label_col: cell_type
+  n_per_class: 20
+  seed: 42
+  strategies: [exact]
+  judge_backend: deepseek
+  concurrency: 20
+
+stage2:
+  enabled: true
+  model: deepseek-v4-pro
+
+output:
+  results_dir: results/hlca_llm/hlca_lp_knn_k10_20pc_stg2_expr20_seed42_deepseek_v4_pro
+  experiment_name: hlca_lp_knn_k10_20pc_stg2_expr20_seed42_deepseek_v4_pro
+  save_results: true

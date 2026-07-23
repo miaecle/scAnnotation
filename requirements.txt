@@ -1,18 +1,28 @@
-# Core single-cell
+# Core single-cell analysis
 anndata>=0.10
 scanpy>=1.9
-scipy>=1.10
 numpy>=1.24
 pandas>=2.0
+scipy>=1.10
 
-# LLM backends (install the ones you use)
-anthropic>=0.96      # Claude — pip install anthropic
-google-genai>=1.0    # Gemini — pip install google-genai
-# openai>=1.0        # GPT   — pip install openai
-
-# Utilities
+# Machine learning
 scikit-learn>=1.3
+
+# LLM backends
+openai>=1.0
+anthropic>=0.96
+google-genai>=1.0
+
+# Configuration and environment variables
+python-dotenv>=1.0
+PyYAML
+
+# Progress and utilities
 tqdm
+
+# Visualization
 matplotlib
 seaborn
+
+# Interactive development
 jupyter
