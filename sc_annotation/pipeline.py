@@ -163,16 +163,11 @@ def _build_stage2_skip_record(
     
     Reconstructs the complete stage-2 prompt (prefix + prompt) for logging.
     """
-    reasoning_block = (
-        f"\nStage-1 reasoning that led to this annotation:\n{stage1_reasoning}\n"
-        if stage1_reasoning else ""
-    )
     cached_user_prefix = (
         f"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.\n\n"
         f"Return a JSON object with gene programs for:\n"
         f"  1. The fine-grained subtypes of this cell type commonly found in {tissue}.\n"
-        f"  2. The most commonly confused neighboring cell types in {tissue} — especially any\n"
-        f"     types hinted at by the stage-1 reasoning above.\n\n"
+        f"  2. The most commonly confused neighboring cell types in {tissue}.\n\n"
         f"Each key is a subtype/cell-type name; each value contains:\n"
         f'  "genes": list anywhere from 20 to {n_genes} genes most specifically UPREGULATED in that '
         f"subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)\n"
@@ -182,7 +177,6 @@ def _build_stage2_skip_record(
     )
     stage2_prompt = (
         f'A single cell in {tissue} was annotated in a first pass as: "{stage1_label}"\n'
-        f"{reasoning_block}"
     )
     full_stage2_prompt = f"{cached_user_prefix}\n\n{stage2_prompt}"
     
@@ -773,7 +767,6 @@ def run_experiment(
                         json_caller,
                         tissue=config.tissue or "PBMC",
                         n_genes=config.stage2.n_program_genes,
-                        stage1_reasoning=None,
                         usage_sink=_usage_sink,
                         usage_context={
                             "step": "stage2_program_query",
@@ -883,7 +876,6 @@ def run_experiment(
                         json_caller,
                         tissue=config.tissue or "PBMC",
                         n_genes=config.stage2.n_program_genes,
-                        stage1_reasoning=stage1_reasoning,
                         usage_sink=_usage_sink,
                         usage_context={
                             "step": "stage2_program_query",
@@ -898,16 +890,11 @@ def run_experiment(
                             stage2_program_cache.setdefault(stage2_cache_key, raw_programs)
 
                 if _inspect_enabled_for_cell(int(cell_idx)):
-                    stage2_program_reasoning_block = (
-                        f"\nStage-1 reasoning that led to this annotation:\n{stage1_reasoning}\n"
-                        if stage1_reasoning else ""
-                    )
                     stage2_program_prefix = (
                         f"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.\n\n"
                         f"Return a JSON object with gene programs for:\n"
                         f"  1. The fine-grained subtypes of this cell type commonly found in {config.tissue or 'PBMC'}.\n"
-                        f"  2. The most commonly confused neighboring cell types in {config.tissue or 'PBMC'} — especially any\n"
-                        f"     types hinted at by the stage-1 reasoning above.\n\n"
+                        f"  2. The most commonly confused neighboring cell types in {config.tissue or 'PBMC'}.\n\n"
                         f"Each key is a subtype/cell-type name; each value contains:\n"
                         f'  "genes": list anywhere from 20 to {config.stage2.n_program_genes} genes most specifically UPREGULATED in that '
                         f"subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)\n"
@@ -917,7 +904,6 @@ def run_experiment(
                     )
                     stage2_program_prompt = (
                         f'A single cell in {config.tissue or "PBMC"} was annotated in a first pass as: "{stage1_label}"\n'
-                        f"{stage2_program_reasoning_block}"
                     )
                     stage2_program_full_prompt = f"{stage2_program_prefix}\n\n{stage2_program_prompt}"
                     _append_inspect(

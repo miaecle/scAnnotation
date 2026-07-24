@@ -612,26 +612,20 @@ def query_subtype_programs(
         json_caller: Callable from :func:`make_gemini_json_caller`.
         tissue: Tissue context, e.g. ``"PBMC"``, ``"lymph node"``.
         n_genes: Requested number of marker genes per program.
-        stage1_reasoning: Full rationale text from the stage-1 LLM response.
-            When provided, the LLM can use it to understand *which* genes and
-            proteins drove the stage-1 call, and therefore which subtypes or
-            confused neighbors are most relevant to include.
+        stage1_reasoning: Kept for backward compatibility with existing call
+            sites. Intentionally ignored so precompute and per-cell annotation
+            use identical inputs for fair comparison.
 
     Returns:
         Raw dict ``{subtype_name: {"genes": [...], "description": "..."}}``.
         Call :func:`filter_programs_to_panel` before passing to :func:`score_gene_programs`.
     """
-    reasoning_block = (
-        f"\nStage-1 reasoning that led to this annotation:\n{stage1_reasoning}\n"
-        if stage1_reasoning
-        else ""
-    )
+    _ = stage1_reasoning
     cached_user_prefix = (
         f"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.\n\n"
         f"Return a JSON object with gene programs for:\n"
         f"  1. The fine-grained subtypes of this cell type commonly found in {tissue}.\n"
-        f"  2. The most commonly confused neighboring cell types in {tissue} — especially any\n"
-        f"     types hinted at by the stage-1 reasoning above.\n\n"
+        f"  2. The most commonly confused neighboring cell types in {tissue}.\n\n"
         f"Each key is a subtype/cell-type name; each value contains:\n"
         f'  "genes": list anywhere from 20 to {n_genes} genes most specifically UPREGULATED in that '
         f"subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)\n"
@@ -641,7 +635,6 @@ def query_subtype_programs(
     )
     prompt = (
         f'A single cell in {tissue} was annotated in a first pass as: "{stage1_label}"\n'
-        f"{reasoning_block}"
     )
     full_user_prompt = f"{cached_user_prefix}\n\n{prompt}"
     last_error: Exception | None = None
