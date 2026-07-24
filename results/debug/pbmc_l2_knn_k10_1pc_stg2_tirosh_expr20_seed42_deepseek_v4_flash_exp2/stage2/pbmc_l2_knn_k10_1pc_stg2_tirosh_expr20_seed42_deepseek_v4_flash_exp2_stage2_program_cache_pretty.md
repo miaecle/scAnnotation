@@ -1,0 +1,125 @@
+# Stage-2 Precomputed Programs
+
+- tissue: PBMC
+- n_program_genes: 50
+- n_cached_cell_types: 3
+
+## b memory
+
+### Naive B
+
+Description: Mature B cells that have not encountered antigen, expressing surface IgD and IgM, lacking CD27.
+
+Genes:
+- IGHD, IGHM, TCL1A, FCER2, CD24, CD38, MS4A1, CD79A, CD79B, PAX5, CXCR4, CXCR5
+- IL4R, TNFRSF13C, P2RY8, LRMP, FCRLA, FCRLB, IGHJ, IGLC2, IGKV1-39, IGLV1-47, IGKC, IGLC1
+- IGHV1-18
+
+### Plasma cells
+
+Description: Antibody-secreting effector B cells characterized by high CD38 and surface or intracellular immunoglobulin.
+
+Genes:
+- SDC1, MZB1, XBP1, PRDM1, JCHAIN, TNFRSF17, CD38, SLAMF7, FKBP11, SSB, POU2AF1, IRF4
+- PTPRC, HSP90B1, PDIA6, PDIA4, CALR, CANX, GANAB, SELENOM, HYOU1, KLRG1, FCRL5, CD28
+- ITGA4
+
+### Switched memory B
+
+Description: Memory B cells that have undergone class switch recombination, typically expressing CD27 and lacking surface IgD.
+
+Genes:
+- CD27, CR2, CD40, CXCR5, IL4R, BANK1, MS4A1, CD79A, CD79B, PAX5, TNFRSF13B, TNFRSF13C
+- ZNF608, P2RY8, IGHG1, IGHG3, IGHA1, IGHA2, AICDA, BCL6, MEF2C, POU2AF1, SPIB, IRF8
+- NFATC1
+
+### Unswitched memory B
+
+Description: Memory B cells that have not undergone class switch recombination, co-expressing surface IgM and IgD along with CD27.
+
+Genes:
+- IGHD, IGHM, CD27, CR2, CXCR5, MS4A1, CD79A, CD79B, PAX5, CD40, IL4R, TNFRSF13B
+- TNFRSF13C, CD1C, CD1D, CXCR4, FCRL1, FCRL2, FCRL3, BIRC3, TCL1A, IGHJ, IGLC2, IGKV1-39
+- IGLV1-47
+
+## cd14 mono
+
+### CD141+ Dendritic Cell
+
+Description: CD141+ myeloid dendritic cells (cDC1) specialize in cross-presentation and are crucial for antiviral and antitumor immunity.
+
+Genes:
+- CD141, THBD, XCR1, CADM1, CLEC9A, CLEC10A, CLEC4C, FLT3, IL3RA, ITGAX, ITGAM, CD11C
+- IRF8, BATF3, TCF4, ID2, E2-2, TLR3, TLR7, TLR8, MYD88, IRAK1, NFKB1, MAPK1
+- STAT1, STAT3, JAK1, JAK2, IL12A, IL12B, IFNAR1, IFNAR2, CCR7, LAMP3, CD83, CD86
+- HLA-DRA, HLA-DRB1, CD40, CD80, XCL1, XCL2, IL15, IL18
+
+### CD1c+ Dendritic Cell
+
+Description: CD1c+ myeloid dendritic cells (cDC2) are professional antigen-presenting cells that activate T cells and produce cytokines in response to pathogens.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, CCR7, LAMP3, CD83, CD86, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD40
+- CD80, XCR1, CADM1, CLEC9A, FLT3, IL3RA, ITGAX, ITGAM, CD11C, IRF8, IRF4, ZEB2
+- BATF3, TCF4, SPI1, BCL6, ID2, E2-2, TLR3, TLR7, TLR8, MYD88, IRAK1, NFKB1
+- MAPK1, STAT1, STAT3, JAK1, JAK2, CLEC4C, IL12A, IL12B, IFNAR1, IFNAR2
+
+### Classical Monocyte
+
+Description: Classical CD14++CD16- monocytes are the most abundant monocyte subset, responsible for phagocytosis, cytokine production, and inflammation.
+
+Genes:
+- CD14, FCGR1A, CSF1R, CD33, CTSS, LYZ, S100A8, S100A9, VCAN, FGL2, FCN1, SERPINA1
+- IL1B, CCL2, CLECT5A, CD64, CD11B, CCR2, CX3CR1, S100A11, TREM1, CD4, TLR2, TLR4
+- MYD88, IRAK1, NFKB1, IL6R, TNF, IL1A, IL1R1, IL10, IL18, CD80, CD86, HLA-DRA
+- HLA-DRB1, CD40, CD58, CD97
+
+### Intermediate Monocyte
+
+Description: Intermediate CD14++CD16+ monocytes exhibit both classical and non-classical features, with high antigen-presenting and inflammatory cytokine production.
+
+Genes:
+- CD14, FCGR3A, FCGR1A, CD16, CX3CR1, CCR2, HLA-DRA, HLA-DRB1, CD86, CD40, TNF, IL1B
+- IL6, CCL3, CCL4, CXCL10, CXCL9, CD80, CD58, CD97, TLR2, TLR4, TLR8, MYD88
+- IRAK1, NFKB1, MAPK1, MAPK3, STAT1, STAT3, IRF8, IRF5, JAK1, JAK2, S100A8, S100A9
+- S100A11, CTSS, LYZ, VCAN, FGL2, FCN1, SERPINA1
+
+### Non-classical Monocyte
+
+Description: Non-classical CD14+CD16++ monocytes patrol the endothelium, produce anti-inflammatory cytokines, and respond to viral and nucleic acid stimuli.
+
+Genes:
+- FCGR3A, CX3CR1, CD14, CD16, LST1, RHOC, S100A10, S100A11, AIF1, COTL1, MS4A7, FCGR3B
+- GPR183, CSF1R, ITGAL, ITGAM, CD11B, CD11C, CD18, CCR5, CX3CL1, IL3RA, IL4, IL13
+- IL1R1, TNFRSF1B, TLR4, TLR7, TLR8, MYD88, IRAK1, NFKB1, MAPK1, MAPK3, STAT1, STAT3
+- IRF8, IRF5, JAK1, JAK2
+
+## cd16 mono
+
+### CD16+ Monocyte (non-classical)
+
+Description: Patrolling monocytes that survey the endothelium and secrete pro-inflammatory cytokines such as TNF and IL-1β.
+
+Genes:
+- FCGR3A, LST1, RHOC, MS4A7, LILRB2, CDKN1C, CX3CR1, CFD, HES4, TCF7L2, GTF2I, MEF2C
+- ZFP36L2, IFITM3, SERPINB1, TMBIM1, RBP7, FES, PTPRC, ITGAL, C5AR1, FPR1, S100A12, CD36
+- CLIC1
+
+### Classical Monocyte
+
+Description: Phagocytic monocytes that migrate to tissues and differentiate into macrophages or dendritic cells, key responders in infection and inflammation.
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, FCN1, CST3, CTSS, PSAP, NPC2, TYMP, VCAN, TREM1
+- IL1B, CXCL8, CCL3, CCL4, MNDA, CSF1R, IRF8, MAFB, CEBPA, ETS2, ETS1, CTSD
+- LIPA
+
+### Natural Killer (NK) cell
+
+Description: Cytotoxic innate lymphoid cells that kill infected or malignant cells without prior sensitization, characterized by expression of NKG7 and GNLY.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMK, KLRD1, KLRB1, KLRF1, NCR1, NCR3, FCGR3A
+- KLRK1, KLRC1, CST7, CCL5, XCL1, XCL2, ZEB2, EOMES, TBX21, IL2RB, IL18RAP, CD247
+- MYBL1
+

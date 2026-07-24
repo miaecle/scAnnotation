@@ -4,7 +4,7 @@
 
 # Large data — store elsewhere (e.g. Zenodo, GCS, local)
 Datasets/
-results/
+# results/
 
 # Python
 __pycache__/

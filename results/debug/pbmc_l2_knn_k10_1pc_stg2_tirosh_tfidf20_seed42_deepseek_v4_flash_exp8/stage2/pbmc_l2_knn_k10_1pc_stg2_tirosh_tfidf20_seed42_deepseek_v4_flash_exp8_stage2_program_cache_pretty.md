@@ -1,0 +1,146 @@
+# Stage-2 Precomputed Programs
+
+- tissue: PBMC
+- n_program_genes: 50
+- n_cached_cell_types: 3
+
+## b memory
+
+### Atypical memory B
+
+Description: Atypical memory B cells, also known as double-negative or T-bet+ memory B cells, which are expanded in certain infections and autoimmune conditions.
+
+Genes:
+- ITGAX, TBX21, FCRL5, FCRL4, FCRL3, CD11C, T-bet, CXCR3, CXCR6, CCR5, CCR6, CD27
+- CD21, CD19, CD20, CD79A, CD79B, MS4A1, PAX5, EBF1, IRF8, POU2AF1, SPIB, TCF4
+- BCL11A, CD22, CD38, CD72, CD81, CD84, CD180, FCER2, CD24, CD44, CD62L, CD73
+- CD200, CD307, CD357, CD358, CD360, CD361, CD362, CD363, CD364, CD365
+
+### Naive B
+
+Description: Naive B cells that have not yet encountered antigen, expressing IgD and IgM but lacking CD27 and memory markers.
+
+Genes:
+- IGHD, IGHM, CD24, CD38, FCER2, CR2, CD40, ICOSL, BCL6, CXCR5, IL4R, CD86
+- TNFRSF13C, TNFRSF13B, FCRL1, FCRL2, FCRL5, CD79A, CD79B, MS4A1, PAX5, EBF1, IRF8, POU2AF1
+- SPIB, TCF4, BCL11A, CD19, CD22, CD72, CD81, CD84, CD180, CD27, CD44, CD62L
+- CD73, CD200, CD307, CD357, CD358, CD360, CD361, CD362, CD363, CD364, CD365
+
+### Non-switched memory B
+
+Description: Non-switched memory B cells that retain expression of IgD and IgM along with CD27, typical of marginal zone or unswitched memory.
+
+Genes:
+- CD27, IGHD, IGHM, CD1C, CR2, CD40, ICOSL, BCL6, CXCR5, IL4R, CD86, TNFRSF13C
+- TNFRSF13B, FCRL1, FCRL2, FCRL5, CD79A, CD79B, MS4A1, PAX5, EBF1, IRF8, POU2AF1, SPIB
+- TCF4, BCL11A, CD19, CD22, CD38, CD72, CD81, CD84, CD180, FCER2, CD24, CD44
+- CD62L, CD73, CD200, CD307, CD357, CD358, CD360, CD361, CD362, CD363, CD364, CD365
+
+### Plasma cells
+
+Description: Plasma cells, the antibody-secreting effector cells that highly express CD138 and are specialized in immunoglobulin production.
+
+Genes:
+- SDC1, MZB1, XBP1, PRDM1, JCHAIN, IGLL5, DERL3, FNDC3B, FKBP11, SEC61A2, SEC61B, SEC61G
+- SSR4, P4HB, PDIA4, PDIA6, ERO1A, HYOU1, HSPA5, HSP90B1, CANX, CALR, PDIA3, PDIA5
+- PDIA2, CALU, ERP29, ERP44, TXNDC5, VIMP, SEL1L, EDEM1, EDEM2, EDEM3, OS9, MAN1A1
+- MAN1B1, MAN1C1, MAN2A1, MAN2B1, MAN2C1, GANA, GANAB, GANC, GBA, GLA, GLB1, GLB1L
+- GLT25D1, GLT25D2
+
+### Switched memory B
+
+Description: Class-switched memory B cells that have undergone immunoglobulin class switch recombination, expressing IgG or IgA and CD27.
+
+Genes:
+- CD27, IGHG1, IGHA1, CR2, CD40, ICOSL, BCL6, AICDA, BACH2, CXCR5, IL4R, CD86
+- TNFRSF13C, TNFRSF13B, FCRL2, FCRL3, FCRL5, CD79A, CD79B, MS4A1, PAX5, EBF1, IRF8, POU2AF1
+- SPIB, TCF4, BCL11A, CD19, CD22, CD38, CD72, CD81, CD84, CD180, SWAP70, RC3H1
+- MEF2C, MEF2B, ETS1, RUNX2, CREM, NFATC1, NFKBIZ, BCL2, BCL2L1, BCL2L11, MCL1, BAX
+- BID, BIM
+
+## cd14 mono
+
+### CD1c+ Dendritic Cell
+
+Description: CD1c+ dendritic cells are a subset of conventional dendritic cells that are potent antigen-presenting cells and key regulators of adaptive immunity.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, CD1E, CD1D, CD1B, CD1A, HLA-DRA, HLA-DRB1, HLA-DPB1, HLA-DPA1, HLA-DQA1
+- HLA-DQB1, HLA-DMA, HLA-DMB, HLA-DOA, HLA-DOB, CD74, CD80, CD86, CD40, CCR7, CCL17, CCL22
+- CXCL16, IL12B, IL23A, IL6, TNF, IRF4, IRF8, ZBTB46, FLT3, AXL, SIGLEC6, SIGLEC10
+- CLEC4C, CLEC4A, CLEC7A, CLEC12A, LILRA4, LILRB4, LILRB2, LILRA5, TLR3, TLR7, TLR8, TLR9
+
+### Classical CD14++ Monocyte
+
+Description: Classical monocytes are CD14++CD16- cells that play a key role in phagocytosis, inflammatory responses, and tissue remodeling.
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, FCN1, CST3, S100A12, VCAN, CTSS, CD68, CD33, CSF1R
+- CCL2, CLEC7A, TLR2, TLR4, IRF8, MAFB, CEBPB, GATA2, SPI1, MNDA, LILRB2, LILRA5
+- FPR1, FPR2, NLRP3, IL1B, TNF, SERPINA1, HLA-DRA, HLA-DRB1, HLA-DPB1, HLA-DPA1, CD74, IFITM3
+- IFITM2, MX1, ISG15, OAS1, OAS2, OAS3, IRF7, STAT1, STAT2, IFI6, IFIT1, IFIT3
+- RSAD2
+
+### Intermediate CD14+CD16+ Monocyte
+
+Description: Intermediate monocytes are CD14+CD16+ cells with high antigen-presenting capacity and a strong pro-inflammatory cytokine profile.
+
+Genes:
+- CD14, FCGR3A, FCGR3B, CD16, HLA-DRA, HLA-DRB1, HLA-DPB1, HLA-DPA1, CD74, CD86, CD80, TLR4
+- TLR2, IL1B, TNF, IL6, CCL3, CCL4, CCR2, CX3CR1, CXCL8, CXCL10, CXCL9, CCL5
+- SOD2, NFKBIA, NFKBIZ, IER3, JUN, FOS, PTGS2, PLAUR, SERPINE1, TIMP1, MMP9, MMP14
+- ADAM17, LILRB2, LILRA5, LILRB1, LILRA3, LILRA6, NLRP3, CASP1, PYCARD, IL18, IL10, CCL22
+
+### Non-classical CD14lowCD16+ Monocyte
+
+Description: Non-classical monocytes are CD14lowCD16+ cells that patrol the vasculature and are involved in wound healing and immune surveillance.
+
+Genes:
+- FCGR3A, CDKN1C, LILRB2, LILRB1, LILRA5, LILRA3, LILRA6, LILRB4, LILRB5, LILRA2, LILRA4, LILRA1
+- LILRA8, LILRB3, LILRB1, LILRB2, CD16, CD86, HLA-DRA, HLA-DRB1, HLA-DPB1, HLA-DPA1, CD74, CST3
+- CSF1R, CX3CR1, CXCL16, CCL3, CCL4, CCR5, CCR2, TLR7, TLR8, IRF4, IRF8, MAFB
+- CEBPB, SPI1, ETS1, FLI1, MEF2C, RUNX1, GATA2, MPO, PRTN3, AZU1, ELANE, CTSG
+- RNASE2
+
+## cd16 mono
+
+### CD14+ Monocyte (classical)
+
+Description: Classical monocytes with high CD14 expression, major phagocytic subset in blood.
+
+Genes:
+- CD14, CCR2, S100A8, S100A9, SELL, LYZ, CD33, FCGR2A, FCGR2B, FCGR3A, CX3CR1, CD36
+- CSF1R, MAFB, IRF8, SRGN, PSAP, FGL2, TIMP1, SERPINA1, SERPINB1, LITAF, CTSB, CTSD
+- LGMN, HLA-DRA, HLA-DRB1, CD74, ITGAM, ITGAX, VCAN, ALOX5AP, SLC11A1, CST3, LYN, FCER1G
+- TLR8, LILRB2, LST1, RHOC
+
+### CD16+ Monocyte (non-classical)
+
+Description: Non-classical monocytes with high CD16 expression and low CD14, involved in patrolling vasculature and immune surveillance.
+
+Genes:
+- FCGR3A, LILRB2, LST1, RHOC, LILRA5, MS4A7, ALOX5AP, SLC11A1, CST3, LYN, FCER1G, TLR8
+- CD36, CX3CR1, CSF1R, MAFB, IRF8, SRGN, PSAP, FGL2, TIMP1, SERPINA1, SERPINB1, LITAF
+- CTSB, CTSD, LGMN, CD14, CD16, CCR2, FCGR1A, CD4, HLA-DRA, HLA-DRB1, CD74, ITGAM
+- ITGAX, S100A8, S100A9, VCAN
+
+### Conventional dendritic cell 2 (cDC2)
+
+Description: Conventional type 2 dendritic cells that present antigen to T cells and express CD1c, FceRI, and CLEC10A.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, HLA-DRA, HLA-DRB1, CD74, ITGAX, ITGAM, CSF1R, FLT3
+- IRF4, IRF8, ZEB2, BATF3, ID2, CD4, CD11C, CD14, CD16, CD32, CD64, TLR1
+- TLR2, TLR4, TLR6, TLR8, CLEC12A, CLEC7A, CD209, ICAM3, LSP1, ARPC1B, WIPF1, AP1S2
+- DNASE1L3, HLA-DPA1, HLA-DPB1, HLA-DMA, HLA-DMB
+
+### NK cell
+
+Description: Natural killer cells that provide rapid cytotoxicity and cytokine production, often expressing CD16 (FcγRIII).
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMH, GZMK, KLRD1, KLRB1, KLRF1, KLRG1, CD247, CD3E
+- CD8A, CD8B, NCAM1, NCR1, NCR3, FCGR3A, CD16, XCL1, XCL2, CCL4, CCL3, IFNG
+- GZMA, GZMM, GZMH, CST7, PRF1, CTSW, FCER1G, TGFBI, PLAC8, FGFBP2, SPON2, KLRC1
+- KLRC2, KLRC3, KIR2DL1, KIR2DL3, KIR3DL1
+

@@ -288,6 +288,7 @@ def _build_prompt(gene_sel: dict, sel_cfg, proteins: list, tissue: Optional[str]
         proteins=proteins,
         tissue=tissue,
         cell_type_list=cell_type_list,
+        selection_strategy=s,
     )
 
 

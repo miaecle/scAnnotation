@@ -1,0 +1,1258 @@
+# Inspect Traces
+
+Total records: 9
+
+## Record 1
+
+- stage: stage1_annotation
+- row_idx: 0
+- cell_idx: 13748
+- cell_barcode: L1_TTTGTTGCAGCGAGTA
+- true_label: CD16 Mono
+
+### prompt
+
+```text
+Tissue context: PBMC
+
+Top genes (ranked by TF-IDF specificity):
+    1. CST3 (0.003)
+    2. LST1 (0.003)
+    3. AIF1 (0.003)
+    4. FCGR3A (0.002)
+    5. CDKN1C (0.002)
+    6. IFITM3 (0.002)
+    7. FCN1 (0.002)
+    8. TYROBP (0.002)
+    9. FCER1G (0.001)
+   10. CFD (0.001)
+   11. HLA-DRA (0.001)
+   12. MS4A7 (0.001)
+   13. HLA-DRB1 (0.001)
+   14. HLA-DPA1 (0.001)
+   15. COTL1 (0.001)
+   16. CTSS (0.001)
+   17. S100A11 (0.001)
+   18. TYMP (0.001)
+   19. SAT1 (0.001)
+   20. MNDA (0.001)
+
+Top expressed surface proteins / ADT markers (ranked by count):
+    1. CD41 (3.942)
+    2. CD62P (3.935)
+    3. CD31 (3.822)
+    4. CD4-1 (3.706)
+    5. CD48 (3.094)
+    6. CD18 (3.082)
+    7. CD45-2 (3.014)
+    8. CLEC2 (2.941)
+    9. CD35 (2.829)
+   10. CD93 (2.770)
+   11. CD102 (2.720)
+   12. CD63 (2.491)
+   13. CD49d (2.477)
+   14. CD43 (2.462)
+   15. CD9 (2.437)
+   16. CD61 (2.423)
+   17. CD172a (2.415)
+   18. CD16 (2.376)
+   19. CD11b-1 (2.223)
+   20. CD47 (2.180)
+
+Choose the cell type from the following list (output exactly one of these names in the first line):
+CD16 Mono, B memory, CD14 Mono
+
+Based on the expression profile above, which cell type is this? Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words).
+```
+
+### output
+
+```text
+CD16 Mono
+
+The top genes (FCGR3A, CST3, LST1, AIF1, FCN1) and surface proteins (CD16, CD11b, CD18) are characteristic of CD16+ monocytes. CD14 is not prominent, consistent with non-classical monocytes lacking high CD14 expression. B cell markers (e.g., CD19) are absent, ruling out B memory.
+```
+
+## Record 2
+
+- stage: stage2_program_query
+- row_idx: 0
+- cell_idx: 13748
+- cell_barcode: L1_TTTGTTGCAGCGAGTA
+- true_label: CD16 Mono
+- stage1_label: CD16 Mono
+
+### stage1_reasoning
+
+```text
+The top genes (FCGR3A, CST3, LST1, AIF1, FCN1) and surface proteins (CD16, CD11b, CD18) are characteristic of CD16+ monocytes. CD14 is not prominent, consistent with non-classical monocytes lacking high CD14 expression. B cell markers (e.g., CD19) are absent, ruling out B memory.
+```
+
+### prompt_prefix
+
+```text
+This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  "genes": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  "description": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+```
+
+### prompt
+
+```text
+A single cell in PBMC was annotated in a first pass as: "CD16 Mono"
+
+```
+
+### full_prompt
+
+```text
+This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  "genes": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  "description": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: "CD16 Mono"
+
+```
+
+### output
+
+```text
+{
+  "Classical Monocytes": {
+    "genes": [
+      "CD14",
+      "FCGR1A",
+      "LYZ",
+      "S100A8",
+      "S100A9",
+      "CST3",
+      "FCN1",
+      "S100A12",
+      "VCAN",
+      "CD163",
+      "MNDA",
+      "TYMP",
+      "CLEC7A",
+      "MSR1",
+      "ITGAM",
+      "FPR1",
+      "FPR2",
+      "TLR2",
+      "TLR4",
+      "MYD88",
+      "IRAK1",
+      "TNF",
+      "IL1B",
+      "CCL2",
+      "CXCL8",
+      "CCR2",
+      "CSF1R",
+      "CD33"
+    ],
+    "description": "Classical monocytes express high CD14 and are key phagocytes in innate immune responses."
+  },
+  "Non-classical Monocytes": {
+    "genes": [
+      "FCGR3A",
+      "CDKN1C",
+      "MS4A7",
+      "LST1",
+      "ITGAL",
+      "CX3CR1",
+      "RHOC",
+      "FPR3",
+      "FTL",
+      "IFI30",
+      "TREM1L",
+      "LRRC25",
+      "SLC7A7",
+      "CKB",
+      "MYLIP",
+      "CLIC2",
+      "WDFY4",
+      "MAN1A1",
+      "PDK4",
+      "CCL5",
+      "CTSL",
+      "COTL1",
+      "LINC00662",
+      "KLRB1",
+      "GPR114",
+      "P2RY13",
+      "FCGR3B",
+      "CD16"
+    ],
+    "description": "Non-classical monocytes express CD16 and patrol the vasculature, responding to viral and nucleic acid stimuli."
+  },
+  "Intermediate Monocytes": {
+    "genes": [
+      "CD14",
+      "FCGR3A",
+      "HLA-DRA",
+      "HLA-DRB1",
+      "CD74",
+      "CCL3",
+      "CXCL2",
+      "NFKBIA",
+      "IL1RN",
+      "CCL4",
+      "CCL4L2",
+      "TNFAIP6",
+      "SOD2",
+      "CD83",
+      "CD86",
+      "CCR5",
+      "CX3CR1",
+      "ICAM1",
+      "IL6",
+      "TNF",
+      "IL1B",
+      "LYZ",
+      "MNDA",
+      "TYMP",
+      "VCAN",
+      "S100A8",
+      "S100A9"
+    ],
+    "description": "Intermediate monocytes co-express CD14 and CD16 and have pro-inflammatory and antigen-presenting functions."
+  },
+  "NK Cells": {
+    "genes": [
+      "NKG7",
+      "GNLY",
+      "PRF1",
+      "GZMB",
+      "KLRD1",
+      "KLRK1",
+      "CD247",
+      "NKG2A",
+      "NKG2D",
+      "FCGR3A",
+      "FGFBP2",
+      "KLRC1",
+      "KLRF1",
+      "KIR2DL1",
+      "KIR3DL1",
+      "CD56",
+      "NCAM1",
+      "NCR1",
+      "NCR3",
+      "CD160",
+      "CD244",
+      "SH2D1A",
+      "XCL1",
+      "XCL2",
+      "CCL5",
+      "CCL4",
+      "GZMH",
+      "GZMA"
+    ],
+    "description": "NK cells are innate lymphoid cells that kill target cells and produce cytokines, often confused with CD16+ monocytes due to shared CD16 expression."
+  }
+}
+```
+
+## Record 3
+
+- stage: stage2_refinement
+- row_idx: 0
+- cell_idx: 13748
+- cell_barcode: L1_TTTGTTGCAGCGAGTA
+- true_label: CD16 Mono
+- stage1_label: CD16 Mono
+
+### prompt
+
+```text
+Tissue context: PBMC
+
+Stage-1 annotation: "CD16 Mono" — may have minor inaccuracies. Use the evidence below to confirm or correct it.
+
+Stage-1 reasoning:
+The top genes (FCGR3A, CST3, LST1, AIF1, FCN1) and surface proteins (CD16, CD11b, CD18) are characteristic of CD16+ monocytes. CD14 is not prominent, consistent with non-classical monocytes lacking high CD14 expression. B cell markers (e.g., CD19) are absent, ruling out B memory.
+
+Top 30 cell-specific genes by TF-IDF (weights by rarity across cells — highlights rare but highly expressed genes):
+    1. CST3
+    2. LST1
+    3. AIF1
+    4. FCGR3A
+    5. CDKN1C
+    6. IFITM3
+    7. FCN1
+    8. TYROBP
+    9. FCER1G
+   10. CFD
+   11. HLA-DRA
+   12. MS4A7
+   13. HLA-DRB1
+   14. HLA-DPA1
+   15. COTL1
+   16. CTSS
+   17. S100A11
+   18. TYMP
+   19. SAT1
+   20. MNDA
+   21. PSAP
+   22. TIMP1
+   23. LYZ
+   24. SERPINA1
+   25. IFI30
+   26. LGALS1
+   27. CYBB
+   28. FOS
+   29. HLA-DRB5
+   30. MARCKS
+
+Surface proteins (z-score vs. population):
+    1. CD41             z=+3.94
+    2. CD62P            z=+3.93
+    3. CD31             z=+3.82
+    4. CD4-1            z=+3.71
+    5. CD48             z=+3.09
+    6. CD18             z=+3.08
+    7. CD45-2           z=+3.01
+    8. CLEC2            z=+2.94
+    9. CD35             z=+2.83
+   10. CD93             z=+2.77
+   11. CD102            z=+2.72
+   12. CD63             z=+2.49
+   13. CD49d            z=+2.48
+   14. CD43             z=+2.46
+   15. CD9              z=+2.44
+
+Pathway scores (LLM-defined gene programs scored against this cell; higher = more active program):
+  Non-classical Monocytes  : +1.156
+  Classical Monocytes      : +0.216
+  Intermediate Monocytes   : +0.032
+  NK Cells                 : -0.464
+
+Choose the cell type from the following list (output exactly one of these names in Line 1):
+CD16 Mono, B memory, CD14 Mono
+
+Considering all of the above — genes (across all scoring methods), surface proteins, pathway scores, and the stage-1 reasoning — confirm or correct the stage-1 annotation by choosing the most appropriate subtype from the list above. Trust direct gene/protein evidence over the stage-1 label when they conflict.
+Line 1: final cell type (from the list above).  Line 2: brief rationale (<100 words).
+```
+
+### output
+
+```text
+CD16 Mono
+
+Top genes (FCGR3A, CST3, AIF1, FCN1) and the strongly positive non-classical monocyte pathway score (+1.156) confirm CD16+ non-classical monocytes. Surface proteins include some platelet markers, but the overall transcriptomic profile and pathway evidence align with CD16 Mono.
+```
+
+## Record 4
+
+- stage: stage1_annotation
+- row_idx: 1
+- cell_idx: 48
+- cell_barcode: L1_AAAGAACCACCTCTAC
+- true_label: B memory
+
+### prompt
+
+```text
+Tissue context: PBMC
+
+Top genes (ranked by TF-IDF specificity):
+    1. IGKC (0.010)
+    2. HLA-DRA (0.003)
+    3. MS4A1 (0.003)
+    4. CD74 (0.001)
+    5. BANK1 (0.001)
+    6. IGHA1 (0.001)
+    7. HLA-DQA1 (0.001)
+    8. HLA-DRB1 (0.001)
+    9. HLA-DPB1 (0.001)
+   10. CD79A (0.001)
+   11. HLA-DPA1 (0.001)
+   12. IGHE (0.001)
+   13. LINC01781 (0.001)
+   14. HLA-DQB1 (0.001)
+   15. BLK (0.001)
+   16. IGHA2 (0.001)
+   17. LTB (0.001)
+   18. IGHG3 (0.001)
+   19. AIM2 (0.001)
+   20. SSPN (0.001)
+
+Top expressed surface proteins / ADT markers (ranked by count):
+    1. CD35 (4.648)
+    2. CD73 (3.910)
+    3. CD19 (3.654)
+    4. CD22 (3.611)
+    5. CD4-1 (3.102)
+    6. CD48 (3.021)
+    7. CD71 (2.492)
+    8. CD45-2 (2.392)
+    9. CD62P (2.384)
+   10. CD21 (2.337)
+   11. Integrin-7 (2.310)
+   12. CD8a (2.215)
+   13. CD18 (2.154)
+   14. CD49d (2.066)
+   15. CD27 (2.058)
+   16. CD93 (2.015)
+   17. CD102 (1.897)
+   18. CD45RA (1.862)
+   19. CD47 (1.831)
+   20. CD268 (1.803)
+
+Choose the cell type from the following list (output exactly one of these names in the first line):
+CD16 Mono, B memory, CD14 Mono
+
+Based on the expression profile above, which cell type is this? Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words).
+```
+
+### output
+
+```text
+B memory
+High expression of B cell markers (MS4A1/CD20, CD79A, IGKC, HLA-DR) and surface proteins (CD19, CD22, CD21, CD27, CD268) along with immunoglobulin genes indicates B memory cells. CD27 is a canonical memory B cell marker.
+```
+
+## Record 5
+
+- stage: stage2_program_query
+- row_idx: 1
+- cell_idx: 48
+- cell_barcode: L1_AAAGAACCACCTCTAC
+- true_label: B memory
+- stage1_label: B memory
+
+### stage1_reasoning
+
+```text
+High expression of B cell markers (MS4A1/CD20, CD79A, IGKC, HLA-DR) and surface proteins (CD19, CD22, CD21, CD27, CD268) along with immunoglobulin genes indicates B memory cells. CD27 is a canonical memory B cell marker.
+```
+
+### prompt_prefix
+
+```text
+This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  "genes": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  "description": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+```
+
+### prompt
+
+```text
+A single cell in PBMC was annotated in a first pass as: "B memory"
+
+```
+
+### full_prompt
+
+```text
+This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  "genes": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  "description": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: "B memory"
+
+```
+
+### output
+
+```text
+{
+  "Switched memory B cells": {
+    "genes": [
+      "CD27",
+      "MS4A1",
+      "CD79A",
+      "TNFRSF13C",
+      "CD83",
+      "BANK1",
+      "AIM2",
+      "CRIP1",
+      "IGHA1",
+      "IGHG1",
+      "PAX5",
+      "CD38",
+      "CD24",
+      "CD19",
+      "TNFRSF13B",
+      "BCL6",
+      "IRF8",
+      "POU2AF1",
+      "CD80",
+      "CD86",
+      "ICOSLG",
+      "CR2",
+      "FCER2",
+      "ITGAX",
+      "IL4R",
+      "IL6R",
+      "TNFRSF1B",
+      "FAM30A",
+      "LILRA1",
+      "ZEB2"
+    ],
+    "description": "Class-switched memory B cells that have undergone somatic hypermutation and isotype switching, expressing surface IgG or IgA and CD27."
+  },
+  "Unswitched memory B cells": {
+    "genes": [
+      "CD27",
+      "IGHD",
+      "IGHM",
+      "CD24",
+      "MS4A1",
+      "CD79A",
+      "TNFRSF13C",
+      "IL4R",
+      "FCER2",
+      "CD38",
+      "CR2",
+      "PAX5",
+      "CD19",
+      "CD22",
+      "BCL2",
+      "CD40",
+      "TCL1A",
+      "BANK1",
+      "IRF8",
+      "POU2AF1",
+      "CD83",
+      "AIM2",
+      "CRIP1",
+      "TNFRSF13B",
+      "ITGAX",
+      "IL6R",
+      "TNFRSF1B",
+      "FAM30A",
+      "LILRA1",
+      "ZEB2"
+    ],
+    "description": "Non-switched memory B cells expressing surface IgM and IgD with CD27, resembling marginal zone B cells."
+  },
+  "Atypical memory B cells": {
+    "genes": [
+      "ITGAX",
+      "TBX21",
+      "FCRL5",
+      "FCRL3",
+      "CD11c",
+      "TNFRSF1B",
+      "ZEB2",
+      "EOMES",
+      "LILRA1",
+      "FAM30A",
+      "CD27",
+      "TNFRSF13B",
+      "BANK1",
+      "PAX5",
+      "CD19",
+      "MS4A1",
+      "CD79A",
+      "CD38",
+      "CD24",
+      "CR2",
+      "FCER2",
+      "IL4R",
+      "AIM2",
+      "CRIP1",
+      "CD80",
+      "CD86",
+      "ICOSLG",
+      "BCL6",
+      "IRF8",
+      "POU2AF1"
+    ],
+    "description": "Double-negative (CD27- IgD-) memory B cells expressing T-bet and CD11c, commonly expanded in autoimmunity."
+  },
+  "Naive B cells": {
+    "genes": [
+      "FCER2",
+      "TCL1A",
+      "CD24",
+      "IGHD",
+      "IGHM",
+      "CD79A",
+      "MS4A1",
+      "CD38",
+      "BANK1",
+      "PAX5",
+      "CD19",
+      "CD22",
+      "BCL2",
+      "CD40",
+      "CR2",
+      "ITGAX",
+      "IL4R",
+      "IL6R",
+      "TNFRSF1B",
+      "TNFRSF13C",
+      "CD83",
+      "AIM2",
+      "CRIP1",
+      "CD80",
+      "CD86",
+      "ICOSLG",
+      "BCL6",
+      "IRF8",
+      "POU2AF1",
+      "CD27"
+    ],
+    "description": "Naive B cells that have not encountered antigen, expressing high levels of CD23, IgD, and IgM, and lacking CD27."
+  },
+  "Plasma cells": {
+    "genes": [
+      "SDC1",
+      "MZB1",
+      "XBP1",
+      "PRDM1",
+      "JCHAIN",
+      "IGHG1",
+      "IGHA1",
+      "IGHA2",
+      "IGHE",
+      "ITGB7",
+      "FCRL5",
+      "CD38",
+      "TNFRSF17",
+      "TNFRSF13B",
+      "CD27",
+      "CD79A",
+      "MS4A1",
+      "PAX5",
+      "BANK1",
+      "IRF8",
+      "POU2AF1",
+      "BCL6",
+      "AIM2",
+      "CRIP1",
+      "CD80",
+      "CD86",
+      "ICOSLG",
+      "FCER2",
+      "TCL1A",
+      "IL4R"
+    ],
+    "description": "Antibody-secreting plasma cells expressing high levels of CD138, Blimp-1, XBP1, and immunoglobulin chains."
+  }
+}
+```
+
+## Record 6
+
+- stage: stage2_refinement
+- row_idx: 1
+- cell_idx: 48
+- cell_barcode: L1_AAAGAACCACCTCTAC
+- true_label: B memory
+- stage1_label: B memory
+
+### prompt
+
+```text
+Tissue context: PBMC
+
+Stage-1 annotation: "B memory" — may have minor inaccuracies. Use the evidence below to confirm or correct it.
+
+Stage-1 reasoning:
+High expression of B cell markers (MS4A1/CD20, CD79A, IGKC, HLA-DR) and surface proteins (CD19, CD22, CD21, CD27, CD268) along with immunoglobulin genes indicates B memory cells. CD27 is a canonical memory B cell marker.
+
+Top 30 cell-specific genes by TF-IDF (weights by rarity across cells — highlights rare but highly expressed genes):
+    1. IGKC
+    2. HLA-DRA
+    3. MS4A1
+    4. CD74
+    5. BANK1
+    6. IGHA1
+    7. HLA-DQA1
+    8. HLA-DRB1
+    9. HLA-DPB1
+   10. CD79A
+   11. HLA-DPA1
+   12. IGHE
+   13. LINC01781
+   14. HLA-DQB1
+   15. BLK
+   16. IGHA2
+   17. LTB
+   18. IGHG3
+   19. AIM2
+   20. SSPN
+   21. LINC00926
+   22. SPIB
+   23. HLA-DMA
+   24. TNFRSF13B
+   25. TCF4
+   26. HLA-DRB5
+   27. RALGPS2
+   28. CD79B
+   29. MEF2C
+   30. CPNE5
+
+Surface proteins (z-score vs. population):
+    1. CD35             z=+4.65
+    2. CD73             z=+3.91
+    3. CD19             z=+3.65
+    4. CD22             z=+3.61
+    5. CD4-1            z=+3.10
+    6. CD48             z=+3.02
+    7. CD71             z=+2.49
+    8. CD45-2           z=+2.39
+    9. CD62P            z=+2.38
+   10. CD21             z=+2.34
+   11. Integrin-7       z=+2.31
+   12. CD8a             z=+2.21
+   13. CD18             z=+2.15
+   14. CD49d            z=+2.07
+   15. CD27             z=+2.06
+
+Pathway scores (LLM-defined gene programs scored against this cell; higher = more active program):
+  Plasma cells             : +1.764
+  Switched memory B cells  : +1.240
+  Unswitched memory B cells: +1.164
+  Atypical memory B cells  : +0.957
+  Naive B cells            : +0.938
+
+Choose the cell type from the following list (output exactly one of these names in Line 1):
+CD16 Mono, B memory, CD14 Mono
+
+Considering all of the above — genes (across all scoring methods), surface proteins, pathway scores, and the stage-1 reasoning — confirm or correct the stage-1 annotation by choosing the most appropriate subtype from the list above. Trust direct gene/protein evidence over the stage-1 label when they conflict.
+Line 1: final cell type (from the list above).  Line 2: brief rationale (<100 words).
+```
+
+### output
+
+```text
+B memory
+Strong expression of B cell-specific genes (MS4A1, CD79A, IGKC, HLA-DR) and surface proteins (CD19, CD22, CD21, CD27) confirms B lineage. High CD27 and isotype-switched immunoglobulins (IGHA1, IGHE, IGHG3) support memory B cell identity. The top pathway scores also include switched/unswitched memory B cells, though plasma cell score is elevated, likely due to active immunoglobulin production in memory cells. No monocyte markers (e.g., CD14, FCGR3A) are present, ruling out CD14 or CD16 monocytes.
+```
+
+## Record 7
+
+- stage: stage1_annotation
+- row_idx: 2
+- cell_idx: 6148
+- cell_barcode: L1_CTGAATGAGGGCGAAG
+- true_label: CD14 Mono
+
+### prompt
+
+```text
+Tissue context: PBMC
+
+Top genes (ranked by TF-IDF specificity):
+    1. CST3 (0.003)
+    2. LYZ (0.003)
+    3. HLA-DRA (0.003)
+    4. FOS (0.002)
+    5. HLA-DRB5 (0.002)
+    6. HLA-DPA1 (0.002)
+    7. HLA-DRB1 (0.002)
+    8. CD74 (0.001)
+    9. AIF1 (0.001)
+   10. FCN1 (0.001)
+   11. HLA-DPB1 (0.001)
+   12. HLA-DQB1 (0.001)
+   13. TYROBP (0.001)
+   14. HLA-DQA1 (0.001)
+   15. LST1 (0.001)
+   16. MNDA (0.001)
+   17. TYMP (0.001)
+   18. FCER1G (0.001)
+   19. MS4A6A (0.001)
+   20. FGL2 (0.001)
+
+Top expressed surface proteins / ADT markers (ranked by count):
+    1. CD62P (4.078)
+    2. CD4-1 (4.014)
+    3. CD41 (3.623)
+    4. CD31 (3.441)
+    5. CD93 (3.355)
+    6. CD48 (3.062)
+    7. CD35 (3.014)
+    8. CD18 (2.911)
+    9. CD45-2 (2.705)
+   10. CLEC2 (2.580)
+   11. CD11b-1 (2.482)
+   12. CD102 (2.399)
+   13. CD63 (2.372)
+   14. CLEC12A (2.314)
+   15. CD49d (2.156)
+   16. CD9 (2.070)
+   17. CD47 (2.035)
+   18. CD305 (2.012)
+   19. CD61 (1.996)
+   20. CD172a (1.990)
+
+Choose the cell type from the following list (output exactly one of these names in the first line):
+CD16 Mono, B memory, CD14 Mono
+
+Based on the expression profile above, which cell type is this? Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words).
+```
+
+### output
+
+```text
+CD14 Mono
+
+The gene expression profile (CST3, LYZ, HLA-DR genes, FCN1, AIF1, CD74) and surface protein markers (CD62P, CD41, CD31, CD93, CD11b) are characteristic of classical CD14+ monocytes. Platelet markers like CD62P and CD41 suggest platelet-monocyte aggregates common in this subset. CD14 is not in the top ADT list, but the overall pattern strongly matches CD14 monocytes rather than CD16 monocytes or B memory cells.
+```
+
+## Record 8
+
+- stage: stage2_program_query
+- row_idx: 2
+- cell_idx: 6148
+- cell_barcode: L1_CTGAATGAGGGCGAAG
+- true_label: CD14 Mono
+- stage1_label: CD14 Mono
+
+### stage1_reasoning
+
+```text
+The gene expression profile (CST3, LYZ, HLA-DR genes, FCN1, AIF1, CD74) and surface protein markers (CD62P, CD41, CD31, CD93, CD11b) are characteristic of classical CD14+ monocytes. Platelet markers like CD62P and CD41 suggest platelet-monocyte aggregates common in this subset. CD14 is not in the top ADT list, but the overall pattern strongly matches CD14 monocytes rather than CD16 monocytes or B memory cells.
+```
+
+### prompt_prefix
+
+```text
+This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  "genes": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  "description": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+```
+
+### prompt
+
+```text
+A single cell in PBMC was annotated in a first pass as: "CD14 Mono"
+
+```
+
+### full_prompt
+
+```text
+This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  "genes": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  "description": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: "CD14 Mono"
+
+```
+
+### output
+
+```text
+{
+  "Classical CD14+ Monocyte": {
+    "genes": [
+      "CD14",
+      "LYZ",
+      "S100A8",
+      "S100A9",
+      "FCN1",
+      "VCAN",
+      "MNDA",
+      "CTSS",
+      "FOS",
+      "JUN",
+      "CCL2",
+      "CCL3",
+      "CCL4",
+      "CD68",
+      "CSF1R",
+      "IL1B",
+      "TNFAIP6",
+      "NLRP3",
+      "PYCARD",
+      "CASP1",
+      "PLAUR",
+      "CD33",
+      "CD36",
+      "MSR1",
+      "MARCO",
+      "TLR2",
+      "TLR4",
+      "CD64",
+      "FCGR1A",
+      "FCGR2A",
+      "FCGR3A",
+      "ITGAM",
+      "ITGAX",
+      "TNF",
+      "IL6",
+      "IL8",
+      "CXCL8",
+      "CXCL1",
+      "CXCL2",
+      "CXCL3",
+      "SOCS3",
+      "NFKBIA",
+      "NFKB1",
+      "RELA",
+      "MAP2K3",
+      "MAPK14",
+      "DUSP1",
+      "DUSP2",
+      "ZFP36"
+    ],
+    "description": "Classical CD14+ monocytes are the most abundant monocyte subset in PBMC, characterized by high CD14 expression, no CD16, and strong expression of S100A8/9, FCN1, and LYZ, with key roles in phagocytosis and inflammatory cytokine production."
+  },
+  "Intermediate CD14+CD16+ Monocyte": {
+    "genes": [
+      "CD14",
+      "CD16",
+      "FCGR3A",
+      "HLA-DRA",
+      "HLA-DRB1",
+      "HLA-DQB1",
+      "HLA-DQA1",
+      "CD74",
+      "CTSD",
+      "CTSL",
+      "CX3CR1",
+      "CCR5",
+      "CCR2",
+      "CCL3",
+      "CCL4",
+      "CCL5",
+      "IL1B",
+      "TNF",
+      "IL6",
+      "CXCL8",
+      "CXCL10",
+      "CXCL11",
+      "CCL8",
+      "TLR4",
+      "TLR7",
+      "TLR8",
+      "MYD88",
+      "IRAK1",
+      "IRAK4",
+      "TRAF6",
+      "NFKB1",
+      "REL",
+      "STAT1",
+      "STAT3",
+      "IRF1",
+      "IRF5",
+      "IRF8",
+      "SPI1",
+      "CEBPA",
+      "CEBPB",
+      "RUNX1",
+      "ETS2",
+      "FLI1",
+      "EGR1",
+      "EGR2",
+      "FOS",
+      "JUN",
+      "ATF3"
+    ],
+    "description": "Intermediate CD14+CD16+ monocytes co-express CD14 and CD16, with elevated HLA-DR and antigen presentation machinery, and exhibit a pro-inflammatory profile with strong cytokine production."
+  },
+  "Non-classical CD14dimCD16+ Monocyte": {
+    "genes": [
+      "CD16",
+      "FCGR3A",
+      "CX3CR1",
+      "LILRA3",
+      "LILRB1",
+      "LILRB2",
+      "LILRB4",
+      "CCR5",
+      "CCR2",
+      "CD36",
+      "CTSD",
+      "CTSL",
+      "NR4A1",
+      "NR4A2",
+      "NR4A3",
+      "KLF2",
+      "KLF4",
+      "EGR1",
+      "EGR2",
+      "FOS",
+      "JUN",
+      "ATF3",
+      "MIR155HG",
+      "SOCS3",
+      "CISH",
+      "PIM1",
+      "PIM2",
+      "MAPK1",
+      "MAPK3",
+      "RPS6KB1",
+      "EIF4E",
+      "MYC",
+      "BCL2",
+      "BCL6",
+      "HIF1A",
+      "VEGFA",
+      "PTGS2",
+      "PDE4B",
+      "ADRB2",
+      "ADORA2A",
+      "CXCL16",
+      "CCL23",
+      "CCL24",
+      "CCL26",
+      "IL10",
+      "TGFB1",
+      "CTLA4",
+      "PDCD1",
+      "HAVCR2"
+    ],
+    "description": "Non-classical CD14dimCD16+ monocytes are CD14-low, CD16-high, patrol the vasculature via CX3CR1, and are involved in immune surveillance and tissue repair with an anti-inflammatory signature."
+  },
+  "Myeloid Dendritic Cell (mDC)": {
+    "genes": [
+      "CD1C",
+      "FCER1A",
+      "CLEC10A",
+      "CD207",
+      "LANGERIN",
+      "CD11C",
+      "ITGAX",
+      "HLA-DRA",
+      "HLA-DRB1",
+      "HLA-DQB1",
+      "HLA-DQA1",
+      "CD74",
+      "CCR7",
+      "CCL17",
+      "CCL22",
+      "CCL19",
+      "CCR5",
+      "CXCR4",
+      "XCR1",
+      "CLEC7A",
+      "CLEC4A",
+      "CLEC6A",
+      "TLR3",
+      "TLR4",
+      "TLR7",
+      "TLR8",
+      "MYD88",
+      "TRAF6",
+      "NFKB1",
+      "REL",
+      "IRF1",
+      "IRF4",
+      "IRF8",
+      "BATF3",
+      "ZBTB46",
+      "FLT3",
+      "CSF1R",
+      "CSF2RA",
+      "CSF2RB",
+      "IL3RA",
+      "CD40",
+      "CD80",
+      "CD86",
+      "ICOSL",
+      "CD83",
+      "CD209",
+      "DC-SIGN",
+      "LAMP3",
+      "CCL18"
+    ],
+    "description": "Myeloid dendritic cells (mDCs) are antigen-presenting cells that express CD1c, FCER1A, and high HLA-DR, specializing in T-cell priming and activation through cross-presentation."
+  },
+  "Plasmacytoid Dendritic Cell (pDC)": {
+    "genes": [
+      "IL3RA",
+      "CD123",
+      "CLEC4C",
+      "BDCA2",
+      "LILRA4",
+      "ILT7",
+      "PACSIN1",
+      "TCF4",
+      "E2-2",
+      "SPIB",
+      "IRF7",
+      "IRF8",
+      "IRF4",
+      "MYB",
+      "RUNX2",
+      "BCL11A",
+      "BCL2",
+      "BCL6",
+      "MCL1",
+      "TLR7",
+      "TLR9",
+      "MYD88",
+      "IRAK1",
+      "IRAK4",
+      "TRAF6",
+      "NFKB1",
+      "REL",
+      "IFNA1",
+      "IFNA2",
+      "IFNA4",
+      "IFNA5",
+      "IFNA6",
+      "IFNA7",
+      "IFNA8",
+      "IFNA10",
+      "IFNA13",
+      "IFNA14",
+      "IFNA16",
+      "IFNA17",
+      "IFNA21",
+      "IFNB1",
+      "IFNW1",
+      "CXCL10",
+      "CCL3",
+      "CCL4",
+      "CCL5",
+      "CXCL9",
+      "CXCL11",
+      "IL15",
+      "IL12A",
+      "IL12B"
+    ],
+    "description": "Plasmacytoid dendritic cells (pDCs) are specialized in type I interferon production and express IL3RA (CD123), CLEC4C (BDCA2), and LILRA4, playing a crucial role in antiviral immune responses."
+  }
+}
+```
+
+## Record 9
+
+- stage: stage2_refinement
+- row_idx: 2
+- cell_idx: 6148
+- cell_barcode: L1_CTGAATGAGGGCGAAG
+- true_label: CD14 Mono
+- stage1_label: CD14 Mono
+
+### prompt
+
+```text
+Tissue context: PBMC
+
+Stage-1 annotation: "CD14 Mono" — may have minor inaccuracies. Use the evidence below to confirm or correct it.
+
+Stage-1 reasoning:
+The gene expression profile (CST3, LYZ, HLA-DR genes, FCN1, AIF1, CD74) and surface protein markers (CD62P, CD41, CD31, CD93, CD11b) are characteristic of classical CD14+ monocytes. Platelet markers like CD62P and CD41 suggest platelet-monocyte aggregates common in this subset. CD14 is not in the top ADT list, but the overall pattern strongly matches CD14 monocytes rather than CD16 monocytes or B memory cells.
+
+Top 30 cell-specific genes by TF-IDF (weights by rarity across cells — highlights rare but highly expressed genes):
+    1. CST3
+    2. LYZ
+    3. HLA-DRA
+    4. FOS
+    5. HLA-DRB5
+    6. HLA-DPA1
+    7. HLA-DRB1
+    8. CD74
+    9. AIF1
+   10. FCN1
+   11. HLA-DPB1
+   12. HLA-DQB1
+   13. TYROBP
+   14. HLA-DQA1
+   15. LST1
+   16. MNDA
+   17. TYMP
+   18. FCER1G
+   19. MS4A6A
+   20. FGL2
+   21. SAT1
+   22. CTSS
+   23. HLA-DMA
+   24. PSAP
+   25. CYBB
+   26. CPVL
+   27. MARCKS
+   28. COTL1
+   29. IFITM3
+   30. CEBPD
+
+Surface proteins (z-score vs. population):
+    1. CD62P            z=+4.08
+    2. CD4-1            z=+4.01
+    3. CD41             z=+3.62
+    4. CD31             z=+3.44
+    5. CD93             z=+3.36
+    6. CD48             z=+3.06
+    7. CD35             z=+3.01
+    8. CD18             z=+2.91
+    9. CD45-2           z=+2.70
+   10. CLEC2            z=+2.58
+   11. CD11b-1          z=+2.48
+   12. CD102            z=+2.40
+   13. CD63             z=+2.37
+   14. CLEC12A          z=+2.31
+   15. CD49d            z=+2.16
+
+Pathway scores (LLM-defined gene programs scored against this cell; higher = more active program):
+  Myeloid Dendritic Cell (mDC): +0.512
+  Intermediate CD14+CD16+ Monocyte: +0.422
+  Classical CD14+ Monocyte : +0.271
+  Non-classical CD14dimCD16+ Monocyte: +0.227
+  Plasmacytoid Dendritic Cell (pDC): +0.032
+
+Choose the cell type from the following list (output exactly one of these names in Line 1):
+CD16 Mono, B memory, CD14 Mono
+
+Considering all of the above — genes (across all scoring methods), surface proteins, pathway scores, and the stage-1 reasoning — confirm or correct the stage-1 annotation by choosing the most appropriate subtype from the list above. Trust direct gene/protein evidence over the stage-1 label when they conflict.
+Line 1: final cell type (from the list above).  Line 2: brief rationale (<100 words).
+```
+
+### output
+
+```text
+CD14 Mono
+The gene expression profile (CST3, LYZ, HLA-DR genes, FCN1, AIF1) and surface markers (CD11b, CD31, CD62P, CD41, CD93) are classic for classical monocytes. Platelet markers suggest platelet-monocyte aggregates, common in this subset. The pathway scores show highest mDC, but the overall pattern strongly supports CD14+ monocyte over CD16 monocyte or B memory.
+```
+

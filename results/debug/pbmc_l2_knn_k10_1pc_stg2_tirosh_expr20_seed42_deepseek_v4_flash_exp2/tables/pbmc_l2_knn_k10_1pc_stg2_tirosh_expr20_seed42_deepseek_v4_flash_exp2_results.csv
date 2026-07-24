@@ -1,0 +1,7 @@
+cell_idx,cell_barcode,true_label,pred_label,pred_celltype,pred_rationale,acc
+13748,L1_TTTGTTGCAGCGAGTA,CD16 Mono,"CD16 Mono
+Top genes (LYZ, CST3, AIF1, CTSS, S100) and pathway scores indicate CD16+ monocyte. Surface proteins include CD18, CD45, CD35, CD49d, CD9, consistent with monocytes; the platelet markers (CD41, CD62P) likely reflect contamination or aggregates.",CD16 Mono,"Top genes (LYZ, CST3, AIF1, CTSS, S100) and pathway scores indicate CD16+ monocyte. Surface proteins include CD18, CD45, CD35, CD49d, CD9, consistent with monocytes; the platelet markers (CD41, CD62P) likely reflect contamination or aggregates.",1
+48,L1_AAAGAACCACCTCTAC,B memory,"B memory
+High B cell markers (CD19, CD22, IGKC, MS4A1) and memory-associated CD27 confirm B memory. Monocyte markers CD14/CD16 are absent. Pathway scores strongly prefer switched memory B.",B memory,"High B cell markers (CD19, CD22, IGKC, MS4A1) and memory-associated CD27 confirm B memory. Monocyte markers CD14/CD16 are absent. Pathway scores strongly prefer switched memory B.",1
+6148,L1_CTGAATGAGGGCGAAG,CD14 Mono,"CD16 Mono
+Pathway scores rank non-classical monocyte highest, surface markers include high CD4 (typical of CD16+ monocytes), and CD14 is absent from top genes, supporting CD16 Mono over CD14 Mono.",CD16 Mono,"Pathway scores rank non-classical monocyte highest, surface markers include high CD4 (typical of CD16+ monocytes), and CD14 is absent from top genes, supporting CD16 Mono over CD14 Mono.",0

@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp5,2026-07-24 13:02:19,2026-07-24 13:04:21,122.11287355422974,2.035214559237162

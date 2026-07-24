@@ -517,7 +517,7 @@ def evaluate_all(
 ) -> pd.DataFrame:
     """Run all available evaluation strategies and return a summary DataFrame.
 
-    Strategies computed:
+    Strategies computed (only when included in ``strategies``):
     - ``exact``   : exact string match (case-insensitive, after extracting first line)
     - ``keyword`` : keyword overlap match
     - ``llm_judge`` : mean rubric score from the LLM judge (only if ``judge_backend`` is provided)
@@ -542,11 +542,14 @@ def evaluate_all(
             concurrency=concurrency,
         )
 
+    enabled = {str(s).lower() for s in (strategies or ["exact", "keyword"])}
     n = len(per_sample_df)
-    records: dict[str, float] = {
-        "exact": float(per_sample_df["acc"].mean()) if n else 0.0,
-        "keyword": float(per_sample_df["keyword"].mean()) if n else 0.0,
-    }
+    records: dict[str, float] = {}
+
+    if "exact" in enabled and "acc" in per_sample_df.columns:
+        records["exact"] = float(per_sample_df["acc"].mean()) if n else 0.0
+    if "keyword" in enabled and "keyword" in per_sample_df.columns:
+        records["keyword"] = float(per_sample_df["keyword"].mean()) if n else 0.0
 
     if "llm_score" in per_sample_df.columns:
         records["llm_judge"] = float(per_sample_df["llm_score"].mean()) if n else 0.0
@@ -567,7 +570,7 @@ def evaluate_per_sample(
 ) -> pd.DataFrame:
     """Compute per-sample evaluation outcomes.
 
-    Returns columns:
+    Returns columns (only those requested by ``strategies`` and available):
     - ``acc``: exact match after case-insensitive normalization
     - ``keyword``: keyword overlap match
     - ``llm_judgment``: rubric category assigned by the LLM judge
@@ -591,7 +594,9 @@ def evaluate_per_sample(
     llm_reasonings: list[str] = []
     llm_binary_judgments: list[str] = []
     llm_binary_scores: list[int] = []
-    enabled = set(strategies or (["llm_judge"] if judge_backend is not None else []))
+    enabled = {str(s).lower() for s in (strategies or ["exact", "keyword"])}
+    use_exact = "exact" in enabled
+    use_keyword = "keyword" in enabled
     use_llm_judge = judge_backend is not None and "llm_judge" in enabled
     use_llm_judge_binary = judge_backend is not None and "llm_judge_binary" in enabled
     use_any_llm_judge = use_llm_judge or use_llm_judge_binary
@@ -605,16 +610,17 @@ def evaluate_per_sample(
         pred_ct = extract_cell_type(str(pred_raw))
         pred_norm = pred_ct.strip().lower()
 
-        record: dict[str, Any] = {
-            "acc": int(true_norm == pred_norm),
-        }
+        record: dict[str, Any] = {}
+        if use_exact:
+            record["acc"] = int(true_norm == pred_norm)
 
-        true_tokens = {
-            t.lower().strip("+()/αβγδ")
-            for t in str(true).split()
-            if len(t) >= 1 and t.lower() not in _STOPWORDS
-        }
-        record["keyword"] = int(any(tok and tok in pred_norm for tok in true_tokens))
+        if use_keyword:
+            true_tokens = {
+                t.lower().strip("+()/αβγδ")
+                for t in str(true).split()
+                if len(t) >= 1 and t.lower() not in _STOPWORDS
+            }
+            record["keyword"] = int(any(tok and tok in pred_norm for tok in true_tokens))
 
         if use_llm_judge:
             try:
@@ -700,8 +706,10 @@ def evaluate_per_sample(
     for record in records_by_pos:
         if record is None:
             raise RuntimeError("Evaluation produced an incomplete result set.")
-        acc_flags.append(int(record["acc"]))
-        keyword_flags.append(int(record["keyword"]))
+        if use_exact:
+            acc_flags.append(int(record["acc"]))
+        if use_keyword:
+            keyword_flags.append(int(record["keyword"]))
         if use_llm_judge:
             llm_judgments.append(str(record["llm_judgment"]))
             llm_scores.append(record["llm_score"])
@@ -710,10 +718,11 @@ def evaluate_per_sample(
             llm_binary_judgments.append(str(record["llm_binary_judgment"]))
             llm_binary_scores.append(record["llm_binary"])
 
-    data: dict[str, list] = {
-        "acc": acc_flags,
-        "keyword": keyword_flags,
-    }
+    data: dict[str, list] = {}
+    if use_exact:
+        data["acc"] = acc_flags
+    if use_keyword:
+        data["keyword"] = keyword_flags
     if use_llm_judge:
         data["llm_judgment"] = llm_judgments
         data["llm_score"] = llm_scores

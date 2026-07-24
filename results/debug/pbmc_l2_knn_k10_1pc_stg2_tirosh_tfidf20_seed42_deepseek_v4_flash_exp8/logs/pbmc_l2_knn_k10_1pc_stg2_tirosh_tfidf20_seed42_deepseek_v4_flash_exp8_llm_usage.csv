@@ -1,0 +1,28 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,audio_input_tokens,audio_output_tokens,recorded_at_unix,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,step,phase,cell_idx,cell_barcode,stage1_label
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,215,1963,2178,128,407,,,1784885249.3247252,1,4,success,False,16247,3374,stage2_program_query,precompute,-1,<precompute>,CD16 Mono
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,214,5188,5402,128,4305,,,1784885290.1867864,1,4,success,False,40861,2059,stage2_program_query,precompute,-1,<precompute>,B memory
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,215,1893,2108,128,455,,,1784885306.7495608,1,4,success,False,16561,3009,stage2_program_query,precompute,-1,<precompute>,CD14 Mono
+deepseek,DeepSeekBackend,deepseek-v4-flash,598,347,945,512,344,,,1784885310.4566526,1,4,success,False,3612,8,stage1_annotation,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,606,451,1057,512,447,,,1784885311.4711506,1,4,success,False,4612,9,stage1_annotation,annotation,6148,L1_CTGAATGAGGGCGAAG,
+deepseek,DeepSeekBackend,deepseek-v4-flash,602,485,1087,512,413,,,1784885311.681206,1,4,success,False,4818,253,stage1_annotation,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,984,534,1518,0,453,,,1784885315.4426923,1,4,success,False,4846,316,stage2_refinement,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,1068,996,2064,0,918,,,1784885320.6319032,1,4,success,False,8782,303,stage2_refinement,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,993,1274,2267,0,1198,,,1784885323.4749928,1,4,success,False,11837,285,stage2_refinement,annotation,6148,L1_CTGAATGAGGGCGAAG,
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,215,1375,1590,128,671,,,1784885457.5184927,1,4,success,False,12285,1636,stage2_program_query,precompute,-1,<precompute>,CD16 Mono
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,214,4238,4452,128,2808,,,1784885489.6133826,1,4,success,False,32094,3045,stage2_program_query,precompute,-1,<precompute>,B memory
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,215,2984,3199,128,1945,,,1784885515.4276013,1,4,success,False,25813,2438,stage2_program_query,precompute,-1,<precompute>,CD14 Mono
+deepseek,DeepSeekBackend,deepseek-v4-flash,598,482,1080,512,479,,,1784885520.1349025,1,4,success,False,4534,8,stage1_annotation,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,606,784,1390,512,687,,,1784885522.977114,1,4,success,False,7369,364,stage1_annotation,annotation,6148,L1_CTGAATGAGGGCGAAG,
+deepseek,DeepSeekBackend,deepseek-v4-flash,602,965,1567,512,890,,,1784885524.331374,1,4,success,False,8737,286,stage1_annotation,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,1003,371,1374,0,315,,,1784885526.9733472,1,4,success,False,3854,236,stage2_refinement,annotation,6148,L1_CTGAATGAGGGCGAAG,
+deepseek,DeepSeekBackend,deepseek-v4-flash,893,907,1800,0,825,,,1784885528.3979313,1,4,success,False,8094,286,stage2_refinement,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,947,652,1599,0,588,,,1784885530.7217653,1,4,success,False,6256,242,stage2_refinement,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,215,2062,2277,128,1031,,,1784886200.297867,1,4,success,False,19901,2175,stage2_program_query,precompute,-1,<precompute>,CD16 Mono
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,214,2314,2528,128,918,,,1784886218.8523462,1,4,success,False,18553,3085,stage2_program_query,precompute,-1,<precompute>,B memory
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,215,1835,2050,128,611,,,1784886234.2888725,1,4,success,False,15435,2623,stage2_program_query,precompute,-1,<precompute>,CD14 Mono
+deepseek,DeepSeekBackend,deepseek-v4-flash,642,495,1137,0,403,,,1784886239.2883391,1,4,success,False,4891,366,stage1_annotation,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,638,567,1205,0,512,,,1784886239.467853,1,4,success,False,5061,176,stage1_annotation,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,646,742,1388,0,662,,,1784886241.3174303,1,4,success,False,6905,258,stage1_annotation,annotation,6148,L1_CTGAATGAGGGCGAAG,
+deepseek,DeepSeekBackend,deepseek-v4-flash,1027,297,1324,0,221,,,1784886242.53759,1,4,success,False,3106,298,stage2_refinement,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,998,602,1600,0,518,,,1784886244.7572458,1,4,success,False,5130,293,stage2_refinement,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,1025,496,1521,0,419,,,1784886246.3937888,1,4,success,False,4924,293,stage2_refinement,annotation,6148,L1_CTGAATGAGGGCGAAG,

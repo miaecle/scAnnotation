@@ -27,7 +27,7 @@ import anndata as ad
 # ─── Backend factory ────────────────────────────────────────────────────────
 
 
-def _fmt_numeric(value: float, decimals: int = 3) -> str:
+def _fmt_numeric(value: float, decimals: int = 5) -> str:
     return f"{value:.{decimals}f}"
 
 
@@ -962,20 +962,20 @@ def build_stage2_prompt(
             f"(higher = more specific to this cell):"
         )
         for rank, (gene, z) in enumerate(genes_by_zscore[:n_genes], 1):
-            parts.append(f"  {rank:3d}. {gene:<10s}  z={z:+.2f}")
+            parts.append(f"  {rank:3d}. {gene:<10s}  z={z:+.5f}")
 
     if genes_by_tfidf:
         parts.append(
             f"\nTop {n_genes} cell-specific genes by TF-IDF "
             f"(weights by rarity across cells — highlights rare but highly expressed genes):"
         )
-        for rank, (gene, _) in enumerate(genes_by_tfidf[:n_genes], 1):
-            parts.append(f"  {rank:3d}. {gene}")
+        for rank, (gene, score) in enumerate(genes_by_tfidf[:n_genes], 1):
+            parts.append(f"  {rank:3d}. {gene:<10s}  ({_fmt_numeric(score)})")
 
     if proteins:
         parts.append("\nSurface proteins (z-score vs. population):")
         for rank, (prot, z) in enumerate(proteins[:n_proteins], 1):
-            parts.append(f"  {rank:3d}. {prot:<15s}  z={z:+.2f}")
+            parts.append(f"  {rank:3d}. {prot:<15s}  z={z:+.5f}")
 
     valid = sorted(
         [(k, v) for k, v in pathway_scores.items() if np.isfinite(v)],
@@ -986,7 +986,7 @@ def build_stage2_prompt(
         "higher = more active program):"
     )
     for subtype, score in valid:
-        parts.append(f"  {subtype:<25s}: {score:+.3f}")
+        parts.append(f"  {subtype:<25s}: {score:+.5f}")
 
     if cell_type_list:
         parts.append(

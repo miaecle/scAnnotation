@@ -9,7 +9,7 @@ Respond with the cell type name in the first line, then in the second line provi
 """
 
 
-def _fmt_numeric(value: float, decimals: int = 3) -> str:
+def _fmt_numeric(value: float, decimals: int = 5) -> str:
     return f"{value:.{decimals}f}"
 
 
@@ -18,13 +18,16 @@ def build_naive_prompt(
     proteins: list[tuple[str, float]] | None = None,
     tissue: str | None = None,
     cell_type_list: list[str] | None = None,
+    selection_strategy: str = None,
 ) -> str:
     """Build a naive baseline prompt from top expressed genes (and optionally proteins).
 
     Args:
-        genes: List of (gene_name, count) sorted by expression descending.
+        genes: List of (gene_name, score) sorted by the selected strategy descending.
         proteins: Optional list of (protein_name, count) sorted by count descending.
         tissue: Optional tissue context (e.g. 'PBMC', 'lymph node').
+        selection_strategy: Gene ranking method used to build ``genes``.
+            Supported values: ``expr``, ``zscore``, ``tfidf``.
 
     Returns:
         User-facing prompt string.
@@ -34,7 +37,12 @@ def build_naive_prompt(
     if tissue:
         parts.append(f"Tissue context: {tissue}\n")
 
-    parts.append("Top expressed genes (ranked by expression level):")
+    strategy_to_label = {
+        "expr": "Top genes (ranked by expression level):",
+        "zscore": "Top genes (ranked by population-relative z-score):",
+        "tfidf": "Top genes (ranked by TF-IDF specificity):",
+    }
+    parts.append(strategy_to_label.get(selection_strategy.lower()))
     for rank, (gene, count) in enumerate(genes, 1):
         parts.append(f"  {rank:3d}. {gene} ({_fmt_numeric(count)})")
 
@@ -114,7 +122,7 @@ def build_enriched_prompt(
             "higher z-score = more specific to this cell relative to the population):"
         )
         for rank, (gene, z) in enumerate(genes_by_zscore, 1):
-            parts.append(f"  {rank:3d}. {gene} (z={z:.2f})")
+            parts.append(f"  {rank:3d}. {gene} (z={z:.5f})")
 
     if genes_by_tfidf:
         parts.append(
@@ -122,7 +130,7 @@ def build_enriched_prompt(
             "higher TF-IDF = more specific to this cell relative to the population):"
         )
         for rank, (gene, score) in enumerate(genes_by_tfidf, 1):
-            parts.append(f"  {rank:3d}. {gene}")
+            parts.append(f"  {rank:3d}. {gene} (tfidf={_fmt_numeric(score)})")
 
     if proteins:
         parts.append("\nTop expressed surface proteins / ADT markers (ranked by count):")

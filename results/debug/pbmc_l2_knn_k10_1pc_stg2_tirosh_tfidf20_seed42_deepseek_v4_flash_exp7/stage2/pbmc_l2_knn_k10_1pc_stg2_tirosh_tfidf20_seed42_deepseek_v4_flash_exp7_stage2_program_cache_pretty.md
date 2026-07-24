@@ -1,0 +1,147 @@
+# Stage-2 Precomputed Programs
+
+- tissue: PBMC
+- n_program_genes: 50
+- n_cached_cell_types: 3
+
+## b memory
+
+### Atypical memory B cells
+
+Description: Double-negative (CD27- IgD-) memory B cells expressing T-bet and CD11c, commonly expanded in autoimmunity.
+
+Genes:
+- ITGAX, TBX21, FCRL5, FCRL3, CD11c, TNFRSF1B, ZEB2, EOMES, LILRA1, FAM30A, CD27, TNFRSF13B
+- BANK1, PAX5, CD19, MS4A1, CD79A, CD38, CD24, CR2, FCER2, IL4R, AIM2, CRIP1
+- CD80, CD86, ICOSLG, BCL6, IRF8, POU2AF1
+
+### Naive B cells
+
+Description: Naive B cells that have not encountered antigen, expressing high levels of CD23, IgD, and IgM, and lacking CD27.
+
+Genes:
+- FCER2, TCL1A, CD24, IGHD, IGHM, CD79A, MS4A1, CD38, BANK1, PAX5, CD19, CD22
+- BCL2, CD40, CR2, ITGAX, IL4R, IL6R, TNFRSF1B, TNFRSF13C, CD83, AIM2, CRIP1, CD80
+- CD86, ICOSLG, BCL6, IRF8, POU2AF1, CD27
+
+### Plasma cells
+
+Description: Antibody-secreting plasma cells expressing high levels of CD138, Blimp-1, XBP1, and immunoglobulin chains.
+
+Genes:
+- SDC1, MZB1, XBP1, PRDM1, JCHAIN, IGHG1, IGHA1, IGHA2, IGHE, ITGB7, FCRL5, CD38
+- TNFRSF17, TNFRSF13B, CD27, CD79A, MS4A1, PAX5, BANK1, IRF8, POU2AF1, BCL6, AIM2, CRIP1
+- CD80, CD86, ICOSLG, FCER2, TCL1A, IL4R
+
+### Switched memory B cells
+
+Description: Class-switched memory B cells that have undergone somatic hypermutation and isotype switching, expressing surface IgG or IgA and CD27.
+
+Genes:
+- CD27, MS4A1, CD79A, TNFRSF13C, CD83, BANK1, AIM2, CRIP1, IGHA1, IGHG1, PAX5, CD38
+- CD24, CD19, TNFRSF13B, BCL6, IRF8, POU2AF1, CD80, CD86, ICOSLG, CR2, FCER2, ITGAX
+- IL4R, IL6R, TNFRSF1B, FAM30A, LILRA1, ZEB2
+
+### Unswitched memory B cells
+
+Description: Non-switched memory B cells expressing surface IgM and IgD with CD27, resembling marginal zone B cells.
+
+Genes:
+- CD27, IGHD, IGHM, CD24, MS4A1, CD79A, TNFRSF13C, IL4R, FCER2, CD38, CR2, PAX5
+- CD19, CD22, BCL2, CD40, TCL1A, BANK1, IRF8, POU2AF1, CD83, AIM2, CRIP1, TNFRSF13B
+- ITGAX, IL6R, TNFRSF1B, FAM30A, LILRA1, ZEB2
+
+## cd14 mono
+
+### Classical CD14+ Monocyte
+
+Description: Classical CD14+ monocytes are the most abundant monocyte subset in PBMC, characterized by high CD14 expression, no CD16, and strong expression of S100A8/9, FCN1, and LYZ, with key roles in phagocytosis and inflammatory cytokine production.
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, FCN1, VCAN, MNDA, CTSS, FOS, JUN, CCL2, CCL3
+- CCL4, CD68, CSF1R, IL1B, TNFAIP6, NLRP3, PYCARD, CASP1, PLAUR, CD33, CD36, MSR1
+- MARCO, TLR2, TLR4, CD64, FCGR1A, FCGR2A, FCGR3A, ITGAM, ITGAX, TNF, IL6, IL8
+- CXCL8, CXCL1, CXCL2, CXCL3, SOCS3, NFKBIA, NFKB1, RELA, MAP2K3, MAPK14, DUSP1, DUSP2
+- ZFP36
+
+### Intermediate CD14+CD16+ Monocyte
+
+Description: Intermediate CD14+CD16+ monocytes co-express CD14 and CD16, with elevated HLA-DR and antigen presentation machinery, and exhibit a pro-inflammatory profile with strong cytokine production.
+
+Genes:
+- CD14, CD16, FCGR3A, HLA-DRA, HLA-DRB1, HLA-DQB1, HLA-DQA1, CD74, CTSD, CTSL, CX3CR1, CCR5
+- CCR2, CCL3, CCL4, CCL5, IL1B, TNF, IL6, CXCL8, CXCL10, CXCL11, CCL8, TLR4
+- TLR7, TLR8, MYD88, IRAK1, IRAK4, TRAF6, NFKB1, REL, STAT1, STAT3, IRF1, IRF5
+- IRF8, SPI1, CEBPA, CEBPB, RUNX1, ETS2, FLI1, EGR1, EGR2, FOS, JUN, ATF3
+
+### Myeloid Dendritic Cell (mDC)
+
+Description: Myeloid dendritic cells (mDCs) are antigen-presenting cells that express CD1c, FCER1A, and high HLA-DR, specializing in T-cell priming and activation through cross-presentation.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, CD207, LANGERIN, CD11C, ITGAX, HLA-DRA, HLA-DRB1, HLA-DQB1, HLA-DQA1, CD74
+- CCR7, CCL17, CCL22, CCL19, CCR5, CXCR4, XCR1, CLEC7A, CLEC4A, CLEC6A, TLR3, TLR4
+- TLR7, TLR8, MYD88, TRAF6, NFKB1, REL, IRF1, IRF4, IRF8, BATF3, ZBTB46, FLT3
+- CSF1R, CSF2RA, CSF2RB, IL3RA, CD40, CD80, CD86, ICOSL, CD83, CD209, DC-SIGN, LAMP3
+- CCL18
+
+### Non-classical CD14dimCD16+ Monocyte
+
+Description: Non-classical CD14dimCD16+ monocytes are CD14-low, CD16-high, patrol the vasculature via CX3CR1, and are involved in immune surveillance and tissue repair with an anti-inflammatory signature.
+
+Genes:
+- CD16, FCGR3A, CX3CR1, LILRA3, LILRB1, LILRB2, LILRB4, CCR5, CCR2, CD36, CTSD, CTSL
+- NR4A1, NR4A2, NR4A3, KLF2, KLF4, EGR1, EGR2, FOS, JUN, ATF3, MIR155HG, SOCS3
+- CISH, PIM1, PIM2, MAPK1, MAPK3, RPS6KB1, EIF4E, MYC, BCL2, BCL6, HIF1A, VEGFA
+- PTGS2, PDE4B, ADRB2, ADORA2A, CXCL16, CCL23, CCL24, CCL26, IL10, TGFB1, CTLA4, PDCD1
+- HAVCR2
+
+### Plasmacytoid Dendritic Cell (pDC)
+
+Description: Plasmacytoid dendritic cells (pDCs) are specialized in type I interferon production and express IL3RA (CD123), CLEC4C (BDCA2), and LILRA4, playing a crucial role in antiviral immune responses.
+
+Genes:
+- IL3RA, CD123, CLEC4C, BDCA2, LILRA4, ILT7, PACSIN1, TCF4, E2-2, SPIB, IRF7, IRF8
+- IRF4, MYB, RUNX2, BCL11A, BCL2, BCL6, MCL1, TLR7, TLR9, MYD88, IRAK1, IRAK4
+- TRAF6, NFKB1, REL, IFNA1, IFNA2, IFNA4, IFNA5, IFNA6, IFNA7, IFNA8, IFNA10, IFNA13
+- IFNA14, IFNA16, IFNA17, IFNA21, IFNB1, IFNW1, CXCL10, CCL3, CCL4, CCL5, CXCL9, CXCL11
+- IL15, IL12A, IL12B
+
+## cd16 mono
+
+### Classical Monocytes
+
+Description: Classical monocytes express high CD14 and are key phagocytes in innate immune responses.
+
+Genes:
+- CD14, FCGR1A, LYZ, S100A8, S100A9, CST3, FCN1, S100A12, VCAN, CD163, MNDA, TYMP
+- CLEC7A, MSR1, ITGAM, FPR1, FPR2, TLR2, TLR4, MYD88, IRAK1, TNF, IL1B, CCL2
+- CXCL8, CCR2, CSF1R, CD33
+
+### Intermediate Monocytes
+
+Description: Intermediate monocytes co-express CD14 and CD16 and have pro-inflammatory and antigen-presenting functions.
+
+Genes:
+- CD14, FCGR3A, HLA-DRA, HLA-DRB1, CD74, CCL3, CXCL2, NFKBIA, IL1RN, CCL4, CCL4L2, TNFAIP6
+- SOD2, CD83, CD86, CCR5, CX3CR1, ICAM1, IL6, TNF, IL1B, LYZ, MNDA, TYMP
+- VCAN, S100A8, S100A9
+
+### NK Cells
+
+Description: NK cells are innate lymphoid cells that kill target cells and produce cytokines, often confused with CD16+ monocytes due to shared CD16 expression.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, KLRD1, KLRK1, CD247, NKG2A, NKG2D, FCGR3A, FGFBP2, KLRC1
+- KLRF1, KIR2DL1, KIR3DL1, CD56, NCAM1, NCR1, NCR3, CD160, CD244, SH2D1A, XCL1, XCL2
+- CCL5, CCL4, GZMH, GZMA
+
+### Non-classical Monocytes
+
+Description: Non-classical monocytes express CD16 and patrol the vasculature, responding to viral and nucleic acid stimuli.
+
+Genes:
+- FCGR3A, CDKN1C, MS4A7, LST1, ITGAL, CX3CR1, RHOC, FPR3, FTL, IFI30, TREM1L, LRRC25
+- SLC7A7, CKB, MYLIP, CLIC2, WDFY4, MAN1A1, PDK4, CCL5, CTSL, COTL1, LINC00662, KLRB1
+- GPR114, P2RY13, FCGR3B, CD16
+

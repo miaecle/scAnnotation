@@ -1,0 +1,10 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,audio_input_tokens,audio_output_tokens,recorded_at_unix,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,step,phase,cell_idx,cell_barcode,stage1_label
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,230,2518,2748,128,1632,,,1784803130.4155474,1,4,success,False,20934,2154,stage2_program_query,precompute,-1,<precompute>,CD16 Mono
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,229,1828,2057,128,791,,,1784803148.4685955,1,4,success,False,18051,2555,stage2_program_query,precompute,-1,<precompute>,B memory
+deepseek,OpenAIJSONCaller,deepseek-v4-flash,230,2633,2863,128,1930,,,1784803169.2224874,1,4,success,False,20752,1673,stage2_program_query,precompute,-1,<precompute>,CD14 Mono
+deepseek,DeepSeekBackend,deepseek-v4-flash,597,695,1292,512,625,,,1784803175.857182,1,4,success,False,6494,247,stage1_annotation,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,605,951,1556,512,830,,,1784803178.1050622,1,4,success,False,8734,379,stage1_annotation,annotation,6148,L1_CTGAATGAGGGCGAAG,
+deepseek,DeepSeekBackend,deepseek-v4-flash,813,410,1223,0,345,,,1784803179.96132,1,4,success,False,3959,232,stage2_refinement,annotation,48,L1_AAAGAACCACCTCTAC,
+deepseek,DeepSeekBackend,deepseek-v4-flash,601,1200,1801,512,1109,,,1784803180.1067631,1,4,success,False,10754,334,stage1_annotation,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,838,428,1266,0,352,,,1784803184.4477541,1,4,success,False,4206,296,stage2_refinement,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+deepseek,DeepSeekBackend,deepseek-v4-flash,857,1668,2525,0,1616,,,1784803193.2315078,1,4,success,False,15001,244,stage2_refinement,annotation,6148,L1_CTGAATGAGGGCGAAG,

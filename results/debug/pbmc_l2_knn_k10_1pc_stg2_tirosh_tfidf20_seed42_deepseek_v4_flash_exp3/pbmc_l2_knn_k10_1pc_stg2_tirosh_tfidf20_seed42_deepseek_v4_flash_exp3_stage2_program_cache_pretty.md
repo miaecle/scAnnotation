@@ -1,0 +1,102 @@
+# Stage-2 Precomputed Programs
+
+- tissue: PBMC
+- n_program_genes: 50
+- n_cached_cell_types: 3
+
+## b memory
+
+### B_memory
+
+Description: Memory B cells in PBMC are characterized by CD27 expression and class-switched immunoglobulin, providing rapid recall responses upon re-exposure to antigen.
+
+Genes:
+- CD27, MS4A1, CD79A, CD79B, CD19, TNFRSF13C, CD37, IGHM, IGHD, CD83, BANK1, RALGPS2
+- YWHAH, ITPKB, SEL1L3, BIRC3, CR2, FCER2, TCL1A, KLF2, SOX5, PIM2, MYC, RGS1
+- NFKB1, NFKBIE, CD52, CD3E, CD2, CD8B
+
+### B_naive
+
+Description: Naive B cells in PBMC express high levels of IgM and IgD, lack CD27, and are precursors to germinal center reactions.
+
+Genes:
+- IGHD, IGHM, MS4A1, CD79A, CD79B, CD19, CD37, BANK1, RALGPS2, YWHAH, ITPKB, SEL1L3
+- BIRC3, CR2, FCER2, TCL1A, KLF2, SOX5, PIM2, MYC, RGS1, NFKB1, CD52, CD3E
+- CD2, CD8B, CD27, CD38, CD40, CD72
+
+### CD4_T_memory
+
+Description: Memory CD4+ T cells in PBMC express IL7R and are primed for rapid responses, with subsets including central memory (CCR7+) and effector memory (CCR7-).
+
+Genes:
+- CD4, IL7R, CCR7, SELL, LEF1, TCF7, CD69, CD28, CTLA4, FOXP3, IL2RA, ICOS
+- PDCD1, GATA3, TBX21, RORC, BCL6, CXCR5, CCR5, CXCR3, CCR4, CCR6, CD38, HLA-DRA
+- HLA-DRB1, CD74, MKI67, PCNA, TIPIN, CSTB
+
+### Plasma_cell
+
+Description: Plasma cells in PBMC are antibody-secreting cells marked by high CD38, SDC1, and MZB1, with low or absent B cell receptor components.
+
+Genes:
+- SDC1, MZB1, JCHAIN, XBP1, PRDM1, CD38, SSR4, SEC61A2, FKBP11, HSP90B1, ENO1, TFRC
+- CCT2, CCT3, CCT4, CCT5, CCT6A, CCT7, CCT8, HSPA5, CALR, PDIA6, PPIB, ERP29
+- HYOU1, TXN, SERPINE1, CD79A, CD19, MS4A1
+
+## cd14 mono
+
+### Classical Monocytes
+
+Description: Classical CD14++ monocytes are the most abundant monocytes in PBMC, expressing high levels of CD14 and low levels of CD16, and are involved in phagocytosis and pro-inflammatory responses.
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, FCN1, CST3, CTSS, PSAP, LGALS2, CFLAR, TREM1, CD33
+- IL1B, TNF, CCL2, CCL7, CCL3, CCL4, CXCL8, CXCL2, SERPINA1, PLA2G7, LILRB2, LILRB3
+- CD300E, CD300C, CD300A, CLEC7A, CLEC4E, CLEC12A, CLEC5A, TLR2, TLR4, TLR8, NLRP3, PYCARD
+- IL1R2, IL1RN, SIGLEC7, SIGLEC14, FCGR2A, FCGR2B, FCGR3A, CX3CR1, CCR2, ACKR1, ACKR2, ACKR3
+- ACKR4, ACKR5
+
+### Intermediate Monocytes
+
+Description: Intermediate monocytes (CD14+CD16+) exhibit both classical and non-classical features, with high antigen-presenting capacity and production of inflammatory cytokines.
+
+Genes:
+- CD14, FCGR3A, HLA-DRA, HLA-DRB1, HLA-DQB1, HLA-DPB1, HLA-DPA1, CD86, CD40, TLR2, TLR4, TLR8
+- IL6, IL1B, TNF, CCL3, CCL4, CCL5, CXCL8, CXCL10, CXCL9, CXCL11, CCR2, CCR5
+- CX3CR1, FCGR1A, FCGR1B, FCGR2A, FCGR2B, FCGR2C, FCGR3A, FCGR3B, CSF1R, CSF2RA, CSF2RB, CSF3R
+- IL3RA, IL5RA, IL6R, IL6ST, IL7R, IL7, IL15, IL15RA, IL18, IL18R1, IL18RAP, IL1R1
+- IL1R2, IL1RL1, IL1RL2
+
+### Myeloid Dendritic Cells
+
+Description: Myeloid dendritic cells (mDCs) are antigen-presenting cells expressing CD1c and FCER1A, and are efficient at capturing and presenting antigens to T cells.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, CD1A, CD1B, CD1D, CD1E, HLA-DRA, HLA-DRB1, HLA-DQB1, HLA-DPB1, HLA-DPA1
+- HLA-DMA, HLA-DMB, HLA-DOA, HLA-DOB, CD74, LAMP3, CCR7, CD83, CD86, CD40, CD80, TLR4
+- TLR8, TLR9, TLR3, TLR7, IRF4, IRF8, IRF1, IRF2, IRF3, IRF5, IRF6, IRF7
+- IRF9, IRF10, IRF11, IRF12, IRF13, IRF14, IRF15, IRF16, IRF17, IRF18, IRF19, IRF20
+- IRF21, IRF22
+
+### Non-classical Monocytes
+
+Description: Non-classical CD16++ monocytes patrol the vasculature, scavenge debris, and produce anti-inflammatory cytokines; they express high levels of FCGR3A (CD16) and low levels of CD14.
+
+Genes:
+- FCGR3A, CD16, CX3CR1, CDKN1C, AQP9, RHOC, CTSL, GPR56, PRDM1, IRF4, HMOX1, FCGR2C
+- MS4A7, TLR7, TLR9, IFNGR1, IFNGR2, IL10, IL13RA1, CCR5, CXCL9, CXCL10, CXCL11, CXCL12
+- CXCL13, CXCL14, CXCL16, CXCL17, CX3CR1, ITGAL, ITGAM, ITGAX, ITGB2, ITGB7, PECAM1, SELPLG
+- SELL, SELP, SELENBP1, SELENOI, SELENOP, SELENOS, SELENOT, SELENOW, SELENOF, SELENOH, SELENOI, SELENOK
+- SELENOM, SELENON, SELENOO, SELENOP, SELENOS, SELENOT, SELENOV, SELENOW, SELENOX
+
+## cd16 mono
+
+### CD16+ (Non-classical) Monocytes
+
+Description: Non-classical monocytes expressing high levels of FCGR3A (CD16) and low CD14, involved in patrolling endothelium and antiviral responses.
+
+Genes:
+- FCGR3A, LILRB1, LST1, RHOC, LILRB2, CSF1R, CTSL1, GPR65, NAPSB, SLC15A3, TNFAIP6, C3AR1
+- FCGR3B, SIGLEC10, FAM26F, FCRLA, FOLR3, LILRA2, LILRB3, LILRB4, LILRB5, LST1, MXD1, PLAUR
+- SERPINA1, SIK1B, SLC2A5, SLC2A6, SLC7A8, SPP1, TLR8, TNIP3, TREM2, TYMP, ZNF704, ADAP2
+- AIF1, ALOX5AP, ANPEP, APOBEC3A
+
