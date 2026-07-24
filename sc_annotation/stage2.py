@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import json
 import time
-from typing import Optional
+from typing import Any, Callable, Optional
 
 import numpy as np
 import pandas as pd
@@ -137,6 +137,7 @@ def make_gemini_json_caller(
     max_retries: int = 3,
     base_sleep: float = 2.0,
     max_sleep: float = 30.0,
+    usage_sink: Callable[[dict[str, Any]], None] | None = None,
 ):
     """Return a callable ``(prompt, system_message, cached_user_prefix=None, cache_key=None) -> dict``.
 
@@ -242,6 +243,7 @@ def make_gemini_json_caller(
         system_message: str = "",
         cached_user_prefix: str | None = None,
         cache_key: str | None = None,
+        usage_context: dict[str, Any] | None = None,
     ) -> dict:
         cfg: dict = dict(
             max_output_tokens=max_output_tokens,
@@ -264,9 +266,16 @@ def make_gemini_json_caller(
         if cached_user_prefix and not cache_name:
             contents = f"{cached_user_prefix}\n\n{prompt}" if prompt else cached_user_prefix
 
+        prompt_payload = {
+            "prompt_user_message": contents,
+            "prompt_system_message": system_message,
+        }
+
         last_error: Exception | None = None
         total_attempts = max_retries + 1
         for attempt in range(total_attempts):
+            started_at = time.time()
+            attempt_no = attempt + 1
             try:
                 resp = client.models.generate_content(
                     model=model,
@@ -279,14 +288,79 @@ def make_gemini_json_caller(
                     raise ValueError("Gemini returned an empty response.")
 
                 try:
-                    return _extract_first_json_object(text)
+                    parsed = _extract_first_json_object(text)
+                    if usage_sink is not None:
+                        payload = dict(last_usage or {})
+                        payload.update(
+                            {
+                                **prompt_payload,
+                                "attempt": attempt_no,
+                                "total_attempts": total_attempts,
+                                "attempt_status": "success",
+                                "will_retry": False,
+                                "duration_ms": int((time.time() - started_at) * 1000),
+                                "response_chars": len(text),
+                                "recorded_at_unix": time.time(),
+                            }
+                        )
+                        if usage_context:
+                            payload.update(usage_context)
+                        usage_sink(payload)
+                    return parsed
                 except Exception as exc:
+                    is_final = attempt == max_retries
+                    if usage_sink is not None:
+                        payload = dict(last_usage or {})
+                        payload.update(
+                            {
+                                **prompt_payload,
+                                "attempt": attempt_no,
+                                "total_attempts": total_attempts,
+                                "attempt_status": "final_failure" if is_final else "format_error",
+                                "error_type": type(exc).__name__,
+                                "error_message": f"Gemini returned invalid JSON: {exc}",
+                                "will_retry": not is_final,
+                                "duration_ms": int((time.time() - started_at) * 1000),
+                                "response_chars": len(text),
+                                "response_text": text,
+                                "recorded_at_unix": time.time(),
+                            }
+                        )
+                        if usage_context:
+                            payload.update(usage_context)
+                        usage_sink(payload)
                     raise ValueError(
                         f"Gemini returned invalid JSON: {exc}\n\nRaw response:\n{text}"
                     ) from exc
             except Exception as exc:
                 last_error = exc
-                if attempt == max_retries:
+                is_final = attempt == max_retries
+                if usage_sink is not None and (
+                    not isinstance(exc, ValueError)
+                    or "invalid JSON" not in str(exc)
+                ):
+                    payload = dict(last_usage or {})
+                    payload.update(
+                        {
+                            "provider": payload.get("provider", "gemini"),
+                            "backend": payload.get("backend", "GeminiJSONCaller"),
+                            "model": payload.get("model", model),
+                            **prompt_payload,
+                            "attempt": attempt_no,
+                            "total_attempts": total_attempts,
+                            "attempt_status": "final_failure" if is_final else "retry_error",
+                            "error_type": type(exc).__name__,
+                            "error_message": str(exc),
+                            "will_retry": not is_final,
+                            "duration_ms": int((time.time() - started_at) * 1000),
+                            "recorded_at_unix": time.time(),
+                        }
+                    )
+                    if usage_context:
+                        payload.update(usage_context)
+                    usage_sink(payload)
+
+                if is_final:
                     break
 
                 sleep_s = min(base_sleep * (2 ** attempt), max_sleep)
@@ -320,6 +394,7 @@ def make_openai_json_caller(
     max_retries: int = 3,
     base_sleep: float = 2.0,
     max_sleep: float = 30.0,
+    usage_sink: Callable[[dict[str, Any]], None] | None = None,
 ):
     """Return a callable ``(prompt, system_message, cached_user_prefix=None, cache_key=None) -> dict``.
 
@@ -367,6 +442,7 @@ def make_openai_json_caller(
         system_message: str = "",
         cached_user_prefix: str | None = None,
         cache_key: str | None = None,
+        usage_context: dict[str, Any] | None = None,
     ) -> dict:
         nonlocal supports_response_format
         messages = []
@@ -378,9 +454,16 @@ def make_openai_json_caller(
             contents = f"{cached_user_prefix}\n\n{prompt}" if prompt else cached_user_prefix
         messages.append({"role": "user", "content": contents})
 
+        prompt_payload = {
+            "prompt_user_message": contents,
+            "prompt_system_message": system_message,
+        }
+
         last_error: Exception | None = None
         total_attempts = max_retries + 1
         for attempt in range(total_attempts):
+            started_at = time.time()
+            attempt_no = attempt + 1
             try:
                 kwargs: dict = dict(
                     model=model,
@@ -395,12 +478,82 @@ def make_openai_json_caller(
                 text = (resp.choices[0].message.content or "").strip()
                 if not text:
                     raise ValueError("OpenAI-compatible backend returned an empty response.")
-                return _extract_first_json_object(text)
+                try:
+                    parsed = _extract_first_json_object(text)
+                    if usage_sink is not None:
+                        payload = dict(last_usage or {})
+                        payload.update(
+                            {
+                                **prompt_payload,
+                                "attempt": attempt_no,
+                                "total_attempts": total_attempts,
+                                "attempt_status": "success",
+                                "will_retry": False,
+                                "duration_ms": int((time.time() - started_at) * 1000),
+                                "response_chars": len(text),
+                                "recorded_at_unix": time.time(),
+                            }
+                        )
+                        if usage_context:
+                            payload.update(usage_context)
+                        usage_sink(payload)
+                    return parsed
+                except Exception as exc:
+                    is_final = attempt == max_retries
+                    if usage_sink is not None:
+                        payload = dict(last_usage or {})
+                        payload.update(
+                            {
+                                **prompt_payload,
+                                "attempt": attempt_no,
+                                "total_attempts": total_attempts,
+                                "attempt_status": "final_failure" if is_final else "format_error",
+                                "error_type": type(exc).__name__,
+                                "error_message": f"OpenAI-compatible backend returned invalid JSON: {exc}",
+                                "will_retry": not is_final,
+                                "duration_ms": int((time.time() - started_at) * 1000),
+                                "response_chars": len(text),
+                                "response_text": text,
+                                "recorded_at_unix": time.time(),
+                            }
+                        )
+                        if usage_context:
+                            payload.update(usage_context)
+                        usage_sink(payload)
+                    raise ValueError(
+                        f"OpenAI-compatible backend returned invalid JSON: {exc}"
+                    ) from exc
             except Exception as exc:
                 if supports_response_format and "response_format" in str(exc).lower():
                     supports_response_format = False
                 last_error = exc
-                if attempt == max_retries:
+                is_final = attempt == max_retries
+                if usage_sink is not None and (
+                    not isinstance(exc, ValueError)
+                    or "invalid JSON" not in str(exc)
+                ):
+                    payload = dict(last_usage or {})
+                    payload.update(
+                        {
+                            "provider": payload.get("provider", provider),
+                            "backend": payload.get("backend", "OpenAIJSONCaller"),
+                            "model": payload.get("model", model),
+                            **prompt_payload,
+                            "attempt": attempt_no,
+                            "total_attempts": total_attempts,
+                            "attempt_status": "final_failure" if is_final else "retry_error",
+                            "error_type": type(exc).__name__,
+                            "error_message": str(exc),
+                            "will_retry": not is_final,
+                            "duration_ms": int((time.time() - started_at) * 1000),
+                            "recorded_at_unix": time.time(),
+                        }
+                    )
+                    if usage_context:
+                        payload.update(usage_context)
+                    usage_sink(payload)
+
+                if is_final:
                     break
 
                 sleep_s = min(base_sleep * (2 ** attempt), max_sleep)
@@ -440,6 +593,8 @@ def query_subtype_programs(
     tissue: str = "PBMC",
     n_genes: int = 30,
     stage1_reasoning: str | None = None,
+    usage_sink: Callable[[dict[str, Any]], None] | None = None,
+    usage_context: dict[str, Any] | None = None,
 ) -> dict:
     """Query the LLM for fine-grained subtype programs based on a stage-1 annotation.
 
@@ -488,6 +643,7 @@ def query_subtype_programs(
         f'A single cell in {tissue} was annotated in a first pass as: "{stage1_label}"\n'
         f"{reasoning_block}"
     )
+    full_user_prompt = f"{cached_user_prefix}\n\n{prompt}"
     last_error: Exception | None = None
     max_schema_attempts = 3
     for attempt in range(max_schema_attempts):
@@ -496,11 +652,33 @@ def query_subtype_programs(
             _PROGRAM_SYSTEM,
             cached_user_prefix=cached_user_prefix,
             cache_key=f"stage2_program_query::{tissue}::{n_genes}",
+            usage_context=usage_context,
         )
         try:
             return _validate_programs_payload(raw_programs)
         except Exception as exc:
             last_error = exc
+            is_final = attempt == max_schema_attempts - 1
+            if usage_sink is not None:
+                payload = {
+                    "provider": "stage2",
+                    "backend": "Stage2SchemaValidator",
+                    "model": None,
+                    "prompt_user_message": full_user_prompt,
+                    "prompt_system_message": _PROGRAM_SYSTEM,
+                    "attempt": attempt + 1,
+                    "total_attempts": max_schema_attempts,
+                    "attempt_status": "final_failure" if is_final else "format_error",
+                    "error_type": type(exc).__name__,
+                    "error_message": str(exc),
+                    "will_retry": not is_final,
+                    "duration_ms": 0,
+                    "response_text": json.dumps(raw_programs, ensure_ascii=False),
+                    "recorded_at_unix": time.time(),
+                }
+                if usage_context:
+                    payload.update(usage_context)
+                usage_sink(payload)
             if attempt == max_schema_attempts - 1:
                 break
             sleep_s = min(2.0 * (2 ** attempt), 10.0)

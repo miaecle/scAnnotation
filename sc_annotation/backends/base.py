@@ -68,7 +68,22 @@ def complete_with_retry(
     total_attempts = max_retries + 1
     last_response: str | None = None
 
+    prompt_payload = {
+        "prompt_user_message": user_message,
+        "prompt_system_message": system_message,
+    }
+
+    def _emit_attempt(record: dict[str, Any]) -> None:
+        if usage_sink is None:
+            return
+        payload = dict(record)
+        if usage_context:
+            payload.update(usage_context)
+        usage_sink(payload)
+
     for attempt in range(total_attempts):
+        started_at = time.time()
+        attempt_no = attempt + 1
         try:
             if complete_kwargs:
                 response = backend.complete(
@@ -79,21 +94,81 @@ def complete_with_retry(
             else:
                 response = backend.complete(user_message, system_message=system_message)
             last_response = response
+            usage_payload: dict[str, Any] = {
+                "backend": backend.__class__.__name__,
+                "model": getattr(backend, "model", None),
+            }
+            usage_getter = getattr(backend, "get_last_usage", None)
+            if callable(usage_getter):
+                usage = usage_getter()
+                if usage:
+                    usage_payload.update(dict(usage))
+
             if response_validator is not None:
-                response_validator(response)
-            if usage_sink is not None:
-                usage_getter = getattr(backend, "get_last_usage", None)
-                if callable(usage_getter):
-                    usage = usage_getter()
-                    if usage:
-                        payload = dict(usage)
-                        if usage_context:
-                            payload.update(usage_context)
-                        usage_sink(payload)
+                try:
+                    response_validator(response)
+                except Exception as exc:
+                    last_error = exc
+                    is_final = attempt == max_retries
+                    _emit_attempt(
+                        {
+                            **usage_payload,
+                            **prompt_payload,
+                            "attempt": attempt_no,
+                            "total_attempts": total_attempts,
+                            "attempt_status": "final_failure" if is_final else "format_error",
+                            "error_type": type(exc).__name__,
+                            "error_message": str(exc),
+                            "will_retry": not is_final,
+                            "duration_ms": int((time.time() - started_at) * 1000),
+                            "response_chars": len(response),
+                            "response_text": response,
+                            "recorded_at_unix": time.time(),
+                        }
+                    )
+                    if is_final:
+                        break
+                    sleep_s = min(base_sleep * (2 ** attempt), max_sleep)
+                    print(
+                        f"LLM response validation failed ({type(exc).__name__}: {exc}). "
+                        f"Retrying {attempt + 1}/{max_retries} after {sleep_s:.1f}s..."
+                    )
+                    time.sleep(sleep_s)
+                    continue
+
+            _emit_attempt(
+                {
+                    **usage_payload,
+                    "attempt": attempt_no,
+                    "total_attempts": total_attempts,
+                    "attempt_status": "success",
+                    "will_retry": False,
+                    "duration_ms": int((time.time() - started_at) * 1000),
+                    "response_chars": len(response),
+                    "recorded_at_unix": time.time(),
+                }
+            )
             return response
         except Exception as exc:
             last_error = exc
-            if attempt == max_retries:
+            is_final = attempt == max_retries
+            _emit_attempt(
+                {
+                    "backend": backend.__class__.__name__,
+                    "model": getattr(backend, "model", None),
+                    **prompt_payload,
+                    "attempt": attempt_no,
+                    "total_attempts": total_attempts,
+                    "attempt_status": "final_failure" if is_final else "retry_error",
+                    "error_type": type(exc).__name__,
+                    "error_message": str(exc),
+                    "will_retry": not is_final,
+                    "duration_ms": int((time.time() - started_at) * 1000),
+                    "response_text": None,
+                    "recorded_at_unix": time.time(),
+                }
+            )
+            if is_final:
                 break
 
             sleep_s = min(base_sleep * (2 ** attempt), max_sleep)

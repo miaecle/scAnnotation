@@ -58,6 +58,6 @@ inspect:
   cell_indices: [13748, 48, 6148]  # e.g. [13748]
 
 output:
-  results_dir: results/debug/pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp2
-  experiment_name: pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp2
+  results_dir: results/debug/pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp5
+  experiment_name: pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp5
   save_results: true

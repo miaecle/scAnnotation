@@ -420,12 +420,24 @@ def run_experiment(
     if backend is None:
         backend = build_backend(config.llm)
     print(f"Backend: {backend}")
-    llm_usage_records: list[dict[str, Any]] = []
     usage_lock = threading.Lock()
 
+    usage_attempts_path = os.path.join(
+        config.output.results_dir,
+        "logs",
+        f"{config.output.experiment_name}_usage_attempts.jsonl",
+    )
+
     def _usage_sink(record: dict[str, Any]) -> None:
+        """Write one usage-attempt record immediately (thread-safe, append-only)."""
+        if not config.output.save_results:
+            return
+        payload = dict(record)
+        payload.setdefault("recorded_at_unix", time.time())
         with usage_lock:
-            llm_usage_records.append(dict(record))
+            os.makedirs(os.path.dirname(usage_attempts_path), exist_ok=True)
+            with open(usage_attempts_path, "a", encoding="utf-8") as fh:
+                fh.write(json.dumps(payload, ensure_ascii=False) + "\n")
 
     stage2_backend: Optional[LLMBackend] = None
     json_caller = None
@@ -448,6 +460,7 @@ def run_experiment(
                 thinking_budget=config.stage2.program_query_thinking_budget,
                 use_context_cache=stage2_llm.use_context_cache,
                 context_cache_ttl_seconds=stage2_llm.context_cache_ttl_seconds,
+                usage_sink=_usage_sink,
             )
         elif stage2_backend_name in ("openai", "deepseek", "openrouter"):
             if stage2_backend_name == "deepseek":
@@ -461,6 +474,7 @@ def run_experiment(
                 api_key=api_key,
                 base_url=base_url,
                 max_output_tokens=config.stage2.program_query_max_output_tokens,
+                usage_sink=_usage_sink,
             )
         else:
             raise ValueError(
@@ -484,7 +498,11 @@ def run_experiment(
     inspect_path = (
         config.inspect.save_path
         if getattr(config.inspect, "save_path", None)
-        else os.path.join(config.output.results_dir, f"{config.output.experiment_name}_inspect.jsonl")
+        else os.path.join(
+            config.output.results_dir,
+            "logs",
+            f"{config.output.experiment_name}_inspect.jsonl",
+        )
     )
     if inspect_enabled:
         try:
@@ -584,16 +602,25 @@ def run_experiment(
     # 6. Sample cells
     # ------------------------------------------------------------------ #
     name = config.output.experiment_name
-    results_path = os.path.join(config.output.results_dir, f"{name}_results.csv")
-    eval_path = os.path.join(config.output.results_dir, f"{name}_eval.csv")
-    config_path = os.path.join(config.output.results_dir, f"{name}_config.yaml")
-    usage_path = os.path.join(config.output.results_dir, f"{name}_llm_usage.csv")
-    usage_stream_path = os.path.join(config.output.results_dir, f"{name}_llm_usage_stream.csv")
-    usage_summary_path = os.path.join(config.output.results_dir, f"{name}_llm_usage_summary.csv")
-    cm_path = os.path.join(config.output.results_dir, f"{name}_confusion_matrix.png")
-    skipped_path = os.path.join(config.output.results_dir, f"{name}_stage2_skipped.csv")
-    stage2_program_cache_path = os.path.join(config.output.results_dir, f"{name}_stage2_program_cache.json")
-    timing_path = os.path.join(config.output.results_dir, f"{name}_timing.csv")
+    tables_dir = os.path.join(config.output.results_dir, "tables")
+    logs_dir = os.path.join(config.output.results_dir, "logs")
+    plots_dir = os.path.join(config.output.results_dir, "plots")
+    stage2_dir = os.path.join(config.output.results_dir, "stage2")
+    meta_dir = os.path.join(config.output.results_dir, "meta")
+    tmp_dir = os.path.join(config.output.results_dir, "tmp")
+
+    results_path = os.path.join(tables_dir, f"{name}_results.csv")
+    eval_path = os.path.join(tables_dir, f"{name}_eval.csv")
+    usage_path = os.path.join(logs_dir, f"{name}_llm_usage.csv")
+    usage_failures_path = os.path.join(logs_dir, f"{name}_llm_usage_failures.csv")
+    usage_summary_path = os.path.join(logs_dir, f"{name}_llm_usage_summary.csv")
+
+    config_path = os.path.join(meta_dir, f"{name}_config.yaml")
+    timing_path = os.path.join(meta_dir, f"{name}_timing.csv")
+
+    cm_path = os.path.join(plots_dir, f"{name}_confusion_matrix.png")
+    skipped_path = os.path.join(stage2_dir, f"{name}_stage2_skipped.csv")
+    stage2_program_cache_path = os.path.join(stage2_dir, f"{name}_stage2_program_cache.json")
 
     checkpoint_every = 10
     annotation_stream_path: Optional[str] = None
@@ -604,30 +631,14 @@ def run_experiment(
 
     if config.output.save_results:
         os.makedirs(config.output.results_dir, exist_ok=True)
-        annotation_stream_path = os.path.join(config.output.results_dir, f"{name}_annotation_stream.csv")
+        for d in (tables_dir, logs_dir, plots_dir, stage2_dir, meta_dir, tmp_dir):
+            os.makedirs(d, exist_ok=True)
+        annotation_stream_path = os.path.join(tmp_dir, f"{name}_annotation_stream.csv")
 
     def _flush_usage_records(force: bool = False) -> None:
-        """Persist newly collected LLM usage rows to disk incrementally."""
-        if not config.output.save_results:
-            return
-
-        with usage_lock:
-            pending_count = len(llm_usage_records)
-            if pending_count == 0:
-                return
-            if (not force) and pending_count < checkpoint_every:
-                return
-            pending_records = [dict(r) for r in llm_usage_records]
-            llm_usage_records.clear()
-
-        pending_df = pd.DataFrame(pending_records)
-        write_header = not os.path.exists(usage_stream_path)
-        pending_df.to_csv(
-            usage_stream_path,
-            mode="a",
-            header=write_header,
-            index=False,
-        )
+        # Usage attempts are written synchronously in _usage_sink.
+        _ = force
+        return
 
     def _flush_annotation_buffer(force: bool = False) -> None:
         nonlocal annotation_buffer, flushed_count
@@ -666,10 +677,19 @@ def run_experiment(
             f"{len(sample_df)} cells extracted directly from adata.obs using inspect.cell_indices."
         )
     else:
+        effective_n_per_class = config.evaluation.n_per_class
+        if config.input.mode == "pseudobulk":
+            if effective_n_per_class != 1:
+                print(
+                    "Input mode is pseudobulk; overriding "
+                    f"evaluation.n_per_class={effective_n_per_class} to 1."
+                )
+            effective_n_per_class = 1
+
         sample_df = sample_cells(
             adata,
             label_col=config.evaluation.label_col,
-            n_per_class=config.evaluation.n_per_class,
+            n_per_class=effective_n_per_class,
             seed=config.evaluation.seed,
             cell_type_list=cell_type_list
         )
@@ -754,26 +774,17 @@ def run_experiment(
                         tissue=config.tissue or "PBMC",
                         n_genes=config.stage2.n_program_genes,
                         stage1_reasoning=None,
+                        usage_sink=_usage_sink,
+                        usage_context={
+                            "step": "stage2_program_query",
+                            "phase": "precompute",
+                            "cell_idx": -1,
+                            "cell_barcode": "<precompute>",
+                            "stage1_label": str(cell_type),
+                        },
                     )
                     with stage2_program_cache_lock:
                         stage2_program_cache[cache_key] = raw_programs
-
-                    if json_caller is not None:
-                        get_last_usage = getattr(json_caller, "get_last_usage", None)
-                        if callable(get_last_usage):
-                            stage2_usage = get_last_usage()
-                            if stage2_usage:
-                                stage2_usage_record = dict(stage2_usage)
-                                stage2_usage_record.update(
-                                    {
-                                        "step": "stage2_program_query",
-                                        "phase": "precompute",
-                                        "cell_idx": -1,
-                                        "cell_barcode": "<precompute>",
-                                        "stage1_label": cell_type,
-                                    }
-                                )
-                                _usage_sink(stage2_usage_record)
                 except Exception as exc:
                     print(
                         "[Stage-2 precompute warning] "
@@ -873,26 +884,18 @@ def run_experiment(
                         tissue=config.tissue or "PBMC",
                         n_genes=config.stage2.n_program_genes,
                         stage1_reasoning=stage1_reasoning,
+                        usage_sink=_usage_sink,
+                        usage_context={
+                            "step": "stage2_program_query",
+                            "phase": "annotation",
+                            "cell_idx": int(cell_idx),
+                            "cell_barcode": str(row.cell_barcode),
+                            "stage1_label": str(stage1_label),
+                        },
                     )
                     if stage2_cache_key:
                         with stage2_program_cache_lock:
                             stage2_program_cache.setdefault(stage2_cache_key, raw_programs)
-
-                    if json_caller is not None:
-                        get_last_usage = getattr(json_caller, "get_last_usage", None)
-                        if callable(get_last_usage):
-                            stage2_usage = get_last_usage()
-                            if stage2_usage:
-                                stage2_usage_record = dict(stage2_usage)
-                                stage2_usage_record.update(
-                                    {
-                                        "step": "stage2_program_query",
-                                        "phase": "annotation",
-                                        "cell_idx": int(cell_idx),
-                                        "cell_barcode": str(row.cell_barcode),
-                                    }
-                                )
-                                _usage_sink(stage2_usage_record)
 
                 if _inspect_enabled_for_cell(int(cell_idx)):
                     stage2_program_reasoning_block = (
@@ -1170,27 +1173,69 @@ def run_experiment(
             print(f"Removed temporary annotation stream → {annotation_stream_path}")
 
         _flush_usage_records(force=True)
-        if os.path.exists(usage_stream_path):
-            usage_df = pd.read_csv(usage_stream_path)
-        else:
-            usage_df = pd.DataFrame(llm_usage_records)
+        usage_rows: list[dict[str, Any]] = []
+        if os.path.exists(usage_attempts_path):
+            with open(usage_attempts_path, "r", encoding="utf-8") as fh:
+                for line in fh:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        usage_rows.append(json.loads(line))
+                    except json.JSONDecodeError:
+                        continue
+        usage_df = pd.DataFrame(usage_rows)
         if "cache_used" in usage_df.columns:
             usage_df["cache_used"] = usage_df["cache_used"].fillna(False).astype(bool)
             usage_df["cache_hits"] = usage_df["cache_used"].astype(int)
 
-        usage_df.to_csv(usage_path, index=False)
+        # Keep prompt/response in a dedicated failure file; keep llm_usage.csv compact.
+        failure_statuses = {"retry_error", "format_error", "final_failure"}
+        if "attempt_status" in usage_df.columns:
+            usage_failures_df = usage_df[usage_df["attempt_status"].isin(failure_statuses)].copy()
+        else:
+            usage_failures_df = pd.DataFrame()
 
-        if os.path.exists(usage_stream_path):
-            os.remove(usage_stream_path)
-            print(f"Removed temporary usage stream → {usage_stream_path}")
+        if not usage_failures_df.empty:
+            usage_failures_df.to_csv(usage_failures_path, index=False)
+        elif os.path.exists(usage_failures_path):
+            os.remove(usage_failures_path)
 
-        if not usage_df.empty:
-            group_cols = [c for c in ["step", "phase", "provider", "backend", "model"] if c in usage_df.columns]
+        compact_df = usage_df.copy()
+        for col in ("prompt_user_message", "prompt_system_message", "response_text"):
+            if col in compact_df.columns:
+                compact_df = compact_df.drop(columns=[col])
+        compact_df.to_csv(usage_path, index=False)
+
+        if not compact_df.empty:
+            group_cols = [
+                c for c in ["step", "phase", "provider", "backend", "model", "attempt_status"]
+                if c in compact_df.columns
+            ]
             token_cols = [
-                c for c in usage_df.columns
+                c for c in compact_df.columns
                 if ("token" in c.lower()) or c in {"cache_hits"}
             ]
-            usage_summary_df = usage_df[group_cols + token_cols].groupby(group_cols, dropna=False).sum(numeric_only=True).reset_index()
+            if group_cols:
+                usage_summary_df = (
+                    compact_df[group_cols + token_cols]
+                    .groupby(group_cols, dropna=False)
+                    .sum(numeric_only=True)
+                    .reset_index()
+                )
+                attempts_df = (
+                    compact_df[group_cols]
+                    .groupby(group_cols, dropna=False)
+                    .size()
+                    .reset_index(name="attempt_count")
+                )
+                usage_summary_df = usage_summary_df.merge(attempts_df, on=group_cols, how="left")
+            else:
+                usage_summary_df = pd.DataFrame(
+                    [{"attempt_count": int(len(compact_df))}]
+                )
+                for col in token_cols:
+                    usage_summary_df[col] = pd.to_numeric(compact_df[col], errors="coerce").fillna(0).sum()
         else:
             usage_summary_df = pd.DataFrame()
         usage_summary_df.to_csv(usage_summary_path, index=False)
@@ -1201,7 +1246,12 @@ def run_experiment(
             pd.DataFrame(stage2_skipped_records).to_csv(skipped_path, index=False)
             print(f"Stage-2 skipped cells ({len(stage2_skipped_records)}) saved → {skipped_path}")
 
-        print(f"\nSaved → {config.output.results_dir}/  ({name}_results.csv, _eval.csv, _config.yaml, _llm_usage.csv, _llm_usage_summary.csv, _confusion_matrix.png)")
+        print(f"\nSaved organized outputs under: {config.output.results_dir}/")
+        print(f"  tables/: {name}_results.csv, {name}_eval.csv")
+        print(f"  logs/: {name}_usage_attempts.jsonl, {name}_llm_usage.csv, {name}_llm_usage_failures.csv, {name}_llm_usage_summary.csv")
+        print(f"  plots/: {name}_confusion_matrix.png")
+        print(f"  stage2/: {name}_stage2_program_cache.json, {name}_stage2_skipped.csv")
+        print(f"  meta/: {name}_config.yaml, {name}_timing.csv")
 
     if inspect_enabled:
         sorted_records = _sorted_inspect_records(inspect_records)

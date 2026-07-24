@@ -29,7 +29,7 @@ llm:
 
 evaluation:
   label_col: celltype.l1
-  n_per_class: 5
+  n_per_class: 1
   seed: 42
   strategies: [exact, keyword]
 

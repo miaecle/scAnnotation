@@ -39,7 +39,7 @@ llm:
 
 evaluation:
   label_col: celltype.l2
-  n_per_class: 20
+  n_per_class: 1
   seed: 42
   strategies: [exact, keyword, llm_judge_binary]
   judge_backend: deepseek
