@@ -1,0 +1,2 @@
+step,phase,provider,backend,model,attempt_status,json_parse_method,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,audio_input_tokens,audio_output_tokens,attempt_count
+stage2_program_query,precompute,openai,OpenAIJSONCaller,qwen/qwen3.7-plus,success,direct_json_loads,6947,186624,193571,0,149481,0,0,31

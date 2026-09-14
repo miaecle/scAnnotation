@@ -1,0 +1,1241 @@
+cell_idx,cell_barcode,true_label,pred_label
+98402,E2L3_GTTACAGGTTAGGAGC,ASDC,"pDC
+LILRA4, GZ? absent but TCF4, PLD4, SPIB, IL3RA/CD123, and strong HLA-II expression, together with the highest conventional pDC pathway score, support plasmacytoid dendritic cells. AXL and CLEC12A suggest some overlap with AXL+ dendritic cells, but the core pDC transcriptional and surface-marker profile is predominant."
+148054,E2L7_TGAATCGGTGGTGATG,ASDC,"pDC
+Canonical pDC markers (GZMB absent but LILRA4, CLEC4C, IL3RA/CD123, TCF4, IRF8, PLD4, SPIB, and strong MHC-II) are highly enriched. The conventional pDC pathway is strongly active, supporting pDC over AXL+ dendritic or cDC2 identities."
+39262,L4_AACAAAGGTACGAAAT,ASDC,"pDC
+Canonical pDC markers (GZMB, GZMB, LILRA4, TCF4, CLEC4C, IL3RA/CD123, PLD4, GZMB, and IRF8), elevated CD123/CD304, and the strongest conventional pDC pathway score confirm plasmacytoid dendritic cell identity."
+143579,E2L7_GAAGAATTCTATCGTT,ASDC,"ASDC
+AXL, CLEC10A, FCER1A, CD123, CD4, and strong AXL+ SIGLEC6 dendritic-cell pathway activity support an ASDC phenotype. Although canonical pDC markers (LILRA4, TCF4, PLD4, IL3RA) are present, the stronger AXL+ DC and cDC2-like features favor ASDC over conventional pDC."
+154256,E2L8_CGAGTTAAGCTCCATA,ASDC,"pDC
+LILRA4, TCF4, CLEC4C, IL3RA/CD123, CD304, GZMB, PLD4, SPIB, and strong HLA-DRA/CD74 expression are characteristic of plasmacytoid dendritic cells. The dominant conventional pDC pathway score and supportive surface phenotype confirm the annotation."
+147689,E2L7_TCGCACTTCACTTCTA,ASDC,"pDC
+Strong pDC identity is supported by LILRA4, CLEC4C, TCF4, PLD4, GZMB, IRF8, SPIB, IL3RA/CD123, GZMB, and HLA-DRA, with the highest pathway score for conventional pDC. AXL+ SIGLEC6+ and cDC2 programs are weaker and likely reflect shared dendritic-cell features."
+25410,L2_TGCGGGTCACCCTCTA,ASDC,"pDC
+LILRA4, TCF4, IL3RA/CD123, CD304, PLD4, IRF8, and extensive HLA-II expression strongly support plasmacytoid dendritic cells. Although AXL and the AXL+ SIGLEC6+ program are elevated, the dominant conventional pDC signature confirms pDC."
+14943,L2_ACGTTCCCAGGTCCGT,ASDC,"ASDC
+AXL, PPP1R14A, SOX4, PTGDS, and strong pDC-associated HLA-DRA/IL3RA/CLEC4C support ASDC, with the highest pathway score for AXL⁺ SIGLEC6⁺ dendritic cells. Presence of LILRA4 and TCF4 reflects pDC-like biology but does not outweigh the ASDC-specific evidence."
+89523,E2L2_TGTACAGAGCGACTAG,ASDC,"pDC
+Strong pDC evidence includes LILRA4, GZMB, CLEC4C-associated CD304, IL3RA/CD123, TCF4, IRF8, PLD4, SPIB, HLA-DRA, and CD74. The highest pathway score is conventional pDC, clearly exceeding AXL+ SIGLEC6+ DC and cDC programs. Surface CD123 and CD304 further support pDC identity."
+87907,E2L2_TCAGCAAAGAACAAGG,ASDC,"ASDC
+AXL, PTGDS, SCT, CLEC12A, and the highest AXL+ SIGLEC6 dendritic-cell pathway score support ASDC, despite strong overlapping conventional pDC markers (LILRA4, TCF4, CLEC4C, IL3RA, and PLD4)."
+132693,E2L6_GCTTGGGCAAGTGCAG,ASDC,"ASDC
+AXL, CLEC10A, PPP1R14A, PTGDS, and FCER1A-associated dendritic-cell markers, together with strong HLA-II, CST3, and elevated AXL⁺SIGLEC6 and pDC programs, support ASDC. LILRA4/TCF4/IL3RA/PLD4 indicate pDC-like features, but the AXL/CLEC10A/PTGDS profile favors ASDC over canonical pDC."
+137078,E2L6_TTCCGGTAGTGTAGTA,ASDC,"ASDC
+AXL, SIGLEC6-associated dendritic-cell programming is strongest, with AXL, PTGDS, PPP1R14A, SCT, and CLEC10A. Although pDC markers (LILRA4, TCF4, IL3RA, PLD4, IRF8, HLA-II) are present, the dominant AXL+ DC signature supports ASDC over conventional pDC."
+81561,E2L2_CAATCGAGTTGGGTAG,ASDC,"ASDC
+AXL+ SIGLEC6 dendritic cells are favored by the strongest pathway score, AXL expression, and CLEC10A/FCER1A-associated dendritic program. Although LILRA4, CLEC4C, TCF4, and IL3RA indicate a pDC-like phenotype, the dominant AXL+ DC signature supports ASDC over conventional pDC."
+116772,E2L5_CAGGCCACATAACGGG,ASDC,"pDC
+Strong canonical pDC profile with LILRA4, CLEC4C, GZMB-associated program, TCF4, PLD4, SPIB, IL3RA/CD123, PTGDS, JCHAIN, and high HLA-II. The dominant conventional pDC pathway score supports pDC over AXL+ DC or cDC2."
+18250,L2_CCGGACAAGTTGCGCC,ASDC,"ASDC
+AXL, LILRA4, TCF4, PLD4, CLEC10A, and FCER1A support an AXL⁺SIGLEC6 dendritic-cell phenotype. The ASDC pathway score is strongest, exceeding cDC2 and pDC scores, with abundant HLA-II and dendritic antigen-presentation markers."
+109653,E2L4_GTCGAATGTGGTCTCG,ASDC,"pDC
+LILRA4, CLEC4C/CD304, IL3RA/CD123, TCF4, IRF8, PLD4, and strong HLA-II expression are characteristic of conventional plasmacytoid dendritic cells. Although AXL-related signaling is elevated, the dominant pDC gene and protein signature supports pDC over ASDC or cDC2."
+126676,E2L6_ACTGTGAAGAGTTCGG,ASDC,"pDC
+LILRA4, TCF4, IL3RA/CD123, CLEC4C/CD304, GZMB-associated pDC markers, PLD4, SPIB, IRF8, and strong HLA-DRA/CD74 expression support conventional plasmacytoid dendritic cells. The elevated conventional pDC pathway score (+3.77) strongly outweighs the moderate AXL+ dendritic-cell score. Surface CD123 and CD304 further confirm the pDC identity."
+65516,L5_TGCTTGCCACGCGTCA,ASDC,"ASDC
+Strong AXL, CLEC10A, FCER1A, HLA-II, and pDC-associated LILRA4/TCF4/IL3RA support an AXL⁺ SIGLEC6 dendritic-cell phenotype, with the ASDC pathway clearly dominant over pDC and cDC2 programs."
+139354,E2L7_AGCTCAATCGCCTATC,ASDC,"ASDC
+Strong HLA-II, FCER1A, CLEC10A, AXL, and PPP1R14A expression supports an AXL⁺SIGLEC6-like dendritic-cell identity. The ASDC pathway score is highest, with additional CD4/CD1c DC features but insufficient evidence for pDC or monocyte-derived DC classification."
+81589,E2L2_CACAACAGTGCAATAA,ASDC,"ASDC
+AXL+ dendritic-cell program is strongest, with supportive AXL, CD4, CD22, CD93, and antigen-presentation genes. CLEC10A and FCER1A indicate cDC2-like biology, but the elevated AXL+ SIGLEC6+ DC score favors ASDC over conventional cDC2."
+120045,E2L5_GCAGTTACAACGGCTC,B intermediate,"B intermediate
+Strong B-cell markers (MS4A1, CD19, CD79A, CD22), IgD/IgM expression, HLA-II, FCRL3/FCRL5, and TNFRSF13B support an activated/intermediate, largely unswitched B-cell state rather than naïve or plasmablast. Surface phenotype and pathway scores also favor B intermediate."
+129695,E2L6_CCGGTAGGTGGTCTAT,B intermediate,"B intermediate
+Strong B-cell identity with MS4A1, CD79A/B, CD19, CD21, CD22, IGHM, and IGHD. CD27/CD35 and elevated unswitched-memory and intermediate-B programs support an IgM/IgD-positive intermediate state rather than naïve, class-switched memory, or plasmablast."
+16239,L2_ATCACGATCAGCTTGA,B intermediate,"B naive
+Strong IGHM/IGHD, TCL1A, MS4A1, CD19, CD21, CD35, IgD, and HLA-II expression support a mature naïve B-cell identity. JCHAIN/FCRL5 are minor atypical signals, but plasmablast and memory programs are not dominant."
+147908,E2L7_TCTCACGGTCTAGGTT,B intermediate,"B memory
+MS4A1, CD79A/B, CD19, CD22, HLA-II, CD27, TNFRSF13B, and immunoglobulin expression support memory B cells. Mixed IgM/IgD and class-switched transcripts indicate heterogeneous memory rather than a purely class-switched subset; preserved B-cell antigen-presentation markers argue against plasmablasts."
+93977,E2L3_CATGCAAGTCACCACG,B intermediate,"B memory
+MS4A1, CD19, CD22, CD79A, and HLA-II confirm B-cell identity. FCRL5/FCRL3, TNFRSF13B, IGHA1, and strong class-switched/atypical memory programs support memory B cells, despite residual IgM/IgD expression. Surface-marker evidence is also consistent with B memory rather than plasmablast or naïve B cells."
+132238,E2L6_GCACATAGTGGATACG,B intermediate,"B naive
+IGHD/IGHM, MS4A1, CD19, CD79A/B, CD21, CD35, CD22, TCL1A-associated markers, and strong mature-naive B-cell pathway activity support a conventional naïve mature B-cell identity. High IgD and CD35/CD21 further distinguish it from memory B cells, transitional B cells, and plasmablasts."
+122133,E2L5_TAATCTCCATAACGGG,B intermediate,"B memory
+MS4A1, CD19, CD79A/B, CD21, CD27, FCRL5, and immunoglobulin expression support a memory B-cell identity. Mixed IGHM/IGHD and IGHG2 indicate IgM and class-switched memory features, while elevated CD35, CD21, CD22, and B-cell pathway scores confirm this classification."
+37598,L3_TGATTTCCATTCTGTT,B intermediate,"B naive
+Strong MS4A1, CD79A/B, CD19, CD22, IGHM, IGHD, TCL1A, CD21, and CD35 expression supports a mature naïve B-cell phenotype. High CD74/HLA-II reflects antigen presentation, while the absence of strong plasma-cell or memory-associated programs favors B naive over B memory or plasmablast."
+91168,E2L3_AATTCCTCAGTCCCGA,B intermediate,"B naive
+Strong IGHD/IGHM, TCL1A, FCER2, TNFRSF13C, MS4A1, CD19, CD21, CD35, and IgD expression supports a mature naïve B-cell phenotype. High mature-naive and transitional B-cell pathway scores further confirm this annotation, with no evidence of plasmablast differentiation."
+44845,L4_CTCATTACAAGCCCAC,B intermediate,"B naive
+Strong expression of TCL1A, IGHD, IGHM, MS4A1, CD79A/B, CD19, CD21, and CD35, together with high mature-naive and transitional B-cell pathway scores, confirms a naive B-cell phenotype."
+114352,E2L5_ACCTGTCCACGCGCAT,B intermediate,"B naive
+Strong expression of MS4A1, CD79A/B, CD22, CD74, HLA-II, IGHM, IGHD, TCL1A, FCER2, and TNFRSF13C, with surface IgD, CD19, CD21, CD23/CD268, and CD93, supports a conventional mature/transitional naive B-cell phenotype. Lack of prominent memory or plasmablast markers confirms the stage-1 annotation."
+34925,L3_GTATTGGAGCCTGTCG,B intermediate,"B memory  
+B-cell identity is strongly supported by MS4A1, CD19, CD79A/B, CD22, CD21/CD35, and HLA-II expression. CD27, IGHM, IGHD, JCHAIN, and some IGHG1 indicate an unswitched/intermediate memory phenotype rather than purely naïve B cells or plasmablasts."
+130162,E2L6_CGCCAGAAGAAAGCGA,B intermediate,"B intermediate
+CD19+ CD21/CD35+ B cells express MS4A1, CD79A, IGHM/IGHD, CD27, TNFRSF13B, and FCRL2, supporting an unswitched intermediate/IgM-memory phenotype rather than naïve B cells or plasmablasts."
+78043,E2L1_TTCGATTTCCCAATAG,B intermediate,"B memory
+Strong MS4A1, CD19, CD22, CD79A/B, HLA-II, CD21/CD35, CD27, and class-switched immunoglobulins support a mature memory B cell. JCHAIN and IGHA/IGHG indicate class switching, but retained B-cell surface markers and absence of plasmablast markers favor B memory over plasmablast or doublet."
+9912,L1_TAACTTCAGCTCAGAG,B intermediate,"B naive
+Strong MS4A1, CD19, CD79A/B, CD22, IGHM, IGHD, TCL1A, FCER2, and MHC-II expression, together with high CD21/CD35, CD72, and IgD, supports a mature naive B-cell identity. The absence of strong plasma-cell or memory-associated features further confirms the annotation."
+98462,E2L3_GTTATGGCACCAACAT,B intermediate,"B memory
+Strong CD19/CD20/MS4A1, CD79A, CD22, CD74, and HLA-II expression confirms a B-cell identity. FCRL5, FCRL3, TNFRSF13B, and class-switched IGHG/IGHA transcripts support an activated/class-switched memory phenotype rather than naïve B cells or plasmablasts."
+157192,E2L8_GGGTAGATCTGGAAGG,B intermediate,"B naive
+MS4A1, CD79A/B, CD19, CD21, CD35, IGHM, and IGHD, together with strong IgD and naïve B-cell pathway scores, support a mature naïve B-cell identity. Unswitched-memory markers are present but do not outweigh the dominant naïve phenotype."
+128449,E2L6_CAACAGTGTATCCTCC,B intermediate,"B memory
+CD19/MS4A1/CD79A/PAX5 and strong CD20/CD22 support B-cell identity, while FCRL5/FCRL3 and class-switched IGHG1/3/4 indicate an antigen-experienced memory phenotype. The dominant class-switched memory pathway score further supports B memory rather than naive B cells or plasmablasts."
+104820,E2L4_CAATCGATCTTCGTGC,B intermediate,"B intermediate
+IgM/IgD-positive CD19⁺ B-cell profile with CD21, CD35, CD72, HLA-II, FCRL2, and TNFRSF13B supports an unswitched memory/intermediate B-cell state rather than naive or plasmablast."
+79677,E2L2_ACTCTCGGTACAGTTC,B intermediate,"B intermediate
+Strong B-cell identity (MS4A1, CD79A, CD19, CD21/CD35) with prominent IgM/IgD and some class-switched immunoglobulins, CD27/TNFRSF13B, and FCRLA supports an unswitched/intermediate memory-like state rather than purely naïve B cells."
+26617,L2_TTGGATGTCAGCTCTC,B memory,"B memory
+Strong B-cell markers (MS4A1, CD79A/B, CD19, CD22, CD35, CD21) with CD27, class-switched immunoglobulins (IGHA/IGHG), JCHAIN, and elevated class-switched memory pathway activity support a class-switched memory B-cell phenotype rather than naïve B cells or plasmablasts."
+72013,E2L1_CTCAAGACAATCTGCA,B memory,"B intermediate
+Strong CD19/MS4A1/CD79A B-cell program with CD21, CD35, FCRL2, CD27, IGHM, and IGHD-associated features supports an unswitched intermediate/memory-like B-cell state. The absence of strong plasmablast markers argues against Plasmablast, while CD21/CD35 and moderate naïve signatures distinguish it from conventional B naive."
+117816,E2L5_CGAAGTTGTTCGGACC,B memory,"B intermediate
+Strong B-cell identity with MS4A1, CD19, CD22, CD79A/B, HLA-II, CD21/CD35, and CD27, alongside class-switched IGHG1/2, JCHAIN, and TNFRSF13B, supports an activated intermediate B-cell state rather than plasmablast."
+135908,E2L6_TCTGTCGTCGCTGTTC,B memory,"B memory
+CD19⁺CD22⁺MS4A1⁺CD79A⁺ cells with CD27, class-switched IGHG/IGHA, CD21/CD35, and strong MHC-II expression support class-switched memory B cells. Preserved B-cell receptor markers and lack of a strong plasmablast program argue against Plasmablast, despite JCHAIN expression."
+83842,E2L2_CTCTGGTCACGGCTAC,B memory,"B memory
+Mature B-cell markers (MS4A1, CD79A, CD19, CD22, CD21/CD35, HLA-II) together with CD27, TNFRSF13B, JCHAIN, and class-switched IGHG transcripts support a class-switched memory B-cell phenotype, rather than naïve B cells or plasmablasts."
+148133,E2L7_TGAGCATTCAATCTTC,B memory,"B memory
+Strong MS4A1, CD19, CD22, CD79A/B, HLA-II, CD27, CD21/CD35, and TNFRSF13C support a class-switched memory B-cell identity. IGHG2/3 and JCHAIN indicate class switching, but preserved mature B-cell markers and lack of a dominant plasmablast program argue against Plasmablast."
+138823,E2L7_ACTATGGCAGCTGAAG,B memory,"B memory
+MS4A1, CD19, CD79A, CD21/CD35, and CD27 support memory B-cell identity, with IGHG/IGHA indicating class switching. Preserved B-cell receptor and antigen-presentation markers, alongside absent plasmablast-associated features, favor class-switched B memory over plasmablast or B intermediate."
+66327,L5_TTCCAATAGGTGGCTA,B memory,"B memory
+Strong B-cell markers (MS4A1, CD79A/B, CD19, CD22, CD21, HLA-II, BANK1) and CD27 with abundant class-switched immunoglobulins (IGHG1/2/4, IGHE) support a class-switched memory B-cell identity. High CD35/CD73 and the strongest pathway score for class-switched memory further confirm B memory rather than naïve B cells or plasmablasts."
+112953,E2L4_TTCCTTCCACTGCGAC,B memory,"B memory
+CD19, CD22, MS4A1, CD79A/B, CD21, and CD35 establish a mature B-cell identity, while IGHG1/3, JCHAIN, and elevated class-switched memory scores support memory rather than naïve or plasmablast status."
+42957,L4_CAGTTAGAGCGACCCT,B memory,"B memory
+Strong B-cell markers (MS4A1, CD79A/B, CD19, CD22) with CD27, CD21/CD35, class-switched immunoglobulins, and high class-switched memory pathway activity support a class-switched memory B cell. JCHAIN and IGHA/IGHG indicate activated antibody-secreting potential, but the retained MS4A1 and lack of dominant plasma-cell markers argue against plasmablast."
+122062,E2L5_TAACTTCGTAATACCC,B memory,"B memory
+Strong B-cell markers (MS4A1, CD79A, CD19, CD22, CD21/CD35) with CD27, CD73, and class-switched IGHA/IGHG support class-switched memory B cells. JCHAIN and TNFRSF13B suggest activation, but the absence of a dominant plasmablast program supports retaining the B memory annotation."
+75176,E2L1_GTTATGGAGTATGACA,B memory,"B memory
+MS4A1, CD79A/B, CD19, CD21/CD35, CD27, HLA-II, and abundant class-switched IGHA/IGHG with JCHAIN support an activated/class-switched memory B-cell phenotype. Preserved B-cell receptor markers and lack of strong plasmablast features favor B memory over plasmablast or B intermediate."
+130769,E2L6_CTCATCGAGGATTTGA,B memory,"B memory
+Strong MS4A1/CD79A/CD19/CD22 and HLA-II expression establish a B-cell identity. CD27, TNFRSF13B, class-switched IGHA/IGHG, and JCHAIN support activated/class-switched memory B cells, while retained CD21/CD35 and absence of plasmablast markers favor B memory over plasmablast."
+139030,E2L7_AGAACAATCTAAGGAA,B memory,"B memory
+Strong B-cell markers (MS4A1, CD19, CD79A/B, CD22) and CD21/CD27/CD35 support memory B-cell identity. Class-switched immunoglobulins (IGHA1/2, IGHG1/2/3), TNFRSF13B, and the highest pathway score for class-switched memory B cells confirm this annotation, with no plasmablast-like loss of MS4A1 or strong antibody-secretion program."
+105380,E2L4_CATGCAATCCGTGCGA,B memory,"B intermediate
+Strong B-cell identity with MS4A1, CD79A, CD19/CD22, HLA-II, and immunoglobulin expression. Mixed IGHM and class-switched IGHG/IGHA, alongside CD27, TNFRSF13B, JCHAIN, and intermediate/unswitched-memory pathway activity, supports an intermediate B-cell state rather than naive B cell, conventional memory B cell, or plasmablast."
+120072,E2L5_GCATCTCCATAGTCGT,B memory,"B memory
+Strong B-cell markers (MS4A1, CD79A, CD19, CD22) and CD21/CD35 identify mature memory B cells. CD27, TNFRSF13B, and abundant class-switched IGHG/IGHA transcripts support a class-switched memory phenotype rather than naïve B cells or plasmablasts."
+89387,E2L2_TGGGATTTCTCATGCC,B memory,"Doublet
+Co-expression of strong B-cell markers (MS4A1, CD19, CD79A, CD22, CD74, BANK1) with cytotoxic T/NK markers (CD8A, NKG7, GNLY, GZMK, CCL5), plus elevated CD19 and CD8a proteins, supports a B–T/NK doublet rather than a single subtype."
+140762,E2L7_CAATACGTCTACGGGC,B memory,"B memory
+MS4A1, CD19, CD79A/B, CD22, CD35, CD21, CD27, and class-switched IGHG1/3 support a memory B-cell phenotype, with strong class-switched and IgM-memory pathway scores. Absence of plasmablast markers and preserved B-cell antigen-presentation machinery further supports B memory."
+153348,E2L8_CATCGGGTCCCAGTGG,B memory,"B memory
+MS4A1, CD19, CD79A, CD21/CD35, CD27, BANK1, and TNFRSF13B confirm a mature memory B-cell identity. Class-switched immunoglobulins (IGHG, IGHA), JCHAIN, and the strongest pathway score for class-switched memory support an activated/class-switched memory state rather than naïve B cells or plasmablasts."
+89331,E2L2_TGGATCAGTCATATGC,B memory,"B memory  
+MS4A1, CD19, CD79A, CD21/CD35, CD27, HLA-II, and TNFRSF13B establish a mature memory B-cell identity. Class-switched IGHG/IGHA expression supports class-switched memory, while preserved MS4A1/CD19/CD21 and lack of plasmablast markers (e.g., MZB1, SDC1, PRDM1) argue against plasmablast."
+99957,E2L3_TCGCTTGAGTGATTCC,B naive,"B naive
+Strong IGHD/IGHM, TCL1A, FCER2, MS4A1, CD19, CD21, CD22, and IgD surface expression define mature naive B cells. Absence of memory, plasmablast, or proliferation signatures supports the stage-1 annotation."
+15125,L2_ACTTCGCCAGCAGGAT,B naive,"B naive
+TCL1A, IGHD, IGHM, FCER2, MS4A1, CD79A, CD21, CD35, CD19, and strong HLA-II expression, together with high mature-naive and transitional B-cell pathway scores, support a mature naïve B-cell identity."
+17489,L2_CAGGCCAAGTCAATCC,B naive,"B naive
+Strong IGHD/IGHM, TCL1A, FCER2, MS4A1, CD19, CD21, CD35, and HLA-II expression supports a mature naïve B-cell identity; the higher mature-naïve pathway score outweighs the transitional signal."
+59582,L5_GAAGGACGTAGAATGT,B naive,"B naive
+Strong expression of IGHM, IGHD, TCL1A, MS4A1, CD79A/B, CD19, CD21, CD22, CD35, and HLA-II, together with high mature-naive and transitional B-cell pathway scores, confirms a naive B-cell identity. Absence of strong plasma-cell or memory-associated features supports B naive over other B-cell subtypes."
+98389,E2L3_GTGTTCCCAGACCAAG,B naive,"B naive
+Strong IGHM/IGHD, TCL1A, CD19, MS4A1, CD79A/B, CD21, CD35, CD72, and TNFRSF13C expression, together with high IgD and mature-naive/transitional B-cell pathway scores, confirms a naive B-cell identity."
+48077,L4_GTCTGTCAGGAACGAA,B naive,"B naive
+Strong CD19/MS4A1/CD79A, CD21/CD35, IgD/IGHM, TCL1A, FCER2, and HLA-II expression define a mature follicular-like naive B cell. High mature-naive and transitional B-cell pathway scores support the stage-1 annotation; there is no evidence for memory or plasmablast differentiation."
+100034,E2L3_TCGTAGATCCTAAACG,B naive,"B naive
+IGHD/IGHM, TCL1A, MS4A1, CD79A, CD74, CD21, CD35, IgD, and CD19 strongly support a mature naïve B-cell phenotype. High TNFRSF13C, CD22, CD72, and mature naïve B-cell pathway activity further confirm the annotation."
+101286,E2L3_TTCATTGGTTGTAAAG,B naive,"B naive
+TCL1A, IGHM, IGHD, MS4A1, CD79A/B, FCER2, CD21, CD35, CD73, and strong mature-naive B pathway activity support mature naïve B cells. The elevated IgD and CD21, with no plasmablast or memory-dominant profile, confirm the stage-1 annotation."
+133057,E2L6_GGGCGTTGTCGCACAC,B naive,"B naive
+Strong MS4A1, CD19, CD22, CD79A, IGHD/IGHM, TCL1A, FCER2-associated phenotype, CD21, and CD35 support mature naïve B cells. The dominant mature naïve B-cell pathway and absence of plasmablast or clear memory markers outweigh minor transitional/memory signals."
+21811,L2_GGGACCTCAGAAACCG,B naive,"B naive
+Strong expression of IGHD, IGHM, TCL1A, MS4A1, CD79A, CD19, CD21, and FCER2, together with high IgD, CD19, CD21, CD22, and CD35 proteins, confirms a mature naïve B-cell phenotype. The mature naïve B-cell pathway score is highest, with no convincing plasmablast or memory signature."
+105202,E2L4_CAGTTCCCAGGACTAG,B naive,"B naive
+Strong IGHD, IGHM, TCL1A, MS4A1, CD79A, FCER2, and HLA-II expression, together with high CD19, CD21, CD22, CD72, IgD, and CD35, clearly identifies a mature naive B cell. The strong mature-naive and transitional B-cell pathway scores support this annotation, with no convincing plasmablast or activated-memory program."
+128376,E2L6_ATTTACCCACGAAGAC,B naive,"B naive
+Strong IGHM/IGHD, TCL1A, MS4A1, CD79A, CD19, CD21, FCER2, and high IgD/CD35/CD72 support a mature naive B-cell identity, with no plasmablast or activated-memory signature."
+109651,E2L4_GTCGAATCACTCCTGT,B naive,"B naive
+Strong expression of TCL1A, IGHD, IGHM, FCER2, MS4A1, CD79A, CD74, and HLA-II genes, together with elevated CD19, CD21, CD22, IgD, CD35, and CD72, confirms a mature naive/follicular B-cell phenotype. High mature naive and transitional B-cell pathway scores further support B naive over memory or plasmablast states."
+112127,E2L4_TGCATCCTCCCAGCGA,B naive,"B naive
+Strong IGHM/IGHD, TCL1A, FCER2, MS4A1, CD79A, CD19, CD21, CD35, and IgD/CD72 surface expression define a mature naive B-cell phenotype. High mature-naive and transitional B-cell pathway scores support B naive over memory, plasmablast, or other lymphoid subtypes."
+114169,E2L5_ACAGCCGTCGAACCTA,B naive,"B naive
+Strong IGHD/IGHM, TCL1A, FCER2, MS4A1, CD79A, CD19, CD21, and CD35 expression, together with high mature-naive and transitional B-cell pathway scores, confirms a naïve mature B-cell identity."
+81675,E2L2_CACGAATCACCTGAAT,B naive,"B naive
+TCL1A, IGHM/IGHD, FCER2, MS4A1, CD19, CD21, CD72, and IgD, together with strong mature-naive and transitional B-cell pathway scores, clearly support a conventional mature naïve B-cell identity."
+99108,E2L3_TATCAGGGTATCGGTT,B naive,"B naive
+Strong IGHD/IGHM, TCL1A, CD19, MS4A1, CD21, CD35, CD93, and TNFRSF13C support a mature naive B-cell identity. Minor JCHAIN/IGHG3 expression does not outweigh the dominant naive B-cell program."
+141644,E2L7_CCATAAGAGTTGTCAC,B naive,"B naive
+IGHD, IGHM, TCL1A, MS4A1, CD19, CD21, CD35, CD22, and TNFRSF13C, together with strong mature-naive B-cell pathway activity, clearly support a mature naive B-cell identity."
+86240,E2L2_GTAGATCAGGTCGTCC,B naive,"B naive
+Strong B-cell markers (MS4A1, CD79A/B, CD19, CD22), IgD/IGHM, TCL1A, CD21, CD35, and high mature-naive B-cell pathway activity support a conventional naïve B-cell identity. Transitional features are present but less dominant; no evidence supports plasmablast or memory classification."
+26671,L2_TTGGTTTGTTAGGGTG,B naive,"B naive
+MS4A1, CD19, CD79A/B, IGHD, IGHM, TCL1A, FCER2, CD21, and CD35 strongly support a mature naïve B-cell identity. High IgD and naïve B-cell pathway activity distinguish this cell from memory B cells and plasmablasts."
+23889,L2_TCAATCTCAGGTTTAC,CD14 Mono,"CD14 Mono
+Strong S100A8/A9/A12, LYZ, FCN1, VCAN, CD14, and CLEC12A expression with the highest classical CD14 monocyte pathway score supports a classical monocyte. Elevated CD41/CD62P/CLEC2 likely reflects platelet contamination or an aggregate rather than a true platelet identity."
+31366,L3_CCTCTAGAGCGAGTAC,CD14 Mono,"CD14 Mono
+LYZ, S100A8/A9, FCN1, VCAN, CD14, and inflammatory myeloid genes strongly support a classical CD14⁺ monocyte. Elevated CD11b, CLEC12A, and the highest classical CD14 pathway score reinforce this; platelet-associated proteins likely reflect ambient contamination or a minor doublet component."
+74756,E2L1_GTCGTTCAGTAGACAT,CD14 Mono,"CD14 Mono
+Strong IL1B, S100A8/A9, S100A12-related inflammatory, FCN1, VCAN, LYZ, TNF, CXCL8, and NLRP3 expression supports an activated classical CD14⁺ monocyte. Elevated platelet markers likely reflect platelet adhesion or ambient signal rather than a true platelet or doublet identity."
+4544,L1_CCCATTGCAACTTGCA,CD14 Mono,"Doublet
+Strong CD14-monocyte expression (S100A8/A9, LYZ, FCN1, VCAN, CD14) co-occurs with prominent platelet proteins (CD41, CD62P, CD31), supporting a monocyte–platelet aggregate rather than a singlet."
+121753,E2L5_GTGTGATGTTCGGTAT,CD14 Mono,"CD14 Mono
+Inflammatory monocyte, supported by IL1B, CCL3/CCL4, FCN1, LYZ, CTSS, HLA-DRA, TYROBP, CD11b, CD11c, CLEC12A, and CD93. Elevated CD62P/CD41 likely reflects platelet binding or ambient signal rather than a platelet identity. Although antigen-presentation genes overlap with cDC2, the strong inflammatory monocyte program and FCN1/LYZ expression favor CD14 Mono."
+60803,L5_GCGATCGAGTCACAGG,CD14 Mono,"CD14 Mono
+LYZ, S100A8/S100A9, S100A12, FCN1, VCAN, CD14-associated proteins, and TYROBP/FCER1G strongly support a classical CD14-positive monocyte. Elevated CLEC12A and HLA-II are compatible with monocytes; platelet-associated CD41/CD62P likely reflects adhesion or ambient signal rather than a true platelet identity."
+82943,E2L2_CGAGAAGTCGCCTATC,CD14 Mono,"CD14 Mono
+Strong S100A8/S100A9/S100A12, LYZ, FCN1, VCAN, CD14, CTSS, and inflammatory monocyte programs support a classical/inflammatory CD14 monocyte. Elevated CD62P/CD41 likely reflects platelet association or ambient signal, not a platelet identity."
+63405,L5_TAGCACAGTATAGGGC,CD14 Mono,"Doublet
+Strong CD14/FCN1/S100A8/S100A9/VCAN monocyte expression co-occurs with prominent platelet proteins (CD41, CD62P, CLEC2), supporting a monocyte–platelet doublet rather than a pure monocyte subtype."
+117989,E2L5_CGCCAGAGTATGATCC,CD14 Mono,"CD14 Mono
+Strong LYZ, FCN1, S100A8/A9, VCAN, TYROBP, CD14/CD64, and CD11b signatures support a classical CD14 monocyte. Platelet-associated CD41/CD62P signals likely reflect platelet adherence or ambient protein rather than a true doublet."
+97268,E2L3_GGCGTCATCTTGCGCT,CD14 Mono,"CD14 Mono
+Strong inflammatory classical-monocyte program (IL1B, LYZ, FCN1, VCAN, S100A8/A9, CXCL8, NLRP3) and highest inflammatory/classical CD14 pathway scores support CD14 Mono. Elevated platelet markers likely reflect platelet adhesion or ambient protein rather than a true platelet doublet."
+161156,E2L8_TTCATGTCATACCAGT,CD14 Mono,"CD14 Mono
+Strong classical/inflammatory monocyte profile with LYZ, S100A8/A9, S100A12, FCN1, VCAN, CD14, CTSS, TYROBP, and LST1. Platelet-associated proteins likely reflect platelet binding or contamination rather than a true doublet."
+113367,E2L4_TTTCGATAGCTAGAAT,CD14 Mono,"CD14 Mono
+Strong inflammatory classical monocyte signature (S100A8/A9, S100A12, IL1B, LYZ, VCAN, FCN1, CD14-associated programs, and CXCL8/CCL3). High platelet markers likely indicate platelet adherence or a platelet–monocyte aggregate, but the dominant transcriptomic and pathway evidence supports CD14 Mono rather than Doublet or Platelet."
+134858,E2L6_TATCTTGAGTTTGCTG,CD14 Mono,"CD14 Mono
+LYZ, S100A8/A9, FCN1, VCAN, CD14, CTSS, and TYROBP strongly support a classical CD14⁺ monocyte. Elevated CD41/CD62P likely reflects platelet contamination or platelet–monocyte interaction rather than a true doublet, given the overwhelmingly monocyte-specific transcriptome."
+75166,E2L1_GTTAGTGCAGCGACCT,CD14 Mono,"CD14 Mono
+Strong S100A8/A9/A12, LYZ, VCAN, FCN1, IL1B, CD14, and inflammatory chemokines define an activated/classical CD14 monocyte. Platelet-associated CD41/CD62P likely reflects platelet contamination or adherence rather than a true platelet or doublet identity."
+89449,E2L2_TGGTAGTCAGCTGTAT,CD14 Mono,"CD14 Mono
+Strong IL1B, CXCL8, S100A8/A9, LYZ, VCAN, FCN1, CD14, and inflammatory pathway activity identify an activated classical/inflammatory CD14⁺ monocyte. Elevated CD41/CD62P and CLEC2 likely reflect platelet adherence or ambient platelet signal rather than a true platelet doublet."
+17322,L2_CACTGAACAGGGCTTC,CD14 Mono,"CD14 Mono
+Strong LYZ, S100A8/A9, FCN1, VCAN, CD14, CTSS, LST1, and inflammatory myeloid genes support a classical CD14⁺ monocyte. CD11b, CD93, CLEC12A, and CD18 further support monocyte identity. Elevated platelet markers likely reflect ambient protein or minor platelet contamination rather than a true doublet."
+76477,E2L1_TCCTTCTAGGGTCACA,CD14 Mono,"CD14 Mono
+Strong IL1B, S100A8/S100A9, LYZ, FCN1, VCAN, NLRP3, and inflammatory chemokines support an activated classical CD14 monocyte. CD11b, CD64, CLEC12A, and CD93 further support myeloid identity. Elevated CD41/CD62P likely reflects platelet adherence or ambient contamination rather than a platelet identity."
+128680,E2L6_CACATGAAGACCTCAT,CD14 Mono,"CD14 Mono
+Strong LYZ, S100A8/A9, IL1B, VCAN, FCN1, CD14, S100A12, and inflammatory pathway scores establish a classical inflammatory CD14 monocyte. High CD41/CD62P and platelet-associated proteins likely reflect platelet adhesion or contamination rather than a true platelet identity."
+130491,E2L6_CGTTGGGTCTCCTGCA,CD14 Mono,"CD14 Mono
+S100A8/A9, LYZ, VCAN, FCN1, CD14, S100A12, and inflammatory myeloid genes strongly support a classical/inflammatory CD14⁺ monocyte. Elevated CD11b, CLEC12A, TYROBP, and monocyte pathway scores reinforce this identity; CD41/CD62P/CD35 likely reflect platelet binding or ambient contamination rather than a platelet cell."
+20242,L2_GAATCACAGTGCACAG,CD14 Mono,"CD14 Mono
+LYZ, S100A8/A9, FCN1, VCAN, CD14, TYROBP, and inflammatory monocyte pathways strongly support a classical CD14 monocyte. Elevated platelet-associated CD41/CD62P likely reflects platelet adherence or ambient contamination."
+111605,E2L4_TCGTAGAAGAGAATCT,CD16 Mono,"Doublet
+Strong monocyte transcriptional markers (FCGR3A, LST1, C1QA, TYROBP, HLA-DRA) coexist with highly elevated platelet proteins (CD41, CD62P, CLEC2, CD9), supporting a platelet–monocyte aggregate rather than a pure CD16 Mono or Platelet cell."
+118496,E2L5_CTCAATTTCGTCAAAC,CD16 Mono,"CD16 Mono
+Monocyte genes (FCGR3A, LST1, AIF1, MS4A7, TYROBP, LILRB1) and the strongest FCGR3A⁺ non-classical monocyte pathway support CD16⁺ monocytes. FCN1/APOBEC3A indicate an intermediate inflammatory component. Elevated platelet proteins likely reflect platelet binding or ambient signal rather than a true platelet identity."
+13748,L1_TTTGTTGCAGCGAGTA,CD16 Mono,"CD16 Mono
+FCGR3A, MS4A7, LST1, TYROBP, FCER1G, CX3CR1-associated markers, and strong FCGR3A⁺ monocyte pathway activity support a non-classical CD16 monocyte. Elevated CD41/CD62P/CLEC2 likely reflects platelet adherence or ambient platelet material rather than a true platelet doublet."
+40387,L4_ACTACGACAGACGGAT,CD16 Mono,"Doublet
+Strong CD16-monocyte transcriptional markers (FCGR3A, LST1, MS4A7, TYROBP) coexist with highly elevated platelet proteins (CD41, CD62P, CLEC2), supporting a platelet–monocyte doublet rather than a pure CD16 Mono."
+123107,E2L5_TCCAGAACATTGAGCT,CD16 Mono,"Doublet
+Monocyte transcripts strongly support a CD16/intermediate monocyte, but the marked CD41, CD62P, CLEC2, and platelet-associated surface signature indicates platelet–monocyte conjugation or a monocyte–platelet doublet."
+40081,L4_ACCCAAAAGTTAACGA,CD16 Mono,"Doublet
+Strong CD16-monocyte genes (FCGR3A, LST1, MS4A7, TYROBP, CLEC12A) coexist with prominent platelet/endothelial proteins (CD41, CD62P, CLEC2, CD31), supporting a platelet–monocyte doublet rather than a pure monocyte."
+156599,E2L8_GCGAGAACAGTCAGTT,CD16 Mono,"Doublet
+Strong CD16 monocyte RNA markers coexist with highly elevated platelet proteins (CD41, CD62P, CLEC2, CD31), supporting a platelet–CD16 monocyte aggregate rather than a pure CD16 Mono."
+155011,E2L8_CTCCTCCAGTAAGACT,CD16 Mono,"CD16 Mono
+FCGR3A, MS4A7, LST1, TYROBP, FCER1G, C1QA, and HLA-DRA support a non-classical/CD16 monocyte. Elevated FCGR3A+ pathway activity is strongest; platelet-associated proteins likely reflect platelet binding or ambient signal."
+40677,L4_AGACAGGTCGGACAAG,CD16 Mono,"Doublet
+Strong CD16-monocyte transcriptional markers (FCGR3A, LST1, MS4A7, TYROBP) coexist with pronounced platelet proteins (CD41, CD61, CD62P, CLEC2), supporting a platelet–monocyte aggregate rather than a pure monocyte or platelet."
+51970,L4_TTGACCCTCATTCGTT,CD16 Mono,"Doublet
+Strong CD16 monocyte markers (FCGR3A, LST1, TYROBP, MS4A7) co-occur with highly elevated platelet proteins (CD41, CD61, CD62P, CLEC2, CD31), supporting a platelet–monocyte conjugate/doublet rather than a single cell type."
+114594,E2L5_ACTGATGCAGGTATGG,CD16 Mono,"Doublet
+Strong CD16 monocyte markers (FCGR3A, MS4A7, LST1, TYROBP, LYZ) coexist with highly elevated platelet markers (CD41, CD62P, CLEC2), supporting a platelet–monocyte aggregate rather than a pure CD16 Mono."
+18196,L2_CCCTTAGCAATGTCTG,CD16 Mono,"CD16 Mono
+Monocyte genes (LYZ, LST1, TYROBP, FCER1G, FCGR3A, MS4A7) and the strongest nonclassical FCGR3A-monocyte pathway support CD16 Mono over classical CD14 Mono. Elevated platelet markers likely reflect a platelet–monocyte aggregate or ambient platelet signal."
+71330,E2L1_CGAAGGAGTTCAACGT,CD16 Mono,"CD16 Mono
+Strong FCGR3A, CDKN1C, LST1, C1QA/B, MS4A7, and FCER1G expression, CD16 protein, and the highest FCGR3A⁺ nonclassical-monocyte score support CD16 monocytes. Platelet-associated proteins likely reflect platelet binding or ambient signal rather than a true doublet."
+146593,E2L7_TACCCACGTGGTCCGT,CD16 Mono,"CD16 Mono
+FCGR3A, LST1, MS4A7, TYROBP, AIF1, and CD16 protein strongly support a non-classical CD16⁺ monocyte. The FCGR3A⁺ monocyte pathway is highest; CD31/CD93 and platelet markers likely reflect minor contamination or platelet interaction."
+127099,E2L6_AGCGTATAGCAAACAT,CD16 Mono,"CD16 Mono
+FCGR3A, LST1, MS4A7, TYROBP, FCER1G, and CD16 protein strongly support a non-classical CD16⁺ monocyte. Platelet-associated surface proteins likely reflect platelet binding or contamination rather than a true doublet."
+125445,E2L5_TTTGACTTCTAGGCCG,CD16 Mono,"CD16 Mono
+FCGR3A, MS4A7, LST1, TYROBP, FCER1G, and strong CD16 protein support a non-classical CD16⁺ monocyte. FCN1 and intermediate pathway activity suggest some transitional features, while platelet markers likely reflect platelet adhesion or contamination."
+78167,E2L1_TTGATGGTCGGTCTGG,CD16 Mono,"Doublet
+Strong CD16 monocyte markers (FCGR3A, LST1, MS4A7, TYROBP, CSF1R) coexist with abundant platelet proteins (CD41, CD62P, CLEC2) and PECAM1, supporting a platelet–CD16 monocyte doublet rather than a pure monocyte."
+70003,E2L1_CAAGACTTCGCCTAGG,CD16 Mono,"Doublet
+Strong CD16 monocyte gene expression (FCGR3A, LST1, MS4A7, TYROBP) co-occurs with prominent platelet/endothelial proteins (CD41, CD62P, CLEC2, CD31), supporting a monocyte–platelet aggregate rather than a singlet CD16 Mono."
+52738,L5_AACCTGAGTACCTAAC,CD16 Mono,"Doublet
+Strong monocyte transcriptional markers (LST1, FCN1, FCGR3A, LYZ, TYROBP) coexist with highly elevated platelet proteins (CD41, CD61, CD62P, CLEC2), supporting a platelet–monocyte aggregate rather than a pure monocyte subtype."
+56223,L5_CAATTTCTCGCCTTTG,CD16 Mono,"Doublet
+Strong monocyte/myeloid transcriptional markers (FCN1, LST1, LYZ, TYROBP, FCGR3A) coexist with highly elevated platelet proteins (CD41, CD61, CD62P, CLEC2), supporting a platelet–monocyte aggregate rather than a singlet."
+123340,E2L5_TCGAAGTAGTCGAAGC,CD4 CTL,"gdT
+TRGC1 with CD3D/E, TRAC, and strong cytotoxic markers (NKG7, GNLY, GZMH, FGFBP2, PRF1) supports cytotoxic γδ T cells. Elevated γδ T-cell pathway scores and T-cell surface markers favor gdT over NK or MAIT cells."
+46491,L4_GCATTAGTCCGCAGTG,CD4 CTL,"gdT
+Cytotoxic γδ T-cell profile, supported by TRGC2, CD3D/E/G, TRAC/TRBC, and strong GNLY/NKG7/GZMH/FGFBP2/PRF1 expression. The high Vδ2 γδ and cytotoxic γδ pathway scores favor gdT over MAIT or NK, despite elevated CD4 protein."
+72485,E2L1_CTTAGGATCCCTCGAT,CD4 CTL,"gdT
+TRGC2 with CD3D/E/G and TRBC1 confirms γδ T-cell identity, while NKG7, FGFBP2, GNLY, granzymes, PRF1, and KLRD1 indicate a strongly cytotoxic phenotype. Despite elevated CD4/CD8 proteins and some MAIT pathway activity, the direct γδ T-cell gene evidence supports gdT."
+29493,L3_ATGATCGGTACGGATG,CD4 CTL,"gdT
+TRGC2 with CD3D/E/G and TRAC directly supports γδ T-cell identity, while GNLY, NKG7, GZMH, FGFBP2, and PRF1 indicate a cytotoxic phenotype. Vδ2 and cytotoxic γδ pathway scores further support gdT over MAIT, despite elevated KLRB1/IL7R and MAIT score."
+23636,L2_TAGGAGGAGCCGTTAT,CD4 CTL,"gdT
+TRGC2 with CD3D/E/G and TRAC/TRBC confirms a T-cell receptor lineage, while GNLY, NKG7, FGFBP2, GZMH, PRF1, and KLRG1 indicate strong cytotoxicity. The direct γδ T-cell marker TRGC2 and highest cytotoxic γδ pathway score support gdT over MAIT or NK cells."
+88737,E2L2_TCTCCGAGTTATCTTC,CD4 CTL,"gdT
+TRGC2 with CD3D/E/G and TRBC1 confirms γδ T-cell identity, while strong NKG7, FGFBP2, GNLY, granzymes, and PRF1 indicate a cytotoxic phenotype. Elevated Vδ2/Vδ1 and cytotoxic γδ-T pathway scores further support gdT over MAIT or NK cells."
+73554,E2L1_GCCAGGTTCGGCGATC,CD4 CTL,"gdT
+Strong TRGC1 expression with CD3/TRAC/TRBC confirms a γδ T-cell identity, while GNLY, NKG7, FGFBP2, GZMH, GZMB, and CCL5 indicate a cytotoxic phenotype. Although MAIT and NK programs are also elevated and surface markers are mixed, the direct γδ TCR evidence most strongly supports gdT."
+50068,L4_TCGATTTTCTAACGGT,CD4 CTL,"gdT
+TRGC2 with CD3D/E, TRAC, and a strong cytotoxic program (GNLY, NKG7, GZMH, PRF1, FGFBP2) supports a cytotoxic γδ T-cell identity. Although the MAIT pathway score and CD4 protein are elevated, canonical MAIT markers are not evident, while direct γδ TCR evidence is present."
+94883,E2L3_CGGACACAGCGAACTG,CD4 CTL,"CD8 TEM
+Cytotoxic T-cell markers (TRAC, CD3D/E, CD8A) alongside GNLY, NKG7, FGFBP2, GZMH, PRF1, KLRD1, CX3CR1, and KLRG1 indicate an effector-memory/ TEMRA-like CD8 T cell. Strong TCR/CD3 evidence argues against NK, while MAIT evidence is insufficient for MAIT classification."
+98838,E2L3_TACGCTCCATATCTGG,CD4 CTL,"gdT
+TRGC2 with CD3D/E/G confirms γδ T-cell identity, alongside strong cytotoxic/NK-like genes (NKG7, CCL5, GZMH, FGFBP2, KLRD1, GNLY). Vδ2 and cytotoxic γδ pathway scores further support gdT over MAIT, despite some MAIT-associated signaling and elevated CD4 protein."
+95481,E2L3_CTCCCTCTCCTGCTAC,CD4 CTL,"gdT
+TRGC2 with CD3/TRAC confirms γδ T-cell identity, while strong NKG7, GNLY, FGFBP2, granzymes, PRF1, CD57, and KLRG1 indicate a highly cytotoxic phenotype, most consistent with Vδ2-like cytotoxic γδ T cells rather than conventional MAIT or NK cells."
+63597,L5_TATCTTGTCCACACCT,CD4 CTL,"gdT
+TRGC1/2 and TRDC directly identify γδ T cells, with strong cytotoxic markers (GNLY, NKG7, GZMH, FGFBP2, PRF1, KLRD1). Elevated Vδ2 and cytotoxic γδ T-cell pathway scores support gdT over MAIT or NK."
+8370,L1_GGGACCTGTATGCTAC,CD4 CTL,"gdT
+TRGC2 with CD3D/E/G and TRBC2 confirms γδ T-cell identity, while GNLY, NKG7, GZMH, FGFBP2, KLRD1, and strong CD8 expression indicate a cytotoxic γδ subset. γδ T-cell pathway scores are highest, exceeding NK and MAIT scores."
+14642,L2_ACATTTCAGACTACCT,CD4 CTL,"CD4 CTL
+Strong CD3D/E, TRAC, and markedly elevated CD4 protein support a CD4 T-cell identity, while GNLY, NKG7, CCL5, GZMH, GZMM, and PRF1 indicate cytotoxic effector function. Cytotoxic CD4 and activated effector-memory CD4 pathway scores are high, with minimal NK program activity, favoring CD4 CTL over NK or CD8 CTL."
+17381,L2_CAGATACCAGAGATGC,CD4 CTL,"CD4 CTL  
+CD3/TRAC and strong CD4 protein support a T-cell identity, while GNLY, NKG7, CCL5, GZMH, FGFBP2, KLRG1, and EOMES indicate pronounced cytotoxic effector differentiation. The combined CD4 and cytotoxic programs best fit CD4 CTL rather than NK or conventional CD4 TEM."
+30724,L3_CATGGATTCGCTGTCT,CD4 CTL,"gdT
+Cytotoxic γδ T-cell profile supported by TRGC2 (stage evidence), CD3D/E, CD8A/B, GNLY, NKG7, GZMH, PRF1, KLRD1, and the highest Vδ2 γδ pathway score. MAIT-associated genes are present but less definitive."
+110253,E2L4_TAAGCCACAAAGTATG,CD4 CTL,"gdT
+TRGC2 with strong T-cell receptor genes and a potent cytotoxic program (NKG7, GNLY, GZMH, FGFBP2, PRF1, KLRD1) supports cytotoxic γδ T cells. Vδ2 and γδ pathway scores are highest, despite overlapping MAIT/NK features."
+118137,E2L5_CGGGTGTTCCCGAACG,CD4 CTL,"gdT
+Strong T-cell receptor expression with TRGC2, CD3D/E, TRAC, and cytotoxic genes (FGFBP2, GZMH, NKG7, CCL5) supports a cytotoxic γδ T-cell identity. TRGC2 and S1PR5 favor gdT over conventional CD8 TEM, MAIT, or NK cells."
+100629,E2L3_TGCTCCAGTCGTACTA,CD4 CTL,"CD4 CTL
+Strong CD3/TRBC T-cell signature with very high GNLY, NKG7, FGFBP2, GZMH, PRF1, and granzymes indicates cytotoxicity, while markedly elevated CD4 and IL7R support a CD4 cytotoxic T-cell identity over NK or CD8 CTL."
+62074,L5_GTCATCCTCGCGCCAA,CD4 CTL,"gdT
+TRGC2 with strong CD3/TRAC expression and a potent cytotoxic program (GNLY, NKG7, GZMH, FGFBP2, PRF1) supports γδ T-cell identity over NK. Elevated Vδ2 and cytotoxic γδ pathway scores further support gdT, despite overlapping MAIT-like features and CD4/CD8 protein expression."
+8316,L1_GGCTTTCGTCCTATAG,CD4 Naive,"CD4 Naive
+Strong IL7R, CCR7-associated naïve markers (LEF1, TCF7, MAL, LTB), CD27, CD4/CD3 proteins, and the highest pathway score for CD4 Naive support a resting naïve CD4 T-cell identity."
+152134,E2L8_ATCCTATCAGGCATGA,CD4 Naive,"CD4 Naive
+Strong CCR7, IL7R, TCF7, LEF1, SELL, LTB, MAL, and PIK3IP1 expression supports a naïve CD4⁺ T-cell identity. High CD4, CD3, CD27, and CD62P proteins reinforce this classification, while the CD4 Naive pathway score is highest. No substantial cytotoxic, regulatory, memory, or proliferation markers are evident."
+57355,L5_CCGAACGTCTCTCTTC,CD4 Naive,"CD4 Naive
+Strong CD4 protein expression and naïve T-cell markers (CCR7, IL7R, TCF7, LEF1, MAL, NOSIP, CD27) support a CD4 naïve phenotype. Elevated CD31 and CD62P are compatible with naïve/resting status; CD8a signal is insufficient to override the dominant CD4 evidence."
+35000,L3_GTCACTCTCCACCCTA,CD4 Naive,"CD4 Naive
+Strong CCR7, TCF7, LEF1, SELL-associated naive program, LRRN3, MAL, CD27, and high CD4 protein support naive CD4 T-cell identity. Despite elevated CD8a and comparable CD8-naive pathway score, the dominant CD4 expression and lack of cytotoxic/effector markers favor CD4 Naive."
+71572,E2L1_CGGAATTCATGGCACC,CD4 Naive,"CD4 Naive
+Strong IL7R, CCR7, TCF7, LEF1, LRRN3, MAL, BCL2, and CD4/CD3/CD27 expression support a quiescent naive CD4 T-cell identity, without cytotoxic or activation markers. Although CD8 Naive and CD4 TCM scores are also elevated, the gene and protein profile most strongly favors CD4 Naive."
+60524,L5_GCAGCTGTCTGGGATT,CD4 Naive,"CD4 Naive
+IL7R, CCR7, TCF7, LEF1, MAL, and FOXO1 define a naïve CD4 T-cell program, with strong CD4, CD3, CD27, and CD62P protein expression. The absence of cytotoxic, activation, regulatory, or proliferation markers supports CD4 Naive over memory or effector subtypes."
+62405,L5_GTGCTGGCAAAGCGTG,CD4 Naive,"CD4 Naive
+Naive CD4 T-cell identity is strongly supported by IL7R, CCR7, LEF1, TCF7, MAL, LRRN3, CD27, and CD4 protein, with no cytotoxic, regulatory, or proliferative markers. Although CD8a is modestly elevated and the CD8-naive score is relatively high, the dominant transcriptional and protein evidence supports CD4 Naive."
+54506,L5_AGCTCAACATCGATAC,CD4 Naive,"CD4 Naive
+Naive CD4 T-cell identity is strongly supported by IL7R, CCR7, LEF1, TCF7, LRRN3, MAL, BCL2, and LTB, with high CD4, CD3, CD27, and CD45 protein. The CD8a signal and CD8 Naive pathway score likely reflect shared naive T-cell features; dominant CD4 expression and transcriptional markers favor CD4 Naive over CD8 Naive or CD4 TCM."
+148576,E2L7_TGGCGTGGTCTGTAGT,CD4 Naive,"CD4 Naive
+Strong IL7R, CCR7, LEF1, TCF7, MAL, LTB, and naïve-associated genes, together with high CD4, CD3, CD27, and CD93 protein expression, support a naïve CD4 T-cell identity. Absence of cytotoxic or effector markers argues against CD4 TEM/CTL, while the gene and pathway profile is more consistent with CD4 than CD8 naïve cells."
+62956,L5_TAACCAGTCGGCCCAA,CD4 Naive,"CD4 Naive
+Strong CD4 protein expression and naïve T-cell genes (IL7R, TCF7, LEF1, CD27, SATB1) support CD4 Naive identity. Despite elevated CD8a and a similar CD8-naïve pathway score, the transcriptional and protein evidence is more consistent with CD4 Naive than CD8 Naive."
+20684,L2_GAGTGTTTCAGGAACG,CD4 Naive,"CD4 Naive
+IL7R, CCR7, SELL, LEF1, TCF7, MAL, and LINC00861 strongly support a naïve CD4 T-cell identity, reinforced by high CD4, CD27, CD3, and CD62L/SELL-associated phenotype. Lack of cytotoxic, activation, or regulatory markers favors CD4 Naive over memory, Treg, or CD8 subtypes."
+123469,E2L5_TCGGGTGAGGTGCAGT,CD4 Naive,"CD4 Naive
+Strong CD4, CCR7, SELL, IL7R, TCF7, LEF1, MAL, and naïve-associated T-cell markers support a quiescent CD4 naïve phenotype. Elevated CD8a is insufficient to override the dominant CD4 transcriptional and protein evidence."
+61451,L5_GGGTATTAGGCAGGTT,CD4 Naive,"CD4 Naive
+Strong CD4 protein and IL7R, TCF7, LEF1, CCR7-associated naive T-cell program support CD4 Naive. Elevated CD8a is likely shared/ambient signal; CD4 Naive pathway activity and CD27 expression further support this assignment."
+152878,E2L8_CACAGGCGTAGGAGTC,CD4 Naive,"CD4 Naive
+Strong CCR7, TCF7, LEF1, IL7R, LTB, CD27, and CD4 expression with a naïve T-cell transcriptional program and no cytotoxic markers supports CD4 Naive. Surface CD4 and CD27 are strongly elevated, and the CD4 Naive pathway score is highest."
+118128,E2L5_CGGGTGTCAGGCCCTA,CD4 Naive,"CD4 Naive
+Naïve CD4 T-cell markers (CCR7, SELL, IL7R, LEF1, TCF7, MAL, LRRN3) are strongly expressed, with high CD4, CD3, and CD27 proteins. The naïve CD4 pathway score is highest, supporting the stage-1 annotation over CD4 TCM or CD8 Naive."
+36137,L3_TAGGAGGGTACGATTC,CD4 Naive,"CD4 Naive
+Strong IL7R, CCR7, LEF1, TCF7, SELL, MAL, and LTB expression, together with CD4, CD3, CD27, and CD28 proteins, supports a naïve CD4 T-cell identity. The absence of cytotoxic, activation, or regulatory markers and the highest CD4 Naive pathway score confirm the stage-1 annotation."
+77215,E2L1_TGCCGAGAGCTCACTA,CD4 Naive,"CD4 Naive
+Strong CCR7, TCF7, LEF1, IL7R, LRRN3, MAL, and CD27 expression, together with high CD4 and CD3 proteins, supports a conventional naïve CD4 T-cell phenotype. The elevated CD4 Naive pathway score and absence of effector, cytotoxic, regulatory, or proliferation markers further confirm the annotation."
+96705,E2L3_GCAGGCTAGGGTCACA,CD4 Naive,"CD4 Naive
+Naive CD4 T-cell markers (CCR7, TCF7, LEF1, IL7R, MAL, LTB) and strong CD4/CD3/CD27 protein expression support the stage-1 annotation. Low effector-memory and regulatory-T scores further confirm a quiescent naïve phenotype."
+63519,L5_TATCAGGCAGTGTACT,CD4 Naive,"CD4 Naive
+Strong CD4 T-cell identity (CD4, CD3D/E, TRAC, BCL11B) with a clear naïve program (CCR7, TCF7, IL7R, MAL, LTB), high CD27/CD31, and no cytotoxic or activation markers. Direct gene/protein evidence and pathway scores support CD4 Naive over CD8 Naive or memory subtypes."
+10697,L1_TCACGCTAGACCTTTG,CD4 Naive,"CD4 Naive
+Strong CD4 surface expression and canonical naïve T-cell genes (IL7R, TCF7, LRRN3, CD27, CD31) support CD4 naïve identity. Elevated CD8 proteins and CD8-naïve pathway score may reflect minor protein coexpression, but lack of cytotoxic genes and dominant CD4 evidence favor CD4 Naive."
+18435,L2_CCTCAGTGTCCCTAAA,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67, TOP2A, CENPF, CDK1, and other cell-cycle genes establish active proliferation. High CD4, CD3, CD28, and CD4-specific pathway scores support a proliferating CD4 T-cell identity, despite some elevated CD8a and activation markers."
+142020,E2L7_CCTCATGTCTATACTC,CD4 Proliferating,"CD8 Proliferating
+Strong cycling program (MKI67, TOP2A, STMN1, TYMS) co-occurs with highly elevated CD8a/CD8 proteins and cytotoxic markers (CCL5, NKG7, GZMH, GZMK), supporting a proliferating cytotoxic CD8 T-cell identity."
+143468,E2L7_CTTGATTGTAACAGTA,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67, TOP2A, STMN1, BIRC5, and mitotic gene expression indicates active proliferation. High CD4, CD3, CD28, CD27, and CD278 supports a proliferating CD4 T-cell identity over CD8, NK, or other lineages."
+15227,L2_AGACAAATCCATGAGT,CD4 Proliferating,"CD4 Proliferating
+Strong cell-cycle genes (MKI67, TOP2A, CENPF, TYMS, BIRC5) are accompanied by TRAC and elevated CD3/CD4 proteins. The dominant proliferating CD4 pathway score and lack of lineage-defining NK, B-cell, or myeloid markers support a proliferating CD4 T-cell identity. Elevated CD8a likely reflects activation or protein-level overlap rather than CD8 lineage."
+61550,L5_GGTAACTGTAACGATA,CD4 Proliferating,"CD4 Proliferating
+Strong cell-cycle gene expression (MKI67, TOP2A, STMN1, CENPF, CDK1) confirms active proliferation. High CD4, CD3, CD28, and the strongest proliferating-CD4 pathway score support proliferating CD4 T-cell identity, despite some elevated CD8a and activation markers."
+83385,E2L2_CGTTGGGAGAACAAGG,CD4 Proliferating,"CD4 Proliferating
+Strong cell-cycle activity (MKI67, TOP2A, TYMS, STMN1, RRM2, NUSAP1) is accompanied by strong CD4, CD3, CD28, and CD278 protein expression. The highest pathway score is specifically for proliferating CD4 T cells, supporting the stage-1 annotation."
+31491,L3_CGAAGTTTCTCGGTCT,CD4 Proliferating,"CD4 Proliferating
+Strong cell-cycle signatures (MKI67, TOP2A, STMN1, CDK1, BIRC5) identify active proliferation, while high CD4, CD3, CD28, CD27, and CD278 support a proliferating CD4 T-cell phenotype. CD8a is also present, but the markedly stronger CD4 protein and pathway score favor CD4 Proliferating over CD8 or NK proliferating cells."
+125031,E2L5_TTCTTCCAGTCGGGAT,CD4 Proliferating,"CD4 Proliferating
+Strong T-cell and CD4 protein evidence (TRAC, CD3D, CD4, CD28, CD27, ICOS/CD278) combined with a pronounced cell-cycle program (MKI67, TOP2A, CENPF, ASPM, CDK1) supports proliferating CD4 T cells. No evidence suggests NK, CD8, or doublet identity."
+27871,L3_ACCGTTCCACATATGC,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67/TOP2A-associated cell-cycle expression and high CD4, CD3, CD28, and CD27 support an actively proliferating CD4 T cell. Despite some elevated CD8a and platelet-associated proteins, the dominant transcriptomic and pathway evidence clearly favors CD4 proliferation."
+41817,L4_ATCGGATTCTTGGTGA,CD4 Proliferating,"CD4 Proliferating
+Strong proliferation markers (MKI67, TOP2A, CENPF, TYMS, BIRC5) coexist with T-cell genes (TRAC) and highly elevated CD4 protein. CD27, CD28, and CD278 support an activated proliferating CD4 T-cell state, with the highest pathway score for proliferating CD4 T cells."
+63982,L5_TCAGTTTTCACCGGTG,CD4 Proliferating,"CD4 Proliferating
+Strong cell-cycle activity (MKI67, TOP2A, CENPF, CCNB1/2) co-occurs with CD3D/TRAC and highly elevated CD4, CD28, and CD3 proteins. The strongest pathway score is for proliferating CD4 T cells, supporting the stage-1 annotation."
+98160,E2L3_GTGAGCCTCCAAACCA,CD4 Proliferating,"CD4 Proliferating
+Strong T-cell markers (TRAC, CD3D) and very high proliferation genes (MKI67, TOP2A, CENPF, BIRC5, STMN1) support a cycling CD4 T-cell identity. Strong CD4 protein and the highest pathway score for proliferating CD4 T cells confirm the annotation."
+143949,E2L7_GAGCTGCCAATGCAGG,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67, TOP2A, CENPF, TYMS, ASPM, and other cell-cycle genes indicate active proliferation. CD4, CD3, CD28, and very high CD4 protein support proliferating CD4 T-cell identity, with the highest pathway score for proliferating CD4 T cells."
+23219,L2_TAACCAGAGCCTTTCC,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67, TOP2A, CENPF, CDK1, UBE2C, and other mitotic genes indicate active proliferation. CD4, CD3, CD28, and especially elevated CD4 protein support proliferating CD4 T-cell identity over proliferating CD8 or NK populations."
+81309,E2L2_ATTCTTGGTTTACTTC,CD4 Proliferating,"Doublet
+Strong monocyte markers (LYZ, S100A8/A9, FCN1, VCAN, CD14, LST1) co-occur with platelet proteins (CD62P, CD41, CLEC2), supporting a platelet–monocyte doublet rather than a pure monocyte or platelet."
+152364,E2L8_ATGGAGGTCAAGGCTT,CD4 Proliferating,"CD8 Proliferating
+Strong cycling signature (MKI67, TYMS, TOP2A, STMN1, BIRC5) alongside high CD8A/CD8B, CD27, CCL5, NKG7, GZMK, and GZMH supports a proliferating cytotoxic CD8 T-cell population. Surface CD8a/CD8 and the highest cycling-CD8 pathway score further confirm the annotation."
+26087,L2_TTACGCCGTTACCCTC,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67/TOP2A-driven mitotic program with prominent CD4, CD3, CD28, and CD4-specific pathway enrichment supports a proliferating CD4 T cell. CD8a and activation markers are compatible with activated cycling T cells, but do not outweigh the CD4 evidence."
+34301,L3_GGCGTCACAAATTGCC,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67/TOP2A/UBE2C and mitotic gene expression confirms active proliferation. High CD4, CD3, CD28, CD27, and CD4-specific pathway scoring support a proliferating CD4 T-cell rather than CD8, NK, or Treg."
+5818,L1_CTATCCGTCTCGCTTG,CD4 Proliferating,"CD4 Proliferating
+Strong cell-cycle/mitotic expression (MKI67, TOP2A, STMN1, ASPM, CENPF) confirms active proliferation, while high CD4, CD3, CD28, and CD278 supports an activated CD4 T-cell identity. The proliferating CD4 pathway score is highest."
+124201,E2L5_TGGAACTCAGGAGACT,CD4 Proliferating,"CD4 Proliferating
+Strong MKI67, TOP2A, CENPF, CDK1, and broad S-phase/mitotic programs establish active proliferation, while TRAC/CD3D and strongly elevated CD4 protein support CD4 T-cell identity. CD28, CD27, and CD278 further support an activated proliferating CD4 population."
+113375,E2L4_TTTCGATTCTATGTGG,CD4 TCM,"CD4 TCM
+Strong CD4 T-cell markers with IL7R, LTB, CD27, CD28, and CD127 support central memory identity. KLRB1, RORA, GPR183, CD69, and AREG indicate an activated memory/Th17-like state, while pathway scores favor CD4 TCM over TEM, Treg, or naive cells."
+138895,E2L7_ACTGATGGTCTCTCAC,CD4 TCM,"CD4 TEM
+IL7R, KLRB1, CCR6, CCL5, CD69, and PRDM1 support an activated effector-memory CD4 T-cell phenotype. Strong CD4 protein and absence of cytotoxic NK/MAIT markers favor CD4 TEM over CD8 TEM or MAIT, while the GZMK/Th17-like programs indicate an effector-memory subtype rather than naïve or central memory."
+52074,L4_TTGGGATAGTGGTCAG,CD4 TCM,"CD4 TCM
+Strong CD4 T-cell markers with IL7R, KLRB1, LTB, TCF7, CD27, and AQP3 support a conventional memory phenotype. The profile lacks cytotoxic or regulatory markers, while TCM and naïve programs are both active; IL7R/KLRB1 and the stage-1 evidence favor CD4 central memory over purely naïve CD4 T cells."
+62225,L5_GTCGTTCTCTGCCTGT,CD4 TCM,"CD4 TCM
+CD4 T-cell markers, high IL7R/CD127, LTB, MAL, CD27/CD28, and memory-associated KLRB1/RORA support a central-memory phenotype. CD4 TCM has a strong pathway score, while absent FOXP3, CTLA4, and IL2RA argues against Treg; activation markers do not outweigh the overall TCM profile."
+17821,L2_CATGGTAGTACTGCCG,CD4 TCM,"CD4 TCM  
+CD4 T-cell markers (CD3, CD4, CD27, CD28) and IL7R, LTB, AQP3, BCL2, and LEF1 support a central-memory phenotype. KLRB1/RORA indicate memory polarization, while lack of strong naïve, cytotoxic, or Treg markers argues against CD4 Naive, CD4 CTL, or Treg."
+2632,L1_ATCACTTTCCAAATGC,CD4 TCM,"CD4 TCM
+IL7R, TCF7, LTB, AQP3, CD27, CD28, and strong CD4/TCR protein expression support a CD4 central-memory phenotype. Naive and TCM programs are both high, but IL2RA, CD40LG, and GPR183 favor activated central memory rather than pure CD4 Naive; there is insufficient evidence for Treg or effector cytotoxic identity."
+40045,L4_ACCAACAGTACCCGCA,CD4 TCM,"CD4 Naive
+Strong IL7R, CCR7, TCF7, LEF1, MAL, CD27, CD4, and CD127 expression supports a naïve CD4 T-cell phenotype, with no cytotoxic or effector program. Naïve pathway activity is highest."
+37777,L3_TGCTGAAGTTTGGAGG,CD4 TCM,"CD4 TCM
+Strong IL7R, CCR7, TCF7, LEF1, CD27, and CD4 expression support a central-memory CD4 T-cell phenotype. CTLA4 and the elevated regulatory-T pathway score suggest some regulatory activation, but the absence of FOXP3, IL2RA, and other definitive Treg markers favors CD4 TCM over Treg."
+107841,E2L4_GAGGCAATCCACGGAC,CD4 TCM,"CD4 TCM
+IL7R, TCF7, LTB, MAL, BCL2, CD27, and strong CD4/CD3 expression support a quiescent central-memory CD4 T-cell phenotype, without cytotoxic or definitive Treg markers."
+129104,E2L6_CATCCCAGTACCGGCT,CD4 TCM,"CD4 Naive  
+Strong IL7R, TCF7, LEF1, LTB, CD4, CD27, and CD28 expression supports a quiescent naïve/early-memory CD4 phenotype. The higher CD4 Naive pathway score (+0.85) than CD4 TCM (+0.68), with no effector or cytotoxic markers, favors CD4 Naive."
+5267,L1_CGCCATTCACGACTAT,CD4 TCM,"CD4 TCM
+IL7R, CD4/CD3, CD127, LTB, and CD27 support a memory CD4 T-cell identity. KLRB1, RORA, CCR6, and IL7R indicate a mucosal/Th17-like memory phenotype, while absent cytotoxic markers and limited Treg evidence argue against CD4 CTL or Treg."
+154888,E2L8_CTCAGTCAGGTCCTGC,CD4 TCM,"CD4 TCM
+CD4+ T-cell markers with IL7R, TCF7, LEF1, LTB, CD27, and CD28 support a central-memory phenotype. CD69, CD40LG, ICOS, and GPR183 indicate some activation, favoring TCM over strictly naive CD4 T cells, with no evidence of cytotoxic or NK differentiation."
+159906,E2L8_TCTCACGTCTCAGAAC,CD4 TCM,"CD4 TEM  
+CD4⁺ IL7R⁺ effector-memory T cell, supported by CD69, PRDM1, CCR4, RORA, GATA3, and a strong Th17-like program. Although TCF7 and the CD4 TCM score suggest some memory features, the activated effector profile favors CD4 TEM."
+138453,E2L7_ACAGAAATCTCGGTCT,CD4 TCM,"CD4 TEM
+CD4⁺ effector-memory T cells are supported by high IL7R, KLRB1, GZMK, GZMA, RORA, and CD4 protein, with modest cytotoxic features (GNLY/CCL5/CD8a) consistent with a GZMK⁺/Th17-like TEM state rather than CD4 CTL or NK."
+26521,L2_TTGACCCGTCTTGAGT,CD4 TCM,"CD4 Naive
+Strong CD4, IL7R, TCF7, CD27, GPR183, and LINC00861 expression with robust CD3/TCR signaling supports a conventional naive CD4 T-cell phenotype. Absence of cytotoxic, proliferative, or regulatory markers favors CD4 Naive over TCM, despite the modestly elevated central-memory pathway score."
+35646,L3_GTTGTAGTCGTTCGCT,CD4 TCM,"CD4 TEM
+IL7R⁺ CD4 T-cell markers with KLRB1, RORA, CD69, and activated-memory features support a CD4 effector-memory phenotype. High CD127 and absence of canonical Treg markers such as FOXP3, IL2RA, CTLA4, and TIGIT argue against Treg; pathway scores also favor conventional CD4 memory over activated Treg."
+56402,L5_CACTGAACACCAGTTA,CD4 TCM,"CD4 TCM
+CD4 T-cell markers (CD4, CD3D/E, TRAC), IL7R, TCF7, LTB, CD27/CD28, and CD127 support a memory-helper phenotype. Strong CD73 and IL7R with TCM pathway dominance favor central memory over CD4 naïve, despite some naïve-like features."
+138550,E2L7_ACCACAATCCGTGACG,CD4 TCM,"CD4 Naive  
+Strong CCR7, TCF7, MAL, IL7R, LTB, CD27, and CD4 expression with no cytotoxic or activation program supports a naïve CD4 T-cell identity. The closely matched CD4 TCM score may reflect shared central-memory markers, but the overall profile favors CD4 Naive."
+10464,L1_TATCGCCGTACAGCGA,CD4 TCM,"CD4 TCM
+IL7R, KLRB1, RORA, CD69, and strong TCF7/LEF1 expression support an IL7R⁺ memory phenotype, while CD27, CD28, CD127, and CD4 proteins reinforce central-memory identity over naïve CD4 T cells."
+13487,L1_TTGTGTTAGTTTGTCG,CD4 TCM,"CD4 Naive
+Strong CD4 T-cell markers (CD3D/E, TRAC), naive-associated CCR7, SELL, TCF7, LEF1, IL7R, LTB, and CD27 support a quiescent naive phenotype. Strong CD4 protein expression and the highest pathway score for CD4 Naive further confirm this annotation over CD4 TCM or CD8 Naive."
+48533,L4_GTTGAACTCTCTAGGA,CD4 TEM,"CD4 TEM
+CD4⁺ T-cell identity is supported by CD4, CD3/TCR, CD2, and CD127 expression. IL7R, KLRB1, RORA, CCL5, and HOPX indicate an activated/effector-memory phenotype, while the CD4 TEM pathway score exceeds CD4 TCM. CD27 and LTB suggest memory differentiation but do not outweigh the stronger effector-memory evidence."
+28881,L3_AGGTAGGTCATGGTAC,CD4 TEM,"MAIT
+GZMK, KLRB1, CCR6, RORA, CCL5, NKG7, and strong CD3/CD26/CD127 support an IL7R⁺, resting/cytotoxic MAIT phenotype. Although CD4 protein is prominent and a gamma-delta program is moderately scored, the combined transcriptomic and pathway evidence most strongly favors MAIT over conventional CD4/CD8 T cells or gdT."
+75350,E2L1_TAACACGGTGCATTAC,CD4 TEM,"CD4 TEM
+IL7R, GZMK, CCL5, KLRB1, and GZMA support a CD4 effector-memory phenotype, with CD4/CD3 proteins confirming T-cell identity. TCF7 and CD27 indicate a relatively less differentiated memory state, but the strong GZMK/effector program favors CD4 TEM over CD4 TCM or naive CD4 T cells."
+123577,E2L5_TCTACCGGTTAGCTAC,CD4 TEM,"MAIT
+IL7R, KLRB1, IL18R1, RORA, DPP4, GZMK, and CD26 support an IL7R⁺ resting MAIT phenotype, with T-cell markers and MAIT pathway enrichment. High CD4 and TCF7 indicate a less cytotoxic, CD4-skewed MAIT state."
+75669,E2L1_TAGACCATCTGGACTA,CD4 TEM,"CD4 TEM
+CD3/CD4 T-cell markers with GZMK, CCL5, IL7R, and IFNG-AS1 support an activated effector-memory phenotype; TCF7 and CD27 indicate some central-memory features but do not outweigh the GZMK-high profile."
+64098,L5_TCATGTTGTGATTCTG,CD4 TEM,"CD4 TEM
+IL7R, KLRB1, GZMK, CCL5, KLRG1, and CD4/CD127 protein support an activated effector-memory CD4 T-cell identity. T-cell markers are strong, while TCF7 and CD27 indicate some memory characteristics. The Th17-like and GZMK+ CD4 effector-memory pathway scores further support CD4 TEM over CD4 TCM, Treg, MAIT, or CD8/NK subsets."
+150979,E2L8_ACTGTCCTCGACGCGT,CD4 TEM,"CD4 TEM
+CD4 T-cell identity with IL7R, CCL5, GZMA, KLRB1, CD69, CD40LG, and reduced naïve-associated features supports activated effector-memory CD4 T cells. GZMK/Th17-like pathway enrichment further supports CD4 TEM over TCM, despite some central-memory signal."
+42876,L4_CAGCAGCTCGGAGTAG,CD4 TEM,"MAIT
+T-cell markers (CD3D/E, TRAC) plus KLRB1, SLC4A10, RORA, GZMK, NKG7, and cytotoxic/MAIT pathway activity support MAIT identity. Strong CD4 and CD127 with IL7R indicate an IL7R-positive, relatively resting MAIT subset rather than conventional CD4 or CD8 T cells."
+6565,L1_CTTGATTAGGAAGTAG,CD4 TEM,"CD4 TCM
+IL7R, TCF7, LTB, CD27, and CD28 support a CD4 central-memory phenotype, with strong CD4 and T-cell surface protein expression. The CD4 TCM pathway score is high, while limited cytotoxic markers and only moderate regulatory/TEM scores argue against CD4 CTL, Treg, or CD4 TEM."
+47120,L4_GGGACAAAGGTAAACT,CD4 TEM,"CD4 TEM  
+CD4 T-cell markers (CD4, CD3D/E, TRAC), IL7R, KLRB1, RORA, CCL5, CD69, and CD44 support an activated effector-memory phenotype. Lack of strong naive/central-memory markers (CCR7, SELL) and positive Th17-like/GZMK+ TEM programs further support CD4 TEM over CD4 TCM or CD4 naive."
+20637,L2_GAGTCTACATTGTCGA,CD4 TEM,"CD4 TEM
+High IL7R, CD4, RORA, GZMK, CCL5, and CD69 support activated GZMK+ CD4 effector-memory T cells. Strong CD4/CD3 protein expression and limited cytotoxic markers argue against CD4 CTL, NK, or CD8 TEM."
+2169,L1_AGGTCATCAGATGCGA,CD4 TEM,"CD4 TEM
+Strong CD4 T-cell markers (CD3D/E, CD4, CD2) with IL7R, KLRB1, RORA, AQP3, CD69, and Th17-like pathway activity support an activated effector-memory phenotype. CD127 and CD73 are consistent with memory T cells, while absent Treg markers argue against Treg."
+26249,L2_TTCCAATAGTGTAGTA,CD4 TEM,"gdT
+TRGC2 and NCR3 provide direct γδ T-cell evidence, with CD3/TRAC confirming T-lineage. KLRB1, SLC4A10, GZMK, and the elevated MAIT score indicate a MAIT-like/Vδ2 γδ phenotype, but do not outweigh the explicit γδ TCR signal."
+156994,E2L8_GGCTTGGAGCGAATGC,CD4 TEM,"CD4 TEM
+CD3/CD4 T-cell markers with IL7R, KLRB1, CCR6, RORA, and strong Th17-like effector-memory signaling support a CD4 effector-memory phenotype; absence of Treg markers argues against Treg."
+161190,E2L8_TTCCAATCAGGAATCG,CD4 TEM,"CD4 TCM
+CD4 T-cell markers with strong IL7R, TCF7, LTB, RORA, CD27, and CD4 expression support central-memory identity; modest CCL5/KLRB1 suggests limited activation rather than effector differentiation."
+117839,E2L5_CGACAGCTCTCGGCTT,CD4 TEM,"CD4 TEM
+CD4⁺ effector-memory T cell, supported by strong CD4, IL7R, KLRB1, CCR6/RORA, CCL5, GZMK, CD69, and Th17/GZMK effector-memory programs. There is no compelling NK, MAIT, cytotoxic CD4 CTL, or doublet signature."
+54875,L5_AGTAACCGTTGAAGTA,CD4 TEM,"MAIT
+KLRB1, GZMK, NCR3, CD26, CD4/CD8 coexpression, and cytotoxic genes (GZMA, NKG7, CCL5) strongly support MAIT cells. The MAIT-specific and IL7R-associated pathway scores outweigh the moderate gamma-delta T-cell score."
+140981,E2L7_CACTGGGTCACGGGCT,CD4 TEM,"CD4 TEM
+CD4⁺ T-cell markers (CD4, CD3D/E, TRAC), IL7R, GZMK, CCL5, KLRB1, and GZMA support an activated effector-memory phenotype. TCF7/LEF1 suggest some memory characteristics, but the cytotoxic/effector program and strong GZMK⁺ CD4 TEM score favor CD4 TEM over CD4 TCM."
+113394,E2L4_TTTGATCTCACGAGGA,CD4 TEM,"MAIT
+IL7R, KLRB1, SLC4A10, CXCR6, KLRG1, GZMK, and RORA support an IL7R-positive MAIT profile, with T-cell receptor genes and moderate cytotoxicity. CD4 and CD8A co-expression is compatible with MAIT heterogeneity, while the dedicated MAIT pathway score is strongest."
+93013,E2L3_ATGCGATGTATGACAA,CD4 TEM,"CD4 TCM
+IL7R, LTB, TCF7, CD4, CD127, and CD27 support a memory CD4 T-cell identity with central-memory characteristics. The absence of cytotoxic, proliferative, or strong regulatory markers argues against CD4 CTL, proliferating CD4 T cells, and Treg. Although CD4 Naive scores slightly higher, KLRB1/RORA and the overall memory-associated profile favor CD4 TCM."
+59002,L5_CTGATCCAGACCGCCT,CD8 Naive,"CD8 TCM
+Strong CD8A/B, CCR7, IL7R, TCF7, CD27, and CD73 expression supports a CD8 central-memory phenotype with lymphoid-homing and limited cytotoxicity. Low NK and effector-memory pathway scores, along with absent strong cytotoxic markers, argue against NK, MAIT, or CD8 TEM classification."
+155704,E2L8_GACATCAGTATGGTAA,CD8 Naive,"CD4 Naive
+CCR7, TCF7, LEF1, IL7R, CD27, and CD73 indicate a quiescent naive phenotype, with CD4 protein and the strongest CD4 Naive pathway score. Although CD8A/CD8B are elevated, the overall profile lacks CD8 effector or memory features and is more consistent with CD4 Naive than CD4 TCM."
+15624,L2_AGGACTTCAAGAGATT,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7, IL7R, LEF1, TCF7, LRRN3, CD27, and CD31 expression supports a naïve CD8⁺ T-cell identity. Minimal cytotoxic programming and high CD8 Naive/central-memory pathway scores further confirm this annotation."
+124459,E2L5_TGTCCCACAATGCAGG,CD8 Naive,"CD8 TCM
+Strong CD8A/B, CCR7-associated naive/memory program (TCF7, LEF1, IL7R, LRRN3, CD27, LTB) and minimal cytotoxic signature support a central-memory CD8 T cell. The higher CD8 Central Memory pathway score than CD8 Naive, with CD8-specific protein expression, favors CD8 TCM over CD8 Naive."
+61245,L5_GGCTTGGAGGTTCAGG,CD8 Naive,"CD4 Naive
+Naive CD4 T cell is supported by strong CD4 protein, CCR7, IL7R, LEF1, MAL, LTB, CD27, BCL2, and GIMAP7 expression, along with CD31 and absence of activation or cytotoxicity markers. Elevated CD8a likely reflects nonspecific or low-level expression; CD4 evidence is more definitive."
+105415,E2L4_CATGCTCCATTGGATC,CD8 Naive,"CD8 Naive
+Strong CD8A/CD8B, CCR7, LEF1, TCF7, LRRN3, CD27, and IL7R expression with minimal cytotoxic programming supports a naïve CD8 T-cell. CD31/CD93 and the absence of effector markers further reinforce this assignment; the modestly higher CD8 TCM score does not outweigh the characteristic naïve transcriptional profile."
+62826,L5_GTTGCTCCAACTGAAA,CD8 Naive,"CD8 Naive
+Strong CD8A/CD8B expression with CCR7, TCF7, IL7R, LRRN3, CD27, and GIMAP7 supports a naive CD8⁺ T-cell phenotype. CD8-naive and central-memory pathway scores are high, while cytotoxic activity is absent. Surface CD8a, CD27, CD3, and CD45 support this assignment."
+48357,L4_GTGTGGCTCGCTTGCT,CD8 Naive,"CD8 TCM
+IL7R, CCR7, TCF7, LEF1, CD27, and LTB support a naïve/central-memory CD8 T-cell phenotype, with strong CD8A/CD8B and CD3 expression. Surface CD8a/CD8 and CD27, plus high CD8 naïve and central-memory pathway scores, confirm CD8 TCM over TEM, MAIT, or NK."
+14668,L2_ACCAACAAGGGAGAAT,CD8 Naive,"CD8 Naive
+Strong CD8A/CD8B, CCR7, IL7R, LEF1, TCF7, CD27, and CD3 expression supports a naive CD8⁺ T-cell identity without cytotoxic markers. CD8 Naive and CD8 Central Memory pathway scores are both high, but the naive markers and absence of effector genes favor CD8 Naive."
+36834,L3_TCCCATGCAGTATGAA,CD8 Naive,"CD8 Naive
+Naive CD8 T-cell markers (CD8A/B, CCR7, TCF7, LEF1, LRRN3, IL7R, and CD27) are prominent, with minimal cytotoxic programming. Although the CD8 central-memory score is slightly higher, the overall profile best matches CD8 Naive."
+9536,L1_GTGGTTAGTTCCGGTG,CD8 Naive,"CD8 TCM
+CCR7, IL7R, TCF7, LEF1, LTB, CD27, and CD73 support a quiescent central-memory phenotype, while GZMM suggests mild memory-associated effector potential. The stronger CD8 central-memory pathway score than naive score favors CD8 TCM over CD8 Naive."
+15869,L2_AGTAACCAGCAGCAGT,CD8 Naive,"CD8 Naive
+CD8A/B, CCR7, TCF7, LEF1, MAL, LRRN3, CD27, and strong CD8 protein support a naïve CD8⁺ T-cell identity. Lack of cytotoxic markers and high CD8-naïve/central-memory pathway scores favor CD8 Naive over effector or memory subtypes."
+9884,L1_TAACACGTCATTCGTT,CD8 Naive,"CD8 Naive
+Strong CD8A/B and T-cell receptor genes, with LEF1, TCF7, IL7R, LRRN3, MAL, CD27, CD31, and CD73 indicating a quiescent naive phenotype. Lack of cytotoxic markers supports CD8 Naive over CD8 TEM or MAIT; the central-memory score is close but does not outweigh the naive signature."
+69336,E2L1_ATCACTTGTCAATGGG,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7, TCF7, LEF1, IL7R, LRRN3, SELL-associated naïve markers, and CD27 support a naïve CD8 T-cell identity. Cytotoxic genes and proteins are absent, while CD8 Naive and CD8 Central Memory pathway scores are high. The profile is most consistent with CD8 Naive rather than effector or memory subtypes."
+38232,L3_TGTTGAGCACGACAAG,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7-associated naïve markers IL7R, LRRN3, LEF1, TCF7, and CD27, with minimal cytotoxic activity. Despite a moderately elevated CD8 central-memory score, the transcriptional and protein profile best supports CD8 naïve T cells."
+100314,E2L3_TGAATGCAGTTACGTC,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7, IL7R, TCF7, LEF1, LRRN3, CD27, and high CD8/CD27 protein expression support a quiescent naive CD8⁺ T-cell identity. Lack of cytotoxic markers and the negative cytotoxic pathway score argue against effector, MAIT, or NK phenotypes. The elevated CD8 central-memory score may reflect transitional features, but naive markers predominate."
+146255,E2L7_GTTCATTGTCTCAGAT,CD8 Naive,"CD8 Naive
+Strong CD8A/CD8B expression with CCR7, TCF7, LEF1, IL7R, LRRN3, and CD27 supports a naïve CD8⁺ T-cell identity. Cytotoxic markers are absent, and cytotoxic pathway activity is negligible. Although CD8 central-memory and CD4-naïve programs are also modestly elevated, the direct gene and protein profile most strongly supports CD8 Naive."
+89568,E2L2_TGTCCACCATCCGGCA,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7, IL7R, TCF7, LEF1, LTB, CD27, and MAL expression supports a quiescent naïve CD8⁺ T-cell state, with no cytotoxic program. Although the CD8 central-memory score is slightly higher, the overall gene and protein profile most closely matches CD8 Naive."
+152387,E2L8_ATGGGAGTCTCGTGAA,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7, TCF7, LEF1, IL7R, LRRN3, and CD27 expression with absent cytotoxic markers supports a naïve CD8 T-cell phenotype. Despite a high CD8 central-memory pathway score, the transcriptional profile most strongly indicates CD8 Naive."
+52729,L5_AACCTGAAGCTCTATG,CD8 Naive,"CD8 Naive
+Strong CD8A/B, CCR7, TCF7, LEF1, IL7R, CD27, and CD3 expression with absent cytotoxic markers supports a naive CD8 T-cell identity. High CD8a/CD8 surface protein and strong CD8 Naive/central-memory pathway scores further confirm this annotation."
+117114,E2L5_CATTGAGAGAGGTCAC,CD8 Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, GZMH, KLRD1-associated CD158 receptors, CD244) co-occur with robust S/G2M proliferation genes (MKI67, TOP2A, PCNA, TYMS, STMN1). CD8 expression is compatible with activated NK cells, while the pathway scores strongly support proliferating NK identity over conventional CD8 T cells."
+108368,E2L4_GCCAGGTTCTGTCGTC,CD8 Proliferating,"gdT
+TRGC2 and TRG-AS1 with CD3D/E/G and TRAC directly support γδ T-cell identity. Strong GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, and cytotoxic pathway activity indicate an activated NK-like cytotoxic γδ T-cell subtype."
+123541,E2L5_TCTAACTAGTGCACTT,CD8 Proliferating,"NK Proliferating
+Strong NK/cytotoxic markers (GNLY, NKG7, GZMB, GZMH, PRF1) co-occur with a robust proliferation program (MKI67, TOP2A, CENPF, ASPM, BIRC5). Despite elevated CD8, the gene and pathway evidence most strongly supports proliferating NK cells."
+83238,E2L2_CGGGTGTGTACTGTTG,CD8 Proliferating,"NK Proliferating
+Strong GNLY, NKG7, GZMB, GZMH, PRF1, and FGFBP2 support an NK cytotoxic program, while MKI67, TOP2A, CENPF, BIRC5, and STMN1 indicate active proliferation. Despite CD3/CD8 protein signals, the gene and pathway evidence most strongly supports proliferating NK cells."
+105471,E2L4_CATTCCGAGATGGCGT,CD8 Proliferating,"CD8 Proliferating
+Strong CD3D/CD3G, CD8A/CD8 protein, and cytotoxic genes (GNLY, NKG7, granzymes, PRF1) support a proliferating cytotoxic CD8 T cell rather than NK. High MKI67, STMN1, PCNA, TYMS, and related cycling programs confirm active proliferation."
+104479,E2L4_ATTACCTAGATACAGT,CD8 Proliferating,"NK Proliferating
+Strong GNLY, NKG7, GZMB/GZMH, CCL5 and extensive MKI67/TOP2A/STMN1 proliferation signatures support proliferating NK cells. Elevated CD8a is compatible with NK cells, while atypical platelet/T-cell protein signals likely reflect ambient contamination or a minor doublet component."
+144837,E2L7_GGAATCTAGGATTCCT,CD8 Proliferating,"CD8 Proliferating
+Strong cell-cycle activity (MKI67, TOP2A, TYMS, STMN1, CENPF) co-occurs with robust CD8 and cytotoxic markers (CD8A, GZMK, GZMA, NKG7, GZMH, CCL5). Very high CD8a/CD8 protein and the strongest pathway score for cycling CD8 T cells support the annotation."
+38307,L3_TTACCGCAGCCAGTAG,CD8 Proliferating,"CD4 Proliferating
+Strong CD3/TRAC/CD4 T-cell markers and high MKI67, PCLAF, STMN1, CENPF, PTTG1, and TROAP support active proliferation. Elevated CD4, CD28, CD3, IL7R, GATA3, and CXCR3 favor a proliferating CD4 population despite increased CD8a and overlapping proliferative T-cell programs."
+113094,E2L4_TTGAGTGAGACATAGT,CD8 Proliferating,"CD8 TEM
+Strong CD8A/B and CD3/TCR expression with cytotoxic effector genes (CCL5, NKG7, GZMK, GZMH, FGFBP2, KLRG1, EOMES) supports an effector-memory CD8 T cell. MAIT-like pathway activity is present, but defining MAIT markers are not evident."
+53200,L5_AATTCCTAGAACGCGT,CD8 Proliferating,"CD4 Proliferating
+Strong T-cell receptor genes (TRAC, CD3D), highly elevated CD4 protein, and robust proliferation markers (MKI67, TOP2A, PCLAF, STMN1, TYMS) support a proliferating CD4 T-cell identity. CD278, CD27, and CD28 indicate activation; elevated CD8a likely reflects activation rather than a CD8 lineage."
+129079,E2L6_CATAGACTCGGTCTGG,CD8 Proliferating,"CD8 Proliferating
+Strong cycling markers (MKI67, STMN1, TYMS, TOP2A, PCLAF) co-occur with CD8A/B, TRAC-associated T-cell features, CCL5, NKG7, and granzymes, supporting a proliferating cytotoxic CD8 T-cell identity. Surface CD8a/CD8 and the cycling CD8 pathway score further confirm this annotation."
+127272,E2L6_AGGCTGCAGAGTCAAT,CD8 Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, GZMH, CCL5) co-occur with extensive proliferation signatures (MKI67, TOP2A, TYMS, STMN1, BIRC5). High CD8a supports a cytotoxic lymphocyte phenotype, while the strong proliferating-NK pathway score favors NK Proliferating over cycling CD8 T cells."
+87884,E2L2_TCACGGGTCTTGCAGA,CD8 Proliferating,"gdT
+TRGC2 with CD3D/E/G confirms γδ T-cell identity, alongside strong cytotoxic markers (GNLY, NKG7, GZMB, PRF1, FGFBP2) and CD8/KLRD1 expression. Cytotoxic γδ and Vδ1 pathway scores are highest, supporting cytotoxic γδ T cells rather than conventional NK, MAIT, or αβ T cells."
+84666,E2L2_GAGGGTAGTTTGAAAG,CD8 Proliferating,"NK Proliferating
+Strong GNLY, NKG7, GZMB, GZMH, PRF1, FGFBP2, KLRD1, and KLRC1 support an NK identity, while MKI67, STMN1, PCLAF, BIRC5, PTTG1, and CENPF indicate active cycling. CD8a and limited CD3 expression can occur in activated NK cells, but the dominant cytotoxic NK program favors NK Proliferating over proliferating CD8 T cells."
+1209,L1_ACGTAGTGTAATTAGG,CD8 Proliferating,"CD8 Proliferating
+Strong cycling and cytotoxic programs (STMN1, MKI67/TYMS, GNLY, NKG7, GZMH/GZMB) support proliferating cytotoxic T cells. High CD3 and CD8 surface protein favor a T-cell identity over NK, despite the NK-like cytotoxic gene profile."
+62759,L5_GTTCGCTAGTACAGAT,CD8 Proliferating,"CD8 Proliferating
+Strong CD3/TRAC/CD8A/B expression establishes a CD8 T-cell identity, while MKI67, STMN1, CENPF, BIRC5, and PTTG1 indicate active proliferation. GNLY, NKG7, GZMB, PRF1, and cytotoxic pathways support an effector/cytotoxic state rather than NK identity."
+55993,L5_CAAAGAACACCCTATC,CD8 Proliferating,"CD8 Proliferating
+Strong CD8A/CD8B and CD8 protein expression, with CD3-associated cytotoxic genes (GZMK, GZMA, CCL5) and a dominant cycling program (MKI67, STMN1, TOP2A, BIRC5). NKG7/GNLY reflect activated cytotoxic differentiation, but the CD8 evidence outweighs the elevated CD4 signal."
+92170,E2L3_AGCTTCCCACAATGTC,CD8 Proliferating,"CD8 Proliferating
+Strong MKI67/TOP2A/CENPF cycling signatures co-occur with high CD8a/CD8 protein and T-cell-associated cytotoxic genes (CCL5, NKG7, GZMA, GZMK), supporting a proliferating cytotoxic CD8 T-cell identity rather than NK proliferating."
+28052,L3_ACGTCCTCATCCGTGG,CD8 Proliferating,"gdT
+TRDC, TRGC1/2, TRG-AS1, and CD3 genes directly establish γδ T-cell identity. Cytotoxic markers (CCL5, CTSW, NKG7), KLRD1/KLRC2, CD8a, and elevated γδ pathway scores support a cytotoxic, NK-like γδ T-cell phenotype."
+127301,E2L6_AGGGAGTTCCGAGTGC,CD8 Proliferating,"CD8 Proliferating
+Strong CD8A/CD8 protein, CD3 expression, cytotoxic genes (GNLY, CCL5, GZMB, PRF1, FGFBP2), and robust cycling markers (MKI67, STMN1, CENPF, BIRC5) support a proliferating cytotoxic CD8 T-cell. Despite some platelet-associated protein signals, the transcriptomic and pathway evidence most strongly indicates CD8 Proliferating."
+136750,E2L6_TGTGTGAAGCCATATC,CD8 TCM,"CD8 TEM
+CD8A/B, CCL5, IL7R, CTSW, KLRC1, and strong CD8a/CD8 protein support an activated CD8 effector-memory T cell. Limited TEMRA, NK, and MAIT pathway scores favor CD8 TEM over those alternatives."
+45490,L4_GAAATGACATATTCGG,CD8 TCM,"gdT
+TRGC2 with CD3D/E/G, TRAC, CD8A/B, KLRD1, KLRC1, CCL5, and XCL1 directly supports a cytotoxic γδ T-cell identity. Elevated Vδ1, Vδ2, and cytotoxic γδ pathway scores, along with strong CD8/CD103 protein expression, confirm gdT rather than MAIT or conventional CD8 T cells."
+19326,L2_CTATAGGGTTAGCGGA,CD8 TCM,"gdT
+TRGC2 with TRAC/TRBC1, CD3, CD8, KLRD1, NCR3, GNLY, and CCL5 supports an activated cytotoxic γδ T-cell identity. Strong Vδ2/Vδ1 and cytotoxic γδ pathway scores further confirm gdT over MAIT or conventional CD8 T-cell subsets."
+123428,E2L5_TCGCTTGGTTCTGAGT,CD8 TCM,"CD8 TEM
+CD8A/B, CCL5, GZMK, and IL7R support a CD8 effector-memory T-cell identity, with strong CD8 protein expression and a high CD8 TEM pathway score. TCF7 and IL7R suggest a less terminally differentiated memory state, while low NK and TEMRA scores argue against NK or CD8 TEMRA classification."
+39192,L4_AAAGGGCTCCTTATCA,CD8 TCM,"CD8 TEM
+Strong CD8A/B, CD3/TCR, GZMK, CCL5, GZMA/GZMM, and IL7R expression supports an effector-memory CD8 T-cell identity. High CD8a protein and the CD8 TEM pathway score further support this, while low NK and TEMRA scores argue against NK or terminally differentiated cytotoxic cells."
+76554,E2L1_TCGATTTAGGAAAGGT,CD8 TCM,"CD4 TCM
+IL7R, LTB, TCF7-associated phenotype, CD4/CD28/CD3 expression, and strong CD4 TCM pathway activity support a central-memory CD4 T cell. CD69 indicates mild activation, while lack of FOXP3, IL2RA, CTLA4, or other regulatory markers argues against Treg despite the moderately elevated Treg score."
+13245,L1_TTCTAGTTCGACATAC,CD8 TCM,"CD8 TCM  
+CD8 T-cell markers (CD8A/B, CD3D/E, TRAC) combine with IL7R, TCF7, BCL2, CD27, and GZMK, supporting a memory phenotype. CCL5 and GZMK indicate some effector-like activity, but absence of strong NK/MAIT markers and the elevated central-memory program favor CD8 central memory over CD8 TEM or MAIT."
+32084,L3_CTACCTGGTGCATGTT,CD8 TCM,"CD4 Naive
+Strong IL7R, CCR7, TCF7, LEF1, LTB, MAL, CD27, and CD4 expression support a naïve CD4 T-cell. Despite elevated CD8a and a comparable CD8-naïve pathway score, the transcriptional and protein evidence favors CD4 Naive over CD8 Naive."
+106623,E2L4_CTACATTCATAGTCAC,CD8 TCM,"MAIT
+IL7R, KLRB1, RORA, CD8, CD103, NKG7, and CCL5 support an activated/resting MAIT phenotype. Although TRGC2 suggests some γδ T-cell features, the overall MAIT pathway score and characteristic mucosal-associated markers favor MAIT over gdT."
+58793,L5_CTCCACATCTCGGTCT,CD8 TCM,"CD4 Naive
+Strong CD4, IL7R, TCF7, LEF1, MAL, LRRN3, BCL2, CD27, and CD28 expression supports a quiescent naive CD4 T-cell phenotype. Despite modest central/effector memory pathway scores and elevated CD8a, the overall transcriptional and protein profile is most consistent with CD4 Naive."
+127716,E2L6_ATAGAGAAGCCGTCGT,CD8 TCM,"CD4 TCM
+IL7R, TCF7, LEF1-associated genes, CD27, CD28, and strong CD4 expression support a quiescent central-memory CD4 T-cell phenotype. Although CD8A/CD8B are detectable, the lack of cytotoxic markers and low CD8 pathway score argue against CD8 or effector populations."
+34243,L3_GGATCTAAGCTGTTAC,CD8 TCM,"MAIT
+TRAC/TRBC1, CD8A/B, KLRB1, RORA, IL7R, KLRD1, and CD103 strongly support an IL7R+ MAIT phenotype. Although TRGC2 and γδ-T pathway activity suggest minor γδ features, conventional T-cell and MAIT programs predominate."
+152811,E2L8_CAATCGACACTCAAGT,CD8 TCM,"CD8 TEM
+CD8A/B, TRAC, CD3D/E, CCL5, GZMK, and CD8 protein strongly support an effector-memory CD8 T-cell phenotype. IL7R, TCF7, and LTB suggest a less terminally differentiated state, while limited NK/MAIT-specific evidence makes MAIT or NK classification less appropriate."
+159633,E2L8_TCGAAGTCATGATGCT,CD8 TCM,"CD8 TCM
+CD8 T-cell markers (CD8A/B, CD3D/E, TRAC), TCM-associated IL7R, TCF7, LEF1, LTB, MAL, CD27, and strong CD8 central-memory pathway activity support CD8 TCM. CCL5 indicates antigen experience but is insufficient for TEM classification given the dominant naïve/TCM program and lack of strong cytotoxic effector markers."
+24955,L2_TCTTCCTAGCCTCTTC,CD8 TCM,"CD4 TCM
+IL7R, TCF7, LEF1, LTB, CD27, and CD28 support a non-cytotoxic memory CD4 T-cell phenotype. Despite a strong CD4-naive pathway score, the IL7R-high profile and memory-associated CD73, CD49a, and GPR183 favor central memory over strictly naive CD4 T cells."
+145909,E2L7_GTGAGCCGTAGCTCGC,CD8 TCM,"CD4 TCM
+IL7R, TCF7, LTB, CD28, and absence of cytotoxic genes support a memory CD4 T-cell phenotype. CCR4/GATA3 and modest activation markers favor central memory over naïve cells, while TNFRSF4 is insufficient for Treg without FOXP3, IL2RA, or CTLA4. Coexpression of CD8A/B can occur in activated or atypical CD4 T cells."
+8032,L1_GCTGCAGGTTCTCACC,CD8 TCM,"gdT
+TRGC2 with CD3D/E, CD8A/B, CD96, and strong T-cell surface markers directly supports γδ T-cell identity. Elevated Vδ2/Vδ1 pathway scores further reinforce this, while CD103, KLRB1, IL7R, and RORA indicate an activated mucosal-like phenotype rather than conventional MAIT cells."
+125339,E2L5_TTTAGTCGTTAACCTG,CD8 TCM,"CD8 TCM
+IL7R, LTB, CD8A/B, CD27, and CD28 support a non-cytotoxic, memory CD8 T-cell phenotype. Strong CD8 protein expression and the highest pathway score for CD8 central memory, with minimal effector/NK signatures, confirm CD8 TCM over CD8 naïve or TEM."
+40463,L4_ACTGATGGTTCGATTG,CD8 TCM,"CD8 TCM
+IL7R, TCF7, LEF1, LTB, CD27, and strong CD8A/B with minimal cytotoxic genes support a naïve-like central-memory CD8 T-cell phenotype. Surface CD8 and CD27 are strongly elevated, while NK and effector-memory programs are low."
+29986,L3_CAAGCTAGTATCAGGG,CD8 TCM,"CD8 TCM
+IL7R, CCR7, TCF7, CD27, CD8A/B, and strong CD8 protein support a central-memory CD8 T-cell identity. GZMK and CCL5 indicate mild activation, while the MAIT score is secondary and lacks defining markers such as KLRB1 or SLC4A10."
+103904,E2L4_AGTGACTCAGGTATGG,CD8 TEM,"gdT
+Cytotoxic γδ T-cell profile: TRGC1/2 and TRG-AS1 with CD3D/E/G, alongside strong GNLY, NKG7, GZMB, FGFBP2, KLRD1, CD8, and CD57 expression. Although NK-associated programs are prominent, the γδ TCR genes and pathway scores support gdT over NK or MAIT."
+93285,E2L3_ATTTCACTCGCCGTGA,CD8 TEM,"gdT
+TRGC1, CD3D/E/G, TRAC, and strong cytotoxic genes (NKG7, GNLY, GZMH, FGFBP2, PRF1) support cytotoxic γδ T cells. Elevated CD8a/CD57 and γδ T-cell pathway scores further confirm gdT rather than NK or conventional CD8 T cells."
+140655,E2L7_CAACCTCCAGCTGAGA,CD8 TEM,"NK
+Strong CD56dim cytotoxic NK profile, marked by GNLY, NKG7, GZMB, GZMH, FGFBP2, PRF1, KLRD1, KLRF1, CD57, and CD158e1. NKG2C-associated pathway activity supports an adaptive NK phenotype, while limited CD3/TRBC expression is compatible with NK/T-like features but insufficient for T-cell classification."
+76840,E2L1_TCTGCCACACACCGAC,CD8 TEM,"gdT
+Strong TRGC2, CD3D/E, TRBC, and TRAC expression confirms γδ T-cell identity. High NKG7, GNLY, GZMH, GZMB, PRF1, KLRD1, and FGFBP2 indicates a mature cytotoxic phenotype, with strong CD8 and CD57 protein expression. Both Vδ2 and Vδ1 pathway scores support gdT over conventional NK or MAIT cells."
+159410,E2L8_TCCATGCCATACTGTG,CD8 TEM,"MAIT
+CD3⁺CD8⁺ cytotoxic T-cell profile with KLRB1, KLRD1, GZMK, NKG7, GNLY, and CCL5, supported by the highest Cytotoxic_MAIT pathway score. Although TRGC2 and FGFBP2 suggest some γδ/NK-like features, the overall evidence best supports MAIT cells."
+96144,E2L3_GACCGTGCATAATGAG,CD8 TEM,"gdT
+Strong TRGC2 and CD3D/E/G confirm γδ T-cell identity, with potent cytotoxic expression (GZMA, GZMH, FGFBP2, NKG7, PRF1, CCL5, CTSW) and elevated CD8, CD2, CD3, and CD244 proteins. Although MAIT/NK programs are also present, the TCR γδ marker and highest γδ pathway scores support gdT."
+36899,L3_TCCTCCCTCCTCTCGA,CD8 TEM,"gdT
+Cytotoxic γδ T-cell profile: TRGC2 with CD3D/E, TRBC2, and strong NK-like cytotoxic genes (GNLY, NKG7, KLRD1, GZMB, GZMH, FGFBP2, PRF1). High CD8 and CD57 support an effector γδ T-cell phenotype rather than conventional NK or MAIT cells."
+65910,L5_TGTGGCGCATTGCAAC,CD8 TEM,"CD8 TEM
+Strong CD8A/B, CD8 protein, CCL5, GZMK, IL7R, CD27, and TCF7 support a CD8 effector-memory phenotype with relatively non-terminal differentiation. The modest MAIT score lacks defining evidence, and CD4 protein signal is outweighed by the strong CD8 transcript and protein profile."
+124055,E2L5_TGCATGAAGCGTATAA,CD8 TEM,"gdT
+TRGC2 with CD3G/TRBC2 confirms γδ T-cell identity, while NKG7, GNLY, GZMB, FGFBP2, PRF1, and KLRD1 indicate a highly cytotoxic phenotype. The coherent γδ T-cell and cytotoxic program favors gdT over NK, MAIT, or doublet."
+90208,E2L2_TTGAGTGCAGTTTCGA,CD8 TEM,"gdT
+Strong TRDC with CD3D/CD3G confirms γδ T-cell identity, while GNLY, NKG7, GZMB, KLRD1, FCGR3A, and cytotoxic pathway scores indicate an NK-like cytotoxic γδ T-cell state. Surface CD3 and CD8 further support T-cell rather than conventional NK classification."
+146216,E2L7_GTTAGACGTGCCCTTT,CD8 TEM,"gdT
+TRGC1 with CD3D/E/G and TRAC confirms γδ T-cell identity, while strong NKG7, GNLY, FGFBP2, GZMB, PRF1, KLRD1, and CD8 expression indicates a cytotoxic effector phenotype. Pathway scores also strongly support Vδ2/cytotoxic γδ T cells over NK or MAIT cells."
+132413,E2L6_GCCAGGTCACTGTTCC,CD8 TEM,"gdT
+TRGC1 with CD3D/E, TRAC, and strong cytotoxic γδ T-cell markers (NKG7, GNLY, GZMH, FGFBP2, PRF1) supports a cytotoxic γδ T-cell identity. High CD8 and CD3 proteins, plus the strongest pathway scores for Vδ2 and cytotoxic γδ T cells, distinguish it from NK or MAIT cells."
+81605,E2L2_CACACAATCTGAGAGG,CD8 TEM,"gdT
+Strong TRGC2/TRG-AS1 and CD3D/E/TRAC expression confirms a γδ T-cell identity, with prominent cytotoxic/NK-like genes (GNLY, NKG7, GZMB, FGFBP2, KLRD1) and CD8/CD57 proteins. The profile is most consistent with cytotoxic Vδ2/Vδ1 γδ T cells rather than conventional NK or MAIT cells."
+116096,E2L5_ATTCACTTCCTCTTTC,CD8 TEM,"gdT
+Strong γδ T-cell identity is supported by TRGC2, CD3D/E/G, TRAC, and cytotoxic genes (GNLY, NKG7, GZMB, PRF1, CTSW). High CD8, KLRD1, KLRC2, CD57, and cytotoxic pathway scores indicate an activated cytotoxic γδ T-cell phenotype rather than conventional NK or MAIT cells."
+137289,E2L6_TTGAGTGAGGTGCGAT,CD8 TEM,"gdT
+TRDC, TRGC1/2, and CD3 genes directly identify γδ T cells, with strong cytotoxic markers (GNLY, NKG7, PRF1, GZMK), CD8 protein, and high Vδ2/Vδ1 γδ pathway scores. NK/MAIT features reflect cytotoxic γδ T-cell overlap rather than a separate NK or MAIT identity."
+8590,L1_GGGTTATTCTGGTCAA,CD8 TEM,"CD8 TCM
+CD8A/B, IL7R, TCF7, LEF1, CD27, and LTB support a central-memory CD8 T-cell phenotype. CCL5/GZMK indicate mild effector-memory activation, but the absence of defining MAIT markers favors CD8 TCM over MAIT or CD8 TEM."
+91900,E2L3_AGACACTCAAACAGGC,CD8 TEM,"gdT
+Strong γδ T-cell identity is supported by TRGC1/TRGC2, CD3D/E/G, and TRBC expression, with highly cytotoxic genes GNLY, NKG7, GZMB, PRF1, FGFBP2, and GZMH. CD8a, CD158e1, CD57, and elevated Vδ1/Vδ2 γδ-T pathway scores further support a cytotoxic γδ T-cell subtype rather than conventional NK or MAIT cells."
+144126,E2L7_GATCACACAAAGAGTT,CD8 TEM,"gdT
+Strong TRGC2, CD3D/E/G, TRAC, and highly active γδ-T programs support γδ T-cell identity. Cytotoxic markers (NKG7, GNLY, FGFBP2, granzymes, PRF1, KLRD1) indicate a cytotoxic γδ T subtype rather than conventional NK or MAIT cells."
+49199,L4_TATCGCCTCGACACCG,CD8 TEM,"gdT
+TRGC1/TRGC2 expression and strong CD3/CD8 γδ-T-cell markers support a cytotoxic γδ T-cell identity, with CCL5, NKG7, GZMK, GZMM, KLRG1, and EOMES indicating activation. Elevated γδ-T and cytotoxic pathway scores further confirm gdT over MAIT or conventional CD8 T-cell subtypes."
+133796,E2L6_GTCTTTACAATCCTAG,CD8 TEM,"MAIT  
+Cytotoxic CD8⁺ T-cell profile with TRAC/CD3D/E, CD8A/B, KLRD1, GNLY, GZMK, CCL5, and NKG7. The highest pathway score is MAIT, with strong CD8 TEM/TEMRA features, supporting a cytotoxic MAIT-like T-cell identity over conventional CD8 TEM."
+127172,E2L6_AGGAAATTCCGATGTA,Doublet,"Doublet
+Strong inflammatory CD14-monocyte transcription (IL1B, S100A8/A9, LYZ, FCN1, VCAN) co-occurs with highly elevated platelet proteins (CD41, CD62P, CLEC2), supporting a platelet–monocyte aggregate rather than a single cell type."
+79944,E2L2_AGACCCGTCGCTTGAA,Doublet,"Doublet
+Strong CD16-monocyte transcriptional identity (FCGR3A, LST1, TYROBP, MS4A7, C1Q genes) co-occurs with highly elevated platelet proteins (CD62P, CD41, CLEC2, CD31), supporting a platelet–monocyte doublet rather than a singlet CD16 Mono."
+122483,E2L5_TAGGTACAGCCTATTG,Doublet,"Platelet
+Strong platelet-specific transcripts (PPBP, PF4, TUBB1, GP9, ITGA2B) and highly elevated platelet proteins (CD41, CD61, CD42b, CLEC2, CD62P) clearly support a platelet identity. Myeloid markers likely reflect platelet–monocyte aggregation or ambient RNA, but platelet evidence dominates."
+101573,E2L3_TTGCTGCGTAATCAGA,Doublet,"Doublet
+Inflammatory CD14/VCAN monocyte genes (S100A8/A9, FCN1, CD14, LYZ) coexist with strong platelet markers (CD41, CD62P, CLEC2), supporting a platelet–monocyte doublet rather than a singlet."
+95626,E2L3_CTGCATCAGGCTCCCA,Doublet,"Doublet
+Strong FCGR3A/LST1/TYROBP/LYZ monocyte expression co-occurs with highly elevated platelet markers (CD41, CD62P, CLEC2, CD9), supporting a platelet–CD16 monocyte doublet or aggregate rather than a pure monocyte or platelet."
+114282,E2L5_ACCATTTTCGGCATAT,Doublet,"Doublet
+Strong platelet markers (PPBP, PF4, TUBB1, GP9, ITGA2B) and platelet proteins (CD41, CD42b, CD62P, CLEC2) coexist with a robust myeloid/monocyte program (FCN1, LYZ, LST1, TYROBP, HLA-DRA, FCGR3A). This combined signature supports a platelet–monocyte doublet rather than a singlet Platelet or Mono."
+144736,E2L7_GCTGAATGTTCGAAGG,Doublet,"Doublet
+Strong platelet markers and platelet ADTs coexist with extensive monocyte/myeloid expression (LST1, FCN1, TYROBP, MS4A7, HLA-DRA), consistent with a platelet–monocyte aggregate rather than a pure platelet."
+155361,E2L8_CTTAGGAGTAGAGGAA,Doublet,"CD14 Mono
+S100A8/A9/A12, LYZ, VCAN, FCN1, CD14, CSF3R, and inflammatory genes strongly support a classical/inflammatory CD14-positive monocyte. Platelet-associated proteins likely reflect ambient contamination rather than a platelet or doublet identity."
+14287,L2_AAGTCGTGTCGTATTG,Doublet,"Doublet
+Co-expression of strong platelet markers (PPBP, PF4, TUBB1; CD62P, CD41/CD61, CLEC2) with a robust inflammatory monocyte program (LYZ, LST1, S100A8/A9, FCN1, TYROBP, HLA-DRA) and the highest platelet–monocyte doublet pathway score confirms a platelet–monocyte doublet."
+88438,E2L2_TCGACGGTCAAACCCA,Doublet,"CD14 Mono
+S100A8/A9, LYZ, VCAN, FCN1, S100A12, CD14, CD64, CD11b, and CLEC12A strongly support an inflammatory classical CD14 monocyte. CD62P/CD41 and elevated CD35 likely reflect platelet adherence or ambient contamination, not a platelet identity."
+33223,L3_GAGAGGTGTATCACCA,Doublet,"Doublet
+Strong CD14/FCN1/S100A8/A9/LYZ monocyte expression co-occurs with highly elevated platelet proteins (CD41, CD62P, CLEC2), supporting a platelet–monocyte doublet rather than a pure CD14 Mono."
+128421,E2L6_CAAAGAAGTTGGGCCT,Doublet,"Doublet
+Co-expression of strong monocyte markers (AIF1, LST1, FCGR3A, TYROBP, CTSS) with platelet-specific proteins (CD62P, CD41, CLEC2, CD31) supports a platelet–CD16 monocyte doublet rather than a pure CD16 Mono or Platelet."
+128601,E2L6_CAATCGATCGATTCCC,Doublet,"Doublet
+Strong CD16-monocyte expression (FCGR3A, LST1, MS4A7, TYROBP, HLA-DRA) co-occurs with abundant platelet markers (PPBP, PF4) and highly elevated platelet proteins (CD41, CD61, CD62P, CLEC2). The platelet–monocyte doublet pathway is strongly positive, supporting the stage-1 annotation."
+19134,L2_CGTTAGAGTCTGCATA,Doublet,"CD14 Mono
+Strong inflammatory classical monocyte profile with LYZ, S100A8/A9, FCN1, VCAN, IL1B, CXCL8, CD14-associated myeloid proteins, and high inflammatory/classical CD14 pathway scores. Platelet-associated proteins likely reflect ambient contamination or minor platelet adherence."
+120178,E2L5_GCCCAGAAGACCAGAC,Doublet,"Platelet
+Strong platelet/megakaryocyte markers (PPBP, PF4, TUBB1, RGS18) and highly elevated CD41, CD61, CD42b, CLEC2, and CD62P confirm a platelet. Immune transcripts and aggregate pathway scores likely reflect ambient RNA or platelet–leukocyte interactions."
+92341,E2L3_AGGGTTTGTTCAGTAC,Doublet,"CD14 Mono
+S100A8/A9, S100A12, LYZ, VCAN, FCN1, CD14, and CD64 strongly support an inflammatory/classical CD14⁺ monocyte. Elevated CD11b, CLEC12A, TYROBP, and LST1 reinforce myeloid identity. Platelet-associated CD41/CD62P signals likely reflect platelet adhesion or ambient contamination rather than a platelet or doublet phenotype."
+121317,E2L5_GTCAAGTTCTCCCATG,Doublet,"Doublet
+Co-expression of CD16-monocyte markers (FCGR3A, LST1, MS4A7, TYROBP) and strong platelet markers/proteins (PPBP, PF4, CD41, CD61, CD62P, CD42b), with the highest platelet–monocyte doublet pathway score, supports a platelet–monocyte doublet."
+42687,L4_CACGTGGAGTCATCGT,Doublet,"CD4 Naive
+Strong CD4, CCR7, IL7R, TCF7, LEF1, MAL, CD27, and CD28 expression with high CD31 supports a naive CD4 T-cell phenotype. Absence of cytotoxic, effector, regulatory, or proliferation markers argues against CD4 TCM/TEM, CTL, and Treg; elevated CD8a and CD8-naive score likely reflect minor protein/background signal."
+141622,E2L7_CCACGTTCAAGTTTGC,Doublet,"CD14 Mono
+Strong S100A8/A9, LYZ, VCAN, FCN1, IL1B, S100A12, CD11b, CD93, and CLEC12A support an inflammatory classical CD14 monocyte. Elevated CD41/CD62P/CLEC2 likely reflects platelet binding or contamination rather than a true platelet identity."
+124007,E2L5_TGCAGATTCTCAGTCC,Doublet,"Doublet
+Strong monocyte/macrophage transcriptional markers (AIF1, FCGR3A, LST1, TYROBP, HLA-DRA) co-occur with pronounced platelet markers and proteins (PPBP, PF4, CD41, CD61, CD62P, CLEC2), supporting a platelet–monocyte doublet rather than a single canonical cell type."
+18588,L2_CCTTTGGTCTGGACCG,Eryth,"Doublet
+Strong erythroid markers (AHSP, ALAS2, SLC4A1, EPB42, GYPA/B, CA1; CD235ab/CD71) coexist with robust T-cell markers (CD3, CD8, CD4, IL7R; elevated CD3/CD8 proteins). The mixed erythrocyte–T-cell profile and high T-cell/NK doublet pathway score support a doublet rather than a single cell type."
+23815,L2_TATTGCTGTTAAACCC,Eryth,"Eryth
+Strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPA/B, EPB42, FECH) and markedly elevated CD71/CD235a, with high reticulocyte and erythroblast pathway scores, confirm an erythroid cell."
+145486,E2L7_GTAATCGTCAGACCGC,Eryth,"Eryth
+Strong erythroid genes (AHSP, ALAS2, SLC4A1, GYPA, EPB42, FECH) and high CD235ab/CD71 confirm an erythroid cell, with pathway scores supporting late erythroid/reticulocyte maturation. Despite some atypical surface signals, the platelet/megakaryocyte program is not active."
+57669,L5_CCTCCTCTCACCTTGC,Eryth,"Doublet
+Co-expression of strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPA/GYPB, CD235ab) and inflammatory CD14-monocyte markers (S100A8/A9/A12, LYZ, FCN1, CD14, TYROBP), with additional platelet-associated proteins, confirms a mixed erythroid–myeloid/platelet profile rather than a singlet."
+13294,L1_TTCTTGACAATAACGA,Eryth,"Eryth
+Strong erythroid gene markers (ALAS2, AHSP, CA1, SLC4A1, EPB42, GYPA-associated program) plus very high CD235ab/CD71 and strong reticulocyte/erythroblast pathway scores confirm an erythroid cell. Multiple lymphoid protein signals likely reflect ambient RNA/protein or technical contamination."
+39282,L4_AACAACCTCAACCCGG,Eryth,"Doublet
+Strong erythroid markers (AHSP, ALAS2, SLC4A1, EPB42, CD235ab) co-occur with T-cell markers and proteins (CD3, CD8, CD27). The simultaneous erythroid and T-cell programs, plus elevated T-cell/NK doublet pathway score, support an erythroid–T-cell doublet rather than a singlet subtype."
+12655,L1_TGTCCTGCAACTGCCG,Eryth,"Eryth
+Strong erythroid/reticulocyte profile: AHSP, ALAS2, SLC4A1, GYPA/B, EPB42, FECH, and HEMGN, with markedly elevated CD235ab and CD71. Erythroid pathway scores are strongly positive, while the platelet/megakaryocyte program is negative, confirming Eryth rather than Platelet or a doublet."
+151229,E2L8_AGAGCAGAGTTGTCGT,Eryth,"Doublet
+Strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPA, CD235ab) co-occur with inflammatory CD14-monocyte markers (S100A8/A9, LYZ, FCN1, CD14) and platelet proteins (CD41, CD62P), supporting an erythroid–myeloid/platelet doublet."
+33971,L3_GCGTGCAAGTAGGATT,Eryth,"Doublet
+Co-expression of strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPA/GYPB, EPB42; CD235ab/CD71) and T-cell markers (CD3, CD2, CD8, GZMK; CD3/CD8 proteins) supports an erythroid–T-cell doublet rather than a singlet."
+23918,L2_TCACAAGTCCTCATAT,Eryth,"Eryth
+Strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPA, GYPB, EPB42, FECH) and markedly elevated CD71/CD235a confirm an erythroid cell, with reticulocyte and erythroblast programs strongly enriched. Platelet-associated proteins likely reflect ambient contamination rather than a platelet identity."
+72294,E2L1_CTGATCCGTAGCGTCC,Eryth,"Eryth
+Strong erythroid markers (ALAS2, AHSP, SLC4A1, GYPA, EPB42, CA1) and very high CD235ab/CD71, with strong reticulocyte and erythroblast pathway scores, confirm an erythroid/reticulocyte identity. Platelet-associated proteins likely reflect ambient contamination or minor adherence."
+18386,L2_CCTATCGGTATCTCTT,Eryth,"Eryth
+Strong erythroid gene expression (AHSP, ALAS2, SLC4A1, GYPA, GYPB, EPB42, FECH) and very high CD71/CD235a confirm an erythroid cell. Reticulocyte, erythroblast, and mature erythrocyte programs are strongly active; platelet-associated signals are minor and likely contamination or multiplet noise."
+155480,E2L8_CTTTCAAAGGCACGAT,Eryth,"Eryth  
+Strong erythroid/reticulocyte profile, with ALAS2, AHSP, SLC4A1, GYPA/GYPB, CA1, EPB-related genes, and markedly elevated CD235ab and CD71. High reticulocyte and erythroblast pathway scores confirm an immature erythroid cell rather than platelet or leukocyte."
+124470,E2L5_TGTCCTGGTTGGAGAC,Eryth,"Doublet
+Co-expression of strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPB, CD235ab) and cytotoxic NK/T-cell markers (GNLY, NKG7, KLRD1, PRF1, GZMB, CD8) supports an erythroid–NK/T doublet."
+14599,L2_ACATCCCCAGCTGAGA,Eryth,"Doublet
+Strong erythroid markers (AHSP, ALAS2, SLC4A1, GYPC, EPB42) and CD71/CD235ab coexist with clear T-cell markers (CD3, CD8, CD4, CD27, CD45), supporting an erythroid–T-cell doublet rather than a single-cell subtype."
+39538,L4_AAGATAGTCGCGATCG,Eryth,"Doublet
+Co-expression of erythroid (AHSP, ALAS2, SLC4A1, GYPB, CD235ab), inflammatory CD14-monocyte (S100A8/A9/A12, LYZ, FCN1, VCAN), and platelet (CD41, CD62P) markers strongly supports a platelet–monocyte–erythroid mixed profile rather than a singlet."
+26043,L2_TTACAGGGTTCGGTAT,Eryth,"Doublet
+Strong erythroid (AHSP, ALAS2, SLC4A1, GYPA, EPB42; CD235ab/CD71), platelet (CD41/CD62P), and T-cell (CD4/CD8) signatures coexist, supporting an erythroid–platelet–lymphoid multiplet rather than a pure Eryth, Platelet, or T-cell subtype."
+30861,L3_CCACAAAAGAGGGCGA,Eryth,"Doublet
+Co-expression of erythroid markers (ALAS2, AHSP, SLC4A1, GYPC, CD235ab, CD71) and B-cell markers (MS4A1, CD79A, IGHM, CD19, CD72), along with a strong B-cell/monocyte doublet score, supports an erythroid–B-cell doublet rather than a singlet."
+52517,L5_AAAGGTACACGCGCTA,Eryth,"Doublet
+Co-expression of strong erythroid markers (AHSP, ALAS2, SLC4A1, CA1, CD71, CD235ab) and T-cell markers (TRBC2, TCF7, CD3, CD4, CD8a) indicates an erythroid–T-cell doublet."
+155438,E2L8_CTTCTCTAGTATAGGT,Eryth,"Eryth
+Strong erythroid transcriptional program (AHSP, ALAS2, SLC4A1, GYPA/GYPB, KLF1, EPB42) and highly elevated CD71/CD235ab, with robust reticulocyte and erythroblast pathway scores. Platelet-associated proteins likely reflect ambient RNA/protein or minor contamination; the negative platelet/megakaryocyte pathway score argues against Platelet."
+55605,L5_ATGCGATTCCAGTGCG,HSPC,"HSPC
+CD34/CD117, SOX4, SPINK2, IGLL1, MYB, GATA2, and high HSC/MPP pathway activity strongly support a hematopoietic stem/progenitor cell. MPO and STMN1 indicate early myeloid/proliferative priming, while platelet-associated proteins likely reflect ambient signal or minor megakaryocytic contamination."
+83461,E2L2_CTACCCACAGTTAGGG,HSPC,"HSPC
+CD34/CD117, SOX4, GATA2, MYB, MYCN, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor identity. CD41/CD62P, KLF1, SLC40A1, and PRSS57 suggest megakaryocyte–erythroid priming, while MS4A2, CPA3, TPSB2, and HPGDS indicate mast-cell–associated bias. No available label better captures this immature progenitor state."
+41436,L4_AGTCTCCAGCCACAAG,HSPC,"HSPC
+CD34/CD133/CD117, SPINK2, PRSS57, GATA2, SOX4, HOXA9, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor cell. The absence of coherent mature lymphoid or myeloid programs outweighs atypical surface signals."
+61719,L5_GGTTCTCGTTCCAGGC,HSPC,"HSPC
+Strong CD34/CD133, SOX4, MYB, GATA2, SPINK2, HOXA9, PRSS57, and high HSC/MPP pathway activity support a hematopoietic stem/progenitor cell. CD41/CD62P and mixed lymphoid markers likely reflect platelet/ambient signal rather than a distinct mature lineage."
+43714,L4_CCGGTGACACACAGCC,HSPC,"HSPC
+CD34, CD133, CD117, SOX4, MYB, SPINK2, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor population. CD71, CD62P, and megakaryocytic-associated signals suggest minor megakaryocytic priming or ambient platelet contribution, but do not outweigh the core HSPC profile."
+11418,L1_TCGGGACAGCTACGTT,HSPC,"HSPC
+CD34, PROM1/CD133, CD117, GATA2, MYB, SOX4, SPINK2, AVP, and EGFL7, together with the strong HSC/MPP pathway score, support a hematopoietic stem/progenitor cell. Surface CD34, CD117, and CD133 reinforce this identity; other lineage-associated proteins likely reflect minor noise or contamination."
+67052,L5_TTTGGAGGTGGTGATG,HSPC,"HSPC
+CD34, CD133, CD117, SPINK2, PRSS57, SOX4, DNTT, MPO, and strong HSC/MPP and LMPP pathway scores support an immature hematopoietic stem/progenitor population. CD71 and STMN1 indicate active proliferation, while the absence of mature lineage-defining markers argues against a differentiated PBMC subtype."
+49784,L4_TCCCACACATGCAGCC,HSPC,"HSPC
+CD34, CD117, CD133, SPINK2, SOX4, HOXA9, GATA2, and MYB, together with the very strong HSC/MPP pathway score, support a hematopoietic stem/progenitor cell. MS4A2, HDC, TPSB2, and PRSS57 suggest mast/immature myeloid priming, but no listed mast-cell category is available."
+13631,L1_TTTCAGTTCCATACTT,HSPC,"HSPC
+CD34, PROM1, CD117, GATA2, SPINK2, PRSS57, SOX4, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor cell. CD71, CD133, CD34, and CD31 protein expression further reinforce this annotation; lymphoid-associated surface signals likely reflect nonspecific or immature progenitor expression."
+44537,L4_CTAACTTGTTGTGGAG,HSPC,"HSPC
+Strong CD34/CD117, SOX4, GATA2, MYB, SPINK2, and HSC/MPP pathway activity support a hematopoietic stem/progenitor identity. CD71, CD235ab, ALAS2, AHSP, and KLF1 indicate prominent erythroid/MEP priming, but the cell remains more progenitor-like than mature erythroid."
+42109,L4_ATGTCTTCAGAAGCTG,HSPC,"HSPC
+CD34/CD133/CD117 positivity, along with SPINK2, SOX4, PRSS57, MPO, DNTT, and strong HSC/MPP and LMPP pathway scores, supports an immature hematopoietic stem/progenitor population. The profile lacks mature lineage-defining programs, so HSPC is the best available classification."
+38438,L3_TTCAATCTCGGTGTTA,HSPC,"HSPC
+CD34, CD133, CD117, SOX4, SPINK2, PRSS57, MYB, and GATA2, together with the strong HSC/MPP pathway score and CD71 expression, support a hematopoietic stem/progenitor identity. CD41/CD62P suggest megakaryocytic priming or platelet contamination rather than a mature platelet phenotype."
+53539,L5_ACCCTCAAGAGGCGTT,HSPC,"HSPC
+CD34/CD117/CD133, SOX4, GATA2, SPINK2, HEMGN, MYB, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor cell. Elevated CD71 and modest megakaryocyte–erythroid progenitor signaling suggest early differentiation, but not enough to reclassify it as a mature lineage."
+8644,L1_GGTAGAGCACACCAGC,HSPC,"HSPC
+CD34, PROM1/CD133, CD117, SPINK2, GATA2, SOX4, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor identity. Proliferation and CD71/CD31/CD41-associated signals suggest early differentiation, but not a mature lineage subtype."
+98640,E2L3_TAACGACAGCCTTTGA,HSPC,"HSPC
+CD34/CD133/CD117, SOX4, GATA2, MYB, SPINK2, PRSS57, and strong HSC/MPP pathway activity support an immature hematopoietic stem/progenitor population. Elevated CD71 and STMN1 indicate proliferative progenitor features."
+45808,L4_GACTTCCAGGGTGGGA,HSPC,"HSPC
+CD34, PROM1/CD133, CD117-associated progenitor markers, SPINK2, PRSS57, GATA2, SOX4, EGFL7, and strong HSC/MPP pathway activity support a hematopoietic stem/progenitor cell. CD71 and STMN1 indicate an immature or proliferative state; lymphoid-associated surface signals likely reflect early progenitor biology rather than mature T-cell identity."
+10570,L1_TCAAGACAGGCACTAG,HSPC,"HSPC
+CD34/CD133/CD117 positivity and strong SPINK2, PRSS57, SOX4, HOXA9, MYB, DNTT, and STMN1 expression support an immature hematopoietic stem/progenitor population. The dominant HSC/MPP pathway score, with additional LMPP features and lack of monocyte evidence, confirms HSPC."
+8477,L1_GGGCTCAGTCTGTAGT,HSPC,"HSPC
+CD34, PROM1/CD133, CD117, SOX4, SPINK2, PRSS57, MYB, BAALC, and MSI2 support a hematopoietic stem/progenitor population. Strong HSC/MPP pathway activity and immature/proliferative markers (CD71, STMN1) outweigh atypical lymphoid-associated surface signals."
+35883,L3_TACCCGTCAGTGGCTC,HSPC,"HSPC
+CD34, CD117, PROM1/CD133, SOX4, GATA2, MYB, SPINK2, and MSI2 strongly support a hematopoietic stem/progenitor identity. High HSC/MPP pathway activity and absence of lineage-specific programs further confirm HSPC, despite some nonspecific CD4/CD8 protein signals."
+123550,E2L5_TCTAACTTCCTCGCAT,HSPC,"HSPC
+Strong HSPC/early myeloid progenitor profile with CD34, CD117, CD38, SOX4, GATA2, MYB, ERG, MSI2, and high HSC_MPP scoring. Mast/basophil-associated genes indicate lineage priming, while CD41/CD71 suggest megakaryocyte-erythroid bias, but the immature progenitor program predominates."
+24812,L2_TCTACATTCCTGTTGC,ILC,"gdT
+TRDC/TRGC1, CD7, KLRB1, KIT, XCL1, and the strong cytotoxic γδ-T pathway score directly support a γδ T-cell identity, with Vδ1-like innate features."
+89000,E2L2_TGAGTCAGTCCTTAAG,ILC,"gdT
+TRDC/TRGC1, CD7, CTSW, XCL1/XCL2, and KLRB1 establish γδ T-cell identity. Cytotoxic γδ and NK pathway activity, alongside IL7R, GATA3, KIT/CD117, and IL18R1, supports an activated CD117⁺ γδ T-cell subset rather than MAIT or conventional T cells."
+86295,E2L2_GTAGTACCAAGTTCCA,ILC,"ILC
+Strong CD117, CD25, KIT, IL7R, GATA3, IL1R1, AREG, and ILC2/ILC3 pathway scores support an activated ILC, despite minor platelet-associated protein contamination and limited TRDC expression."
+160458,E2L8_TGCTGAATCATCTATC,ILC,"CD4 TCM
+CD4 T-cell identity is clear, with IL7R, TCF7-associated memory features, CD27/CD28, and strong CD4 protein expression. KLRB1, CCR6, RORA, DPP4, and HPGDS indicate a memory-helper/Th17-like phenotype rather than fully naive CD4 cells, supporting CD4 TCM."
+71477,E2L1_CGATGGCGTGTTGACT,ILC,"gdT
+TRDC, XCL1/XCL2, KLRB1, IL7R, IL18R1, and CD7 directly support γδ T-cell identity, with the highest pathway score for cytotoxic γδ T cells. Elevated CD117/KIT and Vδ1-associated features suggest an activated, likely Vδ1-like γδ T-cell state. Platelet-associated surface proteins are most consistent with ambient contamination or a minor doublet component."
+81719,E2L2_CACTAAGAGTTCAACC,ILC,"CD4 TEM
+CD4 T-cell identity is supported by CD3/TRBC1 and strong CD4 protein. IL7R, KLRB1, CCR6, RORA, GATA3, CD69, and the Th17-like effector-memory score indicate activated memory rather than naïve or central-memory cells."
+114471,E2L5_ACGTAGTTCCGACGGT,ILC,"gdT
+TRDC and TRGC1 directly confirm γδ T-cell identity. Elevated CD117, Integrin-7, KLRB1, IL7R, GATA3, and Vδ1/cytotoxic γδ pathway scores support an activated innate-like, Vδ1-biased γδ T-cell subtype rather than MAIT, NK, or conventional αβ T cells."
+101433,E2L3_TTCTAGTCAACCACGC,ILC,"gdT
+TRDC/TRGC1, CD7, CTSW, XCL1/XCL2, and strong cytotoxic γδ/Vδ1 pathway scores support an activated γδ T-cell identity. Elevated KIT, IL7R, KLRB1, IL18R1, CD69, and activation markers further fit gdT cells; atypical platelet/myeloid-associated surface signals may reflect ambient protein or minor contamination."
+129230,E2L6_CATGGTAAGTCGAAGC,ILC,"gdT
+TRDC and TRGC1 definitively support γδ T-cell identity, with CD7, CTSW, XCL1/2, KLRD1-associated cytotoxicity, and elevated γδ T-cell pathway scores. CD117, CD25, IL7R, KLRB1, and GATA3 indicate an activated, cytokine-responsive γδ T-cell state. Platelet/myeloid-associated proteins likely reflect contamination or adherence rather than a true platelet or myeloid identity."
+81942,E2L2_CAGTGCGGTATGAGCG,ILC,"ILC
+CD117/CD25, GATA3, IL7R, IL1R1, KIT, AREG, and strong ILC2/ILC3 pathway scores support an innate lymphoid cell. TRDC/TRGC1 and XCL1 likely reflect minor γδ T-cell contamination or technical signal."
+6012,L1_CTCCCAAAGAGTCGAC,ILC,"ILC
+GATA3, IL7R, KLRB1, IL1R1, AREG, CD117, and CD200R1, together with the strong ILC2 pathway score, support an activated ILC2 phenotype. Although TRDC and CD7 suggest some γδ T-cell signal, the lack of broader TCR-associated expression and dominant ILC2 program favor ILC."
+145306,E2L7_GGTCACGCAGTTGAAA,ILC,"CD4 TEM
+CD4+ memory T-cell markers (IL7R, KLRB1, RORA, DPP4, GATA3, CD69) and strong CD4/CD127 protein support an activated effector-memory phenotype. Th17-like and GZMK+ CD4 TEM programs further support this annotation, without sufficient FOXP3/TNFRSF4 evidence for Treg."
+104650,E2L4_ATTTCACTCTATCGTT,ILC,"gdT
+TRDC/TRGC1, CD7, CTSW, XCL1/XCL2, and the strongest pathway scores support a γδ T-cell identity, particularly Vδ1/cytotoxic γδ T cells. Elevated CD117, CD25, and activation markers indicate an activated state. Platelet-associated proteins likely reflect ambient RNA/protein contamination or a minor doublet component rather than a true platelet identity."
+71794,E2L1_CGTTAGACACACGTGC,ILC,"gdT
+TRDC, XCL1/XCL2, NCR3, CTSW, and CD7 strongly support γδ T-cell identity, with KLRB1, IL7R, KIT, and IL18R1 indicating an activated innate-like subset. Cytotoxic γδ T-cell and NK pathway scores further support gdT over MAIT, NK, or conventional T-cell subtypes."
+151971,E2L8_ATACCTTTCCTGTAAG,ILC,"gdT
+TRDC and TRGC1 directly confirm γδ T-cell identity, with CD7, CTSW, XCL1/XCL2, and cytotoxic γδ pathway activity providing additional support. KIT, KLRB1, IL18R1, and IL7R suggest an innate-like, activated γδ subset. Despite atypical CD4/CD8 and myeloid-associated protein signals, the coherent γδ T-cell receptor program is strongest."
+117758,E2L5_CCTGCATTCGTCGGGT,ILC,"CD4 TEM
+CD4+ memory T-cell profile with IL7R, KLRB1, CCR6, RORA, and GATA3, consistent with activated Th17-like effector memory. CD4 and T-cell proteins support this assignment, without sufficient FOXP3/IL2RA evidence for Treg."
+25281,L2_TGCACGGTCTGCATGA,ILC,"gdT
+TRDC and TRGC1 with CD7, CTSW, and IL32 directly support γδ T-cell identity. IL7R, KLRB1, GATA3, and activated markers (TNFRSF4, TNFRSF18, IL2RA/CD25) indicate an activated mucosal-like γδ T-cell phenotype."
+157008,E2L8_GGCTTGGTCAAGTAAG,ILC,"ILC
+Strong KIT, GATA3, IL7R, KLRB1, IL1R1, AREG, and DLL1 expression with high ILC2/ILC3 pathway scores supports an ILC, likely activated ILC2/ILC3-like. TRDC/TRGC1 and CTSW may reflect minor contamination or γδT-associated transcripts, but the dominant program lacks convincing canonical T-cell receptor markers."
+19161,L2_CGTTGGGCACATGGTT,ILC,"Treg
+TRBC1, strong CD4/CD25 expression, and TNFRSF4/TNFRSF18 (with IL2RA) support an activated regulatory CD4 T-cell identity. Although ILC2-associated genes are prominent, the T-cell receptor transcript and surface CD4 favor Treg over ILC."
+40100,L4_ACCCTCATCACCGGGT,ILC,"CD4 TEM
+CD4+ memory T-cell profile with IL7R, KLRB1, S100A4/IL32, CD4, CD3, CD127, CD27, and CD28. Th17-like and GZMK+ effector-memory programs support CD4 TEM; TNFRSF4/TNFRSF18 indicate activation, but absent FOXP3, IL2RA, and CTLA4 argue against Treg."
+19706,L2_CTGATCCCAACATCGT,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, RORA, GZMK, CD8a, and strong resting/cytotoxic MAIT pathway scores support MAIT identity. TRGC1 and the elevated gamma-delta program suggest an unconventional T-cell overlap, but the broader gene and protein profile is more consistent with MAIT than gdT."
+94593,E2L3_CCTCTCCAGCAGGCTA,MAIT,"gdT  
+Strong TRDC/TRGC1 expression and elevated Vδ2/Vδ1 γδ-T programs support γδ T-cell identity. KLRB1, NCR3, RORC, CCR6, IL18R1, and SLC4A10 indicate an innate-like, MAIT-like γδ phenotype rather than conventional MAIT cells."
+106770,E2L4_CTCAATTAGAAACTCA,MAIT,"gdT
+TRGC1 expression directly supports γδ T-cell identity, with Vδ2 pathway activity, CD3/TRBC expression, and cytotoxic markers (NKG7, GNLY, GZMK). MAIT-associated markers and pathway activity indicate an innate-like, MAIT-like phenotype, but the γδ T-cell receptor evidence is more specific."
+18049,L2_CCACTTGAGTACAGCG,MAIT,"MAIT
+Strong MAIT-associated markers (KLRB1, SLC4A10, GZMK, RORA, and GPR171) combine with CD8, cytotoxic genes (GNLY, NKG7, PRF1), and high Cytotoxic_MAIT/Resting_IL7R_plus_MAIT scores. TRGC1 and Gamma_Delta_T_Cell activity suggest some innate-like overlap, but the overall profile most appropriately fits MAIT rather than gdT or conventional CD8 T cells."
+29212,L3_ATCACAGGTTGTAGCT,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, IL18R1, RORA, GZMK, and CD8A strongly support a MAIT identity, with cytotoxic effector genes and elevated MAIT pathway scores. TRGC2 and the moderate gamma-delta program suggest some γδ-like features, but the overall profile is most consistent with MAIT rather than gdT or conventional CD8 T cells."
+61838,L5_GTACAACGTACTGCGC,MAIT,"MAIT
+T-cell markers, KLRB1, SLC4A10, ZBTB16, NCR3, GZMK, CXCR6, and cytotoxic genes strongly support MAIT identity. Although TRGC2 and a moderate Gamma_Delta_T_Cell score suggest some γδ-like features, the combined MAIT gene program and elevated resting/cytotoxic MAIT pathway scores favor MAIT over gdT."
+17078,L2_CAAGACTTCAAGAGTA,MAIT,"MAIT
+KLRB1, SLC4A10, RORA, NCR3, GZMK, and IL7R with CD3 and cytotoxic markers strongly support MAIT cells. Although TRGC2 and a moderate gamma-delta score suggest some overlap, the overall profile and strongest pathway scores favor MAIT over gdT."
+59130,L5_CTGGACGCAGTAACGG,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, CD26, IL7R, GZMK, and cytotoxic MAIT/IL7R pathway scores strongly support MAIT. TRGC2 and the elevated gamma-delta program suggest minor γδ-like features, but the overall profile is more consistent with MAIT than gdT."
+99686,E2L3_TCCCACAGTGAGTAGC,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, RORA, IL7R, GZMK, and CD8 support MAIT identity with cytotoxic activity. Although TRGC2 and the gamma-delta pathway score suggest some γδ-like features, the dominant marker and pathway profile is MAIT rather than conventional gdT."
+49141,L4_TATACCTGTAGATGTA,MAIT,"MAIT
+KLRB1, SLC4A10, IL18RAP, IL23R, NCR3, KLRG1, and GZMK strongly support MAIT identity, with CD3/TRAC confirming T-cell lineage. Cytotoxic and IL7R programs, alongside CD8a and CD127 protein expression, indicate an activated/resting IL7R⁺ MAIT phenotype rather than NK or conventional CD8 T cells."
+34476,L3_GGGCTACAGAGGGCGA,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, GZMK, RORA, IL7R, and cytotoxic genes strongly support MAIT cells. Although TRGC2 and the gamma-delta program suggest some overlap, the dominant MAIT pathway score and characteristic marker combination favor MAIT over gdT."
+39947,L4_ACAGAAATCCATGCAA,MAIT,"MAIT
+Strong MAIT profile with KLRB1, SLC4A10, NCR3, IL18RAP, GZMK, cytotoxic genes, and high CD26/CD8 expression. Despite some TRGC2 and gamma-delta pathway signal, the overall transcriptional and protein evidence best supports MAIT rather than gdT."
+70951,E2L1_CCCGGAATCGTGACTA,MAIT,"MAIT
+Strong MAIT signature with KLRB1, SLC4A10, RORA, NCR3, IL7R, CD8A, GZMK, and cytotoxic genes, supported by high Resting_IL7R_plus_MAIT and Cytotoxic_MAIT scores. TRGC2 and moderate gamma-delta signaling may reflect minor overlap, but the overall profile best fits MAIT rather than gdT."
+14428,L2_AATGGAATCCCAGTGG,MAIT,"MAIT
+KLRB1, SLC4A10, RORA, NCR3, GZMK, and cytotoxic genes support a CD8-like MAIT profile. Strong CD3/CD8 protein expression and elevated MAIT pathway scores outweigh the modest TRGC2 signal, which may reflect overlap with γδ T cells."
+149109,E2L7_TTCACCGTCCGCAAAT,MAIT,"MAIT
+KLRB1, NCR3, RORA, GZMK, IL7R, CD8, and cytotoxic markers strongly support MAIT cells. Although TRGC2 and the gamma-delta program suggest some innate-like T-cell features, the stronger MAIT pathway scores and characteristic gene profile favor MAIT over gdT."
+144073,E2L7_GAGTTACGTAATACCC,MAIT,"MAIT
+SLC4A10, KLRB1, RORC, CXCR6, KLRD1, and cytotoxic genes strongly support MAIT identity. Mixed CD4/CD8 protein expression and active resting/cytotoxic MAIT programs further reinforce this annotation over conventional CD8 T cells or gdT."
+34742,L3_GGTTCTCTCAACGAGG,MAIT,"MAIT
+KLRB1, SLC4A10, GZMK, RORA, IL7R, CD8A, and strong MAIT pathway activity support MAIT cells. Although TRGC1 and the gamma-delta score suggest some γδ-like features, the overall transcriptional and protein profile is more consistent with MAIT than gdT."
+42278,L4_ATTGGGTAGCGAGGAG,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, RORA/RORC, GZMK, and cytotoxic genes strongly support MAIT identity, with CD3/CD8 proteins confirming an activated T-cell phenotype."
+92254,E2L3_AGGCATTCAAGCGAAC,MAIT,"MAIT
+KLRB1, SLC4A10, NCR3, GZMK, CCR6, CD8, and strong CD26 support MAIT identity, with accompanying cytotoxic genes (NKG7, GZMA, PRF1). TRGC2 and the moderate gamma-delta program suggest some overlap but are insufficient for gdT classification."
+9197,L1_GTCCTCAGTGTTTACG,MAIT,"gdT
+TRGC2 (with TRGC1 noted) provides direct evidence of γδ T-cell receptor usage, supported by CD3D/E/G, NKG7, GZMK, CCL5, NCR3, and cytotoxic genes. Although the MAIT program is also strong and the phenotype is MAIT-like (KLRB1, SLC4A10, RORC), the explicit γδ TCR signal favors gdT."
+25377,L2_TGCGACGAGATTCGAA,NK,"gdT
+Strong TRDC/TRBC1 and CD247 expression supports γδ T-cell identity, with a highly cytotoxic NK-like program (GNLY, NKG7, FGFBP2, PRF1, GZMB, KLRD1, FCGR3A) and elevated γδ T-cell pathway scores."
+6614,L1_GAAACCTTCGCCAACG,NK,"NK
+Strong CD56dim cytotoxic NK profile with GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, FCGR3A, CD16, and CD244. Minor TRDC/KLRB1 expression does not outweigh the dominant NK receptor and cytotoxic program."
+25257,L2_TGATTTCAGTGAGGCT,NK,"NK
+Strong GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, FCGR3A, and TYROBP expression, together with CD16/CD244/CD158e1 proteins, defines a mature CD56dim cytotoxic NK profile. TRDC may indicate an NK-like γδ signature, but the dominant program and pathway scores support NK rather than gdT or T-cell subtypes."
+84815,E2L2_GATCATGGTAACGGTG,NK,"NK
+Strong CD56dim cytotoxic NK profile, with GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, FCGR3A/CD16, S1PR5, and high cytotoxic pathway activity. Surface CD16, CD8a, CD244, and killer immunoglobulin-like receptors further support mature NK identity rather than T-cell or CD56bright NK."
+96706,E2L3_GCAGGCTAGGTTGACG,NK,"NK
+Strong CD56dim cytotoxic NK profile with GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, KLRF1, FCGR3A, and high CD16/CD244. Although TRDC and KLRB1 are present, the dominant cytotoxic and receptor pattern supports NK rather than gdT, MAIT, or conventional T cells."
+80854,E2L2_ATCCGTCGTTGCAAGG,NK,"NK
+Mature CD56dim cytotoxic NK cell, supported by GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, KLRF1, FCGR3A/CD16, and a strong CD56dim NK pathway score. Despite some TRDC and CD8A expression, the dominant NK cytotoxic program and lack of conventional T-cell markers favor NK over gdT or CD8 T-cell subtypes."
+122322,E2L5_TACGGGCGTGACTAAA,NK,"NK
+Strong CD56dim cytotoxic NK profile: GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, FCGR3A, and CD16 are prominent, with high CD56dim NK pathway activity. Despite TRDC and adaptive NKG2C-associated signals, the absence of a clear T-cell receptor/CD3 program supports NK rather than MAIT or gdT."
+63159,L5_TACCCGTCAGCGCGTT,NK,"NK
+Strong CD56dim cytotoxic NK profile, with GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, KLRF1, FCGR3A/CD16, and CD244. Although TRDC is present, the dominant NK transcriptional, protein, and pathway signatures support conventional cytotoxic NK cells rather than gdT or MAIT cells."
+136872,E2L6_TTACAGGTCGAGAAGC,NK,"NK
+Strong mature cytotoxic NK profile: GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, KLRC2, FCGR3A/CD16, and CD57 are prominent. The adaptive NKG2C-positive and CD56dim cytotoxic NK programs support NK rather than T-cell, MAIT, or CD56bright NK annotation."
+82617,E2L2_CCGGGTACATGACAGG,NK,"gdT
+TRDC/TRGC1-associated T-cell identity with strong NK-like cytotoxic genes (GNLY, NKG7, GZMB, PRF1, FGFBP2), elevated CD16/CD8a, and high cytotoxic γδ/NK pathway scores supports an activated cytotoxic γδ T-cell phenotype over conventional NK or MAIT cells."
+19992,L2_CTTCCTTGTGCATGAG,NK,"NK
+Mature CD56dim cytotoxic NK cell, supported by GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, FCGR3A, S1PR5-related profile, and CD16/CD57/CD244 proteins. Although TRDC and KLRB1 are present, the dominant cytotoxic NK program and pathway scores clearly favor NK over gdT or CD8 T cells."
+87474,E2L2_TAGACTGAGTCTGTAC,NK,"NK
+Mature CD56dim cytotoxic NK cell, supported by GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, FCGR3A, S1PR5, and strong CD16/CD158b protein expression. Cytotoxic NK pathway activity predominates over CD56bright and T-cell programs."
+110134,E2L4_GTTGCTCCACACCAGC,NK,"NK
+Strong mature CD56dim cytotoxic NK profile, with high NKG7, GNLY, GZMB, FGFBP2, PRF1, KLRD1, FCGR3A/CD16, and CD158 receptors. Despite TRDC/TRBC1 expression, the dominant transcriptional, protein, and pathway evidence supports NK rather than gdT or cytotoxic T cells."
+117094,E2L5_CATTCCGCACTCTAGA,NK,"NK
+Mature CD56^dim/CD16^+ cytotoxic NK cell, supported by GNLY, NKG7, FGFBP2, PRF1, GZMB, KLRD1, KLRC2, FCGR3A, CD16, CD57, and strong adaptive NKG2C-positive NK pathway activity. Despite TRDC expression, the overall profile is overwhelmingly NK rather than γδ T or CD8 T."
+157111,E2L8_GGGATGAGTTGGGTTT,NK,"NK
+Strong CD56dim/adaptive NKG2C-positive NK profile, with GNLY, NKG7, GZMB, FGFBP2, PRF1, KLRD1, KLRC2, FCGR3A, CD16, and CD57. Despite TRDC expression, the dominant cytotoxic NK gene and protein signatures support NK rather than gdT or cytotoxic T-cell classification."
+84175,E2L2_CTTGATTAGTTGGACG,NK,"NK
+Mature CD56dim CD16⁺ cytotoxic NK cell, supported by GNLY, NKG7, GZMB, FGFBP2, PRF1, KLRD1, FCGR3A, KLRF1, and strong CD56dim NK pathway activity. TRDC may reflect an NK-like subset, but the dominant transcriptional and protein profile supports NK rather than gdT or CD8 T cells."
+59405,L5_CTTGAGAAGCAATAAC,NK,"NK
+Strong CD56dim cytotoxic NK profile, with GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, FCGR3A/CD16, CD244, and CD158e1. High CD56dim cytotoxic and adaptive NKG2C-positive NK pathway scores support conventional NK rather than T-cell, MAIT, or CD56bright NK identity."
+2631,L1_ATCACTTTCACGGGAA,NK,"NK
+Strong conventional cytotoxic NK profile, with GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, FCGR3A, NCR3, and S1PR5-associated features. Elevated CD16, CD244, and CD8A plus the dominant CD56dim cytotoxic NK pathway support NK rather than gdT, MAIT, or cytotoxic T-cell classification."
+103140,E2L4_ACTTCGCCAAGCGCAA,NK,"NK
+Mature CD56dim cytotoxic NK cell, supported by strong GNLY, NKG7, FGFBP2, PRF1, GZMB, KLRD1, FCGR3A, KLRC2, CD16, CD57, and KIR expression. Adaptive NKG2C-positive and cytotoxic NK pathway scores are high, with insufficient evidence for T-cell or NK-proliferative subtypes."
+143854,E2L7_GACTGATGTGTCTAAC,NK,"NK
+Strong CD56dim cytotoxic NK profile: GNLY, NKG7, FGFBP2, GZMB, PRF1, KLRD1, FCGR3A, KLRF1, and high CD16/CD57. NKG2C (KLRC2), CD158b, and adaptive-NK pathway activity support a mature adaptive NK phenotype rather than T, MAIT, or CD56bright NK cells."
+103051,E2L4_ACTCTCGAGGTTGAGC,NK Proliferating,"NK Proliferating
+Strong NK/cytotoxic genes (GNLY, NKG7, GZMB, GZMH, CCL5) and CD158e1 support NK identity, while MKI67, TOP2A, CENPF, TYMS, and BIRC5 indicate active proliferation. Elevated CD3/CD8 proteins may reflect activation or minor ambiguity but do not outweigh the dominant NK program."
+36977,L3_TCCTTTCTCGACTCCT,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, GZMB, NKG7, PRF1, FGFBP2, KLRD1) together with extensive cell-cycle genes (MKI67, PCNA, MCM4, TYMS, STMN1) and high proliferating-NK pathway activity support proliferating NK cells. CD16, CD158e1, CD8a, and CD244 further reinforce an activated cytotoxic NK phenotype."
+133540,E2L6_GTAGTACTCATTACGG,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, FGFBP2, GZMB, KLRD1, PRF1) coincide with robust cycling genes (MKI67, CENPF, ASPM, BIRC5, TOP2A) and elevated proliferating-NK pathway activity. Surface CD16, CD244, CD158e1, and CD8a further support an actively proliferating NK phenotype."
+20996,L2_GCACGGTAGAGCAGCT,NK Proliferating,"NK Proliferating
+Strong NK/cytotoxic markers (GNLY, NKG7, GZMB, FGFBP2, KLRF1, CD16) combined with robust cell-cycle genes (MKI67, TOP2A, STMN1, TYMS, BIRC5) support proliferating NK cells. TRDC and CD8a expression may reflect an activated/cytotoxic subset but do not outweigh the dominant NK program."
+1215,L1_ACGTCCTCAATCCTTT,NK Proliferating,"NK
+Strong CD56dim cytotoxic NK profile: GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, FCGR3A, and TYROBP are prominent, with high CD16 and CD158e1 protein expression. Although TRDC and CD8A are present, the dominant NK receptor and cytotoxic program supports conventional NK rather than gdT, MAIT, or cytotoxic T-cell classification."
+2389,L1_AGTGACTTCGCTGATA,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, KLRF1) co-occur with robust cell-cycle genes (STMN1, TYMS, PCNA, PCLAF, CHEK1, MCM-related programs). CD16, CD56, CD158e1, CD244, and high proliferating-NK pathway scores support a cycling cytotoxic NK-cell identity."
+106989,E2L4_CTCTCAGGTGACTGAG,NK Proliferating,"NK Proliferating
+Strong MKI67, TOP2A, STMN1, CENPF and other cell-cycle genes indicate active proliferation, while GNLY, NKG7, CCL5, GZMA, CD16, CD158e1, CD244, and CD57 support an NK cytotoxic phenotype rather than cycling T cells."
+3307,L1_ATTTCACTCACAAGGG,NK Proliferating,"NK Proliferating
+Strong NK/cytotoxic markers (GNLY, NKG7, KLRD1, FGFBP2, PRF1, GZMB) co-occur with extensive cell-cycle activity (MKI67, CENPF, TOP2A, ASPM, BIRC5). Elevated CD8a, CD244, CD314, and CD158e1 support NK identity; TRDC/TRGC1 indicates a minor γδ-like signature but does not outweigh the dominant proliferating NK program."
+144019,E2L7_GAGTCATAGGTTTGAA,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic and KIR/FCGR3A signature (GNLY, NKG7, GZMB, PRF1, KLRD1, FGFBP2) with clear cycling markers (CENPF, STMN1) and highest proliferating-NK pathway score."
+14442,L2_AATGGCTGTCAAAGTA,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, FGFBP2, PRF1, KLRD1, FCGR3A) coexist with clear cycling markers (STMN1, MYBL1, PCNA-associated program). Elevated CD16, CD244, CD158e1, and NK pathway scores further support a proliferating cytotoxic NK-cell identity."
+140004,E2L7_ATCATTCCAATGCAGG,NK Proliferating,"NK Proliferating
+Strong NK/cytotoxic markers (GNLY, NKG7, GZMB, XCL2, KLRD1-associated proteins) coexist with robust S/G2M proliferation genes (MKI67, TOP2A, CENPF, ASPM, CDK1). CD56, CD244, and KIR proteins further support NK identity."
+74399,E2L1_GTAACACCAACACGTT,NK Proliferating,"NK Proliferating
+Strong NK/cytotoxic markers (GNLY, NKG7, GZMB, FGFBP2, KLRD1, KLRF1, PRF1) co-occur with extensive cell-cycle genes (MKI67, TOP2A, TYMS, STMN1). Elevated CD16, CD244, and CD8a proteins further support a proliferating cytotoxic NK phenotype."
+104936,E2L4_CACGAATGTAGTCGTT,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, PRF1, KLRD1, FCGR3A, KLRF1) co-occur with pronounced proliferation signatures (MKI67, TOP2A, ASPM, CENPF, STMN1). CD16, CD158e1, CD244, and CD56 protein expression further support a proliferating cytotoxic NK-cell identity."
+22522,L2_GTCATTTTCTCATGCC,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, KLRD1, KLRF1, XCL1/2, PRF1, GZMB) and CD56/CD244 protein expression support NK identity. High STMN1, TYMS, PCLAF, PCNA, TOP2A-related cycling signatures confirm active proliferation. Although CD8a and CD4-1 proteins are elevated, the transcriptional and pathway evidence strongly favors proliferating NK cells over T-cell subtypes."
+126863,E2L6_AGACAGGCACATAGCT,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, PRF1) coexist with a pronounced cell-cycle program (MKI67, TOP2A, STMN1, CENPF, BIRC5). Elevated CD16, CD244, CD158e1, and CD43 further support a proliferating conventional NK-cell identity rather than proliferating T cells."
+156959,E2L8_GGCAGTCAGAATCGAT,NK Proliferating,"NK Proliferating
+Strong NK/cytotoxic markers (GNLY, NKG7, KLRD1-associated program, GZMB) alongside extensive cell-cycle genes (MKI67, TOP2A, CENPF, ASPM, BIRC5) and elevated CD158e1, CD244, CD56, and CD314 support a proliferating NK-cell subtype."
+159860,E2L8_TCTACCGAGCTCGACC,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, PRF1, FGFBP2, KLRD1, KLRF1) and elevated CD16/CD158e1 support NK identity, while MKI67, STMN1, TYMS, TOP2A-associated genes and high proliferating-NK pathway scores indicate active cycling. TRDC may reflect minor γδ-like features but does not outweigh the dominant proliferating NK profile."
+37388,L3_TGAATGCGTTGCATTG,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, KLRD1, FGFBP2, PRF1, GZMB) co-occur with robust proliferation markers (MKI67, CENPF, TYMS, STMN1, BIRC5-related cycling program). CD16, CD158e1, CD158b, and CD244 further support an activated NK phenotype."
+100010,E2L3_TCGGTCTGTCGCTCGA,NK Proliferating,"NK Proliferating
+Strong NK cytotoxic markers (GNLY, NKG7, GZMB, FGFBP2, PRF1, KLRD1) and elevated CD16/CD244/CD158b support NK identity, while MKI67, TOP2A, STMN1, TYMS, ASPM, and other cell-cycle genes confirm active proliferation."
+29638,L3_ATTACCTTCCATTGGA,NK Proliferating,"NK Proliferating
+Strong cell-cycle activity (MKI67, TOP2A, STMN1, UBE2C) co-occurs with NK cytotoxic genes (GNLY, NKG7, GZMB, PRF1) and NK-associated proteins (CD16, CD158b/e1, CD244). The very high proliferating-NK pathway score supports a cycling NK-cell identity over cycling T-cell alternatives."
+21188,L2_GCCAGCATCGAGCCAC,NK_CD56bright,"gdT
+TRDC and MATK with strong CD3-associated cytotoxic γδ T-cell markers support γδ T-cell identity. GNLY, NKG7, KLRD1, XCL1/2, granzymes, and CD56 indicate an NK-like cytotoxic phenotype, but the γδ T-cell signature and pathway scores favor gdT over conventional NK or MAIT cells."
+127381,E2L6_AGGTAGGAGTGCACCC,NK_CD56bright,"NK
+Strong conventional NK signature with GNLY, NKG7, KLRD1, KLRF1, FCER1G, TYROBP, PRF1, GZMB, and GZMH, plus CD16 and CD56 protein expression. Although GZMK, KLRB1, and cytokine-program scoring suggest some CD56bright-like features, the overall cytotoxic and CD16-positive profile supports NK rather than NK_CD56bright."
+92257,E2L3_AGGCATTGTGAACGGT,NK_CD56bright,"NK_CD56bright
+Strong NK-cell markers (GNLY, NKG7, KLRD1, KLRC1, XCL1/2, NCAM1) and very high CD56 protein support NK identity. The elevated NK_CD56bright program, IL7R, GZMK, AREG, and CD56 expression favor the CD56-bright activated subset over CD56-dim NK, despite some cytotoxic and CD8-associated markers."
+133682,E2L6_GTCCCATAGCCGGATA,NK_CD56bright,"NK_CD56bright
+Strong CD56bright NK signature: KLRD1, KLRC1, IL7R, GZMK, XCL1/2, GATA3, AREG, and IL18RAP, with coherent NK markers (GNLY, NKG7, NCAM1, CD244). The dominant NK_CD56bright pathway score and absence of a conventional T-cell program support the stage-1 annotation."
+135600,E2L6_TCGATTTCACCTAAAC,NK_CD56bright,"NK_CD56bright
+Strong CD56bright NK evidence: high CD56, XCL1/2, GZMK, IL7R, IL18R1, KLRB1, and the highest pathway score for cytokine-producing CD56bright NK. Cytotoxic genes are present, but the absence of a strong FCGR3A/FGFBP2 CD56dim signature supports the CD56bright subtype."
+148264,E2L7_TGATGGTTCACGGTCG,NK_CD56bright,"gdT
+TRDC expression with strong γδ T-cell and cytotoxic/NK-like programs, including GNLY, NKG7, KLRD1, KLRF1, XCL1/2, GZMB, and PRF1, confirms a cytotoxic γδ T-cell identity. CD8a/CD56 and elevated Vδ1/Vδ2 scores further support gdT over conventional NK or MAIT cells."
+19277,L2_CTACTATGTGATCATC,NK_CD56bright,"gdT
+TRDC with cytotoxic γδ T-cell markers (GNLY, NKG7, XCL1/2, KLRD1, PRF1) supports an NK-like γδ T-cell identity. Elevated CD56 and NK pathway activity reflect its cytotoxic phenotype, while TRDC and the γδ T-cell program distinguish it from conventional NK cells."
+85491,E2L2_GGAACCCGTTCTCCCA,NK_CD56bright,"gdT
+TRDC, TRGC1-associated γδ T-cell evidence, cytotoxic genes (GNLY, NKG7, CTSW, PRF1), and elevated cytotoxic/Vδ1 pathway scores support a cytotoxic γδ T-cell identity over conventional NK or MAIT cells."
+125101,E2L5_TTGAGTGCAGAAATTG,NK_CD56bright,"NK_CD56bright
+Strong NK identity (KLRD1, KLRC1, NCAM1, NKG7, XCL1/2, GNLY) with CD56, while IL7R, KLRB1, IL18R1, GZMK, and the dominant CD56bright pathway support the CD56bright subtype over CD56dim NK, MAIT, or γδ T cells."
+35841,L3_TACAGGTGTAGTTACC,NK_CD56bright,"gdT
+TRDC/TRGC1 with strong NK-like cytotoxic genes (GNLY, NKG7, KLRD1, XCL1/2, PRF1) and elevated CD244/CD56 support an NK-like cytotoxic γδ T-cell identity. Despite CD4/CD8 protein signals, the γδ TCR evidence is decisive."
+117572,E2L5_CCGTGAGGTGTGGTCC,NK_CD56bright,"NK_CD56bright
+Strong NK lineage is supported by KLRD1, KLRC1, NCAM1, NKG7, GNLY, XCL1/XCL2, and elevated CD56. GZMK, IL7R, KLRB1, CD117, and the dominant NK_CD56bright pathway score favor CD56bright NK cells, despite some TRDC expression and moderate cytotoxic features."
+112086,E2L4_TGCAGGCAGAAGCCTG,NK_CD56bright,"NK_CD56bright
+Strong NK identity with GNLY, NKG7, KLRD1, XCL1/2, GZMK, and CD56 expression. The higher CD56bright cytokine-producing NK pathway score, with limited CD56dim-associated FCGR3A evidence, supports the CD56bright NK subtype."
+135164,E2L6_TCAGTTTAGTACTCGT,NK_CD56bright,"NK_CD56bright
+Strong NK markers (GNLY, NKG7, KLRC1, KLRD1, XCL1/2) plus GZMK, IL7R, and the highest pathway score for NK_CD56bright support this annotation. Limited cytotoxic effector evidence relative to CD56dim NK favors the bright subtype."
+95907,E2L3_CTTTCAATCGAGTGAG,NK_CD56bright,"NK_CD56bright
+High CD56, CD117, KLRC1, IL7R, GZMK, XCL1/XCL2, and TCF7-associated features support CD56-bright NK identity. Strong NK markers (KLRD1, NCAM1, NKG7, GNLY) and the highest pathway score for NK_CD56bright confirm the stage-1 annotation, despite some activated/dim-NK features."
+154549,E2L8_CGTGAATTCACTCTTA,NK_CD56bright,"NK_CD56bright
+Strong CD56, KLRC1, IL7R, GZMK, XCL1/XCL2, and IL18R support CD56-bright NK cells. Although GNLY, KLRF1, and TYROBP indicate some cytotoxic/CD56-dim features, the dominant pathway score and transcriptional profile favor NK_CD56bright."
+116682,E2L5_CAGATACAGATAGCAT,NK_CD56bright,"NK_CD56bright
+High CD56, XCL1/2, AREG, KLRC1, KLRB1, and GZMK expression, together with the strongest CD56bright cytokine-producing NK program, supports CD56bright NK cells despite substantial cytotoxic gene expression."
+18575,L2_CCTTGTGTCTTCGATT,NK_CD56bright,"gdT
+TRDC expression with strong cytotoxic/NK-receptor genes (GNLY, NKG7, KLRD1, KLRC1, PRF1) and elevated CD56/CD8 supports a cytotoxic γδ T-cell identity over conventional NK or MAIT cells. Pathway scores also favor cytotoxic γδ T cells and Vδ1 γδ T cells."
+130605,E2L6_CTAGACACAGGCGTTC,NK_CD56bright,"NK  
+Strong conventional cytotoxic NK profile with GNLY, NKG7, KLRD1, KLRF1, PRF1, GZMB, FCER1G, and TYROBP. Although CD56bright-associated programs and proteins are elevated, the robust cytotoxic signature favors NK over a strictly CD56bright subtype."
+5157,L1_CGAGTTAGTGTACAGG,NK_CD56bright,"gdT
+TRDC and MATK, together with strong Vδ1/Vδ2 γδ-T pathway scores, support a cytotoxic γδ T-cell identity despite prominent NK-like effector genes and proteins."
+83172,E2L2_CGGAGAACACGGATCC,NK_CD56bright,"NK_CD56bright
+Strong NK identity with GNLY, NKG7, KLRD1, KLRC1, XCL1/2, and CD335/CD56 expression. The dominant CD56bright cytokine-producing NK pathway, alongside AREG, KLRB1, IL18R1, and XCL1/2, supports the CD56bright subtype despite concurrent cytotoxic features."
+7430,L1_GATGCTATCCTGTACC,Plasmablast,"Plasmablast
+Strong immunoglobulin, JCHAIN, MZB1, TNFRSF17, XBP1/ER-folding, and plasma-cell programs, with elevated CD38, CD27, CD19, and CD71, confirm an antibody-secreting IgA/IgG plasmablast."
+154894,E2L8_CTCAGTCCAGACGATG,Plasmablast,"Plasmablast
+High immunoglobulin, JCHAIN, MZB1, TNFRSF17, DERL3, FKBP11, XBP1, and plasma-cell unfolded-protein-response markers strongly support an antibody-secreting plasmablast. Elevated CD27, CD38, CD19, and strong IgA/IgG plasmablast pathway scores further confirm this annotation."
+24314,L2_TCCATCGCATCGGAAG,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and endoplasmic-reticulum/plasma-cell programs (IGHA1, IGHG, JCHAIN, MZB1, SEC11C, DERL3, FKBP11, TNFRSF17, PRDM1-associated profile) identify an antibody-secreting plasmablast. Elevated CD38, CD27, CD19, and CD71, together with high IgG/IgA plasmablast pathway scores, support this annotation."
+114465,E2L5_ACGTAGTCAGGCTACC,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion (IGHA1/2, JCHAIN), plasma-cell machinery (MZB1, XBP1, DERL3, FKBP11), TNFRSF17, PRDM1, and markedly elevated CD38/CD27 confirm an IgA-skewed antibody-secreting plasmablast."
+10112,L1_TACCTCGCAAAGGCTG,Plasmablast,"Plasmablast
+Strong JCHAIN, MZB1, TNFRSF17, XBP1, ELL2, extensive immunoglobulin expression, and elevated CD38/CD27 with high plasma-cell and plasmablast pathway scores confirm an antibody-secreting plasmablast phenotype."
+57480,L5_CCGTGAGAGATGCTAA,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion (IGHA1, IGHG, JCHAIN) and plasma-cell genes (MZB1, TNFRSF17, XBP1, DERL3, SEC11C), with elevated CD38, CD27, CD19, and high plasma/IgA/IgG plasmablast pathway scores, confirm an IgA/IgG-secreting plasmablast."
+101868,E2L3_TTTGGAGCACCAGGTC,Plasmablast,"Plasmablast
+Strong immunoglobulin, JCHAIN, MZB1, XBP1, TNFRSF17, DERL3, FKBP11, and CD38 expression, together with high IgA/IgG plasmablast and plasma-cell pathway scores, confirms an antibody-secreting plasmablast."
+59073,L5_CTGCCTAGTGTTTACG,Plasmablast,"Plasmablast
+Strong IgA-secreting plasma-cell program: IGHA1/2, JCHAIN, MZB1, DERL3, TNFRSF17, PRDM1/XBP1-associated ER machinery, and high plasma-cell/IgA pathway scores. CD19, CD27, CD38, and CD71 protein expression further support an IgA plasmablast identity."
+70469,E2L1_CAGTTCCGTTATTCCT,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion (IGHA1, IGHG1/2, JCHAIN) and plasma-cell machinery (MZB1, TNFRSF17, XBP1, DERL3, FKBP11) support an antibody-secreting plasmablast. High CD38, CD27, CD19, and markedly elevated plasma-cell/IgA plasmablast pathway scores further confirm this annotation."
+14967,L2_ACTATCTGTTCGGCGT,Plasmablast,"Plasmablast
+Strong immunoglobulin, JCHAIN, MZB1, TNFRSF17, CD38, CD27, and plasma-cell pathways confirm an antibody-secreting plasmablast. High MKI67, TOP2A, CENPF, ASPM, and other cell-cycle genes indicate a proliferating plasmablast state. Surface CD19/CD38/CD27 and elevated CD71 further support this annotation."
+29294,L3_ATCCCTGAGGGCAGTT,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and plasma-cell machinery (IGHA/IGHG, JCHAIN, MZB1, TNFRSF17, DERL3, TXNDC5, SEC11C, PRDM1-associated program) identify an antibody-secreting plasmablast. Elevated CD38, CD27, CD19, CD71, and high IgG/IgA plasmablast pathway scores support this annotation."
+160550,E2L8_TGGATGTTCCACGTCT,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and plasma-cell differentiation programs (IGHG/IGHA, JCHAIN, MZB1, TNFRSF17, XBP1, PRDM1, DERL3, FKBP11) confirm an antibody-secreting plasmablast, with IgG-skewed expression."
+516,L1_AAGTACCGTGAGGAAA,Plasmablast,"Plasmablast
+Strong immunoglobulin-secretion and unfolded-protein-response programs (IGHA1, JCHAIN, MZB1, DERL3, XBP1, FKBP11), with TNFRSF17, CD38, CD27, and CD71 elevation, confirm an antibody-secreting plasmablast, particularly IgA-biased."
+79075,E2L2_AATGCCAAGTATCCTG,Plasmablast,"Plasmablast
+Strong immunoglobulin, JCHAIN, MZB1, TNFRSF17, XBP1/ER-folding, CD38, CD27, and CD19 expression, together with high IgG/IgA plasmablast and plasma-cell pathway scores, confirms an antibody-secreting plasmablast."
+127796,E2L6_ATCACTTTCCGTGGCA,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and plasma-cell programs—JCHAIN, MZB1, TNFRSF17, XBP1-associated ER machinery, and abundant IgA/IgG—support an antibody-secreting plasmablast. High CD38, CD19, and elevated plasmablast/plasma-cell pathway scores confirm the annotation."
+51658,L4_TTCAATCAGGCTTCCG,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and plasma-cell differentiation signatures—IGHA/IGHG, JCHAIN, MZB1, TNFRSF17, XBP1, IRF4, SEC11C, DERL3, and extensive ER machinery—confirm an antibody-secreting plasmablast. Elevated CD38, CD27, CD71, and CD19 proteins, together with very high IgG/IgA plasmablast pathway scores, support this annotation."
+26213,L2_TTCATGTAGGAAGAAC,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and plasma-cell differentiation markers (IGHA1/2, IGHG1, JCHAIN, MZB1, XBP1-associated ER machinery, PRDM1, TNFRSF17) support an IgA-dominant plasmablast. Elevated CD38, CD27, CD19, and CD71, plus highly active plasma-cell and IgA-plasmablast programs, confirm the annotation."
+46191,L4_GATGAGGTCTCGGTAA,Plasmablast,"Plasmablast
+Strong immunoglobulin, JCHAIN, MZB1, TNFRSF17, FKBP11, and plasma-cell unfolded-protein-response genes, together with elevated CD38/CD27/CD19 and robust IgA/IgG plasmablast pathway scores, confirm a proliferating antibody-secreting plasmablast."
+5296,L1_CGGAACCTCCGTGGGT,Plasmablast,"Plasmablast
+Strong IgA immunoglobulin, JCHAIN, MZB1, XBP1-associated ER machinery, TNFRSF17, DERL3, CD38, and CD19 expression, together with high plasma-cell and IgA-plasmablast pathway scores, confirms an IgA-secreting plasmablast."
+47256,L4_GGGCGTTCAAATACGA,Plasmablast,"Plasmablast
+Strong immunoglobulin secretion and plasma-cell differentiation signatures (IGHA1, IGHG1, JCHAIN, MZB1, DERL3, XBP1, TNFRSF17, PRDM1-associated program), with elevated CD38, CD27, CD71, and CD19 proteins. High IgA/IgG plasmablast and plasma-cell pathway scores confirm the annotation."
+125841,E2L6_AAGACTCTCAACGCTA,Platelet,"Platelet
+PPBP, PF4, GP9, TUBB1, ITGA2B, and platelet markers CD41/CD61/CD42b/CD62P, together with strong platelet and megakaryocyte pathway scores, definitively identify an activated platelet."
+55511,L5_ATGAGGGCAAACTCTG,Platelet,"CD4 Naive
+Strong IL7R, CCR7-associated naive/T-cell genes (TCF7, LEF1, LRRN3, MAL, LTB) and markedly elevated CD4, CD3, CD27, and CD28 support a naive CD4 T-cell identity. Although CD8a protein and the CD8-naive pathway score are elevated, the dominant CD4 protein signal and transcriptional profile favor CD4 Naive."
+107081,E2L4_CTGCAGGTCGGACTGC,Platelet,"CD8 Naive
+Naive T-cell transcriptional programs (CCR7, LEF1, TCF7, LRRN3, IL7R) are prominent, with clear CD8B expression and stronger CD8-naive pathway activity. Although CD4 protein is elevated, the combined CD8 protein/transcript evidence supports naïve CD8 T cells."
+95604,E2L3_CTGATCCGTCGCACAC,Platelet,"Platelet
+Strong platelet-specific markers (PPBP, PF4, TUBB1, GP9, ITGA2B, TREML1, RGS18) and highly elevated CD41/CD61, CD42b, CLEC2, and CD62P confirm a platelet identity. Platelet and megakaryocyte pathway scores further support this annotation."
+117904,E2L5_CGATCGGGTAGCGTTT,Platelet,"Platelet
+Strong platelet identity is confirmed by PPBP, PF4, GP9, CLEC1B, TUBB1, TREML1, and SPARC, along with highly elevated CD41, CD42b, CD61, CLEC2, and CD62P. Platelet and megakaryocyte pathway scores are also strongly positive."
+67405,E2L1_AAGAACACATAATCGC,Platelet,"Platelet
+Strong platelet-specific markers (PPBP, PF4, TUBB1, GP9, ITGA2B, TREML1, MPIG6B) and highly elevated CD41, CD42b, CD61, CLEC2, and CD62P confirm a platelet identity. High platelet and megakaryocyte pathway scores further support this annotation."
+68220,E2L1_ACTGATGTCTTCGATT,Platelet,"Platelet
+Canonical platelet markers (PPBP, PF4, TUBB1, GP9, ITGA2B, TREML1, CLEC1B) and strong CD41/CD42b/CD61/CD62P expression, together with high platelet and megakaryocyte pathway scores, confirm an activated platelet identity."
+118277,E2L5_CGTTAGATCTGAGGCC,Platelet,"Platelet
+PPBP, PF4, TUBB1, ITGA2B, GP9, TREML1, and strong CD41/CD42b/CD61/CLEC2 expression, together with high platelet and megakaryocyte pathway scores, definitively identify a platelet."
+137357,E2L6_TTGCTGCCAGCCCACA,Platelet,"Platelet
+PPBP, PF4, TUBB1, ITGA2B, GP9, TREML1, and platelet-specific surface markers (CD41, CD42b, CD61, CLEC2, CD62P) strongly confirm a platelet identity. High platelet and megakaryocyte pathway scores provide additional support."
+158089,E2L8_GTGGTTAGTTGCACGC,Platelet,"Platelet
+PPBP, PF4, TUBB1, GP9, RGS18, and MPIG6B, together with strongly elevated CD41, CD42b, CD61, CLEC2, and CD62P and high platelet/megakaryocyte pathway scores, definitively identify a platelet."
+43383,L4_CCACACTAGTGATGGC,Platelet,"Platelet
+Strong platelet-specific genes (PPBP, PF4, GP9, ITGA2B, TUBB1, TREML1) and highly elevated platelet proteins (CD41, CD61, CD42b, CLEC2, CD62P) confirm a platelet identity. High platelet and megakaryocyte pathway scores further support this annotation."
+80288,E2L2_AGGCATTAGCCTTTCC,Platelet,"Platelet
+PF4, PPBP, TUBB1, GP9, and strong CD41/CD61/CD42b/CLEC2/CD62P expression, together with high platelet and megakaryocyte pathway scores, definitively identify a platelet."
+83146,E2L2_CGGAATTTCGTGGACC,Platelet,"Platelet
+PPBP, PF4, TUBB1, ITGA2B, GP9, TREML1, and MPIG6B, together with strong CD41/CD42b/CD61/CD62P expression and high platelet/megakaryocyte pathway scores, definitively identify an activated platelet."
+62837,L5_GTTGTAGCAAACGTGG,Platelet,"Platelet
+PPBP, PF4, TUBB1, GP9, CLEC1B, and RAB27B, together with strong CD41/CD61/CD42b and CLEC2 expression and high platelet/megakaryocyte pathway scores, definitively support a platelet identity."
+151355,E2L8_AGCGATTAGGTACATA,Platelet,"Platelet
+Strong platelet-specific genes (PPBP, PF4, TUBB1, GP9, ITGA2B, TREML1) and highly elevated CD41, CD42b, CD61, CLEC2, and CD62P confirm a platelet identity. High platelet and megakaryocyte pathway scores further support this annotation."
+101431,E2L3_TTCTAGTAGAAGCGCT,Platelet,"Platelet
+PPBP, PF4, TUBB1, ITGA2B, GP9, TREML1, and MPIG6B, together with strong CD41/CD61/CD42b, CLEC2, and CD62P, are definitive platelet markers. The elevated platelet and megakaryocyte pathway scores support an activated platelet state; aggregate scores may reflect platelet adhesion to other cells but do not change the classification."
+103375,E2L4_AGATCGTCAACAGCCC,Platelet,"Platelet
+PPBP, PF4, GP9, ITGA2B, TUBB1, and strong CD41/CD42b/CD61/CLEC2 expression, together with high platelet and megakaryocyte pathway scores, definitively identify an activated platelet."
+98355,E2L3_GTGTGATAGGTTCAGG,Platelet,"Platelet
+PPBP, PF4, TUBB1, GP9, ITGA2B, and platelet surface markers CD41/CD61, CD42b, CLEC2, and strongly elevated CD62P confirm an activated platelet. High platelet and megakaryocyte pathway scores further support this annotation."
+155038,E2L8_CTCGAGGGTAACATGA,Platelet,"CD8 Naive
+CD8B/CD8 protein, CCR7, TCF7, LEF1, IL7R, LRRN3, and CD27 indicate a quiescent naive CD8⁺ T-cell phenotype, with no cytotoxic program."
+61460,L5_GGGTATTTCCCTAGGG,Platelet,"Platelet
+PPBP, PF4, TUBB1, GP9, ITGA2B, and CLEC1B, together with strong CD41/CD61/CD42b and CLEC2 expression and high platelet/megakaryocyte pathway scores, definitively identify a platelet."
+31255,L3_CCTACGTAGAAAGTCT,Treg,"CD4 TCM
+CD4 T-cell markers (IL7R, LTB, LEF1, MAL, CD27) and strong CD4/CD3 protein support conventional central memory CD4 T cells. Treg pathway activity is comparable but lacks defining FOXP3, IL2RA, CTLA4, or TIGIT expression. Low cytotoxicity and high CD4 TCM score favor CD4 TCM over Treg or CD4 TEM."
+50541,L4_TGACCCTTCGAAGTGG,Treg,"CD4 TCM
+CD4 T-cell markers (CD4, CD3D/E/G, TRAC, IL7R, LTB, MAL, CD27, CD28) support central memory. Although TIGIT, IKZF2, and the regulatory-T pathway score suggest a possible regulatory-like state, the absence of FOXP3 and IL2RA/CD25 makes Treg less likely."
+20256,L2_GAATCGTCAAGTATCC,Treg,"Treg
+CD3⁺CD4⁺ T-cell markers with FOXP3, IL7R, TCF7, CD27, and strong naive/resting Treg pathway activity support a Treg identity, likely a naive/resting rather than activated or effector Treg."
+17459,L2_CAGCAGCTCGCTAATG,Treg,"Treg
+FOXP3, IL2RA (CD25), TIGIT, and strong CD4/CD3 expression directly support regulatory CD4⁺ T-cell identity. Elevated CD27, IL7R, CD69, and naive/resting and activated Treg pathway scores indicate a memory/activated Treg phenotype."
+54454,L5_AGCGCCAGTGGCTGCT,Treg,"CD4 Naive
+IL7R, TCF7, LEF1, MAL, LTB, and GIMAP7 support a naïve CD4 T-cell phenotype, with strong CD4, CD27, and CD28 protein expression and no cytotoxic program. The CD4 Naive pathway score exceeds CD4 TCM, favoring CD4 Naive over central memory."
+31678,L3_CGCCAGACAGCTGTCG,Treg,"CD4 Naive
+Strong CD4, IL7R, TCF7, LTB, CD3D/E, and naïve-associated CD27/CD28 expression support a naïve CD4 T-cell identity. Elevated CD8a and CD8-naïve pathway scoring likely reflect low-level/ambient expression or shared naïve T-cell features; absence of CD8B or cytotoxic genes argues against CD8 Naive."
+52228,L4_TTTACGTCACTGGACC,Treg,"Treg
+FOXP3 expression with strong CD4, CD3, IL7R, TCF7, and LEF1 supports a naïve/resting regulatory T-cell phenotype. Surface CD4/CD3/CD27 and the dominant naïve/resting Treg pathway score confirm the annotation."
+49809,L4_TCCCATGCACCTGCAG,Treg,"Treg
+FOXP3 expression, strong CD4/CD3/CD27/CD4 protein signals, and the highest Naive/resting Treg pathway score support a naïve/central-memory regulatory T-cell identity."
+79611,E2L2_ACGTTCCTCCCGAGGT,Treg,"CD4 Naive
+Strong CD4 protein expression and canonical naïve T-cell genes (IL7R, CCR7, TCF7, LEF1, MAL, CD27) support CD4 naïve identity. Elevated CD8a and CD8-naïve score likely reflect low-level protein overlap or assay variation, but there is no cytotoxic or effector program."
+52137,L4_TTGTGGACACGCGTCA,Treg,"CD4 Naive
+Strong IL7R, CCR7, TCF7, LEF1, MAL, LTB, and naïve-associated proteins support a resting CD4 T-cell phenotype. High CD4, CD3, CD27, and CD28 with no effector or cytotoxic markers favors CD4 Naive over TCM or other T-cell subtypes."
+8720,L1_GGTGGCTTCTGGCTGG,Treg,"CD4 Naive
+CCR7, TCF7, LEF1, IL7R, MAL, and FOXO1 support a quiescent naïve CD4 T-cell state. Strong CD4, CD3, CD27, and CD62P protein expression further supports this annotation. Although CD8a and CD4 TCM pathway scores are elevated, the transcriptional profile most strongly matches CD4 Naive."
+22185,L2_GGTTAACTCGGTCACG,Treg,"CD4 TCM  
+CD3D/E, TRAC, CD4, IL7R, LTB, CD27, MAL, and AQP3 support a CD4 central-memory T-cell phenotype. Lack of cytotoxic, proliferative, or canonical Treg markers favors CD4 TCM over CD4 TEM, Treg, or CD4 Naive."
+48054,L4_GTCTAGAGTATAATGG,Treg,"CD4 Naive
+TRAC/CD3D/E/G, LEF1, TCF7, GIMAP7, strong CD4 and CD27 expression support a naïve CD4 T-cell phenotype. Lack of cytotoxic, memory-effector, or regulatory markers further confirms the annotation."
+38456,L3_TTCACGCTCAAAGGTA,Treg,"CD4 Naive
+Strong CCR7, TCF7, LEF1, IL7R, MAL, LTB, and CD27 expression with high CD4 and CD3 proteins supports a naïve CD4 T-cell identity. Absence of cytotoxic, activation, or proliferation markers argues against effector, regulatory, or proliferating T-cell subtypes."
+46657,L4_GCGATCGGTGTTCCTC,Treg,"CD4 Naive
+TCF7, LEF1, CCR7, MAL, LRRN3, BCL2, IL7R, and LTB support a quiescent naïve CD4 T-cell phenotype. Strong CD4, CD27, CD31, and CD62P protein expression further supports naïve status. CD8a protein and the CD8 Naive pathway score likely reflect minor overlap, but there is no cytotoxic program or evidence for Treg, memory, or doublet identity."
+56779,L5_CATCGCTTCAAACGAA,Treg,"CD4 Naive
+Strong CCR7, TCF7, LRRN3, IL7R, MAL, and LTB expression, together with very high CD4 and CD27 surface protein levels, supports a naïve CD4 T-cell identity. Lack of cytotoxic, effector-memory, regulatory, or proliferation markers further confirms the annotation."
+48510,L4_GTTCGCTTCGTTAGAC,Treg,"Treg
+CD4⁺ T-cell markers with strong CTLA4, TNFRSF25, RGS1, and regulatory-T-cell pathway activity support Treg identity. Elevated CD4, CD3, CD27, and CD28 proteins further confirm this phenotype, with evidence of both resting and activated/effector Treg programs."
+62151,L5_GTCCTCACAAGATCCT,Treg,"CD4 Naive  
+CCR7, LEF1, IL7R, CD27, and TCF7-associated genes indicate a naïve/central-memory-like CD4 phenotype, while strong CD4 and CD31 protein expression plus the highest CD4 Naive pathway score favor CD4 Naive over CD4 TCM."
+57273,L5_CCCTCAAGTGCGTTTA,Treg,"CD4 TCM
+IL7R, TCF7, LEF1, LTB, CD27, and strong CD4/CD3/CD28 protein expression support a naïve-like central-memory CD4 T-cell. Although regulatory-T and CD4-naïve programs are elevated, the absence of FOXP3, IL2RA, CTLA4, or TIGIT favors CD4 TCM over Treg or CD4 Naive."
+28558,L3_AGCCAGCTCCGATAGT,Treg,"CD4 Naive
+Strong CD3/CD4 expression with naive T-cell markers TCF7, LEF1, MAL, IL7R, LTB, CD27, and CD28 supports a CD4 naive phenotype. Lack of cytotoxic or effector genes argues against CD4 TEM/CTL, while CD4 protein is much stronger than CD8."
+15093,L2_ACTTATCAGGTTAGTA,cDC1,"cDC1
+CLEC9A, BATF3, IRF8, WDFY4, CADM1, and CD141 strongly support cDC1 identity, with abundant HLA-II antigen-presentation machinery. Platelet-associated CD41/CD62P signals likely indicate ambient contamination or a minor platelet doublet component, but the dominant transcriptomic and pathway evidence clearly supports cDC1."
+74797,E2L1_GTCTCACAGCTGTGCC,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, IRF8, CADM1, WDFY4, and DNASE1L3 strongly support cDC1 identity, reinforced by high HLA-II expression and CD141 protein. Elevated platelet markers (CD41, CD62P, CLEC2) likely reflect ambient RNA or platelet contamination rather than a true platelet or doublet phenotype."
+47612,L4_GTAAGTCGTCGCATGC,cDC1,"cDC1
+CLEC9A, BATF3, IRF8, CADM1, WDFY4, and CD141 strongly support cDC1 identity, reinforced by high HLA-II expression and the dominant cDC1 pathway score. Platelet-associated surface proteins likely reflect ambient contamination or minor platelet adhesion."
+56244,L5_CACAACATCGTGCGAC,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, IRF8, WDFY4, CADM1, and strong HLA-II expression are highly characteristic of conventional type 1 dendritic cells. The dominant cDC1 pathway score and CD141 protein support this annotation; minor CD4/CD8 and platelet-associated protein signals may reflect activation or ambient/doublet contamination."
+30351,L3_CAGATCATCACTTATC,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, IRF8, and WDFY4 are highly specific cDC1 markers, with strong HLA class II/CD74 antigen-presentation expression and the highest cDC1 pathway score. CD141 protein further supports this identity."
+54594,L5_AGGAGGTCATCCTTCG,cDC1,"cDC1
+CLEC9A, XCR1-associated machinery (BATF3, IRF8, CADM1, WDFY4), high MHC-II, and the strongly elevated cDC1 pathway score support cDC1. CD141/CD93 further corroborate this identity; platelet markers likely reflect ambient RNA or minor contamination."
+126684,E2L6_ACTGTGATCCACGGAC,cDC1,"cDC1  
+Canonical CLEC9A/XCR1/BATF3/IRF8/WDFY4/CADM1 expression and strong cDC1 pathway activity identify cDC1; platelet-associated surface signals likely reflect ambient contamination or a minor platelet contribution."
+129612,E2L6_CCGAACGAGAGCCGAT,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, IRF8, WDFY4, and CADM1, together with strong HLA-II expression and the highest cDC1 pathway score, definitively support cDC1. CD141 (THBD) protein is also consistent; platelet-associated CD41/CD62P likely reflects contamination or ambient signal."
+54448,L5_AGCGCCACAGGTCAAG,cDC1,"cDC1
+CLEC9A, WDFY4, BATF3, IRF8, CADM1, and CD141, together with strong HLA-II antigen-presentation signatures and the highest cDC1 pathway score, clearly support conventional type 1 dendritic cell identity."
+11118,L1_TCCCATGAGGAATGTT,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, IRF8, WDFY4, and CADM1 strongly support cDC1 identity, with robust HLA class II antigen-presentation genes and the highest pathway score for cDC1. CD141 and CLEC2 surface expression are also consistent. rs"
+116590,E2L5_CACGTGGAGGAAAGGT,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, CADM1, WDFY4, and IRF8 strongly support cDC1 identity, reinforced by the high cDC1 pathway score and CD141 protein. Elevated CD41/CD62P likely reflects platelet contamination rather than a true platelet or doublet state."
+6356,L1_CTGTAGAAGACCGCCT,cDC1,"cDC1
+CLEC9A, BATF3, IRF8, WDFY4, CADM1, and CD141, together with strong HLA-II antigen-presentation programs and the highest cDC1 pathway score, definitively support conventional type 1 dendritic cells."
+152675,E2L8_CAACAGTCAGGATTCT,cDC1,"cDC1  
+Strong CLEC9A, BATF3, IRF8, WDFY4, CADM1, FLT3, and HLA-II expression supports cDC1 identity, reinforced by the high cDC1 pathway score and CD141 protein. Platelet-associated surface markers likely reflect ambient platelet material or minor contamination rather than a true platelet/doublet profile."
+127899,E2L6_ATCGATGAGCTAATGA,cDC1,"cDC1
+CLEC9A, XCR1, BATF3-associated WDFY4/IRF8, CADM1, ID2, and strong HLA-II expression are highly characteristic of cDC1. Platelet-associated proteins likely reflect contamination or carryover rather than a true platelet identity."
+11291,L1_TCGAAGTCAACCTAAC,cDC1,"cDC1
+CLEC9A, BATF3, IRF8, WDFY4, and CD141 expression strongly support cDC1 identity, with high HLA class II and the strongest pathway score for cDC1."
+7747,L1_GCCAGCACAGCAGTTT,cDC1,"cDC1  
+Strong CLEC9A, XCR1, BATF3, IRF8, WDFY4, CADM1, and HLA-II expression, together with a very high cDC1 pathway score, confirms cDC1 identity. CD141 supports this classification; platelet-associated proteins likely reflect ambient contamination or platelet adherence."
+76907,E2L1_TCTTTGATCGTGGGTC,cDC1,"cDC1
+Strong CLEC9A, XCR1, BATF3, WDFY4, IRF8, CADM1, and high MHC-II expression, with the highest cDC1 pathway score, confirm cDC1 identity. Platelet-associated proteins likely reflect platelet contamination or ambient binding rather than a true doublet, given the absence of platelet transcripts."
+79136,E2L2_ACAAAGAAGTTCCGTA,cDC1,"cDC1
+Strong CLEC9A, XCR1, BATF3, IRF8, CADM1, and WDFY4 expression, along with high CD141 and a strongly elevated cDC1 pathway score, confirms cDC1 identity. CD41/CD62P likely reflect platelet contamination rather than a true doublet."
+84449,E2L2_GACCCTTAGGCACTAG,cDC1,"Doublet
+Strong cDC1 transcriptional identity (CLEC9A, BATF3, IRF8, FLT3, WDFY4) co-occurs with prominent platelet-associated proteins CD41 and CD62P, indicating a likely cDC1–platelet doublet rather than a pure cDC1."
+122898,E2L5_TCAGTTTTCCATAAGC,cDC1,"cDC1
+CLEC9A, XCR1, BATF3, IRF8, WDFY4, and CADM1, together with strong HLA-II expression and a high cDC1 pathway score, definitively support cDC1. Platelet-associated proteins likely reflect ambient contamination or a minor doublet-like signal."
+63636,L5_TATTGCTAGGGCTTCC,cDC2,"cDC2
+Strong CD1C, CLEC10A, FCER1A, HLA-DRA, CD74, and LYZ expression supports conventional type 2 dendritic cells. Platelet-associated proteins likely reflect ambient contamination rather than a true platelet doublet."
+127869,E2L6_ATCCGTCCATCCGTTC,cDC2,"Doublet
+Strong cDC2 transcriptional program (FCER1A, CLEC10A, CD1C, HLA-DRA) co-occurs with platelet surface markers (CD41, CD62P, CLEC2), supporting a platelet–cDC2 doublet rather than a pure cDC2 or platelet."
+40896,L4_AGCCAGCCATACTGAC,cDC2,"CD14 Mono
+LYZ, S100A8/S100A9, FCN1, VCAN, IL1B, CXCL8, and CD11b/CLEC12A strongly support an inflammatory classical CD14 monocyte. Elevated HLA-II indicates activation; CD41/CD62P and other platelet markers likely reflect ambient platelet signal or minor contamination rather than a true doublet."
+154468,E2L8_CGGTCAGGTGGACTGA,cDC2,"cDC2
+Strong CD1C, CLEC10A, FCER1A, HLA-DRA, and abundant MHC-II expression define cDC2, supported by LYZ/CST3 and the highest cDC2 pathway score. Platelet-associated proteins and CD4 signal likely reflect ambient contamination or a minor doublet component."
+80805,E2L2_ATCATTCAGGCAGGTT,cDC2,"Doublet
+Strong platelet protein expression (CD41, CD62P, CLEC2) co-occurs with activated myeloid/cDC2 markers (IL1B, LYZ, FCN1, HLA-DRA, CD74, FCER1A, CLEC10A), supporting a platelet–myeloid aggregate rather than a singlet."
+127721,E2L6_ATAGAGAGTATGGAAT,cDC2,"cDC2
+Strong antigen-presentation and CLEC10A expression, with the highest cDC2 pathway score, support cDC2. Although S100A8/A9, FCN1, VCAN, LYZ, and CD14 indicate a CD14-like inflammatory profile, these may reflect a CD14⁺ cDC2 transitional state; platelet-associated proteins likely represent adherence or ambient signal."
+26244,L2_TTCATTGTCTCCATAT,cDC2,"cDC2
+Strong FCER1A, CLEC10A, CD1C, HLA-II, and dendritic-cell pathway scores support cDC2. Myeloid genes (CST3, LYZ) reinforce this identity; platelet-associated proteins likely reflect adherence or ambient contamination."
+108843,E2L4_GGCTGTGTCTGTTCAT,cDC2,"cDC2
+Strong HLA-DRA/CD74 MHC-II expression with FCER1A and CLEC10A, plus the highest cDC2 pathway score, supports conventional type 2 dendritic cells. S100A8/A9, FCN1, and VCAN indicate a monocyte-like or DC3-leaning activation state, but cDC2 remains the best available subtype."
+13495,L1_TTGTGTTTCTTCACGC,cDC2,"cDC2
+Strong CD1C, CLEC10A, FCER1A, HLA-DP/DQ, CD74, and LYZ expression with the highest cDC2 pathway score supports conventional type 2 dendritic cells. Platelet-associated proteins likely reflect platelet contamination or adherence rather than a true platelet identity."
+76731,E2L1_TCGTGGGTCTCAACGA,cDC2,"cDC2
+Strong expression of HLA-II, CD74, CD1C, CLEC10A, FCER1A, and IRF4 supports conventional type 2 dendritic cells. LYZ and CST3 reinforce myeloid antigen presentation, while the highly elevated CD11c and CD172a are compatible. CD41/CD62P likely reflect platelet adherence or ambient signal rather than a platelet identity, given the clear dendritic-cell transcriptional program."
+126443,E2L6_ACGCACGAGAGGGCGA,cDC2,"cDC2
+Strong CD1C, CLEC10A, FCER1A, HLA-DP/DQ/DR, CD74, and LYZ expression supports conventional type 2 dendritic cells. Elevated CD41 and CD62P likely reflect platelet adherence or ambient protein contamination, as platelet transcripts are not prominent and the cDC2 pathway score is highest."
+2382,L1_AGTGACTGTATTAAGG,cDC2,"cDC2  
+Strong FCER1A, CLEC10A, CD74, and abundant HLA class II expression support cDC2. S100A8/A9, VCAN, and FCN1 indicate an inflammatory DC3-like state, while CD41/CD62P likely reflect platelet contamination."
+149862,E2L8_AAAGTGACAAGTGCAG,cDC2,"cDC2
+Strong HLA-II, CD1C, FCER1A, CLEC10A, CST3, and GPR183 expression supports conventional type 2 dendritic cells. Platelet-associated proteins (CD41, CD62P, CLEC2) likely reflect ambient contamination or platelet adhesion rather than a true platelet identity."
+125619,E2L6_AAATGGACACTCATAG,cDC2,"Doublet
+Inflammatory CD14/VCAN monocyte transcriptional markers (IL1B, LYZ, S100A8/A9, CXCL8) coexist with strong platelet surface proteins (CD41, CD62P, CLEC2), supporting a platelet–monocyte doublet rather than a single cell type."
+59182,L5_CTGTACCAGTGCTACT,cDC2,"cDC2
+FCER1A, CLEC10A, CD1C, CST3, and strong HLA-II expression are characteristic of conventional type 2 dendritic cells. Elevated CLEC12A and CD4 support a myeloid/DC phenotype, while the CD41/CD62P signals likely reflect platelet contamination or ambient protein."
+113531,E2L5_AAAGTCCTCGACGTCG,cDC2,"Doublet
+Co-expression of cDC2/myeloid markers (HLA-DRA, FCER1A, CLEC10A, CD74, LYZ, IL1B) with strong platelet markers (CD41, CD62P, CLEC2) indicates a platelet–myeloid doublet rather than a singlet."
+71815,E2L1_CGTTCTGGTAACGCGA,cDC2,"Doublet
+Strong cDC2 transcriptional identity is accompanied by multiple prominent platelet surface markers (CD41, CD62P, CLEC2), indicating likely platelet–cDC2 doublet or platelet adhesion rather than a clean cDC2 profile."
+159767,E2L8_TCGGGTGAGCATTGTC,cDC2,"cDC2
+HLA-DRA/CD74, CLEC10A, FCER1A, and CD1C-associated programs strongly support cDC2, with some CD14+ DC3/monocyte-like features (S100A8/A9, FCN1, VCAN). Elevated platelet markers may reflect contamination or minor doublet signal, but the dominant transcriptomic identity is cDC2."
+115008,E2L5_AGCGCCAAGGTTATAG,cDC2,"cDC2
+Strong CD1C, CLEC10A, FCER1A, HLA-DP/DQ/DR, and CD74 expression, with LYZ and CST3 supporting a conventional myeloid dendritic-cell identity. The dominant CD1C+ CLEC10A+ cDC2 pathway score and lack of pDC markers further confirm cDC2 rather than monocytes or pDCs."
+117778,E2L5_CCTTCAGTCTGTCCGT,cDC2,"cDC2  
+CLEC10A, FCER1A, CD74, and abundant HLA-II expression strongly support conventional type 2 dendritic cells. FCN1, VCAN, S100A8/A9, CD64, and CLEC12A indicate inflammatory/CD14-like cDC2 features (DC3 spectrum), but the dominant cDC2 program outweighs monocyte evidence."
+136562,E2L6_TGGGTTATCAATCAGC,dnT,"CD4 TEM  
+GZMK/GZMA, CCL5, CD3, CD27, TCF7, CTLA4, and TIGIT support an activated effector-memory T-cell phenotype. Despite elevated CD8a protein, strong CD4 protein and the highest pathway score for GZMK+ CD4 effector-memory cells favor CD4 TEM over CD8 TEM or Treg."
+15077,L2_ACTGTGAGTGATACTC,dnT,"CD4 TCM  
+CD4 T-cell markers (CD4, CD3D/E, TRAC), CCR7/TCF7/LEF1/CD27/CD28 support a central-memory phenotype. GZMK and strong interferon-stimulated genes indicate activation, but CD4 TCM remains more appropriate than CD4 Naive or TEM."
+31210,L3_CCGTGAGAGTTCCTGA,dnT,"CD4 TCM
+IL7R, LTB, IL32, CD27, RORA, and TIGIT support a central-memory CD4 T-cell phenotype, while TCF7/LEF1 indicate a naïve-like component. The CD4 protein signal and lack of cytotoxic or strong regulatory markers support CD4 TCM over Treg or CD8 subsets."
+20606,L2_GAGGGTACAGACATCT,dnT,"CD8 Naive
+CD3⁺CD8⁺ T-cell profile with strong naïve markers TCF7, LEF1, CCR7, IL7R, CD27, LINC00861, and GIMAP7, alongside minimal cytotoxic programming. Although CD8 central-memory scoring is slightly higher, the naïve-associated gene and protein profile best supports CD8 Naive."
+2582,L1_ATATCCTCATGCCATA,dnT,"CD8 TCM
+CD8-lineage markers (CD8B, CD8a, CD3D/E/G) with IL7R, TCF7, LEF1, CD27, and GZMK support a central-memory phenotype. Naive-associated programs are also strong, but GZMK and the overall memory profile favor CD8 TCM over CD8 Naive."
+37398,L3_TGACAGTCATCAGCTA,dnT,"CD8 Naive
+Strong CD8 T-cell identity is supported by CD8B, CD8a/CD8 protein, CD3D/E/G, TRAC, and CD27. CCR7, TCF7, LEF1, IL7R, and absence of cytotoxic genes indicate a naïve, lymphoid-homing phenotype. Although CD8 central-memory and CD4-naïve pathway scores are also elevated, the dominant CD8 surface and transcript evidence supports CD8 Naive."
+58805,L5_CTCCCAAAGCAGATAT,dnT,"CD4 TCM
+IL7R, TCF7/LEF1, CD27, and CD28 support a CD4 central-memory phenotype, with strong CD4 protein and TCM pathway scores. GZMK indicates mild effector differentiation but is insufficient to reclassify the cell as CD4 TEM."
+25458,L2_TGCTTCGCACGAAAGC,dnT,"CD4 TCM
+IL7R, TCF7, LEF1, LTB, CD27, and strong CD4/CD28/CD27 protein expression support a central-memory CD4 T-cell identity. GZMK indicates mild effector features, but CD4 TCM and CD4 naïve programs predominate, without sufficient evidence for TEM, CTL, or Treg."
+41918,L4_ATGAAAGGTGTTTACG,dnT,"CD8 TCM
+CD8⁺ T-cell markers (CD8A/B, CD3D/E, TRAC) combine with IL7R, TCF7, LEF1, CD27, and CD28, supporting a central-memory/naive-like phenotype. GZMK and CCL5 indicate some memory effector activity, but the strong TCF7/IL7R/CD27 profile and low NK program favor CD8 TCM over CD8 TEM or MAIT."
+26150,L2_TTAGTCTTCTGGCCAG,dnT,"CD4 Naive
+Strong CD4, TCF7, LEF1, IL7R, LTB, and CD27 expression with minimal cytotoxic signature supports a naïve CD4 T-cell state. Although GZMK and CD62P suggest modest memory/activation features, the pathway score most strongly favors CD4 Naive over CD4 TCM."
+11341,L1_TCGCACTAGCAATTCC,dnT,"CD4 TEM
+GZMK, GZMA, CST7, TIGIT, and CD4/CD27 protein expression support an antigen-experienced CD4 effector-memory T-cell phenotype. CD3/TRAC confirm T-cell identity, while TCF7 and CD27 indicate memory characteristics. Absence of strong cytotoxic/NK markers argues against CD4 CTL, MAIT, or NK-like populations."
+91936,E2L3_AGACTCAAGAATAGTC,dnT,"CD4 TCM
+CCR7, TCF7, LEF1, IL7R-associated memory genes, CD27, and strong CD4/CD28 protein expression support central-memory CD4 T cells. GZMK and CCL5 indicate mild cytotoxic/activated features, but lack of definitive Treg markers (FOXP3, IL2RA) argues against Treg."
+2467,L1_AGTTCCCAGCAGCCTC,dnT,"CD8 Naive
+CD3⁺CD8⁺ T-cell markers with strong TCF7, LEF1, IL7R, CD27, MAL, and LTB expression, absence of cytotoxic genes, CD31 protein positivity, and the highest pathway score for CD8 naive T cells support a naive CD8 phenotype over CD8 TCM."
+122724,E2L5_TCACAAGTCCGCAAAT,dnT,"CD4 TCM
+TCF7, CCR7-associated memory genes, LEF1, CD27, CD28, strong CD4 and T-cell receptor proteins support a central-memory CD4 T-cell identity. GZMK/GZMA indicate mild effector-memory features, but the naive/central-memory program predominates and lacks cytotoxic or NK markers."
+128937,E2L6_CAGCGTGAGTGGAATT,dnT,"CD8 Naive
+Naive T-cell markers (TCF7, LEF1, CCR7, SELL-associated profile, LRRN3, CD27) and strong CD3/CD8 expression dominate, with minimal cytotoxic or effector signatures. Although CD4 protein is also elevated, CD8A/B expression and the CD8-naive/central-memory pathway profile support CD8 Naive rather than CD4 Naive or CD8 TCM."
+123003,E2L5_TCATGTTCAATCTCTT,dnT,"CD4 TEM
+CD4 protein, CD3/TRAC, GZMK/GZMA, TIGIT, and the strong GZMK+ CD4 effector-memory program support CD4 TEM. High CD27, CD28, and TCF7 indicate a non-terminal memory state; CD8a alone does not outweigh the CD4 evidence."
+42194,L4_ATTCAGGCACAGTACT,dnT,"CD4 Naive
+Strong CD4, CD3/TRAC, LEF1, TCF7-associated profile, MAL, IL7R, LTB, BCL2, and RTKN2 support naïve CD4 T cells. Despite the elevated regulatory pathway score and IKZF2, the absence of FOXP3, IL2RA, CTLA4, or other Treg markers argues against Treg."
+20303,L2_GACATCAGTCACCGCA,dnT,"CD8 TCM  
+CD8⁺ T-cell markers (CD8A/B, CD3D/E, TRAC) with IL7R, CD27, LRRN3, TCF7-associated features and GZMM support a central-memory phenotype. Absence of NK/cytotoxic markers argues against MAIT, NK, or TEM identities."
+65735,L5_TGTAACGAGATGGGCT,dnT,"CD4 TCM  
+CD4⁺ memory T-cell phenotype supported by strong CD4, CD27, TCF7, LEF1, GZMK, and GZMA expression, with high CD4 TCM and naïve-program scores. The absence of strong cytotoxic or regulatory markers favors central memory over CD4 CTL, TEM, or Treg."
+6008,L1_CTCCATGCATCGGCCA,dnT,"CD8 TEM  
+CD3D/E, TRBC2, CD8A/B, CCL5, GZMK, GZMA, NKG7, KLRG1, and RUNX3 support an activated cytotoxic effector-memory CD8 T-cell identity. The MAIT score is moderate, but canonical MAIT markers are not prominent, so CD8 TEM is the best-supported subtype."
+141081,E2L7_CAGCACGGTACTGACT,gdT,"gdT
+TRDC/TRGC2 with CD3D/E confirms a γδ T cell; IL7R, TCF7, CCR7, CD27, CD127, and low cytotoxic/NK scores indicate a naïve or central-memory-like phenotype, with pathway support strongest for Vδ2 γδ T cells."
+77296,E2L1_TGCTTCGAGATCCAAA,gdT,"gdT
+TRDC, TRGC1, and TRGC2 directly establish a gamma-delta T-cell identity. Strong GNLY, NKG7, KLRD1, GZMB, PRF1, and CD8a indicate a highly cytotoxic, NK-like gdT subtype. High Vδ1/Vδ2 and cytotoxic γδ T-cell pathway scores further support gdT over NK or MAIT."
+127818,E2L6_ATCATTCGTGGTCTCG,gdT,"gdT
+TRDC, TRGC2, TRG-AS1, and CD3D/E/G establish a γδ T-cell identity. IL7R, TCF7, LEF1, CD27, and GZMK indicate a memory-like, non-cytotoxic state, while pathway scores support both Vδ2 and Vδ1 γδ programs without strong NK or MAIT evidence."
+93252,E2L3_ATTGGGTCATATGGCT,gdT,"gdT
+TRDC/TRGC1/2 with CD3D/CD3G confirms a γδ T-cell receptor, while GNLY, NKG7, GZMB, FGFBP2, KLRD1, CD57, and cytotoxic pathway scores indicate a highly cytotoxic NK-like γδ T-cell phenotype."
+119270,E2L5_GAAGTAACATGACTAC,gdT,"gdT
+TRDC and TRGC2 directly establish γδ T-cell identity, with CD3D/E/G and TRBC1 confirming T-cell lineage. IL7R, TCF7, LEF1, CD27, and GZMK indicate a memory-like phenotype, while Vδ2 and Vδ1 pathway scores support γδ T cells over MAIT or NK cells."
+116360,E2L5_CAACGGCCAAATGAGT,gdT,"gdT
+TRDC/TRGC1/2 and strongly elevated TCR-V-2 directly identify γδ T cells, with cytotoxic markers (CCL5, NKG7, GZMK, CTSW, KLRD1) supporting a cytotoxic γδ phenotype rather than conventional T, NK, or MAIT cells."
+108773,E2L4_GGAGGTATCGAGCCAC,gdT,"gdT
+TRDC/TRGC1/TRGC2, TCR-Vδ2 protein, CD3, and strong cytotoxic markers (GNLY, NKG7, PRF1, granzymes) directly support a cytotoxic gamma-delta T-cell identity.Winvalid"
+98994,E2L3_TAGATCGGTTGACGGA,gdT,"gdT
+TRDC, TRGC1/2, and strongly elevated TCR-V-2 directly identify γδ T cells. Cytotoxic genes and proteins (NKG7, GNLY, FGFBP2, GZMB, PRF1, KLRD1, CD244) indicate an activated cytotoxic γδ T-cell state, while γδ T-cell pathway scores strongly support this annotation over MAIT or NK."
+125756,E2L6_AACGAAACAGTCTGGC,gdT,"gdT
+TRDC/TRGC2 with CD3D/E/G confirms γδ T-cell identity, alongside strong cytotoxic markers (CCL5, NKG7, PRF1, GZMA, GZMM, KLRD1). Elevated Vδ1/Vδ2 and cytotoxic γδ pathway scores support gdT over MAIT or NK."
+72587,E2L1_CTTTCGGTCCATGCAA,gdT,"gdT
+TRDC/TRGC1, TCR-V-2, and CD3 expression directly identify γδ T cells, with strong NKG7, CCL5, GZMH, PRF1, KLRD1, and FGFBP2 indicating a cytotoxic γδ phenotype. Surface TCR-V-2 and high γδ-T pathway scores further support gdT over MAIT or NK."
+76846,E2L1_TCTGCCATCAGGTGTT,gdT,"gdT
+Strong TRDC, TRGC1/2, CD3D/G, and highly cytotoxic GNLY/NKG7/GZMB/FGFBP2 expression identify a cytotoxic γδ T-cell population. Elevated Vδ1/Vδ2 γδ-T pathway scores and CD3 with CD8a support gdT over conventional NK or MAIT cells."
+139675,E2L7_AGTACCAAGCGTATAA,gdT,"gdT
+TRDC with CD3D/E/G and TRAC confirms a γδ T-cell identity. The Vδ2 γδ T-cell program is strongest, while IL7R, CCR7, TCF7, LEF1, CD27, and GIMAP7 indicate a naïve-like phenotype. Limited cytotoxic/NK signatures and lack of strong MAIT markers support gdT over MAIT or NK."
+12021,L1_TGATTCTAGAGAGTGA,gdT,"gdT
+TRDC/TRGC1/2 and TCR-V-2 directly support γδ T-cell identity, with strong GNLY, NKG7, FGFBP2, GZMB, PRF1, and KLRD1 indicating a cytotoxic γδ T-cell phenotype."
+152972,E2L8_CACTAAGCAATTGTGC,gdT,"gdT
+TRDC/TRGC1/2 and TCR-V-2 directly identify γδ T cells, with strong cytotoxic programming (GNLY, NKG7, PRF1, granzymes, KLRD1) and elevated γδ T-cell pathway scores."
+132372,E2L6_GCATTAGAGGTAAGGA,gdT,"gdT
+TRDC/TRGC2 with CD3D/E/G directly supports a γδ T-cell identity, while elevated Vδ2 and Vδ1 pathway scores reinforce this. IL7R, TCF7, LEF1, CCR7-associated features, and CD27 indicate a naive/central-memory-like state rather than cytotoxic γδ T, NK, or MAIT cells."
+145011,E2L7_GGCTTTCCAAAGAGTT,gdT,"gdT
+TRDC/TRGC1/TRGC2 with CD3D/E confirms γδ T-cell lineage, while strong GNLY, NKG7, GZMB, FGFBP2, PRF1, KLRD1, and CD57 indicate a highly cytotoxic γδ T-cell state."
+123670,E2L5_TCTGCCAGTGTAAACA,gdT,"gdT
+TRDC/TRGC1/2, TCR-Vδ2, CD3, and strong cytotoxic genes (NKG7, GNLY, granzymes, FGFBP2) definitively support a cytotoxic γδ T-cell identity. TCR-Vδ2 and γδ pathway scores further distinguish it from conventional NK, MAIT, or αβ T-cell subtypes."
+129143,E2L6_CATCGGGTCCTTGAAG,gdT,"gdT
+TRDC, TRGC1/2, and TCR-V-2 directly identify γδ T cells. Strong cytotoxic markers (NKG7, GNLY, PRF1, granzymes, FGFBP2) indicate a cytotoxic γδ T-cell state, while elevated CD3 and γδ T-cell pathway scores support gdT over NK or MAIT."
+99875,E2L3_TCGAAGTCATGGCCCA,gdT,"gdT
+TRDC/TRGC2 with CD3D/E/G and BCL11B confirms γδ T-cell identity. IL7R, CCR7, TCF7, and LEF1 indicate a naïve/central-memory-like state, while the strongest γδ pathway score favors Vδ2 cells and low cytotoxic/NK scores argue against MAIT or cytotoxic γδ T cells."
+73366,E2L1_GCACGGTCAAGGAGTC,gdT,"gdT
+Strong TRDC/TRGC1/2 with CD3D/CD3G confirms γδ T-cell identity, while GNLY, NKG7, GZMB, KLRD1, and FCGR3A indicate a highly cytotoxic NK-like phenotype. Cytotoxic γδ and Vδ1 pathway scores further support gdT over conventional NK or MAIT cells."
+111086,E2L4_TCATGCCGTGGTCTAT,pDC,"pDC
+Canonical pDC markers (LILRA4, TCF4, IL3RA/CD123, CD304, PLD4, IRF7, and GZMB) and the strong conventional pDC pathway score support pDC identity. Platelet-associated proteins likely reflect ambient RNA or a minor platelet doublet component."
+110377,E2L4_TACCCACTCGCGGTAC,pDC,"Doublet
+Strong pDC transcriptional markers (GZMB, TCF4, LILRA4, CLEC4C, IL3RA, PLD4) coexist with a pronounced platelet ADT signature (CD41, CD62P, CLEC2), indicating a pDC–platelet doublet rather than a singlet pDC."
+108715,E2L4_GGACGTCTCTGACCCT,pDC,"pDC
+Strong pDC identity is supported by LILRA4, GZMB, TCF4, PLD4, CLEC4C, IL3RA, IRF8, SPIB, and BCL11A, along with high CD123 and CD304 protein expression and a very strong conventional pDC pathway score. JCHAIN, MZB1, and IGKC may reflect pDC-associated expression or minor ambient B-cell/plasma-cell contamination, but do not outweigh the coherent pDC signature."
+81336,E2L2_ATTGTTCTCAGAATAG,pDC,"Doublet
+Strong pDC markers (GZMB, TCF4, LILRA4, IL3RA, CLEC4C, PLD4) coexist with highly specific platelet proteins (CD41, CD62P, CLEC2, CD61-related signal), supporting a pDC–platelet doublet rather than a pure pDC."
+38153,L3_TGTGGCGAGATGAATC,pDC,"pDC
+Strongly supported by canonical pDC markers (GZMB, GPR183, TCF4, LILRA4, PLD4, IL3RA, CLEC4C, SLC15A4), elevated CD123 and CD304, and the highest pathway score for conventional pDC. JCHAIN, MZB1, and DERL3 may reflect pDC-associated secretory/plasmacytoid features rather than a true plasmablast, while the overall profile lacks dominant immunoglobulin expression."
+108383,E2L4_GCCAGTGTCGGCATTA,pDC,"pDC
+Canonical pDC markers (TCF4, GZMB, IRF8, PLD4, CLEC4C, IL3RA, LILRA4, SPIB) and strong conventional pDC pathway activity support pDC identity. CD123 and CD304 protein further confirm it; JCHAIN/MZB1 and platelet-associated proteins likely reflect contamination or minor doublet-like signals."
+104739,E2L4_CAACGATGTATAGGAT,pDC,"Doublet
+Strong coherent pDC gene expression (GZMB, TCF4, LILRA4, IL3RA, CLEC4C, PLD4) co-occurs with highly abnormal platelet proteins (CD41, CD62P, CLEC2, CD31), supporting a pDC–platelet doublet rather than a clean pDC."
+47323,L4_GGGTCACTCAAGTGTC,pDC,"pDC
+Strong pDC evidence includes LILRA4, TCF4, IL3RA/CD123, CLEC4C, PLD4, IRF8, and GZMB, with very high pDC pathway activity and CD304/CD123 protein expression. The absence of clear AXL/SIGLEC6 markers and the lower ASDC pathway score favor conventional pDC over ASDC."
+1985,L1_AGGAGGTTCCACTGGG,pDC,"pDC
+Strong pDC identity: LILRA4, TCF4, CLEC4C-associated program, PLD4, GZMB, IL3RA/CD123, SPIB, IRF8, and GZMB are highly characteristic. CD304 and CD123 protein elevation and the strongly positive conventional pDC pathway score further confirm this annotation. JCHAIN, MZB1, and SERPINF1 may reflect an activated or plasmacytoid transitional state, but do not outweigh the canonical pDC signature."
+73283,E2L1_GATTCGATCCTTCTAA,pDC,"Doublet
+Strong pDC markers (GZMB, TCF4, LILRA4, CLEC4C, PLD4, CD304, CD123) coexist with prominent platelet markers (CD41, CD62P, CLEC2, CD61-associated proteins), supporting a pDC–platelet doublet rather than a singlet pDC."
+73970,E2L1_GGCAGTCTCCCTCTTT,pDC,"pDC
+Canonical pDC markers (GZMB, LILRA4, CLEC4C, TCF4, IL3RA, PTGDS, IRF8, SPIB, PLD4), high CD123/CD304, and the strongest conventional pDC pathway score support this annotation. JCHAIN, MZB1, and DERL3 may reflect activation or minor contamination but do not outweigh the overall pDC profile."
+88572,E2L2_TCGTAGAAGATACATG,pDC,"pDC
+Canonical pDC markers (GZMB, TCF4, PLD4, IL3RA/CD123, CLEC4C, LILRA4, IRF8, and SPIB) are strongly expressed, with high CD123/CD304 proteins and the strongest conventional pDC pathway score."
+120147,E2L5_GCCAGTGTCACCTGTC,pDC,"pDC
+Strong pDC identity is supported by LILRA4, GZMB, TCF4, PLD4, IL3RA, CLEC4C, SPIB, IRF8, CD123, and CD304, with the highest pathway score for conventional pDC. Although CD4, platelet-associated markers, and TCL1A appear, the coherent pDC transcriptional and surface-marker program indicates pDC rather than a doublet or alternative dendritic subtype."
+85210,E2L2_GCCATTCAGCAAGCCA,pDC,"pDC
+Strong pDC identity is supported by TCF4, GZMB, IRF8, BCL11A, SPIB, IRF7, IL3RA, LILRA4, PLD4, SLC15A4, CD304, and a high conventional pDC pathway score. Platelet/erythroid protein signals and additional immunoglobulin-associated genes likely reflect contamination or multiplet-related signal, but do not outweigh the coherent pDC program."
+5907,L1_CTCAGGGTCGAAGGAC,pDC,"ASDC
+JCHAIN, MZB1, DERL3, IGLC2, PTGDS, and SERPINF1 indicate an antibody-secreting dendritic cell, while LILRA4, TCF4, GZMB, CD123, and CD304 retain a strong pDC program. This is more consistent with ASDC than conventional pDC."
+1707,L1_AGATCCACATCATGAC,pDC,"Doublet
+Strong pDC transcriptional markers (TCF4, GZMB, PLD4, LILRA4, SPIB, IRF8) co-occur with highly elevated platelet proteins (CD41, CD62P, CLEC2, CD61-related signals) and myeloid markers, supporting a pDC–platelet/mixed-cell doublet rather than a pure pDC."
+149440,E2L7_TTGCTGCCATACCACA,pDC,"pDC  
+Strong pDC markers (GZMB, TCF4, LILRA4, IL3RA/CD123, CLEC4C-associated profile, IRF8, PLD4, and GZMB) and the dominant pDC pathway score outweigh the weaker ASDC signal. Platelet-associated proteins likely reflect ambient RNA/protein or minor contamination."
+44248,L4_CGCGTGATCAAACGAA,pDC,"pDC
+LILRA4, TCF4, PLD4, IL3RA, CLEC4C, GZMB, CD304, and CD123 strongly support plasmacytoid dendritic cell identity, with high conventional pDC pathway activity. JCHAIN, MZB1, and IGKC may reflect a pDC/plasmacytoid secretory program or minor ambient contamination."
+76864,E2L1_TCTGTCGTCAGTGGGA,pDC,"pDC
+Canonical pDC markers (GZMB, GZMB, GZMB? typo avoid) LILRA4, GZMB, TCF4, PLD4, CLEC4C, IL3RA, and IRF8, together with elevated CD123/CD304, strongly support plasmacytoid dendritic cells. ASDC-associated evidence is weaker."
+66932,L5_TTTCACAGTCCTGGGT,pDC,"Doublet
+Strong pDC markers (GZMB, TCF4, LILRA4, IL3RA, CLEC4C, PLD4) coexist with prominent platelet markers/proteins (CD41, CD62P, CLEC2, TPM2, PPP1R14B), supporting a pDC–platelet doublet rather than a singlet pDC or platelet."

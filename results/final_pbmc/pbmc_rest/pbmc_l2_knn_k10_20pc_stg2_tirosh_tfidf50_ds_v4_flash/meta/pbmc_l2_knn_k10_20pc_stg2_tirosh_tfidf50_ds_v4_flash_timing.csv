@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_ds_v4_flash,2026-07-27 15:41:54,2026-07-27 16:07:41,1547.2227153778076,25.787045256296793

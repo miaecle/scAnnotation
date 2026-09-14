@@ -1,0 +1,512 @@
+{
+  "hierarchy_columns": [
+    "ann_level_1",
+    "ann_level_2",
+    "ann_level_3",
+    "cell_type"
+  ],
+  "children": {
+    "immune": {
+      "label": "Immune",
+      "column": "ann_level_1",
+      "children": {
+        "myeloid": {
+          "label": "Myeloid",
+          "column": "ann_level_2",
+          "children": {
+            "macrophages": {
+              "label": "Macrophages",
+              "column": "ann_level_3",
+              "children": {
+                "alveolar macrophage": {
+                  "label": "alveolar macrophage",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "elicited macrophage": {
+                  "label": "elicited macrophage",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "lung macrophage": {
+                  "label": "lung macrophage",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "monocytes": {
+              "label": "Monocytes",
+              "column": "ann_level_3",
+              "children": {
+                "classical monocyte": {
+                  "label": "classical monocyte",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "non-classical monocyte": {
+                  "label": "non-classical monocyte",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "dendritic cells": {
+              "label": "Dendritic cells",
+              "column": "ann_level_3",
+              "children": {
+                "cd1c-positive myeloid dendritic cell": {
+                  "label": "CD1c-positive myeloid dendritic cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "conventional dendritic cell": {
+                  "label": "conventional dendritic cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "plasmacytoid dendritic cell": {
+                  "label": "plasmacytoid dendritic cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "dendritic cell": {
+                  "label": "dendritic cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "mast cells": {
+              "label": "Mast cells",
+              "column": "ann_level_3",
+              "children": {
+                "mast cell": {
+                  "label": "mast cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "lymphoid": {
+          "label": "Lymphoid",
+          "column": "ann_level_2",
+          "children": {
+            "innate lymphoid cell nk": {
+              "label": "Innate lymphoid cell NK",
+              "column": "ann_level_3",
+              "children": {
+                "natural killer cell": {
+                  "label": "natural killer cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "t cell lineage": {
+              "label": "T cell lineage",
+              "column": "ann_level_3",
+              "children": {
+                "cd8-positive, alpha-beta t cell": {
+                  "label": "CD8-positive, alpha-beta T cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "cd4-positive, alpha-beta t cell": {
+                  "label": "CD4-positive, alpha-beta T cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "t cell": {
+                  "label": "T cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "b cell lineage": {
+              "label": "B cell lineage",
+              "column": "ann_level_3",
+              "children": {
+                "plasma cell": {
+                  "label": "plasma cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "b cell": {
+                  "label": "B cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "hematopoietic stem cells": {
+          "label": "Hematopoietic stem cells",
+          "column": "ann_level_2",
+          "children": {
+            "none": {
+              "label": "None",
+              "column": "ann_level_3",
+              "children": {
+                "hematopoietic stem cell": {
+                  "label": "hematopoietic stem cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "epithelial": {
+      "label": "Epithelial",
+      "column": "ann_level_1",
+      "children": {
+        "alveolar epithelium": {
+          "label": "Alveolar epithelium",
+          "column": "ann_level_2",
+          "children": {
+            "at2": {
+              "label": "AT2",
+              "column": "ann_level_3",
+              "children": {
+                "pulmonary alveolar type 2 cell": {
+                  "label": "pulmonary alveolar type 2 cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "at1": {
+              "label": "AT1",
+              "column": "ann_level_3",
+              "children": {
+                "pulmonary alveolar type 1 cell": {
+                  "label": "pulmonary alveolar type 1 cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "airway epithelium": {
+          "label": "Airway epithelium",
+          "column": "ann_level_2",
+          "children": {
+            "basal": {
+              "label": "Basal",
+              "column": "ann_level_3",
+              "children": {
+                "respiratory basal cell": {
+                  "label": "respiratory basal cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "respiratory tract hillock cell": {
+                  "label": "respiratory tract hillock cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "secretory": {
+              "label": "Secretory",
+              "column": "ann_level_3",
+              "children": {
+                "epithelial cell of lower respiratory tract": {
+                  "label": "epithelial cell of lower respiratory tract",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "pulmonary alveolar epithelial cell": {
+                  "label": "pulmonary alveolar epithelial cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "club cell": {
+                  "label": "club cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "bronchial goblet cell": {
+                  "label": "bronchial goblet cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "nasal mucosa goblet cell": {
+                  "label": "nasal mucosa goblet cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "tracheobronchial goblet cell": {
+                  "label": "tracheobronchial goblet cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "multiciliated lineage": {
+              "label": "Multiciliated lineage",
+              "column": "ann_level_3",
+              "children": {
+                "multiciliated columnar cell of tracheobronchial tree": {
+                  "label": "multiciliated columnar cell of tracheobronchial tree",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "multiciliated epithelial cell": {
+                  "label": "multiciliated epithelial cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "rare": {
+              "label": "Rare",
+              "column": "ann_level_3",
+              "children": {
+                "ionocyte": {
+                  "label": "ionocyte",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "pulmonary neuroendocrine cell": {
+                  "label": "pulmonary neuroendocrine cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "brush cell of tracheobronchial tree": {
+                  "label": "brush cell of tracheobronchial tree",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "submucosal gland": {
+          "label": "Submucosal Gland",
+          "column": "ann_level_2",
+          "children": {
+            "submucosal secretory": {
+              "label": "Submucosal Secretory",
+              "column": "ann_level_3",
+              "children": {
+                "acinar cell": {
+                  "label": "acinar cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "mucus secreting cell": {
+                  "label": "mucus secreting cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "endothelial": {
+      "label": "Endothelial",
+      "column": "ann_level_1",
+      "children": {
+        "blood vessels": {
+          "label": "Blood vessels",
+          "column": "ann_level_2",
+          "children": {
+            "ec venous": {
+              "label": "EC venous",
+              "column": "ann_level_3",
+              "children": {
+                "vein endothelial cell": {
+                  "label": "vein endothelial cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "ec arterial": {
+              "label": "EC arterial",
+              "column": "ann_level_3",
+              "children": {
+                "pulmonary artery endothelial cell": {
+                  "label": "pulmonary artery endothelial cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "ec capillary": {
+              "label": "EC capillary",
+              "column": "ann_level_3",
+              "children": {
+                "capillary endothelial cell": {
+                  "label": "capillary endothelial cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "lymphatic ec": {
+          "label": "Lymphatic EC",
+          "column": "ann_level_2",
+          "children": {
+            "lymphatic ec mature": {
+              "label": "Lymphatic EC mature",
+              "column": "ann_level_3",
+              "children": {
+                "endothelial cell of lymphatic vessel": {
+                  "label": "endothelial cell of lymphatic vessel",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "lymphatic ec differentiating": {
+              "label": "Lymphatic EC differentiating",
+              "column": "ann_level_3",
+              "children": {
+                "endothelial cell of lymphatic vessel": {
+                  "label": "endothelial cell of lymphatic vessel",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "lymphatic ec proliferating": {
+              "label": "Lymphatic EC proliferating",
+              "column": "ann_level_3",
+              "children": {
+                "endothelial cell of lymphatic vessel": {
+                  "label": "endothelial cell of lymphatic vessel",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "stroma": {
+      "label": "Stroma",
+      "column": "ann_level_1",
+      "children": {
+        "smooth muscle": {
+          "label": "Smooth muscle",
+          "column": "ann_level_2",
+          "children": {
+            "sm activated stress response": {
+              "label": "SM activated stress response",
+              "column": "ann_level_3",
+              "children": {
+                "smooth muscle cell": {
+                  "label": "smooth muscle cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "none": {
+              "label": "None",
+              "column": "ann_level_3",
+              "children": {
+                "tracheobronchial smooth muscle cell": {
+                  "label": "tracheobronchial smooth muscle cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "smooth muscle fam83d+": {
+              "label": "Smooth muscle FAM83D+",
+              "column": "ann_level_3",
+              "children": {
+                "stromal cell": {
+                  "label": "stromal cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "fibroblast lineage": {
+          "label": "Fibroblast lineage",
+          "column": "ann_level_2",
+          "children": {
+            "fibroblasts": {
+              "label": "Fibroblasts",
+              "column": "ann_level_3",
+              "children": {
+                "alveolar type 1 fibroblast cell": {
+                  "label": "alveolar type 1 fibroblast cell",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "alveolar adventitial fibroblast": {
+                  "label": "alveolar adventitial fibroblast",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "bronchus fibroblast of lung": {
+                  "label": "bronchus fibroblast of lung",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "lung pericyte": {
+                  "label": "lung pericyte",
+                  "column": "cell_type",
+                  "children": {}
+                },
+                "fibroblast": {
+                  "label": "fibroblast",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            },
+            "myofibroblasts": {
+              "label": "Myofibroblasts",
+              "column": "ann_level_3",
+              "children": {
+                "myofibroblast cell": {
+                  "label": "myofibroblast cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        },
+        "mesothelium": {
+          "label": "Mesothelium",
+          "column": "ann_level_2",
+          "children": {
+            "none": {
+              "label": "None",
+              "column": "ann_level_3",
+              "children": {
+                "mesothelial cell": {
+                  "label": "mesothelial cell",
+                  "column": "cell_type",
+                  "children": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+exact                       : 0.4097  ± 0.0144  [95% CI: 0.3806, 0.4387]
+hierarchy_depth             : 1.0919  ± 0.0258  [95% CI: 1.0419, 1.1404]
+hierarchy_level_0_match_pct : 0.3177  ± 0.0148  [95% CI: 0.2903, 0.3468]
+hierarchy_level_1_match_pct : 0.6823  ± 0.0148  [95% CI: 0.6532, 0.7097]
+hierarchy_level_2_match_pct : 0.4097  ± 0.0144  [95% CI: 0.3806, 0.4387]
+hierarchy_depth_0_count     : 197.0000
+hierarchy_depth_1_count     : 169.0000
+hierarchy_depth_2_count     : 254.0000

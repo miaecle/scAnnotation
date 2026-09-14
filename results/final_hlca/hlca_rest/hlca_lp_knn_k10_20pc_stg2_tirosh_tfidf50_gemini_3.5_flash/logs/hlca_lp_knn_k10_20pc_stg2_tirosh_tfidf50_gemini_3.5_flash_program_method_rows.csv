@@ -1,0 +1,721 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_used,recorded_at_unix,prompt_user_message,prompt_system_message,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,json_parse_method,step,phase,cell_idx,cell_barcode,stage1_label,cache_hits
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,798,1004,,,False,1785342697.1447692,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""T cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4743,2104,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,T cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,875,1081,,,False,1785342697.220518,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""club cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4894,2213,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,club cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,875,1081,,,False,1785342697.2285435,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""alveolar macrophage""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4831,2370,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,alveolar macrophage,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,875,1081,,,False,1785342697.2314405,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""alveolar type 1 fibroblast cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4876,2155,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,alveolar type 1 fibroblast cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,921,1128,,,False,1785342697.3086562,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""classical monocyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4933,2453,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,classical monocyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,846,1052,,,False,1785342697.3155549,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""B cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4953,2219,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,B cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,212,903,1115,,,False,1785342697.485853,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""CD1c-positive myeloid dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5081,2396,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD1c-positive myeloid dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,946,1156,,,False,1785342697.493922,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""endothelial cell of lymphatic vessel""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5067,2546,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,endothelial cell of lymphatic vessel,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,907,1116,,,False,1785342697.4992766,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""bronchial goblet cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5165,2346,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,bronchial goblet cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,879,1088,,,False,1785342697.6128194,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""bronchus fibroblast of lung""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5263,2361,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,bronchus fibroblast of lung,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,895,1103,,,False,1785342697.8248405,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""capillary endothelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5454,2417,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,capillary endothelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,876,1086,,,False,1785342697.871282,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""alveolar adventitial fibroblast""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5459,2359,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,alveolar adventitial fibroblast,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,213,863,1076,,,False,1785342697.8725386,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""brush cell of tracheobronchial tree""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5506,2256,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,brush cell of tracheobronchial tree,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1096,1303,,,False,1785342698.0642924,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""conventional dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5680,2887,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,conventional dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,1032,1240,,,False,1785342698.4755762,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6134,2783,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,211,1039,1250,,,False,1785342698.4927557,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""epithelial cell of lower respiratory tract""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6113,2636,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,epithelial cell of lower respiratory tract,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,214,1063,1277,,,False,1785342698.6118994,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""CD4-positive, alpha-beta T cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6189,2759,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,"CD4-positive, alpha-beta T cell",0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1050,1257,,,False,1785342698.651211,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""elicited macrophage""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6293,2764,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,elicited macrophage,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,917,1124,,,False,1785342698.6592772,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""acinar cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6250,2533,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,acinar cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,214,1217,1431,,,False,1785342698.7659895,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""CD8-positive, alpha-beta T cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6350,3139,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,"CD8-positive, alpha-beta T cell",0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,862,1070,,,False,1785342702.0096104,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""hematopoietic stem cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4788,2293,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,hematopoietic stem cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,855,1061,,,False,1785342702.0875778,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""mast cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4771,2274,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,mast cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,876,1082,,,False,1785342702.4282868,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""lung macrophage""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5194,2313,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,lung macrophage,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,883,1091,,,False,1785342702.4341247,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""lung pericyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5123,2356,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,lung pericyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,901,1107,,,False,1785342702.4389007,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""ionocyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5207,2334,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,ionocyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,856,1063,,,False,1785342702.5176725,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""mesothelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5031,2367,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,mesothelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,904,1113,,,False,1785342702.9717238,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""mucus secreting cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5477,2332,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,mucus secreting cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,750,960,,,False,1785342703.0666149,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""plasmacytoid dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4573,1954,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,plasmacytoid dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,947,1156,,,False,1785342703.1228383,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""multiciliated epithelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5509,2405,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,multiciliated epithelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,216,899,1115,,,False,1785342703.13273,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""multiciliated columnar cell of tracheobronchial tree""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5632,2281,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,multiciliated columnar cell of tracheobronchial tree,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,876,1085,,,False,1785342703.2146876,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""nasal mucosa goblet cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5341,2178,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,nasal mucosa goblet cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1147,1354,,,False,1785342703.3091724,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""fibroblast""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6163,3098,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,fibroblast,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,1052,1262,,,False,1785342703.6495714,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""myofibroblast cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5824,2811,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,myofibroblast cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,986,1195,,,False,1785342703.7509284,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""non-classical monocyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5686,2502,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,non-classical monocyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1113,1320,,,False,1785342703.8295236,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""natural killer cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5953,2791,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,natural killer cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,930,1139,,,False,1785342703.9132516,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""pulmonary alveolar epithelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5300,2355,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pulmonary alveolar epithelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,211,883,1094,,,False,1785342703.9175105,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""pulmonary alveolar type 1 cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5265,2311,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pulmonary alveolar type 1 cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,211,951,1162,,,False,1785342704.0076554,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""pulmonary alveolar type 2 cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5348,2422,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pulmonary alveolar type 2 cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,1026,1235,,,False,1785342704.617679,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""pulmonary artery endothelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5851,2798,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pulmonary artery endothelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,1363,1569,,,False,1785342705.2365923,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""plasma cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6760,3466,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,plasma cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,888,1096,,,False,1785342707.195505,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""respiratory basal cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5107,2341,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,respiratory basal cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,876,1085,,,False,1785342707.444036,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""pulmonary neuroendocrine cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5434,2275,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pulmonary neuroendocrine cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,848,1058,,,False,1785342707.553288,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""respiratory tract hillock cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5122,2253,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,respiratory tract hillock cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,213,854,1067,,,False,1785342707.66367,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""tracheobronchial smooth muscle cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4691,2367,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,tracheobronchial smooth muscle cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,823,1030,,,False,1785342707.6929123,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""smooth muscle cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5257,2314,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,smooth muscle cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,212,904,1116,,,False,1785342707.712091,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""tracheobronchial goblet cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5194,2258,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,tracheobronchial goblet cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,823,1031,,,False,1785342707.9822657,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""vein endothelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4915,2233,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,vein endothelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1056,1263,,,False,1785342708.2180297,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in lung parenchyma.
+  2. The most commonly confused neighboring cell types in lung parenchyma.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in lung parenchyma.
+Return only the JSON.
+
+A single cell in lung parenchyma was annotated in a first pass as: ""stromal cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5778,2862,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,stromal cell,0

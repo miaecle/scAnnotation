@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_qwen3.7_plus,2026-08-12 19:25:16,2026-08-12 19:53:35,1698.173700094223,28.302895001570384

@@ -1,0 +1,466 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,audio_input_tokens,audio_output_tokens,recorded_at_unix,prompt_user_message,prompt_system_message,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,json_parse_method,step,phase,cell_idx,cell_barcode,stage1_label
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1130,1336,0,322,0,0,1786957969.4469097,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B memory""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,12939,2322,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,B memory
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,1095,1303,0,265,0,0,1786957970.7538714,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD4 CTL""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,14245,2321,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD4 CTL
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,210,1506,1716,0,516,0,0,1786957971.176569,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD8 Proliferating""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,14659,2696,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD8 Proliferating
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,1439,1647,0,473,0,0,1786957971.4351907,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD8 Naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,14922,2701,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD8 Naive
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1550,1756,0,516,0,0,1786957972.239948,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""MAIT""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,15715,2815,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,MAIT
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1418,1625,0,372,0,0,1786957972.6261778,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD8 TEM""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16103,2966,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD8 TEM
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1455,1661,0,488,0,0,1786957972.6317813,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""ILC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16107,2693,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,ILC
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1465,1672,0,493,0,0,1786957972.8918247,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD4 TEM""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16380,2870,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD4 TEM
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,1399,1607,0,494,0,0,1786957973.624498,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD8 TCM""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,17102,2565,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD8 TCM
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1044,1250,0,300,0,0,1786957973.7090468,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""Doublet""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,17186,2089,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,Doublet
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1758,1964,0,842,0,0,1786957974.7997751,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,18292,2599,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,B naive
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1626,1833,0,773,0,0,1786957975.0315263,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""HSPC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,18507,2527,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,HSPC
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1851,2057,0,871,0,0,1786957975.2126465,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B intermediate""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,18706,2929,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,B intermediate
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,2106,2313,0,1034,0,0,1786957975.9827473,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD14 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,19474,3033,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD14 Mono
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1814,2021,0,1092,0,0,1786957976.0899649,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,19581,2046,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD16 Mono
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,1945,2153,0,925,0,0,1786957976.096993,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD4 TCM""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,19586,2877,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD4 TCM
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1974,2180,0,1107,0,0,1786957976.538481,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""ASDC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,20032,2457,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,ASDC
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,210,1892,2102,0,891,0,0,1786957976.6546135,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD4 Proliferating""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,20144,2903,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD4 Proliferating
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,2100,2308,0,1094,0,0,1786957977.2812068,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD4 Naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,20772,2865,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD4 Naive
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,2116,2323,0,1330,0,0,1786957978.1735957,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""Eryth""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,21650,2351,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,Eryth
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,205,1231,1436,0,402,0,0,1786957981.199397,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""NK""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,11752,2265,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,NK
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,209,1338,1547,0,437,0,0,1786957984.1624057,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""NK Proliferating""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,13407,2545,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,NK Proliferating
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,1721,1929,0,703,0,0,1786957986.5674732,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""Plasmablast""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,15131,3038,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,Plasmablast
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1506,1713,0,382,0,0,1786957987.0138571,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""cDC2""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,14121,2989,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,cDC2
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1608,1814,0,798,0,0,1786957988.7999933,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""Treg""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16173,2257,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,Treg
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1821,2027,0,1034,0,0,1786957988.99579,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""Platelet""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16755,2275,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,Platelet
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1757,1963,0,810,0,0,1786957990.5342927,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""dnT""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16909,2745,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,dnT
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,208,2092,2300,0,1131,0,0,1786957990.5423057,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""NK_CD56bright""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,19365,2592,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,NK_CD56bright
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1686,1892,0,645,0,0,1786957990.7697852,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""gdT""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,17060,2866,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,gdT
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1734,1940,0,855,0,0,1786957990.8288548,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""pDC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,16028,2451,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pDC
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1708,1915,0,854,0,0,1786957991.8455968,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""cDC1""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,19213,2351,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,cDC1

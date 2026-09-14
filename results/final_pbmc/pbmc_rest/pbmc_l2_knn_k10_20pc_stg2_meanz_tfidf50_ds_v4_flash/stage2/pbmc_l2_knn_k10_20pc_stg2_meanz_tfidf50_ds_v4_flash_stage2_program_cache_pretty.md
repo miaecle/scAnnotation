@@ -1,0 +1,1381 @@
+# Stage-2 Precomputed Programs
+
+- tissue: PBMC
+- n_program_genes: 50
+- n_cached_cell_types: 31
+
+## asdc
+
+### ASDC
+
+Description: Atypical dendritic cells expressing AXL and SIGLEC6, involved in immune regulation and antigen presentation.
+
+Genes:
+- AXL, SIGLEC6, IL3RA, CD1C, FCER1A, CLEC10A, CD36, MARCKS, LCP1, ANXA1, ANXA2, S100A4
+- S100A6, VIM, LST1, AIF1, CCL22, CCL17, CCR7, CD83, CD86, HLA-DRA, HLA-DPA1, HLA-DPB1
+- HLA-DMA, HLA-DMB, CD74, CTSS, CST3
+
+### CD14+ Monocytes
+
+Description: Classical monocytes expressing CD14, involved in innate immunity and inflammation.
+
+Genes:
+- CD14, FCGR3A, LYZ, S100A8, S100A9, S100A12, MNDA, CSTA, CST3, FCN1, CD68, MS4A6A
+- MS4A4A, CD163, CD36, MAFB, ETS2, CEBPB, IRF8, SPI1, CTSS, CTSL
+
+### cDC2
+
+Description: Conventional type 2 dendritic cells, key antigen-presenting cells that prime CD4+ T cell responses.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, ITGAX, CD1E, HLA-DQA1, HLA-DQB1, HLA-DRA, CD74, CCL22, CCL17, CCR7
+- CD83, CD86, IL1R2, IL6, TNF, CSF2RB, CSF2RA, FLT3, IRF4, KLF4, ZNF366, BCL11A
+- E2F2
+
+### pDC
+
+Description: Plasmacytoid dendritic cells specialized in type I interferon production in response to viral infection.
+
+Genes:
+- LILRA4, CLEC4C, PLD4, SCT, JCHAIN, IL3RA, E2F2, GZMB, IRF7, IRF8, IRF9, TLR7
+- TLR9, MYD88, PACSIN1, ZEB2, ID2, TCF4, BCL11A, SPIB, RUNX2, NR4A1, NR4A2, NR4A3
+
+## b intermediate
+
+### CD4+ T cells
+
+Description: CD4+ T cells are helper T cells expressing CD4 and CD3, coordinating adaptive immune responses through cytokine secretion and B cell help.
+
+Genes:
+- CD3E, CD3D, CD3G, CD4, CD28, IL7R, CCR7, LEF1, TCF7, SELL, CCR6, CCR4
+- CCR5, CXCR3, CXCR5, IL2RA, FOXP3, IL17A, IFNG, TNF, IL4, IL10, BCL6, BLK
+- ICOS, GATA3, RORC, TBX21, MAF, STAT1
+
+### Memory B cells
+
+Description: Memory B cells are antigen-experienced B cells that express CD27 and typically have switched immunoglobulin isotypes, providing rapid recall responses.
+
+Genes:
+- MS4A1, CD19, PAX5, CD27, CD80, CD86, IGHG1, IGHG2, IGHG3, IGHG4, IGHA1, IGHA2
+- IGHE, JCHAIN, AICDA, BCL6, CD38, CD44, CXCR5, TNFRSF13B, TNFRSF13C, BACH2, MYB, IRF4
+- BCL2, MCL1, CCR6, CD74, HLA-DRA, HLA-DPB1
+
+### NK cells
+
+Description: NK cells are innate lymphoid cells that mediate cytotoxicity and cytokine production, expressing NKG7, GNLY, and PRF1, and lacking CD3 and CD19.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, KLRD1, KLRC1, KLRK1, NKG2D, CD56, NCAM1
+- CD16, FCGR3A, TYROBP, KIR2DL1, KIR2DL2, KIR3DL1, KIR3DL2, CST7, SH2D1B, IL2RB, IL12RB2, IFNG
+- TNF, CCL3, CCL4, XCL1, CTSW, FGFBP2
+
+### Naive B cells
+
+Description: Naive B cells are resting B cells that have not yet encountered antigen, expressing surface IgM and IgD, and lacking CD27.
+
+Genes:
+- MS4A1, CD19, PAX5, TCL1A, IGHM, IGHD, FCER2, CD24, CD38, CD79A, CD79B, BANK1
+- BLK, FCRL1, CD72, CD37, CD74, HLA-DRA, HLA-DPB1, HLA-DPA1, HLA-DMA, HLA-DMB, EIF1, LTB
+- SYNE2, VPREB3, IGHMBP3, MEF2C, SWAP70, TCF4
+
+### Plasma cells
+
+Description: Plasma cells are antibody-secreting cells with high expression of CD38, SDC1, and MZB1, lacking surface B cell receptor and most B cell markers.
+
+Genes:
+- SDC1, CD38, MZB1, XBP1, JCHAIN, IGLL5, PRDM1, IRF4, IL6R, TNFRSF17, CD138, CXCR4
+- TNFRSF13B, POU2AF1, SPIB, MYBL1, MAP3K14, ENTPD1, CD27, CD28, CD81, CD52, CD37, CD44
+- FCRL5, FCRL3, CRIP1, SSR4, SLAMF7, HSP90B1
+
+## b memory
+
+### IgM memory B cell
+
+Description: Non-switched memory B cells retaining IgD and IgM expression, with CD27 and low CD38.
+
+Genes:
+- CD27, MS4A1, IGHD, IGHM, CXCR3, CD1D, CXCR4, CR2, CD40, BCL2, TBX21, CD19
+- POU2AF1, PAX5, EBF1, IRF8, MYC, CD83, BATF, JUNB, FOS, NR4A1, DUSP2, CCR6
+- S1PR1, S1PR4, GPR183, IL4R, IL6R, TNFRSF13C, TNFRSF13B, TNFRSF17, CD86, CD74, HLA-DRA, HLA-DPB1
+- HLA-DQB1, B2M, CD24, CD38
+
+### Naive B cell
+
+Description: Antigen-inexperienced B cells expressing high IgD and IgM, with strong CD24 and CD38, and low or absent CD27.
+
+Genes:
+- IGHD, IGHM, CD24, CD38, CD22, FCER2, CD19, MS4A1, CR2, CD40, BCL2, PAX5
+- EBF1, IRF8, POU2AF1, CD83, BATF, JUNB, FOS, NR4A1, DUSP2, CCR6, CXCR4, S1PR1
+- S1PR4, GPR183, IL4R, IL6R, TNFRSF13C, TNFRSF13B, TNFRSF17, CD86, CD74, HLA-DRA, HLA-DPB1, HLA-DQB1
+- B2M, CD27
+
+### Plasma cell
+
+Description: Antibody-secreting plasma cells characterized by high CD38 and SDC1, with MZB1, XBP1, and JCHAIN.
+
+Genes:
+- CD38, SDC1, MZB1, XBP1, JCHAIN, CD27, CD19, MS4A1, POU2AF1, PAX5, EBF1, IRF8
+- MYC, CD83, BATF, JUNB, FOS, NR4A1, DUSP2, CCR6, CXCR4, S1PR1, S1PR4, GPR183
+- IL4R, IL6R, TNFRSF13C, TNFRSF13B, TNFRSF17, CD86, CD74, HLA-DRA, HLA-DPB1, HLA-DQB1, B2M, CD24
+- IGHA1, IGHG1, IGHG3, IGHM
+
+### Switched memory B cell
+
+Description: Class-switched memory B cells expressing CD27 and switched heavy chain isotypes such as IgG or IgA, with high levels of AICDA and BCL6.
+
+Genes:
+- CD27, MS4A1, CXCR5, BCL6, IGHG1, IGHG3, IGHA1, AICDA, CR2, CD40, BCL2, TBX21
+- SUGCT, CD19, POU2AF1, PAX5, EBF1, IRF8, MYC, CD83, BATF, JUNB, FOS, NR4A1
+- DUSP2, CCR6, CXCR4, S1PR1, S1PR4, GPR183, IL4R, IL6R, TNFRSF13C, TNFRSF13B, TNFRSF17, CD86
+- CD74, HLA-DRA, HLA-DPB1, HLA-DQB1, B2M
+
+## b naive
+
+### B memory
+
+Description: Memory B cells are antigen-experienced cells that persist long-term, capable of rapid response upon re-encounter, with surface markers including CD27 and elevated costimulatory molecules.
+
+Genes:
+- CD27, CD19, MS4A1, CD79A, HLA-DRA, CD74, CD86, CD80, ICOSLG, CD83, CD95, FAS
+- BCL2, CD38, ENTPD1, CD39, CXCR5, CCR6, CD44, CD21, CR2, CD24, CD37, CD72
+- FCRL3, FCRL5, TBX21, EOMES, ZEB2, PRDM1, IRF4, XBP1, MKI67, CD40, CD40LG, CD70
+- TNFSF11, TNFRSF8, IL21R, ICOS, PDCD1, CTLA4, TIGIT, LAG3, HAVCR2
+
+### B naive
+
+Description: Naive B cells are quiescent lymphocytes that have not yet encountered antigen, expressing high levels of surface IgD and CD20, with markers of B-cell identity and homing to lymph nodes.
+
+Genes:
+- MS4A1, CD79A, CD79B, PAX5, BACH2, IGHD, CD37, FCER2, TCL1A, VPREB3, IGLL1, CD19
+- CD22, CD72, FCRL1, FCRL2, CD74, HLA-DRA, PTPRC, CD24, IL4R, CD40, CD80, CD86
+- ICOSLG, CD27, CD38, CD44, CR2, CXCR5, CCR7, SELL, BCL6, EBF1, IKZF1, IRF4
+- IRF8, POU2F2, SPIB, NFATC1, BCL11A, LEF1, TCF3, TCF4, E2F1, MYC, CCND2, CDK6
+- BCL2
+
+### CD4 naive T
+
+Description: CD4+ naive T cells are unprimed helper T cells that circulate through lymph nodes, expressing CD45RA, CD62L, and CCR7, with a quiescent phenotype.
+
+Genes:
+- CD4, CD3D, CD3E, CD3G, IL7R, SELL, CCR7, LEF1, TCF7, MAL, RGS1, PTPRC
+- CD28, CTLA4, ICOS, CD27, CD40LG, LTB, LTA, TNFRSF1A, TNFRSF1B, TNFSF14, CD5, CD6
+- CD2, CD58, CD44, CD97, CD99, CD100, SEMA4D, CD81, CD82, CD151, CD53, CD59
+- CD73, NT5E, ADA, LDHA, PFKFB3, ENO1
+
+### Plasma cells
+
+Description: Plasma cells are terminally differentiated antibody-secreting cells with high expression of CD38, CD138, and a robust unfolded protein response machinery for antibody production.
+
+Genes:
+- SDC1, CD38, MZB1, XBP1, PRDM1, JCHAIN, IGHA1, IGHG1, IGL, IGK, TNFRSF17, FKBP11
+- SEC63, SSR4, SPCS1, SPCS2, SPCS3, DERL1, DERL2, ERLEC1, OS9, EDEM1, EDEM2, MANF
+- PDIA4, PDIA6, ERP29, HYOU1, HSPA5, HSP90B1, BAG2, DNAJB11, DNAJC3, CALR, CANX, CALR3
+- UGGT1, UGGT2, SEC61A1, SEC61B, SEC62, SEC61G, SRP14, SRP54, SRP68, SRP72, SRPRB, SRPR
+- TRAM1, TRAM2
+
+## cd14 mono
+
+### Classical CD14+ Monocyte
+
+Description: CD14+CD16- classical monocytes are pro-inflammatory phagocytes that circulate in blood and express high levels of CD14 and CCR2.
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, VCAN, FCN1, CSTA, CST3, PLBD1, MNDA, TYROBP, FCGR2A
+- FCGR2B, CSF1R, CCR2, NCF1, NCF2, CTSS, CTSB, CD68, HLA-DRA, CD33, FOLR3, SERPINA1
+- CTSD, LST1, RHOC, MAFB
+
+### Intermediate CD14+CD16+ Monocyte
+
+Description: CD14+CD16+ intermediate monocytes are a transitional subset with mixed pro- and anti-inflammatory properties and high antigen presentation capacity.
+
+Genes:
+- CD14, FCGR3A, HLA-DRA, HLA-DRB1, CD86, CD74, ITGAM, ITGAX, ITGB2, CX3CR1, CCR2, SIGLEC10
+- CLEC5A, TLR2, TLR4, TNF, IL1B, IL6, CCL3, CCL4, CDKN1C, FCER1G, FCGR2A, FCGR2B
+- CD36
+
+### Myeloid Dendritic Cell (cDC2)
+
+Description: CD1c+ myeloid dendritic cells (cDC2) are professional antigen-presenting cells specialized in activating CD4+ T cells.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, ITGAX, HLA-DRA, HLA-DRB1, CD74, CD86, CD40, FLT3, CCR7, LILRB2
+- SIGLEC1, IRF4, IRF8, CLEC4A, CLEC4C, ITGAM, ITGB2, FCGR2B, CD33, CD1D, CLEC7A, TLR8
+- TLR7
+
+### Non-classical CD16+ Monocyte
+
+Description: CD14lowCD16+ non-classical monocytes are patrolling cells that survey the endothelium and produce anti-inflammatory cytokines.
+
+Genes:
+- FCGR3A, CX3CR1, CD36, ITGAL, LST1, RHOC, MAFB, TCF7L2, PTPRC, CD58, ERO1A, IFITM3
+- IFITM2, S100A12, S100A4, S100A6, S100A10, ANXA1, ANXA2, ANXA5, PLAC8, CD82, FCER1G, FCGR2A
+
+## cd16 mono
+
+### Classical CD14+ Monocytes
+
+Description: Classical CD14+ monocytes are phagocytic cells that play a key role in innate immunity and inflammation, characterized by high CD14 and low CD16 expression.
+
+Genes:
+- CD14, S100A8, S100A9, LYZ, FCN1, CST3, CLEC7A, CD163, MNDA, CCL2, CD93, CLEC4E
+- CD8A, CD8B, GNG7, PLTP, AIM2, AQP9, FPR1, MEGF9, TLR2, TLR4, IRF8, CEBPB
+- MAFB, CSF1R, CX3CR1, CCR2, CCL7, CXCL8
+
+### Intermediate Monocytes
+
+Description: Intermediate monocytes are a transitional subset expressing both CD14 and CD16, with enhanced antigen presentation and pro-inflammatory cytokine production.
+
+Genes:
+- CD14, FCGR3A, ITGAX, HLA-DRA, CD86, TFRC, FCGR1A, ITGAM, LGMN, LILRB2, LILRB4, LILRA5
+- SPI1, IRF4, KLHL6, BATF3, BCL6, MERTK, TIMP1, MMP9, SOD2, IL6, TNF, CXCL9
+- CXCL10, CCL19, CCL20, CD209, NRP1, IL1B
+
+### Myeloid Dendritic Cells (CD1c+)
+
+Description: Myeloid dendritic cells (CD1c+) are antigen-presenting cells that prime T cells and initiate adaptive immune responses, characterized by high CD1C and FCER1A expression.
+
+Genes:
+- FCER1A, CD1C, CLEC10A, THBD, CLEC9A, CLEC4A, ITGAX, HLA-DRA, CD86, CADM1, CD302, CD1E
+- CD207, CLEC4C, LILRA4, IL3RA, TCF4, IRF8, FLT3, AZN, FSTL3, BCL6, BATF3, ID2
+- MYCL, EBF1, SPIB, PPARG, RAB32, SIGLEC6
+
+### Natural Killer Cells
+
+Description: Natural killer cells are cytotoxic lymphocytes that can kill infected or tumor cells without prior sensitization, marked by high NKG7 and GNLY expression.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMA, GZMB, GZMH, KLRD1, KLRK1, NCR1, FCGR3A, KIR2DL1, KIR3DL1
+- KIR2DS4, KIR3DL2, CTSW, FGFBP2, S1PR5, FCER1G, TYROBP, KLRF1, CD244, CD247, IL2RB, IL12RB2
+- CCL5, XCL1, XCL2, CD52, GZMK, PRF1
+
+### Non-classical CD16+ Monocytes
+
+Description: Non-classical CD16+ monocytes are patrolling monocytes that survey the endothelium and promote tissue repair, with high expression of FCGR3A and low CD14.
+
+Genes:
+- FCGR3A, LILRB2, LILRA3, LST1, PSAP, RHOC, CSTA, S100A4, MS4A7, CDKN1C, LILRB5, LILRB1
+- FCGR2C, TTC38, GPR107, ZNF703, SLC9A9, RAB7B, LRP2BP, CCDC141, P2RY13, SRGAP2, GIMAP7, GIMAP4
+- TGFBI, CCNC, COBLL1, ARHGAP24, MYO1F, ST3GAL6
+
+## cd4 ctl
+
+### CD4+ GZMB+ CTL
+
+Description: CD4+ cytotoxic T cells with high expression of granzyme B and perforin, mediating potent cytotoxic activity.
+
+Genes:
+- GZMB, PRF1, NKG7, GNLY, CCL4, CCL3, GZMA, GZMH, GZMM, FGFBP2, CST7, MYOM2
+- KLRG1, KLRD1, KLRC1, KLRB1, KLRF1, CD2, CD7, B3GAT1, CD4, ITGAL, ITGB2, STAT1
+- STAT4, TBX21, EOMES, ZEB2, ID2, RUNX3, TCF7, IL18R1, IL12RB2, IFNG, CCL5, CXCR3
+
+### CD4+ GZMK+ CTL
+
+Description: CD4+ cytotoxic T cells with high expression of granzyme K, exhibiting a less cytotoxic but memory-associated cytotoxic potential.
+
+Genes:
+- GZMK, GZMA, GZMH, GZMM, KLRG1, CCL4, CCL3, NKG7, CST7, FGFBP2, CD4, CD7
+- CD2, KLRB1, KLRF1, IL7R, CD28, TCF7, SELL, CCR7, IL2, IFNG, TNF, LTA
+- LTB, CCL5, CXCR3, STAT1, TBX21, EOMES
+
+### CD8+ Effector T cells
+
+Description: CD8+ T cells with cytotoxic phenotype, expressing high levels of granzymes and perforin, typically effector or effector memory.
+
+Genes:
+- CD8A, CD8B, GZMB, PRF1, NKG7, GNLY, CCL4, CCL3, GZMA, GZMH, GZMM, FGFBP2
+- CST7, MYOM2, KLRG1, KLRD1, KLRC1, KLRB1, KLRF1, CD2, CD7, B3GAT1, ITGAL, ITGB2
+- TBX21, EOMES, ZEB2, ID2, RUNX3, IFNG, TNF, CCL5, CX3CR1, FCGR3A
+
+### NK cells
+
+Description: Natural killer cells, innate lymphoid cells with cytotoxic functions, expressing NK cell receptors and cytotoxic molecules without TCR rearrangement.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, KLRD1, KLRC1, KLRK1, KLRB1, KLRF1, NCR1
+- NCR3, FCGR3A, CD16, NCAM1, CD2, CD7, CST7, MYOM2, FGFBP2, CCL4, CCL3, XCL1
+- XCL2, IL2RB, IL12RB2, TBX21, EOMES, ZEB2, ID2, RUNX3
+
+### NKT cells
+
+Description: Invariant natural killer T cells, expressing both T cell receptor and NK cell markers, capable of rapid cytokine production.
+
+Genes:
+- CD3D, CD3E, CD3G, CD4, CD8A, CD8B, NKG7, GNLY, GZMB, GZMA, KLRD1, KLRC1
+- KLRK1, KLRB1, KLRF1, NCAM1, CD2, CD7, CST7, MYOM2, FGFBP2, CCL4, CCL3, XCL1
+- XCL2, IL2, IFNG, TNF, LTA, LTB, CCL5, CXCR3, TBX21, EOMES
+
+## cd4 naive
+
+### CD14 Monocyte
+
+Description: Classical CD14+ monocytes with high expression of pattern recognition receptors (CD14, TLR2, TLR4), phagocytosis-related molecules (FCN1, CD68), and antimicrobial S100 proteins.
+
+Genes:
+- CD14, FCGR3A, LYZ, S100A8, S100A9, S100A12, VCAN, FCN1, CST3, CTSS, CTSD, IFITM3
+- CFP, LGALS3, CD68, CD163, MNDA, PSAP, LST1, AIF1, FTL, FTH1, CLEC7A, TLR2
+- TLR4, CD33, CD86, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1
+
+### CD4 Central Memory
+
+Description: Central memory CD4+ T cells balancing lymph node homing markers (CCR7, SELL) with memory-associated genes like ANXA1 and KLRB1, and anti-apoptotic BCL2 family members.
+
+Genes:
+- CCR7, SELL, IL7R, TCF7, LEF1, ANXA1, KLRB1, GPR183, LMNA, RHOH, KLF2, FOXP1
+- MYO1F, ARHGAP26, WAS, SYNGR1, CREM, PDE3B, S1PR1, TSC22D3, EGR3, MYC, BCL2, MCL1
+- TRAF1, BIRC3, TNFSF8, TNFRSF4, TNFRSF25, CD27
+
+### CD4 Effector Memory
+
+Description: Effector memory CD4+ T cells with cytotoxic potential, expressing granzymes, perforin, and homing markers (CXCR3, CCR5) for peripheral tissue migration.
+
+Genes:
+- PRF1, GZMB, GNLY, NKG7, GZMK, CCL5, CXCR3, CCR5, FASLG, EOMES, TBX21, ZEB2
+- ID2, LYST, RAB27A, SYTL3, ABCB1, CD44, ITGA1, ITGAE, SEMAPHORIN, CXCR6, KLRD1, KLRG1
+- CD57
+
+### CD4 Naive
+
+Description: Naive CD4+ T cells expressing CCR7 and SELL, with high levels of ribosomal proteins and TCF7/LEF1, indicative of quiescence and lymph node homing.
+
+Genes:
+- CCR7, SELL, TCF7, LEF1, IL7R, MAL, RPL3, RPS18, RPL13A, RPS27, RPL8, RPS25
+- RPL21, RPS10, RPL31, RPS23, RPL6, RPS28, RPLP0, RPS20, RPL7, RPS16, RPL10A, RPS8
+- RPL23A, RPS4X, RPL27A, RPS11, RPL17, RPS19, RPL39, RPS14, RPL37A, RPS24, RPL35, RPS13
+- RPL29, RPS27A, RPL19, RPS6
+
+### CD8 Naive
+
+Description: Naive CD8+ T cells with lymph node homing molecules (CCR7, SELL), CD8 coreceptor, and GIMAP family GTPases regulating T cell survival.
+
+Genes:
+- CCR7, SELL, TCF7, LEF1, IL7R, CD8A, CD8B, GIMAP1, GIMAP4, GIMAP5, GIMAP6, GIMAP7
+- GIMAP8, KLF2, S1PR1, LTB, TNFSF14, MYC, BCL2, MCL1, LRRN3
+
+## cd4 proliferating
+
+### CD4 Memory
+
+Description: Antigen-experienced CD4+ T cells with effector or central memory phenotype, capable of rapid cytokine production and cytotoxic effector molecule expression.
+
+Genes:
+- IL7R, CD44, S100A4, CCL5, ANXA1, GZMK, GZMA, KLRG1, EOMES, TBX21, PRDM1, IFNG
+- TNF, CCL4, CCL3, XCL1, XCL2, CST7, NKG7, GZMH, FGFBP2, SPON2, FCGR3A, GNLY
+- HLA-DRB1, HLA-DRA, CD74, CD69, ITGAE, ITGAL
+
+### CD4 Naive
+
+Description: Resting, antigen-inexperienced CD4+ T cells expressing lymph node homing receptors and maintaining a quiescent state.
+
+Genes:
+- CCR7, SELL, TCF7, LEF1, MAL, IL7R, CD27, CD28, ETS1, MYC, LDHB, FOXP1
+- KLF2, PIK3IP1, KLRG1, GPR183, S1PR1, CAMK4, RGS1, RGS2, BCL2, S100A10, CD59, ARL4C
+- NELL2, AHNAK, FCHO2, TSTD1, ZFP36L2, PPP3CA
+
+### CD4 Proliferating
+
+Description: Activated CD4+ T cells undergoing cell cycle progression, characterized by high expression of proliferation markers and DNA replication genes.
+
+Genes:
+- STMN1, MKI67, PCNA, TYMS, TOP2A, CCNB2, CDK1, AURKA, BIRC5, CENPF, KIF20B, PLK1
+- CDC20, UHRF1, MCM2, MCM3, MCM4, MCM5, MCM6, MCM7, PCLAF, RRM1, RRM2, TK1
+- CDKN3, CKS1B, CKS2, HIST1H4C, HIST1H1B, HIST1H2BM
+
+### CD8 Proliferating
+
+Description: Activated CD8+ T cells undergoing clonal expansion, expressing both proliferation markers and cytotoxic effector molecules.
+
+Genes:
+- MKI67, TOP2A, STMN1, PCNA, TYMS, CCNB2, CDK1, AURKA, BIRC5, CENPF, KIF20B, PLK1
+- CDC20, UHRF1, MCM2, MCM3, MCM4, MCM5, MCM6, MCM7, PCLAF, RRM1, RRM2, TK1
+- CD8A, CD8B, GZMK, GZMH, PRF1, NKG7
+
+### NK cells
+
+Description: Innate lymphoid cells mediating cytotoxicity and cytokine production, characterized by high expression of granzymes, perforin, and killer cell lectin-like receptors.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMH, GZMA, KLRD1, KLRK1, KLRF1, KLRB1, KLRC1, KLRG1
+- FCGR3A, FGFBP2, SPON2, CST7, CTSW, CCL3, CCL4, XCL1, XCL2, IL2RB, IL21R, CD247
+- CD3E, CD7, CD16A, CD56, NCAM1, CD94
+
+## cd4 tcm
+
+### CD4 Naive
+
+Description: Naive CD4+ T cells, not yet exposed to antigen, high expression of CCR7 and CD62L for lymph node recirculation.
+
+Genes:
+- CCR7, SELL, IL7R, TCF7, LEF1, FOXP1, BCL2, S1PR1, CD28, CD27, MYB, CALM1
+- C6orf48, EIF3L, PASK, ARL11, TRAF3, RPL13, RPL32, RPS18, CD4, CD3E, NOSIP, RIPOR2
+
+### CD4 TCM
+
+Description: CD4+ central memory T cells, characterized by expression of CCR7 and CD62L, enabling lymph node homing.
+
+Genes:
+- CCR7, SELL, IL7R, CD27, TCF7, LEF1, BCL2, MYB, MAL, ANXA1, OXNAD1, PASK
+- EIF3L, C6orf48, CALM1, ARL11, TRAF3, RPL13, RPL32, RPS18, CD4, CD3E
+
+### CD4 TEM
+
+Description: CD4+ effector memory T cells, lacking lymph node homing receptors, expressing tissue homing and effector molecules.
+
+Genes:
+- CCR5, CXCR3, CCR4, CCR6, IL7R, KLRG1, GZMK, GZMA, PRF1, IFNG, TNF, CST7
+- NKG7, GNLY, EOMES, TBX21, ZEB2, ID2, CD27, CD28, IL2RB, CD4, CD3E
+
+### CD4 Treg
+
+Description: CD4+ regulatory T cells, expressing FOXP3 and IL2RA, suppress immune responses.
+
+Genes:
+- FOXP3, IL2RA, CTLA4, TIGIT, IKZF2, IKZF4, BATF, NT5E, TNFRSF4, TNFRSF18, LAT, IL7R
+- CD27, CCR4, CCR8, GATA3, LRRC32, FCRL3, HAVCR2, LAG3, PDCD1, CD4, CD3E
+
+### CD8 TCM
+
+Description: CD8+ central memory T cells, similar to CD4 TCM but with CD8 coreceptor, capable of robust proliferation upon recall.
+
+Genes:
+- CD8A, CD8B, CCR7, SELL, IL7R, CD27, TCF7, LEF1, BCL2, MYB, MAL, ANXA1
+- OXNAD1, PASK, EIF3L, C6orf48, CALM1, ARL11, TRAF3, RPL13, RPL32, RPS18, CD3E
+
+## cd4 tem
+
+### CD4 TCM
+
+Description: CD4+ central memory T cells, expressing lymph node homing markers CCR7 and CD62L, with high proliferative capacity.
+
+Genes:
+- CCR7, SELL, CD27, CD28, ICOS, OX40, 4-1BB, IL7R, TCF7, LEF1, FOXP1, MYB
+- BACH2, ID3, ETV6, RUNX3, STAT5A, STAT5B, IL2RA, IL2RB, IL2RG, IL4R, IL6R, IL12RB1
+- IL12RB2, IL18R1, IFNGR1, IFNGR2, TNFRSF4, TNFRSF9, TNFRSF18, TNFRSF25, CD40LG, FASLG, LTB, LTA
+- TNF, TNFSF8, TNFSF9, TNFSF14, CD83, CD86, HLA-DRA, HLA-DRB1, CD69, CD44, S100A4, KLRB1
+- GZMK, GZMA
+
+### CD4 TEM_Th1
+
+Description: CD4+ effector memory T cells with Th1 polarization, characterized by expression of IFNG, TBX21, and CXCR3, and cytotoxic molecules.
+
+Genes:
+- IFNG, TBX21, CXCR3, CCR5, GZMB, PRF1, IL12RB2, STAT4, IL18R1, HLA-DRA, HLA-DRB1, CCL5
+- CXCL10, CXCL9, IL2, IL21, EOMES, ZEB2, ID2, BATF, MYB, LTB, TNF, CD40LG
+- FASLG, CD27, CD28, ICOS, OX40, 4-1BB, TOX, TCF7, LEF1, SELL, CCR7, S100A4
+- KLRB1, IL7R, GZMA, GZMK, GNLY, NKG7, CST7, FGFBP2, SPON2, KLRD1, KLRK1, NCR1
+- FCGR3A
+
+### CD4 TEM_Th17
+
+Description: CD4+ effector memory T cells with Th17 polarization, characterized by expression of RORC, IL17A, and CCR6, and pro-inflammatory chemokines.
+
+Genes:
+- RORC, IL17A, IL17F, CCR6, IL23R, CCL20, RORA, STAT3, IL22, IL26, IL1B, IL6
+- TNF, CSF2, CXCL1, CXCL2, CXCL3, CXCL5, CXCL8, CCL3, CCL4, CCL5, CCR2, CCR1
+- CCR3, CCR5, IL17RA, IL17RE, IL17RC, IL23A, IL12B, IL12RB1, IL12RB2, IL27, IL27RA, IL27RB
+- TGFB1, TGFBR1, TGFBR2, SMAD2, SMAD3, SMAD4, FOXP3, IKZF2, IKZF4, AIRE, CASP1, NLRP3
+- PYCARD, IL18
+
+### CD4 TEM_Th2
+
+Description: CD4+ effector memory T cells with Th2 polarization, characterized by expression of GATA3, IL4, and IL13, and chemokine receptors CCR4 and CCR8.
+
+Genes:
+- GATA3, IL4, IL5, IL13, CCR4, CCR8, HPGDS, PTGDR2, IL17RB, IL1RL1, IL33, IL10
+- IL9, IL4R, IL13RA1, STAT6, MAF, NFIL3, IRF4, BATF, JUNB, FOS, EGR2, EGR3
+- MYC, CD200, CD200R1, CD25, CD69, CD44, CD62L, SELL, CCR7, S100A4, KLRB1, IL7R
+- GATA3, TBC1D1, TBC1D2, RAB27A, RAB37, SYTL1, UNC13D, STX11, STX3, VAMP4, VAMP7, NAPA
+- NAPB
+
+### CD8 TEM
+
+Description: CD8+ effector memory T cells, highly cytotoxic with expression of granzymes, perforin, and NK cell receptors.
+
+Genes:
+- CD8A, CD8B, GZMB, GZMK, GZMA, PRF1, GNLY, NKG7, CST7, FGFBP2, SPON2, KLRD1
+- KLRK1, NCR1, FCGR3A, CCL5, CX3CR1, FCRL6, SH2D1A, SLAMF7, KLRC1, KLRC2, KLRC3, KLRF1
+- KLRG1, EOMES, TBX21, ZEB2, ID2, BATF, MYB, LTB, TNF, CD40LG, FASLG, CD27
+- CD28, ICOS, OX40, 4-1BB, TOX, TCF7, LEF1, SELL, CCR7, S100A4, IL7R, KLRB1
+
+## cd8 naive
+
+### CD4 Naive
+
+Description: Naive CD4+ helper T cells that have not yet encountered antigen, expressing CD4 and homing markers CCR7 and SELL.
+
+Genes:
+- CD4, CCR7, SELL, LEF1, TCF7, CD27, CD28, IL7R, CAMK4, LTB, MAL, AIM2
+- EIF5A, PTPN1, IKZF2, FOXP1, MYB, BATF, BCL2, MXI1, TXN, UBE2D3, PPP3CA, CBFB
+- LIME1
+
+### CD8 Central Memory
+
+Description: Central memory CD8+ T cells that retain expression of CCR7 and SELL, and can proliferate rapidly upon antigen rechallenge.
+
+Genes:
+- CCR7, SELL, CD27, CD28, IL7R, BCL2, MYC, FAS, GPR183, ANXA1, IL2RG, LTB
+- MAL, CAMK4, EIF5A, PTPN1, IKZF2, BATF, MXI1, TXN, UBE2D3, PPP3CA, CBFB, LIME1
+- S1PR1
+
+### CD8 Effector Memory
+
+Description: Effector memory CD8+ T cells with immediate effector function, expressing high levels of cytolytic molecules and lacking CCR7.
+
+Genes:
+- GZMB, GZMH, PRF1, KLRG1, EOMES, TBX21, CCL5, CX3CR1, FCGR3A, NKG7, GNLY, ZEB2
+- ID2, STAT4, IL2RA, MKI67, GZMA, GZMK, HOPX, CD99
+
+### CD8 Naive
+
+Description: Naive CD8+ T cells that have not been exposed to antigen, characterized by high expression of CCR7, SELL, LEF1, and TCF7.
+
+Genes:
+- CCR7, SELL, LEF1, TCF7, CD27, CD28, IL7R, CAMK4, LTB, MAL, AIM2, EIF5A
+- PTPN1, IKZF2, FOXP1, MYB, BATF, BCL2, MXI1, TXN, UBE2D3, PPP3CA, CBFB, LIME1
+- S1PR1
+
+### NK cells
+
+Description: Natural killer cells capable of innate cytotoxicity and cytokine production, characterized by high expression of NKG7, GNLY, and PRF1.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMH, KLRD1, KLRK1, NCR1, NCR2, KLRC1, KLRC2, KLRF1
+- SH2D1B, FCGR3A, CD244, CD247, TYROBP, PLAC8, CST7, CTSW, SPON2, CCL4, CCL3, XCL1
+- IL32
+
+## cd8 proliferating
+
+### CD4 Proliferating
+
+Description: Proliferating CD4+ T cells undergoing cell cycle, often activated, expressing CD4 and MKI67.
+
+Genes:
+- MKI67, PCNA, TOP2A, CENPF, BIRC5, CDK1, CCNB1, AURKA, AURKB, UBE2C, CENPE, KIF2C
+- CCNB2, CD4, IL2RA, STMN1, TUBA1B, CCNE2, CDKN3, CDC20, PLK1, BUB1, BUB1B, CENPA
+- KIF11
+
+### CD8 Central Memory
+
+Description: Central memory CD8+ T cells that retain lymph node homing capacity via CCR7 and CD62L, with proliferative potential.
+
+Genes:
+- CCR7, SELL, CD27, CD28, IL7R, LEF1, TCF7, CD8A, CD8B, FAS, PTPRC, BCL6
+- IL6R, STAT3, CXCR3, ICOS, CD40LG, TNFRSF4, TNFRSF9, CD38, HLA-DRA, ICAM1, CD44, GPR183
+- CXCR5
+
+### CD8 Effector Memory
+
+Description: Effector memory CD8+ T cells with high cytotoxic potential, expressing GZMK and PRF1, patrolling peripheral tissues.
+
+Genes:
+- GZMK, GZMH, GZMA, PRF1, NKG7, CCL5, KLRG1, B3GAT1, EOMES, TBX21, CX3CR1, CD44
+- FAS, IFNG, TNF, IL2, CCL4, CCL3, GZMM, CD8A, CD8B, CD3E, CD3D, GZMB
+- CTSW, FGFBP2
+
+### CD8 Naive
+
+Description: Naive CD8+ T cells that have not encountered antigen, characterized by expression of CCR7 and CD45RA.
+
+Genes:
+- CCR7, SELL, LEF1, TCF7, CD27, CD28, IL7R, MAL, FHIT, BACH2, SATB1, CD8A
+- CD8B, CAMK4, PTPN22, TXK, JAK3, STAT5A, STAT5B, GATA3, BCL11B, MYB, CD3G, CD3D
+- CD3E, ZAP70
+
+### NK cells
+
+Description: Natural killer cells, innate lymphocytes with cytotoxic granules, expressing NKG7 and GNLY without T cell receptor.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, GZMM, KLRD1, KLRK1, KLRC2, NCAM1, FCGR3A
+- NCR1, NCR3, FCER1G, LILRB1, KIR2DL1, KIR2DL2, KIR2DS1, KIR3DL1, KIR3DL2, CD244, SH2D1B, TYROBP
+- CD247
+
+## cd8 tcm
+
+### CD4 TCM
+
+Description: CD4+ central memory T cells with lymph node homing and ability to provide help to B cells and CD8+ T cells.
+
+Genes:
+- CCR7, SELL, CD27, CD28, IL7R, LEF1, TCF7, BACH2, KLF2, FOXP1, MYC, JUN
+- FOS, EGR1, CD3E, CD3D, CD4, GATA3, STAT6, MAF, BCL6, CXCR5, ICOS, PD1
+- CTLA4, TIGIT, LAG3, CD40LG, IL4, IL5, IL13, IL10, TGFB1, IL2, IFNG, CCL5
+- CXCR3, CXCR4, ITGA4, ITGB1, CD44, CD62L, CD95, BCL2, MCL1
+
+### CD8 Naive
+
+Description: CD8+ naïve T cells with high expression of lymph node homing markers and low effector function.
+
+Genes:
+- CCR7, SELL, LEF1, TCF7, FOXP1, KLF2, BACH2, CD27, CD28, IL7R, MYC, JUN
+- FOS, EGR1, CD3E, CD3D, CD8A, CD8B, CD5, CD6, CD48, PTPRC, CD45RA, CD45RO
+- CCR9, ITGA4, ITGB1, CD44, CD95, BCL2, MCL1, S1PR1, KLF1, ETS1, IRF1, STAT1
+- STAT3, STMN1, TUBB, H2AFZ
+
+### CD8 TCM
+
+Description: CD8+ central memory T cells expressing lymph node homing markers CCR7 and CD62L, with memory and effector molecules.
+
+Genes:
+- CCR7, SELL, CD27, CD28, IL7R, LEF1, TCF7, BACH2, KLF2, FOXP1, MYC, JUN
+- FOS, EGR1, ZAP70, LCK, CD3E, CD3D, CD8A, CD8B, GZMK, GZMH, CST7, NKG7
+- PRF1, GNLY, FASLG, IFNG, TNF, IL2, CCL5, CXCR3, CXCR4, CXCR5, CXCR6, ITGA4
+- ITGB1, CD44, CD62L, CD95, BCL2, MCL1, HIF1A, EOMES, TBX21
+
+### CD8 TEM
+
+Description: CD8+ effector memory T cells with high cytotoxic potential and expression of granzymes, perforin, and homing to peripheral tissues.
+
+Genes:
+- GZMB, GZMA, GZMH, PRF1, GNLY, NKG7, CST7, FASLG, IFNG, TNF, CCL5, CCL4
+- CCL3, XCL1, XCL2, KLRD1, KLRK1, NKG2D, CD69, ITGA1, ITGAE, CX3CR1, CXCR1, CXCR2
+- ADGRG1, FCGR3A, CD16, CD57, KLRG1, EOMES, TBX21, ZEB2, ID2, STAT4, IRF4, BATF
+- PRDM1, RUNX3, TOX, MKI67
+
+### NK cells
+
+Description: Natural killer cells with strong cytotoxic function and expression of activating and inhibitory receptors.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, CST7, FASLG, KLRD1, KLRK1, NKG2D, KLRB1
+- KLRC1, KLRF1, KLRG1, FCGR3A, CD16, CD56, NCAM1, CD57, B3GAT1, CD2, CD7, CD28
+- CD38, CD94, NCR1, NCR3, NCR2, SLAMF7, SIGLEC7, SIGLEC9, CD160, TBX21, EOMES, ZEB2
+- ID2, STAT4, IRF8, TOX
+
+## cd8 tem
+
+### CD8 TCM
+
+Description: Central memory CD8+ T cells expressing high levels of IL7R, CCR7, and CD62L, with lower cytotoxic potential compared to TEM.
+
+Genes:
+- IL7R, CCR7, SELL, TCF7, LEF1, BCL2, CD27, CD28, ICOS, TNFRSF14, TRAF1, MYB
+- GATA3, SATB1, FOXP1, EOMES, TBX21, ID2, IL2, IL4, IL10, CD44, CD62L, CCR7
+- CXCR4, KLRG1, GZMK, GZMA, CLEC2D, FAS, FASLG, TNF, LTB, IFNG, CCL5, NKG7
+- PRF1, GNLY, GZMB, GZMH
+
+### CD8 TEM
+
+Description: CD8+ effector memory T cells characterized by high expression of cytotoxic molecules and chemokines, low CD62L and CCR7, and intermediate IL7R.
+
+Genes:
+- GZMK, GZMA, CCL5, NKG7, PRF1, GNLY, GZMB, CST7, FGFBP2, KLRG1, CD27, IL7R
+- EOMES, TBX21, ZEB2, ID2, CX3CR1, MYOM2, PTGDS, CLC, CD74, HLA-DRA, GZMH, GZMM
+- GZMS, CCL4, CCL3, XCL1, XCL2, TNF, IFNG, LTA, LTB, KLRC1, KLRC2, KLRC3
+- KLRK1, NKG7, KLRD1, CD160, CD244
+
+### CD8 TEMRA
+
+Description: Terminally differentiated effector memory CD8+ T cells re-expressing CD45RA, with high cytotoxicity markers and loss of CD27 and IL7R.
+
+Genes:
+- GZMB, PRF1, GZMH, NKG7, GNLY, FCGR3A, KLRG1, CCL5, FGFBP2, CST7, MYOM2, PTGDS
+- CLC, CD45RA, CD27, IL7R, EOMES, TBX21, ZEB2, ID2, CX3CR1, KLRD1, KLRC1, KLRC2
+- KLRC3, KLRK1, CD160, CD244, GZMA, GZMK, GZMM, GZMS, CCL4, CCL3, XCL1, XCL2
+- TNF, IFNG, LTA, LTB, HLA-DRA
+
+### NK cells
+
+Description: Natural killer cells with high expression of cytotoxic granules, killer cell lectin-like receptors, and Fc gamma receptor IIIa (CD16).
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMH, GZMM, KLRD1, KLRC1, KLRC2, KLRC3, KLRK1, KIR2DL1
+- KIR2DL2, KIR2DL3, KIR3DL1, KIR3DL2, KIR3DL3, FCGR3A, CD16, CD56, NCAM1, CD244, CD160, CD226
+- KLRG1, CST7, FGFBP2, MYOM2, PTGDS, CLC, CCL5, XCL1, XCL2, IFNG, TNF, LTA
+- LTB, GZMA, GZMK, CD7, IL2RB, IL15RA
+
+## cdc1
+
+### CD14+ Monocyte
+
+Description: Classical monocyte, involved in phagocytosis and inflammatory responses, expressing high levels of CD14.
+
+Genes:
+- CD14, LYZ, FCGR3A, CSF1R, CD163, CD68, FCGR1A, FCGR2A, ITGAM, ITGAX, CCR2, CX3CR1
+- CCL2, CCL7, CCL8, CCL13, IL1B, IL6, TNF, IL10, TGFB1, CXCL8, CXCL10, CCL3
+- CCL4, CCL5, S100A8, S100A9, S100A12, VCAN
+
+### cDC1
+
+Description: Conventional dendritic cell type 1, specialized in cross-presentation of antigens to CD8+ T cells.
+
+Genes:
+- CLEC9A, XCR1, CADM1, C1orf54, DNASE1L3, IDO1, IRF8, BATF3, FLT3, ITGAM, CD207, FCGR2B
+- SIGLEC15, TLR3, WDFY4, CPVL, CCR7, CD40, IL12B, IL15, TNF, IFNA1, IFNB1, CXCL9
+- CXCL10, CCL5, CCL17, CCL22
+
+### cDC2
+
+Description: Conventional dendritic cell type 2, efficient in activating CD4+ T cells and promoting Th2 responses.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, CD1E, CD4, FCGR2B, FCGR3A, IL13RA1, CD33, SIRPA, TLR7, TLR8
+- TLR9, IRF4, IRF1, CCR2, CCR5, CX3CR1, CCL17, CCL22, CCL2, IL12A, IL23A, IL6
+- TNF, IDO2
+
+### pDC
+
+Description: Plasmacytoid dendritic cell, major producer of type I interferons in response to viral infections.
+
+Genes:
+- IL3RA, CLEC4C, LILRA4, LILRB4, IRF7, IRF8, TLR7, TLR9, CD4, CD123, CD303, CD304
+- CXCR3, CXCR4, CCR7, HLA-DRA, HLA-DQB1, IFNA1, IFNA2, IFNA5, IFNB1, IFNW1, IL12A, IL12B
+- TNF, CCL3, CCL4, CCL5
+
+## cdc2
+
+### CD14+ Monocyte
+
+Description: Classical monocytes expressing CD14, involved in phagocytosis and inflammatory cytokine production.
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, CSF1R, CD68, ITGAM, ITGAX, FCGR1A, FCGR2A, FCGR3A, HLA-DRA
+- HLA-DRB1, CST3, CTSS, CCL2, CCL3, CCL4, CCL5, CXCL8, IL1B, IL6, TNF, NFKB1
+- RELA, JUN, FOS, MAPK1, MAPK3, PIK3CA, AKT1, MTOR, RPS6KA1, EIF4E, EIF4B, EIF4G1
+- TLR2, TLR4, TLR8, MYD88, IRAK1, IRAK4, TRAF6, NLRP3, PYCARD, CASP1, IL18, IL1RN
+
+### CD16+ Monocyte
+
+Description: Non-classical monocytes expressing CD16 (FCGR3A), patrolling vasculature and involved in viral sensing.
+
+Genes:
+- FCGR3A, MS4A4A, LST1, CDKN1C, RHOC, FCGR1A, FCGR2A, FCGR2B, ITGAM, ITGAX, HLA-DRA, HLA-DRB1
+- CST3, CTSS, CCL2, CCL3, CCL4, CCL5, CXCL8, IL1B, IL6, TNF, NFKB1, RELA
+- JUN, FOS, MAPK1, MAPK3, PIK3CA, AKT1, MTOR, RPS6KA1, EIF4E, EIF4B, EIF4G1, TLR2
+- TLR4, TLR8, MYD88, IRAK1, IRAK4, TRAF6, NLRP3, PYCARD, CASP1, IL18, IL1RN, BNC2
+- TGFB1
+
+### cDC2A
+
+Description: Conventional dendritic cell type 2A (DC2) characterized by high expression of CD1c, FcεRIα, and CLEC10A, and involved in antigen presentation to CD4+ T cells.
+
+Genes:
+- FCER1A, CLEC10A, CD1C, HLA-DRA, CD5, CST3, HLA-DQB1, HLA-DRB1, ITGAX, CD74, CTSS, CCR7
+- IRF4, ZEB2, FLT3, BCL6, CCL17, CCL22, IL1RL1, IL18R1, TNFRSF9, CD40, CD80, CD86
+- CARD11, MALT1, BCL10, TLR1, TLR2, TLR4, TLR6, TLR8, MYD88, IRAK1, IRAK4, TRAF6
+- NFKB1, RELA, JUN, FOS, MAPK1, MAPK3, PIK3CA, AKT1, MTOR, RPS6KA1, EIF4E, EIF4B
+
+### cDC2B
+
+Description: Inflammatory conventional dendritic cell type 2B (DC3) with monocytic features, expressing CD163 and S100A9, and promoting Th17 responses.
+
+Genes:
+- CD1C, CD163, S100A8, S100A9, CD14, LYZ, FCGR3A, CSF1R, CD36, ITGAM, ITGAX, HLA-DRA
+- HLA-DRB1, CST3, CTSS, CCL2, CCL3, CCL4, CCL5, CXCL8, IL1B, IL6, TNF, NFKB1
+- RELA, JUN, FOS, MAPK1, MAPK3, PIK3CA, AKT1, MTOR, RPS6KA1, EIF4E, EIF4B, EIF4G1
+- TLR2, TLR4, TLR8, MYD88, IRAK1, IRAK4, TRAF6, NLRP3, PYCARD, CASP1, IL18, IL1RN
+
+### pDC
+
+Description: Plasmacytoid dendritic cells specializing in type I interferon production in response to viral infection.
+
+Genes:
+- IL3RA, CLEC4C, LILRA4, GZMB, IRF7, IRF8, TCF4, SPIB, BCL11A, RUNX2, MYC, TRAFD1
+- TLR7, TLR9, MYD88, IRAK1, IRAK4, TRAF6, NFKB1, RELA, JUN, FOS, MAPK1, MAPK3
+- PIK3CA, AKT1, MTOR, RPS6KA1, EIF4E, EIF4B, EIF4G1, CCL3, CCL4, CCL5, CXCL10, IFNA1
+- IFNA2, IFNB1, IFNW1, IFNE, IFNK, ISG15, MX1, OAS1, OAS2, OAS3, RIGI, MDA5
+- STAT1, STAT2
+
+## dnt
+
+### DN αβ T cell
+
+Description: Double-negative αβ T cells that lack CD4 and CD8 expression, comprising a rare subset with regulatory or cytotoxic functions.
+
+Genes:
+- TRAC, TRBC1, TRBC2, CD3D, CD3E, CD3G, CD28, CTLA4, FOXP3, IL2RA, LEF1, TCF7
+- SELL, CCR7, CD27, IL7R, CD44, CD69, GATA3, TBX21
+
+### MAIT cell
+
+Description: Mucosal-associated invariant T cells that recognize bacterial vitamin B metabolites via MRI and have an effector memory phenotype.
+
+Genes:
+- TRAV1-2, TRAJ33, TRAJ12, TRBC1, TRBC2, CD3D, CD3E, CD3G, KLRB1, KLRD1, KLRC1, KLRK1
+- NCAM1, GZMB, PRF1, GNLY, NKG7, IL18R1, IL18RAP, CXCR6, CCR6, DPP4, CD27, CD28
+- CD44
+
+### NK cell
+
+Description: Natural killer cells of the innate immune system that kill target cells without prior sensitization and secrete cytokines.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, KLRD1, KLRC1, KLRC2, KLRC3, KLRK1, FCGR3A
+- NCAM1, NCR1, NCR2, NCR3, CD247, KLRB1, KIR2DL1, KIR2DL2, KIR2DL3, KIR3DL1, KIR3DL2, XCL1
+- XCL2, CCL3, CCL4, CCL5, IFNG
+
+### NKT-like cell
+
+Description: T cells that co-express NK cell receptors and an invariant T cell receptor, responding rapidly to glycolipid antigens.
+
+Genes:
+- TRAV10, TRAJ18, TRBC1, TRBC2, CD3D, CD3E, CD3G, KLRB1, KLRD1, KLRC1, KLRK1, NCAM1
+- FCGR3A, GZMB, PRF1, GNLY, NKG7, IL4, IFNG, CD69, CD44, IL2RB, IL18R1
+
+### γδ T cell
+
+Description: T cells expressing the γδ T cell receptor, which play a role in innate and adaptive immunity and are enriched in epithelial tissues.
+
+Genes:
+- TRGC1, TRGC2, TRDC, TRDV1, TRDV2, TRGV9, TRGV2, TRGV3, TRGV4, TRGV5, TRGV8, CD3E
+- CD3D, CD3G, KLRK1, KLRD1, KLRC1, KLRC2, KLRC3, KLRC4, FCGR3A, NCAM1, GZMA, GZMB
+- PRF1
+
+## doublet
+
+### B-Lymphocyte/Monocyte doublet
+
+Description: Doublet of a B cell and a monocyte, expressing both B cell markers (MS4A1, CD19, CD79A) and monocyte markers (CD14, LYZ, S100A8).
+
+Genes:
+- MS4A1, CD19, CD79A, CD79B, PAX5, BANK1, CD14, LYZ, S100A8, S100A9, FCGR3A, CSF1R
+- CD68, CTSS, CTSB, LST1, AIF1, COTL1, TYROBP, FTH1, FTL, LGALS1, ANXA1, S100A6
+- S100A11, GAPDH, ACTB, EEF1A1, RPL13A
+
+### CD8+ T cell
+
+Description: Cytotoxic CD8+ T cell expressing CD8A, granzymes, and perforin.
+
+Genes:
+- CD8A, CD8B, GZMK, GZMA, GZMB, GZMH, PRF1, NKG7, GNLY, CCL5, CD27, CD28
+- CD2, CD7, ITGAE, ITGB1, CXCR3, CXCR6, CCR5, CCR7, SELL, IL7R, TCF7, LEF1
+- MYC, EOMES, TBX21, ZNF683, HOPX, KLRG1
+
+### Monocyte/Dendritic cell doublet
+
+Description: Doublet of a monocyte and a dendritic cell, expressing monocyte markers (CD14, LYZ) and dendritic cell markers (FCER1A, CLEC10A).
+
+Genes:
+- CD14, LYZ, S100A8, S100A9, FCGR3A, CSF1R, CD68, CTSS, CTSB, FCER1A, CLEC10A, CD1C
+- CD207, LAMP3, CCR7, BATF3, IRF8, ZBTB46, FLT3, RUNX2, ID2, IL3RA, TLR7, TLR9
+- GAPDH, ACTB, EEF1A1, RPL13A
+
+### Natural Killer cell
+
+Description: Natural killer cell expressing NKG7, GNLY, and perforin, with receptors KLRD1 and FCGR3A.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMK, GZMH, KLRD1, KLRB1, KLRC1, KLRC2, KLRF1
+- KLRK1, FCGR3A, FGFBP2, SPON2, CCL5, CST7, CTSW, PRSS23, IL2RB, IL12RB2, IL18RAP, IL18R1
+- IFNG, TNF, TNFSF10, CD160, CD244, NCR1
+
+### T-Lymphocyte/NK doublet
+
+Description: Doublet of a T cell and an NK cell, expressing both T cell receptor components (CD3E, TRAC) and NK cell cytotoxic molecules (NKG7, GNLY, PRF1).
+
+Genes:
+- CD3D, CD3E, CD3G, TRAC, TRBC1, TRBC2, CD2, CD7, CD27, IL7R, NKG7, GNLY
+- PRF1, GZMB, GZMA, GZMK, KLRD1, KLRB1, KLRC1, KLRC2, KLRF1, FCGR3A, FGFBP2, SPON2
+- CCL5, CST7, CTSW, PRSS23, GZMH, GZMM
+
+## eryth
+
+### Erythroblast
+
+Description: Erythroblasts are late-stage erythroid precursors undergoing enucleation, with high expression of hemoglobin subunits and red cell membrane proteins.
+
+Genes:
+- HBB, HBA1, HBA2, ALAS2, EPB42, SLC4A1, GYPA, GYPB, RHAG, AQP1, SLC2A1, CA1
+- LDHB, CAT, PRDX2, TFRC, HMOX1, BLVRB, BLVRA, UGCG, GATA1, KLF1, TAL1, LMO2
+- NFE2, MAFG, MAFK, HBE1, HBG1, HBG2, HBD, HBZ, HBM, HBQ1, ARG2, BNIP3L
+- FECH, UROS, UROD, CPOX, PPOX, SLC25A37, ABCB7, TRIM10, AHSP, SUMO2, ZFPM1, ERFE
+- GDF15
+
+### Erythroid Progenitor
+
+Description: Erythroid progenitor cells are early precursors committed to erythropoiesis, expressing high levels of GATA1 and KLF1, and initiating hemoglobin synthesis.
+
+Genes:
+- GATA1, KLF1, TAL1, LMO2, KIT, EPOR, HBB, HBA1, HBA2, ALAS2, SLC4A1, EPB42
+- AHSP, TRIM10, BNIP3L, FECH, UROS, UROD, CPOX, PPOX, SLC25A37, SLC25A38, ABCB7, TFR2
+- HJV, ERFE, GDF15, TWSG1, SUMO2, ZFPM1, NFE2, MAFG, MAFK, HBE1, HBG1, HBG2
+- HBD, HBZ, HBM, HBQ1, ARG2, GYPB, GYPA, RHAG, AQP1, SLC2A1, CA1, LDHB
+
+### Hematopoietic Stem Cell
+
+Description: Hematopoietic stem cells are multipotent self-renewing progenitors that give rise to all blood lineages, expressing CD34 and PROM1 along with key transcription factors.
+
+Genes:
+- CD34, PROM1, KIT, FLT3, HOPX, AVP, MLLT3, HLF, MEIS1, HOXA9, HOXA10, HOXB4
+- PBX1, BMI1, RUNX1, TAL1, GATA2, ERG, LMO2, LYL1, SCL, ETV6, FLI1, GFI1
+- GFI1B, MYB, CDK6, CCND1, CCND2, CCND3, CDKN1A, CDKN1B, CDKN2C, CDKN2D, ID1, ID2
+- ID3, SOX4, SOX13, NOTCH1, JAG1, DLL1, DLL4, WNT3A, WNT5A, CTNNB1, LEF1, TCF7
+- FOS, JUN
+
+### Megakaryocyte
+
+Description: Megakaryocytes are large polyploid cells responsible for platelet production, expressing platelet-specific markers such as ITGA2B, GP9, and PF4.
+
+Genes:
+- ITGA2B, GP9, GP1BA, GP1BB, GP5, GP6, PF4, PPBP, VWF, SELP, THBS1, F13A1
+- FGA, FGB, FGG, SERPINE1, PDGFA, PDGFB, VEGFA, TGFB1, MEF2C, FLI1, ETV6, RUNX1
+- GATA1, GATA2, NFE2, MAFK, MAFG, ZFP36L1, ZFP36L2, MYH9, MYL9, ACTA2, TAGLN, CNN1
+- TPM1, MYLK, SPP1, FN1, LUM, DCN, COL1A1, COL3A1, BGN, FBN1, ELN, MFAP4
+- LTBP1
+
+## gdt
+
+### CD8+ T
+
+Description: Conventional CD8+ cytotoxic T lymphocytes, key effectors of adaptive immunity, often sharing activation markers with gamma-delta T cells.
+
+Genes:
+- CD8A, CD8B, GZMK, GZMH, KLRG1, TIGIT, PDCD1, CTLA4, TBX21, EOMES, GZMA, PRF1
+- GNLY, NKG7, CCL5, CCL4, XCL1, IFNG, TNF, LTA, CCL3, CCL4L2, GZMB, LAG3
+- HAVCR2
+
+### MAIT
+
+Description: Mucosal-associated invariant T cells, an innate-like T cell subset with semi-invariant TCR, often misclassified as gamma-delta T cells in single-cell analyses.
+
+Genes:
+- SLC4A10, RORC, IL18R1, IL12RB2, KLRB1, TRAV1-2, TRAJ33, CD8A, CD8B, GZMK, GZMA, PRF1
+- IFNG, TNF, CCL5, CXCR6, CCR6, IL7R, CD27, CD28, GZMB, GNLY, NKG7, CCL4
+- XCL1
+
+### NK
+
+Description: Natural killer cells, innate lymphoid cells with broad cytotoxic activity and cytokine production, frequently confused with T cells due to overlapping surface markers.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, KLRD1, NCR1, NCR2, NCR3, FCGR3A, NCAM1
+- KLRB1, KLRK1, CD244, CD226, KIR2DL1, KIR3DL1, KLRC1, KLRC2, KLRC3, CCL3, CCL4, XCL1
+- IFNG, TNF
+
+### Vd1
+
+Description: A gamma-delta T cell subtype expressing TRDV1, often with tissue-resident and regulatory characteristics, and enriched in cytotoxic molecules.
+
+Genes:
+- TRDV1, TRGC2, KLRB1, KLRK1, NCAM1, NCR1, NCR2, CD8A, GZMK, GZMB, PRF1, GNLY
+- NKG7, CCL5, IFNG, TNF, CSF2, IL7R, PECAM1, CD244, CD226, LAG3, HAVCR2, GZMH
+- CD8B
+
+### Vd2
+
+Description: The predominant gamma-delta T cell subset in peripheral blood, expressing TRDV2 and TRGV9, known for rapid cytokine production and cytotoxicity.
+
+Genes:
+- TRDV2, TRGV9, CD27, CD28, ICOS, SELL, CCR7, IL7R, GZMA, GZMB, PRF1, GNLY
+- NKG7, CCL4, XCL1, XCL2, IFNG, TNF, LTA, LTB, CCL3, CCL4L2, KLRG1, GZMH
+
+## hspc
+
+### Common Lymphoid Progenitor
+
+Description: Lymphoid-committed progenitors expressing IL7R and early B-cell transcription factors, giving rise to B- and T-lymphocytes.
+
+Genes:
+- CD34, IL7R, CD79A, CD79B, PAX5, EBF1, VPREB1, IGLL1, DNTT, RAG1, RAG2, LMO2
+- TCF3, BCL11A, SPIB, PILRA, FCER2, CR2, CD19, CD22
+
+### Common Myeloid Progenitor
+
+Description: Myeloid-committed progenitors expressing myeloid markers such as CD33 and CSF1R, with potential to differentiate into granulocytes and monocytes.
+
+Genes:
+- CD34, KIT, CD38, CSF1R, FCGR2A, MPO, ELANE, AZU1, PRTN3, CTSG, SPI1, CEBPA
+- CSF3R, IL3RA, IL5RA, CD33, MNDA, GATA1, GATA2, TAL1, MCL1, BCL2, BAX, KLF4
+
+### Granulocyte-Monocyte Progenitor
+
+Description: Granulocyte-monocyte progenitors committed to the myeloid lineage, expressing lysozyme and S100 proteins, and giving rise to neutrophils and monocytes.
+
+Genes:
+- CD34, KIT, CD38, FCGR2A, CSF1R, MPO, ELANE, AZU1, PRTN3, CTSG, CD33, MNDA
+- S100A8, S100A9, LYZ, FCN1, SPI1, CEBPA, CSF3R, IL1B, TNF, TLR4, MYD88
+
+### Hematopoietic Stem Cell
+
+Description: Quiescent hematopoietic stem cells with long-term self-renewal capacity, expressing CD34 and lacking mature lineage markers.
+
+Genes:
+- CD34, PROM1, KIT, JAG1, HLF, MECOM, GATA2, TAL1, RUNX1, AVP, CRHBP, MLLT3
+- HOXB5, HOXA9, MEIS1, PBX1, EGR1, GFI1, SOX4, MYB, LMO2, LYL1, ANGPT1, VWF
+- NDN, FHL2, PRDM16, HMGA2, BMI1
+
+### Multipotent Progenitor
+
+Description: Multipotent progenitors with high proliferative capacity, expressing FLT3 and CD38, giving rise to both myeloid and lymphoid lineages.
+
+Genes:
+- CD34, FLT3, KIT, CD38, IRF8, GATA2, SPINK2, HOPX, LTB, TCF3, TCF12, IL7R
+- MYC, TOP2A, MKI67, DPP4, CD44, FCER1A, IGLL1, VPREB1, DNTT, RAG1, RAG2
+
+## ilc
+
+### ILC1
+
+Description: Innate lymphoid cells type 1, characterized by T-bet expression and production of IFN-γ, involved in immunity against intracellular pathogens.
+
+Genes:
+- TBX21, IFNG, GZMB, KLRK1, NKG7, PRF1, CCL5, CST7, GZMA, GZMH, GZMM, KLRG1
+- KLRD1, KLRC1, KLRC2, KLRF1, KLRB1, FCGR3A, FCRL6, XCL1, XCL2, CCL4, CCL3, IL2RB
+- IL12RB2, IL18RAP, IL18R1, JAK2, STAT4, EOMES
+
+### ILC2
+
+Description: Innate lymphoid cells type 2, characterized by GATA3 expression and production of type 2 cytokines (IL-5, IL-13), involved in allergic responses and helminth immunity.
+
+Genes:
+- GATA3, IL13, IL5, IL17RB, KLRG1, PTGDR2, HPGDS, IL1RL1, IL2RA, CSF2, CCL17, CCL22
+- CCL2, CCL1, AREG, PDGFRA, KIT, RORA, BCL11B, TCF7, CD69, CD44, ICOS, IL9
+- IL4
+
+### ILC3
+
+Description: Innate lymphoid cells type 3, characterized by RORγt expression and production of IL-17 and IL-22, involved in mucosal immunity and barrier maintenance.
+
+Genes:
+- RORC, IL22, IL23R, KIT, AHR, IL1R1, IL7R, CCR6, CD117, CD127, TNFSF11, TNFSF13B
+- LIF, OSM, VEGFA, CSF1, CSF2, IL17A, IL17F, IL26, IL10, TNF, LTF, LCN2
+- S100A8, S100A9
+
+### NK cell
+
+Description: Natural killer cells, innate lymphocytes that mediate cytotoxicity and cytokine production, commonly confused with ILCs due to shared markers and functions.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, KLRD1, KLRC1, KLRK1, NCR1, NCR3, FCGR3A, CD16, CD56
+- CD57, KIR2DL1, KIR2DL2, KIR3DL1, KIR3DL2, LILRB1, LILRB2, KLRC3, KLRF1, SH2D1B, ZAP70, TYROBP
+- HCST
+
+## mait
+
+### CD8+ T cells
+
+Description: Conventional CD8+ T cells are cytotoxic T lymphocytes expressing CD8 and a diverse TCR, involved in adaptive immune responses against intracellular pathogens.
+
+Genes:
+- CD8A, CD8B, CD3E, CD3D, CD3G, TRAC, TRBC1, TRBC2, GZMK, GZMA, NKG7, PRF1
+- KLRD1, CCL5, CMKL1, EOMES, TBX21, CD69, IL7R, SELL, CCR7, LEF1, TCF7, MYC
+- JUN, FOS, NFKB1, STAT1, STAT4, IRF1, IRF8, HLA-A, HLA-B, HLA-C, B2M, TAP1
+- TAP2, PSMB8, PSMB9, CD28, CD27, CD62L, CD45RA, CD45RO
+
+### Gamma-delta T cells
+
+Description: Gamma-delta T cells are a subset of T cells expressing a gamma-delta TCR, which can act as innate-like effectors and produce cytokines such as IFN-gamma and IL-17.
+
+Genes:
+- TRDC, TRGC1, TRGC2, TRDV2, TRDV3, TRGV9, CD3E, CD3D, CD3G, KLRD1, NKG7, GNLY
+- PRF1, GZMA, GZMK, CCL5, CMKL1, KLRB1, CD2, CD5, CD7, CD16, CD56, NCAM1
+- FCGR3A, CXCR3, CCR5, CCR6, CCR7, IL18R1, IL2RA, CD69, HLA-DRA, HLA-DRB1, CD86, CD80
+- CD40, CD40LG, IFNG, TNF, CSF2, IL17A, IL22
+
+### MAIT1
+
+Description: MAIT1 cells are a subset of MAIT cells with a cytotoxic profile, expressing high levels of granzymes, perforin, and NK receptors, similar to CD8+ T cells.
+
+Genes:
+- TRAV1-2, SLC4A10, KLRB1, GZMK, GZMA, NKG7, PRF1, KLRD1, CCL5, CMKL1, RORC, IL18R1
+- IL12R, ZBTB16, PLZF, AREG, KLRG1, CD8A, CD8B, EOMES, TBX21, GZMB, HLA-DRA, HLA-DRB1
+- CD69, ITGA1, ITGAE, CXCR3, CCR5, CCR9, KLRK1, NKG2D, CD3E, CD3D, CD3G, TRBC1
+- TRBC2, TRAC, TRDC, JUN, FOS, NFKB1, IRF4, STAT5A, STAT5B, MYC, S1PR1, SELL
+- IL7R
+
+### MAIT17
+
+Description: MAIT17 cells are a subset of MAIT cells with a helper-like profile, expressing RORC, IL-17, and Th17-associated chemokine receptors such as CCR6.
+
+Genes:
+- TRAV1-2, SLC4A10, KLRB1, RORC, IL17A, IL17F, IL23R, CCR6, CCL20, AREG, KLRG1, CD4
+- CD8A, CD8B, IL1R1, IL1R2, IL6ST, STAT3, IRF4, AHR, BATF, MAF, CARD11, MALT1
+- BCL10, NFKB1, RELA, RELB, TRAF3, TRAF6, TICAM1, MYD88, IRAK1, IRAK4, TAB1, TAB2
+- MAP3K7, CHUK, IKBKB, IKBKG
+
+### NK cells
+
+Description: NK cells are innate lymphocytes that provide rapid cytotoxic responses and cytokine production without prior sensitization.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, GZMK, KLRD1, KLRK1, NKG2D, FCGR3A, CD16
+- NCAM1, CD56, NCR1, NCR2, NCR3, CD244, KIR2DL1, KIR2DL2, KIR2DL3, KIR3DL1, KIR3DL2, KIR3DL3
+- LILRB1, LILRB2, CD2, CD7, CD8A, CD8B, CD3E, CD3D, CD3G, CD4, CD5, CD27
+- CD28, CD45RA, CD45RO, CD62L, CCR7, CXCR1, CXCR2, CXCR3, CCR5, IL2RA, IL2RB, IL2RG
+- IL15RA, IL18R1, IL21R
+
+## nk
+
+### CD56bright NK
+
+Description: CD56bright NK cells are a NK subset with high CD56 expression, immunomodulatory and cytokine-producing function, and are less cytotoxic than CD56dim.
+
+Genes:
+- NCAM1, GZMK, GZMA, KLRB1, KLRG1, XCL2, XCL1, IL2RB, CD7, KLRC1, KLRC2, KLRD1
+- IL18RAP, IL2RG, IL12RB2, CCR7, SELL, CD3E, GZMM, PRF1, GNLY, NKG7, FGFBP2, SPON2
+- CXCR3, CXCR4, ITGA2, ITGB2, TNFRSF10C, TNFRSF9
+
+### CD56dim NK
+
+Description: CD56dim NK cells are cytotoxic NK subset with high CD16 expression, KIRs, and perforin/granzyme content, representing the majority of NK cells in blood.
+
+Genes:
+- FCGR3A, KIR2DL1, KIR2DL3, KIR3DL1, KIR3DL2, KIR2DS1, KIR2DS2, PRF1, GZMB, GNLY, NKG7, KLRC3
+- KLRK1, GZMH, GZMM, FGFBP2, SPON2, CCL3, CCL4, CCL5, XCL1, XCL2, TNFRSF10C, TNFRSF9
+- LILRB1, LILRB2, LAIR1, KLRD1, KLRF1, KLRG1
+
+### CD8+ T
+
+Description: CD8+ T cells are cytotoxic T lymphocytes that recognize peptide antigens on MHC class I, expressing CD8 coreceptor and producing cytotoxic molecules.
+
+Genes:
+- CD8A, CD8B, CD3E, CD3D, CD3G, GZMK, GZMA, GZMH, PRF1, GNLY, NKG7, CCL5
+- XCL1, XCL2, KLRG1, KLRC1, KLRD1, KLRB1, FASLG, CCR7, SELL, LAG3, PDCD1, CTLA4
+- HAVCR2, TOX, EOMES, TBX21, ZNF683, RUNX3
+
+### NKT-like
+
+Description: NKT-like cells are T cells with NK markers, often CD8+ or CD4-8- double negative, expressing both TCR and NK receptors, with cytotoxic and cytokine-producing potential.
+
+Genes:
+- CD3E, CD8A, CD8B, KLRB1, NKG7, GZMK, GZMA, GNLY, PRF1, KLRG1, KLRC1, KLRC2
+- KLRD1, CCL5, XCL1, XCL2, IL2RG, IL12RB2, CXCR3, CXCR4, ITGA2, ITGB2, TNFRSF9, FASLG
+- CD7, CD2, CD5, CD6, CD96, LAG3
+
+### γδ T
+
+Description: γδ T cells are unconventional T cells bearing γδ TCR, mediating rapid innate-like responses and cytotoxic functions without MHC restriction.
+
+Genes:
+- TRDC, TRGC1, TRGC2, TRGV9, TRDV2, TRDV3, CD3E, CD3D, CD3G, KLRB1, KLRG1, KLRC1
+- KLRD1, NKG7, GNLY, GZMA, GZMK, PRF1, CCL5, XCL1, XCL2, CXCR3, IL2RG, IL2RB
+- IL12RB2, ITGAE, ITGAL, ITGB2, LAG3, TIGIT
+
+## nk proliferating
+
+### Activated NK
+
+Description: Natural killer cells in an activated state expressing high levels of cytotoxicity molecules and activation markers such as CD69 and HLA-DR, with lower proliferation compared to NK Proliferating.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, KLRD1, KLRK1, NCR1, FCGR3A, KLRF1, KLRG1
+- KIR2DL3, KIR3DL1, CD69, HLA-DRA, HLA-DRB1, XCL1, XCL2, IFNG, CCL3, CCL4, CCL5, CSF2
+- IL2RA
+
+### NK Proliferating
+
+Description: A subset of natural killer cells actively cycling, marked by high expression of cytotoxicity genes and cell cycle markers.
+
+Genes:
+- NKG7, GNLY, PRF1, GZMB, GZMA, GZMH, KLRD1, KLRK1, NCR1, FCGR3A, KLRF1, KLRG1
+- KIR2DL3, KIR3DL1, MKI67, TOP2A, CENPF, BIRC5, CDK1, PCNA, STMN1, TYMS, RRM2, UBE2C
+- CDC20
+
+### Proliferating CD8+ T
+
+Description: Actively proliferating cytotoxic T lymphocytes expressing CD8, T cell receptor components, and cell cycle genes, often confused with NK Proliferating cells due to shared expression of NKG7 and granzymes.
+
+Genes:
+- CD3D, CD3E, CD8A, CD8B, TRAC, TRBC, IL7R, CD27, CD28, GZMK, NKG7, GZMA
+- PRF1, GNLY, MKI67, TOP2A, CENPF, BIRC5, CDK1, STMN1, TYMS, RRM2, UBE2C, CDC20
+- CCL5
+
+## nk_cd56bright
+
+### CD8_T_cells
+
+Description: Classical cytotoxic T lymphocytes expressing CD8 and CD3, key effectors in adaptive immunity against intracellular pathogens.
+
+Genes:
+- CD3E, CD3D, CD3G, CD247, CD8A, CD8B, CD28, CD27, CD6, CD5, ITK, LCK
+- ZAP70, GZMB, PRF1, GZMA, GZMH, GZMK, CCL5, CCL4, CXCR3, CXCR6, IFNG, TNF
+- IL2, CD2, SELL, CCR7, CD44, CD69
+
+### NKT_cells
+
+Description: A rare subset of T cells that co-express NK receptors and an invariant TCR, recognizing lipid antigens via CD1d.
+
+Genes:
+- TRAV10, ZBTB16, KLRB1, IL18R1, IL18RAP, PTGDR, RORC, GATA3, GZMB, PRF1, IFNG, CD4
+- CD8A, CD8B, CD3E, CD3D, CD3G, CD247, IL2RA, IL2RB, CXCR3, CXCR6, CCL5, CCL4
+- BATF, IRF4, TOX, ICOS, ID2, ID3
+
+### NK_CD56bright
+
+Description: Cytokine-producing NK cells with high expression of CD56 and low cytotoxicity, involved in immune regulation.
+
+Genes:
+- NCAM1, GZMK, KIT, IL7R, CD244, XCL1, XCL2, LTA, CSF1, FLT3LG, BCL2, IL2RA
+- IL2RB, IL12RB2, IL18R1, IL21R, KLRB1, KLRG1, KLRC1, CXCR3, CXCR4, SELL, CD27, TCF7
+- GATA3, TOX, CD83, CD300A, TNFSF10, CD96
+
+### NK_CD56dim
+
+Description: Highly cytotoxic NK cells expressing CD16 and KIRs, critical for natural killing and antibody-dependent cellular cytotoxicity.
+
+Genes:
+- FCGR3A, KIR2DL1, KIR2DL2, KIR2DL3, KIR3DL1, KIR2DS1, KIR2DS2, KIR3DL2, PRF1, GZMB, GZMH, GZMA
+- GNLY, NKG7, CTSW, FGFBP2, SPON2, KLRD1, KLRC1, KLRC2, KLRK1, SH2D1B, EOMES, TBX21
+- ZEB2, B3GAT1, ITGAM, NCR1, NCR3, KIR3DL3
+
+## pdc
+
+### Basophils
+
+Description: Basophils expressing FCER1A and CD123, commonly misannotated as pDC due to shared expression of IL3RA and other markers.
+
+Genes:
+- FCER1A, MS4A2, HDC, CPA3, IL3RA, CD123, KIT, CSF2RB, IL4, IL13, CCL2, CCL3
+- CCL4, CCL5, CCR3, GATA2, PTGDR2, ENPP3, PRG2, RNASE2, CLC, LTC4S, ALOX5, HLA-DRA
+
+### Monocytes (CD14+)
+
+Description: Classical monocytes expressing high CD14 and LYZ, often misidentified as pDC due to some shared myeloid markers.
+
+Genes:
+- CD14, LYZ, FCN1, S100A8, S100A9, CST3, CCL2, CCR5, CD163, CD68, MNDA, MSR1
+- TLR4, MYD88, IL1B, TNF, ITGAM, ITGAX, FCGR3A, CD16, CD33, CSF1R, NLRP3, IL6
+- CXCL8
+
+### cDC2
+
+Description: Conventional type 2 dendritic cells expressing CD1C and FCER1A, often confused with pDC due to dendritic cell lineage and some shared markers.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, CD1A, CD1B, ITGAM, HLA-DQA1, HLA-DQB1, HLA-DRA, CD74, IRF4, FLT3
+- CCR7, CCL17, CCL22, TLR1, TLR2, TLR8, THBD, CSF2RA, IL3RA, CD33, CD11c, ZBTB46
+
+### pDC_activated
+
+Description: Activated plasmacytoid dendritic cells with upregulated costimulatory molecules (CD80, CD86, CD40), MHC class II, and potent type I interferon production.
+
+Genes:
+- CD80, CD86, CD40, HLA-DRA, HLA-DRB1, LTA, TNF, IFNA1, IFNB1, IFNA2, CXCL10, CCL4
+- CD83, LILRA4, CLEC4C, IL3RA, TCF4, IRF8, RUNX2, BCL11A, PACSIN1, DERL3, LAMP5, SCT
+- PTCRA, IGLL1, MZB1, JCHAIN, SPIB, TLR7
+
+### pDC_resting
+
+Description: Resting plasmacytoid dendritic cells characterized by high expression of IL3RA, CLEC4C, and type I IFN-related genes, with low levels of activation markers.
+
+Genes:
+- IL3RA, CLEC4C, LILRA4, TCF4, IRF8, RUNX2, BCL11A, PACSIN1, DERL3, LAMP5, SCT, PTCRA
+- IGLL1, MZB1, JCHAIN, SPIB, TLR7, TLR9, MYC, E2F2, PRDX1, HLA-DRA, HLA-DQB1, CD74
+- FCER1A
+
+## plasmablast
+
+### Memory B cell
+
+Description: Long-lived B cells that have undergone class switching and affinity maturation, expressing CD27 and CD20, and capable of rapid response upon re-encounter with antigen.
+
+Genes:
+- CD27, MS4A1, CD79A, CD79B, PAX5, BACH2, BCL6, AICDA, CD83, CR2, IL4R, TBX21
+- EBI3, MYC, CD40, TNFRSF13B, TNFRSF13C, FCER2, CD72, CD22, CD19, CD81, CXCR5, CCR6
+- S1PR1
+
+### Naive B cell
+
+Description: Mature, antigen-inexperienced B cells co-expressing IgM and IgD, with low CD27 and high CD20, and circulating in the blood.
+
+Genes:
+- MS4A1, CD79A, CD79B, PAX5, BCL6, BACH2, TCL1A, IGHD, IGHM, CD19, CD22, CD72
+- CD81, CXCR5, CCR7, IL4R, CD23, FCER2, CD40, CD44, CD24, CD38, CD27, CR2
+- CD83
+
+### Plasma cell
+
+Description: Terminally differentiated antibody-secreting cells with high cytoplasmic immunoglobulin and stress response genes, typically residing in bone marrow but occasionally found in blood.
+
+Genes:
+- MZB1, JCHAIN, SDC1, XBP1, PRDM1, IRF4, FKBP11, SLC44A1, TNFRSF17, CD38, CD27, IGHG1
+- IGHG2, IGHG3, IGHG4, IGHA1, IGHA2, DERL3, SSR4, HSP90B1, PDIA4, PDIA6, HYOU1, CRELD2
+- MANF, ERP29, PDIA3, CALR, CANX, HSPA5
+
+### Plasmablast
+
+Description: Antibody-secreting cells characterized by high expression of immunoglobulin genes and ER stress-related genes, precursors to plasma cells.
+
+Genes:
+- MZB1, JCHAIN, SDC1, XBP1, PRDM1, IRF4, FKBP11, SLC44A1, TNFRSF17, CD38, CD27, IGHM
+- IGHG1, IGHA1, DERL3, SSR4, HSP90B1, PDIA4, PDIA6, HYOU1, CRELD2, MANF, ERP29, PDIA3
+- CALR, CANX, HSPA5, PDIA5, ERO1A, TXNDC5
+
+### Proliferating Plasmablast
+
+Description: Proliferating fraction of plasmablasts with elevated cell cycle genes, indicative of active expansion.
+
+Genes:
+- MZB1, JCHAIN, SDC1, XBP1, PRDM1, MKI67, TOP2A, CENPF, BIRC5, AURKB, CDK1, CCNB1
+- CCNA2, UBE2C, PTTG1, TROAP, PBK, KIF20A, KIF2C, DLGAP5, TPX2, NUSAP1, CKS2, CENPU
+- HMMR
+
+## platelet
+
+### Erythrocyte
+
+Description: Erythrocytes (red blood cells) are anucleate cells that carry oxygen and express hemoglobin genes.
+
+Genes:
+- HBA1, HBA2, HBB, HBD, HBE1, HBG1, HBG2, HBM, HBQ1, HBZ, ALAS2, EPOR
+- GATA1, KLF1, TAL1, NFE2, BCL11A, AHSP, SLC4A1, KEL, RHAG, AQP1, CA1, EPB42
+- ANK1
+
+### Megakaryocyte
+
+Description: Megakaryocytes are bone marrow precursors of platelets, present in low frequency in PBMC, and share many markers but express higher levels of certain structural genes.
+
+Genes:
+- ITGA2B, ITGB3, PF4, PPBP, MPIG6B, GP9, GP1BA, GP5, GP1BB, GP6, VWF, MYH9
+- FLI1, GATA1, NFE2, TAL1, RUNX1, MEF2C, LYL1, LMO2, ERG, ARHGEF3, RHOA, CDC42
+- RAC1
+
+### Platelet (Activated)
+
+Description: Activated platelets degranulate and express surface activation markers such as P-selectin.
+
+Genes:
+- SELP, CD63, LAMP2, F13A1, VWF, SERPINE2, PDGFA, PDGFB, ITGA2, ITGB1, CD9, GNA12
+- GNA13, P2RY12, TBXAs1, TF, IL1B, IL6, TNF, CCL5, CXCL4, CCL3, CCL4, MMP9
+- ADAM10, ADAM17
+
+### Platelet (Resting)
+
+Description: Resting platelets circulate in the bloodstream and express markers of platelet lineage including alpha and dense granules.
+
+Genes:
+- PPBP, PF4, GP9, GP1BA, GP5, ITGA2B, ITGB3, CLU, TREML1, SPARC, SDPR, RGS18
+- MYL9, MPIG6B, TPM4, TUBB1, ACAP2, SYNGR2, CRIP3, CTNNBL1, PDLIM1, WIPI1, ARHGAP6, GCA
+- LIMAP, CAPZB
+
+## treg
+
+### Activated Treg
+
+Description: Activated regulatory T cells (Tregs) show upregulated expression of CTLA4, ICOS, and PDCD1, along with effector cytokines and cytotoxic molecules, indicating recent stimulation and enhanced suppressive activity.
+
+Genes:
+- FOXP3, CTLA4, ICOS, PDCD1, TNFRSF4, TNFRSF18, TIGIT, IL2RA, IL2RB, BATF, IRF4, MYO1E
+- MAGEH1, TRIB1, FANK1, PRDM1, MAF, RGS1, AREG, LAG3, HAVCR2, ENTPD1, GZMB, PRF1
+- GZMA, GZMK, CCL4, CCL3, IL10, TGFB1, EBI3, IL12A, CD274, CTSE, ITGB8, TNFAIP3
+- NFKBID, NFKBIZ, SOCS1, SOCS3
+
+### Effector Memory CD4+ Th1
+
+Description: Effector memory CD4+ Th1 cells produce IFN-γ and express TBX21 and CXCR3, mediating immune responses against intracellular pathogens and are commonly confused with Tregs due to shared activation markers.
+
+Genes:
+- IFNG, TBX21, CXCR3, GZMK, GZMA, GZMB, PRF1, CCL5, XCL1, XCL2, NKG7, GNLY
+- CST7, CTSW, FGFBP2, IL2RB, IL12RB2, IL18RAP, IL18R1, STAT4, RUNX3, ZEB2, PRDM1, EOMES
+- BATF, IRF1, NFATC2, LTA, TNF, IL2, CD44, CD95, CD27, CD28, CD4, CD3E
+- TRBC1, TRAC, PTPRC, CXCR6
+
+### Naive CD4+ T cell
+
+Description: Naive CD4+ T cells are antigen-inexperienced, expressing high levels of CCR7 and SELL (CD62L), allowing recirculation through lymph nodes, and lack activation markers.
+
+Genes:
+- CCR7, SELL, TCF7, LEF1, IL7R, CD27, CD28, CD5, CD6, CD3E, CD3D, CD3G
+- CD4, TRBC1, TRAC, ZAP70, LCK, PTPRC, S1PR1, KLF2, FOXO1, MYC, LEF1, CCNG2
+- CDK6, MKI67, BTLA, CD62L, CXCR4, CD44, CD45RA, CD45RO, CD95, BACH2, ID3, SATB1
+- TESPA1, THEMIS, GIMAP4, GIMAP6
+
+### Resting Treg
+
+Description: Resting regulatory T cells (Tregs) are characterized by high expression of FOXP3 and IL2RA, and low expression of activation markers, performing immunosuppressive functions in steady state.
+
+Genes:
+- FOXP3, IL2RA, CTLA4, TIGIT, IKZF2, RTKN2, IL2RB, TNFRSF18, TNFRSF4, GPR174, CAPG, ITGAE
+- LAIR2, LRRC32, SIRPG, PTPN22, BATF, SMAD4, CCR4, CCR8, ENTPD1, NRP1, FCRL3, FCRL6
+- CD27, CD28, CD40LG, CD4, CD3E, CD3D, CD3G, TRBC1, TRAC, ZAP70, LCK, PTPRC
+- SELPLG, CXCR3, ICOS, PDCD1
+

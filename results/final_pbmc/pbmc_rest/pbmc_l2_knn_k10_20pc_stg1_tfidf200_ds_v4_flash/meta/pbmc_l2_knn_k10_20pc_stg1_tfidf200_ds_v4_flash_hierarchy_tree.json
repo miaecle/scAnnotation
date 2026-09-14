@@ -1,0 +1,211 @@
+{
+  "hierarchy_columns": [
+    "celltype.l1",
+    "celltype.l2"
+  ],
+  "children": {
+    "mono": {
+      "label": "Mono",
+      "column": "celltype.l1",
+      "children": {
+        "cd14 mono": {
+          "label": "CD14 Mono",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd16 mono": {
+          "label": "CD16 Mono",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "cd4 t": {
+      "label": "CD4 T",
+      "column": "celltype.l1",
+      "children": {
+        "cd4 tcm": {
+          "label": "CD4 TCM",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd4 naive": {
+          "label": "CD4 Naive",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd4 ctl": {
+          "label": "CD4 CTL",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "treg": {
+          "label": "Treg",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd4 tem": {
+          "label": "CD4 TEM",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd4 proliferating": {
+          "label": "CD4 Proliferating",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "cd8 t": {
+      "label": "CD8 T",
+      "column": "celltype.l1",
+      "children": {
+        "cd8 naive": {
+          "label": "CD8 Naive",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd8 tem": {
+          "label": "CD8 TEM",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd8 tcm": {
+          "label": "CD8 TCM",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cd8 proliferating": {
+          "label": "CD8 Proliferating",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "nk": {
+      "label": "NK",
+      "column": "celltype.l1",
+      "children": {
+        "nk": {
+          "label": "NK",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "nk proliferating": {
+          "label": "NK Proliferating",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "nk_cd56bright": {
+          "label": "NK_CD56bright",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "b": {
+      "label": "B",
+      "column": "celltype.l1",
+      "children": {
+        "b intermediate": {
+          "label": "B intermediate",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "b naive": {
+          "label": "B naive",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "b memory": {
+          "label": "B memory",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "plasmablast": {
+          "label": "Plasmablast",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "other t": {
+      "label": "other T",
+      "column": "celltype.l1",
+      "children": {
+        "mait": {
+          "label": "MAIT",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "gdt": {
+          "label": "gdT",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "dnt": {
+          "label": "dnT",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "other": {
+      "label": "other",
+      "column": "celltype.l1",
+      "children": {
+        "doublet": {
+          "label": "Doublet",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "hspc": {
+          "label": "HSPC",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "platelet": {
+          "label": "Platelet",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "eryth": {
+          "label": "Eryth",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "ilc": {
+          "label": "ILC",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    },
+    "dc": {
+      "label": "DC",
+      "column": "celltype.l1",
+      "children": {
+        "pdc": {
+          "label": "pDC",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cdc2": {
+          "label": "cDC2",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "asdc": {
+          "label": "ASDC",
+          "column": "celltype.l2",
+          "children": {}
+        },
+        "cdc1": {
+          "label": "cDC1",
+          "column": "celltype.l2",
+          "children": {}
+        }
+      }
+    }
+  }
+}
