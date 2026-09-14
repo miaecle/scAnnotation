@@ -37,6 +37,8 @@ from .metrics import (
     llm_judge_binary_accuracy,
     evaluate_per_sample,
     evaluate_all,
+    bootstrap_metrics,
+    format_eval_report,
 )
 from .backends import ClaudeBackend, DeepSeekBackend, GeminiBackend, OpenRouterBackend
 
@@ -94,6 +96,8 @@ __all__ = [
     "llm_judge_binary_accuracy",
     "evaluate_per_sample",
     "evaluate_all",
+    "bootstrap_metrics",
+    "format_eval_report",
     # backends
     "ClaudeBackend",
     "DeepSeekBackend",

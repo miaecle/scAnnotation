@@ -1,0 +1,254 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_used,recorded_at_unix,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,step,phase,cell_idx,cell_barcode,stage1_label,error_type,error_message,json_parse_method,cache_hits
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,652,858,,,False,1785224847.5509667,1,4,success,False,3731,1706,stage2_program_query,precompute,-1,<precompute>,B intermediate,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,846,1054,,,False,1785224847.5785012,1,4,format_error,True,3842,2191,stage2_program_query,precompute,-1,<precompute>,CD8 Naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 105 column 4 (char 2191)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224847.9648848,1,4,format_error,True,4224,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,1014,1223,,,False,1785224847.9675074,1,4,success,False,4206,2629,stage2_program_query,precompute,-1,<precompute>,CD4 Proliferating,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,862,1069,,,False,1785224847.9950345,1,4,success,False,4126,2180,stage2_program_query,precompute,-1,<precompute>,CD8 TCM,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,869,1075,,,False,1785224848.000656,1,4,success,False,4200,2289,stage2_program_query,precompute,-1,<precompute>,Doublet,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,955,1162,,,False,1785224848.0718975,1,4,success,False,4315,2445,stage2_program_query,precompute,-1,<precompute>,CD4 CTL,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,899,1106,,,False,1785224848.0754578,1,4,success,False,4270,2351,stage2_program_query,precompute,-1,<precompute>,CD4 TCM,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,980,1186,,,False,1785224848.078568,1,4,success,False,4305,2438,stage2_program_query,precompute,-1,<precompute>,ASDC,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,912,1118,,,False,1785224848.0814927,1,4,success,False,4264,2256,stage2_program_query,precompute,-1,<precompute>,MAIT,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,851,1057,,,False,1785224848.0962958,1,4,format_error,True,4331,2156,stage2_program_query,precompute,-1,<precompute>,ILC,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2156)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,983,1191,,,False,1785224848.2108667,1,4,success,False,4382,2485,stage2_program_query,precompute,-1,<precompute>,CD4 Naive,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,884,1090,,,False,1785224848.2817178,1,4,success,False,4473,2416,stage2_program_query,precompute,-1,<precompute>,HSPC,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224848.290263,1,4,format_error,True,4363,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1114,1321,,,False,1785224848.5937636,1,4,success,False,4865,2777,stage2_program_query,precompute,-1,<precompute>,CD8 TEM,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,1026,1232,,,False,1785224848.6983695,1,4,success,False,4861,2575,stage2_program_query,precompute,-1,<precompute>,B memory,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,985,1192,,,False,1785224848.8291862,1,4,success,False,5004,2525,stage2_program_query,precompute,-1,<precompute>,Eryth,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1146,1353,,,False,1785224848.9091027,1,4,success,False,5155,2863,stage2_program_query,precompute,-1,<precompute>,CD4 TEM,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,1177,1386,,,False,1785224848.933939,1,4,success,False,5143,3075,stage2_program_query,precompute,-1,<precompute>,CD8 Proliferating,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,1062,1270,,,False,1785224849.1122458,1,4,success,False,5149,2633,stage2_program_query,precompute,-1,<precompute>,CD14 Mono,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,832,1038,,,False,1785224851.8093157,1,4,success,False,3727,2158,stage2_program_query,precompute,-1,<precompute>,Treg,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,873,1081,,,False,1785224851.8110363,1,4,success,False,3843,2263,stage2_program_query,precompute,-1,<precompute>,NK Proliferating,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,858,1063,,,False,1785224851.8122323,1,4,format_error,True,4260,2228,stage2_program_query,precompute,-1,<precompute>,NK,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 105 column 4 (char 2228)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,847,1054,,,False,1785224852.1174076,1,4,format_error,True,4029,2175,stage2_program_query,precompute,-1,<precompute>,cDC2,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 102 column 4 (char 2175)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,867,1077,,,False,1785224852.1504996,1,4,format_error,True,4154,2149,stage2_program_query,precompute,-1,<precompute>,NK_CD56bright,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2149)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,877,1083,,,False,1785224852.427697,1,4,success,False,4351,2345,stage2_program_query,precompute,-1,<precompute>,Platelet,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,909,1115,,,False,1785224852.4328167,1,4,success,False,4221,2343,stage2_program_query,precompute,-1,<precompute>,dnT,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,961,1168,,,False,1785224852.7453518,1,4,success,False,4660,2413,stage2_program_query,precompute,-1,<precompute>,cDC1,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,1090,1298,,,False,1785224852.8519106,1,4,success,False,4850,2730,stage2_program_query,precompute,-1,<precompute>,Plasmablast,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,1131,1337,,,False,1785224853.5757558,1,4,success,False,5293,2840,stage2_program_query,precompute,-1,<precompute>,gdT,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,1037,1243,,,False,1785224853.6814582,1,4,success,False,5087,2495,stage2_program_query,precompute,-1,<precompute>,pDC,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224853.9923224,2,4,success,False,4411,2391,stage2_program_query,precompute,-1,<precompute>,CD8 Naive,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,851,1057,,,False,1785224854.2014341,2,4,format_error,True,4102,2156,stage2_program_query,precompute,-1,<precompute>,ILC,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2156)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224854.2049527,2,4,format_error,True,4236,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224854.638486,2,4,format_error,True,4345,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,901,1106,,,False,1785224858.0342824,2,4,success,False,4217,2373,stage2_program_query,precompute,-1,<precompute>,NK,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,871,1078,,,False,1785224858.0356174,2,4,success,False,3915,2265,stage2_program_query,precompute,-1,<precompute>,cDC2,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,867,1077,,,False,1785224858.451089,2,4,format_error,True,4297,2149,stage2_program_query,precompute,-1,<precompute>,NK_CD56bright,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2149)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,851,1057,,,False,1785224862.3991458,3,4,format_error,True,4184,2156,stage2_program_query,precompute,-1,<precompute>,ILC,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2156)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224862.4261935,3,4,format_error,True,4216,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224862.9206731,3,4,format_error,True,4277,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,918,1128,,,False,1785224866.8620245,3,4,success,False,4406,2341,stage2_program_query,precompute,-1,<precompute>,NK_CD56bright,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,881,1087,,,False,1785224874.759326,4,4,success,False,4351,2224,stage2_program_query,precompute,-1,<precompute>,ILC,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224874.9740198,4,4,final_failure,False,4540,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224875.1736362,4,4,final_failure,False,4244,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1492,94,2223,,637.0,False,1785224879.0161774,1,4,success,False,3762,293,stage1_annotation,annotation,132099,E2L6_GATGATCAGCGTTACT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,115,2140,,540.0,False,1785224879.2228534,1,4,success,False,3767,432,stage1_annotation,annotation,43050,L4_CATAGACTCTCTTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1503,109,2241,,629.0,False,1785224879.340166,1,4,success,False,3878,408,stage1_annotation,annotation,10685,L1_TCACATTCACACTGGC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1482,128,2229,,619.0,False,1785224879.5405087,1,4,success,False,4055,441,stage1_annotation,annotation,156480,E2L8_GCCAACGTCGGCAGTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1474,131,2361,,756.0,False,1785224879.7756917,1,4,success,False,4403,439,stage1_annotation,annotation,121173,E2L5_GTACAACAGGTTATAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,123,2466,,873.0,False,1785224880.296069,1,4,success,False,4829,414,stage1_annotation,annotation,50441,L4_TCTTCCTTCTGGTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1480,152,2677,,1045.0,False,1785224880.4754846,1,4,success,False,5120,507,stage1_annotation,annotation,138519,E2L7_ACCAAACCATGTGGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,122,2818,,1208.0,False,1785224880.7882032,1,4,success,False,5488,398,stage1_annotation,annotation,81683,E2L2_CACGGGTAGCCAGAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,155,2644,,1019.0,False,1785224880.9168632,1,4,success,False,5419,491,stage1_annotation,annotation,122977,E2L5_TCATGCCCATGACAAA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,127,2834,,1219.0,False,1785224881.0152886,1,4,success,False,5739,457,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1492,131,2632,,1009.0,False,1785224881.1075585,1,4,success,False,5678,462,stage1_annotation,annotation,121565,E2L5_GTGAGCCTCGGTGTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1479,120,2784,,1185.0,False,1785224881.125229,1,4,success,False,5812,380,stage1_annotation,annotation,15226,L2_AGACAAAGTGTTCCTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1489,127,2732,,1116.0,False,1785224881.1613138,1,4,success,False,5843,440,stage1_annotation,annotation,116257,E2L5_ATTTACCTCGTGCGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,88,2828,,1270.0,False,1785224881.742059,1,4,success,False,6381,347,stage1_annotation,annotation,101432,E2L3_TTCTAGTAGGTAGCCA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1481,145,2893,,1267.0,False,1785224882.447632,1,4,success,False,7002,492,stage1_annotation,annotation,10904,L1_TCATGAGAGCGTGCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1375,129,2037,,533.0,False,1785224882.7851944,1,4,success,False,3411,504,stage2_refinement,annotation,43050,L4_CATAGACTCTCTTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1486,141,3305,,1678.0,False,1785224882.8609936,1,4,success,False,7421,483,stage1_annotation,annotation,111113,E2L4_TCATGTTCAACTCATG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1423,108,2143,,612.0,False,1785224883.1668818,1,4,success,False,3685,408,stage2_refinement,annotation,10685,L1_TCACATTCACACTGGC,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224883.172514,1,4,format_error,True,4154,2315,stage2_program_query,annotation,132099,E2L6_GATGATCAGCGTTACT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1411,114,2184,,659.0,False,1785224883.5102441,1,4,success,False,3849,375,stage2_refinement,annotation,156480,E2L8_GCCAACGTCGGCAGTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,101,2292,,808.0,False,1785224884.2145412,1,4,success,False,3801,336,stage2_refinement,annotation,50441,L4_TCTTCCTTCTGGTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1471,137,3535,,1927.0,False,1785224884.224833,1,4,success,False,8817,454,stage1_annotation,annotation,80508,E2L2_AGTAGTCAGAATCCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1469,132,3568,,1967.0,False,1785224884.2259338,1,4,success,False,8806,453,stage1_annotation,annotation,78753,E2L2_AACCATGTCTCATAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1392,115,2438,,931.0,False,1785224884.2545753,1,4,success,False,4337,411,stage2_refinement,annotation,121173,E2L5_GTACAACAGGTTATAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1455,119,3662,,2088.0,False,1785224884.5379295,1,4,success,False,9196,407,stage1_annotation,annotation,23198,L2_GTTTGGAGTAATACCC,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224885.0427265,1,4,format_error,True,4566,2320,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1482,126,3741,,2133.0,False,1785224885.3815432,1,4,success,False,9902,454,stage1_annotation,annotation,139519,E2L7_AGGGCTCAGATACTGA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1475,89,2090,,526.0,False,1785224887.23161,1,4,success,False,2892,321,stage1_annotation,annotation,137082,E2L6_TTCCGGTGTGAGGCAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1486,133,2309,,690.0,False,1785224887.9448597,1,4,success,False,3700,471,stage1_annotation,annotation,144357,E2L7_GCACGGTTCCGCGGAT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224888.4641912,1,4,format_error,True,4231,2320,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1479,127,3024,,1418.0,False,1785224888.7767088,1,4,success,False,5981,439,stage1_annotation,annotation,90640,E2L3_AAAGAACCACGGCGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1422,135,2852,,1295.0,False,1785224888.7865074,1,4,success,False,5805,497,stage2_refinement,annotation,111113,E2L4_TCATGTTCAACTCATG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1396,121,2145,,628.0,False,1785224888.990963,1,4,success,False,7595,420,stage2_refinement,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1354,79,2061,,628.0,False,1785224889.0139353,1,4,success,False,7154,311,stage2_refinement,annotation,101432,E2L3_TTCTAGTAGGTAGCCA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1413,162,2552,,977.0,False,1785224889.0854619,1,4,success,False,4721,554,stage2_refinement,annotation,80508,E2L2_AGTAGTCAGAATCCCT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224889.6123552,2,4,format_error,True,4437,2315,stage2_program_query,annotation,132099,E2L6_GATGATCAGCGTTACT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1398,92,2301,,811.0,False,1785224889.7108943,1,4,success,False,7978,337,stage2_refinement,annotation,116257,E2L5_ATTTACCTCGTGCGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1460,107,3285,,1718.0,False,1785224889.9187517,1,4,success,False,6738,338,stage1_annotation,annotation,58892,L5_CTCCTTTGTCAGTTTG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1355,107,1940,,478.0,False,1785224890.119274,1,4,success,False,2763,397,stage2_refinement,annotation,137082,E2L6_TTCCGGTGTGAGGCAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1417,129,2437,,891.0,False,1785224890.1265073,1,4,success,False,8390,464,stage2_refinement,annotation,121565,E2L5_GTGAGCCTCGGTGTAT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224890.3347433,1,4,format_error,True,9546,2315,stage2_program_query,annotation,81683,E2L2_CACGGGTAGCCAGAGT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1377,112,2877,,1388.0,False,1785224890.4368596,1,4,success,False,5781,390,stage2_refinement,annotation,23198,L2_GTTTGGAGTAATACCC,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224890.4417775,1,4,format_error,True,9524,2320,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1419,130,2786,,1237.0,False,1785224891.1689048,1,4,success,False,8601,469,stage2_refinement,annotation,10904,L1_TCATGAGAGCGTGCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1402,125,2726,,1199.0,False,1785224891.1750064,1,4,success,False,9423,471,stage2_refinement,annotation,15226,L2_AGACAAAGTGTTCCTC,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224891.5194144,2,4,format_error,True,4474,2320,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,162,3024,,1479.0,False,1785224891.616788,1,4,success,False,6115,558,stage2_refinement,annotation,139519,E2L7_AGGGCTCAGATACTGA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1469,127,3646,,2050.0,False,1785224891.7920003,1,4,success,False,8270,460,stage1_annotation,annotation,32452,L3_CTGAGCGAGGAGACCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1393,120,2249,,736.0,False,1785224891.7997863,1,4,success,False,3733,430,stage2_refinement,annotation,144357,E2L7_GCACGGTTCCGCGGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1503,57,2185,,625.0,False,1785224891.9979117,1,4,success,False,3179,227,stage1_annotation,annotation,56652,L5_CAGTTCCAGGGCAAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1494,97,2427,,836.0,False,1785224892.643984,1,4,success,False,3643,337,stage1_annotation,annotation,63633,L5_TATTCCATCTTTCTAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1397,112,2523,,1014.0,False,1785224893.1479852,1,4,success,False,4249,347,stage2_refinement,annotation,90640,E2L3_AAAGAACCACGGCGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1478,141,2310,,691.0,False,1785224893.4487395,1,4,success,False,3726,465,stage1_annotation,annotation,88159,E2L2_TCCAGAAAGAGTTGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,99,2272,,688.0,False,1785224893.657079,1,4,success,False,3525,343,stage1_annotation,annotation,89140,E2L2_TGCATGACATGTCAGT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224894.6977825,2,4,format_error,True,4230,2293,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,128,3032,,1419.0,False,1785224894.8289986,1,4,success,False,5806,453,stage1_annotation,annotation,134605,E2L6_TACTGCCTCGATTGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1344,90,2049,,615.0,False,1785224895.62552,1,4,success,False,3504,338,stage2_refinement,annotation,56652,L5_CAGTTCCAGGGCAAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1358,139,2803,,1306.0,False,1785224895.6751137,1,4,success,False,5633,446,stage2_refinement,annotation,58892,L5_CTCCTTTGTCAGTTTG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,130,3034,,1416.0,False,1785224895.6820736,1,4,success,False,6585,429,stage1_annotation,annotation,49206,L4_TATCTGTTCATCCTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1390,93,2121,,638.0,False,1785224895.8601656,1,4,success,False,3092,330,stage2_refinement,annotation,63633,L5_TATTCCATCTTTCTAG,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224896.5687542,2,4,format_error,True,4231,2315,stage2_program_query,annotation,81683,E2L2_CACGGGTAGCCAGAGT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224896.6886544,2,4,format_error,True,4244,2293,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1386,86,2252,,780.0,False,1785224897.0862484,1,4,success,False,3300,326,stage2_refinement,annotation,89140,E2L2_TGCATGACATGTCAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1396,148,2921,,1377.0,False,1785224897.3893826,1,4,success,False,5464,519,stage2_refinement,annotation,32452,L3_CTGAGCGAGGAGACCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1416,133,2425,,876.0,False,1785224897.8093104,1,4,success,False,4242,460,stage2_refinement,annotation,88159,E2L2_TCCAGAAAGAGTTGAT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,881,1087,,,False,1785224897.9194653,3,4,success,False,4302,2236,stage2_program_query,annotation,132099,E2L6_GATGATCAGCGTTACT,B naive,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224899.9724324,3,4,format_error,True,4448,2293,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1401,107,2624,,1116.0,False,1785224900.1791444,1,4,success,False,5230,387,stage2_refinement,annotation,134605,E2L6_TACTGCCTCGATTGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1367,101,2280,,812.0,False,1785224901.4265442,1,4,success,False,3390,333,stage2_refinement,annotation,132099,E2L6_GATGATCAGCGTTACT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224902.9015908,3,4,format_error,True,4199,2293,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,881,1087,,,False,1785224904.6445503,3,4,success,False,4071,2236,stage2_program_query,annotation,81683,E2L2_CACGGGTAGCCAGAGT,B naive,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224904.7498329,3,4,format_error,True,4056,2293,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiBackend,gemini-3.5-flash,1435,154,4137,,2548.0,False,1785224907.2729127,1,4,success,False,11449,520,stage2_refinement,annotation,49206,L4_TATCTGTTCATCCTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1395,138,2212,,679.0,False,1785224908.1879172,1,4,success,False,3410,475,stage2_refinement,annotation,81683,E2L2_CACGGGTAGCCAGAGT,,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224912.2366023,4,4,final_failure,False,4255,2293,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224915.2483318,4,4,final_failure,False,4338,2293,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224917.031826,4,4,final_failure,False,4272,2293,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,881,1087,,,False,1785225440.0869377,1,4,success,False,4257,2236,stage2_program_query,precompute,-1,<precompute>,B naive,,,,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785225440.0890973,1,4,format_error,True,4298,2293,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785225446.5138764,2,4,format_error,True,4421,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785225454.690191,3,4,format_error,True,4172,2293,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785225467.216139,4,4,final_failure,False,4517,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,881,1087,,,False,1785225998.3216054,1,4,success,False,4327,2236,stage2_program_query,precompute,-1,<precompute>,B naive,,,direct_json_loads,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785225998.5097597,1,4,success,False,4521,2293,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,,,repaired_json_1,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,115,2140,,540.0,False,1785226007.2148275,1,4,success,False,8489,432,stage1_annotation,annotation,43050,L4_CATAGACTCTCTTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1503,109,2241,,629.0,False,1785226007.5083892,1,4,success,False,8774,408,stage1_annotation,annotation,10685,L1_TCACATTCACACTGGC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1492,94,2223,,637.0,False,1785226007.606058,1,4,success,False,8998,293,stage1_annotation,annotation,132099,E2L6_GATGATCAGCGTTACT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1482,128,2229,,619.0,False,1785226008.0861442,1,4,success,False,9375,441,stage1_annotation,annotation,156480,E2L8_GCCAACGTCGGCAGTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1480,107,2553,,966.0,False,1785226008.0925357,1,4,success,False,9406,384,stage1_annotation,annotation,138519,E2L7_ACCAAACCATGTGGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1474,131,2361,,756.0,False,1785226008.2011392,1,4,success,False,9486,439,stage1_annotation,annotation,121173,E2L5_GTACAACAGGTTATAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1482,99,2284,,703.0,False,1785226008.5411055,1,4,success,False,9801,354,stage1_annotation,annotation,139519,E2L7_AGGGCTCAGATACTGA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,114,2536,,934.0,False,1785226008.593499,1,4,success,False,9989,345,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,123,2466,,873.0,False,1785226008.9304361,1,4,success,False,10177,414,stage1_annotation,annotation,50441,L4_TCTTCCTTCTGGTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,155,2644,,1019.0,False,1785226008.9593058,1,4,success,False,10214,491,stage1_annotation,annotation,122977,E2L5_TCATGCCCATGACAAA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1489,127,2732,,1116.0,False,1785226009.192089,1,4,success,False,10607,440,stage1_annotation,annotation,116257,E2L5_ATTTACCTCGTGCGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,122,2818,,1208.0,False,1785226009.2399094,1,4,success,False,10621,398,stage1_annotation,annotation,81683,E2L2_CACGGGTAGCCAGAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1492,131,2632,,1009.0,False,1785226009.5650942,1,4,success,False,10868,462,stage1_annotation,annotation,121565,E2L5_GTGAGCCTCGGTGTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1479,120,2784,,1185.0,False,1785226009.7637978,1,4,success,False,11097,380,stage1_annotation,annotation,15226,L2_AGACAAAGTGTTCCTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,88,2828,,1270.0,False,1785226009.8633122,1,4,success,False,11208,347,stage1_annotation,annotation,101432,E2L3_TTCTAGTAGGTAGCCA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1471,155,2900,,1274.0,False,1785226010.5447283,1,4,success,False,11869,541,stage1_annotation,annotation,80508,E2L2_AGTAGTCAGAATCCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1375,103,2000,,522.0,False,1785226010.6280503,1,4,success,False,3270,378,stage2_refinement,annotation,43050,L4_CATAGACTCTCTTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1455,101,2956,,1400.0,False,1785226010.7031138,1,4,success,False,12009,375,stage1_annotation,annotation,23198,L2_GTTTGGAGTAATACCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1411,83,2012,,518.0,False,1785226011.2528958,1,4,success,False,2841,283,stage2_refinement,annotation,156480,E2L8_GCCAACGTCGGCAGTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1486,169,3370,,1715.0,False,1785226011.4829497,1,4,success,False,12761,538,stage1_annotation,annotation,111113,E2L4_TCATGTTCAACTCATG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1481,155,3070,,1434.0,False,1785226011.6074407,1,4,success,False,12936,492,stage1_annotation,annotation,10904,L1_TCATGAGAGCGTGCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1423,95,2343,,825.0,False,1785226011.8377054,1,4,success,False,4177,333,stage2_refinement,annotation,10685,L1_TCACATTCACACTGGC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,123,2071,,565.0,False,1785226012.1079416,1,4,success,False,3111,422,stage2_refinement,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1392,134,2342,,816.0,False,1785226012.1919909,1,4,success,False,3568,474,stage2_refinement,annotation,121173,E2L5_GTACAACAGGTTATAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1367,104,2329,,858.0,False,1785226012.3046749,1,4,success,False,4531,366,stage2_refinement,annotation,132099,E2L6_GATGATCAGCGTTACT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1469,132,3568,,1967.0,False,1785226012.727548,1,4,success,False,14101,453,stage1_annotation,annotation,78753,E2L2_AACCATGTCTCATAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1374,166,2627,,1087.0,False,1785226014.1146805,1,4,success,False,5504,564,stage2_refinement,annotation,138519,E2L7_ACCAAACCATGTGGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1431,139,2446,,876.0,False,1785226014.4747055,1,4,success,False,3788,509,stage2_refinement,annotation,80508,E2L2_AGTAGTCAGAATCCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1475,89,2099,,535.0,False,1785226015.3539987,1,4,success,False,3150,302,stage1_annotation,annotation,137082,E2L6_TTCCGGTGTGAGGCAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1450,137,2270,,683.0,False,1785226015.3935466,1,4,success,False,3769,466,stage2_refinement,annotation,111113,E2L4_TCATGTTCAACTCATG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1486,133,2309,,690.0,False,1785226015.526156,1,4,success,False,3409,471,stage1_annotation,annotation,144357,E2L7_GCACGGTTCCGCGGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1503,57,2185,,625.0,False,1785226015.562591,1,4,success,False,3246,227,stage1_annotation,annotation,56652,L5_CAGTTCCAGGGCAAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1479,127,3024,,1418.0,False,1785226016.7597578,1,4,success,False,6079,439,stage1_annotation,annotation,90640,E2L3_AAAGAACCACGGCGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1354,79,2061,,628.0,False,1785226017.2700973,1,4,success,False,7235,311,stage2_refinement,annotation,101432,E2L3_TTCTAGTAGGTAGCCA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1381,145,3588,,2062.0,False,1785226017.5597513,1,4,success,False,8586,428,stage2_refinement,annotation,139519,E2L7_AGGGCTCAGATACTGA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1395,130,2705,,1180.0,False,1785226017.6297426,1,4,success,False,4786,451,stage2_refinement,annotation,78753,E2L2_AACCATGTCTCATAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1494,97,2427,,836.0,False,1785226017.7143185,1,4,success,False,3589,337,stage1_annotation,annotation,63633,L5_TATTCCATCTTTCTAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1395,109,2090,,586.0,False,1785226017.8907924,1,4,success,False,8287,389,stage2_refinement,annotation,81683,E2L2_CACGGGTAGCCAGAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,101,2292,,808.0,False,1785226018.2584374,1,4,success,False,8970,336,stage2_refinement,annotation,50441,L4_TCTTCCTTCTGGTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1355,106,2058,,597.0,False,1785226018.4927464,1,4,success,False,2992,390,stage2_refinement,annotation,137082,E2L6_TTCCGGTGTGAGGCAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1455,137,2507,,915.0,False,1785226018.498768,1,4,success,False,6752,488,stage2_refinement,annotation,10904,L1_TCATGAGAGCGTGCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1398,95,2444,,951.0,False,1785226018.6784837,1,4,success,False,9062,349,stage2_refinement,annotation,116257,E2L5_ATTTACCTCGTGCGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1360,132,2369,,877.0,False,1785226018.7645314,1,4,success,False,7928,415,stage2_refinement,annotation,23198,L2_GTTTGGAGTAATACCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1393,109,2161,,659.0,False,1785226018.9327884,1,4,success,False,3128,359,stage2_refinement,annotation,144357,E2L7_GCACGGTTCCGCGGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1344,82,2077,,651.0,False,1785226018.9359784,1,4,success,False,3136,311,stage2_refinement,annotation,56652,L5_CAGTTCCAGGGCAAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1417,118,2438,,903.0,False,1785226018.9421775,1,4,success,False,9214,391,stage2_refinement,annotation,121565,E2L5_GTGAGCCTCGGTGTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,83,2658,,1090.0,False,1785226019.0498374,1,4,success,False,4563,306,stage1_annotation,annotation,134605,E2L6_TACTGCCTCGATTGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1460,166,3508,,1882.0,False,1785226019.37356,1,4,success,False,8111,527,stage1_annotation,annotation,58892,L5_CTCCTTTGTCAGTTTG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1402,132,2613,,1079.0,False,1785226019.3760252,1,4,success,False,9459,472,stage2_refinement,annotation,15226,L2_AGACAAAGTGTTCCTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1469,127,3646,,2050.0,False,1785226020.5028105,1,4,success,False,8654,460,stage1_annotation,annotation,32452,L3_CTGAGCGAGGAGACCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,99,2272,,688.0,False,1785226020.7663474,1,4,success,False,3195,343,stage1_annotation,annotation,89140,E2L2_TGCATGACATGTCAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1390,93,2121,,638.0,False,1785226020.9673767,1,4,success,False,3123,330,stage2_refinement,annotation,63633,L5_TATTCCATCTTTCTAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1478,138,2388,,772.0,False,1785226021.2372174,1,4,success,False,3956,463,stage1_annotation,annotation,88159,E2L2_TCCAGAAAGAGTTGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1415,166,3177,,1596.0,False,1785226021.6579387,1,4,success,False,12245,620,stage2_refinement,annotation,122977,E2L5_TCATGCCCATGACAAA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1397,104,2724,,1223.0,False,1785226022.1602006,1,4,success,False,5272,385,stage2_refinement,annotation,90640,E2L3_AAAGAACCACGGCGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,130,3034,,1416.0,False,1785226022.2513204,1,4,success,False,6757,429,stage1_annotation,annotation,49206,L4_TATCTGTTCATCCTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1417,139,2577,,1021.0,False,1785226023.7368283,1,4,success,False,4203,435,stage2_refinement,annotation,58892,L5_CTCCTTTGTCAGTTTG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1386,86,2252,,780.0,False,1785226024.2020192,1,4,success,False,3307,326,stage2_refinement,annotation,89140,E2L2_TGCATGACATGTCAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1356,122,2661,,1183.0,False,1785226024.2029526,1,4,success,False,5009,409,stage2_refinement,annotation,134605,E2L6_TACTGCCTCGATTGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1413,117,2366,,836.0,False,1785226025.3507586,1,4,success,False,3986,435,stage2_refinement,annotation,88159,E2L2_TCCAGAAAGAGTTGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1396,125,2667,,1146.0,False,1785226025.4134128,1,4,success,False,4769,451,stage2_refinement,annotation,32452,L3_CTGAGCGAGGAGACCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1435,154,4137,,2548.0,False,1785226033.4659603,1,4,success,False,11078,520,stage2_refinement,annotation,49206,L4_TATCTGTTCATCCTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,106,2129,,538.0,False,1785226874.3506541,1,4,success,False,3958,374,stage1_annotation,annotation,43050,L4_CATAGACTCTCTTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1482,110,2154,,562.0,False,1785226874.3615096,1,4,success,False,4000,341,stage1_annotation,annotation,156480,E2L8_GCCAACGTCGGCAGTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1492,112,2214,,610.0,False,1785226874.6163936,1,4,success,False,4354,398,stage1_annotation,annotation,132099,E2L6_GATGATCAGCGTTACT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1503,105,2187,,579.0,False,1785226874.71311,1,4,success,False,4291,366,stage1_annotation,annotation,10685,L1_TCACATTCACACTGGC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,114,2536,,934.0,False,1785226875.4259312,1,4,success,False,5150,345,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1480,107,2553,,966.0,False,1785226875.5424402,1,4,success,False,5215,384,stage1_annotation,annotation,138519,E2L7_ACCAAACCATGTGGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1492,126,2424,,806.0,False,1785226875.5450795,1,4,success,False,5167,443,stage1_annotation,annotation,121565,E2L5_GTGAGCCTCGGTGTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,123,2466,,873.0,False,1785226875.779284,1,4,success,False,5364,414,stage1_annotation,annotation,50441,L4_TCTTCCTTCTGGTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,122,2818,,1208.0,False,1785226876.093772,1,4,success,False,5788,398,stage1_annotation,annotation,81683,E2L2_CACGGGTAGCCAGAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1474,125,2663,,1064.0,False,1785226876.1932418,1,4,success,False,5812,413,stage1_annotation,annotation,121173,E2L5_GTACAACAGGTTATAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,143,2614,,1001.0,False,1785226876.3213499,1,4,success,False,5921,521,stage1_annotation,annotation,122977,E2L5_TCATGCCCATGACAAA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1470,88,2828,,1270.0,False,1785226876.53151,1,4,success,False,6184,347,stage1_annotation,annotation,101432,E2L3_TTCTAGTAGGTAGCCA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1489,127,2732,,1116.0,False,1785226876.5417235,1,4,success,False,6252,440,stage1_annotation,annotation,116257,E2L5_ATTTACCTCGTGCGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1479,116,2814,,1219.0,False,1785226877.1451247,1,4,success,False,6739,421,stage1_annotation,annotation,15226,L2_AGACAAAGTGTTCCTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1481,145,2893,,1267.0,False,1785226877.4118152,1,4,success,False,7076,492,stage1_annotation,annotation,10904,L1_TCATGAGAGCGTGCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1366,96,1932,,470.0,False,1785226877.6068478,1,4,success,False,3041,342,stage2_refinement,annotation,43050,L4_CATAGACTCTCTTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1455,101,2956,,1400.0,False,1785226877.7748055,1,4,success,False,7366,375,stage1_annotation,annotation,23198,L2_GTTTGGAGTAATACCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1486,169,3370,,1715.0,False,1785226878.1947756,1,4,success,False,7808,538,stage1_annotation,annotation,111113,E2L4_TCATGTTCAACTCATG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1393,135,2283,,755.0,False,1785226878.4532773,1,4,success,False,3885,431,stage2_refinement,annotation,156480,E2L8_GCCAACGTCGGCAGTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1385,120,2381,,876.0,False,1785226879.3568616,1,4,success,False,4633,454,stage2_refinement,annotation,132099,E2L6_GATGATCAGCGTTACT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1469,132,3568,,1967.0,False,1785226879.511729,1,4,success,False,9181,453,stage1_annotation,annotation,78753,E2L2_AACCATGTCTCATAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1471,137,3535,,1927.0,False,1785226879.7917497,1,4,success,False,9441,454,stage1_annotation,annotation,80508,E2L2_AGTAGTCAGAATCCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1482,126,3741,,2133.0,False,1785226880.7307034,1,4,success,False,10373,454,stage1_annotation,annotation,139519,E2L7_AGGGCTCAGATACTGA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1360,132,2369,,877.0,False,1785226882.220095,1,4,success,False,4307,415,stage2_refinement,annotation,23198,L2_GTTTGGAGTAATACCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1354,79,2061,,628.0,False,1785226882.7324831,1,4,success,False,5922,311,stage2_refinement,annotation,101432,E2L3_TTCTAGTAGGTAGCCA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,111,2095,,601.0,False,1785226883.082429,1,4,success,False,7474,388,stage2_refinement,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1450,137,2270,,683.0,False,1785226883.532553,1,4,success,False,5210,466,stage2_refinement,annotation,111113,E2L4_TCATGTTCAACTCATG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1395,109,2090,,586.0,False,1785226883.5515363,1,4,success,False,7331,389,stage2_refinement,annotation,81683,E2L2_CACGGGTAGCCAGAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1386,145,2312,,781.0,False,1785226883.61161,1,4,success,False,7249,504,stage2_refinement,annotation,121173,E2L5_GTACAACAGGTTATAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1398,92,2301,,811.0,False,1785226883.6143696,1,4,success,False,6798,337,stage2_refinement,annotation,116257,E2L5_ATTTACCTCGTGCGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1479,134,3135,,1522.0,False,1785226883.637325,1,4,success,False,6020,429,stage1_annotation,annotation,90640,E2L3_AAAGAACCACGGCGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1419,111,2198,,668.0,False,1785226883.74835,1,4,success,False,8929,398,stage2_refinement,annotation,10685,L1_TCACATTCACACTGGC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1403,132,2294,,759.0,False,1785226883.8670623,1,4,success,False,7400,438,stage2_refinement,annotation,122977,E2L5_TCATGCCCATGACAAA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1398,111,2381,,872.0,False,1785226883.9857042,1,4,success,False,6725,389,stage2_refinement,annotation,15226,L2_AGACAAAGTGTTCCTC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,101,2292,,808.0,False,1785226883.988668,1,4,success,False,8070,336,stage2_refinement,annotation,50441,L4_TCTTCCTTCTGGTGCG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1374,142,2461,,945.0,False,1785226884.2218106,1,4,success,False,8426,514,stage2_refinement,annotation,138519,E2L7_ACCAAACCATGTGGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1395,130,2705,,1180.0,False,1785226884.2244275,1,4,success,False,4593,451,stage2_refinement,annotation,78753,E2L2_AACCATGTCTCATAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1412,125,2474,,937.0,False,1785226884.2317865,1,4,success,False,8397,420,stage2_refinement,annotation,121565,E2L5_GTGAGCCTCGGTGTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1413,162,2552,,977.0,False,1785226884.3130648,1,4,success,False,4397,554,stage2_refinement,annotation,80508,E2L2_AGTAGTCAGAATCCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1469,122,2694,,1103.0,False,1785226884.5150287,1,4,success,False,5145,442,stage1_annotation,annotation,32452,L3_CTGAGCGAGGAGACCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1460,107,3285,,1718.0,False,1785226885.09733,1,4,success,False,6632,338,stage1_annotation,annotation,58892,L5_CTCCTTTGTCAGTTTG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1419,130,2786,,1237.0,False,1785226885.2680368,1,4,success,False,7744,469,stage2_refinement,annotation,10904,L1_TCATGAGAGCGTGCCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1475,89,2090,,526.0,False,1785226885.6398463,1,4,success,False,2898,321,stage1_annotation,annotation,137082,E2L6_TTCCGGTGTGAGGCAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1503,57,2185,,625.0,False,1785226886.1451685,1,4,success,False,3049,227,stage1_annotation,annotation,56652,L5_CAGTTCCAGGGCAAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1486,124,2358,,748.0,False,1785226886.251484,1,4,success,False,4017,433,stage1_annotation,annotation,144357,E2L7_GCACGGTTCCGCGGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,95,2277,,697.0,False,1785226887.1190152,1,4,success,False,3341,335,stage1_annotation,annotation,89140,E2L2_TGCATGACATGTCAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1494,97,2427,,836.0,False,1785226887.2434187,1,4,success,False,3700,337,stage1_annotation,annotation,63633,L5_TATTCCATCTTTCTAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1383,162,3024,,1479.0,False,1785226887.2539916,1,4,success,False,6384,558,stage2_refinement,annotation,139519,E2L7_AGGGCTCAGATACTGA,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1478,138,2388,,772.0,False,1785226887.6233246,1,4,success,False,3992,463,stage1_annotation,annotation,88159,E2L2_TCCAGAAAGAGTTGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1355,107,1940,,478.0,False,1785226888.1686761,1,4,success,False,2406,397,stage2_refinement,annotation,137082,E2L6_TTCCGGTGTGAGGCAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1485,83,2658,,1090.0,False,1785226888.2514248,1,4,success,False,4687,306,stage1_annotation,annotation,134605,E2L6_TACTGCCTCGATTGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1404,94,2726,,1228.0,False,1785226888.7604523,1,4,success,False,4990,365,stage2_refinement,annotation,90640,E2L3_AAAGAACCACGGCGTT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1344,90,2049,,615.0,False,1785226889.3601995,1,4,success,False,3069,338,stage2_refinement,annotation,56652,L5_CAGTTCCAGGGCAAGG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1384,108,2137,,645.0,False,1785226889.5409803,1,4,success,False,3135,386,stage2_refinement,annotation,144357,E2L7_GCACGGTTCCGCGGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1488,130,3034,,1416.0,False,1785226890.1468844,1,4,success,False,6520,429,stage1_annotation,annotation,49206,L4_TATCTGTTCATCCTAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1358,131,2754,,1265.0,False,1785226890.248652,1,4,success,False,5029,437,stage2_refinement,annotation,58892,L5_CTCCTTTGTCAGTTTG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1390,93,2121,,638.0,False,1785226890.407037,1,4,success,False,3004,330,stage2_refinement,annotation,63633,L5_TATTCCATCTTTCTAG,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1382,85,2245,,778.0,False,1785226890.412174,1,4,success,False,3122,328,stage2_refinement,annotation,89140,E2L2_TGCATGACATGTCAGT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1413,117,2366,,836.0,False,1785226891.3940585,1,4,success,False,3645,435,stage2_refinement,annotation,88159,E2L2_TCCAGAAAGAGTTGAT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1391,148,3391,,1852.0,False,1785226892.598658,1,4,success,False,7954,511,stage2_refinement,annotation,32452,L3_CTGAGCGAGGAGACCT,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1356,122,2661,,1183.0,False,1785226893.47459,1,4,success,False,5103,409,stage2_refinement,annotation,134605,E2L6_TACTGCCTCGATTGAC,,,,,0
+gemini,GeminiBackend,gemini-3.5-flash,1435,108,2422,,879.0,False,1785226894.528918,1,4,success,False,4253,380,stage2_refinement,annotation,49206,L4_TATCTGTTCATCCTAT,,,,,0

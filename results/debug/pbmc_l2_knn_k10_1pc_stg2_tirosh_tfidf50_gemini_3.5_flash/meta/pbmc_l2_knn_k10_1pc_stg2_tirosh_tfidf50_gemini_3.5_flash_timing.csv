@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf50_gemini_3.5_flash,2026-07-28 16:20:33,2026-07-28 16:21:36,63.01651167869568,1.050275194644928

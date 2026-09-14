@@ -1,0 +1,31 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_used,recorded_at_unix,prompt_user_message,prompt_system_message,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,step,phase,cell_idx,cell_barcode,stage1_label,error_type,error_message,response_text,json_parse_method,cache_hits
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,881,1087,,,False,1785225998.3216054,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4327,2236,stage2_program_query,precompute,-1,<precompute>,B naive,,,,direct_json_loads,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785225998.5097597,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4521,2293,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,,,,repaired_json_1,0

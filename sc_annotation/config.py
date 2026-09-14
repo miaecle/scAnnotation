@@ -11,6 +11,7 @@ All fields have sensible defaults so a minimal YAML only needs to specify
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field, asdict
 from typing import Any, Optional
 
@@ -128,14 +129,21 @@ class Stage2Config:
 class EvaluationConfig:
     """Sampling and evaluation parameters."""
     label_col: str = "celltype.l1"
+    # Skip annotation and assign each sampled cell a random label from cell_type_list.
+    random: bool = False
+    # Label columns ordered from broadest to finest, e.g. ["celltype.l1", "celltype.l2"].
+    hierarchy: Optional[list[str]] = None
     n_per_class: int = 5
     seed: int = 42
-    # Matching strategies to compute: exact | keyword | llm_judge | llm_judge_binary
+    # Matching strategies to compute: exact | keyword | hierarchy | llm_judge | llm_judge_binary
     strategies: list = field(default_factory=lambda: ["exact", "keyword"])
     # Backend for llm_judge / llm_judge_binary; None → reuse annotation backend
     judge_backend: Optional[str] = None
     # Number of samples evaluated concurrently. 1 keeps fully serial behaviour.
     concurrency: int = 1
+    # Number of stratified bootstrap resamples for uncertainty estimates. 0 disables.
+    n_bootstrap: int = 0
+    bootstrap_seed: Optional[int] = 42
 
 
 @dataclass
@@ -222,6 +230,38 @@ class ExperimentConfig:
         with open(path, "w", encoding="utf-8") as fh:
             yaml.dump(asdict(self), fh, default_flow_style=False, sort_keys=False)
 
+    def save_full_snapshot(self, path: str) -> None:
+        """Write the current config as a complete snapshot artifact.
+
+        This is intended for result directories and experiment metadata files,
+        where the stored YAML is a record of the exact run configuration and may
+        safely replace any prior snapshot at ``path``.
+        """
+        self.to_yaml(path)
+
+    def save_evaluation_snapshot(self, path: str) -> None:
+        """Persist the current evaluation settings without overwriting other sections.
+
+        If ``path`` already exists, preserve the existing YAML content and only
+        replace the ``evaluation`` mapping. This avoids clobbering a source
+        template config while still recording the evaluation state of the run.
+        """
+        existing: dict[str, Any] = {}
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as fh:
+                loaded = yaml.safe_load(fh) or {}
+            if isinstance(loaded, dict):
+                existing = loaded
+
+        merged = dict(existing)
+        merged["evaluation"] = asdict(self.evaluation)
+        for key, value in asdict(self).items():
+            if key != "evaluation":
+                merged.setdefault(key, value)
+
+        with open(path, "w", encoding="utf-8") as fh:
+            yaml.dump(merged, fh, default_flow_style=False, sort_keys=False)
+
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
@@ -234,9 +274,9 @@ class ExperimentConfig:
             f"lowexpr={self.filter.exclude_low_expr} gini_min={self.filter.gini_min}) "
             f"selection={self.selection.strategy}(n={self.selection.n_top}) "
             f"llm={self.llm.backend}/{self.llm.model}(concurrency={self.llm.concurrency}) "
-            f"stage2={'on' if self.stage2.enabled else 'off'}({self.stage2.mode}) "
+            f"stage2={'on' if self.stage2.enabled else 'off'}({self.stage2.mode})({self.stage2.score_method}) "
             f"inspect={'on' if self.inspect.enabled else 'off'} "
-            f"evaluation=(label_col={self.evaluation.label_col})"
+            f"evaluation=(label_col={self.evaluation.label_col} random={self.evaluation.random})"
         )
 
 

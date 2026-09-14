@@ -1,0 +1,73 @@
+dataset_path: Datasets/HLCA/hlca_core.h5ad
+tissue: lung parenchyma
+global_metrics:
+  n_top_hvg: 2000
+  min_cells_pct: 0.01
+  compute_gini: false
+  gini_scope: hvg
+filter:
+  exclude_mt: true
+  exclude_ribo: true
+  exclude_low_expr: false
+  exclude_hb: true
+  exclude_tcr_ig: true
+  exclude_sex_chr: false
+  gini_min: null
+selection:
+  strategy: expr
+  n_top: 20
+  n_top_secondary: 50
+  modalities:
+  - rna
+  marker_panel_path: null
+input:
+  mode: pseudobulk
+  knn_k: 20
+  knn_use_rep: X_pca
+llm:
+  backend: deepseek
+  model: deepseek-v4-flash
+  temperature: 0.0
+  max_tokens: 4096
+  api_key_env: DEEPSEEK_API_KEY
+  concurrency: 20
+  use_context_cache: true
+  context_cache_ttl_seconds: 3600
+stage2:
+  enabled: false
+  model: deepseek-v4-flash
+  temperature: 0.0
+  max_tokens: 4096
+  n_program_genes: 50
+  score_method: tirosh
+  score_min_genes: 3
+  score_n_background: 50
+  score_random_state: 0
+  n_top_genes: 30
+  n_top_proteins: 15
+  program_query_max_output_tokens: 25600
+  program_query_thinking_budget: 0
+evaluation:
+  label_col: cell_type
+  hierarchy:
+  - ann_level_1
+  - ann_level_2
+  - ann_level_3
+  - cell_type
+  n_per_class: 20
+  seed: 42
+  strategies:
+  - exact
+  - hierarchy
+  judge_backend: null
+  concurrency: 20
+  n_bootstrap: 1000
+  bootstrap_seed: 42
+output:
+  results_dir: results/hlca/hlca_lp_pseudobulk_20pc_stg1_expr20_seed42_deepseek_v4_flash
+  experiment_name: hlca_lp_pseudobulk_20pc_stg1_expr20_seed42_deepseek_v4_flash
+  save_results: true
+inspect:
+  enabled: false
+  cell_indices: []
+  save_path: null

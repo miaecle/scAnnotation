@@ -1,0 +1,21 @@
+# Axis 2: kNN-smoothed (k=10) — reduces single-cell noise
+# Axis 4: z-score selection on the smoothed vector
+
+dataset_path: Datasets/PBMC_CiteSeqRef/pbmc_citeseq_ref_2021.h5ad
+tissue: PBMC
+
+evaluation:
+  random: true
+  label_col: celltype.l2
+  hierarchy: [celltype.l1, celltype.l2]
+  n_per_class: 20
+  seed: 42
+  strategies: [exact, hierarchy]
+  judge_backend: deepseek
+  concurrency: 10
+  n_bootstrap: 1000
+
+output:
+  results_dir: results/pbmc_new/pbmc_l2_random
+  experiment_name: pbmc_l2_random
+  save_results: true

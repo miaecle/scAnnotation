@@ -1,0 +1,556 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_used,recorded_at_unix,prompt_user_message,prompt_system_message,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,json_parse_method,step,phase,cell_idx,cell_barcode,stage1_label,cache_hits
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,677,883,,,False,1785382378.333563,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""endothelial cell of lymphatic vessel""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,3715,1799,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,endothelial cell of lymphatic vessel,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,622,828,,,False,1785382378.3572805,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""alveolar adventitial fibroblast""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,3794,1639,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,alveolar adventitial fibroblast,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,850,1055,,,False,1785382378.6771817,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""bronchus fibroblast of lung""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4082,2288,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,bronchus fibroblast of lung,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,812,1014,,,False,1785382379.1149762,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""T cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4490,2104,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,T cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,914,1122,,,False,1785382379.2207458,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""CD1c-positive myeloid dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4698,2403,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD1c-positive myeloid dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,203,859,1062,,,False,1785382379.3252242,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""alveolar macrophage""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4689,2306,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,alveolar macrophage,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,969,1179,,,False,1785382379.3289955,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""CD8-positive, alpha-beta T cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4716,2517,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,"CD8-positive, alpha-beta T cell",0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,892,1094,,,False,1785382379.4313881,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""lung macrophage""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4848,2457,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,lung macrophage,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,903,1105,,,False,1785382379.5348713,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""club cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4931,2347,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,club cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,203,924,1127,,,False,1785382379.6464267,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""elicited macrophage""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5096,2559,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,elicited macrophage,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,203,897,1100,,,False,1785382379.7437592,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""conventional dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5135,2367,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,conventional dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,859,1061,,,False,1785382379.7524652,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""B cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5207,2301,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,B cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,928,1130,,,False,1785382379.8572109,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""ionocyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5327,2372,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,ionocyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,1051,1261,,,False,1785382380.0794713,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""CD4-positive, alpha-beta T cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5458,2802,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,"CD4-positive, alpha-beta T cell",0
+gemini,GeminiJSONCaller,gemini-3.5-flash,203,1079,1282,,,False,1785382380.1766443,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""classical monocyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5620,2884,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,classical monocyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,203,842,1045,,,False,1785382380.1827173,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""acinar cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5541,2144,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,acinar cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,931,1136,,,False,1785382380.2869787,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""bronchial goblet cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5709,2385,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,bronchial goblet cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,204,1094,1298,,,False,1785382380.3833823,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5797,2864,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,1086,1293,,,False,1785382380.399332,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""epithelial cell of lower respiratory tract""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5769,2839,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,epithelial cell of lower respiratory tract,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,1183,1392,,,False,1785382380.5004766,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""brush cell of tracheobronchial tree""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5901,3203,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,brush cell of tracheobronchial tree,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,898,1100,,,False,1785382382.8369055,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""mast cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4503,2363,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,mast cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,212,844,1056,,,False,1785382383.3782957,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""multiciliated columnar cell of tracheobronchial tree""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4700,2206,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,multiciliated columnar cell of tracheobronchial tree,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,802,1007,,,False,1785382384.132079,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""pulmonary artery endothelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4485,2166,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,pulmonary artery endothelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,872,1078,,,False,1785382384.2327003,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""respiratory tract hillock cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4479,2293,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,respiratory tract hillock cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,203,890,1093,,,False,1785382384.2339184,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""natural killer cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4904,2282,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,natural killer cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,890,1096,,,False,1785382384.236792,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""plasmacytoid dendritic cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4701,2335,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,plasmacytoid dendritic cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,202,908,1110,,,False,1785382384.2395203,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""plasma cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4807,2472,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,plasma cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,875,1080,,,False,1785382384.5462346,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""nasal mucosa goblet cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5324,2315,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,nasal mucosa goblet cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,961,1166,,,False,1785382384.6477108,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""non-classical monocyte""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5313,2433,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,non-classical monocyte,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,204,863,1067,,,False,1785382384.6582665,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""respiratory basal cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,4913,2272,repaired_json_1,stage2_program_query,precompute,-1,<precompute>,respiratory basal cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,840,1045,,,False,1785382384.6632423,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""multiciliated epithelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5547,2219,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,multiciliated epithelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,1121,1326,,,False,1785382384.8638084,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""mucus secreting cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,6505,2808,extracted_json_block_1,stage2_program_query,precompute,-1,<precompute>,mucus secreting cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,878,1083,,,False,1785382384.973669,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""serous secreting cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5115,2238,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,serous secreting cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,868,1077,,,False,1785382385.1954055,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""tracheobronchial smooth muscle cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5012,2361,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,tracheobronchial smooth muscle cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,899,1107,,,False,1785382385.2990832,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""tracheobronchial goblet cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5219,2287,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,tracheobronchial goblet cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,204,819,1023,,,False,1785382385.5064619,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""vein endothelial cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5218,2375,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,vein endothelial cell,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,209,912,1121,,,False,1785382385.6105115,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in nose.
+  2. The most commonly confused neighboring cell types in nose.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in nose.
+Return only the JSON.
+
+A single cell in nose was annotated in a first pass as: ""tracheobronchial serous cell""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,success,False,5431,2300,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,tracheobronchial serous cell,0

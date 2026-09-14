@@ -1,0 +1,4 @@
+step,phase,provider,backend,model,attempt_status,input_tokens,output_tokens,total_tokens,thoughts_tokens,cache_hits,attempt_count
+stage1_annotation,annotation,gemini,GeminiBackend,gemini-3.5-flash,success,1124059,107187,2140633,909387.0,0,895
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,success,10023,45005,55028,0.0,0,48
+stage2_refinement,annotation,gemini,GeminiBackend,gemini-3.5-flash,success,1110590,99282,2049025,839153.0,0,894

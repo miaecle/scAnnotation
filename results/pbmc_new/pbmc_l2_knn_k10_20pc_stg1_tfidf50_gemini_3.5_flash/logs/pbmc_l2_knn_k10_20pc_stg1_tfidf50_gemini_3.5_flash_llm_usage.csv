@@ -1,0 +1,701 @@
+backend,model,attempt,total_attempts,attempt_status,error_type,error_code,error_message,will_retry,duration_ms,recorded_at_unix,step,phase,cell_idx,cell_barcode,provider,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_used,response_chars,cache_hits
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,251,1786536342.3760276,stage1_annotation,annotation,126676,E2L6_ACTGTGAAGAGTTCGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,268,1786536342.376509,stage1_annotation,annotation,65516,L5_TGCTTGCCACGCGTCA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,258,1786536342.3798501,stage1_annotation,annotation,81589,E2L2_CACAACAGTGCAATAA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,330,1786536342.3829947,stage1_annotation,annotation,137078,E2L6_TTCCGGTAGTGTAGTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,378,1786536342.3874526,stage1_annotation,annotation,25410,L2_TGCGGGTCACCCTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,303,1786536342.3883014,stage1_annotation,annotation,39262,L4_AACAAAGGTACGAAAT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,428,1786536342.526258,stage1_annotation,annotation,154256,E2L8_CGAGTTAAGCTCCATA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,543,1786536342.527016,stage1_annotation,annotation,147689,E2L7_TCGCACTTCACTTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,459,1786536342.5296323,stage1_annotation,annotation,148054,E2L7_TGAATCGGTGGTGATG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,499,1786536342.5301225,stage1_annotation,annotation,132693,E2L6_GCTTGGGCAAGTGCAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,454,1786536342.5325289,stage1_annotation,annotation,109653,E2L4_GTCGAATGTGGTCTCG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,586,1786536342.5335987,stage1_annotation,annotation,98402,E2L3_GTTACAGGTTAGGAGC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,517,1786536342.5342026,stage1_annotation,annotation,87907,E2L2_TCAGCAAAGAACAAGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,511,1786536342.5351837,stage1_annotation,annotation,143579,E2L7_GAAGAATTCTATCGTT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,434,1786536342.5395935,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,497,1786536342.5406108,stage1_annotation,annotation,116772,E2L5_CAGGCCACATAACGGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,426,1786536342.5413399,stage1_annotation,annotation,139354,E2L7_AGCTCAATCGCCTATC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,468,1786536342.542059,stage1_annotation,annotation,89523,E2L2_TGTACAGAGCGACTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,531,1786536342.5431328,stage1_annotation,annotation,14943,L2_ACGTTCCCAGGTCCGT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,477,1786536342.544373,stage1_annotation,annotation,81561,E2L2_CAATCGAGTTGGGTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,104,1786536347.5011396,stage1_annotation,annotation,25410,L2_TGCGGGTCACCCTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,106,1786536347.5049756,stage1_annotation,annotation,39262,L4_AACAAAGGTACGAAAT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,112,1786536347.5057702,stage1_annotation,annotation,137078,E2L6_TTCCGGTAGTGTAGTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,126,1786536347.5111244,stage1_annotation,annotation,65516,L5_TGCTTGCCACGCGTCA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,132,1786536347.5140786,stage1_annotation,annotation,126676,E2L6_ACTGTGAAGAGTTCGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,142,1786536347.5314605,stage1_annotation,annotation,81589,E2L2_CACAACAGTGCAATAA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,95,1786536347.6471677,stage1_annotation,annotation,143579,E2L7_GAAGAATTCTATCGTT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,88,1786536347.6478539,stage1_annotation,annotation,154256,E2L8_CGAGTTAAGCTCCATA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,101,1786536347.65947,stage1_annotation,annotation,89523,E2L2_TGTACAGAGCGACTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,102,1786536347.6652467,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,110,1786536347.665987,stage1_annotation,annotation,139354,E2L7_AGCTCAATCGCCTATC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,117,1786536347.6705265,stage1_annotation,annotation,109653,E2L4_GTCGAATGTGGTCTCG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,98,1786536347.6719155,stage1_annotation,annotation,132693,E2L6_GCTTGGGCAAGTGCAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,117,1786536347.681623,stage1_annotation,annotation,148054,E2L7_TGAATCGGTGGTGATG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,116,1786536347.6851504,stage1_annotation,annotation,147689,E2L7_TCGCACTTCACTTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,120,1786536347.6903238,stage1_annotation,annotation,14943,L2_ACGTTCCCAGGTCCGT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,128,1786536347.6948907,stage1_annotation,annotation,81561,E2L2_CAATCGAGTTGGGTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,146,1786536347.695745,stage1_annotation,annotation,116772,E2L5_CAGGCCACATAACGGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,121,1786536347.6977935,stage1_annotation,annotation,98402,E2L3_GTTACAGGTTAGGAGC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,2,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,130,1786536347.701881,stage1_annotation,annotation,87907,E2L2_TCAGCAAAGAACAAGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,113,1786536357.6317883,stage1_annotation,annotation,137078,E2L6_TTCCGGTAGTGTAGTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,127,1786536357.638964,stage1_annotation,annotation,25410,L2_TGCGGGTCACCCTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,123,1786536357.6395605,stage1_annotation,annotation,39262,L4_AACAAAGGTACGAAAT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,101,1786536357.6429305,stage1_annotation,annotation,81589,E2L2_CACAACAGTGCAATAA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,124,1786536357.6462162,stage1_annotation,annotation,65516,L5_TGCTTGCCACGCGTCA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,141,1786536357.665766,stage1_annotation,annotation,126676,E2L6_ACTGTGAAGAGTTCGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,68,1786536357.7892451,stage1_annotation,annotation,14943,L2_ACGTTCCCAGGTCCGT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,85,1786536357.7952385,stage1_annotation,annotation,154256,E2L8_CGAGTTAAGCTCCATA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,80,1786536357.7963676,stage1_annotation,annotation,148054,E2L7_TGAATCGGTGGTGATG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,87,1786536357.800836,stage1_annotation,annotation,143579,E2L7_GAAGAATTCTATCGTT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,114,1786536357.837592,stage1_annotation,annotation,147689,E2L7_TCGCACTTCACTTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,122,1786536357.855507,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,122,1786536357.8569636,stage1_annotation,annotation,139354,E2L7_AGCTCAATCGCCTATC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,134,1786536357.861206,stage1_annotation,annotation,87907,E2L2_TCAGCAAAGAACAAGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,121,1786536357.86352,stage1_annotation,annotation,109653,E2L4_GTCGAATGTGGTCTCG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,151,1786536357.8698707,stage1_annotation,annotation,116772,E2L5_CAGGCCACATAACGGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,145,1786536357.8708243,stage1_annotation,annotation,98402,E2L3_GTTACAGGTTAGGAGC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,152,1786536357.8833647,stage1_annotation,annotation,89523,E2L2_TGTACAGAGCGACTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,145,1786536357.8840466,stage1_annotation,annotation,132693,E2L6_GCTTGGGCAAGTGCAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,3,4,retry_error,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",True,155,1786536357.8923922,stage1_annotation,annotation,81561,E2L2_CAATCGAGTTGGGTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,94,1786536377.7602665,stage1_annotation,annotation,65516,L5_TGCTTGCCACGCGTCA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,109,1786536377.76379,stage1_annotation,annotation,81589,E2L2_CACAACAGTGCAATAA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,114,1786536377.7777672,stage1_annotation,annotation,39262,L4_AACAAAGGTACGAAAT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,129,1786536377.7913332,stage1_annotation,annotation,25410,L2_TGCGGGTCACCCTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,140,1786536377.7921917,stage1_annotation,annotation,137078,E2L6_TTCCGGTAGTGTAGTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,113,1786536377.7992945,stage1_annotation,annotation,126676,E2L6_ACTGTGAAGAGTTCGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,62,1786536377.881967,stage1_annotation,annotation,143579,E2L7_GAAGAATTCTATCGTT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,92,1786536377.9073758,stage1_annotation,annotation,154256,E2L8_CGAGTTAAGCTCCATA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,97,1786536377.9141054,stage1_annotation,annotation,148054,E2L7_TGAATCGGTGGTGATG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,106,1786536377.9191165,stage1_annotation,annotation,14943,L2_ACGTTCCCAGGTCCGT,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,78,1786536377.9367182,stage1_annotation,annotation,147689,E2L7_TCGCACTTCACTTCTA,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,80,1786536377.9561222,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,86,1786536377.9781253,stage1_annotation,annotation,139354,E2L7_AGCTCAATCGCCTATC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,81,1786536377.9976223,stage1_annotation,annotation,81561,E2L2_CAATCGAGTTGGGTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,98,1786536378.0066378,stage1_annotation,annotation,89523,E2L2_TGTACAGAGCGACTAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,109,1786536378.010388,stage1_annotation,annotation,109653,E2L4_GTCGAATGTGGTCTCG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,115,1786536378.0141048,stage1_annotation,annotation,116772,E2L5_CAGGCCACATAACGGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,121,1786536378.018301,stage1_annotation,annotation,98402,E2L3_GTTACAGGTTAGGAGC,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,113,1786536378.0190046,stage1_annotation,annotation,132693,E2L6_GCTTGGGCAAGTGCAG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,4,4,final_failure,ClientError,400.0,"400 FAILED_PRECONDITION. {'error': {'code': 400, 'message': 'User location is not supported for the API use.', 'status': 'FAILED_PRECONDITION'}}",False,133,1786536378.0291374,stage1_annotation,annotation,87907,E2L2_TCAGCAAAGAACAAGG,,,,,,,False,,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4668,1786537098.8563468,stage1_annotation,annotation,39262,L4_AACAAAGGTACGAAAT,gemini,1479.0,115.0,2159.0,,565.0,False,365.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4783,1786537098.9863229,stage1_annotation,annotation,147689,E2L7_TCGCACTTCACTTCTA,gemini,1489.0,84.0,2102.0,,529.0,False,270.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5109,1786537099.2582133,stage1_annotation,annotation,98402,E2L3_GTTACAGGTTAGGAGC,gemini,1489.0,112.0,2345.0,,744.0,False,360.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5192,1786537099.480908,stage1_annotation,annotation,109653,E2L4_GTCGAATGTGGTCTCG,gemini,1493.0,96.0,2209.0,,620.0,False,285.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5405,1786537099.6592188,stage1_annotation,annotation,116772,E2L5_CAGGCCACATAACGGG,gemini,1497.0,96.0,2473.0,,880.0,False,303.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5475,1786537099.673516,stage1_annotation,annotation,87907,E2L2_TCAGCAAAGAACAAGG,gemini,1499.0,96.0,2277.0,,682.0,False,309.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5632,1786537099.8667793,stage1_annotation,annotation,25410,L2_TGCGGGTCACCCTCTA,gemini,1488.0,119.0,2339.0,,732.0,False,373.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5721,1786537099.883355,stage1_annotation,annotation,89523,E2L2_TGTACAGAGCGACTAG,gemini,1490.0,113.0,2577.0,,974.0,False,359.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5846,1786537099.983603,stage1_annotation,annotation,154256,E2L8_CGAGTTAAGCTCCATA,gemini,1488.0,95.0,2293.0,,710.0,False,316.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6636,1786537100.92016,stage1_annotation,annotation,18250,L2_CCGGACAAGTTGCGCC,gemini,1488.0,127.0,2834.0,,1219.0,False,457.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6780,1786537100.9216106,stage1_annotation,annotation,148054,E2L7_TGAATCGGTGGTGATG,gemini,1497.0,133.0,2624.0,,994.0,False,427.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6706,1786537100.9289548,stage1_annotation,annotation,14943,L2_ACGTTCCCAGGTCCGT,gemini,1489.0,133.0,2631.0,,1009.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6730,1786537101.025852,stage1_annotation,annotation,139354,E2L7_AGCTCAATCGCCTATC,gemini,1486.0,127.0,2582.0,,969.0,False,426.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6969,1786537101.1364388,stage1_annotation,annotation,143579,E2L7_GAAGAATTCTATCGTT,gemini,1487.0,135.0,2736.0,,1114.0,False,431.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6959,1786537101.2294207,stage1_annotation,annotation,126676,E2L6_ACTGTGAAGAGTTCGG,gemini,1486.0,132.0,2811.0,,1193.0,False,406.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7518,1786537101.7572227,stage1_annotation,annotation,65516,L5_TGCTTGCCACGCGTCA,gemini,1494.0,156.0,3015.0,,1365.0,False,506.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7603,1786537101.8609993,stage1_annotation,annotation,137078,E2L6_TTCCGGTAGTGTAGTA,gemini,1493.0,139.0,3125.0,,1493.0,False,446.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7695,1786537101.969868,stage1_annotation,annotation,81561,E2L2_CAATCGAGTTGGGTAG,gemini,1496.0,131.0,3029.0,,1402.0,False,432.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8188,1786537102.4024448,stage1_annotation,annotation,132693,E2L6_GCTTGGGCAAGTGCAG,gemini,1487.0,127.0,3162.0,,1548.0,False,477.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8194,1786537102.495905,stage1_annotation,annotation,81589,E2L2_CACAACAGTGCAATAA,gemini,1488.0,121.0,3156.0,,1547.0,False,397.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5188,1786537104.0537329,stage1_annotation,annotation,120045,E2L5_GCAGTTACAACGGCTC,gemini,1486.0,114.0,2452.0,,852.0,False,401.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3639,1786537104.5792146,stage1_annotation,annotation,44845,L4_CTCATTACAAGCCCAC,gemini,1505.0,119.0,2287.0,,663.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4899,1786537104.7901504,stage1_annotation,annotation,37598,L3_TGATTTCCATTCTGTT,gemini,1508.0,92.0,2508.0,,908.0,False,306.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5117,1786537104.7969258,stage1_annotation,annotation,132238,E2L6_GCACATAGTGGATACG,gemini,1492.0,129.0,2659.0,,1038.0,False,452.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4889,1786537104.8815389,stage1_annotation,annotation,91168,E2L3_AATTCCTCAGTCCCGA,gemini,1492.0,104.0,2450.0,,854.0,False,343.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5813,1786537105.3023248,stage1_annotation,annotation,147908,E2L7_TCTCACGGTCTAGGTT,gemini,1497.0,128.0,2643.0,,1018.0,False,472.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6337,1786537105.6104054,stage1_annotation,annotation,16239,L2_ATCACGATCAGCTTGA,gemini,1490.0,111.0,3026.0,,1425.0,False,395.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4478,1786537105.7165177,stage1_annotation,annotation,9912,L1_TAACTTCAGCTCAGAG,gemini,1488.0,101.0,2318.0,,729.0,False,345.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5707,1786537106.6503334,stage1_annotation,annotation,114352,E2L5_ACCTGTCCACGCGCAT,gemini,1491.0,117.0,2786.0,,1178.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7071,1786537106.7406013,stage1_annotation,annotation,93977,E2L3_CATGCAAGTCACCACG,gemini,1490.0,124.0,3208.0,,1594.0,False,369.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6343,1786537107.491589,stage1_annotation,annotation,78043,E2L1_TTCGATTTCCCAATAG,gemini,1496.0,132.0,3114.0,,1486.0,False,445.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6428,1786537108.297915,stage1_annotation,annotation,157192,E2L8_GGGTAGATCTGGAAGG,gemini,1490.0,113.0,2922.0,,1319.0,False,396.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6322,1786537108.3023162,stage1_annotation,annotation,128449,E2L6_CAACAGTGTATCCTCC,gemini,1497.0,116.0,3061.0,,1448.0,False,370.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6723,1786537108.4940536,stage1_annotation,annotation,98462,E2L3_GTTATGGCACCAACAT,gemini,1496.0,133.0,3036.0,,1407.0,False,460.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9142,1786537109.0190773,stage1_annotation,annotation,122133,E2L5_TAATCTCCATAACGGG,gemini,1495.0,118.0,3659.0,,2046.0,False,398.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6724,1786537109.1378887,stage1_annotation,annotation,104820,E2L4_CAATCGATCTTCGTGC,gemini,1501.0,131.0,2900.0,,1268.0,False,468.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5151,1786537109.738769,stage1_annotation,annotation,72013,E2L1_CTCAAGACAATCTGCA,gemini,1499.0,111.0,2626.0,,1016.0,False,408.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4941,1786537109.7463398,stage1_annotation,annotation,135908,E2L6_TCTGTCGTCGCTGTTC,gemini,1498.0,123.0,2580.0,,959.0,False,428.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4533,1786537109.8433878,stage1_annotation,annotation,148133,E2L7_TGAGCATTCAATCTTC,gemini,1497.0,117.0,2570.0,,956.0,False,379.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6194,1786537110.2564783,stage1_annotation,annotation,26617,L2_TTGGATGTCAGCTCTC,gemini,1490.0,127.0,2731.0,,1114.0,False,417.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5566,1786537110.3741977,stage1_annotation,annotation,117816,E2L5_CGAAGTTGTTCGGACC,gemini,1502.0,123.0,2666.0,,1041.0,False,439.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6302,1786537111.19243,stage1_annotation,annotation,83842,E2L2_CTCTGGTCACGGCTAC,gemini,1497.0,114.0,2765.0,,1154.0,False,432.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5471,1786537111.197748,stage1_annotation,annotation,66327,L5_TTCCAATAGGTGGCTA,gemini,1490.0,108.0,2683.0,,1085.0,False,356.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,10255,1786537111.2038364,stage1_annotation,annotation,34925,L3_GTATTGGAGCCTGTCG,gemini,1508.0,98.0,3910.0,,2304.0,False,368.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,10375,1786537111.4086294,stage1_annotation,annotation,130162,E2L6_CGCCAGAAGAAAGCGA,gemini,1502.0,153.0,4255.0,,2600.0,False,575.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5794,1786537111.4146662,stage1_annotation,annotation,138823,E2L7_ACTATGGCAGCTGAAG,gemini,1493.0,140.0,2797.0,,1164.0,False,463.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9745,1786537112.257049,stage1_annotation,annotation,79677,E2L2_ACTCTCGGTACAGTTC,gemini,1501.0,100.0,3718.0,,2117.0,False,346.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5598,1786537112.3472867,stage1_annotation,annotation,42957,L4_CAGTTAGAGCGACCCT,gemini,1494.0,88.0,2832.0,,1250.0,False,320.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,13369,1786537112.3625329,stage1_annotation,annotation,129695,E2L6_CCGGTAGGTGGTCTAT,gemini,1502.0,144.0,4287.0,,2641.0,False,510.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5252,1786537112.7527204,stage1_annotation,annotation,122062,E2L5_TAACTTCGTAATACCC,gemini,1486.0,100.0,2521.0,,935.0,False,337.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5612,1786537113.925129,stage1_annotation,annotation,130769,E2L6_CTCATCGAGGATTTGA,gemini,1492.0,112.0,2590.0,,986.0,False,406.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5723,1786537114.2278728,stage1_annotation,annotation,139030,E2L7_AGAACAATCTAAGGAA,gemini,1493.0,127.0,2693.0,,1073.0,False,408.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6305,1786537114.6130471,stage1_annotation,annotation,75176,E2L1_GTTATGGAGTATGACA,gemini,1483.0,140.0,2834.0,,1211.0,False,452.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5692,1786537114.84366,stage1_annotation,annotation,120072,E2L5_GCATCTCCATAGTCGT,gemini,1499.0,147.0,2750.0,,1104.0,False,486.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5934,1786537114.966742,stage1_annotation,annotation,105380,E2L4_CATGCAATCCGTGCGA,gemini,1490.0,108.0,2524.0,,926.0,False,377.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5269,1786537115.0337114,stage1_annotation,annotation,140762,E2L7_CAATACGTCTACGGGC,gemini,1492.0,113.0,2642.0,,1037.0,False,402.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4661,1786537115.0492766,stage1_annotation,annotation,99957,E2L3_TCGCTTGAGTGATTCC,gemini,1491.0,127.0,2369.0,,751.0,False,427.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4055,1786537115.2722213,stage1_annotation,annotation,17489,L2_CAGGCCAAGTCAATCC,gemini,1491.0,115.0,2362.0,,756.0,False,388.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6666,1786537116.4229617,stage1_annotation,annotation,89387,E2L2_TGGGATTTCTCATGCC,gemini,1481.0,111.0,3011.0,,1419.0,False,361.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5327,1786537116.5405345,stage1_annotation,annotation,15125,L2_ACTTCGCCAGCAGGAT,gemini,1499.0,121.0,2492.0,,872.0,False,432.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5340,1786537116.560901,stage1_annotation,annotation,59582,L5_GAAGGACGTAGAATGT,gemini,1489.0,116.0,2471.0,,866.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5178,1786537116.6039908,stage1_annotation,annotation,48077,L4_GTCTGTCAGGAACGAA,gemini,1483.0,111.0,2330.0,,736.0,False,393.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6760,1786537116.610213,stage1_annotation,annotation,153348,E2L8_CATCGGGTCCCAGTGG,gemini,1494.0,109.0,2701.0,,1098.0,False,362.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6385,1786537116.6583703,stage1_annotation,annotation,89331,E2L2_TGGATCAGTCATATGC,gemini,1491.0,131.0,2899.0,,1277.0,False,440.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4317,1786537116.6741006,stage1_annotation,annotation,101286,E2L3_TTCATTGGTTGTAAAG,gemini,1500.0,124.0,2244.0,,620.0,False,454.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4423,1786537116.689231,stage1_annotation,annotation,100034,E2L3_TCGTAGATCCTAAACG,gemini,1491.0,98.0,2203.0,,614.0,False,307.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4440,1786537116.817569,stage1_annotation,annotation,133057,E2L6_GGGCGTTGTCGCACAC,gemini,1494.0,110.0,2321.0,,717.0,False,352.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,10232,1786537116.891314,stage1_annotation,annotation,112953,E2L4_TTCCTTCCACTGCGAC,gemini,1498.0,123.0,3611.0,,1990.0,False,463.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4655,1786537117.4170544,stage1_annotation,annotation,21811,L2_GGGACCTCAGAAACCG,gemini,1490.0,117.0,2310.0,,703.0,False,400.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3806,1786537118.0434115,stage1_annotation,annotation,128376,E2L6_ATTTACCCACGAAGAC,gemini,1489.0,99.0,2204.0,,616.0,False,328.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4127,1786537118.0615916,stage1_annotation,annotation,105202,E2L4_CAGTTCCCAGGACTAG,gemini,1495.0,123.0,2191.0,,573.0,False,397.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6952,1786537118.3731384,stage1_annotation,annotation,98389,E2L3_GTGTTCCCAGACCAAG,gemini,1484.0,138.0,3242.0,,1620.0,False,432.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4276,1786537118.9011202,stage1_annotation,annotation,109651,E2L4_GTCGAATCACTCCTGT,gemini,1493.0,92.0,2355.0,,770.0,False,323.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4107,1786537118.9602518,stage1_annotation,annotation,112127,E2L4_TGCATCCTCCCAGCGA,gemini,1483.0,92.0,2254.0,,679.0,False,276.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3821,1786537119.102831,stage1_annotation,annotation,141644,E2L7_CCATAAGAGTTGTCAC,gemini,1486.0,92.0,2236.0,,658.0,False,303.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4257,1786537119.3031802,stage1_annotation,annotation,81675,E2L2_CACGAATCACCTGAAT,gemini,1492.0,112.0,2259.0,,655.0,False,359.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4413,1786537119.389789,stage1_annotation,annotation,114169,E2L5_ACAGCCGTCGAACCTA,gemini,1494.0,107.0,2234.0,,633.0,False,386.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4463,1786537119.5198176,stage1_annotation,annotation,99108,E2L3_TATCAGGGTATCGGTT,gemini,1487.0,111.0,2423.0,,825.0,False,351.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3643,1786537120.076813,stage1_annotation,annotation,86240,E2L2_GTAGATCAGGTCGTCC,gemini,1495.0,112.0,2200.0,,593.0,False,386.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4130,1786537120.6994042,stage1_annotation,annotation,23889,L2_TCAATCTCAGGTTTAC,gemini,1472.0,107.0,2211.0,,632.0,False,358.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4121,1786537120.792247,stage1_annotation,annotation,4544,L1_CCCATTGCAACTTGCA,gemini,1476.0,129.0,2219.0,,614.0,False,416.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4347,1786537120.8964698,stage1_annotation,annotation,26671,L2_TTGGTTTGTTAGGGTG,gemini,1499.0,97.0,2276.0,,680.0,False,313.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4285,1786537120.9010684,stage1_annotation,annotation,31366,L3_CCTCTAGAGCGAGTAC,gemini,1478.0,150.0,2416.0,,788.0,False,449.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4292,1786537120.912732,stage1_annotation,annotation,74756,E2L1_GTCGTTCAGTAGACAT,gemini,1486.0,122.0,2387.0,,779.0,False,395.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4393,1786537121.2198179,stage1_annotation,annotation,82943,E2L2_CGAGAAGTCGCCTATC,gemini,1482.0,127.0,2352.0,,743.0,False,431.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4845,1786537121.5425665,stage1_annotation,annotation,60803,L5_GCGATCGAGTCACAGG,gemini,1484.0,128.0,2446.0,,834.0,False,403.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4085,1786537122.155107,stage1_annotation,annotation,161156,E2L8_TTCATGTCATACCAGT,gemini,1486.0,119.0,2271.0,,666.0,False,394.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4721,1786537122.7752123,stage1_annotation,annotation,97268,E2L3_GGCGTCATCTTGCGCT,gemini,1476.0,130.0,2525.0,,919.0,False,424.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4170,1786537123.080596,stage1_annotation,annotation,134858,E2L6_TATCTTGAGTTTGCTG,gemini,1483.0,132.0,2358.0,,743.0,False,429.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4899,1786537123.2846677,stage1_annotation,annotation,113367,E2L4_TTTCGATAGCTAGAAT,gemini,1476.0,124.0,2430.0,,830.0,False,381.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5956,1786537123.3826797,stage1_annotation,annotation,117989,E2L5_CGCCAGAGTATGATCC,gemini,1489.0,135.0,2854.0,,1230.0,False,395.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6901,1786537123.5831125,stage1_annotation,annotation,121753,E2L5_GTGTGATGTTCGGTAT,gemini,1483.0,149.0,3222.0,,1590.0,False,507.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4844,1786537123.8141775,stage1_annotation,annotation,75166,E2L1_GTTAGTGCAGCGACCT,gemini,1485.0,139.0,2671.0,,1047.0,False,463.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3927,1786537124.0128694,stage1_annotation,annotation,130491,E2L6_CGTTGGGTCTCCTGCA,gemini,1474.0,103.0,2175.0,,598.0,False,328.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5097,1786537124.2133713,stage1_annotation,annotation,89449,E2L2_TGGTAGTCAGCTGTAT,gemini,1474.0,143.0,2594.0,,977.0,False,495.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5132,1786537124.4450428,stage1_annotation,annotation,17322,L2_CACTGAACAGGGCTTC,gemini,1477.0,138.0,2868.0,,1253.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8160,1786537125.0637243,stage1_annotation,annotation,63405,L5_TAGCACAGTATAGGGC,gemini,1472.0,128.0,3471.0,,1871.0,False,447.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4546,1786537125.2527332,stage1_annotation,annotation,20242,L2_GAATCACAGTGCACAG,gemini,1483.0,129.0,2323.0,,711.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4662,1786537125.4640622,stage1_annotation,annotation,111605,E2L4_TCGTAGAAGAGAATCT,gemini,1472.0,151.0,2677.0,,1054.0,False,469.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5947,1786537125.4773233,stage1_annotation,annotation,128680,E2L6_CACATGAAGACCTCAT,gemini,1471.0,140.0,2595.0,,984.0,False,511.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4032,1786537125.5847268,stage1_annotation,annotation,40081,L4_ACCCAAAAGTTAACGA,gemini,1474.0,100.0,2433.0,,859.0,False,340.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4955,1786537125.89295,stage1_annotation,annotation,40387,L4_ACTACGACAGACGGAT,gemini,1464.0,130.0,2503.0,,909.0,False,466.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4962,1786537125.8949826,stage1_annotation,annotation,13748,L1_TTTGTTGCAGCGAGTA,gemini,1472.0,133.0,2478.0,,873.0,False,384.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6795,1786537126.1962092,stage1_annotation,annotation,76477,E2L1_TCCTTCTAGGGTCACA,gemini,1479.0,151.0,3182.0,,1552.0,False,491.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5277,1786537126.2023497,stage1_annotation,annotation,118496,E2L5_CTCAATTTCGTCAAAC,gemini,1474.0,146.0,2709.0,,1089.0,False,481.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5603,1786537126.833066,stage1_annotation,annotation,123107,E2L5_TCCAGAACATTGAGCT,gemini,1481.0,133.0,3084.0,,1470.0,False,476.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4068,1786537127.362108,stage1_annotation,annotation,51970,L4_TTGACCCTCATTCGTT,gemini,1471.0,93.0,2298.0,,734.0,False,307.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4068,1786537127.4605157,stage1_annotation,annotation,114594,E2L5_ACTGATGCAGGTATGG,gemini,1480.0,126.0,2333.0,,727.0,False,403.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3543,1786537127.5637364,stage1_annotation,annotation,146593,E2L7_TACCCACGTGGTCCGT,gemini,1486.0,100.0,2407.0,,821.0,False,345.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4881,1786537127.6669273,stage1_annotation,annotation,155011,E2L8_CTCCTCCAGTAAGACT,gemini,1484.0,155.0,2449.0,,810.0,False,466.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3875,1786537128.0961924,stage1_annotation,annotation,127099,E2L6_AGCGTATAGCAAACAT,gemini,1473.0,96.0,2258.0,,689.0,False,326.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6033,1786537128.1986425,stage1_annotation,annotation,156599,E2L8_GCGAGAACAGTCAGTT,gemini,1473.0,142.0,2888.0,,1273.0,False,435.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3343,1786537128.6030664,stage1_annotation,annotation,70003,E2L1_CAAGACTTCGCCTAGG,gemini,1476.0,113.0,2163.0,,574.0,False,391.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4260,1786537128.7140937,stage1_annotation,annotation,125445,E2L5_TTTGACTTCTAGGCCG,gemini,1466.0,106.0,2502.0,,930.0,False,327.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3848,1786537128.9255702,stage1_annotation,annotation,78167,E2L1_TTGATGGTCGGTCTGG,gemini,1468.0,107.0,2356.0,,781.0,False,320.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5107,1786537128.930509,stage1_annotation,annotation,71330,E2L1_CGAAGGAGTTCAACGT,gemini,1472.0,146.0,2694.0,,1076.0,False,483.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5420,1786537129.0143013,stage1_annotation,annotation,18196,L2_CCCTTAGCAATGTCTG,gemini,1476.0,133.0,2664.0,,1055.0,False,408.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6656,1786537129.7465653,stage1_annotation,annotation,40677,L4_AGACAGGTCGGACAAG,gemini,1468.0,125.0,3237.0,,1644.0,False,395.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4460,1786537129.934861,stage1_annotation,annotation,52738,L5_AACCTGAGTACCTAAC,gemini,1471.0,82.0,2400.0,,847.0,False,261.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4690,1786537130.176804,stage1_annotation,annotation,56223,L5_CAATTTCTCGCCTTTG,gemini,1476.0,106.0,2348.0,,766.0,False,325.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5230,1786537131.445304,stage1_annotation,annotation,29493,L3_ATGATCGGTACGGATG,gemini,1474.0,87.0,2619.0,,1058.0,False,271.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5855,1786537131.448907,stage1_annotation,annotation,123340,E2L5_TCGAAGTAGTCGAAGC,gemini,1468.0,158.0,2725.0,,1099.0,False,523.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6459,1786537132.3636606,stage1_annotation,annotation,46491,L4_GCATTAGTCCGCAGTG,gemini,1494.0,115.0,2852.0,,1243.0,False,409.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4791,1786537132.4676783,stage1_annotation,annotation,98838,E2L3_TACGCTCCATATCTGG,gemini,1470.0,90.0,2527.0,,967.0,False,291.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5728,1786537132.5702426,stage1_annotation,annotation,88737,E2L2_TCTCCGAGTTATCTTC,gemini,1480.0,127.0,2768.0,,1161.0,False,407.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5299,1786537132.6719353,stage1_annotation,annotation,73554,E2L1_GCCAGGTTCGGCGATC,gemini,1476.0,101.0,2653.0,,1076.0,False,329.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6772,1786537132.6807828,stage1_annotation,annotation,72485,E2L1_CTTAGGATCCCTCGAT,gemini,1473.0,110.0,3073.0,,1490.0,False,346.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5299,1786537132.769067,stage1_annotation,annotation,50068,L4_TCGATTTTCTAACGGT,gemini,1461.0,88.0,2602.0,,1053.0,False,276.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6650,1786537132.8687158,stage1_annotation,annotation,23636,L2_TAGGAGGAGCCGTTAT,gemini,1475.0,113.0,2799.0,,1211.0,False,391.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4886,1786537133.093979,stage1_annotation,annotation,63597,L5_TATCTTGTCCACACCT,gemini,1477.0,107.0,2500.0,,916.0,False,347.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4567,1786537133.5049212,stage1_annotation,annotation,17381,L2_CAGATACCAGAGATGC,gemini,1472.0,120.0,2396.0,,804.0,False,393.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6300,1786537134.4064975,stage1_annotation,annotation,95481,E2L3_CTCCCTCTCCTGCTAC,gemini,1474.0,115.0,2838.0,,1249.0,False,396.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7333,1786537134.9062507,stage1_annotation,annotation,94883,E2L3_CGGACACAGCGAACTG,gemini,1480.0,166.0,3169.0,,1523.0,False,494.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6178,1786537135.1198502,stage1_annotation,annotation,30724,L3_CATGGATTCGCTGTCT,gemini,1469.0,126.0,2697.0,,1102.0,False,433.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5447,1786537135.2038407,stage1_annotation,annotation,118137,E2L5_CGGGTGTTCCCGAACG,gemini,1477.0,119.0,2660.0,,1064.0,False,402.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6490,1786537135.2129471,stage1_annotation,annotation,14642,L2_ACATTTCAGACTACCT,gemini,1482.0,121.0,2732.0,,1129.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6284,1786537135.3063912,stage1_annotation,annotation,110253,E2L4_TAAGCCACAAAGTATG,gemini,1461.0,142.0,2765.0,,1162.0,False,461.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5141,1786537135.328208,stage1_annotation,annotation,62074,L5_GTCATCCTCGCGCCAA,gemini,1480.0,68.0,2600.0,,1052.0,False,234.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4170,1786537135.6316342,stage1_annotation,annotation,152134,E2L8_ATCCTATCAGGCATGA,gemini,1473.0,68.0,2325.0,,784.0,False,242.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4356,1786537135.8143473,stage1_annotation,annotation,8316,L1_GGCTTTCGTCCTATAG,gemini,1492.0,94.0,2387.0,,801.0,False,343.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7310,1786537135.9237185,stage1_annotation,annotation,8370,L1_GGGACCTGTATGCTAC,gemini,1456.0,152.0,3004.0,,1396.0,False,504.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6892,1786537136.8398855,stage1_annotation,annotation,100629,E2L3_TGCTCCAGTCGTACTA,gemini,1472.0,145.0,2862.0,,1245.0,False,504.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4723,1786537137.0969486,stage1_annotation,annotation,57355,L5_CCGAACGTCTCTCTTC,gemini,1481.0,83.0,2274.0,,710.0,False,276.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4420,1786537137.11131,stage1_annotation,annotation,62405,L5_GTGCTGGCAAAGCGTG,gemini,1490.0,86.0,2378.0,,802.0,False,283.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4400,1786537137.2781882,stage1_annotation,annotation,148576,E2L7_TGGCGTGGTCTGTAGT,gemini,1474.0,70.0,2398.0,,854.0,False,265.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4598,1786537137.2846262,stage1_annotation,annotation,60524,L5_GCAGCTGTCTGGGATT,gemini,1476.0,77.0,2232.0,,679.0,False,236.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5004,1786537137.5817811,stage1_annotation,annotation,71572,E2L1_CGGAATTCATGGCACC,gemini,1478.0,69.0,2414.0,,867.0,False,221.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5233,1786537137.710233,stage1_annotation,annotation,35000,L3_GTCACTCTCCACCCTA,gemini,1492.0,128.0,2463.0,,843.0,False,450.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4741,1786537137.8486798,stage1_annotation,annotation,62956,L5_TAACCAGTCGGCCCAA,gemini,1492.0,100.0,2374.0,,782.0,False,355.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5171,1786537137.948989,stage1_annotation,annotation,54506,L5_AGCTCAACATCGATAC,gemini,1498.0,116.0,2504.0,,890.0,False,385.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5559,1786537139.0718296,stage1_annotation,annotation,20684,L2_GAGTGTTTCAGGAACG,gemini,1502.0,118.0,2656.0,,1036.0,False,431.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4069,1786537139.385231,stage1_annotation,annotation,77215,E2L1_TGCCGAGAGCTCACTA,gemini,1488.0,99.0,2194.0,,607.0,False,356.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4219,1786537139.44772,stage1_annotation,annotation,36137,L3_TAGGAGGGTACGATTC,gemini,1486.0,83.0,2219.0,,650.0,False,283.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4550,1786537139.4739904,stage1_annotation,annotation,61451,L5_GGGTATTAGGCAGGTT,gemini,1482.0,79.0,2449.0,,888.0,False,261.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3811,1786537139.7497516,stage1_annotation,annotation,18435,L2_CCTCAGTGTCCCTAAA,gemini,1459.0,108.0,2189.0,,622.0,False,410.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5455,1786537139.8727775,stage1_annotation,annotation,123469,E2L5_TCGGGTGAGGTGCAGT,gemini,1483.0,103.0,2915.0,,1329.0,False,409.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5124,1786537140.7625604,stage1_annotation,annotation,63519,L5_TATCAGGCAGTGTACT,gemini,1493.0,96.0,2624.0,,1035.0,False,305.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5542,1786537140.76459,stage1_annotation,annotation,118128,E2L5_CGGGTGTCAGGCCCTA,gemini,1478.0,127.0,2568.0,,963.0,False,429.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5929,1786537141.264644,stage1_annotation,annotation,96705,E2L3_GCAGGCTAGGGTCACA,gemini,1486.0,92.0,2948.0,,1370.0,False,362.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4145,1786537141.4453192,stage1_annotation,annotation,83385,E2L2_CGTTGGGAGAACAAGG,gemini,1470.0,134.0,2294.0,,690.0,False,498.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4347,1786537141.4554908,stage1_annotation,annotation,143468,E2L7_CTTGATTGTAACAGTA,gemini,1472.0,103.0,2281.0,,706.0,False,408.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3865,1786537141.4580302,stage1_annotation,annotation,31491,L3_CGAAGTTTCTCGGTCT,gemini,1464.0,104.0,2208.0,,640.0,False,377.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5636,1786537141.4633164,stage1_annotation,annotation,10697,L1_TCACGCTAGACCTTTG,gemini,1481.0,111.0,2564.0,,972.0,False,353.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6424,1786537141.5537977,stage1_annotation,annotation,152878,E2L8_CACAGGCGTAGGAGTC,gemini,1477.0,110.0,2788.0,,1201.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4460,1786537141.750669,stage1_annotation,annotation,61550,L5_GGTAACTGTAACGATA,gemini,1451.0,120.0,2337.0,,766.0,False,442.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4634,1786537141.7540379,stage1_annotation,annotation,15227,L2_AGACAAATCCATGAGT,gemini,1453.0,126.0,2482.0,,903.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4179,1786537142.1397994,stage1_annotation,annotation,41817,L4_ATCGGATTCTTGGTGA,gemini,1456.0,120.0,2269.0,,693.0,False,418.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4393,1786537142.250612,stage1_annotation,annotation,27871,L3_ACCGTTCCACATATGC,gemini,1466.0,101.0,2337.0,,770.0,False,376.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5684,1786537142.5363321,stage1_annotation,annotation,142020,E2L7_CCTCATGTCTATACTC,gemini,1454.0,122.0,2655.0,,1079.0,False,438.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5323,1786537143.0444965,stage1_annotation,annotation,125031,E2L5_TTCTTCCAGTCGGGAT,gemini,1455.0,114.0,2545.0,,976.0,False,404.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3863,1786537143.3476,stage1_annotation,annotation,23219,L2_TAACCAGAGCCTTTCC,gemini,1466.0,117.0,2305.0,,722.0,False,459.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4193,1786537143.6504793,stage1_annotation,annotation,143949,E2L7_GAGCTGCCAATGCAGG,gemini,1475.0,97.0,2266.0,,694.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4583,1786537143.6656084,stage1_annotation,annotation,63982,L5_TCAGTTTTCACCGGTG,gemini,1459.0,103.0,2386.0,,824.0,False,376.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4552,1786537143.947394,stage1_annotation,annotation,98160,E2L3_GTGAGCCTCCAAACCA,gemini,1454.0,130.0,2477.0,,893.0,False,473.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4070,1786537143.9519036,stage1_annotation,annotation,152364,E2L8_ATGGAGGTCAAGGCTT,gemini,1449.0,122.0,2309.0,,738.0,False,417.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4091,1786537144.8713973,stage1_annotation,annotation,34301,L3_GGCGTCACAAATTGCC,gemini,1460.0,80.0,2350.0,,810.0,False,276.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3688,1786537145.159548,stage1_annotation,annotation,124201,E2L5_TGGAACTCAGGAGACT,gemini,1448.0,117.0,2240.0,,675.0,False,437.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4496,1786537145.2716813,stage1_annotation,annotation,26087,L2_TTACGCCGTTACCCTC,gemini,1466.0,108.0,2530.0,,956.0,False,411.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5114,1786537146.393772,stage1_annotation,annotation,5818,L1_CTATCCGTCTCGCTTG,gemini,1469.0,121.0,2467.0,,877.0,False,507.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5276,1786537146.7684588,stage1_annotation,annotation,52074,L4_TTGGGATAGTGGTCAG,gemini,1480.0,124.0,2627.0,,1023.0,False,425.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4315,1786537147.3705025,stage1_annotation,annotation,129104,E2L6_CATCCCAGTACCGGCT,gemini,1492.0,75.0,2355.0,,788.0,False,267.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6016,1786537147.780796,stage1_annotation,annotation,17821,L2_CATGGTAGTACTGCCG,gemini,1470.0,100.0,2898.0,,1328.0,False,332.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8215,1786537147.9754777,stage1_annotation,annotation,81309,E2L2_ATTCTTGGTTTACTTC,gemini,1472.0,99.0,3521.0,,1950.0,False,328.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5836,1786537147.9853191,stage1_annotation,annotation,40045,L4_ACCAACAGTACCCGCA,gemini,1485.0,112.0,2631.0,,1034.0,False,388.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6424,1786537148.1852372,stage1_annotation,annotation,2632,L1_ATCACTTTCCAAATGC,gemini,1491.0,138.0,2802.0,,1173.0,False,478.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6827,1786537148.390882,stage1_annotation,annotation,62225,L5_GTCGTTCTCTGCCTGT,gemini,1478.0,138.0,2797.0,,1181.0,False,484.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7097,1786537148.582057,stage1_annotation,annotation,113375,E2L4_TTTCGATTCTATGTGG,gemini,1462.0,148.0,3022.0,,1412.0,False,478.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6727,1786537149.2723937,stage1_annotation,annotation,107841,E2L4_GAGGCAATCCACGGAC,gemini,1473.0,144.0,3054.0,,1437.0,False,479.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8092,1786537149.5799706,stage1_annotation,annotation,138895,E2L7_ACTGATGGTCTCTCAC,gemini,1473.0,131.0,3087.0,,1483.0,False,430.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5619,1786537149.583369,stage1_annotation,annotation,26521,L2_TTGACCCGTCTTGAGT,gemini,1493.0,118.0,2575.0,,964.0,False,400.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6221,1786537149.8826828,stage1_annotation,annotation,154888,E2L8_CTCAGTCAGGTCCTGC,gemini,1463.0,150.0,2924.0,,1311.0,False,504.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6413,1786537150.086712,stage1_annotation,annotation,159906,E2L8_TCTCACGTCTCAGAAC,gemini,1467.0,163.0,2738.0,,1108.0,False,471.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8828,1786537151.0882945,stage1_annotation,annotation,37777,L3_TGCTGAAGTTTGGAGG,gemini,1490.0,126.0,3179.0,,1563.0,False,431.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5908,1786537151.188149,stage1_annotation,annotation,138550,E2L7_ACCACAATCCGTGACG,gemini,1488.0,112.0,2595.0,,995.0,False,400.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4501,1786537151.279755,stage1_annotation,annotation,13487,L1_TTGTGTTAGTTTGTCG,gemini,1502.0,89.0,2379.0,,788.0,False,331.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7925,1786537151.2826395,stage1_annotation,annotation,5267,L1_CGCCATTCACGACTAT,gemini,1485.0,127.0,3074.0,,1462.0,False,457.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7517,1786537151.4766326,stage1_annotation,annotation,138453,E2L7_ACAGAAATCTCGGTCT,gemini,1467.0,114.0,3165.0,,1584.0,False,419.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6610,1786537151.7789366,stage1_annotation,annotation,56402,L5_CACTGAACACCAGTTA,gemini,1491.0,123.0,2967.0,,1353.0,False,429.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5770,1786537153.7681427,stage1_annotation,annotation,75350,E2L1_TAACACGGTGCATTAC,gemini,1480.0,121.0,2685.0,,1084.0,False,451.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7386,1786537153.787798,stage1_annotation,annotation,10464,L1_TATCGCCGTACAGCGA,gemini,1469.0,143.0,3303.0,,1691.0,False,502.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4981,1786537154.263211,stage1_annotation,annotation,42876,L4_CAGCAGCTCGGAGTAG,gemini,1471.0,124.0,2593.0,,998.0,False,392.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6595,1786537154.3896885,stage1_annotation,annotation,28881,L3_AGGTAGGTCATGGTAC,gemini,1480.0,160.0,2855.0,,1215.0,False,562.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6474,1786537154.4697056,stage1_annotation,annotation,123577,E2L5_TCTACCGGTTAGCTAC,gemini,1483.0,111.0,2772.0,,1178.0,False,307.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6483,1786537154.6767166,stage1_annotation,annotation,75669,E2L1_TAGACCATCTGGACTA,gemini,1474.0,140.0,2748.0,,1134.0,False,533.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6388,1786537154.7884097,stage1_annotation,annotation,64098,L5_TCATGTTGTGATTCTG,gemini,1470.0,149.0,2681.0,,1062.0,False,496.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,10306,1786537155.1878908,stage1_annotation,annotation,35646,L3_GTTGTAGTCGTTCGCT,gemini,1468.0,138.0,3788.0,,2182.0,False,473.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4290,1786537155.3901968,stage1_annotation,annotation,26249,L2_TTCCAATAGTGTAGTA,gemini,1468.0,120.0,2353.0,,765.0,False,383.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7183,1786537155.7758548,stage1_annotation,annotation,150979,E2L8_ACTGTCCTCGACGCGT,gemini,1472.0,164.0,3034.0,,1398.0,False,537.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6097,1786537156.1940694,stage1_annotation,annotation,2169,L1_AGGTCATCAGATGCGA,gemini,1473.0,116.0,2665.0,,1076.0,False,344.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4790,1786537156.275594,stage1_annotation,annotation,54875,L5_AGTAACCGTTGAAGTA,gemini,1467.0,108.0,2444.0,,869.0,False,387.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6877,1786537156.4695706,stage1_annotation,annotation,6565,L1_CTTGATTAGGAAGTAG,gemini,1493.0,151.0,2926.0,,1282.0,False,501.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8177,1786537157.775748,stage1_annotation,annotation,47120,L4_GGGACAAAGGTAAACT,gemini,1497.0,132.0,3198.0,,1569.0,False,503.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6186,1786537157.9749165,stage1_annotation,annotation,140981,E2L7_CACTGGGTCACGGGCT,gemini,1474.0,147.0,2707.0,,1086.0,False,514.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8086,1786537157.9794376,stage1_annotation,annotation,20637,L2_GAGTCTACATTGTCGA,gemini,1468.0,110.0,3423.0,,1845.0,False,424.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7180,1786537158.4736085,stage1_annotation,annotation,117839,E2L5_CGACAGCTCTCGGCTT,gemini,1475.0,126.0,2910.0,,1309.0,False,416.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4006,1786537158.4837961,stage1_annotation,annotation,15624,L2_AGGACTTCAAGAGATT,gemini,1503.0,106.0,2318.0,,709.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7288,1786537158.4859333,stage1_annotation,annotation,156994,E2L8_GGCTTGGAGCGAATGC,gemini,1470.0,180.0,3026.0,,1376.0,False,574.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4792,1786537158.5700815,stage1_annotation,annotation,113394,E2L4_TTTGATCTCACGAGGA,gemini,1473.0,135.0,2403.0,,795.0,False,410.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7581,1786537158.86889,stage1_annotation,annotation,161190,E2L8_TTCCAATCAGGAATCG,gemini,1474.0,166.0,2991.0,,1351.0,False,534.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3880,1786537159.080064,stage1_annotation,annotation,105415,E2L4_CATGCTCCATTGGATC,gemini,1480.0,109.0,2257.0,,668.0,False,350.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,12053,1786537159.4335103,stage1_annotation,annotation,48533,L4_GTTGAACTCTCTAGGA,gemini,1498.0,141.0,4076.0,,2437.0,False,486.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5415,1786537159.6914232,stage1_annotation,annotation,59002,L5_CTGATCCAGACCGCCT,gemini,1489.0,112.0,2623.0,,1022.0,False,368.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5312,1786537159.709838,stage1_annotation,annotation,155704,E2L8_GACATCAGTATGGTAA,gemini,1492.0,130.0,2597.0,,975.0,False,454.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6194,1786537159.988758,stage1_annotation,annotation,93013,E2L3_ATGCGATGTATGACAA,gemini,1489.0,139.0,2800.0,,1172.0,False,456.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5387,1786537160.0726974,stage1_annotation,annotation,124459,E2L5_TGTCCCACAATGCAGG,gemini,1483.0,99.0,2553.0,,971.0,False,327.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4074,1786537160.2759783,stage1_annotation,annotation,14668,L2_ACCAACAAGGGAGAAT,gemini,1481.0,132.0,2407.0,,794.0,False,436.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4577,1786537160.365444,stage1_annotation,annotation,48357,L4_GTGTGGCTCGCTTGCT,gemini,1471.0,99.0,2405.0,,835.0,False,298.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4971,1786537160.3721373,stage1_annotation,annotation,62826,L5_GTTGCTCCAACTGAAA,gemini,1485.0,134.0,2563.0,,944.0,False,440.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3985,1786537160.462871,stage1_annotation,annotation,9536,L1_GTGGTTAGTTCCGGTG,gemini,1473.0,96.0,2342.0,,773.0,False,337.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4475,1786537160.759802,stage1_annotation,annotation,36834,L3_TCCCATGCAGTATGAA,gemini,1487.0,107.0,2446.0,,852.0,False,345.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7190,1786537161.9898014,stage1_annotation,annotation,61245,L5_GGCTTGGAGGTTCAGG,gemini,1508.0,153.0,3096.0,,1435.0,False,531.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3583,1786537162.1665154,stage1_annotation,annotation,89568,E2L2_TGTCCACCATCCGGCA,gemini,1486.0,112.0,2222.0,,624.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4381,1786537162.171955,stage1_annotation,annotation,15869,L2_AGTAACCAGCAGCAGT,gemini,1491.0,137.0,2538.0,,910.0,False,462.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4181,1786537162.174189,stage1_annotation,annotation,69336,E2L1_ATCACTTGTCAATGGG,gemini,1464.0,109.0,2214.0,,641.0,False,360.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4192,1786537162.1777344,stage1_annotation,annotation,9884,L1_TAACACGTCATTCGTT,gemini,1476.0,115.0,2460.0,,869.0,False,377.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4459,1786537162.9640374,stage1_annotation,annotation,146255,E2L7_GTTCATTGTCTCAGAT,gemini,1470.0,113.0,2437.0,,854.0,False,392.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4184,1786537163.0609157,stage1_annotation,annotation,152387,E2L8_ATGGGAGTCTCGTGAA,gemini,1480.0,104.0,2436.0,,852.0,False,332.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4079,1786537163.1672466,stage1_annotation,annotation,52729,L5_AACCTGAAGCTCTATG,gemini,1502.0,77.0,2333.0,,754.0,False,233.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4760,1786537163.260699,stage1_annotation,annotation,100314,E2L3_TGAATGCAGTTACGTC,gemini,1471.0,160.0,2523.0,,892.0,False,525.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3684,1786537163.9703948,stage1_annotation,annotation,104479,E2L4_ATTACCTAGATACAGT,gemini,1459.0,112.0,2264.0,,693.0,False,397.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5877,1786537164.3701127,stage1_annotation,annotation,38232,L3_TGTTGAGCACGACAAG,gemini,1481.0,136.0,2659.0,,1042.0,False,489.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5044,1786537164.7627113,stage1_annotation,annotation,123541,E2L5_TCTAACTAGTGCACTT,gemini,1454.0,112.0,2591.0,,1025.0,False,385.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5143,1786537164.844715,stage1_annotation,annotation,108368,E2L4_GCCAGGTTCTGTCGTC,gemini,1472.0,151.0,2689.0,,1066.0,False,474.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4578,1786537164.9564595,stage1_annotation,annotation,144837,E2L7_GGAATCTAGGATTCCT,gemini,1454.0,117.0,2422.0,,851.0,False,420.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5510,1786537164.9613726,stage1_annotation,annotation,117114,E2L5_CATTGAGAGAGGTCAC,gemini,1456.0,141.0,2688.0,,1091.0,False,497.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4591,1786537164.9739058,stage1_annotation,annotation,38307,L3_TTACCGCAGCCAGTAG,gemini,1467.0,117.0,2456.0,,872.0,False,371.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5283,1786537165.362876,stage1_annotation,annotation,105471,E2L4_CATTCCGAGATGGCGT,gemini,1448.0,122.0,2597.0,,1027.0,False,411.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4890,1786537165.6623726,stage1_annotation,annotation,53200,L5_AATTCCTAGAACGCGT,gemini,1450.0,141.0,2525.0,,934.0,False,517.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5398,1786537165.8708518,stage1_annotation,annotation,113094,E2L4_TTGAGTGAGACATAGT,gemini,1474.0,106.0,2726.0,,1146.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3873,1786537166.0729127,stage1_annotation,annotation,127272,E2L6_AGGCTGCAGAGTCAAT,gemini,1454.0,99.0,2268.0,,715.0,False,351.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6089,1786537166.090899,stage1_annotation,annotation,83238,E2L2_CGGGTGTGTACTGTTG,gemini,1451.0,143.0,2927.0,,1333.0,False,513.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4182,1786537166.1851466,stage1_annotation,annotation,129079,E2L6_CATAGACTCGGTCTGG,gemini,1451.0,113.0,2360.0,,796.0,False,377.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4476,1786537166.669078,stage1_annotation,annotation,87884,E2L2_TCACGGGTCTTGCAGA,gemini,1467.0,106.0,2480.0,,907.0,False,361.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4301,1786537167.2752821,stage1_annotation,annotation,62759,L5_GTTCGCTAGTACAGAT,gemini,1462.0,111.0,2363.0,,790.0,False,366.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4211,1786537167.2801797,stage1_annotation,annotation,55993,L5_CAAAGAACACCCTATC,gemini,1450.0,122.0,2354.0,,782.0,False,397.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4400,1786537167.669858,stage1_annotation,annotation,28052,L3_ACGTCCTCATCCGTGG,gemini,1467.0,108.0,2345.0,,770.0,False,361.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5575,1786537167.7813232,stage1_annotation,annotation,84666,E2L2_GAGGGTAGTTTGAAAG,gemini,1461.0,143.0,2585.0,,981.0,False,490.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4706,1786537167.8838372,stage1_annotation,annotation,92170,E2L3_AGCTTCCCACAATGTC,gemini,1464.0,103.0,2492.0,,925.0,False,370.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4916,1786537168.8955753,stage1_annotation,annotation,127301,E2L6_AGGGAGTTCCGAGTGC,gemini,1453.0,160.0,2712.0,,1099.0,False,533.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6867,1786537169.080865,stage1_annotation,annotation,1209,L1_ACGTAGTGTAATTAGG,gemini,1460.0,135.0,3014.0,,1419.0,False,451.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4108,1786537169.0855122,stage1_annotation,annotation,39192,L4_AAAGGGCTCCTTATCA,gemini,1462.0,132.0,2331.0,,737.0,False,419.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4004,1786537169.3748858,stage1_annotation,annotation,13245,L1_TTCTAGTTCGACATAC,gemini,1476.0,105.0,2293.0,,712.0,False,373.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5704,1786537170.558855,stage1_annotation,annotation,19326,L2_CTATAGGGTTAGCGGA,gemini,1465.0,126.0,2807.0,,1216.0,False,477.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5092,1786537170.7625973,stage1_annotation,annotation,32084,L3_CTACCTGGTGCATGTT,gemini,1472.0,112.0,2461.0,,877.0,False,375.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6112,1786537171.0800216,stage1_annotation,annotation,123428,E2L5_TCGCTTGGTTCTGAGT,gemini,1467.0,124.0,2815.0,,1224.0,False,513.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6393,1786537172.2730668,stage1_annotation,annotation,106623,E2L4_CTACATTCATAGTCAC,gemini,1475.0,132.0,2799.0,,1192.0,False,443.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7908,1786537172.2901354,stage1_annotation,annotation,136750,E2L6_TGTGTGAAGCCATATC,gemini,1465.0,136.0,3331.0,,1730.0,False,451.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6690,1786537172.7945728,stage1_annotation,annotation,127716,E2L6_ATAGAGAAGCCGTCGT,gemini,1469.0,142.0,2965.0,,1354.0,False,449.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5688,1786537172.975813,stage1_annotation,annotation,159633,E2L8_TCGAAGTCATGATGCT,gemini,1475.0,109.0,2630.0,,1046.0,False,363.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8114,1786537173.1000042,stage1_annotation,annotation,76554,E2L1_TCGATTTAGGAAAGGT,gemini,1474.0,153.0,3234.0,,1607.0,False,500.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8408,1786537173.1804204,stage1_annotation,annotation,45490,L4_GAAATGACATATTCGG,gemini,1461.0,133.0,3145.0,,1551.0,False,489.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7294,1786537173.3787012,stage1_annotation,annotation,58793,L5_CTCCACATCTCGGTCT,gemini,1480.0,138.0,3009.0,,1391.0,False,450.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6291,1786537173.585548,stage1_annotation,annotation,24955,L2_TCTTCCTAGCCTCTTC,gemini,1481.0,148.0,2850.0,,1221.0,False,503.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5890,1786537173.6789186,stage1_annotation,annotation,8032,L1_GCTGCAGGTTCTCACC,gemini,1473.0,100.0,2975.0,,1402.0,False,421.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5102,1786537174.4903882,stage1_annotation,annotation,93285,E2L3_ATTTCACTCGCCGTGA,gemini,1473.0,124.0,2526.0,,929.0,False,419.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5494,1786537174.5871525,stage1_annotation,annotation,103904,E2L4_AGTGACTCAGGTATGG,gemini,1480.0,140.0,2669.0,,1049.0,False,482.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8116,1786537174.7934563,stage1_annotation,annotation,152811,E2L8_CAATCGACACTCAAGT,gemini,1480.0,145.0,3191.0,,1566.0,False,496.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4414,1786537175.1874778,stage1_annotation,annotation,76840,E2L1_TCTGCCACACACCGAC,gemini,1475.0,109.0,2362.0,,778.0,False,363.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9309,1786537175.5024667,stage1_annotation,annotation,34243,L3_GGATCTAAGCTGTTAC,gemini,1484.0,160.0,3396.0,,1752.0,False,512.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5525,1786537176.0919967,stage1_annotation,annotation,140655,E2L7_CAACCTCCAGCTGAGA,gemini,1475.0,112.0,2756.0,,1169.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8320,1786537176.2131453,stage1_annotation,annotation,125339,E2L5_TTTAGTCGTTAACCTG,gemini,1467.0,157.0,3308.0,,1684.0,False,564.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5205,1786537176.2947931,stage1_annotation,annotation,159410,E2L8_TCCATGCCATACTGTG,gemini,1460.0,131.0,2643.0,,1052.0,False,427.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7198,1786537176.2995286,stage1_annotation,annotation,29986,L3_CAAGCTAGTATCAGGG,gemini,1484.0,139.0,2837.0,,1214.0,False,465.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4515,1786537176.8147974,stage1_annotation,annotation,36899,L3_TCCTCCCTCCTCTCGA,gemini,1471.0,143.0,2407.0,,793.0,False,514.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7915,1786537176.8207831,stage1_annotation,annotation,40463,L4_ACTGATGGTTCGATTG,gemini,1466.0,148.0,3189.0,,1575.0,False,528.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4705,1786537177.812607,stage1_annotation,annotation,90208,E2L2_TTGAGTGCAGTTTCGA,gemini,1469.0,120.0,2526.0,,937.0,False,417.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5212,1786537178.0149155,stage1_annotation,annotation,65910,L5_TGTGGCGCATTGCAAC,gemini,1483.0,116.0,2647.0,,1048.0,False,357.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5111,1786537178.097871,stage1_annotation,annotation,124055,E2L5_TGCATGAAGCGTATAA,gemini,1473.0,137.0,2596.0,,986.0,False,478.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5018,1786537178.2073157,stage1_annotation,annotation,146216,E2L7_GTTAGACGTGCCCTTT,gemini,1474.0,159.0,2526.0,,893.0,False,525.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3806,1786537178.3047829,stage1_annotation,annotation,137289,E2L6_TTGAGTGAGGTGCGAT,gemini,1490.0,106.0,2354.0,,758.0,False,341.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4905,1786537178.5917907,stage1_annotation,annotation,116096,E2L5_ATTCACTTCCTCTTTC,gemini,1468.0,121.0,2557.0,,968.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5709,1786537179.1000435,stage1_annotation,annotation,132413,E2L6_GCCAGGTCACTGTTCC,gemini,1474.0,106.0,2867.0,,1287.0,False,348.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5704,1786537179.2987416,stage1_annotation,annotation,81605,E2L2_CACACAATCTGAGAGG,gemini,1479.0,124.0,2777.0,,1174.0,False,417.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7017,1786537179.3010256,stage1_annotation,annotation,96144,E2L3_GACCGTGCATAATGAG,gemini,1481.0,140.0,3217.0,,1596.0,False,478.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3178,1786537179.4918149,stage1_annotation,annotation,122483,E2L5_TAGGTACAGCCTATTG,gemini,1461.0,111.0,2071.0,,499.0,False,366.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4372,1786537180.5937436,stage1_annotation,annotation,127172,E2L6_AGGAAATTCCGATGTA,gemini,1480.0,125.0,2381.0,,776.0,False,403.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5684,1786537180.8826733,stage1_annotation,annotation,144126,E2L7_GATCACACAAAGAGTT,gemini,1473.0,141.0,2682.0,,1068.0,False,494.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4071,1786537180.9041028,stage1_annotation,annotation,95626,E2L3_CTGCATCAGGCTCCCA,gemini,1467.0,109.0,2403.0,,827.0,False,358.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4875,1786537180.978184,stage1_annotation,annotation,133796,E2L6_GTCTTTACAATCCTAG,gemini,1472.0,134.0,2392.0,,786.0,False,435.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6181,1786537180.9909594,stage1_annotation,annotation,91900,E2L3_AGACACTCAAACAGGC,gemini,1481.0,155.0,2860.0,,1224.0,False,488.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,2980,1786537181.0077045,stage1_annotation,annotation,144736,E2L7_GCTGAATGTTCGAAGG,gemini,1469.0,111.0,2125.0,,545.0,False,380.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3380,1786537181.2022703,stage1_annotation,annotation,114282,E2L5_ACCATTTTCGGCATAT,gemini,1466.0,97.0,2146.0,,583.0,False,343.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4376,1786537181.2041898,stage1_annotation,annotation,101573,E2L3_TTGCTGCGTAATCAGA,gemini,1478.0,128.0,2383.0,,777.0,False,396.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6687,1786537181.2843962,stage1_annotation,annotation,8590,L1_GGGTTATTCTGGTCAA,gemini,1491.0,120.0,3025.0,,1414.0,False,466.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,13718,1786537181.3962169,stage1_annotation,annotation,145909,E2L7_GTGAGCCGTAGCTCGC,gemini,1478.0,156.0,5018.0,,3384.0,False,544.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3472,1786537181.7877038,stage1_annotation,annotation,88438,E2L2_TCGACGGTCAAACCCA,gemini,1484.0,117.0,2189.0,,588.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6279,1786537181.7911994,stage1_annotation,annotation,49199,L4_TATCGCCTCGACACCG,gemini,1474.0,147.0,3078.0,,1457.0,False,471.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3975,1786537182.0843165,stage1_annotation,annotation,155361,E2L8_CTTAGGAGTAGAGGAA,gemini,1484.0,125.0,2286.0,,677.0,False,421.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5784,1786537182.0920725,stage1_annotation,annotation,79944,E2L2_AGACCCGTCGCTTGAA,gemini,1471.0,143.0,2821.0,,1207.0,False,502.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3577,1786537183.079074,stage1_annotation,annotation,120178,E2L5_GCCCAGAAGACCAGAC,gemini,1476.0,103.0,2116.0,,537.0,False,359.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5580,1786537183.799298,stage1_annotation,annotation,14287,L2_AAGTCGTGTCGTATTG,gemini,1474.0,119.0,2478.0,,885.0,False,428.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4573,1786537183.8895721,stage1_annotation,annotation,19134,L2_CGTTAGAGTCTGCATA,gemini,1486.0,113.0,2687.0,,1088.0,False,385.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3686,1786537184.2895005,stage1_annotation,annotation,92341,E2L3_AGGGTTTGTTCAGTAC,gemini,1491.0,126.0,2259.0,,642.0,False,443.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5187,1786537184.2962167,stage1_annotation,annotation,128421,E2L6_CAAAGAAGTTGGGCCT,gemini,1461.0,144.0,2792.0,,1187.0,False,473.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3186,1786537184.4009225,stage1_annotation,annotation,23815,L2_TATTGCTGTTAAACCC,gemini,1485.0,106.0,2129.0,,538.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3284,1786537184.5005898,stage1_annotation,annotation,145486,E2L7_GTAATCGTCAGACCGC,gemini,1485.0,127.0,2166.0,,554.0,False,416.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3582,1786537184.6018004,stage1_annotation,annotation,18588,L2_CCTTTGGTCTGGACCG,gemini,1483.0,118.0,2153.0,,552.0,False,454.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3092,1786537184.8961792,stage1_annotation,annotation,39282,L4_AACAACCTCAACCCGG,gemini,1480.0,106.0,2114.0,,528.0,False,384.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3992,1786537184.904789,stage1_annotation,annotation,42687,L4_CACGTGGAGTCATCGT,gemini,1476.0,76.0,2360.0,,808.0,False,248.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3288,1786537185.0977712,stage1_annotation,annotation,12655,L1_TGTCCTGCAACTGCCG,gemini,1479.0,119.0,2184.0,,586.0,False,449.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3783,1786537185.1973708,stage1_annotation,annotation,13294,L1_TTCTTGACAATAACGA,gemini,1480.0,131.0,2212.0,,601.0,False,435.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4293,1786537185.2808197,stage1_annotation,annotation,141622,E2L7_CCACGTTCAAGTTTGC,gemini,1522.0,113.0,2450.0,,815.0,False,365.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3496,1786537185.5955138,stage1_annotation,annotation,151229,E2L8_AGAGCAGAGTTGTCGT,gemini,1486.0,101.0,2175.0,,588.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3493,1786537185.598246,stage1_annotation,annotation,33971,L3_GCGTGCAAGTAGGATT,gemini,1481.0,109.0,2143.0,,553.0,False,377.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6775,1786537186.0882921,stage1_annotation,annotation,128601,E2L6_CAATCGATCGATTCCC,gemini,1466.0,144.0,2921.0,,1311.0,False,485.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4998,1786537186.290881,stage1_annotation,annotation,57669,L5_CCTCCTCTCACCTTGC,gemini,1482.0,99.0,2555.0,,974.0,False,370.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3306,1786537186.3923898,stage1_annotation,annotation,23918,L2_TCACAAGTCCTCATAT,gemini,1485.0,115.0,2140.0,,540.0,False,432.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5501,1786537186.3945465,stage1_annotation,annotation,121317,E2L5_GTCAAGTTCTCCCATG,gemini,1466.0,147.0,2710.0,,1097.0,False,547.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,2993,1786537186.8903358,stage1_annotation,annotation,18386,L2_CCTATCGGTATCTCTT,gemini,1485.0,106.0,2129.0,,538.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6282,1786537187.2820084,stage1_annotation,annotation,124007,E2L5_TGCAGATTCTCAGTCC,gemini,1468.0,152.0,2842.0,,1222.0,False,502.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3087,1786537187.4963763,stage1_annotation,annotation,14599,L2_ACATCCCCAGCTGAGA,gemini,1480.0,120.0,2136.0,,536.0,False,469.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3777,1786537187.5874724,stage1_annotation,annotation,72294,E2L1_CTGATCCGTAGCGTCC,gemini,1482.0,129.0,2177.0,,566.0,False,428.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3377,1786537187.6795144,stage1_annotation,annotation,155480,E2L8_CTTTCAAAGGCACGAT,gemini,1496.0,139.0,2225.0,,590.0,False,489.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3192,1786537187.7018936,stage1_annotation,annotation,39538,L4_AAGATAGTCGCGATCG,gemini,1482.0,101.0,2164.0,,581.0,False,377.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3200,1786537187.8125887,stage1_annotation,annotation,26043,L2_TTACAGGGTTCGGTAT,gemini,1472.0,101.0,2067.0,,494.0,False,363.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3176,1786537188.0919373,stage1_annotation,annotation,52517,L5_AAAGGTACACGCGCTA,gemini,1501.0,108.0,2151.0,,542.0,False,375.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3672,1786537188.582127,stage1_annotation,annotation,30861,L3_CCACAAAAGAGGGCGA,gemini,1483.0,104.0,2286.0,,699.0,False,386.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3081,1786537188.6857705,stage1_annotation,annotation,41436,L4_AGTCTCCAGCCACAAG,gemini,1501.0,102.0,2166.0,,563.0,False,366.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3688,1786537188.7938015,stage1_annotation,annotation,155438,E2L8_CTTCTCTAGTATAGGT,gemini,1478.0,115.0,2176.0,,583.0,False,426.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3071,1786537189.3743732,stage1_annotation,annotation,11418,L1_TCGGGACAGCTACGTT,gemini,1492.0,110.0,2096.0,,494.0,False,383.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3869,1786537189.4785666,stage1_annotation,annotation,61719,L5_GGTTCTCGTTCCAGGC,gemini,1500.0,115.0,2210.0,,595.0,False,417.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3467,1786537189.8826323,stage1_annotation,annotation,49784,L4_TCCCACACATGCAGCC,gemini,1493.0,120.0,2283.0,,670.0,False,379.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3882,1786537189.9798188,stage1_annotation,annotation,43714,L4_CCGGTGACACACAGCC,gemini,1501.0,121.0,2279.0,,657.0,False,438.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3284,1786537190.1853888,stage1_annotation,annotation,13631,L1_TTTCAGTTCCATACTT,gemini,1485.0,109.0,2103.0,,509.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,2984,1786537190.4941669,stage1_annotation,annotation,42109,L4_ATGTCTTCAGAAGCTG,gemini,1499.0,106.0,2163.0,,558.0,False,394.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5385,1786537190.6748312,stage1_annotation,annotation,83461,E2L2_CTACCCACAGTTAGGG,gemini,1494.0,106.0,2696.0,,1096.0,False,429.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3000,1786537190.6894846,stage1_annotation,annotation,53539,L5_ACCCTCAAGAGGCGTT,gemini,1498.0,92.0,2154.0,,564.0,False,331.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5577,1786537190.7855198,stage1_annotation,annotation,55605,L5_ATGCGATTCCAGTGCG,gemini,1496.0,110.0,2894.0,,1288.0,False,368.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4559,1786537190.970926,stage1_annotation,annotation,67052,L5_TTTGGAGGTGGTGATG,gemini,1493.0,117.0,2736.0,,1126.0,False,447.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6980,1786537191.2870777,stage1_annotation,annotation,124470,E2L5_TGTCCTGGTTGGAGAC,gemini,1475.0,112.0,2885.0,,1298.0,False,453.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3875,1786537191.588134,stage1_annotation,annotation,8644,L1_GGTAGAGCACACCAGC,gemini,1496.0,111.0,2330.0,,723.0,False,410.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3868,1786537191.68997,stage1_annotation,annotation,98640,E2L3_TAACGACAGCCTTTGA,gemini,1491.0,106.0,2493.0,,896.0,False,385.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3286,1786537192.0880492,stage1_annotation,annotation,35883,L3_TACCCGTCAGTGGCTC,gemini,1490.0,101.0,2142.0,,551.0,False,384.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4691,1786537192.2868242,stage1_annotation,annotation,38438,L3_TTCAATCTCGGTGTTA,gemini,1507.0,106.0,2613.0,,1000.0,False,403.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3786,1786537192.37665,stage1_annotation,annotation,10570,L1_TCAAGACAGGCACTAG,gemini,1495.0,119.0,2344.0,,730.0,False,449.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3683,1786537192.3825731,stage1_annotation,annotation,8477,L1_GGGCTCAGTCTGTAGT,gemini,1494.0,93.0,2362.0,,775.0,False,318.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4487,1786537192.5921464,stage1_annotation,annotation,45808,L4_GACTTCCAGGGTGGGA,gemini,1495.0,101.0,2227.0,,631.0,False,358.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5678,1786537192.9706209,stage1_annotation,annotation,44537,L4_CTAACTTGTTGTGGAG,gemini,1504.0,150.0,2750.0,,1096.0,False,520.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4000,1786537193.3835998,stage1_annotation,annotation,123550,E2L5_TCTAACTTCCTCGCAT,gemini,1496.0,95.0,2359.0,,768.0,False,369.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,16827,1786537195.4310732,stage1_annotation,annotation,33223,L3_GAGAGGTGTATCACCA,gemini,1479.0,149.0,6089.0,,4461.0,False,514.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5218,1786537195.9172814,stage1_annotation,annotation,114471,E2L5_ACGTAGTTCCGACGGT,gemini,1472.0,146.0,2736.0,,1118.0,False,477.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5972,1786537195.9615135,stage1_annotation,annotation,86295,E2L2_GTAGTACCAAGTTCCA,gemini,1475.0,130.0,2885.0,,1280.0,False,428.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4881,1786537196.1764603,stage1_annotation,annotation,81942,E2L2_CAGTGCGGTATGAGCG,gemini,1473.0,130.0,2601.0,,998.0,False,418.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7284,1786537196.7706661,stage1_annotation,annotation,24812,L2_TCTACATTCCTGTTGC,gemini,1474.0,123.0,2973.0,,1376.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6269,1786537196.776893,stage1_annotation,annotation,71477,E2L1_CGATGGCGTGTTGACT,gemini,1479.0,129.0,3054.0,,1446.0,False,421.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6212,1786537197.011815,stage1_annotation,annotation,101433,E2L3_TTCTAGTCAACCACGC,gemini,1469.0,148.0,2713.0,,1096.0,False,485.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7783,1786537197.977487,stage1_annotation,annotation,160458,E2L8_TGCTGAATCATCTATC,gemini,1464.0,128.0,3314.0,,1722.0,False,443.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7392,1786537198.3732178,stage1_annotation,annotation,129230,E2L6_CATGGTAAGTCGAAGC,gemini,1481.0,105.0,3229.0,,1643.0,False,358.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6396,1786537198.6930926,stage1_annotation,annotation,71794,E2L1_CGTTAGACACACGTGC,gemini,1479.0,137.0,3071.0,,1455.0,False,448.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9033,1786537198.9253354,stage1_annotation,annotation,89000,E2L2_TGAGTCAGTCCTTAAG,gemini,1479.0,166.0,3731.0,,2086.0,False,604.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6613,1786537199.2149642,stage1_annotation,annotation,25281,L2_TGCACGGTCTGCATGA,gemini,1478.0,121.0,3194.0,,1595.0,False,395.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6306,1786537199.2897646,stage1_annotation,annotation,157008,E2L8_GGCTTGGTCAAGTAAG,gemini,1465.0,147.0,2695.0,,1083.0,False,485.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7207,1786537199.30473,stage1_annotation,annotation,104650,E2L4_ATTTCACTCTATCGTT,gemini,1480.0,140.0,3203.0,,1583.0,False,469.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7105,1786537199.4937165,stage1_annotation,annotation,151971,E2L8_ATACCTTTCCTGTAAG,gemini,1459.0,115.0,2776.0,,1202.0,False,407.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8009,1786537199.7070205,stage1_annotation,annotation,145306,E2L7_GGTCACGCAGTTGAAA,gemini,1463.0,129.0,3236.0,,1644.0,False,418.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8709,1786537200.3063397,stage1_annotation,annotation,6012,L1_CTCCCAAAGAGTCGAC,gemini,1480.0,148.0,3233.0,,1605.0,False,460.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4566,1786537200.4926863,stage1_annotation,annotation,19706,L2_CTGATCCCAACATCGT,gemini,1468.0,119.0,2549.0,,962.0,False,371.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8101,1786537200.4945035,stage1_annotation,annotation,117758,E2L5_CCTGCATTCGTCGGGT,gemini,1473.0,148.0,3084.0,,1463.0,False,488.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3981,1786537201.002602,stage1_annotation,annotation,61838,L5_GTACAACGTACTGCGC,gemini,1460.0,135.0,2233.0,,638.0,False,436.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6127,1786537202.3129387,stage1_annotation,annotation,106770,E2L4_CTCAATTAGAAACTCA,gemini,1468.0,134.0,2453.0,,851.0,False,430.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6482,1786537202.4547355,stage1_annotation,annotation,94593,E2L3_CCTCTCCAGCAGGCTA,gemini,1477.0,115.0,2595.0,,1003.0,False,404.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9069,1786537202.46265,stage1_annotation,annotation,19161,L2_CGTTGGGCACATGGTT,gemini,1470.0,124.0,3242.0,,1648.0,False,404.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5796,1786537202.5840788,stage1_annotation,annotation,29212,L3_ATCACAGGTTGTAGCT,gemini,1482.0,132.0,2549.0,,935.0,False,423.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5819,1786537202.6019716,stage1_annotation,annotation,18049,L2_CCACTTGAGTACAGCG,gemini,1463.0,122.0,2305.0,,720.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4179,1786537203.1131678,stage1_annotation,annotation,49141,L4_TATACCTGTAGATGTA,gemini,1474.0,100.0,2222.0,,648.0,False,307.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4948,1786537203.3301392,stage1_annotation,annotation,59130,L5_CTGGACGCAGTAACGG,gemini,1474.0,107.0,2408.0,,827.0,False,323.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,12902,1786537203.5885236,stage1_annotation,annotation,81719,E2L2_CACTAAGAGTTCAACC,gemini,1485.0,123.0,4121.0,,2513.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5905,1786537203.8917253,stage1_annotation,annotation,17078,L2_CAAGACTTCAAGAGTA,gemini,1472.0,97.0,2439.0,,870.0,False,310.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8504,1786537203.9601853,stage1_annotation,annotation,40100,L4_ACCCTCATCACCGGGT,gemini,1479.0,136.0,3028.0,,1413.0,False,423.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4853,1786537204.3577464,stage1_annotation,annotation,14428,L2_AATGGAATCCCAGTGG,gemini,1479.0,124.0,2424.0,,821.0,False,414.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5684,1786537204.3855793,stage1_annotation,annotation,99686,E2L3_TCCCACAGTGAGTAGC,gemini,1469.0,149.0,2566.0,,948.0,False,513.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5169,1786537204.39444,stage1_annotation,annotation,34476,L3_GGGCTACAGAGGGCGA,gemini,1461.0,123.0,2504.0,,920.0,False,405.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5113,1786537204.4103427,stage1_annotation,annotation,39947,L4_ACAGAAATCCATGCAA,gemini,1463.0,117.0,2274.0,,694.0,False,378.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5229,1786537204.5418956,stage1_annotation,annotation,70951,E2L1_CCCGGAATCGTGACTA,gemini,1472.0,143.0,2544.0,,929.0,False,463.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4043,1786537204.5479808,stage1_annotation,annotation,34742,L3_GGTTCTCTCAACGAGG,gemini,1469.0,124.0,2311.0,,718.0,False,358.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5336,1786537205.0529566,stage1_annotation,annotation,149109,E2L7_TTCACCGTCCGCAAAT,gemini,1482.0,141.0,2888.0,,1265.0,False,450.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4975,1786537205.2918048,stage1_annotation,annotation,144073,E2L7_GAGTTACGTAATACCC,gemini,1487.0,119.0,2557.0,,951.0,False,380.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4878,1786537205.388893,stage1_annotation,annotation,42278,L4_ATTGGGTAGCGAGGAG,gemini,1474.0,133.0,2418.0,,811.0,False,444.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4971,1786537205.9873035,stage1_annotation,annotation,92254,E2L3_AGGCATTCAAGCGAAC,gemini,1482.0,134.0,2201.0,,585.0,False,427.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5102,1786537207.4288473,stage1_annotation,annotation,9197,L1_GTCCTCAGTGTTTACG,gemini,1490.0,124.0,2412.0,,798.0,False,370.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6070,1786537208.542987,stage1_annotation,annotation,6614,L1_GAAACCTTCGCCAACG,gemini,1479.0,119.0,2656.0,,1058.0,False,395.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6271,1786537208.7389297,stage1_annotation,annotation,25377,L2_TGCGACGAGATTCGAA,gemini,1476.0,126.0,2770.0,,1168.0,False,389.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6465,1786537209.074844,stage1_annotation,annotation,84815,E2L2_GATCATGGTAACGGTG,gemini,1488.0,126.0,2628.0,,1014.0,False,452.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6290,1786537209.4119737,stage1_annotation,annotation,96706,E2L3_GCAGGCTAGGTTGACG,gemini,1477.0,106.0,2812.0,,1229.0,False,312.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6977,1786537209.5704112,stage1_annotation,annotation,25257,L2_TGATTTCAGTGAGGCT,gemini,1473.0,129.0,2842.0,,1240.0,False,415.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6490,1786537209.8283434,stage1_annotation,annotation,80854,E2L2_ATCCGTCGTTGCAAGG,gemini,1476.0,99.0,2658.0,,1083.0,False,320.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5507,1786537209.9250438,stage1_annotation,annotation,110134,E2L4_GTTGCTCCACACCAGC,gemini,1481.0,135.0,2567.0,,951.0,False,434.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5377,1786537209.9314096,stage1_annotation,annotation,117094,E2L5_CATTCCGCACTCTAGA,gemini,1476.0,114.0,2550.0,,960.0,False,368.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6506,1786537210.107442,stage1_annotation,annotation,122322,E2L5_TACGGGCGTGACTAAA,gemini,1461.0,112.0,2733.0,,1160.0,False,383.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5812,1786537210.2193806,stage1_annotation,annotation,87474,E2L2_TAGACTGAGTCTGTAC,gemini,1477.0,111.0,2671.0,,1083.0,False,375.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5955,1786537210.3560162,stage1_annotation,annotation,19992,L2_CTTCCTTGTGCATGAG,gemini,1470.0,120.0,2926.0,,1336.0,False,359.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6456,1786537210.4282846,stage1_annotation,annotation,136872,E2L6_TTACAGGTCGAGAAGC,gemini,1468.0,126.0,2871.0,,1277.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6073,1786537210.4405434,stage1_annotation,annotation,82617,E2L2_CCGGGTACATGACAGG,gemini,1477.0,134.0,2683.0,,1072.0,False,437.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5787,1786537210.8484323,stage1_annotation,annotation,84175,E2L2_CTTGATTAGTTGGACG,gemini,1477.0,99.0,2624.0,,1048.0,False,312.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5066,1786537211.0644553,stage1_annotation,annotation,103140,E2L4_ACTTCGCCAAGCGCAA,gemini,1459.0,136.0,2588.0,,993.0,False,449.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5857,1786537211.2547286,stage1_annotation,annotation,2631,L1_ATCACTTTCACGGGAA,gemini,1472.0,131.0,2757.0,,1154.0,False,425.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6854,1786537211.4125896,stage1_annotation,annotation,157111,E2L8_GGGATGAGTTGGGTTT,gemini,1466.0,145.0,2761.0,,1150.0,False,485.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7974,1786537211.8748176,stage1_annotation,annotation,63159,L5_TACCCGTCAGCGCGTT,gemini,1475.0,145.0,3291.0,,1671.0,False,488.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7109,1786537212.4099658,stage1_annotation,annotation,59405,L5_CTTGAGAAGCAATAAC,gemini,1486.0,134.0,3153.0,,1533.0,False,405.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4087,1786537213.6656697,stage1_annotation,annotation,1215,L1_ACGTCCTCAATCCTTT,gemini,1479.0,126.0,2376.0,,771.0,False,393.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6657,1786537214.0963943,stage1_annotation,annotation,143854,E2L7_GACTGATGTGTCTAAC,gemini,1474.0,139.0,2789.0,,1176.0,False,444.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6173,1786537214.7269962,stage1_annotation,annotation,103051,E2L4_ACTCTCGAGGTTGAGC,gemini,1451.0,138.0,2740.0,,1151.0,False,503.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5016,1786537215.1337693,stage1_annotation,annotation,144019,E2L7_GAGTCATAGGTTTGAA,gemini,1486.0,110.0,2827.0,,1231.0,False,366.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5723,1786537215.143594,stage1_annotation,annotation,20996,L2_GCACGGTAGAGCAGCT,gemini,1465.0,129.0,2693.0,,1099.0,False,463.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6498,1786537215.2451158,stage1_annotation,annotation,36977,L3_TCCTTTCTCGACTCCT,gemini,1459.0,135.0,2962.0,,1368.0,False,461.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5213,1786537215.5768468,stage1_annotation,annotation,140004,E2L7_ATCATTCCAATGCAGG,gemini,1483.0,146.0,2656.0,,1027.0,False,414.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5717,1786537215.6575053,stage1_annotation,annotation,106989,E2L4_CTCTCAGGTGACTGAG,gemini,1479.0,105.0,2663.0,,1079.0,False,363.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6690,1786537215.7750864,stage1_annotation,annotation,133540,E2L6_GTAGTACTCATTACGG,gemini,1470.0,116.0,2970.0,,1384.0,False,349.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5657,1786537216.0929618,stage1_annotation,annotation,74399,E2L1_GTAACACCAACACGTT,gemini,1464.0,133.0,2734.0,,1137.0,False,432.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6247,1786537216.192655,stage1_annotation,annotation,3307,L1_ATTTCACTCACAAGGG,gemini,1465.0,145.0,3056.0,,1446.0,False,453.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5342,1786537216.6080463,stage1_annotation,annotation,156959,E2L8_GGCAGTCAGAATCGAT,gemini,1482.0,134.0,2497.0,,881.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6863,1786537216.700585,stage1_annotation,annotation,2389,L1_AGTGACTTCGCTGATA,gemini,1466.0,137.0,2903.0,,1300.0,False,458.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5847,1786537216.9220648,stage1_annotation,annotation,126863,E2L6_AGACAGGCACATAGCT,gemini,1481.0,144.0,2817.0,,1192.0,False,494.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6700,1786537216.934877,stage1_annotation,annotation,14442,L2_AATGGCTGTCAAAGTA,gemini,1476.0,145.0,2871.0,,1250.0,False,514.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6578,1786537217.027903,stage1_annotation,annotation,104936,E2L4_CACGAATGTAGTCGTT,gemini,1479.0,129.0,2928.0,,1320.0,False,447.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6034,1786537217.4561908,stage1_annotation,annotation,159860,E2L8_TCTACCGAGCTCGACC,gemini,1458.0,140.0,2824.0,,1226.0,False,454.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6287,1786537218.1833794,stage1_annotation,annotation,37388,L3_TGAATGCGTTGCATTG,gemini,1468.0,125.0,2868.0,,1275.0,False,440.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7971,1786537218.829126,stage1_annotation,annotation,22522,L2_GTCATTTTCTCATGCC,gemini,1462.0,147.0,3204.0,,1595.0,False,516.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6718,1786537219.1369286,stage1_annotation,annotation,100010,E2L3_TCGGTCTGTCGCTCGA,gemini,1453.0,116.0,2778.0,,1209.0,False,420.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5334,1786537220.0745082,stage1_annotation,annotation,127381,E2L6_AGGTAGGAGTGCACCC,gemini,1477.0,123.0,2682.0,,1082.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6616,1786537220.291918,stage1_annotation,annotation,29638,L3_ATTACCTTCCATTGGA,gemini,1476.0,152.0,2897.0,,1269.0,False,464.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5235,1786537220.489297,stage1_annotation,annotation,135600,E2L6_TCGATTTCACCTAAAC,gemini,1474.0,124.0,2791.0,,1193.0,False,403.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5651,1786537220.8035612,stage1_annotation,annotation,133682,E2L6_GTCCCATAGCCGGATA,gemini,1478.0,136.0,2657.0,,1043.0,False,466.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5142,1786537220.9293385,stage1_annotation,annotation,85491,E2L2_GGAACCCGTTCTCCCA,gemini,1479.0,131.0,2508.0,,898.0,False,385.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5029,1786537221.2304943,stage1_annotation,annotation,35841,L3_TACAGGTGTAGTTACC,gemini,1472.0,122.0,2645.0,,1051.0,False,440.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4197,1786537221.2351897,stage1_annotation,annotation,154549,E2L8_CGTGAATTCACTCTTA,gemini,1475.0,135.0,2326.0,,716.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7135,1786537221.241881,stage1_annotation,annotation,21188,L2_GCCAGCATCGAGCCAC,gemini,1475.0,155.0,2850.0,,1220.0,False,516.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4407,1786537221.3393054,stage1_annotation,annotation,135164,E2L6_TCAGTTTAGTACTCGT,gemini,1481.0,121.0,2461.0,,859.0,False,419.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6607,1786537221.7531154,stage1_annotation,annotation,92257,E2L3_AGGCATTGTGAACGGT,gemini,1466.0,148.0,3071.0,,1457.0,False,457.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5148,1786537221.857025,stage1_annotation,annotation,112086,E2L4_TGCAGGCAGAAGCCTG,gemini,1473.0,120.0,2690.0,,1097.0,False,379.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4926,1786537222.3947759,stage1_annotation,annotation,116682,E2L5_CAGATACAGATAGCAT,gemini,1474.0,132.0,2771.0,,1165.0,False,444.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6812,1786537222.9143596,stage1_annotation,annotation,125101,E2L5_TTGAGTGCAGAAATTG,gemini,1468.0,135.0,2980.0,,1377.0,False,430.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6075,1786537223.0206773,stage1_annotation,annotation,95907,E2L3_CTTTCAATCGAGTGAG,gemini,1468.0,128.0,3219.0,,1623.0,False,436.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7347,1786537223.9646423,stage1_annotation,annotation,117572,E2L5_CCGTGAGGTGTGGTCC,gemini,1484.0,106.0,2992.0,,1402.0,False,336.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3361,1786537224.1751032,stage1_annotation,annotation,24314,L2_TCCATCGCATCGGAAG,gemini,1487.0,133.0,2179.0,,559.0,False,434.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3772,1786537224.2701263,stage1_annotation,annotation,154894,E2L8_CTCAGTCCAGACGATG,gemini,1485.0,132.0,2231.0,,614.0,False,486.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3971,1786537224.2742097,stage1_annotation,annotation,7430,L1_GATGCTATCCTGTACC,gemini,1482.0,116.0,2203.0,,605.0,False,421.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3452,1786537224.3930404,stage1_annotation,annotation,114465,E2L5_ACGTAGTCAGGCTACC,gemini,1480.0,103.0,2164.0,,581.0,False,339.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3336,1786537224.5930786,stage1_annotation,annotation,57480,L5_CCGTGAGAGATGCTAA,gemini,1481.0,128.0,2181.0,,572.0,False,493.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4066,1786537225.3349311,stage1_annotation,annotation,101868,E2L3_TTTGGAGCACCAGGTC,gemini,1483.0,110.0,2497.0,,904.0,False,410.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5348,1786537225.4308777,stage1_annotation,annotation,83172,E2L2_CGGAGAACACGGATCC,gemini,1469.0,106.0,2622.0,,1047.0,False,349.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4096,1786537225.445484,stage1_annotation,annotation,59073,L5_CTGCCTAGTGTTTACG,gemini,1475.0,132.0,2442.0,,835.0,False,487.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9863,1786537225.4499085,stage1_annotation,annotation,148264,E2L7_TGATGGTTCACGGTCG,gemini,1470.0,135.0,3566.0,,1961.0,False,389.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7457,1786537225.6505506,stage1_annotation,annotation,18575,L2_CCTTGTGTCTTCGATT,gemini,1471.0,139.0,2977.0,,1367.0,False,437.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4494,1786537225.7546527,stage1_annotation,annotation,10112,L1_TACCTCGCAAAGGCTG,gemini,1484.0,144.0,2447.0,,819.0,False,503.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3926,1786537226.3320448,stage1_annotation,annotation,29294,L3_ATCCCTGAGGGCAGTT,gemini,1487.0,128.0,2227.0,,612.0,False,439.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4683,1786537226.4450858,stage1_annotation,annotation,70469,E2L1_CAGTTCCGTTATTCCT,gemini,1477.0,133.0,2450.0,,840.0,False,464.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4787,1786537226.6518984,stage1_annotation,annotation,14967,L2_ACTATCTGTTCGGCGT,gemini,1477.0,151.0,2556.0,,928.0,False,474.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,11010,1786537226.6752274,stage1_annotation,annotation,19277,L2_CTACTATGTGATCATC,gemini,1477.0,190.0,3767.0,,2100.0,False,621.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4105,1786537227.0281312,stage1_annotation,annotation,160550,E2L8_TGGATGTTCCACGTCT,gemini,1497.0,131.0,2288.0,,660.0,False,435.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4018,1786537227.0481951,stage1_annotation,annotation,516,L1_AAGTACCGTGAGGAAA,gemini,1478.0,106.0,2305.0,,721.0,False,383.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8844,1786537227.9901104,stage1_annotation,annotation,5157,L1_CGAGTTAGTGTACAGG,gemini,1472.0,124.0,3610.0,,2014.0,False,380.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4102,1786537228.076689,stage1_annotation,annotation,79075,E2L2_AATGCCAAGTATCCTG,gemini,1477.0,114.0,2302.0,,711.0,False,396.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3682,1786537228.084176,stage1_annotation,annotation,46191,L4_GATGAGGTCTCGGTAA,gemini,1475.0,106.0,2311.0,,730.0,False,381.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4270,1786537228.5545344,stage1_annotation,annotation,26213,L2_TTCATGTAGGAAGAAC,gemini,1483.0,134.0,2328.0,,711.0,False,441.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3363,1786537228.8038008,stage1_annotation,annotation,125841,E2L6_AAGACTCTCAACGCTA,gemini,1483.0,116.0,2133.0,,534.0,False,392.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3279,1786537228.9393954,stage1_annotation,annotation,95604,E2L3_CTGATCCGTCGCACAC,gemini,1496.0,94.0,2053.0,,463.0,False,333.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3607,1786537228.9523487,stage1_annotation,annotation,47256,L4_GGGCGTTCAAATACGA,gemini,1486.0,115.0,2243.0,,642.0,False,404.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4446,1786537229.0476806,stage1_annotation,annotation,5296,L1_CGGAACCTCCGTGGGT,gemini,1482.0,121.0,2491.0,,888.0,False,415.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4873,1786537229.1532087,stage1_annotation,annotation,51658,L4_TTCAATCAGGCTTCCG,gemini,1483.0,152.0,2585.0,,950.0,False,518.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5092,1786537229.2773607,stage1_annotation,annotation,127796,E2L6_ATCACTTTCCGTGGCA,gemini,1480.0,155.0,2508.0,,873.0,False,521.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3709,1786537229.4708662,stage1_annotation,annotation,117904,E2L5_CGATCGGGTAGCGTTT,gemini,1489.0,109.0,2117.0,,519.0,False,389.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3100,1786537229.5535362,stage1_annotation,annotation,68220,E2L1_ACTGATGTCTTCGATT,gemini,1484.0,105.0,2069.0,,480.0,False,383.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,2911,1786537229.568542,stage1_annotation,annotation,118277,E2L5_CGTTAGATCTGAGGCC,gemini,1479.0,96.0,1995.0,,420.0,False,329.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3240,1786537229.581528,stage1_annotation,annotation,67405,E2L1_AAGAACACATAATCGC,gemini,1472.0,121.0,2056.0,,463.0,False,441.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,10746,1786537229.583584,stage1_annotation,annotation,130605,E2L6_CTAGACACAGGCGTTC,gemini,1469.0,142.0,3891.0,,2280.0,False,481.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3078,1786537229.7678852,stage1_annotation,annotation,137357,E2L6_TTGCTGCCAGCCCACA,gemini,1482.0,115.0,2065.0,,468.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3031,1786537230.0876837,stage1_annotation,annotation,43383,L4_CCACACTAGTGATGGC,gemini,1474.0,106.0,2072.0,,492.0,False,378.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3562,1786537230.6016433,stage1_annotation,annotation,158089,E2L8_GTGGTTAGTTGCACGC,gemini,1467.0,106.0,2077.0,,504.0,False,360.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,2844,1786537230.93312,stage1_annotation,annotation,83146,E2L2_CGGAATTTCGTGGACC,gemini,1468.0,93.0,2057.0,,496.0,False,347.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5578,1786537231.0335002,stage1_annotation,annotation,55511,L5_ATGAGGGCAAACTCTG,gemini,1488.0,109.0,2623.0,,1026.0,False,384.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3245,1786537231.245247,stage1_annotation,annotation,80288,E2L2_AGGCATTAGCCTTTCC,gemini,1471.0,110.0,2075.0,,494.0,False,392.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3357,1786537231.4513285,stage1_annotation,annotation,62837,L5_GTTGTAGCAAACGTGG,gemini,1480.0,116.0,2107.0,,511.0,False,414.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3198,1786537231.762358,stage1_annotation,annotation,151355,E2L8_AGCGATTAGGTACATA,gemini,1472.0,100.0,2090.0,,518.0,False,340.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3089,1786537231.9017158,stage1_annotation,annotation,101431,E2L3_TTCTAGTAGAAGCGCT,gemini,1487.0,111.0,2129.0,,531.0,False,378.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3229,1786537232.1785827,stage1_annotation,annotation,103375,E2L4_AGATCGTCAACAGCCC,gemini,1474.0,119.0,2105.0,,512.0,False,412.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3337,1786537232.2973735,stage1_annotation,annotation,98355,E2L3_GTGTGATAGGTTCAGG,gemini,1476.0,99.0,2069.0,,494.0,False,343.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3341,1786537232.5025337,stage1_annotation,annotation,61460,L5_GGGTATTTCCCTAGGG,gemini,1476.0,117.0,2116.0,,523.0,False,401.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7157,1786537232.6166098,stage1_annotation,annotation,107081,E2L4_CTGCAGGTCGGACTGC,gemini,1468.0,169.0,3049.0,,1412.0,False,586.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3958,1786537233.4385087,stage1_annotation,annotation,50541,L4_TGACCCTTCGAAGTGG,gemini,1495.0,57.0,2277.0,,725.0,False,222.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4068,1786537233.6451528,stage1_annotation,annotation,17459,L2_CAGCAGCTCGCTAATG,gemini,1487.0,83.0,2516.0,,946.0,False,297.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4678,1786537233.9668562,stage1_annotation,annotation,31255,L3_CCTACGTAGAAAGTCT,gemini,1484.0,64.0,2412.0,,864.0,False,233.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4387,1786537233.9842741,stage1_annotation,annotation,54454,L5_AGCGCCAGTGGCTGCT,gemini,1479.0,80.0,2415.0,,856.0,False,248.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5204,1786537234.2614808,stage1_annotation,annotation,155038,E2L8_CTCGAGGGTAACATGA,gemini,1492.0,131.0,2548.0,,925.0,False,417.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4985,1786537235.5957906,stage1_annotation,annotation,79611,E2L2_ACGTTCCTCCCGAGGT,gemini,1485.0,108.0,2296.0,,703.0,False,360.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5839,1786537235.6158593,stage1_annotation,annotation,52228,L4_TTTACGTCACTGGACC,gemini,1507.0,91.0,2314.0,,716.0,False,356.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6031,1786537235.6335871,stage1_annotation,annotation,31678,L3_CGCCAGACAGCTGTCG,gemini,1505.0,119.0,2668.0,,1044.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4853,1786537235.7950344,stage1_annotation,annotation,52137,L4_TTGTGGACACGCGTCA,gemini,1507.0,106.0,2465.0,,852.0,False,368.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6482,1786537236.046122,stage1_annotation,annotation,20256,L2_GAATCGTCAAGTATCC,gemini,1494.0,96.0,2814.0,,1224.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4107,1786537236.295862,stage1_annotation,annotation,56779,L5_CATCGCTTCAAACGAA,gemini,1512.0,91.0,2376.0,,773.0,False,358.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6201,1786537236.2980533,stage1_annotation,annotation,49809,L4_TCCCATGCACCTGCAG,gemini,1502.0,116.0,2839.0,,1221.0,False,433.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4981,1786537236.442242,stage1_annotation,annotation,48054,L4_GTCTAGAGTATAATGG,gemini,1498.0,99.0,2438.0,,841.0,False,356.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5763,1786537236.8105416,stage1_annotation,annotation,8720,L1_GGTGGCTTCTGGCTGG,gemini,1469.0,124.0,2666.0,,1073.0,False,391.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3472,1786537237.1276639,stage1_annotation,annotation,15093,L2_ACTTATCAGGTTAGTA,gemini,1488.0,111.0,2098.0,,499.0,False,436.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4913,1786537237.2204578,stage1_annotation,annotation,48510,L4_GTTCGCTTCGTTAGAC,gemini,1504.0,83.0,2579.0,,992.0,False,333.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5321,1786537237.2332468,stage1_annotation,annotation,46657,L4_GCGATCGGTGTTCCTC,gemini,1477.0,106.0,2534.0,,951.0,False,382.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5997,1786537237.2501187,stage1_annotation,annotation,22185,L2_GGTTAACTCGGTCACG,gemini,1492.0,97.0,2595.0,,1006.0,False,323.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4085,1786537237.5357325,stage1_annotation,annotation,28558,L3_AGCCAGCTCCGATAGT,gemini,1499.0,100.0,2459.0,,860.0,False,335.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3643,1786537237.6245,stage1_annotation,annotation,74797,E2L1_GTCTCACAGCTGTGCC,gemini,1481.0,117.0,2228.0,,630.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6123,1786537238.6363955,stage1_annotation,annotation,62151,L5_GTCCTCACAAGATCCT,gemini,1473.0,111.0,2540.0,,956.0,False,342.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4563,1786537238.837233,stage1_annotation,annotation,56244,L5_CACAACATCGTGCGAC,gemini,1480.0,103.0,2225.0,,642.0,False,392.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3207,1786537238.8533702,stage1_annotation,annotation,126684,E2L6_ACTGTGATCCACGGAC,gemini,1483.0,109.0,2116.0,,524.0,False,380.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6230,1786537238.8614836,stage1_annotation,annotation,57273,L5_CCCTCAAGTGCGTTTA,gemini,1485.0,155.0,2866.0,,1226.0,False,498.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7284,1786537239.0573578,stage1_annotation,annotation,38456,L3_TTCACGCTCAAAGGTA,gemini,1489.0,135.0,2670.0,,1046.0,False,474.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3648,1786537239.2539248,stage1_annotation,annotation,30351,L3_CAGATCATCACTTATC,gemini,1488.0,93.0,2148.0,,567.0,False,353.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5280,1786537239.2718914,stage1_annotation,annotation,47612,L4_GTAAGTCGTCGCATGC,gemini,1491.0,120.0,2908.0,,1297.0,False,433.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3653,1786537239.4604347,stage1_annotation,annotation,129612,E2L6_CCGAACGAGAGCCGAT,gemini,1497.0,77.0,2275.0,,701.0,False,281.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4343,1786537239.96941,stage1_annotation,annotation,54594,L5_AGGAGGTCATCCTTCG,gemini,1487.0,101.0,2396.0,,808.0,False,386.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3621,1786537240.0749977,stage1_annotation,annotation,6356,L1_CTGTAGAAGACCGCCT,gemini,1484.0,105.0,2133.0,,544.0,False,365.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4109,1786537240.167861,stage1_annotation,annotation,54448,L5_AGCGCCACAGGTCAAG,gemini,1489.0,122.0,2363.0,,752.0,False,447.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3970,1786537240.286459,stage1_annotation,annotation,116590,E2L5_CACGTGGAGGAAAGGT,gemini,1483.0,95.0,2230.0,,652.0,False,329.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3349,1786537240.5902758,stage1_annotation,annotation,7747,L1_GCCAGCACAGCAGTTT,gemini,1492.0,116.0,2090.0,,482.0,False,400.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4287,1786537240.5967934,stage1_annotation,annotation,11118,L1_TCCCATGAGGAATGTT,gemini,1491.0,102.0,2279.0,,686.0,False,387.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3558,1786537240.6959352,stage1_annotation,annotation,127899,E2L6_ATCGATGAGCTAATGA,gemini,1485.0,107.0,2142.0,,550.0,False,352.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3369,1786537240.9151967,stage1_annotation,annotation,79136,E2L2_ACAAAGAAGTTCCGTA,gemini,1500.0,99.0,2243.0,,644.0,False,321.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3760,1786537241.0221977,stage1_annotation,annotation,76907,E2L1_TCTTTGATCGTGGGTC,gemini,1480.0,114.0,2176.0,,582.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4004,1786537241.2338083,stage1_annotation,annotation,11291,L1_TCGAAGTCAACCTAAC,gemini,1493.0,102.0,2446.0,,851.0,False,379.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4221,1786537241.8549016,stage1_annotation,annotation,84449,E2L2_GACCCTTAGGCACTAG,gemini,1489.0,108.0,2329.0,,732.0,False,376.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3419,1786537242.0665627,stage1_annotation,annotation,122898,E2L5_TCAGTTTTCCATAAGC,gemini,1500.0,94.0,2213.0,,619.0,False,328.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5353,1786537242.1764295,stage1_annotation,annotation,152675,E2L8_CAACAGTCAGGATTCT,gemini,1484.0,103.0,2692.0,,1105.0,False,376.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3958,1786537242.8043072,stage1_annotation,annotation,63636,L5_TATTGCTAGGGCTTCC,gemini,1481.0,82.0,2303.0,,740.0,False,268.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4052,1786537242.918619,stage1_annotation,annotation,127869,E2L6_ATCCGTCCATCCGTTC,gemini,1491.0,98.0,2256.0,,667.0,False,384.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3551,1786537243.0207713,stage1_annotation,annotation,26244,L2_TTCATTGTCTCCATAT,gemini,1477.0,71.0,2220.0,,672.0,False,228.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4148,1786537243.2196627,stage1_annotation,annotation,154468,E2L8_CGGTCAGGTGGACTGA,gemini,1482.0,122.0,2352.0,,748.0,False,402.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3555,1786537243.6380944,stage1_annotation,annotation,13495,L1_TTGTGTTTCTTCACGC,gemini,1478.0,78.0,2171.0,,615.0,False,241.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4880,1786537243.7560818,stage1_annotation,annotation,40896,L4_AGCCAGCCATACTGAC,gemini,1486.0,151.0,2461.0,,824.0,False,471.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3970,1786537244.5804183,stage1_annotation,annotation,149862,E2L8_AAAGTGACAAGTGCAG,gemini,1493.0,87.0,2329.0,,749.0,False,267.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4509,1786537244.6859899,stage1_annotation,annotation,76731,E2L1_TCGTGGGTCTCAACGA,gemini,1485.0,107.0,2393.0,,801.0,False,339.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4712,1786537245.0091333,stage1_annotation,annotation,126443,E2L6_ACGCACGAGAGGGCGA,gemini,1480.0,115.0,2326.0,,731.0,False,391.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5229,1786537245.2075727,stage1_annotation,annotation,108843,E2L4_GGCTGTGTCTGTTCAT,gemini,1489.0,133.0,2569.0,,947.0,False,461.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6378,1786537245.6517227,stage1_annotation,annotation,80805,E2L2_ATCATTCAGGCAGGTT,gemini,1490.0,99.0,2766.0,,1177.0,False,390.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3660,1786537245.7350678,stage1_annotation,annotation,115008,E2L5_AGCGCCAAGGTTATAG,gemini,1492.0,79.0,2229.0,,658.0,False,247.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4613,1786537245.8576567,stage1_annotation,annotation,71815,E2L1_CGTTCTGGTAACGCGA,gemini,1480.0,145.0,2359.0,,734.0,False,434.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5344,1786537246.2717402,stage1_annotation,annotation,59182,L5_CTGTACCAGTGCTACT,gemini,1483.0,114.0,2586.0,,989.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4499,1786537246.364838,stage1_annotation,annotation,159767,E2L8_TCGGGTGAGCATTGTC,gemini,1488.0,110.0,2553.0,,955.0,False,389.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5766,1786537246.3710952,stage1_annotation,annotation,2382,L1_AGTGACTGTATTAAGG,gemini,1486.0,143.0,2830.0,,1201.0,False,496.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7199,1786537246.4844568,stage1_annotation,annotation,127721,E2L6_ATAGAGAGTATGGAAT,gemini,1502.0,137.0,3138.0,,1499.0,False,459.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6396,1786537247.101345,stage1_annotation,annotation,125619,E2L6_AAATGGACACTCATAG,gemini,1492.0,111.0,2937.0,,1334.0,False,336.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4711,1786537247.5259364,stage1_annotation,annotation,136562,E2L6_TGGGTTATCAATCAGC,gemini,1475.0,88.0,2390.0,,827.0,False,331.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5440,1786537247.6278448,stage1_annotation,annotation,117778,E2L5_CCTTCAGTCTGTCCGT,gemini,1499.0,128.0,2881.0,,1254.0,False,422.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5029,1786537248.2580564,stage1_annotation,annotation,20606,L2_GAGGGTACAGACATCT,gemini,1494.0,118.0,2732.0,,1120.0,False,406.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7238,1786537248.2712662,stage1_annotation,annotation,113531,E2L5_AAAGTCCTCGACGTCG,gemini,1488.0,128.0,3422.0,,1806.0,False,423.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5563,1786537249.3268616,stage1_annotation,annotation,37398,L3_TGACAGTCATCAGCTA,gemini,1471.0,97.0,2563.0,,995.0,False,347.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6824,1786537249.8561633,stage1_annotation,annotation,31210,L3_CCGTGAGAGTTCCTGA,gemini,1497.0,144.0,2771.0,,1130.0,False,495.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3977,1786537250.4728246,stage1_annotation,annotation,42194,L4_ATTCAGGCACAGTACT,gemini,1479.0,93.0,2239.0,,667.0,False,352.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4614,1786537250.4802194,stage1_annotation,annotation,2467,L1_AGTTCCCAGCAGCCTC,gemini,1477.0,123.0,2380.0,,780.0,False,411.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5567,1786537250.5843387,stage1_annotation,annotation,41918,L4_ATGAAAGGTGTTTACG,gemini,1500.0,100.0,2461.0,,861.0,False,366.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5151,1786537251.5280287,stage1_annotation,annotation,128937,E2L6_CAGCGTGAGTGGAATT,gemini,1476.0,129.0,2659.0,,1054.0,False,460.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4944,1786537252.0544217,stage1_annotation,annotation,20303,L2_GACATCAGTCACCGCA,gemini,1472.0,131.0,2775.0,,1172.0,False,425.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6408,1786537252.0688164,stage1_annotation,annotation,11341,L1_TCGCACTAGCAATTCC,gemini,1479.0,131.0,2686.0,,1076.0,False,491.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7570,1786537252.2640905,stage1_annotation,annotation,25458,L2_TGCTTCGCACGAAAGC,gemini,1488.0,134.0,3084.0,,1462.0,False,484.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4835,1786537252.4719172,stage1_annotation,annotation,6008,L1_CTCCATGCATCGGCCA,gemini,1481.0,122.0,2541.0,,938.0,False,423.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8636,1786537253.2243683,stage1_annotation,annotation,58805,L5_CTCCCAAAGCAGATAT,gemini,1499.0,132.0,3231.0,,1600.0,False,466.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3989,1786537253.3241165,stage1_annotation,annotation,127818,E2L6_ATCATTCGTGGTCTCG,gemini,1466.0,103.0,2158.0,,589.0,False,356.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6007,1786537253.5412328,stage1_annotation,annotation,65735,L5_TGTAACGAGATGGGCT,gemini,1473.0,79.0,2618.0,,1066.0,False,367.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5370,1786537253.6522455,stage1_annotation,annotation,77296,E2L1_TGCTTCGAGATCCAAA,gemini,1474.0,130.0,2553.0,,949.0,False,443.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,8630,1786537253.8452,stage1_annotation,annotation,26150,L2_TTAGTCTTCTGGCCAG,gemini,1497.0,115.0,3297.0,,1685.0,False,425.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3585,1786537254.0763223,stage1_annotation,annotation,116360,E2L5_CAACGGCCAAATGAGT,gemini,1483.0,126.0,2226.0,,617.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4212,1786537254.0781105,stage1_annotation,annotation,93252,E2L3_ATTGGGTCATATGGCT,gemini,1464.0,109.0,2507.0,,934.0,False,386.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,10528,1786537254.1741042,stage1_annotation,annotation,2582,L1_ATATCCTCATGCCATA,gemini,1492.0,116.0,3636.0,,2028.0,False,419.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3988,1786537254.473627,stage1_annotation,annotation,119270,E2L5_GAAGTAACATGACTAC,gemini,1481.0,101.0,2251.0,,669.0,False,336.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4098,1786537254.6915991,stage1_annotation,annotation,108773,E2L4_GGAGGTATCGAGCCAC,gemini,1474.0,144.0,2491.0,,873.0,False,489.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9034,1786537255.4160268,stage1_annotation,annotation,123003,E2L5_TCATGTTCAATCTCTT,gemini,1477.0,143.0,3381.0,,1761.0,False,497.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4085,1786537255.620973,stage1_annotation,annotation,98994,E2L3_TAGATCGGTTGACGGA,gemini,1476.0,118.0,2276.0,,682.0,False,390.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,9357,1786537255.6388717,stage1_annotation,annotation,122724,E2L5_TCACAAGTCCGCAAAT,gemini,1480.0,155.0,3595.0,,1960.0,False,548.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,7673,1786537255.9423757,stage1_annotation,annotation,141081,E2L7_CAGCACGGTACTGACT,gemini,1465.0,92.0,2965.0,,1408.0,False,317.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4090,1786537256.1675863,stage1_annotation,annotation,72587,E2L1_CTTTCGGTCCATGCAA,gemini,1484.0,123.0,2421.0,,814.0,False,404.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,14186,1786537257.1130886,stage1_annotation,annotation,15077,L2_ACTGTGAGTGATACTC,gemini,1477.0,162.0,4701.0,,3062.0,False,624.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3878,1786537257.2116835,stage1_annotation,annotation,152972,E2L8_CACTAAGCAATTGTGC,gemini,1472.0,124.0,2222.0,,626.0,False,425.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5237,1786537257.2995043,stage1_annotation,annotation,125756,E2L6_AACGAAACAGTCTGGC,gemini,1468.0,110.0,2474.0,,896.0,False,373.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5232,1786537257.508553,stage1_annotation,annotation,76846,E2L1_TCTGCCATCAGGTGTT,gemini,1476.0,135.0,2647.0,,1036.0,False,478.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3660,1786537257.5137117,stage1_annotation,annotation,123670,E2L5_TCTGCCAGTGTAAACA,gemini,1478.0,123.0,2279.0,,678.0,False,424.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5138,1786537257.6196895,stage1_annotation,annotation,139675,E2L7_AGTACCAAGCGTATAA,gemini,1481.0,91.0,2650.0,,1078.0,False,314.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3968,1786537257.6329572,stage1_annotation,annotation,145011,E2L7_GGCTTTCCAAAGAGTT,gemini,1473.0,116.0,2250.0,,661.0,False,385.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4487,1786537257.7197773,stage1_annotation,annotation,12021,L1_TGATTCTAGAGAGTGA,gemini,1477.0,114.0,2347.0,,756.0,False,399.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4380,1786537257.9293268,stage1_annotation,annotation,132372,E2L6_GCATTAGAGGTAAGGA,gemini,1473.0,103.0,2349.0,,773.0,False,353.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3233,1786537257.9343715,stage1_annotation,annotation,110377,E2L4_TACCCACTCGCGGTAC,gemini,1478.0,105.0,2183.0,,600.0,False,323.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3962,1786537258.0487924,stage1_annotation,annotation,129143,E2L6_CATCGGGTCCTTGAAG,gemini,1466.0,107.0,2155.0,,582.0,False,354.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4297,1786537258.7820237,stage1_annotation,annotation,111086,E2L4_TCATGCCGTGGTCTAT,gemini,1491.0,106.0,2376.0,,779.0,False,349.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3570,1786537259.2012618,stage1_annotation,annotation,81336,E2L2_ATTGTTCTCAGAATAG,gemini,1508.0,121.0,2237.0,,608.0,False,406.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3559,1786537259.207752,stage1_annotation,annotation,38153,L3_TGTGGCGAGATGAATC,gemini,1483.0,112.0,2159.0,,564.0,False,388.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5130,1786537259.31082,stage1_annotation,annotation,73366,E2L1_GCACGGTCAAGGAGTC,gemini,1474.0,130.0,2486.0,,882.0,False,467.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5532,1786537259.6278791,stage1_annotation,annotation,99875,E2L3_TCGAAGTCATGGCCCA,gemini,1474.0,107.0,2637.0,,1056.0,False,398.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4508,1786537259.9323318,stage1_annotation,annotation,108715,E2L4_GGACGTCTCTGACCCT,gemini,1484.0,127.0,2510.0,,899.0,False,376.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3356,1786537260.580405,stage1_annotation,annotation,1985,L1_AGGAGGTTCCACTGGG,gemini,1485.0,108.0,2217.0,,624.0,False,380.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3050,1786537260.6807115,stage1_annotation,annotation,120147,E2L5_GCCAGTGTCACCTGTC,gemini,1482.0,121.0,2079.0,,476.0,False,400.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3667,1786537260.794133,stage1_annotation,annotation,47323,L4_GGGTCACTCAAGTGTC,gemini,1483.0,115.0,2257.0,,659.0,False,381.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3460,1786537260.9870665,stage1_annotation,annotation,88572,E2L2_TCGTAGAAGATACATG,gemini,1489.0,133.0,2259.0,,637.0,False,414.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3777,1786537261.0889008,stage1_annotation,annotation,73283,E2L1_GATTCGATCCTTCTAA,gemini,1480.0,94.0,2242.0,,668.0,False,296.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4935,1786537261.1113482,stage1_annotation,annotation,104739,E2L4_CAACGATGTATAGGAT,gemini,1478.0,109.0,2588.0,,1001.0,False,363.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3472,1786537261.2025414,stage1_annotation,annotation,5907,L1_CTCAGGGTCGAAGGAC,gemini,1477.0,119.0,2093.0,,497.0,False,401.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,5459,1786537261.4118564,stage1_annotation,annotation,108383,E2L4_GCCAGTGTCGGCATTA,gemini,1484.0,131.0,2734.0,,1119.0,False,413.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3891,1786537261.4163253,stage1_annotation,annotation,73970,E2L1_GGCAGTCTCCCTCTTT,gemini,1486.0,114.0,2303.0,,703.0,False,369.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3475,1786537261.5323076,stage1_annotation,annotation,44248,L4_CGCGTGATCAAACGAA,gemini,1478.0,122.0,2223.0,,623.0,False,371.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,15885,1786537261.633713,stage1_annotation,annotation,91936,E2L3_AGACTCAAGAATAGTC,gemini,1466.0,141.0,5303.0,,3696.0,False,503.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3787,1786537261.7376695,stage1_annotation,annotation,149440,E2L7_TTGCTGCCATACCACA,gemini,1480.0,119.0,2351.0,,752.0,False,374.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4410,1786537262.052883,stage1_annotation,annotation,85210,E2L2_GCCATTCAGCAAGCCA,gemini,1480.0,127.0,2365.0,,758.0,False,442.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,3670,1786537262.4629734,stage1_annotation,annotation,76864,E2L1_TCTGTCGTCAGTGGGA,gemini,1482.0,128.0,2167.0,,557.0,False,409.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,4518,1786537263.7302015,stage1_annotation,annotation,66932,L5_TTTCACAGTCCTGGGT,gemini,1489.0,121.0,2597.0,,987.0,False,387.0,0
+GeminiBackend,gemini-3.5-flash,1,4,success,,,,False,6833,1786537264.7742846,stage1_annotation,annotation,1707,L1_AGATCCACATCATGAC,gemini,1482.0,137.0,2935.0,,1316.0,False,412.0,0

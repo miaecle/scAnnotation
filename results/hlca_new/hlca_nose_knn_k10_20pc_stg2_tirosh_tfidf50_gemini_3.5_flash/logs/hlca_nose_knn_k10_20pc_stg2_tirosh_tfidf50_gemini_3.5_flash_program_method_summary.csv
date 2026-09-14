@@ -1,0 +1,4 @@
+step,phase,provider,backend,model,attempt_status,json_parse_method,input_tokens,output_tokens,total_tokens,thoughts_tokens,cache_hits,attempt_count
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,success,direct_json_loads,6772,29927,36699,0.0,0,33
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,success,extracted_json_block_1,205,1121,1326,0.0,0,1
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,success,repaired_json_1,613,2464,3077,0.0,0,3

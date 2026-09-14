@@ -506,6 +506,101 @@ def llm_judge_binary_accuracy(
     return float(np.mean(scores)) if scores else 0.0
 
 
+def _aggregate_per_sample(
+    per_sample_df: pd.DataFrame,
+    enabled: set[str],
+    hierarchy_max_depth: int | None = None,
+) -> dict[str, float]:
+    """Reduce a per-sample evaluation DataFrame to scalar metric means."""
+    n = len(per_sample_df)
+    records: dict[str, float] = {}
+    if "exact" in enabled and "acc" in per_sample_df.columns:
+        records["exact"] = float(per_sample_df["acc"].mean()) if n else 0.0
+    if "keyword" in enabled and "keyword" in per_sample_df.columns:
+        records["keyword"] = float(per_sample_df["keyword"].mean()) if n else 0.0
+    if "hierarchy" in enabled and "hierarchy_depth" in per_sample_df.columns:
+        records["hierarchy_depth"] = float(per_sample_df["hierarchy_depth"].mean()) if n else 0.0
+        max_depth = hierarchy_max_depth
+        if max_depth is None:
+            max_depth = int(per_sample_df["hierarchy_depth"].max()) if n else 0
+        # match_pct at level k = fraction of samples matching true/pred through level k;
+        # level 0 is the complement (fraction with no match at any level)
+        hierarchy_counts = per_sample_df["hierarchy_depth"].value_counts()
+        cumulative_counts = {
+            depth: int(hierarchy_counts[hierarchy_counts.index >= depth].sum())
+            for depth in range(1, max_depth + 1)
+        }
+        cumulative_counts[0] = int(hierarchy_counts.get(0, 0))
+        for level in range(0, max_depth + 1):
+            records[f"hierarchy_level_{level}_match_pct"] = (
+                cumulative_counts[level] / n if n else 0.0
+            )
+    if "llm_score" in per_sample_df.columns:
+        records["llm_judge"] = float(per_sample_df["llm_score"].mean()) if n else 0.0
+    if "llm_binary" in per_sample_df.columns:
+        records["llm_judge_binary"] = float(per_sample_df["llm_binary"].mean()) if n else 0.0
+    return records
+
+
+def bootstrap_metrics(
+    per_sample_df: pd.DataFrame,
+    true_labels: pd.Series,
+    strategies: list[str] | None = None,
+    n_bootstrap: int = 1000,
+    seed: int | None = None,
+    ci: float = 0.95,
+    hierarchy_max_depth: int | None = None,
+) -> pd.DataFrame:
+    """Stratified bootstrap uncertainty estimates for aggregate metrics.
+
+    For each of ``n_bootstrap`` iterations, resamples cells *with replacement*
+    independently within each true cell-type group (so class proportions are
+    preserved), assembling a combined set the same size as the full
+    evaluation, then recomputes each metric's mean. The resulting empirical
+    distribution of the metric estimates its uncertainty.
+
+    Args:
+        per_sample_df: Output of :func:`evaluate_per_sample`.
+        true_labels: Ground-truth cell type label per row, aligned to
+            ``per_sample_df.index`` (used to stratify the resampling).
+        strategies: Which strategies' metrics to bootstrap.
+        n_bootstrap: Number of bootstrap resamples.
+        seed: Random seed for reproducibility.
+        ci: Confidence level for the percentile interval (e.g. 0.95 → 2.5/97.5).
+        hierarchy_max_depth: Fixed number of hierarchy levels, so per-resample
+            ``hierarchy_level_{k}_match_pct`` keys stay consistent.
+
+    Returns:
+        Single-row DataFrame with ``{metric}_std``, ``{metric}_ci_low`` and
+        ``{metric}_ci_high`` columns for each aggregate metric.
+    """
+    enabled = {str(s).lower() for s in (strategies or ["exact", "keyword"])}
+    if len(per_sample_df) == 0 or n_bootstrap <= 0:
+        return pd.DataFrame([{}])
+
+    labels = true_labels.reindex(per_sample_df.index).astype(str).str.strip().str.lower()
+    group_positions = [np.flatnonzero((labels == label).to_numpy()) for label in labels.unique()]
+
+    rng = np.random.default_rng(seed)
+    boot_values: dict[str, list[float]] = {}
+    for _ in range(n_bootstrap):
+        sampled_positions = np.concatenate(
+            [rng.choice(pos, size=len(pos), replace=True) for pos in group_positions]
+        )
+        resampled_df = per_sample_df.iloc[sampled_positions]
+        for key, value in _aggregate_per_sample(resampled_df, enabled, hierarchy_max_depth).items():
+            boot_values.setdefault(key, []).append(value)
+
+    alpha = (1.0 - ci) / 2.0
+    records: dict[str, float] = {}
+    for key, values in boot_values.items():
+        arr = np.asarray(values)
+        records[f"{key}_std"] = float(arr.std(ddof=1)) if len(arr) > 1 else 0.0
+        records[f"{key}_ci_low"] = float(np.percentile(arr, 100 * alpha))
+        records[f"{key}_ci_high"] = float(np.percentile(arr, 100 * (1 - alpha)))
+    return pd.DataFrame([records])
+
+
 def evaluate_all(
     results_df: pd.DataFrame,
     true_col: str = "true_label",
@@ -514,6 +609,10 @@ def evaluate_all(
     per_sample_df: pd.DataFrame | None = None,
     strategies: list[str] | None = None,
     concurrency: int = 1,
+    hierarchy_paths: dict[str, tuple[str, ...]] | None = None,
+    hierarchy_max_depth: int | None = None,
+    n_bootstrap: int = 0,
+    bootstrap_seed: int | None = None,
 ) -> pd.DataFrame:
     """Run all available evaluation strategies and return a summary DataFrame.
 
@@ -528,9 +627,14 @@ def evaluate_all(
         true_col: Column name for ground-truth labels.
         pred_col: Column name for raw LLM responses.
         judge_backend: Optional backend for LLM-judge evaluation.
+        n_bootstrap: If > 0, run a stratified bootstrap (resampling cells with
+            replacement within each true cell type) to estimate uncertainty,
+            adding ``{metric}_std``/``_ci_low``/``_ci_high`` columns.
+        bootstrap_seed: Random seed for the bootstrap.
 
     Returns:
-        Single-row DataFrame with columns for each strategy's accuracy.
+        Single-row DataFrame with columns for each strategy's accuracy (plus
+        bootstrap uncertainty columns when ``n_bootstrap`` > 0).
     """
     if per_sample_df is None:
         per_sample_df = evaluate_per_sample(
@@ -540,21 +644,30 @@ def evaluate_all(
             judge_backend=judge_backend,
             strategies=strategies,
             concurrency=concurrency,
+            hierarchy_paths=hierarchy_paths,
         )
 
     enabled = {str(s).lower() for s in (strategies or ["exact", "keyword"])}
     n = len(per_sample_df)
-    records: dict[str, float] = {}
+    if "hierarchy" in enabled and "hierarchy_depth" in per_sample_df.columns and hierarchy_max_depth is None:
+        hierarchy_max_depth = int(per_sample_df["hierarchy_depth"].max()) if n else 0
+    records: dict[str, float] = _aggregate_per_sample(per_sample_df, enabled, hierarchy_max_depth)
 
-    if "exact" in enabled and "acc" in per_sample_df.columns:
-        records["exact"] = float(per_sample_df["acc"].mean()) if n else 0.0
-    if "keyword" in enabled and "keyword" in per_sample_df.columns:
-        records["keyword"] = float(per_sample_df["keyword"].mean()) if n else 0.0
+    if "hierarchy" in enabled and "hierarchy_depth" in per_sample_df.columns:
+        hierarchy_counts = per_sample_df["hierarchy_depth"].value_counts()
+        for depth in range(hierarchy_max_depth + 1):
+            records[f"hierarchy_depth_{depth}_count"] = int(hierarchy_counts.get(depth, 0))
 
-    if "llm_score" in per_sample_df.columns:
-        records["llm_judge"] = float(per_sample_df["llm_score"].mean()) if n else 0.0
-    if "llm_binary" in per_sample_df.columns:
-        records["llm_judge_binary"] = float(per_sample_df["llm_binary"].mean()) if n else 0.0
+    if n_bootstrap > 0 and n:
+        boot_df = bootstrap_metrics(
+            per_sample_df,
+            true_labels=results_df.loc[per_sample_df.index, true_col],
+            strategies=strategies,
+            n_bootstrap=n_bootstrap,
+            seed=bootstrap_seed,
+            hierarchy_max_depth=hierarchy_max_depth,
+        )
+        records.update(boot_df.iloc[0].to_dict())
 
     return pd.DataFrame([records])
 
@@ -567,12 +680,14 @@ def evaluate_per_sample(
     usage_sink: Callable[[dict[str, Any]], None] | None = None,
     strategies: list[str] | None = None,
     concurrency: int = 1,
+    hierarchy_paths: dict[str, tuple[str, ...]] | None = None,
 ) -> pd.DataFrame:
     """Compute per-sample evaluation outcomes.
 
     Returns columns (only those requested by ``strategies`` and available):
     - ``acc``: exact match after case-insensitive normalization
     - ``keyword``: keyword overlap match
+    - ``hierarchy_depth``: shared hierarchy depth between true and predicted labels
     - ``llm_judgment``: rubric category assigned by the LLM judge
     - ``llm_score``: numeric rubric score
     - ``llm_reasoning``: judge rationale text
@@ -589,6 +704,7 @@ def evaluate_per_sample(
 
     acc_flags: list[int] = []
     keyword_flags: list[int] = []
+    hierarchy_depths: list[int] = []
     llm_judgments: list[str] = []
     llm_scores: list[float] = []
     llm_reasonings: list[str] = []
@@ -597,11 +713,15 @@ def evaluate_per_sample(
     enabled = {str(s).lower() for s in (strategies or ["exact", "keyword"])}
     use_exact = "exact" in enabled
     use_keyword = "keyword" in enabled
+    use_hierarchy = "hierarchy" in enabled
     use_llm_judge = judge_backend is not None and "llm_judge" in enabled
     use_llm_judge_binary = judge_backend is not None and "llm_judge_binary" in enabled
     use_any_llm_judge = use_llm_judge or use_llm_judge_binary
     judge_complete_kwargs = _judge_complete_kwargs(judge_backend) if use_llm_judge else None
     judge_binary_complete_kwargs = _judge_binary_complete_kwargs(judge_backend) if use_llm_judge_binary else None
+
+    if use_hierarchy and hierarchy_paths is None:
+        raise ValueError("The 'hierarchy' strategy requires hierarchy_paths.")
 
     max_workers = max(1, int(concurrency or 1))
 
@@ -621,6 +741,20 @@ def evaluate_per_sample(
                 if len(t) >= 1 and t.lower() not in _STOPWORDS
             }
             record["keyword"] = int(any(tok and tok in pred_norm for tok in true_tokens))
+
+        if use_hierarchy:
+            true_path = hierarchy_paths.get(true_norm)
+            pred_path = hierarchy_paths.get(pred_norm)
+            if true_path is None or pred_path is None:
+                record["hierarchy_depth"] = 0
+                print(f"[Evaluation WARN] Missing hierarchy path for true={true_norm!r} or pred={pred_norm!r}")
+            else:
+                common_depth = 0
+                for true_level, pred_level in zip(true_path, pred_path):
+                    if true_level != pred_level:
+                        break
+                    common_depth += 1
+                record["hierarchy_depth"] = common_depth
 
         if use_llm_judge:
             try:
@@ -710,6 +844,8 @@ def evaluate_per_sample(
             acc_flags.append(int(record["acc"]))
         if use_keyword:
             keyword_flags.append(int(record["keyword"]))
+        if use_hierarchy:
+            hierarchy_depths.append(int(record["hierarchy_depth"]))
         if use_llm_judge:
             llm_judgments.append(str(record["llm_judgment"]))
             llm_scores.append(record["llm_score"])
@@ -723,6 +859,8 @@ def evaluate_per_sample(
         data["acc"] = acc_flags
     if use_keyword:
         data["keyword"] = keyword_flags
+    if use_hierarchy:
+        data["hierarchy_depth"] = hierarchy_depths
     if use_llm_judge:
         data["llm_judgment"] = llm_judgments
         data["llm_score"] = llm_scores
@@ -732,3 +870,30 @@ def evaluate_per_sample(
         data["llm_binary"] = llm_binary_scores
 
     return pd.DataFrame(data, index=results_df.index)
+
+
+def format_eval_report(eval_df: pd.DataFrame) -> str:
+    """Render a one-row ``evaluate_all`` result as a compact, readable report.
+
+    Groups each base metric with its bootstrap ``_std``/``_ci_low``/``_ci_high``
+    columns (if present) into a single ``value ± std [ci_low, ci_high]`` line,
+    instead of printing everything as one wide, hard-to-read table.
+    """
+    row = eval_df.iloc[0].to_dict()
+    suffixes = ("_std", "_ci_low", "_ci_high")
+    base_keys = [k for k in row if not k.endswith(suffixes)]
+    if not base_keys:
+        return eval_df.to_string(index=False)
+
+    label_width = max(len(k) for k in base_keys)
+    lines = []
+    for key in base_keys:
+        value = row[key]
+        line = f"{key:<{label_width}} : {value:.4f}" if isinstance(value, float) else f"{key:<{label_width}} : {value}"
+        std = row.get(f"{key}_std")
+        ci_low = row.get(f"{key}_ci_low")
+        ci_high = row.get(f"{key}_ci_high")
+        if std is not None and ci_low is not None and ci_high is not None:
+            line += f"  ± {std:.4f}  [95% CI: {ci_low:.4f}, {ci_high:.4f}]"
+        lines.append(line)
+    return "\n".join(lines)

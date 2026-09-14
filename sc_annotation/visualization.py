@@ -13,14 +13,32 @@ def save_confusion_matrix(
     results_df: pd.DataFrame,
     save_path: str,
     cell_type_list: list,
+    hierarchy_paths: dict[str, tuple[str, ...]] | None = None,
 ) -> None:
-    """Generate and save a row-normalized confusion matrix PNG."""
+    """Generate and save a row-normalized confusion matrix PNG.
+
+    When provided, ``hierarchy_paths`` determines the label order so related
+    leaf types are adjacent on both axes. Each leaf type has one path, so the
+    resulting axis labels cannot be duplicated by the hierarchy structure.
+    """
     labels = list(cell_type_list) if cell_type_list else sorted(results_df["true_label"].unique().tolist())
+    if hierarchy_paths is not None:
+        labels = sorted(
+            labels,
+            key=lambda label: hierarchy_paths.get(
+                str(label).strip().lower(),
+                ("~", str(label).strip().lower()),
+            ),
+        )
     y_true = results_df["true_label"]
     y_pred_raw = results_df["pred_celltype"].fillna("").astype(str).str.strip()
 
-    valid_labels = set(labels)
-    y_pred = y_pred_raw.where(y_pred_raw.isin(valid_labels), "SKIPPED")
+    # Match predictions case-insensitively, consistent with the pipeline's
+    # list constraint, while retaining the canonical label spelling on axes.
+    canonical_labels = {str(label).strip().lower(): label for label in labels}
+    y_pred = y_pred_raw.map(
+        lambda prediction: canonical_labels.get(prediction.lower(), "SKIPPED")
+    )
     if (y_pred == "SKIPPED").any() and "SKIPPED" not in labels:
         labels.append("SKIPPED")
 

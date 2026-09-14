@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_gpt_5.6_luna,2026-08-17 17:02:48,2026-08-17 17:04:52,123.97238111495972,2.066206351915995

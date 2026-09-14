@@ -7,6 +7,40 @@ from abc import ABC, abstractmethod
 from typing import Any, Callable
 
 
+def _extract_error_code(exc: Exception) -> Any | None:
+    """Best-effort extraction of an error code from provider exceptions."""
+    for attr in ("error_code", "code", "status_code"):
+        value = getattr(exc, attr, None)
+        if value not in (None, ""):
+            return value
+
+    response = getattr(exc, "response", None)
+    if response is not None:
+        for attr in ("status_code", "code"):
+            value = getattr(response, attr, None)
+            if value not in (None, ""):
+                return value
+
+        if isinstance(response, dict):
+            response_error = response.get("error", response)
+            if isinstance(response_error, dict):
+                for key in ("code", "status_code", "status", "type"):
+                    value = response_error.get(key)
+                    if value not in (None, ""):
+                        return value
+
+    body = getattr(exc, "body", None)
+    if isinstance(body, dict):
+        body_error = body.get("error", body)
+        if isinstance(body_error, dict):
+            for key in ("code", "status_code", "status", "type"):
+                value = body_error.get(key)
+                if value not in (None, ""):
+                    return value
+
+    return None
+
+
 class LLMBackend(ABC):
     """Base class for LLM completion backends.
 
@@ -118,6 +152,7 @@ def complete_with_retry(
                             "total_attempts": total_attempts,
                             "attempt_status": "final_failure" if is_final else "format_error",
                             "error_type": type(exc).__name__,
+                            "error_code": _extract_error_code(exc),
                             "error_message": str(exc),
                             "will_retry": not is_final,
                             "duration_ms": int((time.time() - started_at) * 1000),
@@ -161,6 +196,7 @@ def complete_with_retry(
                     "total_attempts": total_attempts,
                     "attempt_status": "final_failure" if is_final else "retry_error",
                     "error_type": type(exc).__name__,
+                    "error_code": _extract_error_code(exc),
                     "error_message": str(exc),
                     "will_retry": not is_final,
                     "duration_ms": int((time.time() - started_at) * 1000),

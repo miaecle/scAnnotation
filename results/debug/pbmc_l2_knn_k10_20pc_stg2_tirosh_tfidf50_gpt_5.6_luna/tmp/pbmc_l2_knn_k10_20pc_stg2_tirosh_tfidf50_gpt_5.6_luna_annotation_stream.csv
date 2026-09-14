@@ -1,0 +1,7 @@
+cell_idx,cell_barcode,true_label,pred_label
+13748,L1_TTTGTTGCAGCGAGTA,CD16 Mono,"CD16 Mono
+FCGR3A, MS4A7, CX3CR1-associated CDKN1C, LST1, and strong non-classical monocyte pathway activity support CD16 Mono. Limited inflammatory CD14/S100A9 expression argues against CD14 Mono; platelet-associated proteins likely reflect contamination/adherence."
+48,L1_AAAGAACCACCTCTAC,B memory,"B memory
+MS4A1, CD79A, CD19, CD22, CD21, BANK1, and abundant immunoglobulin transcripts establish a mature B-cell identity. CD27, CD73, CD35, CD21, and strong class-switched/IgM memory pathway scores support memory B cells, with immunoglobulin class switching evident (IGHA1/2, IGHG3)."
+6148,L1_CTGAATGAGGGCGAAG,CD14 Mono,"CD14 Mono
+LYZ, FCN1, CST3, TYROBP, LST1, and HLA-DP/DQ/DR expression support a classical/intermediate CD14⁺ monocyte. Platelet-associated proteins likely reflect ambient contamination or a minor doublet component; evidence does not support CD16 Mono or B memory."

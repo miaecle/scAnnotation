@@ -1,0 +1,4347 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_used,recorded_at_unix,prompt_user_message,prompt_system_message,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,step,phase,cell_idx,cell_barcode,stage1_label,error_type,error_message,response_text,json_parse_method,cache_hits
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,846,1054,,,False,1785224847.5785012,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD8 Naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,3842,2191,stage2_program_query,precompute,-1,<precompute>,CD8 Naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 105 column 4 (char 2191)","{
+  ""CD8+ Naive T cells"": {
+    ""genes"": [
+      ""CCR7"",
+      ""LEF1"",
+      ""SELL"",
+      ""TCF7"",
+      ""NOSIP"",
+      ""MAL"",
+      ""LDHB"",
+      ""CD27"",
+      ""CD28"",
+      ""IL7R"",
+      ""FLT3LG"",
+      ""MYC"",
+      ""EEF1A1"",
+      ""RPS6"",
+      ""RPL13"",
+      ""RPL21"",
+      ""BTG1"",
+      ""JUNB"",
+      ""CD8A"",
+      ""CD8B"",
+      ""TXNIP"",
+      ""SCML1"",
+      ""PIK3IP1"",
+      ""GIMAP5""
+    ],
+    ""description"": ""Quiescent, antigen-inexperienced CD8+ T cells characterized by high expression of lymph node homing receptors and transcription factors maintaining naive pluripotency.""
+  },
+  ""CD4+ Naive T cells"": {
+    ""genes"": [
+      ""CD4"",
+      ""CCR7"",
+      ""LEF1"",
+      ""SELL"",
+      ""TCF7"",
+      ""MAL"",
+      ""LDHB"",
+      ""CD27"",
+      ""CD28"",
+      ""IL7R"",
+      ""NOSIP"",
+      ""FLT3LG"",
+      ""EEF1A1"",
+      ""RPS3"",
+      ""RPL13A"",
+      ""BTG1"",
+      ""TXNIP"",
+      ""GIMAP5"",
+      ""ANXA1"",
+      ""TRABD2B""
+    ],
+    ""description"": ""Antigen-inexperienced helper T cells that share naive homing markers with CD8+ naive cells but are distinguished by CD4 expression and the absence of CD8 lineage markers.""
+  },
+  ""CD8+ Central Memory T cells"": {
+    ""genes"": [
+      ""CCR7"",
+      ""SELL"",
+      ""CD27"",
+      ""IL7R"",
+      ""CD8A"",
+      ""CD8B"",
+      ""LTB"",
+      ""GZMK"",
+      ""FGFBP2"",
+      ""KLRG1"",
+      ""CXCR3"",
+      ""EOMES"",
+      ""DUSP1"",
+      ""FOS"",
+      ""JUN"",
+      ""ZFP36"",
+      ""S100A4"",
+      ""S100A6"",
+      ""CD44"",
+      ""ANXA2""
+    ],
+    ""description"": ""Antigen-experienced CD8+ T cells that retain lymph node homing capacity while displaying intermediate effector potential and rapid recall capabilities.""
+  },
+  ""CD8+ Early Effector Memory T cells"": {
+    ""genes"": [
+      ""CD8A"",
+      ""CD8B"",
+      ""GZMK"",
+      ""LYAR"",
+      ""EOMES"",
+      ""CXCR3"",
+      ""KLRG1"",
+      ""CD27"",
+      ""LTB"",
+      ""DUSP2"",
+      ""NKG7"",
+      ""CST7"",
+      ""GZMA"",
+      ""PRF1"",
+      ""CCL5"",
+      ""FGFBP2"",
+      ""HCST"",
+      ""CD160"",
+      ""KLRD1"",
+      ""KLRG1""
+    ],
+    ""description"": ""Transitional CD8+ memory T cells that have lost naive markers like CCR7 and LEF1, initiating expression of cytotoxic granzymes and tissue-homing chemokine receptors.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224847.9648848,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4224,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,851,1057,,,False,1785224848.0962958,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""ILC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4331,2156,stage2_program_query,precompute,-1,<precompute>,ILC,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2156)","{
+  ""NK cells"": {
+    ""genes"": [
+      ""NKG7"",
+      ""GNLY"",
+      ""PRF1"",
+      ""GZMB"",
+      ""GZMA"",
+      ""KLRD1"",
+      ""KLRF1"",
+      ""KLRG1"",
+      ""FCGR3A"",
+      ""NCAM1"",
+      ""CD244"",
+      ""CST7"",
+      ""HOPX"",
+      ""SPON2"",
+      ""CLIC3"",
+      ""S1PR5"",
+      ""FGFBP2"",
+      ""PRF1"",
+      ""GZMM"",
+      ""CTS6"",
+      ""CD160"",
+      ""XCL1"",
+      ""XCL2"",
+      ""KLRC1"",
+      ""KLRC2""
+    ],
+    ""description"": ""Cytotoxic innate lymphocytes that share many transcriptional features with ILCs but are distinguished by high expression of perforin, granzymes, and killer cell lectin-like receptors.""
+  },
+  ""ILC3"": {
+    ""genes"": [
+      ""KIT"",
+      ""IL23R"",
+      ""RORC"",
+      ""AHR"",
+      ""IL1R1"",
+      ""LST1"",
+      ""IL22"",
+      ""CSF2"",
+      ""LTA"",
+      ""LTB"",
+      ""TNFSF11"",
+      ""CD2"",
+      ""KLRB1"",
+      ""TMEM176A"",
+      ""TMEM176B"",
+      ""PLXND1"",
+      ""GPR183"",
+      ""IL7R"",
+      ""CD4"",
+      ""IKZF3""
+    ],
+    ""description"": ""Innate lymphoid cells type 3 that express RORC and KIT, producing IL-22 and IL-17 to regulate mucosal immunity and tissue homeostasis.""
+  },
+  ""MAIT cells"": {
+    ""genes"": [
+      ""TRAV1-2"",
+      ""KLRB1"",
+      ""SLC4A10"",
+      ""DPP4"",
+      ""ZBTB16"",
+      ""RORC"",
+      ""IL7R"",
+      ""GZMK"",
+      ""NCR3"",
+      ""IKZF2"",
+      ""CD161"",
+      ""CCR6"",
+      ""CXCR6"",
+      ""ANXA1"",
+      ""LTB"",
+      ""DUSP1"",
+      ""FOS"",
+      ""JUN"",
+      ""CD8A"",
+      ""CD8B""
+    ],
+    ""description"": ""Mucosal-associated invariant T cells that express the semi-invariant TCR alpha chain TRAV1-2 and high levels of KLRB1 (CD161), often transcriptionally mimicking ILCs.""
+  },
+  ""gamma-delta T cells"": {
+    ""genes"": [
+      ""TRDC"",
+      ""TRGC1"",
+      ""TRGC2"",
+      ""TARBP1"",
+      ""CD160"",
+      ""KLRG1"",
+      ""KLRC2"",
+      ""KLRC3"",
+      ""GZMB"",
+      ""GZMA"",
+      ""GNLY"",
+      ""NKG7"",
+      ""PRF1"",
+      ""SST"",
+      ""CD8A"",
+      ""CD8B"",
+      ""RUNX3"",
+      ""IKZF2"",
+      ""ZBTB16"",
+      ""IL7R""
+    ],
+    ""description"": ""T cells expressing the gamma-delta TCR chains that exhibit innate-like rapid effector functions and overlap significantly with ILC and NK cell transcriptional profiles.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224848.290263,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4363,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,205,858,1063,,,False,1785224851.8122323,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""NK""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4260,2228,stage2_program_query,precompute,-1,<precompute>,NK,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 105 column 4 (char 2228)","{
+  ""CD56dim CD16plus NK"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""FGFBP2"",
+      ""CX3CR1"",
+      ""PRF1"",
+      ""GZMB"",
+      ""GZMH"",
+      ""SPON2"",
+      ""KLRF1"",
+      ""KLRG1"",
+      ""S1PR5"",
+      ""ADGRG1"",
+      ""CLIC3"",
+      ""NKG7"",
+      ""GNLY"",
+      ""CST7"",
+      ""TBX21"",
+      ""ZEB2"",
+      ""PRF1"",
+      ""HCST"",
+      ""CD244"",
+      ""KLRD1"",
+      ""KLRD1"",
+      ""PTGDR"",
+      ""S100A4""
+    ],
+    ""description"": ""The major cytotoxic NK cell subset in peripheral blood, characterized by high expression of CD16 (FCGR3A), perforin, and granzymes, specialized in rapid target cell lysis.""
+  },
+  ""CD56bright CD16minus NK"": {
+    ""genes"": [
+      ""NCAM1"",
+      ""SELL"",
+      ""IL7R"",
+      ""GZMK"",
+      ""KLRC1"",
+      ""XCL1"",
+      ""XCL2"",
+      ""CSF2"",
+      ""IFNG"",
+      ""TNF"",
+      ""LTB"",
+      ""CD27"",
+      ""IL2RB"",
+      ""CAPG"",
+      ""RUNX2"",
+      ""TCF7"",
+      ""SOX4"",
+      ""MYC"",
+      ""GPR183"",
+      ""CCR7""
+    ],
+    ""description"": ""The cytokine-producing, immunomodulatory NK cell subset in PBMCs, characterized by high CD56 expression, low or absent CD16, and high expression of GZMK and chemokines like XCL1.""
+  },
+  ""CD8plus Effector T cells"": {
+    ""genes"": [
+      ""CD8A"",
+      ""CD8B"",
+      ""CD3D"",
+      ""CD3E"",
+      ""CD3G"",
+      ""TRAC"",
+      ""TRBC1"",
+      ""TRBC2"",
+      ""GZMK"",
+      ""GZMA"",
+      ""EOMES"",
+      ""RUNX3"",
+      ""CD27"",
+      ""LTB"",
+      ""DUSP2"",
+      ""CD2"",
+      ""IL7R"",
+      ""KLRG1"",
+      ""CXCR3"",
+      ""CCL5""
+    ],
+    ""description"": ""A major T cell population in PBMCs that shares cytotoxic machinery with NK cells but is distinguished by the expression of the T-cell receptor complex and CD8 co-receptors.""
+  },
+  ""Gamma-Delta T cells"": {
+    ""genes"": [
+      ""TRDC"",
+      ""TRGC1"",
+      ""TRGC2"",
+      ""CD3D"",
+      ""CD3E"",
+      ""CD2"",
+      ""KLRB1"",
+      ""KLRC2"",
+      ""KLRC3"",
+      ""NKG7"",
+      ""GNLY"",
+      ""GZMB"",
+      ""GZMH"",
+      ""SST"",
+      ""TARDBP"",
+      ""CD160"",
+      ""ZBTB16"",
+      ""IKZF2"",
+      ""LEF1"",
+      ""CD244""
+    ],
+    ""description"": ""An unconventional T cell lineage expressing gamma and delta TCR chains that bridges innate and adaptive immunity, often sharing transcriptional profiles and marker genes with NK cells.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,207,847,1054,,,False,1785224852.1174076,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""cDC2""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4029,2175,stage2_program_query,precompute,-1,<precompute>,cDC2,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 102 column 4 (char 2175)","{
+  ""cDC2_A_inflammatory"": {
+    ""genes"": [
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""S100A9"",
+      ""S100A8"",
+      ""LYZ"",
+      ""FCN1"",
+      ""VCAN"",
+      ""CD14"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CCL3"",
+      ""CCL4"",
+      ""TNF"",
+      ""NFKBIA"",
+      ""JUN"",
+      ""FOS"",
+      ""IER3"",
+      ""EGR1"",
+      ""CD1e"",
+      ""CD2""
+    ],
+    ""description"": ""A subset of classical dendritic cells type 2 (cDC2) characterized by the expression of inflammatory mediators, monocyte-like markers, and rapid response to activation signals.""
+  },
+  ""cDC2_B_conventional"": {
+    ""genes"": [
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DRB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD74"",
+      ""CD86"",
+      ""CD40"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""IRF4"",
+      ""CIITA"",
+      ""CD52"",
+      ""ENHO"",
+      ""RUNX3"",
+      ""PKIB"",
+      ""PLD4""
+    ],
+    ""description"": ""The canonical, quiescent subset of cDC2 specialized in antigen presentation, characterized by high expression of MHC class II molecules and classical dendritic cell transcription factors.""
+  },
+  ""Classical_Monocytes"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""CD300E"",
+      ""CD33"",
+      ""GRN"",
+      ""TYROBP"",
+      ""FCER1G"",
+      ""CST3"",
+      ""CTSS"",
+      ""MNDA"",
+      ""CFD"",
+      ""SPI1"",
+      ""CEBPD"",
+      ""IER3"",
+      ""MAFB""
+    ],
+    ""description"": ""A major myeloid lineage in PBMC that is frequently confused with cDC2 due to shared expression of CD1c, CD14, and various S100 alarmin proteins.""
+  },
+  ""Non_Classical_Monocytes"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""CDKN1C"",
+      ""SIGLEC10"",
+      ""LILRB2"",
+      ""LILRA5"",
+      ""SMIM25"",
+      ""MTSS1"",
+      ""C3AR1"",
+      ""PECAM1""
+    ],
+    ""description"": ""Patrolling monocytes that express CD16 (FCGR3A) and can overlap transcriptionally with cDC2s during automated clustering due to shared myeloid lineage markers.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,867,1077,,,False,1785224852.1504996,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""NK_CD56bright""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4154,2149,stage2_program_query,precompute,-1,<precompute>,NK_CD56bright,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2149)","{
+  ""NK_CD56bright_canonical"": {
+    ""genes"": [
+      ""NCAM1"",
+      ""SELL"",
+      ""IL7R"",
+      ""GZMK"",
+      ""KLRC1"",
+      ""KLRD1"",
+      ""LTB"",
+      ""IL2RB"",
+      ""CD44"",
+      ""XCL1"",
+      ""XCL2"",
+      ""CSF2"",
+      ""IFNG"",
+      ""TNF"",
+      ""CD2"",
+      ""CD27"",
+      ""TCF7"",
+      ""CCR7"",
+      ""RUNX2"",
+      ""ZBTB16"",
+      ""MYC"",
+      ""GPR183"",
+      ""CAPG"",
+      ""SOX4""
+    ],
+    ""description"": ""Canonical CD56bright NK cells characterized by high cytokine production capacity, expression of homing receptors like CD62L (SELL), and low baseline cytotoxicity.""
+  },
+  ""NK_CD56dim"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""FGFBP2"",
+      ""CX3CR1"",
+      ""GZMB"",
+      ""PRF1"",
+      ""NKG7"",
+      ""GNLY"",
+      ""KLRF1"",
+      ""KLRG1"",
+      ""SPON2"",
+      ""ADGRG1"",
+      ""S1PR5"",
+      ""ZEB2"",
+      ""TBX21"",
+      ""PRF1"",
+      ""CLIC3"",
+      ""CST7"",
+      ""HOPX"",
+      ""S100A4"",
+      ""S100A6"",
+      ""ANXA1"",
+      ""CD247""
+    ],
+    ""description"": ""The major mature cytotoxic NK cell subset in peripheral blood, characterized by high CD16 (FCGR3A) and perforin/granzyme B expression.""
+  },
+  ""MAIT_cells"": {
+    ""genes"": [
+      ""TRAV1-2"",
+      ""KLRB1"",
+      ""SLC4A10"",
+      ""ZBTB16"",
+      ""RORC"",
+      ""IL7R"",
+      ""DPP4"",
+      ""NCR3"",
+      ""GZMK"",
+      ""CD161"",
+      ""CCR6"",
+      ""ANXA1"",
+      ""CD8A"",
+      ""CD8B"",
+      ""RUNX3"",
+      ""IKZF2"",
+      ""FURIN"",
+      ""DUSP2"",
+      ""IL18RAP"",
+      ""LTB""
+    ],
+    ""description"": ""Mucosal-associated invariant T cells that share high expression of CD161 (KLRB1) and IL-7R with CD56bright NK cells, often leading to annotation confusion.""
+  },
+  ""gamma_delta_T_cells"": {
+    ""genes"": [
+      ""TRDC"",
+      ""TRGC1"",
+      ""TRGC2"",
+      ""TARBP1"",
+      ""CD160"",
+      ""KLRB1"",
+      ""KLRC2"",
+      ""KLRC3"",
+      ""GZMB"",
+      ""GNLY"",
+      ""NKG7"",
+      ""CD8A"",
+      ""CD8B"",
+      ""EOMES"",
+      ""RUNX3"",
+      ""S1PR5"",
+      ""ZNF683"",
+      ""IKZF2"",
+      ""FYN"",
+      ""LCK""
+    ],
+    ""description"": ""Unconventional T cells expressing the gamma-delta T-cell receptor that share cytotoxic and NK-like receptor profiles, frequently misannotated as NK cells.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,851,1057,,,False,1785224854.2014341,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""ILC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4102,2156,stage2_program_query,precompute,-1,<precompute>,ILC,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2156)","{
+  ""NK cells"": {
+    ""genes"": [
+      ""NKG7"",
+      ""GNLY"",
+      ""PRF1"",
+      ""GZMB"",
+      ""GZMA"",
+      ""KLRD1"",
+      ""KLRF1"",
+      ""KLRG1"",
+      ""FCGR3A"",
+      ""NCAM1"",
+      ""CD244"",
+      ""CST7"",
+      ""HOPX"",
+      ""SPON2"",
+      ""CLIC3"",
+      ""S1PR5"",
+      ""FGFBP2"",
+      ""PRF1"",
+      ""GZMM"",
+      ""CTS6"",
+      ""CD160"",
+      ""XCL1"",
+      ""XCL2"",
+      ""KLRC1"",
+      ""KLRC2""
+    ],
+    ""description"": ""Cytotoxic innate lymphocytes that share many transcriptional features with ILCs but are distinguished by high expression of perforin, granzymes, and killer cell lectin-like receptors.""
+  },
+  ""ILC3"": {
+    ""genes"": [
+      ""KIT"",
+      ""IL23R"",
+      ""RORC"",
+      ""AHR"",
+      ""IL1R1"",
+      ""LST1"",
+      ""IL22"",
+      ""CSF2"",
+      ""LTA"",
+      ""LTB"",
+      ""TNFSF11"",
+      ""CD2"",
+      ""KLRB1"",
+      ""TMEM176A"",
+      ""TMEM176B"",
+      ""PLXND1"",
+      ""GPR183"",
+      ""IL7R"",
+      ""CD4"",
+      ""IKZF3""
+    ],
+    ""description"": ""Innate lymphoid cells type 3 that express RORC and KIT, producing IL-22 and IL-17 to regulate mucosal immunity and tissue homeostasis.""
+  },
+  ""MAIT cells"": {
+    ""genes"": [
+      ""TRAV1-2"",
+      ""KLRB1"",
+      ""SLC4A10"",
+      ""DPP4"",
+      ""ZBTB16"",
+      ""RORC"",
+      ""IL7R"",
+      ""GZMK"",
+      ""NCR3"",
+      ""IKZF2"",
+      ""CD161"",
+      ""CCR6"",
+      ""CXCR6"",
+      ""ANXA1"",
+      ""LTB"",
+      ""DUSP1"",
+      ""FOS"",
+      ""JUN"",
+      ""CD8A"",
+      ""CD8B""
+    ],
+    ""description"": ""Mucosal-associated invariant T cells that express the semi-invariant TCR alpha chain TRAV1-2 and high levels of KLRB1 (CD161), often transcriptionally mimicking ILCs.""
+  },
+  ""gamma-delta T cells"": {
+    ""genes"": [
+      ""TRDC"",
+      ""TRGC1"",
+      ""TRGC2"",
+      ""TARBP1"",
+      ""CD160"",
+      ""KLRG1"",
+      ""KLRC2"",
+      ""KLRC3"",
+      ""GZMB"",
+      ""GZMA"",
+      ""GNLY"",
+      ""NKG7"",
+      ""PRF1"",
+      ""SST"",
+      ""CD8A"",
+      ""CD8B"",
+      ""RUNX3"",
+      ""IKZF2"",
+      ""ZBTB16"",
+      ""IL7R""
+    ],
+    ""description"": ""T cells expressing the gamma-delta TCR chains that exhibit innate-like rapid effector functions and overlap significantly with ILC and NK cell transcriptional profiles.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224854.2049527,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4236,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224854.638486,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4345,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,210,867,1077,,,False,1785224858.451089,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""NK_CD56bright""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4297,2149,stage2_program_query,precompute,-1,<precompute>,NK_CD56bright,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2149)","{
+  ""NK_CD56bright_canonical"": {
+    ""genes"": [
+      ""NCAM1"",
+      ""SELL"",
+      ""IL7R"",
+      ""GZMK"",
+      ""KLRC1"",
+      ""KLRD1"",
+      ""LTB"",
+      ""IL2RB"",
+      ""CD44"",
+      ""XCL1"",
+      ""XCL2"",
+      ""CSF2"",
+      ""IFNG"",
+      ""TNF"",
+      ""CD2"",
+      ""CD27"",
+      ""TCF7"",
+      ""CCR7"",
+      ""RUNX2"",
+      ""ZBTB16"",
+      ""MYC"",
+      ""GPR183"",
+      ""CAPG"",
+      ""SOX4""
+    ],
+    ""description"": ""Canonical CD56bright NK cells characterized by high cytokine production capacity, expression of homing receptors like CD62L (SELL), and low baseline cytotoxicity.""
+  },
+  ""NK_CD56dim"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""FGFBP2"",
+      ""CX3CR1"",
+      ""GZMB"",
+      ""PRF1"",
+      ""NKG7"",
+      ""GNLY"",
+      ""KLRF1"",
+      ""KLRG1"",
+      ""SPON2"",
+      ""ADGRG1"",
+      ""S1PR5"",
+      ""ZEB2"",
+      ""TBX21"",
+      ""PRF1"",
+      ""CLIC3"",
+      ""CST7"",
+      ""HOPX"",
+      ""S100A4"",
+      ""S100A6"",
+      ""ANXA1"",
+      ""CD247""
+    ],
+    ""description"": ""The major mature cytotoxic NK cell subset in peripheral blood, characterized by high CD16 (FCGR3A) and perforin/granzyme B expression.""
+  },
+  ""MAIT_cells"": {
+    ""genes"": [
+      ""TRAV1-2"",
+      ""KLRB1"",
+      ""SLC4A10"",
+      ""ZBTB16"",
+      ""RORC"",
+      ""IL7R"",
+      ""DPP4"",
+      ""NCR3"",
+      ""GZMK"",
+      ""CD161"",
+      ""CCR6"",
+      ""ANXA1"",
+      ""CD8A"",
+      ""CD8B"",
+      ""RUNX3"",
+      ""IKZF2"",
+      ""FURIN"",
+      ""DUSP2"",
+      ""IL18RAP"",
+      ""LTB""
+    ],
+    ""description"": ""Mucosal-associated invariant T cells that share high expression of CD161 (KLRB1) and IL-7R with CD56bright NK cells, often leading to annotation confusion.""
+  },
+  ""gamma_delta_T_cells"": {
+    ""genes"": [
+      ""TRDC"",
+      ""TRGC1"",
+      ""TRGC2"",
+      ""TARBP1"",
+      ""CD160"",
+      ""KLRB1"",
+      ""KLRC2"",
+      ""KLRC3"",
+      ""GZMB"",
+      ""GNLY"",
+      ""NKG7"",
+      ""CD8A"",
+      ""CD8B"",
+      ""EOMES"",
+      ""RUNX3"",
+      ""S1PR5"",
+      ""ZNF683"",
+      ""IKZF2"",
+      ""FYN"",
+      ""LCK""
+    ],
+    ""description"": ""Unconventional T cells expressing the gamma-delta T-cell receptor that share cytotoxic and NK-like receptor profiles, frequently misannotated as NK cells.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,851,1057,,,False,1785224862.3991458,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""ILC""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4184,2156,stage2_program_query,precompute,-1,<precompute>,ILC,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2156)","{
+  ""NK cells"": {
+    ""genes"": [
+      ""NKG7"",
+      ""GNLY"",
+      ""PRF1"",
+      ""GZMB"",
+      ""GZMA"",
+      ""KLRD1"",
+      ""KLRF1"",
+      ""KLRG1"",
+      ""FCGR3A"",
+      ""NCAM1"",
+      ""CD244"",
+      ""CST7"",
+      ""HOPX"",
+      ""SPON2"",
+      ""CLIC3"",
+      ""S1PR5"",
+      ""FGFBP2"",
+      ""PRF1"",
+      ""GZMM"",
+      ""CTS6"",
+      ""CD160"",
+      ""XCL1"",
+      ""XCL2"",
+      ""KLRC1"",
+      ""KLRC2""
+    ],
+    ""description"": ""Cytotoxic innate lymphocytes that share many transcriptional features with ILCs but are distinguished by high expression of perforin, granzymes, and killer cell lectin-like receptors.""
+  },
+  ""ILC3"": {
+    ""genes"": [
+      ""KIT"",
+      ""IL23R"",
+      ""RORC"",
+      ""AHR"",
+      ""IL1R1"",
+      ""LST1"",
+      ""IL22"",
+      ""CSF2"",
+      ""LTA"",
+      ""LTB"",
+      ""TNFSF11"",
+      ""CD2"",
+      ""KLRB1"",
+      ""TMEM176A"",
+      ""TMEM176B"",
+      ""PLXND1"",
+      ""GPR183"",
+      ""IL7R"",
+      ""CD4"",
+      ""IKZF3""
+    ],
+    ""description"": ""Innate lymphoid cells type 3 that express RORC and KIT, producing IL-22 and IL-17 to regulate mucosal immunity and tissue homeostasis.""
+  },
+  ""MAIT cells"": {
+    ""genes"": [
+      ""TRAV1-2"",
+      ""KLRB1"",
+      ""SLC4A10"",
+      ""DPP4"",
+      ""ZBTB16"",
+      ""RORC"",
+      ""IL7R"",
+      ""GZMK"",
+      ""NCR3"",
+      ""IKZF2"",
+      ""CD161"",
+      ""CCR6"",
+      ""CXCR6"",
+      ""ANXA1"",
+      ""LTB"",
+      ""DUSP1"",
+      ""FOS"",
+      ""JUN"",
+      ""CD8A"",
+      ""CD8B""
+    ],
+    ""description"": ""Mucosal-associated invariant T cells that express the semi-invariant TCR alpha chain TRAV1-2 and high levels of KLRB1 (CD161), often transcriptionally mimicking ILCs.""
+  },
+  ""gamma-delta T cells"": {
+    ""genes"": [
+      ""TRDC"",
+      ""TRGC1"",
+      ""TRGC2"",
+      ""TARBP1"",
+      ""CD160"",
+      ""KLRG1"",
+      ""KLRC2"",
+      ""KLRC3"",
+      ""GZMB"",
+      ""GZMA"",
+      ""GNLY"",
+      ""NKG7"",
+      ""PRF1"",
+      ""SST"",
+      ""CD8A"",
+      ""CD8B"",
+      ""RUNX3"",
+      ""IKZF2"",
+      ""ZBTB16"",
+      ""IL7R""
+    ],
+    ""description"": ""T cells expressing the gamma-delta TCR chains that exhibit innate-like rapid effector functions and overlap significantly with ILC and NK cell transcriptional profiles.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224862.4261935,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4216,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224862.9206731,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4277,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224874.9740198,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,4,4,final_failure,False,4540,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224875.1736362,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,4,4,final_failure,False,4244,2315,stage2_program_query,precompute,-1,<precompute>,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224883.172514,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4154,2315,stage2_program_query,annotation,132099,E2L6_GATGATCAGCGTTACT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224885.0427265,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4566,2320,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224888.4641912,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4231,2320,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224889.6123552,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4437,2315,stage2_program_query,annotation,132099,E2L6_GATGATCAGCGTTACT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224890.3347433,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,9546,2315,stage2_program_query,annotation,81683,E2L2_CACGGGTAGCCAGAGT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224890.4417775,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,9524,2320,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785224891.5194144,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4474,2320,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224894.6977825,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4230,2293,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,206,896,1102,,,False,1785224896.5687542,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""B naive""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4231,2315,stage2_program_query,annotation,81683,E2L2_CACGGGTAGCCAGAGT,B naive,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 106 column 4 (char 2315)","{
+  ""Naive B cell (classical)"": {
+    ""genes"": [
+      ""MS4A1"",
+      ""CD19"",
+      ""CD22"",
+      ""TCL1A"",
+      ""FCER2"",
+      ""IL4R"",
+      ""IGHD"",
+      ""IGHM"",
+      ""CD79A"",
+      ""CD79B"",
+      ""YBX3"",
+      ""CXCR4"",
+      ""CCR7"",
+      ""SELL"",
+      ""BTG1"",
+      ""LINC00926"",
+      ""BLNK"",
+      ""CD72"",
+      ""HVCN1"",
+      ""PLD4"",
+      ""P2RX5"",
+      ""CD52"",
+      ""VPREB3"",
+      ""FAM129C"",
+      ""MEF2C""
+    ],
+    ""description"": ""Classical resting naive B cells circulating in peripheral blood, characterized by high expression of IGHD, IGHM, TCL1A, and FCER2 (CD23) without activation markers.""
+  },
+  ""Transitional B cell"": {
+    ""genes"": [
+      ""TCL1A"",
+      ""VPREB3"",
+      ""SOX4"",
+      ""CD24"",
+      ""CD38"",
+      ""PLD4"",
+      ""IGHD"",
+      ""IGHM"",
+      ""MME"",
+      ""ADA"",
+      ""DNTT"",
+      ""CD9"",
+      ""CD22"",
+      ""FCER2"",
+      ""LINC00926"",
+      ""RAG1"",
+      ""RAG2"",
+      ""CD19"",
+      ""MS4A1"",
+      ""BTG1""
+    ],
+    ""description"": ""Immature B cells recently emigrated from the bone marrow, representing an intermediate developmental stage between pro/pre-B cells and mature naive B cells, marked by high CD38, CD24, and TCL1A.""
+  },
+  ""Unswitched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHM"",
+      ""IGHD"",
+      ""AIM2"",
+      ""COBLL1"",
+      ""CLEC17A"",
+      ""CD84"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CD80"",
+      ""CD22"",
+      ""MS4A1"",
+      ""CD19"",
+      ""TXNIP"",
+      ""FCRL1"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""GPR18"",
+      ""CCR6"",
+      ""MARCKS""
+    ],
+    ""description"": ""Also known as marginal zone-like B cells, these are antigen-experienced memory B cells that retain expression of both IgD and IgM alongside the memory marker CD27.""
+  },
+  ""Switched Memory B cell"": {
+    ""genes"": [
+      ""CD27"",
+      ""IGHG1"",
+      ""IGHG2"",
+      ""IGHA1"",
+      ""IGHA2"",
+      ""CD80"",
+      ""CD86"",
+      ""TNFRSF13B"",
+      ""CLEC17A"",
+      ""COBLL1"",
+      ""AIM2"",
+      ""FCRL3"",
+      ""FCRL5"",
+      ""S100A4"",
+      ""S100A10"",
+      ""AHNAK"",
+      ""CD99"",
+      ""ITGB1"",
+      ""CD19"",
+      ""MS4A1""
+    ],
+    ""description"": ""Antigen-experienced B cells that have undergone class-switch recombination to IgG or IgA and lack IgD and IgM expression, representing a common source of false-positive naive annotations if marker thresholds are poorly set.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224896.6886544,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4244,2293,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224899.9724324,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4448,2293,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224902.9015908,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4199,2293,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224904.7498329,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4056,2293,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224912.2366023,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,4,4,final_failure,False,4255,2293,stage2_program_query,annotation,138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224915.2483318,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,4,4,final_failure,False,4338,2293,stage2_program_query,annotation,78753,E2L2_AACCATGTCTCATAGG,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785224917.031826,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,4,4,final_failure,False,4272,2293,stage2_program_query,annotation,122977,E2L5_TCATGCCCATGACAAA,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785225440.0890973,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,1,4,format_error,True,4298,2293,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785225446.5138764,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,2,4,format_error,True,4421,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,924,1132,,,False,1785225454.690191,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,3,4,format_error,True,4172,2293,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 107 column 4 (char 2293)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""TCF7L2"",
+      ""RHOC"",
+      ""IFITM3"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""LYN"",
+      ""COTL1"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""CD300A"",
+      ""CD300C"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""FGR"",
+      ""S100A8"",
+      ""S100A9""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), CX3CR1, and patrolling behavior along the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""CD74"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AIF1"",
+      ""LST1"",
+      ""COTL1"",
+      ""FCN1"",
+      ""VCAN"",
+      ""LYZ"",
+      ""ANXA1"",
+      ""CLEC10A"",
+      ""CD86""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16, characterized by high expression of MHC class II genes and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""S100A9"",
+      ""S100A8"",
+      ""S100A12"",
+      ""VCAN"",
+      ""FCN1"",
+      ""LYZ"",
+      ""CD300E"",
+      ""CD163"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""CLEC12A"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""LGALS3"",
+      ""GRN"",
+      ""CD68""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 expression, low CD16 expression, and high phagocytic and inflammatory potential.""
+  },
+  ""Non-classical Dendritic Cell (cDC2/DC3)"": {
+    ""genes"": [
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""CD1C"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""HLA-DPA1"",
+      ""HLA-DPB1"",
+      ""CD2"",
+      ""CX3CR1"",
+      ""CD1E"",
+      ""ENHO"",
+      ""PKIB"",
+      ""PLD4"",
+      ""RUNX3"",
+      ""FLT3"",
+      ""ZBTB46"",
+      ""CSF2RB"",
+      ""CD86"",
+      ""CD80"",
+      ""CD40""
+    ],
+    ""description"": ""A conventional dendritic cell subset in PBMCs that can be confused with CD16+ monocytes due to overlapping HLA-DR and myeloid marker expression, but distinguished by CD1C and FCER1A.""
+  }",,0
+gemini,GeminiJSONCaller,gemini-3.5-flash,208,940,1148,,,False,1785225467.216139,"This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",You are an expert computational biologist specializing in single-cell transcriptomics. Respond ONLY with a valid JSON object.,4,4,final_failure,False,4517,2320,stage2_program_query,precompute,-1,<precompute>,CD16 Mono,JSONDecodeError,"Gemini returned invalid JSON: Expecting ',' delimiter: line 108 column 4 (char 2320)","{
+  ""CD16+ Non-classical Monocyte"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""LST1"",
+      ""AIF1"",
+      ""CX3CR1"",
+      ""HES4"",
+      ""CKB"",
+      ""IFITM3"",
+      ""LYN"",
+      ""COTL1"",
+      ""RHOC"",
+      ""TCF7L2"",
+      ""C1QA"",
+      ""C1QB"",
+      ""C1QC"",
+      ""SPI1"",
+      ""CSF1R"",
+      ""LILRB1"",
+      ""LILRB2"",
+      ""SIGLEC10"",
+      ""PECAM1"",
+      ""CD300A"",
+      ""CD300C"",
+      ""TNFSF10"",
+      ""C5AR1""
+    ],
+    ""description"": ""The primary non-classical monocyte subset in PBMCs, characterized by high expression of FCGR3A (CD16), MS4A7, and CX3CR1, which patrols the vascular endothelium.""
+  },
+  ""Intermediate Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""FCGR3A"",
+      ""HLA-DRA"",
+      ""HLA-DRB1"",
+      ""HLA-DPB1"",
+      ""HLA-DQA1"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""GRN"",
+      ""AHR"",
+      ""CLEC10A"",
+      ""CD74"",
+      ""IFI30"",
+      ""FCN1"",
+      ""LYZ"",
+      ""VNN2"",
+      ""MARCO"",
+      ""CD86"",
+      ""ITGAX""
+    ],
+    ""description"": ""A transitional monocyte state expressing both CD14 and CD16 (FCGR3A), characterized by high levels of MHC class II molecules and antigen presentation machinery.""
+  },
+  ""CD14+ Classical Monocyte"": {
+    ""genes"": [
+      ""CD14"",
+      ""LYZ"",
+      ""S100A8"",
+      ""S100A9"",
+      ""S100A12"",
+      ""FCN1"",
+      ""VCAN"",
+      ""FPR1"",
+      ""FPR2"",
+      ""CD300E"",
+      ""CD68"",
+      ""CSF3R"",
+      ""NAMPT"",
+      ""IL1B"",
+      ""CXCL8"",
+      ""CSTA"",
+      ""GRN"",
+      ""LGALS3"",
+      ""MNDA"",
+      ""S100A11"",
+      ""ANXA1"",
+      ""CD44""
+    ],
+    ""description"": ""The major classical monocyte subset in PBMCs, characterized by high CD14 and S100A8/9 expression, which are highly phagocytic and act as primary inflammatory responders.""
+  },
+  ""Non-classical Monocyte-like Dendritic Cell"": {
+    ""genes"": [
+      ""FCGR3A"",
+      ""MS4A7"",
+      ""CADM1"",
+      ""CLEC9A"",
+      ""WDFY4"",
+      ""XCR1"",
+      ""FLT3"",
+      ""CPVL"",
+      ""HLA-DQA1"",
+      ""HLA-DQB1"",
+      ""CD1C"",
+      ""FCER1A"",
+      ""CLEC10A"",
+      ""ENHO"",
+      ""CX3CR1"",
+      ""TCF4"",
+      ""IRF8"",
+      ""PACSIN1"",
+      ""PLD4"",
+      ""APP""
+    ],
+    ""description"": ""A rare population of dendritic cells (such as cDC1 or cDC2) that can be misannotated as CD16+ monocytes due to shared expression of FCGR3A, CX3CR1, and antigen-presentation genes.""
+  }",,0

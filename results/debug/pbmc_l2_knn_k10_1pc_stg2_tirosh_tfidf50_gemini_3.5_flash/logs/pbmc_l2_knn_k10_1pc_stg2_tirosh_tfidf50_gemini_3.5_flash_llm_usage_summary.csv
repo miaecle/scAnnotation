@@ -1,0 +1,9 @@
+step,phase,provider,backend,model,attempt_status,input_tokens,output_tokens,total_tokens,thoughts_tokens,cache_hits,attempt_count
+stage1_annotation,annotation,gemini,GeminiBackend,gemini-3.5-flash,success,137724,11088,252538,103726.0,0,93
+stage2_program_query,annotation,gemini,GeminiJSONCaller,gemini-3.5-flash,final_failure,624,2772,3396,0.0,0,3
+stage2_program_query,annotation,gemini,GeminiJSONCaller,gemini-3.5-flash,format_error,2696,11964,14660,0.0,0,13
+stage2_program_query,annotation,gemini,GeminiJSONCaller,gemini-3.5-flash,success,412,1762,2174,0.0,0,2
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,final_failure,622,2776,3398,0.0,0,3
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,format_error,3524,15134,18658,0.0,0,17
+stage2_program_query,precompute,gemini,GeminiJSONCaller,gemini-3.5-flash,success,6621,30427,37048,0.0,0,32
+stage2_refinement,annotation,gemini,GeminiBackend,gemini-3.5-flash,success,125322,10672,219989,83995.0,0,90

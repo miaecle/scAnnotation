@@ -1,0 +1,17 @@
+dataset_path: Datasets/PBMC_CiteSeqRef/pbmc_citeseq_ref_2021.h5ad
+tissue: PBMC
+
+evaluation:
+  label_col: celltype.l2
+  hierarchy: [celltype.l1, celltype.l2]
+  n_per_class: 20
+  seed: 42
+  strategies: [exact, hierarchy]
+  judge_backend: deepseek
+  concurrency: 20
+  n_bootstrap: 1000
+
+output:
+  results_dir: results/pbmc_new/pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_ds_v4_flash
+  experiment_name: pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_ds_v4_flash
+  save_results: true

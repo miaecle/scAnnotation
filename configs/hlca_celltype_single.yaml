@@ -2,7 +2,7 @@
 # Axis 4: z-score selection on the smoothed vector
 
 dataset_path: Datasets/HLCA/hlca_core.h5ad
-tissue: respiratory airway # lung parenchyma | nose | respiratory airway
+tissue: lung parenchyma # lung parenchyma | nose | respiratory airway
 
 global_metrics:
   n_top_hvg: 2000
@@ -21,7 +21,7 @@ filter:
 
 selection:
   strategy: tfidf
-  n_top: 20
+  n_top: 50
   modalities: [rna]
 
 input:
@@ -39,10 +39,10 @@ llm:
 
 evaluation:
   label_col: cell_type
+  hierarchy: ["ann_level_1","ann_level_2","ann_level_3","cell_type"]
   n_per_class: 20
   seed: 42
-  strategies: [exact, keyword, llm_judge_binary]
-  judge_backend: deepseek
+  strategies: [exact, hierarchy]
   concurrency: 20
 
 stage2:
@@ -50,6 +50,6 @@ stage2:
   model: deepseek-v4-flash
 
 output:
-  results_dir: results/hlca/hlca_ra_single_cell_20pc_stg1_tfidf20_seed42_deepseek_v4_flash
-  experiment_name: hlca_ra_single_cell_20pc_stg1_tfidf20_seed42_deepseek_v4_flash
+  results_dir: results/hlca_new/hlca_lp_single_cell_20pc_stg1_tfidf50_deepseek_v4_flash_new
+  experiment_name: hlca_lp_single_cell_20pc_stg1_tfidf50_deepseek_v4_flash_new
   save_results: true

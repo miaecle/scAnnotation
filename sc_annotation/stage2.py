@@ -16,12 +16,15 @@ Workflow
 from __future__ import annotations
 
 import json
+import re
 import time
 from typing import Any, Callable, Optional
 
 import numpy as np
 import pandas as pd
 import anndata as ad
+
+from .backends.base import _extract_error_code
 
 
 # ─── Backend factory ────────────────────────────────────────────────────────
@@ -31,42 +34,142 @@ def _fmt_numeric(value: float, decimals: int = 5) -> str:
     return f"{value:.{decimals}f}"
 
 
-def _extract_first_json_object(text: str) -> dict:
-    """Parse a JSON object, tolerating extra text around the first object."""
-    text = text.strip()
-    try:
-        parsed = json.loads(text)
-    except json.JSONDecodeError as exc:
-        if "Extra data" not in str(exc):
-            raise
+def _extract_first_balanced_json_object_text(text: str) -> str | None:
+    """Return the first balanced JSON object substring, if present."""
+    start = text.find("{")
+    if start < 0:
+        return None
 
-        depth = 0
-        in_string = False
-        escape = False
-        for i, ch in enumerate(text):
-            if escape:
-                escape = False
-                continue
-            if ch == "\\":
-                escape = True
-                continue
-            if ch == '"':
-                in_string = not in_string
-                continue
-            if in_string:
-                continue
-            if ch == "{":
-                depth += 1
-            elif ch == "}":
-                depth -= 1
+    depth = 0
+    in_string = False
+    escape = False
+    for i in range(start, len(text)):
+        ch = text[i]
+        if escape:
+            escape = False
+            continue
+        if ch == "\\":
+            escape = True
+            continue
+        if ch == '"':
+            in_string = not in_string
+            continue
+        if in_string:
+            continue
+        if ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
             if depth == 0:
-                parsed = json.loads(text[: i + 1])
-                break
-        else:
-            raise
-    if not isinstance(parsed, dict):
-        raise ValueError(f"Expected a JSON object, got {type(parsed).__name__}. Raw response: {text!r}")
-    return parsed
+                return text[start : i + 1]
+    return None
+
+
+def _extract_json_block_regex(text: str) -> str | None:
+    """Best-effort extraction of a JSON object block from mixed text."""
+    match = re.search(r"\{.*\}", text, flags=re.S)
+    if not match:
+        return None
+    return match.group(0)
+
+
+def _repair_json_text_if_available(text: str) -> str:
+    """Repair malformed JSON text if json-repair is installed."""
+    try:
+        from json_repair import repair_json  # type: ignore
+    except Exception as exc:
+        raise RuntimeError(
+            "json-repair is not installed. Install it with: pip install json-repair"
+        ) from exc
+    return repair_json(text)
+
+
+def _parse_json_object_with_fallbacks(text: str) -> tuple[dict, str]:
+    """Parse an LLM response into a JSON object using a 3-level pipeline.
+
+    This function is intentionally defensive for benchmark-style annotation runs,
+    where occasional format drift (extra prose, fenced code blocks, trailing text,
+    minor JSON syntax issues) should not fail the whole experiment.
+
+    Parsing pipeline:
+
+    1) Direct parse
+       Try ``json.loads`` on the full response. This is the fastest path and is
+       expected when the backend follows strict JSON mode.
+
+    2) JSON block extraction
+       If full-response parsing fails, extract a likely object substring and parse
+       that:
+       - First, use balanced-brace scanning to find the first complete object.
+       - Then, use a regex fallback (``\{.*\}``, DOTALL) for messy wrappers.
+
+    3) JSON repair
+       If extracted text is still malformed, try ``json_repair.repair_json`` and
+       parse the repaired string.
+
+    Returns:
+        (parsed_object, parse_method)
+        - ``parsed_object``: dict payload consumed by stage-2 schema validation.
+        - ``parse_method``: machine-readable label for logging/diagnostics, e.g.
+          ``direct_json_loads``, ``extracted_json_block_1``, ``repaired_json_1``.
+
+    Raises:
+        ValueError: If all three levels fail to produce a JSON object.
+
+    Notes:
+        - Only JSON *objects* are accepted (lists/scalars are rejected).
+        - Candidate order is deterministic to keep retry behavior reproducible.
+    """
+    raw = (text or "").strip()
+    if not raw:
+        raise ValueError("Empty response text; cannot parse JSON object.")
+
+    # Level 1: parse the full response directly.
+    try:
+        parsed = json.loads(raw)
+        if isinstance(parsed, dict):
+            return parsed, "direct_json_loads"
+    except Exception:
+        pass
+
+    candidates: list[str] = []
+
+    # Level 2a: balanced-brace extraction is usually the safest substring parser
+    # for responses like "...```json { ... } ```..." or "text + object + text".
+    balanced_obj = _extract_first_balanced_json_object_text(raw)
+    if balanced_obj:
+        candidates.append(balanced_obj)
+
+    # Level 2b: regex extraction is more permissive; keep it after balanced-brace
+    # extraction so we prefer structurally matched candidates first.
+    regex_obj = _extract_json_block_regex(raw)
+    if regex_obj and regex_obj not in candidates:
+        candidates.append(regex_obj)
+
+    for idx, candidate in enumerate(candidates, start=1):
+        try:
+            parsed = json.loads(candidate)
+            if isinstance(parsed, dict):
+                return parsed, f"extracted_json_block_{idx}"
+        except Exception:
+            continue
+
+    # Level 3: repair malformed JSON, then parse.
+    repair_sources = candidates if candidates else [raw]
+    repair_last_exc: Exception | None = None
+    for idx, candidate in enumerate(repair_sources, start=1):
+        try:
+            repaired = _repair_json_text_if_available(candidate)
+            parsed = json.loads(repaired)
+            if isinstance(parsed, dict):
+                return parsed, f"repaired_json_{idx}"
+        except Exception as exc:
+            repair_last_exc = exc
+
+    raise ValueError(
+        "Failed to parse response as a JSON object after direct parse, JSON block extraction, "
+        f"and repair fallback. Last repair error: {repair_last_exc}"
+    )
 
 
 def _validate_programs_payload(programs: dict) -> dict[str, dict[str, object]]:
@@ -288,7 +391,7 @@ def make_gemini_json_caller(
                     raise ValueError("Gemini returned an empty response.")
 
                 try:
-                    parsed = _extract_first_json_object(text)
+                    parsed, parse_method = _parse_json_object_with_fallbacks(text)
                     if usage_sink is not None:
                         payload = dict(last_usage or {})
                         payload.update(
@@ -300,6 +403,7 @@ def make_gemini_json_caller(
                                 "will_retry": False,
                                 "duration_ms": int((time.time() - started_at) * 1000),
                                 "response_chars": len(text),
+                                "json_parse_method": parse_method,
                                 "recorded_at_unix": time.time(),
                             }
                         )
@@ -318,6 +422,7 @@ def make_gemini_json_caller(
                                 "total_attempts": total_attempts,
                                 "attempt_status": "final_failure" if is_final else "format_error",
                                 "error_type": type(exc).__name__,
+                                "error_code": _extract_error_code(exc),
                                 "error_message": f"Gemini returned invalid JSON: {exc}",
                                 "will_retry": not is_final,
                                 "duration_ms": int((time.time() - started_at) * 1000),
@@ -350,6 +455,7 @@ def make_gemini_json_caller(
                             "total_attempts": total_attempts,
                             "attempt_status": "final_failure" if is_final else "retry_error",
                             "error_type": type(exc).__name__,
+                            "error_code": _extract_error_code(exc),
                             "error_message": str(exc),
                             "will_retry": not is_final,
                             "duration_ms": int((time.time() - started_at) * 1000),
@@ -479,7 +585,7 @@ def make_openai_json_caller(
                 if not text:
                     raise ValueError("OpenAI-compatible backend returned an empty response.")
                 try:
-                    parsed = _extract_first_json_object(text)
+                    parsed, parse_method = _parse_json_object_with_fallbacks(text)
                     if usage_sink is not None:
                         payload = dict(last_usage or {})
                         payload.update(
@@ -491,6 +597,7 @@ def make_openai_json_caller(
                                 "will_retry": False,
                                 "duration_ms": int((time.time() - started_at) * 1000),
                                 "response_chars": len(text),
+                                "json_parse_method": parse_method,
                                 "recorded_at_unix": time.time(),
                             }
                         )
@@ -509,6 +616,7 @@ def make_openai_json_caller(
                                 "total_attempts": total_attempts,
                                 "attempt_status": "final_failure" if is_final else "format_error",
                                 "error_type": type(exc).__name__,
+                                "error_code": _extract_error_code(exc),
                                 "error_message": f"OpenAI-compatible backend returned invalid JSON: {exc}",
                                 "will_retry": not is_final,
                                 "duration_ms": int((time.time() - started_at) * 1000),
@@ -543,6 +651,7 @@ def make_openai_json_caller(
                             "total_attempts": total_attempts,
                             "attempt_status": "final_failure" if is_final else "retry_error",
                             "error_type": type(exc).__name__,
+                            "error_code": _extract_error_code(exc),
                             "error_message": str(exc),
                             "will_retry": not is_final,
                             "duration_ms": int((time.time() - started_at) * 1000),
@@ -663,6 +772,7 @@ def query_subtype_programs(
                     "total_attempts": max_schema_attempts,
                     "attempt_status": "final_failure" if is_final else "format_error",
                     "error_type": type(exc).__name__,
+                    "error_code": _extract_error_code(exc),
                     "error_message": str(exc),
                     "will_retry": not is_final,
                     "duration_ms": 0,

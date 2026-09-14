@@ -1,0 +1,336 @@
+cell_idx,cell_barcode,true_label,stage1_label,stage1_reasoning,stage1_response,stage1_prompt,stage2_prefix,stage2_prompt,stage2_full_prompt,error_type,error_message
+78753,E2L2_AACCATGTCTCATAGG,CD14 Mono,CD16 Mono,"This cell type is identified as CD16+ (non-classical) monocytes based on the highly specific expression of marker genes including *FCGR3A* (CD16), *CDKN1C*, *HES4*, *TCF7L2*, *LST1*, *AIF1*, and C1q components (*C1QA*, *C1QB*). The high levels of platelet-associated surface proteins (CD62P, CD41, CLEC2) reflect the well-documented physical interaction and microparticle transfer between platelets and non-classical monocytes in PBMC samples.","CD16 Mono
+This cell type is identified as CD16+ (non-classical) monocytes based on the highly specific expression of marker genes including *FCGR3A* (CD16), *CDKN1C*, *HES4*, *TCF7L2*, *LST1*, *AIF1*, and C1q components (*C1QA*, *C1QB*). The high levels of platelet-associated surface proteins (CD62P, CD41, CLEC2) reflect the well-documented physical interaction and microparticle transfer between platelets and non-classical monocytes in PBMC samples.","Tissue context: PBMC
+
+Top genes (ranked by TF-IDF specificity):
+    1. IL1B (0.01366)
+    2. CCL4 (0.01351)
+    3. CCL3 (0.01141)
+    4. CCL4L2 (0.00841)
+    5. APOBEC3A (0.00514)
+    6. G0S2 (0.00434)
+    7. CCL3L1 (0.00367)
+    8. MARCKS (0.00258)
+    9. CST3 (0.00255)
+   10. C1QA (0.00218)
+   11. TNFAIP2 (0.00208)
+   12. C1QB (0.00200)
+   13. C15orf48 (0.00194)
+   14. AIF1 (0.00190)
+   15. BCL2A1 (0.00189)
+   16. HLA-DRA (0.00178)
+   17. CFD (0.00169)
+   18. LST1 (0.00165)
+   19. FCER1G (0.00165)
+   20. IFIT3 (0.00163)
+   21. NFKBIA (0.00163)
+   22. TNF (0.00161)
+   23. IFIT2 (0.00156)
+   24. SAT1 (0.00155)
+   25. FCGR3A (0.00150)
+   26. CD83 (0.00145)
+   27. IL6 (0.00143)
+   28. IFITM3 (0.00140)
+   29. CTSS (0.00136)
+   30. TYROBP (0.00130)
+   31. PLEK (0.00129)
+   32. CDKN1C (0.00129)
+   33. SOD2 (0.00123)
+   34. CCL20 (0.00120)
+   35. NAMPT (0.00118)
+   36. RASGEF1B (0.00117)
+   37. PPP1R15A (0.00117)
+   38. LYZ (0.00116)
+   39. NFKBIZ (0.00109)
+   40. SERPINA1 (0.00108)
+   41. ISG15 (0.00107)
+   42. PSAP (0.00104)
+   43. SAMSN1 (0.00103)
+   44. HES4 (0.00102)
+   45. FCN1 (0.00102)
+   46. CXCL10 (0.00099)
+   47. TCF7L2 (0.00096)
+   48. PMAIP1 (0.00095)
+   49. NINJ1 (0.00093)
+   50. TYMP (0.00091)
+
+Top expressed surface proteins / ADT markers (ranked by count):
+    1. CD62P (4.34287)
+    2. CD41 (4.32891)
+    3. CD4-1 (3.82215)
+    4. CD31 (3.55492)
+    5. CD18 (3.25252)
+    6. CD48 (3.09927)
+    7. CD63 (3.09329)
+    8. CD93 (3.07188)
+    9. CLEC2 (2.90039)
+   10. CD9 (2.75505)
+   11. CLEC12A (2.70167)
+   12. CD35 (2.66281)
+   13. CD244 (2.62688)
+   14. CD45-2 (2.60985)
+   15. CD49d (2.60699)
+   16. CD11b-1 (2.55696)
+   17. CD43 (2.47329)
+   18. CD11c (2.45875)
+   19. CD47 (2.44871)
+   20. CD102 (2.33788)
+
+Choose the cell type from the following list (output exactly one of these names in the first line):
+ASDC, B intermediate, B memory, B naive, CD14 Mono, CD16 Mono, CD4 CTL, CD4 Naive, CD4 Proliferating, CD4 TCM, CD4 TEM, CD8 Naive, CD8 Proliferating, CD8 TCM, CD8 TEM, Doublet, Eryth, HSPC, ILC, MAIT, NK, NK Proliferating, NK_CD56bright, Plasmablast, Platelet, Treg, cDC1, cDC2, dnT, gdT, pDC
+
+Based on the expression profile above, which cell type is this? Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words).","This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.","A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+","This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",RuntimeError,"Stage-2 Gemini JSON query failed after 4 attempts.Raw prompt:
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+
+
+"
+138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,CD16 Mono,"This cell profile is characteristic of CD16+ (non-classical) monocytes, as evidenced by the highly specific expression of *FCGR3A* (encoding CD16), *CDKN1C*, *LST1*, *MS4A7*, *HES4*, and *TCF7L2*. These genes are classic markers that distinguish CD16+ monocytes from CD14+ classical monocytes. The presence of myeloid-associated genes (*CST3*, *TYROBP*, *AIF1*, *CSF1R*) and MHC class II molecules (*HLA-DRA*, *HLA-DPA1*), along with high CD16 protein expression, further confirms this cell type.","CD16 Mono
+
+This cell profile is characteristic of CD16+ (non-classical) monocytes, as evidenced by the highly specific expression of *FCGR3A* (encoding CD16), *CDKN1C*, *LST1*, *MS4A7*, *HES4*, and *TCF7L2*. These genes are classic markers that distinguish CD16+ monocytes from CD14+ classical monocytes. The presence of myeloid-associated genes (*CST3*, *TYROBP*, *AIF1*, *CSF1R*) and MHC class II molecules (*HLA-DRA*, *HLA-DPA1*), along with high CD16 protein expression, further confirms this cell type.","Tissue context: PBMC
+
+Top genes (ranked by TF-IDF specificity):
+    1. FCGR3A (0.00376)
+    2. CDKN1C (0.00347)
+    3. LST1 (0.00319)
+    4. AIF1 (0.00256)
+    5. MS4A7 (0.00185)
+    6. CST3 (0.00177)
+    7. FCER1G (0.00151)
+    8. MTRNR2L8 (0.00124)
+    9. TYROBP (0.00124)
+   10. SERPINA1 (0.00123)
+   11. SMIM25 (0.00111)
+   12. CTSS (0.00111)
+   13. SAT1 (0.00100)
+   14. CFD (0.00095)
+   15. PSAP (0.00091)
+   16. CKB (0.00084)
+   17. TCF7L2 (0.00082)
+   18. COTL1 (0.00082)
+   19. HMOX1 (0.00079)
+   20. C1QA (0.00078)
+   21. LYPD2 (0.00073)
+   22. LYN (0.00071)
+   23. IFI30 (0.00065)
+   24. LGALS1 (0.00064)
+   25. CSF1R (0.00064)
+   26. HES4 (0.00064)
+   27. PECAM1 (0.00064)
+   28. TNFRSF1B (0.00061)
+   29. HLA-DRA (0.00061)
+   30. S100A11 (0.00060)
+   31. STXBP2 (0.00058)
+   32. C5AR1 (0.00058)
+   33. SPI1 (0.00057)
+   34. DUSP1 (0.00056)
+   35. MTSS1 (0.00056)
+   36. ASAH1 (0.00056)
+   37. RHOC (0.00055)
+   38. TESC (0.00054)
+   39. LRRC25 (0.00054)
+   40. HLA-DPA1 (0.00053)
+   41. TIMP1 (0.00053)
+   42. POU2F2 (0.00050)
+   43. HLA-DQA2 (0.00050)
+   44. FGL2 (0.00049)
+   45. NEAT1 (0.00049)
+   46. CD68 (0.00048)
+   47. TKT (0.00047)
+   48. SIGLEC10 (0.00047)
+   49. CEBPB (0.00046)
+   50. MTRNR2L12 (0.00046)
+
+Top expressed surface proteins / ADT markers (ranked by count):
+    1. CD31 (4.13841)
+    2. CD62P (4.06917)
+    3. CD41 (3.96947)
+    4. CD4-1 (3.80220)
+    5. CD16 (3.50550)
+    6. CD43 (3.28431)
+    7. CD18 (3.24983)
+    8. CLEC2 (2.84755)
+    9. CD48 (2.71696)
+   10. CD49d (2.69313)
+   11. CD93 (2.63193)
+   12. CD45-2 (2.53247)
+   13. CD244 (2.42322)
+   14. CD63 (2.41713)
+   15. CD9 (2.39363)
+   16. CLEC12A (2.33433)
+   17. CD102 (2.29782)
+   18. CD49b (2.28255)
+   19. CD44-2 (2.27553)
+   20. CD47 (2.16547)
+
+Choose the cell type from the following list (output exactly one of these names in the first line):
+ASDC, B intermediate, B memory, B naive, CD14 Mono, CD16 Mono, CD4 CTL, CD4 Naive, CD4 Proliferating, CD4 TCM, CD4 TEM, CD8 Naive, CD8 Proliferating, CD8 TCM, CD8 TEM, Doublet, Eryth, HSPC, ILC, MAIT, NK, NK Proliferating, NK_CD56bright, Plasmablast, Platelet, Treg, cDC1, cDC2, dnT, gdT, pDC
+
+Based on the expression profile above, which cell type is this? Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words).","This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.","A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+","This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",RuntimeError,"Stage-2 Gemini JSON query failed after 4 attempts.Raw prompt:
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+
+
+"
+122977,E2L5_TCATGCCCATGACAAA,Doublet,CD16 Mono,"This cell type is identified as CD16+ (non-classical) monocytes. The gene expression profile is highly specific for non-classical monocytes, characterized by the top marker *FCGR3A* (encoding CD16), along with *LST1*, *MS4A7*, *AIF1*, *CDKN1C*, and *TCF7L2*. It also expresses MHC class II molecules (e.g., *HLA-DRA*, *HLA-DPA1*) and myeloid-associated genes like *CST3* and *TYROBP*. The ADT markers show expression of CD16 and CD172a (SIRPα), confirming a CD16+ myeloid lineage.","CD16 Mono
+
+This cell type is identified as CD16+ (non-classical) monocytes. The gene expression profile is highly specific for non-classical monocytes, characterized by the top marker *FCGR3A* (encoding CD16), along with *LST1*, *MS4A7*, *AIF1*, *CDKN1C*, and *TCF7L2*. It also expresses MHC class II molecules (e.g., *HLA-DRA*, *HLA-DPA1*) and myeloid-associated genes like *CST3* and *TYROBP*. The ADT markers show expression of CD16 and CD172a (SIRPα), confirming a CD16+ myeloid lineage.","Tissue context: PBMC
+
+Top genes (ranked by TF-IDF specificity):
+    1. FCGR3A (0.00333)
+    2. LST1 (0.00234)
+    3. CST3 (0.00225)
+    4. AIF1 (0.00209)
+    5. MS4A7 (0.00174)
+    6. FCER1G (0.00152)
+    7. CDKN1C (0.00143)
+    8. CTSS (0.00138)
+    9. LYPD2 (0.00137)
+   10. HLA-DRA (0.00120)
+   11. PSAP (0.00118)
+   12. TYROBP (0.00113)
+   13. SAT1 (0.00110)
+   14. NFKBIA (0.00105)
+   15. SERPINA1 (0.00103)
+   16. HMOX1 (0.00101)
+   17. HLA-DPA1 (0.00098)
+   18. HLA-DRB1 (0.00093)
+   19. COTL1 (0.00093)
+   20. TNF (0.00086)
+   21. DUSP1 (0.00083)
+   22. CCL3 (0.00082)
+   23. TCF7L2 (0.00081)
+   24. PPP1R15A (0.00077)
+   25. LYN (0.00076)
+   26. MARCKS (0.00076)
+   27. FGL2 (0.00074)
+   28. VMO1 (0.00073)
+   29. CTSL (0.00071)
+   30. CFD (0.00070)
+   31. NFKBIZ (0.00070)
+   32. SMIM25 (0.00070)
+   33. TYMP (0.00069)
+   34. LILRB2 (0.00067)
+   35. PF4 (0.00067)
+   36. IL1B (0.00067)
+   37. CD74 (0.00066)
+   38. S100A11 (0.00065)
+   39. HLA-DRB5 (0.00064)
+   40. FCN1 (0.00062)
+   41. CEBPB (0.00062)
+   42. PPBP (0.00059)
+   43. CD68 (0.00058)
+   44. CCL4 (0.00057)
+   45. G0S2 (0.00057)
+   46. PILRA (0.00057)
+   47. BCL2A1 (0.00055)
+   48. IFITM3 (0.00054)
+   49. LGALS1 (0.00053)
+   50. PECAM1 (0.00053)
+
+Top expressed surface proteins / ADT markers (ranked by count):
+    1. CD41 (4.59967)
+    2. CD62P (4.38863)
+    3. CD31 (3.83363)
+    4. CD4-1 (3.65391)
+    5. CD18 (3.31063)
+    6. CD16 (3.02661)
+    7. CD35 (3.02295)
+    8. CD9 (2.97698)
+    9. CD43 (2.96927)
+   10. CLEC2 (2.94031)
+   11. CD93 (2.83925)
+   12. CD48 (2.76434)
+   13. CD49d (2.75659)
+   14. CD45-2 (2.73542)
+   15. CD49b (2.72374)
+   16. CD102 (2.63993)
+   17. CLEC12A (2.54475)
+   18. CD47 (2.49237)
+   19. CD172a (2.44855)
+   20. CD61 (2.27175)
+
+Choose the cell type from the following list (output exactly one of these names in the first line):
+ASDC, B intermediate, B memory, B naive, CD14 Mono, CD16 Mono, CD4 CTL, CD4 Naive, CD4 Proliferating, CD4 TCM, CD4 TEM, CD8 Naive, CD8 Proliferating, CD8 TCM, CD8 TEM, Doublet, Eryth, HSPC, ILC, MAIT, NK, NK Proliferating, NK_CD56bright, Plasmablast, Platelet, Treg, cDC1, cDC2, dnT, gdT, pDC
+
+Based on the expression profile above, which cell type is this? Respond with the chosen cell type name (from the list above) in the first line, then in the second line provide very brief explanation (<100 words).","This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.","A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+","This annotation may have minor inaccuracies, or may have been confused with a neighboring type.
+
+Return a JSON object with gene programs for:
+  1. The fine-grained subtypes of this cell type commonly found in PBMC.
+  2. The most commonly confused neighboring cell types in PBMC.
+
+Each key is a subtype/cell-type name; each value contains:
+  ""genes"": list anywhere from 20 to 50 genes most specifically UPREGULATED in that subtype (HGNC symbols as they appear in RNA-seq count matrices, e.g. NKG7 not Nkg7)
+  ""description"": one-sentence biological description
+
+Include 3-5 subtypes total. Focus on subtypes commonly found in PBMC.
+Return only the JSON.
+
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+",RuntimeError,"Stage-2 Gemini JSON query failed after 4 attempts.Raw prompt:
+A single cell in PBMC was annotated in a first pass as: ""CD16 Mono""
+
+
+"

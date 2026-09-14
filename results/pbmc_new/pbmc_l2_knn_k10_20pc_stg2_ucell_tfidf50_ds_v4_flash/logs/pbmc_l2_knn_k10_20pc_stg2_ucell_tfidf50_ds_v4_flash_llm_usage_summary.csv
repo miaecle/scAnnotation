@@ -1,0 +1,4 @@
+step,phase,provider,backend,model,attempt_status,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,attempt_count
+stage1_annotation,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,success,701088,601539,1302627,637952,565347,623
+stage2_program_query,precompute,deepseek,OpenAIJSONCaller,deepseek-v4-flash,success,6667,85136,91803,3968,52835,31
+stage2_refinement,annotation,deepseek,DeepSeekBackend,deepseek-v4-flash,success,692638,570540,1263178,13184,522978,623

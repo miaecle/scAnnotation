@@ -1,0 +1,10 @@
+provider,backend,model,input_tokens,output_tokens,total_tokens,cached_input_tokens,reasoning_tokens,audio_input_tokens,audio_output_tokens,recorded_at_unix,attempt,total_attempts,attempt_status,will_retry,duration_ms,response_chars,json_parse_method,step,phase,cell_idx,cell_barcode,stage1_label
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,206,1497,1703,0,501,0,0,1786957473.9087384,1,4,success,False,16777,2851,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,B memory
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1553,1760,0,516,0,0,1786957474.4271386,1,4,success,False,17295,2829,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD14 Mono
+openai,OpenAIJSONCaller,openai/gpt-5.6-luna,207,1969,2176,0,882,0,0,1786957479.1127813,1,4,success,False,21981,2956,direct_json_loads,stage2_program_query,precompute,-1,<precompute>,CD16 Mono
+openrouter,OpenRouterBackend,openai/gpt-5.6-luna,1085,164,1249,0,92,0,0,1786957486.160531,1,4,success,False,6935,240,,stage1_annotation,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+openrouter,OpenRouterBackend,openai/gpt-5.6-luna,1099,99,1198,0,45,0,0,1786957486.6282613,1,4,success,False,7398,180,,stage1_annotation,annotation,48,L1_AAAGAACCACCTCTAC,
+openrouter,OpenRouterBackend,openai/gpt-5.6-luna,1092,137,1229,0,67,0,0,1786957486.729918,1,4,success,False,7494,221,,stage1_annotation,annotation,6148,L1_CTGAATGAGGGCGAAG,
+openrouter,OpenRouterBackend,openai/gpt-5.6-luna,1057,87,1144,0,0,0,0,1786957488.9497654,1,4,success,False,2170,285,,stage2_refinement,annotation,48,L1_AAAGAACCACCTCTAC,
+openrouter,OpenRouterBackend,openai/gpt-5.6-luna,1073,70,1143,0,0,0,0,1786957488.9572604,1,4,success,False,2608,265,,stage2_refinement,annotation,13748,L1_TTTGTTGCAGCGAGTA,
+openrouter,OpenRouterBackend,openai/gpt-5.6-luna,1084,122,1206,0,46,0,0,1786957490.267713,1,4,success,False,3394,262,,stage2_refinement,annotation,6148,L1_CTGAATGAGGGCGAAG,

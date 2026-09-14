@@ -1,0 +1,4 @@
+step,phase,provider,backend,model,attempt_status,input_tokens,output_tokens,total_tokens,cached_input_tokens,thoughts_tokens,cache_hits,attempt_count
+stage1_annotation,annotation,gemini,GeminiBackend,gemini-3.5-flash,success,917606.0,74390.0,1620954.0,0.0,628958.0,0,620
+stage1_annotation,annotation,,GeminiBackend,gemini-3.5-flash,final_failure,0.0,0.0,0.0,0.0,0.0,0,20
+stage1_annotation,annotation,,GeminiBackend,gemini-3.5-flash,retry_error,0.0,0.0,0.0,0.0,0.0,0,60

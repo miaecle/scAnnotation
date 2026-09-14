@@ -19,6 +19,7 @@ PyYAML
 
 # Progress and utilities
 tqdm
+json-repair
 
 # Visualization
 matplotlib

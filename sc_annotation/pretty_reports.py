@@ -32,6 +32,7 @@ def save_inspect_pretty(records: list[dict[str, Any]], save_path: str) -> None:
                 "true_label",
                 "stage1_label",
                 "error_type",
+                "error_code",
                 "error_message",
             ]
             for key in meta_keys:

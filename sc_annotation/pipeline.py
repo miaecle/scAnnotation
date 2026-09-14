@@ -15,9 +15,10 @@ from __future__ import annotations
 
 from dataclasses import replace
 from datetime import datetime
-from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, as_completed, wait
 import json
 import os
+import shutil
 import threading
 import time
 from typing import Any, Optional
@@ -41,11 +42,11 @@ from .prompts import (
 from .data import inspect_cells, sample_cells
 from .adt import build_adt_adata, normalize_adt, get_top_proteins as get_top_proteins_adt
 from .metrics import (
-    parse_results, evaluate_all, evaluate_per_sample,
+    parse_results, evaluate_all, evaluate_per_sample, format_eval_report,
     extract_cell_type, extract_rationale,
 )
 from .visualization import save_confusion_matrix
-from .backends.base import LLMBackend, complete_with_retry
+from .backends.base import LLMBackend, complete_with_retry, _extract_error_code
 from .pretty_reports import save_inspect_pretty, save_stage2_program_cache_pretty
 from .stage2 import (
     make_gemini_json_caller,
@@ -192,6 +193,7 @@ def _build_stage2_skip_record(
         "stage2_prompt": stage2_prompt,
         "stage2_full_prompt": full_stage2_prompt,
         "error_type": type(exc).__name__,
+        "error_code": _extract_error_code(exc),
         "error_message": str(exc),
     }
 
@@ -365,6 +367,214 @@ def _build_stage2_gene_lists(
         raise ValueError(f"Unknown stage-2 mode: {mode!r}. Choose 'combined' or 'strict'.")            
 
 
+def _build_hierarchy_tree(
+    adata: ad.AnnData,
+    hierarchy_columns: list[str],
+) -> tuple[dict[str, Any], dict[str, tuple[str, ...]]]:
+    """Build a serializable hierarchy tree and normalized leaf-to-path index."""
+    if not hierarchy_columns:
+        raise ValueError("evaluation.hierarchy must contain at least one column.")
+    missing_columns = [column for column in hierarchy_columns if column not in adata.obs.columns]
+    if missing_columns:
+        raise ValueError(
+            "evaluation.hierarchy columns are missing from adata.obs: "
+            f"{missing_columns}"
+        )
+
+    tree: dict[str, Any] = {
+        "hierarchy_columns": hierarchy_columns,
+        "children": {},
+    }
+    paths: dict[str, tuple[str, ...]] = {}
+
+    path_pair_flags: dict[tuple[str, ...], dict[tuple[str, ...], bool]] = {}
+
+    for values in tqdm(adata.obs[hierarchy_columns].itertuples(index=False, name=None), desc="Building hierarchy tree"):
+        display_path = tuple(str(value).strip() for value in values)
+        path = tuple(value.lower() for value in display_path)
+        if any(not value for value in path):
+            continue
+
+        node = tree
+        for column, label, display_label in zip(hierarchy_columns, path, display_path):
+            node = node["children"].setdefault(
+                label,
+                {
+                    "label": display_label,
+                    "column": column,
+                    "children": {},
+                },
+            )
+
+        leaf = path[-1]
+        existing = paths.setdefault(leaf, path)
+        if existing != path and not path_pair_flags.get(existing, {}).get(path, False):
+
+            error_path = "/autofs/bal14/qxlei/scannotation/overlap.txt"
+            with open(error_path, "a", encoding="utf-8") as f:
+                f.write("/".join(existing) + "\n")
+                f.write("/".join(path) + "\n")
+                f.write("--------------------\n")
+
+            path_pair_flags.setdefault(existing, {})[path] = True
+            # raise ValueError(
+            #     f"Hierarchy label {path[-1]!r} maps to multiple ancestry paths: "
+            #     f"{existing!r} and {path!r}."
+            # )
+    return tree, paths
+
+
+def _saved_results_match_sample(
+    saved_results: pd.DataFrame,
+    sample_df: pd.DataFrame,
+) -> bool:
+    """Return whether a saved result table belongs to the current sample."""
+    required_columns = {"cell_idx", "cell_barcode", "true_label", "pred_label"}
+    if len(saved_results) != len(sample_df) or not required_columns.issubset(saved_results.columns):
+        return False
+
+    for current, saved in zip(sample_df.itertuples(index=False), saved_results.itertuples(index=False)):
+        if (
+            str(current.cell_idx) != str(saved.cell_idx)
+            or str(current.cell_barcode) != str(saved.cell_barcode)
+            or str(current.true_label) != str(saved.true_label)
+            or pd.isna(saved.pred_label)
+            or not str(saved.pred_label).strip()
+        ):
+            return False
+    return True
+
+
+def _resolve_result_paths(results_dir: str, experiment_name: str) -> dict[str, str]:
+    """Resolve the canonical output paths for both new and old result layouts.
+
+    New runs store files under tables/, logs/, plots/, and meta/. Older runs
+    kept the same files directly in the experiment directory. This helper will
+    copy any legacy flat files into the organized layout on first access so the
+    evaluation pipeline can consume both layouts uniformly.
+    """
+    tables_dir = os.path.join(results_dir, "tables")
+    logs_dir = os.path.join(results_dir, "logs")
+    plots_dir = os.path.join(results_dir, "plots")
+    meta_dir = os.path.join(results_dir, "meta")
+    stage2_dir = os.path.join(results_dir, "stage2")
+
+    flat_paths = {
+        "results_path": os.path.join(results_dir, f"{experiment_name}_results.csv"),
+        "eval_path": os.path.join(results_dir, f"{experiment_name}_eval.csv"),
+        "config_path": os.path.join(results_dir, f"{experiment_name}_config.yaml"),
+        "cm_path": os.path.join(results_dir, f"{experiment_name}_confusion_matrix.png"),
+        "usage_path": os.path.join(results_dir, f"{experiment_name}_llm_usage.csv"),
+        "timing_path": os.path.join(results_dir, f"{experiment_name}_timing.csv"),
+        "hierarchy_tree_path": os.path.join(results_dir, f"{experiment_name}_hierarchy_tree.json"),
+        "stage2_cache_path": os.path.join(results_dir, f"{experiment_name}_stage2_program_cache.json"),
+    }
+    organized_paths = {
+        "results_path": os.path.join(tables_dir, f"{experiment_name}_results.csv"),
+        "eval_path": os.path.join(tables_dir, f"{experiment_name}_eval.csv"),
+        "config_path": os.path.join(meta_dir, f"{experiment_name}_config.yaml"),
+        "cm_path": os.path.join(plots_dir, f"{experiment_name}_confusion_matrix.png"),
+        "usage_path": os.path.join(logs_dir, f"{experiment_name}_llm_usage.csv"),
+        "timing_path": os.path.join(meta_dir, f"{experiment_name}_timing.csv"),
+        "hierarchy_tree_path": os.path.join(meta_dir, f"{experiment_name}_hierarchy_tree.json"),
+        "stage2_cache_path": os.path.join(stage2_dir, f"{experiment_name}_stage2_program_cache.json"),
+    }
+
+    for d in (tables_dir, logs_dir, plots_dir, meta_dir, stage2_dir):
+        os.makedirs(d, exist_ok=True)
+
+    for key, flat_path in flat_paths.items():
+        organized_path = organized_paths[key]
+        if os.path.exists(organized_path):
+            continue
+        if os.path.exists(flat_path):
+            os.makedirs(os.path.dirname(organized_path), exist_ok=True)
+            shutil.copy2(flat_path, organized_path)
+
+    return organized_paths
+
+
+def _evaluate_saved_results(
+    adata: ad.AnnData,
+    config: ExperimentConfig,
+    results_df: pd.DataFrame,
+    results_path: str,
+    eval_path: str,
+    config_path: str,
+    hierarchy_tree_path: str,
+    cm_path: str,
+    cell_type_list: list[str],
+) -> pd.DataFrame:
+    """Evaluate a previously completed annotation without rerunning annotation."""
+    results_df = parse_results(results_df)
+    hierarchy_paths: Optional[dict[str, tuple[str, ...]]] = None
+    hierarchy_tree: Optional[dict[str, Any]] = None
+    strategies = {str(strategy).lower() for strategy in config.evaluation.strategies}
+    if "hierarchy" in strategies:
+        hierarchy_columns = config.evaluation.hierarchy
+        if not hierarchy_columns:
+            raise ValueError("The 'hierarchy' evaluation strategy requires evaluation.hierarchy.")
+        if hierarchy_columns[-1] != config.evaluation.label_col:
+            raise ValueError(
+                "evaluation.hierarchy must end with evaluation.label_col so predictions "
+                "can be resolved at the evaluated level."
+            )
+        hierarchy_tree, hierarchy_paths = _build_hierarchy_tree(adata, hierarchy_columns)
+
+    judge_backend: Optional[LLMBackend] = None
+    use_any_llm_judge = bool(strategies & {"llm_judge", "llm_judge_binary"})
+    if use_any_llm_judge:
+        if (
+            config.evaluation.judge_backend
+            and config.evaluation.judge_backend != config.llm.backend
+        ):
+            judge_backend = build_backend(replace(config.llm, backend=config.evaluation.judge_backend))
+        else:
+            judge_backend = build_backend(config.llm)
+
+    per_sample_eval_df = evaluate_per_sample(
+        results_df,
+        judge_backend=judge_backend if use_any_llm_judge else None,
+        strategies=config.evaluation.strategies,
+        concurrency=config.evaluation.concurrency,
+        hierarchy_paths=hierarchy_paths,
+    )
+    final_results_df = pd.concat([results_df, per_sample_eval_df], axis=1)
+    eval_df = evaluate_all(
+        final_results_df,
+        judge_backend=judge_backend if use_any_llm_judge else None,
+        per_sample_df=per_sample_eval_df,
+        strategies=config.evaluation.strategies,
+        concurrency=config.evaluation.concurrency,
+        hierarchy_paths=hierarchy_paths,
+        hierarchy_max_depth=len(config.evaluation.hierarchy or []),
+        n_bootstrap=config.evaluation.n_bootstrap,
+        bootstrap_seed=config.evaluation.bootstrap_seed,
+    )
+
+    print("Saved annotation results validated; annotation and preprocessing skipped.")
+    print("\n=== Evaluation ===")
+    print(format_eval_report(eval_df))
+    if config.output.save_results:
+        os.makedirs(os.path.dirname(eval_path), exist_ok=True)
+        final_results_df.to_csv(results_path, index=False)
+        eval_df.to_csv(eval_path, index=False)
+        eval_report_path = eval_path.rsplit(".", 1)[0] + "_report.txt"
+        with open(eval_report_path, "w", encoding="utf-8") as fh:
+            fh.write(format_eval_report(eval_df) + "\n")
+        config.save_evaluation_snapshot(config_path)
+        if hierarchy_tree is not None:
+            with open(hierarchy_tree_path, "w", encoding="utf-8") as fh:
+                json.dump(hierarchy_tree, fh, ensure_ascii=False, indent=2)
+        save_confusion_matrix(
+            final_results_df,
+            cm_path,
+            cell_type_list,
+            hierarchy_paths=hierarchy_paths,
+        )
+    return final_results_df
+
+
 # ---------------------------------------------------------------------------
 # Main experiment runner
 # ---------------------------------------------------------------------------
@@ -408,6 +618,99 @@ def run_experiment(
     start_time = time.time()
     start_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"Start time: {start_time_str}")
+
+    if config.evaluation.random:
+        cell_type_list: list[str] = []
+        if bool(getattr(config.inspect, "enabled", False)):
+            sample_df = inspect_cells(
+                adata,
+                label_col=config.evaluation.label_col,
+                cell_indices=[int(idx) for idx in getattr(config.inspect, "cell_indices", [])],
+                cell_type_list=cell_type_list,
+            )
+        else:
+            n_per_class = 1 if config.input.mode == "pseudobulk" else config.evaluation.n_per_class
+            sample_df = sample_cells(
+                adata,
+                label_col=config.evaluation.label_col,
+                n_per_class=n_per_class,
+                seed=config.evaluation.seed,
+                cell_type_list=cell_type_list,
+            )
+
+        if not cell_type_list:
+            raise ValueError(
+                "evaluation.random requires at least one label in evaluation.label_col."
+            )
+
+        results_df = sample_df.copy()
+        results_df["pred_label"] = np.random.default_rng(config.evaluation.seed).choice(
+            cell_type_list,
+            size=len(results_df),
+        )
+        paths = _resolve_result_paths(
+            config.output.results_dir,
+            config.output.experiment_name,
+        )
+        print(
+            "Random evaluation baseline: annotation and preprocessing skipped; "
+            f"assigned labels from {len(cell_type_list)} cell types."
+        )
+        return _evaluate_saved_results(
+            adata,
+            config,
+            results_df,
+            paths["results_path"],
+            paths["eval_path"],
+            paths["config_path"],
+            paths["hierarchy_tree_path"],
+            paths["cm_path"],
+            cell_type_list,
+        )
+
+    # Validate a completed result table before any backend or data preprocessing.
+    early_name = config.output.experiment_name
+    early_results_dir = config.output.results_dir
+    early_paths = _resolve_result_paths(early_results_dir, early_name)
+    early_results_path = early_paths["results_path"]
+    early_eval_path = early_paths["eval_path"]
+    early_config_path = early_paths["config_path"]
+    early_tree_path = early_paths["hierarchy_tree_path"]
+    early_cm_path = early_paths["cm_path"]
+    if config.output.save_results and os.path.exists(early_results_path):
+        early_cell_type_list: list[str] = []
+        if bool(getattr(config.inspect, "enabled", False)):
+            early_sample_df = inspect_cells(
+                adata,
+                label_col=config.evaluation.label_col,
+                cell_indices=[int(idx) for idx in getattr(config.inspect, "cell_indices", [])],
+                cell_type_list=early_cell_type_list,
+            )
+        else:
+            early_n_per_class = 1 if config.input.mode == "pseudobulk" else config.evaluation.n_per_class
+            early_sample_df = sample_cells(
+                adata,
+                label_col=config.evaluation.label_col,
+                n_per_class=early_n_per_class,
+                seed=config.evaluation.seed,
+                cell_type_list=early_cell_type_list,
+            )
+        try:
+            early_results_df = pd.read_csv(early_results_path)
+            if _saved_results_match_sample(early_results_df, early_sample_df):
+                return _evaluate_saved_results(
+                    adata,
+                    config,
+                    early_results_df,
+                    early_results_path,
+                    early_eval_path,
+                    early_config_path,
+                    early_tree_path,
+                    early_cm_path,
+                    early_cell_type_list,
+                )
+        except Exception as exc:
+            print(f"Saved results fast-path skipped: {type(exc).__name__}: {exc}")
 
     # ------------------------------------------------------------------ #
     # 0. Backend
@@ -597,6 +900,7 @@ def run_experiment(
     # 6. Sample cells
     # ------------------------------------------------------------------ #
     name = config.output.experiment_name
+    result_paths = _resolve_result_paths(config.output.results_dir, name)
     tables_dir = os.path.join(config.output.results_dir, "tables")
     logs_dir = os.path.join(config.output.results_dir, "logs")
     plots_dir = os.path.join(config.output.results_dir, "plots")
@@ -604,18 +908,27 @@ def run_experiment(
     meta_dir = os.path.join(config.output.results_dir, "meta")
     tmp_dir = os.path.join(config.output.results_dir, "tmp")
 
-    results_path = os.path.join(tables_dir, f"{name}_results.csv")
-    eval_path = os.path.join(tables_dir, f"{name}_eval.csv")
+    results_path = result_paths["results_path"]
+    eval_path = result_paths["eval_path"]
     usage_path = os.path.join(logs_dir, f"{name}_llm_usage.csv")
     usage_failures_path = os.path.join(logs_dir, f"{name}_llm_usage_failures.csv")
     usage_summary_path = os.path.join(logs_dir, f"{name}_llm_usage_summary.csv")
+    usage_program_method_summary_path = os.path.join(
+        logs_dir,
+        f"{name}_program_method_summary.csv",
+    )
+    usage_program_method_rows_path = os.path.join(
+        logs_dir,
+        f"{name}_program_method_rows.csv",
+    )
 
-    config_path = os.path.join(meta_dir, f"{name}_config.yaml")
-    timing_path = os.path.join(meta_dir, f"{name}_timing.csv")
+    config_path = result_paths["config_path"]
+    timing_path = result_paths["timing_path"]
 
-    cm_path = os.path.join(plots_dir, f"{name}_confusion_matrix.png")
+    cm_path = result_paths["cm_path"]
     skipped_path = os.path.join(stage2_dir, f"{name}_stage2_skipped.csv")
-    stage2_program_cache_path = os.path.join(stage2_dir, f"{name}_stage2_program_cache.json")
+    stage2_program_cache_path = result_paths["stage2_cache_path"]
+    hierarchy_tree_path = result_paths["hierarchy_tree_path"]
 
     checkpoint_every = 10
     annotation_stream_path: Optional[str] = None
@@ -623,6 +936,7 @@ def run_experiment(
     annotation_chunks: list[pd.DataFrame] = []
     resume_from_idx = 0
     flushed_count = 0
+    completed_results_df: Optional[pd.DataFrame] = None
 
     if config.output.save_results:
         os.makedirs(config.output.results_dir, exist_ok=True)
@@ -730,6 +1044,37 @@ def run_experiment(
         except Exception as exc:
             print(f"Annotation stream resume check skipped: {type(exc).__name__}: {exc}")
 
+    if resume_from_idx < len(sample_df) and os.path.exists(results_path):
+        try:
+            prev_results_df = pd.read_csv(results_path)
+            required_cols = {"cell_idx", "cell_barcode", "true_label", "pred_label"}
+            if len(prev_results_df) == len(sample_df) and required_cols.issubset(prev_results_df.columns):
+                matches_sample = True
+                for i in tqdm(range(len(sample_df)), desc="checking saved annotation results", unit="cell"):
+                    cur = sample_df.iloc[i]
+                    old = prev_results_df.iloc[i]
+                    same_cell_idx = str(cur["cell_idx"]) == str(old["cell_idx"])
+                    same_barcode = str(cur["cell_barcode"]) == str(old["cell_barcode"])
+                    same_true = str(cur["true_label"]) == str(old["true_label"])
+                    has_pred = pd.notna(old["pred_label"]) and str(old["pred_label"]).strip() != ""
+                    if not (same_cell_idx and same_barcode and same_true and has_pred):
+                        matches_sample = False
+                        print(f"  [saved results mismatch at row {i}]; annotation will run.")
+                        break
+
+                if matches_sample:
+                    completed_results_df = prev_results_df
+                    resume_from_idx = len(sample_df)
+                    flushed_count = resume_from_idx
+                    print(
+                        "Saved annotation results validated; skipping annotation and proceeding to evaluation: "
+                        f"{resume_from_idx}/{len(sample_df)} cells already completed."
+                    )
+            else:
+                print("Saved annotation results do not match the current sample shape or required columns; annotation will run.")
+        except Exception as exc:
+            print(f"Saved annotation results check skipped: {type(exc).__name__}: {exc}")
+
     n_types = sample_df["true_label"].nunique()
     print(f"Sampled {len(sample_df)} cells from {n_types} cell types")
 
@@ -744,7 +1089,49 @@ def run_experiment(
         # Normalize whitespace/case so equivalent labels share one cache entry.
         return " ".join(str(label).strip().split()).lower()
 
+    def _try_load_stage2_program_cache(path: str) -> dict[str, dict[str, Any]]:
+        """Load a previously saved stage-2 cache if it exists and is valid JSON."""
+        if not os.path.exists(path):
+            return {}
+        try:
+            with open(path, "r", encoding="utf-8") as fh:
+                payload = json.load(fh)
+        except Exception as exc:
+            print(
+                "Stage-2 cache found but could not be parsed; ignoring existing file "
+                f"{path}. ({type(exc).__name__}: {exc})"
+            )
+            return {}
+
+        if isinstance(payload, dict) and isinstance(payload.get("programs_by_cell_type"), dict):
+            programs = payload["programs_by_cell_type"]
+        elif isinstance(payload, dict):
+            # Backward-compatible fallback: allow direct map format.
+            programs = payload
+        else:
+            print(
+                "Stage-2 cache found but has unsupported JSON structure; ignoring existing file "
+                f"{path}."
+            )
+            return {}
+
+        loaded: dict[str, dict[str, Any]] = {}
+        for raw_key, raw_value in programs.items():
+            norm_key = _normalize_stage2_cache_key(raw_key)
+            if not norm_key:
+                continue
+            if isinstance(raw_value, dict):
+                loaded[norm_key] = raw_value
+
+        print(f"Loaded {len(loaded)} stage-2 cached cell types from {path}")
+        return loaded
+
     if config.stage2.enabled:
+        loaded_cache = _try_load_stage2_program_cache(stage2_program_cache_path)
+        if loaded_cache:
+            with stage2_program_cache_lock:
+                stage2_program_cache.update(loaded_cache)
+
         unique_cell_types: list[str] = []
         seen_cache_keys: set[str] = set()
         for cell_type in cell_type_list:
@@ -753,15 +1140,28 @@ def run_experiment(
                 seen_cache_keys.add(cache_key)
                 unique_cell_types.append(str(cell_type))
 
+        # Skip cell types already present in loaded cache.
+        if stage2_program_cache:
+            unique_cell_types = [
+                ct for ct in unique_cell_types
+                if _normalize_stage2_cache_key(ct) not in stage2_program_cache
+            ]
+
         if unique_cell_types:
             print(
                 "Precomputing stage-2 gene programs once per cell type "
                 f"({len(unique_cell_types)} total) ..."
             )
-            for cell_type in tqdm(unique_cell_types, desc="stage2 program precompute", unit="cell_type"):
+            stage2_precompute_workers = min(
+                len(unique_cell_types),
+                max(1, int(getattr(config.llm, "concurrency", 1) or 1)),
+            )
+            print(f"Stage-2 precompute concurrency: {stage2_precompute_workers}")
+
+            def _precompute_stage2_programs(cell_type: str) -> tuple[str, str, Optional[dict[str, Any]], Optional[Exception]]:
                 cache_key = _normalize_stage2_cache_key(cell_type)
                 if not cache_key:
-                    continue
+                    return cell_type, cache_key, None, None
                 try:
                     raw_programs = query_subtype_programs(
                         cell_type,
@@ -777,13 +1177,23 @@ def run_experiment(
                             "stage1_label": str(cell_type),
                         },
                     )
-                    with stage2_program_cache_lock:
-                        stage2_program_cache[cache_key] = raw_programs
+                    return cell_type, cache_key, raw_programs, None
                 except Exception as exc:
-                    print(
-                        "[Stage-2 precompute warning] "
-                        f"label={cell_type!r}: {type(exc).__name__}: {exc}"
-                    )
+                    return cell_type, cache_key, None, exc
+
+            with ThreadPoolExecutor(max_workers=stage2_precompute_workers) as executor:
+                futures = [executor.submit(_precompute_stage2_programs, cell_type) for cell_type in unique_cell_types]
+                for future in tqdm(as_completed(futures), total=len(futures), desc="stage2 program precompute", unit="cell_type"):
+                    cell_type, cache_key, raw_programs, exc = future.result()
+                    if exc is not None:
+                        print(
+                            "[Stage-2 precompute warning] "
+                            f"label={cell_type!r}: {type(exc).__name__}: {exc}"
+                        )
+                        continue
+                    if cache_key and raw_programs is not None:
+                        with stage2_program_cache_lock:
+                            stage2_program_cache[cache_key] = raw_programs
 
             print(
                 "Stage-2 precompute complete: "
@@ -802,6 +1212,11 @@ def run_experiment(
                     json.dump(stage2_cache_payload, fh, ensure_ascii=False, indent=2)
                 print(f"Stage-2 precomputed programs saved → {stage2_program_cache_path}")
                 save_stage2_program_cache_pretty(stage2_cache_payload, stage2_program_cache_path)
+        elif stage2_program_cache:
+            print(
+                "Stage-2 program precompute skipped: all sampled cell types were already "
+                "present in cache."
+            )
 
     # ------------------------------------------------------------------ #
     # 7. Annotate
@@ -955,6 +1370,7 @@ def run_experiment(
                             "prompt": skip_record["stage2_prompt"],
                             "full_prompt": skip_record["stage2_full_prompt"],
                             "error_type": skip_record["error_type"],
+                            "error_code": skip_record.get("error_code"),
                             "error_message": skip_record["error_message"],
                             "output": stage1_response,
                         }
@@ -1090,7 +1506,9 @@ def run_experiment(
     _flush_annotation_buffer(force=True)
     _flush_usage_records(force=True)
 
-    if annotation_stream_path is not None and os.path.exists(annotation_stream_path):
+    if completed_results_df is not None:
+        results_df = completed_results_df
+    elif annotation_stream_path is not None and os.path.exists(annotation_stream_path):
         results_df = pd.read_csv(annotation_stream_path)
     elif annotation_chunks:
         results_df = pd.concat(annotation_chunks, ignore_index=True)
@@ -1113,6 +1531,20 @@ def run_experiment(
     use_llm_judge = "llm_judge" in config.evaluation.strategies
     use_llm_judge_binary = "llm_judge_binary" in config.evaluation.strategies
     use_any_llm_judge = use_llm_judge or use_llm_judge_binary
+    hierarchy_paths: Optional[dict[str, tuple[str, ...]]] = None
+    hierarchy_tree: Optional[dict[str, Any]] = None
+    if "hierarchy" in {str(strategy).lower() for strategy in config.evaluation.strategies}:
+        hierarchy_columns = config.evaluation.hierarchy
+        if hierarchy_columns is None:
+            raise ValueError(
+                "The 'hierarchy' evaluation strategy requires evaluation.hierarchy."
+            )
+        if hierarchy_columns[-1] != config.evaluation.label_col:
+            raise ValueError(
+                "evaluation.hierarchy must end with evaluation.label_col so predictions "
+                "can be resolved at the evaluated level."
+            )
+        hierarchy_tree, hierarchy_paths = _build_hierarchy_tree(adata, hierarchy_columns)
 
     if use_any_llm_judge:
         if (
@@ -1130,6 +1562,7 @@ def run_experiment(
         usage_sink=_usage_sink,
         strategies=config.evaluation.strategies,
         concurrency=config.evaluation.concurrency,
+        hierarchy_paths=hierarchy_paths,
     )
     _flush_usage_records(force=True)
     final_results_df = pd.concat([results_df, per_sample_eval_df], axis=1)
@@ -1141,10 +1574,14 @@ def run_experiment(
         per_sample_df=per_sample_eval_df,
         strategies=config.evaluation.strategies,
         concurrency=config.evaluation.concurrency,
+        hierarchy_paths=hierarchy_paths,
+        hierarchy_max_depth=len(config.evaluation.hierarchy or []),
+        n_bootstrap=config.evaluation.n_bootstrap,
+        bootstrap_seed=config.evaluation.bootstrap_seed,
     )
     _flush_usage_records(force=True)
     print("\n=== Evaluation ===")
-    print(eval_df.to_string(index=False))
+    print(format_eval_report(eval_df))
 
     # ------------------------------------------------------------------ #
     # 9. Save
@@ -1153,11 +1590,16 @@ def run_experiment(
         print(f"\nSaving results to {config.output.results_dir} …")
         final_results_df.to_csv(results_path, index=False)
         eval_df.to_csv(eval_path, index=False)
-        config.to_yaml(config_path)
-
-        if annotation_stream_path is not None and os.path.exists(annotation_stream_path):
-            os.remove(annotation_stream_path)
-            print(f"Removed temporary annotation stream → {annotation_stream_path}")
+        eval_report_path = eval_path.rsplit(".", 1)[0] + "_report.txt"
+        with open(eval_report_path, "w", encoding="utf-8") as fh:
+            fh.write(format_eval_report(eval_df) + "\n")
+        # This is the final run artifact for this experiment: overwrite the
+        # snapshot in the results directory so it reflects the exact run state.
+        config.save_full_snapshot(config_path)
+        if hierarchy_tree is not None:
+            with open(hierarchy_tree_path, "w", encoding="utf-8") as fh:
+                json.dump(hierarchy_tree, fh, ensure_ascii=False, indent=2)
+            print(f"Hierarchy tree saved → {hierarchy_tree_path}")
 
         _flush_usage_records(force=True)
         usage_rows: list[dict[str, Any]] = []
@@ -1227,15 +1669,85 @@ def run_experiment(
             usage_summary_df = pd.DataFrame()
         usage_summary_df.to_csv(usage_summary_path, index=False)
 
-        save_confusion_matrix(final_results_df, cm_path, cell_type_list)
+        # Build detailed rows first, then derive summary/level-1 subsets from it.
+        if not usage_df.empty and "json_parse_method" in usage_df.columns:
+            method_rows_df = usage_df.copy()
+            method_rows_df = method_rows_df[
+                method_rows_df["json_parse_method"].notna()
+                & (method_rows_df["json_parse_method"].astype(str).str.strip() != "")
+            ]
+            if "step" in method_rows_df.columns:
+                method_rows_df = method_rows_df[method_rows_df["step"] == "stage2_program_query"]
+        else:
+            method_rows_df = pd.DataFrame()
+
+        method_rows_df.to_csv(usage_program_method_rows_path, index=False)
+
+        # Summarize JSON parse methods used by stage-2 program querying.
+        if not method_rows_df.empty:
+            method_group_cols = [
+                c
+                for c in [
+                    "step",
+                    "phase",
+                    "provider",
+                    "backend",
+                    "model",
+                    "attempt_status",
+                    "json_parse_method",
+                ]
+                if c in method_rows_df.columns
+            ]
+            method_token_cols = [
+                c
+                for c in method_rows_df.columns
+                if ("token" in c.lower()) or c in {"cache_hits"}
+            ]
+
+            method_summary_df = (
+                method_rows_df[method_group_cols + method_token_cols]
+                .groupby(method_group_cols, dropna=False)
+                .sum(numeric_only=True)
+                .reset_index()
+            )
+            method_attempts_df = (
+                method_rows_df[method_group_cols]
+                .groupby(method_group_cols, dropna=False)
+                .size()
+                .reset_index(name="attempt_count")
+            )
+            method_summary_df = method_summary_df.merge(
+                method_attempts_df,
+                on=method_group_cols,
+                how="left",
+            )
+        else:
+            method_summary_df = pd.DataFrame()
+
+        method_summary_df.to_csv(usage_program_method_summary_path, index=False)
+
+        save_confusion_matrix(
+            final_results_df,
+            cm_path,
+            cell_type_list,
+            hierarchy_paths=hierarchy_paths,
+        )
 
         if stage2_skipped_records:
             pd.DataFrame(stage2_skipped_records).to_csv(skipped_path, index=False)
             print(f"Stage-2 skipped cells ({len(stage2_skipped_records)}) saved → {skipped_path}")
 
         print(f"\nSaved organized outputs under: {config.output.results_dir}/")
-        print(f"  tables/: {name}_results.csv, {name}_eval.csv")
-        print(f"  logs/: {name}_usage_attempts.jsonl, {name}_llm_usage.csv, {name}_llm_usage_failures.csv, {name}_llm_usage_summary.csv")
+        print(f"  tables/: {name}_results.csv, {name}_eval.csv, {name}_eval_report.txt")
+        print(
+            "  logs/: "
+            f"{name}_usage_attempts.jsonl, "
+            f"{name}_llm_usage.csv, "
+            f"{name}_llm_usage_failures.csv, "
+            f"{name}_llm_usage_summary.csv, "
+            f"{name}_program_method_rows.csv, "
+            f"{name}_program_method_summary.csv"
+        )
         print(f"  plots/: {name}_confusion_matrix.png")
         print(f"  stage2/: {name}_stage2_program_cache.json, {name}_stage2_skipped.csv")
         print(f"  meta/: {name}_config.yaml, {name}_timing.csv")

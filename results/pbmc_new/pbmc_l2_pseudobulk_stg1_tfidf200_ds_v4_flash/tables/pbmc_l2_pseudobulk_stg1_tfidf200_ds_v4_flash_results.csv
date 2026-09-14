@@ -1,0 +1,70 @@
+cell_idx,cell_barcode,true_label,pred_label,pred_celltype,pred_rationale,acc
+18250,L2_CCGGACAAGTTGCGCC,ASDC,"pDC
+
+The top gene markers, including LILRA4, TCF4, AXL, CLEC4C, and IL3RA, along with surface proteins CD123 and CD304, are highly specific for plasmacytoid dendritic cells (pDCs). High expression of HLA class II genes and CD4 also support this identity.",pDC,"The top gene markers, including LILRA4, TCF4, AXL, CLEC4C, and IL3RA, along with surface proteins CD123 and CD304, are highly specific for plasmacytoid dendritic cells (pDCs). High expression of HLA class II genes and CD4 also support this identity.",0
+132099,E2L6_GATGATCAGCGTTACT,B intermediate,"B naive
+
+This profile shows strong expression of B cell markers (CD19, MS4A1, CD79A/B, CD22) and high levels of IgD and IgM, characteristic of naive B cells. The presence of IGHD and IGHM, along with surface IgD, confirms naive status rather than memory or plasmablast.",B naive,"This profile shows strong expression of B cell markers (CD19, MS4A1, CD79A/B, CD22) and high levels of IgD and IgM, characteristic of naive B cells. The presence of IGHD and IGHM, along with surface IgD, confirms naive status rather than memory or plasmablast.",0
+116257,E2L5_ATTTACCTCGTGCGAC,B memory,B memory,B memory,,1
+81683,E2L2_CACGGGTAGCCAGAGT,B naive,"B naive
+
+The top genes (IGHM, IGHD, MS4A1, CD79A/B) and surface proteins (CD19, IgD, CD21, CD22, CD72) are hallmarks of naive B cells. The co-expression of IgM and IgD with no strong memory or plasmablast markers confirms this identity.",B naive,"The top genes (IGHM, IGHD, MS4A1, CD79A/B) and surface proteins (CD19, IgD, CD21, CD22, CD72) are hallmarks of naive B cells. The co-expression of IgM and IgD with no strong memory or plasmablast markers confirms this identity.",1
+78753,E2L2_AACCATGTCTCATAGG,CD14 Mono,"CD14 Mono
+This profile is characteristic of classical monocytes, with high expression of S100A8/A9, LYZ, CD14, FCGR1A (CD64), and complement receptors like CD35. The top surface proteins CD35, CD11b, CD64, and CD93 further confirm a monocyte identity, consistent with CD14+ monocytes in PBMC.",CD14 Mono,"This profile is characteristic of classical monocytes, with high expression of S100A8/A9, LYZ, CD14, FCGR1A (CD64), and complement receptors like CD35. The top surface proteins CD35, CD11b, CD64, and CD93 further confirm a monocyte identity, consistent with CD14+ monocytes in PBMC.",1
+138519,E2L7_ACCAAACCATGTGGTT,CD16 Mono,Doublet,Doublet,,0
+15226,L2_AGACAAAGTGTTCCTC,CD4 CTL,"CD4 CTL
+This profile shows high expression of cytotoxic genes (GNLY, NKG7, GZMA/B, PRF1) and T cell markers (CD3, CD2, TRBC), with CD4 as the top surface protein and CD8a also present. The combination of CD4, cytotoxic molecules, and memory-associated IL7R is characteristic of CD4 cytotoxic T lymphocytes (CD4 CTL) in PBMC.",CD4 CTL,"This profile shows high expression of cytotoxic genes (GNLY, NKG7, GZMA/B, PRF1) and T cell markers (CD3, CD2, TRBC), with CD4 as the top surface protein and CD8a also present. The combination of CD4, cytotoxic molecules, and memory-associated IL7R is characteristic of CD4 cytotoxic T lymphocytes (CD4 CTL) in PBMC.",1
+101432,E2L3_TTCTAGTAGGTAGCCA,CD4 Naive,"CD4 Naive
+The top genes (IL7R, CCR7, TCF7, LEF1, SELL, CD27) and surface proteins (high CD4, CD3, CD27, CD28, CD2) are characteristic of naive CD4+ T cells in PBMC. The lack of effector/memory markers like GZMK or NK/NK cell markers confirms this identity.",CD4 Naive,"The top genes (IL7R, CCR7, TCF7, LEF1, SELL, CD27) and surface proteins (high CD4, CD3, CD27, CD28, CD2) are characteristic of naive CD4+ T cells in PBMC. The lack of effector/memory markers like GZMK or NK/NK cell markers confirms this identity.",1
+23198,L2_GTTTGGAGTAATACCC,CD4 Proliferating,"CD4 Proliferating
+
+The top genes are strongly associated with cell cycle and proliferation (MKI67, TOP2A, STMN1, etc.), indicating a proliferating state. Surface proteins show high CD4, CD71, and CD278, consistent with activated CD4+ T cells undergoing proliferation.",CD4 Proliferating,"The top genes are strongly associated with cell cycle and proliferation (MKI67, TOP2A, STMN1, etc.), indicating a proliferating state. Surface proteins show high CD4, CD71, and CD278, consistent with activated CD4+ T cells undergoing proliferation.",1
+10904,L1_TCATGAGAGCGTGCCT,CD4 TCM,"CD4 Naive
+
+The top expressed surface protein is CD4, and key genes include IL7R (CD127), TCF7, LEF1, and CCR7, which are characteristic of naive CD4+ T cells. The absence of effector, cytotoxic, or Treg markers further supports this identity.",CD4 Naive,"The top expressed surface protein is CD4, and key genes include IL7R (CD127), TCF7, LEF1, and CCR7, which are characteristic of naive CD4+ T cells. The absence of effector, cytotoxic, or Treg markers further supports this identity.",0
+80508,E2L2_AGTAGTCAGAATCCCT,CD4 TEM,"CD4 CTL
+
+The top genes include granzymes (GZMK, GZMA), cytotoxicity-associated molecules (GNLY, NKG7), and T cell markers (CD3, CD2, CD28, CD27). Surface proteins show high CD4, CD3, CD127 (IL7R), and CD27/CD28. This combination of CD4 expression with cytotoxic granule genes is characteristic of CD4 cytotoxic T lymphocytes (CD4 CTL).",CD4 CTL,"The top genes include granzymes (GZMK, GZMA), cytotoxicity-associated molecules (GNLY, NKG7), and T cell markers (CD3, CD2, CD28, CD27). Surface proteins show high CD4, CD3, CD127 (IL7R), and CD27/CD28. This combination of CD4 expression with cytotoxic granule genes is characteristic of CD4 cytotoxic T lymphocytes (CD4 CTL).",0
+156480,E2L8_GCCAACGTCGGCAGTC,CD8 Naive,CD8 Naive,CD8 Naive,,1
+121173,E2L5_GTACAACAGGTTATAG,CD8 Proliferating,"NK Proliferating
+
+Strong expression of cytotoxic genes (GNLY, NKG7, GZMA/B/H, PRF1, CST7) combined with many cell cycle/proliferation markers (MKI67, STMN1, TYMS, PCLAF, TOP2A) indicates an actively dividing NK cell. Surface markers show high CD8a, CD3, CD62P, and NK receptor CD158e1, supporting NK identity with proliferation.",NK Proliferating,"Strong expression of cytotoxic genes (GNLY, NKG7, GZMA/B/H, PRF1, CST7) combined with many cell cycle/proliferation markers (MKI67, STMN1, TYMS, PCLAF, TOP2A) indicates an actively dividing NK cell. Surface markers show high CD8a, CD3, CD62P, and NK receptor CD158e1, supporting NK identity with proliferation.",0
+111113,E2L4_TCATGTTCAACTCATG,CD8 TCM,"CD8 TCM
+The profile shows high expression of CD8A/B, CD3, and T cell receptor components, alongside IL7R (CD127), CD27, TCF7, and lower CCR7, which are hallmarks of CD8+ central memory T cells. Surface proteins confirm CD8, CD3, CD27, CD127, and memory markers CD103 and CD49a, arguing against a naive or effector phenotype.",CD8 TCM,"The profile shows high expression of CD8A/B, CD3, and T cell receptor components, alongside IL7R (CD127), CD27, TCF7, and lower CCR7, which are hallmarks of CD8+ central memory T cells. Surface proteins confirm CD8, CD3, CD27, CD127, and memory markers CD103 and CD49a, arguing against a naive or effector phenotype.",1
+121565,E2L5_GTGAGCCTCGGTGTAT,CD8 TEM,CD8 TEM,CD8 TEM,,1
+122977,E2L5_TCATGCCCATGACAAA,Doublet,"Platelet
+
+Top genes (PPBP, PF4, TUBB1, GP9, ITGA2B) and surface proteins (CD62P, CD41, CD42b, CD61, CLEC2) are canonical platelet markers in PBMC.",Platelet,"Top genes (PPBP, PF4, TUBB1, GP9, ITGA2B) and surface proteins (CD62P, CD41, CD42b, CD61, CLEC2) are canonical platelet markers in PBMC.",0
+43050,L4_CATAGACTCTCTTGCG,Eryth,"Eryth
+
+The gene expression profile is dominated by erythroid-specific markers including AHSP, ALAS2, GYPA, GYPB, EPB42, and BPGM, which are essential for hemoglobin synthesis and red blood cell development. Surface proteins CD71 (transferrin receptor) and CD235ab (glycophorin A/B) are classic erythroid markers, confirming identity as erythroid cells.",Eryth,"The gene expression profile is dominated by erythroid-specific markers including AHSP, ALAS2, GYPA, GYPB, EPB42, and BPGM, which are essential for hemoglobin synthesis and red blood cell development. Surface proteins CD71 (transferrin receptor) and CD235ab (glycophorin A/B) are classic erythroid markers, confirming identity as erythroid cells.",1
+10685,L1_TCACATTCACACTGGC,HSPC,"HSPC
+High expression of CD34, CD117, CD133, and progenitor genes (SOX4, GATA2, MYB) indicate hematopoietic stem/progenitor cells.",HSPC,"High expression of CD34, CD117, CD133, and progenitor genes (SOX4, GATA2, MYB) indicate hematopoietic stem/progenitor cells.",1
+139519,E2L7_AGGGCTCAGATACTGA,ILC,"gdT
+
+The top markers include TRDC, TRGC1, TRGC2, KLRB1, and CD117 (KIT), which are characteristic of gamma delta (γδ) T cells. The expression of IL7R, GATA3, and activation markers like CD69 supports this identification.",gdT,"The top markers include TRDC, TRGC1, TRGC2, KLRB1, and CD117 (KIT), which are characteristic of gamma delta (γδ) T cells. The expression of IL7R, GATA3, and activation markers like CD69 supports this identification.",0
+50441,L4_TCTTCCTTCTGGTGCG,MAIT,"MAIT
+This profile is characteristic of MAIT cells, with high expression of KLRB1 (CD161), SLC4A10, IL7R, GZMK, NKG7, and IL18R. Surface proteins show CD8a and CD4, but MAIT cells are typically CD8+ or double-negative. The presence of cytotoxic molecules and transcription factors like RORC further supports MAIT identity.",MAIT,"This profile is characteristic of MAIT cells, with high expression of KLRB1 (CD161), SLC4A10, IL7R, GZMK, NKG7, and IL18R. Surface proteins show CD8a and CD4, but MAIT cells are typically CD8+ or double-negative. The presence of cytotoxic molecules and transcription factors like RORC further supports MAIT identity.",1
+90640,E2L3_AAAGAACCACGGCGTT,NK,NK,NK,,1
+58892,L5_CTCCTTTGTCAGTTTG,NK Proliferating,"gdT
+
+The gene expression features TRDC (TCR delta) along with cytotoxic markers (GNLY, GZMB, PRF1, NKG7) and proliferation genes (MKI67, STMN1, TOP2A) plus NK receptors (KLRD1, KLRF1, KLRC1). ADT markers show high CD8a, CD16, and CD158e1 (KIR), consistent with activated gamma-delta T cells.",gdT,"The gene expression features TRDC (TCR delta) along with cytotoxic markers (GNLY, GZMB, PRF1, NKG7) and proliferation genes (MKI67, STMN1, TOP2A) plus NK receptors (KLRD1, KLRF1, KLRC1). ADT markers show high CD8a, CD16, and CD158e1 (KIR), consistent with activated gamma-delta T cells.",0
+32452,L3_CTGAGCGAGGAGACCT,NK_CD56bright,"gdT
+
+The top genes include TRDC, TRGC1, and TRGC2, which are specific to gamma-delta T cells. Additionally, high expression of GNLY, NKG7, KLRD1, GZMK, and PRF1 indicates cytotoxic effector function, consistent with gdT cells. Surface proteins show CD56 and CD244, also common on gdT cells.",gdT,"The top genes include TRDC, TRGC1, and TRGC2, which are specific to gamma-delta T cells. Additionally, high expression of GNLY, NKG7, KLRD1, GZMK, and PRF1 indicates cytotoxic effector function, consistent with gdT cells. Surface proteins show CD56 and CD244, also common on gdT cells.",0
+144357,E2L7_GCACGGTTCCGCGGAT,Plasmablast,Plasmablast,Plasmablast,,1
+137082,E2L6_TTCCGGTGTGAGGCAT,Platelet,"Platelet
+
+The top genes include PPBP, PF4, GP9, ITGA2B, and ITGB3, which are classic platelet markers. Surface proteins such as CD62P, CD41, CD42b, and CD61 further confirm platelet identity. This profile is highly specific to platelets.",Platelet,"The top genes include PPBP, PF4, GP9, ITGA2B, and ITGB3, which are classic platelet markers. Surface proteins such as CD62P, CD41, CD42b, and CD61 further confirm platelet identity. This profile is highly specific to platelets.",1
+56652,L5_CAGTTCCAGGGCAAGG,Treg,"Treg
+
+The top genes include FOXP3, TIGIT, IL2RA (CD25), and CTLA4, which are classic markers for regulatory T cells. Surface protein CD25 and CD4 are highly expressed, consistent with Treg phenotype.",Treg,"The top genes include FOXP3, TIGIT, IL2RA (CD25), and CTLA4, which are classic markers for regulatory T cells. Surface protein CD25 and CD4 are highly expressed, consistent with Treg phenotype.",1
+63633,L5_TATTCCATCTTTCTAG,cDC1,"cDC1
+
+High expression of CLEC9A, XCR1, BATF3, CADM1, and DNASE1L3, along with CD141 surface protein, is characteristic of conventional type 1 dendritic cells (cDC1).",cDC1,"High expression of CLEC9A, XCR1, BATF3, CADM1, and DNASE1L3, along with CD141 surface protein, is characteristic of conventional type 1 dendritic cells (cDC1).",1
+134605,E2L6_TACTGCCTCGATTGAC,cDC2,cDC2,cDC2,,1
+49206,L4_TATCTGTTCATCCTAT,dnT,"CD4 CTL
+High expression of CD4, T cell markers (CD3, CD27, CD28) and cytotoxic granzymes GZMK/GZMA indicates CD4+ cytotoxic T lymphocytes (CTL), a specialized effector memory subset.",CD4 CTL,"High expression of CD4, T cell markers (CD3, CD27, CD28) and cytotoxic granzymes GZMK/GZMA indicates CD4+ cytotoxic T lymphocytes (CTL), a specialized effector memory subset.",0
+88159,E2L2_TCCAGAAAGAGTTGAT,gdT,"gdT
+High expression of gamma-delta TCR genes (TRDC, TRGC1/2) and cytotoxic molecules (GNLY, GZMA/B/H/MK, PRF1) along with CD3 and CD8a surface markers identifies this as a gamma-delta T cell.",gdT,"High expression of gamma-delta TCR genes (TRDC, TRGC1/2) and cytotoxic molecules (GNLY, GZMA/B/H/MK, PRF1) along with CD3 and CD8a surface markers identifies this as a gamma-delta T cell.",1
+89140,E2L2_TGCATGACATGTCAGT,pDC,pDC,pDC,,1

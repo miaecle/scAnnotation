@@ -1,0 +1,1321 @@
+# Stage-2 Precomputed Programs
+
+- tissue: nose
+- n_program_genes: 50
+- n_cached_cell_types: 37
+
+## acinar cell
+
+### Ductal cell
+
+Description: Epithelial cells lining the conduits of nasal submucosal glands that modify the ionic composition of primary saliva/mucus secretions.
+
+Genes:
+- KRT19, KRT18, KRT8, KRT7, S100A14, S100A16, EPCAM, CD24, SOX9, CFTR, CLDN3, CLDN4
+- CLDN10, SLC4A4, SLC26A6, CA2, CA12, LCN2, MMP7, ANXA2
+
+### Mucous acinar cell
+
+Description: Secretory cells of the nasal submucosal glands specialized in synthesizing and secreting high-molecular-weight gel-forming mucins to trap inhaled pathogens.
+
+Genes:
+- MUC5B, MUC5AC, GALNT12, B3GNT6, SPDEF, AGR2, TFF1, TFF3, FCGBP, CLCA1, ST3GAL5, GAL3ST2
+- ZG16B, GP2, BPIFB2, SST, GCNT3, SIAE, FAM3D, TXNDC5
+
+### Myoepithelial cell
+
+Description: Contractile cells wrapping around nasal gland acini that express smooth muscle markers and facilitate the expulsion of secretory products into the ducts.
+
+Genes:
+- ACTA2, MYLK, MYH11, CNN1, TP63, KRT5, KRT14, DST, CALD1, TAGLN, S100A4, OXTR
+- ITGA6, COL4A1, COL4A2, LAMA3, LAMB3, LAMC2, CAV1, MCAM
+
+### Serous acinar cell
+
+Description: Secretory cells of the nasal submucosal glands that produce watery, protein-rich fluids containing antimicrobial enzymes like lactoferrin and lysozyme.
+
+Genes:
+- LTF, LCN2, ODAM, BPIFA1, BPIFB1, PRR4, PRB1, PRB2, PRB3, PRB4, SEC14L3, PIP
+- AZGP1, CST3, CST4, DMBT1, MUC7, PIGR, SOX10, SCGB1A1, SCGB2A2, LYZ, LACRT, SMR3B
+- SMR3A
+
+## alveolar adventitial fibroblast
+
+### nasal_lamina_propria_fibroblast
+
+Description: Resident mesenchymal cells of the nasal mucosa lamina propria that provide structural support and extracellular matrix remodeling in the upper airway.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, FBLN1, FAP, PDGFRB, TCF21, POSTN, MMP2, ALDH1A2
+- CD34, THY1, MFAP5, S100A4, ACTA2, TAGLN, MYLK, CALD1, COL6A1, COL6A2, FN1, SPARC
+
+### nasal_pericyte
+
+Description: Perivascular mural cells wrapping around nasal capillaries and post-capillary venules, crucial for regulating local blood flow and vascular permeability.
+
+Genes:
+- MCAM, PDGFRB, CSPG4, RGS5, ABCC9, KCNJ8, VTN, ACTA2, TAGLN, MYH11, HEG1, NDUFA4L2
+- GJA4, COX4I2, HIGD1B, PECAM1, CD34, ENG, NOTCH3, PDGFA
+
+### nasal_vascular_smooth_muscle_cell
+
+Description: Contractile mural cells surrounding larger nasal arterioles and venules, responsible for regulating vascular tone and mucosal congestion.
+
+Genes:
+- MYH11, ACTA2, TAGLN, CNN1, LMOD1, MYOCD, DES, TPM1, TPM2, CALD1, PLN, SLMAP
+- CASQ2, PDGFRB, MCAM, RGS5, NOTCH3, COL4A1, COL4A2, HSPG2
+
+## alveolar macrophage
+
+### Microfold-like (M-like) Epithelial Cells
+
+Description: Specialized nasal epithelial cells involved in antigen sampling and mucosal immunity that share morphological and endocytic properties with macrophages.
+
+Genes:
+- GP2, SPIB, SOX8, CCL20, TNFAIP2, MARCKSL1, MYO1E, S100A4, S100A6, KRT8, KRT18, CLDN4
+- PSTPIP2, FCHSD2, ANXA1, ANXA2, CD9, CD24, ELF3, UHRF1
+
+### Monocyte-derived Dendritic Cells
+
+Description: Antigen-presenting cells in the nasal mucosa that bridge innate and adaptive immunity, frequently showing overlapping transcriptional profiles with activated nasal macrophages.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, CD86, CD80, CCR7, FSCN1, CCL19, CCL22, LAMP3
+- IL3RA, CLEC4C, NRP1, PLD4, TCF4, LILRA4, PACSIN1, APP
+
+### Nasal Macrophages
+
+Description: Resident myeloid cells of the nasal mucosa that phagocytose debris and orchestrate local immune responses, often misannotated as alveolar macrophages due to shared core macrophage signatures.
+
+Genes:
+- CD68, CSF1R, C1QA, C1QB, C1QC, APOE, APOC1, CD163, MRC1, MS4A4A, CTSB, CTSD
+- LGALS3, AIF1, TYROBP, FCER1G, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD14, FCGR3A, LYZ, GRN
+
+### Non-classical Monocytes
+
+Description: Patrolling myeloid cells within the highly vascularized nasal mucosa that express high levels of CD16 and can be confused with tissue-resident macrophages during tissue dissociation.
+
+Genes:
+- FCGR3A, CX3CR1, LST1, AIF1, FTL, FTH1, COTL1, S100A8, S100A9, S100A12, LYN, HCK
+- FGR, CEBPB, RHOC, IFITM2, IFITM3, CD300C, SIGLEC10, C5AR1
+
+## b cell
+
+### Memory B cell
+
+Description: Antigen-experienced B cells that persist long-term in the nasal mucosa, characterized by CD27 expression and primed for rapid antibody production upon pathogen re-encounter.
+
+Genes:
+- CD27, AIM2, TNFRSF13B, CLECL1, CD80, CD86, CD1c, TXNIP, COBLL1, FCRL1, FCRL3, FCRL5
+- GPR18, ITGB2, MARCKS, S100A4, S100A6, CD44, AHNAK, ZBTB32
+
+### Naive B cell
+
+Description: Mature, antigen-naive B lymphocytes expressing membrane-bound IgM and IgD, which traffic through nasal-associated lymphoid tissues to initiate primary immune responses.
+
+Genes:
+- MS4A1, CD19, CD79A, CD79B, BACH2, CXCR4, IL4R, TCL1A, FCER2, IGHD, IGHM, SELL
+- CCR7, BTG1, CD22, CD24, CD72, BLNK, PLD4, HVCN1, SWAP70, LINC00926
+
+### Plasma cell
+
+Description: Terminally differentiated antibody-secreting cells abundant in the nasal lamina propria, dedicated to producing large quantities of secretory IgA and IgG to neutralize mucosal pathogens.
+
+Genes:
+- MZB1, PRDM1, XBP1, IRF4, CD38, SDC1, SLAMF7, FKBP11, SEC61A1, SSR4, DERL3, HERPUD1
+- MANF, TXNDC5, CREB3L2, IGHA1, IGHA2, IGHG1, IGHG2, IGKC, IGLC2, IGLC3, JCHAIN
+
+### Plasmacytoid Dendritic Cell
+
+Description: A specialized dendritic cell subset frequently confused with B/plasma cells due to shared expression of markers like CD4 and JCHAIN, crucial for producing type I interferons in response to nasal viral infections.
+
+Genes:
+- LILRA4, CLEC4C, PTGDS, GZMB, TCF4, IRF7, IRF8, IL3RA, NRP1, PLD4, PACSIN1, MAP1A
+- APP, SOX4, SPIB, BCL11A, RUNX2, SCAMP5, SERPINF1, ITM2C
+
+## bronchial goblet cell
+
+### ionocyte
+
+Description: A rare, specialized nasal epithelial cell type crucial for pH and fluid regulation, characterized by high expression of FOXI1, CFTR, and vacuolar ATPase subunits.
+
+Genes:
+- FOXI1, CFTR, ASGR1, ATP6V1B1, ATP6V1G3, ATP6V0D2, BSND, CLCNKB, SCNN1G, IGFBP2, S100A14, FXYD3
+- TMEM61, ALDH1A3, KRT19, SPINK6, STAP1, LINC00968, C1orf116, HES6
+
+### nasal goblet cell
+
+Description: The canonical secretory goblet cell of the nasal mucosa, characterized by high expression of mucins like MUC5AC and MUC5B, and regulated by the transcription factor SPDEF.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, GPX2, TFF3, TFF1, AGR2, BPIFA1, BPIFB1, S100A8, S100A9, LCN2
+- SLPI, WFDC2, PIGR, GALNT2, ST3GAL1, MUC16, CEACAM5, KRT8, KRT18, CLCA1, FCGBP, PLA2G10
+- ALDH3A1
+
+### nasal multiciliated cell
+
+Description: A major neighboring epithelial cell type in the nasal cavity responsible for mucociliary clearance, characterized by motile cilia genes and the master transcription factor FOXJ1.
+
+Genes:
+- FOXJ1, TPPP3, CAPS, SNTN, RSPH4A, RSPH1, DNAH5, DNAH11, DNAI1, DNAI2, TEKT2, TEKT4
+- CCDC39, CCDC40, SPEF2, PIFO, ODF2, CETN2, C21orf59, EFHC1, GAS8, DYX1C1, LRRC6, ARMC4
+
+### nasal transitional epithelial cell
+
+Description: An intermediate epithelial cell state in the nasal passage bridging the squamous anterior nares and the pseudostratified ciliated respiratory epithelium, expressing specific keratins like KRT4 and KRT13.
+
+Genes:
+- KRT4, KRT13, KRT19, KRT8, KRT18, S100A2, CLDN4, DSP, JUP, PKP3, BPIFA1, LCN2
+- SLPI, MAL, TMPRSS2, S100A14, S100A16, IVL, SPRR1B, SPRR3
+
+## bronchus fibroblast of lung
+
+### nasal_chondrocyte
+
+Description: Specialized extracellular matrix-producing cells of the nasal septal and alar cartilages, often co-isolated or confused with deep lamina propria fibroblasts during nasal biopsies.
+
+Genes:
+- COL2A1, COL9A1, COL9A2, COL11A2, ACAN, SOX9, SOX5, SOX6, COMP, CRTAC1, MATN3, HAPLN1
+- WWP2, CDRAP, SCRG1, PRG4, CHAD, OMD, FMOD, SPRY1
+
+### nasal_lamina_propria_fibroblast
+
+Description: Resident mesenchymal cells of the nasal mucosa lamina propria that synthesize extracellular matrix components and provide structural support to the nasal epithelium.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, FBLN1, FAP, PDGFRB, ACTA2, TAGLN, POSTN, MMP2
+- MMP11, COL6A1, COL6A2, COL6A3, SPARC, BGN, MFAP5, S100A4, VIM, FN1, THY1, ALDH1A1
+- CD34
+
+### nasal_mucosal_myofibroblast
+
+Description: Activated contractile fibroblasts expressing high levels of alpha-smooth muscle actin, involved in tissue remodeling, wound healing, and chronic inflammatory responses in the nasal passage.
+
+Genes:
+- ACTA2, TAGLN, MYH11, CNN1, TPM1, TPM2, POSTN, TNC, COL12A1, COL11A1, FN1, SPARC
+- CTGF, TGFB1, TGFB2, SMAD3, IL6, CXCL8, MMP1, MMP3, MMP9, TIMP1
+
+### nasal_pericyte
+
+Description: Contractile mural cells wrapping around nasal mucosal capillaries and post-capillary venules, crucial for regulating local blood flow and vascular permeability.
+
+Genes:
+- MCAM, PDGFRB, CSPG4, RGS5, KCNJ8, ABCC9, ACTA2, TAGLN, MYLK, MYH11, VTN, HEG1
+- NDUFA4L2, COX4I2, GJA4, GJA5, PECAM1, CD34, ENG, VWF
+
+## brush cell of tracheobronchial tree
+
+### Microvillous cell (sustentacular-associated)
+
+Description: A non-villous chemosensory cell type of the olfactory epithelium that shares morphological and transcriptional features with respiratory tuft cells but expresses distinct metabolic and neuroendocrine markers like NPY.
+
+Genes:
+- TRPM5, PLCG2, POU2F3, ASCL3, IL25, IL17RB, KRT18, KRT8, NPY, EZR, RDH12, ALDH1A1
+- GPX6, CYP2A13, CYP2G1P, GSTP1, UGT2A1, S100A1, S100A6, S100A11, CD24, SOX2, HES1
+
+### Neuroendocrine cell (PNEC)
+
+Description: A rare epithelial cell type in the respiratory tract that shares secretory, sensory, and neuroendocrine markers with peptidergic tuft cells, leading to frequent annotation confusion.
+
+Genes:
+- CHGA, CHGB, SCG2, ASCL1, CALCA, GRP, GHRL, PCSK1, SYP, INSM1, NCAM1, SST
+- TPH1, DDC, FEV, VMAT1, SLC18A1, BEX1, PROX1, HES6
+
+### Olfactory sensory neuron (immature/mature)
+
+Description: A neighboring neuroepithelial cell type in the nasal cavity often confused with tuft cells due to shared expression of sensory transduction machinery, cytoskeletal elements, and proximity in the olfactory mucosa.
+
+Genes:
+- OMP, GNG8, GNAL, ADCY3, CNGA2, CNGB1, GAP43, TUBB3, STMN2, MAP2, NCAM1, SOX11
+- NEFH, NEFL, ELAVL3, ELAVL4, SYT1, SNAP25, RTP1, RTP2, REEP1, LHX2, NEUROD1
+
+### Tuft cell (brush cell) type 1 (sensory/eicosanoid)
+
+Description: A specialized chemosensory epithelial cell subtype in the nasal mucosa characterized by active eicosanoid biosynthesis, taste transduction machinery, and the production of IL25 to initiate type 2 immune responses.
+
+Genes:
+- TRPM5, GNAT3, PLCG2, ALOX5, ALOX5AP, LTC4S, HPGDS, BMX, POU2F3, AVIL, GNG13, ADCY2
+- PIK3CG, PTGS1, PTGDS, SOX9, KRT18, KRT8, SH2D6, LRMP, SPIB, IL25, IL17RB, DRD2
+- TAS1R3
+
+### Tuft cell (brush cell) type 2 (neuroendocrine/peptidergic)
+
+Description: A sensory tuft cell subtype in the nasal cavity that utilizes acetylcholine and neuropeptides like neuromedin U and CGRP to communicate directly with adjacent sensory nerve fibers.
+
+Genes:
+- TRPM5, POU2F3, CHAT, ACHE, CGRP, CALCA, NMU, TAC1, HAMP, ASCL2, SOX9, KRT18
+- KRT8, AVIL, GNAT3, GNG13, ADCY8, SCG2, CHGA, VAMP1, SNAP25, SYN1, CACNA1A, CACNA1C
+
+## cd1c-positive myeloid dendritic cell
+
+### CD1c+ CD1a+ Langerhans-like dendritic cells
+
+Description: A subset of CD1c+ dendritic cells in the nasal mucosa that express Langerhans cell markers like CD1a and Langerin (CD207) due to the local epithelial microenvironment.
+
+Genes:
+- CD1C, CD1A, CD207, EPCAM, CLDN1, KRT19, RUNX3, ID2, IL1R2, ANXA1, S100A8, S100A9
+- S100A12, CD1E, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, HLA-DRB1, CD2, CX3CR1, ITGAX, ZBTB46, LCN2
+
+### CD1c+ inflammatory myeloid dendritic cells
+
+Description: An inflammatory state of CD1c+ classical dendritic cells recruited to the nasal mucosa during allergic or infectious insults, sharing features with monocyte-derived cells.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, S100A9, S100A8, LYZ, FCN1, VCAN, CD14, ITGAM, CCR2, CX3CR1
+- IL1B, TNF, CCL3, CCL4, CXCL8, NFKB1, JUN, FOS, IER3, EGR1, SOD2
+
+### Monocyte-derived dendritic cells (moDCs)
+
+Description: Inflammatory antigen-presenting cells derived from infiltrating monocytes that highly overlap in marker expression with CD1c+ dendritic cells in inflamed nasal tissue.
+
+Genes:
+- CD14, FCGR3A, ITGAM, S100A9, S100A8, LYZ, FCN1, VCAN, CD1C, FCER1A, CLEC10A, HLA-DQA1
+- CD86, CD80, CCR7, MMP9, CHI3L1, IL1B, CXCL8, MAFB, MNDA
+
+### Plasmacytoid dendritic cells (pDCs)
+
+Description: A distinct lineage of dendritic cells specialized in producing Type I Interferons in response to viral pathogens in the nasal cavity, occasionally confused with myeloid DCs in low-resolution clustering.
+
+Genes:
+- LILRA4, CLEC4C, PTGDS, GZMB, TCF4, IRF7, IRF8, IL3RA, NRP1, PLD4, SCT, PACSIN1
+- MAP1A, APP, DERL3, MZB1, SEC61A1, TXNDC5, JCHAIN, SPIB
+
+## cd4-positive, alpha-beta t cell
+
+### CD4+ Naive T cell
+
+Description: Naive CD4+ T cells circulating through nasal mucosal lymphoid tissues, characterized by high expression of lymph node homing receptors and transcription factors maintaining a non-differentiated state.
+
+Genes:
+- CCR7, SELL, LEF1, TCF7, NOSIP, MAL, CD27, IL7R, TXNIP, EEF1A1, RPS27, RPL13
+- BTG1, MYC, LDHB, CD3D, CD3E, CD3G, CD4, FLT3LG, GIMAP5, GIMAP7
+
+### CD4+ Tissue-Resident Memory T cell (Trm)
+
+Description: Tissue-resident memory CD4+ T cells residing permanently in the nasal mucosa to provide rapid, localized immunosurveillance against inhaled pathogens.
+
+Genes:
+- CD69, ITGA1, CXCR6, IL7R, Icos, DUSP6, FOS, JUN, JUNB, ZFP36, IER3, GADD45B
+- ANXA1, CD52, RGS1, RGS2, KLRB1, LTB, TNFSF14, IFNG, TNF, IL2
+
+### Group 2 Innate Lymphoid Cell (ILC2)
+
+Description: A closely related, transcriptionally similar non-T cell lineage in the nasal mucosa that lacks TCR but shares CD4-associated activation pathways and mediates type 2 allergic airway inflammation.
+
+Genes:
+- PTGDR2, IL1RL1, IL17RB, GATA3, AREG, IL5, IL13, HPGDS, LST1, AIF1, CD2, CD7
+- IL7R, RUNX3, ID2, PLCG2, ALOX5AP, ANXA1, S100A4, TMSB4X
+
+### Regulatory T cell (Treg)
+
+Description: Immunosuppressive CD4+ T cells essential for maintaining immune tolerance to inhaled environmental allergens and preventing chronic inflammation in the nasal mucosa.
+
+Genes:
+- FOXP3, IL2RA, IKZF2, CTLA4, TIGIT, TNFRSF4, TNFRSF18, BATF, PRDM1, IL10, TGFB1, LRRC32
+- ENTPD1, CD4, RTKN2, FCRL3, GPI, S100A4, S100A6, ANXA2
+
+### T helper 17 cell (Th17)
+
+Description: Helper CD4+ T cells specialized in mucosal defense against extracellular bacteria and fungi in the nasal cavity through the recruitment of neutrophils.
+
+Genes:
+- RORC, IL17A, IL17F, IL22, CCR6, KLRB1, CCL20, IL23R, SGK1, FURIN, CTSH, AHR
+- MAF, CD4, CAPG, S100A11, S100A10, VIM, LGALS1, LGALS3
+
+## cd8-positive, alpha-beta t cell
+
+### Gamma-delta T cell (gdT)
+
+Description: Innate-like T cells expressing gamma-delta T-cell receptors that patrol the nasal epithelium, bridging innate and adaptive immunity without strict MHC restriction.
+
+Genes:
+- TRDC, TRGC1, TRGC2, TRDV1, TRDV2, KLRG1, KLRC1, KLRD1, NKG7, GNLY, GZMA, GZMB
+- CD160, CD244, TYROBP, FCER1G, ZBTB16, SOX13, CD8A, CD8B, CD3E, CD3D, LAT, LCK
+
+### Mucosal-associated invariant T (MAIT) cell
+
+Description: Innate-like T cells abundant in mucosal barriers like the nose, recognizing microbial riboflavin metabolites presented by MR1 and expressing high levels of KLRB1 and SLC4A10.
+
+Genes:
+- TRAV1-2, KLRB1, SLC4A10, ZBTB16, RORC, IL23R, NCR3, CD161, GZMK, FASLG, IL18RAP, DPP4
+- CXCR6, CCR6, ANXA1, CD8A, CD8B, CD3E, CD3D, RUNX3, TNF, IFNG, CCL3, CCL4
+
+### Natural Killer (NK) cell
+
+Description: Innate lymphoid cells that share cytotoxic machinery and phenotypic markers with CD8+ T cells, often confused in transcriptomic analyses due to shared expression of granzymes, perforin, and killer receptors.
+
+Genes:
+- NCAM1, NCR1, NCR3, FCGR3A, KLRF1, KLRC1, KLRD1, NKG7, GNLY, PRF1, GZMB, GZMA
+- CD160, EOMES, TBX21, RUNX3, SPON2, FGFBP2, CST7, CLIC3, HOPX, S1PR5, IL2RB
+
+### Tissue-resident memory CD8+ T cell (Trm)
+
+Description: Resident memory CD8+ T cells localized within the nasal mucosa, characterized by high expression of retention markers like CD103 and CD69, providing rapid localized protection.
+
+Genes:
+- CD8A, CD8B, CD103, ITGAE, CD69, CXCR6, CRTAM, DUSP6, SPRRY1, ZNF683, HOBIT, RUNX3
+- IL7R, CD2, CD3D, CD3E, CD3G, CCL5, GZMB, GZMK, IFNG, TNF, FOS, JUN
+- JUNB, DUSP1, IER2, ATF3
+
+## classical monocyte
+
+### CD14+ CD16- Classical Monocyte
+
+Description: The canonical classical monocyte subtype recruited to nasal mucosal sites of inflammation, characterized by high expression of S100 alarmins and chemotactic receptors.
+
+Genes:
+- CD14, S100A8, S100A9, S100A12, FCN1, VCAN, LYZ, CD300E, CLEC12A, IL1B, CXCL8, FPR1
+- FPR2, CSF3R, NAMPT, IFITM3, GRN, CD44, SELL, S100A4, S100A6, LGALS1, LGALS3, CSTA
+- TYROBP
+
+### Intermediate Monocyte
+
+Description: A transitional monocyte population in the nasal mucosa expressing both CD14 and CD16, with marked upregulation of antigen presentation machinery.
+
+Genes:
+- CD14, FCGR3A, HLA-DRA, HLA-DRB1, HLA-DPB1, HLA-DPA1, CD74, MARCO, CD86, ITGAX, Ahnak, S100A11
+- CAPG, GIMAP4, GIMAP7, LITAF, ZNFX1, IFI30, LYN, SOD2
+
+### Monocyte-Derived Dendritic Cell
+
+Description: Inflammatory dendritic cells arising from classical monocytes in the nasal mucosa during immune challenge, characterized by high antigen-presentation capacity and specific dendritic cell markers.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, CD1E, CD207, CD80, CD83, CCR7, FSCN1, CCL17
+- CCL22, IRF4, ZBTB46, BATF3, FLT3, KIT, CD2, CXCR4
+
+### Nasal Mucosal Macrophage
+
+Description: Fully differentiated tissue-resident macrophages of the nasal mucosa that can be confused with classical monocytes but are distinguished by high expression of complement components, scavenger receptors, and lysosomal enzymes.
+
+Genes:
+- APOE, C1QA, C1QB, C1QC, CD163, MRC1, MSR1, CD68, CSF1R, CTSB, CTSD, GPX1
+- PLD3, C5AR1, FOLR2, SEPP1, MS4A4A, CD209, VSIG4, MAFB
+
+### Non-Classical Monocyte
+
+Description: A patrolling monocyte subset found in the nasal vasculature and tissue margins, involved in endothelial surveillance and expressing high levels of CD16 (FCGR3A) and CX3CR1.
+
+Genes:
+- FCGR3A, CX3CR1, LST1, AIF1, MS4A7, COTL1, IFITM2, FTL, FTH1, CD300C, HMOX1, C1QA
+- C1QB, C1QC, SIGLEC10, RHOC, ACTB, PECAM1, CSF1R, ITGAL
+
+## club cell
+
+### Ciliated cell
+
+Description: Terminally differentiated epithelial cells possessing motile cilia responsible for mucociliary clearance, which can be confused with club cells during transitional pre-ciliated states.
+
+Genes:
+- CAPS, FOXJ1, TPPP3, SNTN, RSPH4A, RSPH9, DNAH5, DNAH11, DNAI1, DNAI2, CCDC39, CCDC40
+- PIFO, TEKT2, TEKT4, C21orf59, ODF2, CETN2, EFHC1, GAS8, SPEF2, CFAP43, CFAP44, CCDC113
+
+### Club cell
+
+Description: Secretory cells of the airway epithelium that produce uteroglobins, host defense proteins, and xenobiotic-metabolizing enzymes to protect the mucosal surface.
+
+Genes:
+- SCGB1A1, SCGB3A1, SCGB3A2, CYP2F1, BPIFA1, BPIFB1, ALDH1A3, ALDH3A1, GSTP1, GPX2, S100A9, S100A8
+- SLPI, WFDC2, MUC5B, SERPINB3, KRT4, KRT19, CXCL17, CEACAM5, TFF3, PIGR, LCN2, LTF
+
+### Deuterosomal cell
+
+Description: A rare, transient precursor cell state undergoing massive centriole amplification prior to differentiating into a mature ciliated cell, sharing some transitional secretory markers.
+
+Genes:
+- CCNO, CDC20B, DEUP1, FOXJ1, PLK4, SASS6, CENPF, CEP152, CEP78, MCIDAS, MYB, TP73
+- NEK2, STIL, E2F5, CALM1, CETN3, H4C3, PCNA, MKI67
+
+### Goblet cell
+
+Description: Mucus-secreting cells of the nasal epithelium characterized by high expression of mucins and anterior gradient proteins, often confused with club cells due to shared secretory machinery.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, AGR2, TFF1, TFF3, FCGBP, BPIFA1, CLCA1, ZG16B, GPX2, S100A14
+- GALNT2, CREB3L1, TENT5C, JCHAIN, PIGR, LCN2, SLPI, MUC16, SST, TSPAN8
+
+## conventional dendritic cell
+
+### Monocyte-derived dendritic cell (moDC)
+
+Description: Inflammatory antigen-presenting cells that differentiate from recruited monocytes in the nasal mucosa during inflammation, sharing overlapping markers with both cDC2s and macrophages.
+
+Genes:
+- CD14, FCGR3A, S100A8, S100A9, S100A12, FCN1, VCAN, LYZ, CD68, ITGAM, CSF1R, MAFB
+- MNDA, CD300E, CD163, MRC1, C5AR1, IL1B, TNF, CXCL8, NLRP3, FPR1
+
+### Plasmacytoid dendritic cell (pDC)
+
+Description: A distinct dendritic cell lineage frequently confused with cDCs, specialized in rapid and massive production of type I interferons in response to nasal viral infections.
+
+Genes:
+- LILRA4, CLEC4C, PTGDS, TCF4, IRF7, IL3RA, NRP1, PLD4, GZMB, SCT, PACSIN1, MAP1A
+- APP, SPIB, BCL11A, RUNX2, LAMP5, SERPINF1, ITM2C, SPIB, SOX4, TXNIP
+
+### cDC1 (conventional dendritic cell type 1)
+
+Description: A specialized lineage of conventional dendritic cells in the nasal mucosa dedicated to cross-presentation of viral and intracellular antigens to CD8+ T cells.
+
+Genes:
+- CLEC9A, XCR1, CADM1, WDFY4, BATF3, IRF8, IDO1, FLT3, CPVL, C1orf54, S100A4, CLNK
+- APP, DPP4, GPR141, S100B, PTPN22, ANPEP, BTLA, CD244, LY75, B3GAT1
+
+### cDC2 (conventional dendritic cell type 2)
+
+Description: The major population of conventional dendritic cells in the nasal mucosa, highly efficient at MHC class II antigen presentation and priming CD4+ T helper cell responses.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, SIRPA, CD1E, CD2, CX3CR1, IRF4, ZEB2, HLA-DQA1, HLA-DQB1, HLA-DPA1
+- HLA-DPB1, CD1A, CD1B, RUNX3, PLD4, IL12B, CCR7, CCL22, CD80, CD86
+
+## dendritic cell
+
+### Alveolar-like/Tissue-resident Macrophage
+
+Description: A neighboring myeloid cell type in the nasal passages often confused with dendritic cells, characterized by high phagocytic capacity and expression of scavenger receptors.
+
+Genes:
+- CD163, MRC1, MSR1, C1QA, C1QB, C1QC, APOE, APOC1, CD68, CSF1R, MAFB, FABP4
+- MARCO, SIGLEC1, VSIG4, FOLR2, SEPP1, LYVE1, CD209, MS4A4A, C5AR1, TREM2
+
+### Monocyte-derived Dendritic Cell (moDC)
+
+Description: Inflammatory myeloid cells recruited to the nasal mucosa during infection or allergy that share phenotypic markers with both monocytes and conventional dendritic cells.
+
+Genes:
+- CD14, FCGR3A, S100A12, FCN1, VCAN, LYZ, CD1D, ITGAM, S100A8, S100A9, MNDA, CSF3R
+- FPR1, CD300E, MAFB, NCF2, CLEC4D, IL1B, CXCL8, TNF
+
+### Plasmacytoid dendritic cell (pDC)
+
+Description: A specialized dendritic cell subtype in the nasal mucosa that produces massive amounts of type I interferons in response to viral pathogens.
+
+Genes:
+- LILRA4, CLEC4C, PTGDS, GZMB, TCF4, IRF7, IRF8, NRP1, IL3RA, MAP3K7IP2, PLD4, SCT
+- PACSIN1, SOX4, APP, DERL3, LAMP5, SPIB, BCL11A, RUNX2, TXNIP, C1orf186, ITM2C, SPCS3
+
+### cDC1 (Conventional dendritic cell type 1)
+
+Description: A dendritic cell subset specialized in cross-presenting intracellular and viral antigens to CD8+ T cells within the nasal lymphoid tissues.
+
+Genes:
+- CLEC9A, XCR1, CADM1, WDFY4, BATF3, IRF8, ID2, C12orf75, CPVL, CLNK, S100A4, APP
+- ANPEP, DPP4, FLT3, BTLA, GPR141, SNX22, PTPRK, KIF21B
+
+### cDC2 (Conventional dendritic cell type 2)
+
+Description: The major conventional dendritic cell subset in the nasal mucosa, highly efficient at MHC class II antigen presentation and priming CD4+ T helper cell responses.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, SIRPA, CD1E, HLA-DQA1, HLA-DQB1, ITGAX, ZEB2, IRF4, CX3CR1, COBLL1
+- PLD3, ENPP1, CD2, FCGR2A, S100A9, S100A8, CSF1R, C5AR1, LCN2, FCCN
+
+## elicited macrophage
+
+### Alveolar-like Macrophage (FABP4+)
+
+Description: A resident macrophage subset in the upper respiratory tract and nasal mucosa that shares transcriptional features with alveolar macrophages, characterized by high expression of lipid metabolism and scavenger receptor genes.
+
+Genes:
+- FABP4, MCEMP1, MARCO, MSR1, APOC1, APOE, CHIT1, LPL, CD5L, PPARG, PCOLCE2, C1QA
+- C1QB, C1QC, SFTPA1, SFTPB, SFTPD, ALDH1A1, CES1, TFRC, CD68, CD163, SIGLEC1
+
+### Inflammatory/Elicited Macrophage (S100A8/A9+)
+
+Description: An actively recruited, classical monocyte-derived macrophage population in the nasal mucosa that drives acute inflammatory responses through high expression of alarmins and pro-inflammatory cytokines.
+
+Genes:
+- S100A8, S100A9, S100A12, FCN1, VCAN, CD14, FCGR3A, LYZ, IL1B, TNF, CXCL8, CCL3
+- CCL4, NLRP3, EREG, PTGS2, SOD2, NAMPT, IFITM3, CD44, CLEC4D, CSF3R
+
+### Monocyte-Derived Dendritic Cell (mDC/moDC)
+
+Description: An antigen-presenting cell type frequently confused with elicited macrophages due to shared monocytic lineage markers, but distinguished by high expression of MHC class II molecules, costimulatory receptors, and dendritic cell-specific migration markers.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, HLA-DRB1, CD86, CD80, CCR7, FSCN1, CCL17, CCL22
+- IL12B, CD83, LAMP3, EBI3, NEU1, ITGAX, ZBTB46, IRF4
+
+### Non-classical Monocyte (FCGR3A+)
+
+Description: A patrolling myeloid population in the nasal vasculature and mucosal tissue that can be misidentified as elicited macrophages but is characterized by high FCGR3A (CD16) and CX3CR1 expression with lower classical inflammatory markers.
+
+Genes:
+- FCGR3A, CX3CR1, LST1, AIF1, MS4A7, FTL, FTH1, COTL1, IFITM2, IFITM3, HES4, RHOC
+- C1QA, C1QB, CSF1R, SIGLEC10, LILRB1, LILRB2, CD300E, SMIM25
+
+## endothelial cell of lymphatic vessel
+
+### blood vascular endothelial cell
+
+Description: Endothelial cells lining the blood vessels of the highly vascularized nasal mucosa, responsible for blood flow, thermoregulation, and humidification.
+
+Genes:
+- VWF, PECAM1, CD34, PLVAP, CLDN5, EMCN, ENG, ICAM1, SELE, SELPLG, NOS3, CDH5
+- KDR, FLT1, RAMP2, CALCRL, GJA4, GJA5, BMX, EFNB2, EPHB4, VCAM1, CXCL12, FBLN5
+- SPARCL1
+
+### lymphatic endothelial cell
+
+Description: Classic lymphatic endothelial cells forming the vessels that drain interstitial fluid and immune cells from the nasal mucosa.
+
+Genes:
+- PROX1, LYVE1, PDPN, FLT4, CCL21, TFPI, MMRN1, FABP4, ESM1, CALCRL, RAMP2, RAMP3
+- CLDN5, PECAM1, CD34, VWF, EMCN, GPR116, SOX18, ELENE, ANXA2, S100A4, CXCL12, IL7R
+- PTPRB
+
+### nasal mucosal fibroblast
+
+Description: Stromal cells of the nasal lamina propria that produce extracellular matrix and can be transcriptionally confused with endothelial cells due to shared mesenchymal markers.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, FBLN1, FAP, PDGFRB, PDGFRA, ACTA2, TAGLN, MYLK
+- POSTN, FN1, VIM, S100A4, ALDH1A1, MFAP5, THY1, CD34, APOD, MGP, SPARC, COL6A1
+- COL6A2
+
+## epithelial cell of lower respiratory tract
+
+### Basal cell of the respiratory epithelium
+
+Description: The primary progenitor cells of the nasal epithelium, residing on the basement membrane and characterized by the expression of TP63 and basal keratins.
+
+Genes:
+- TP63, KRT5, KRT14, KRT15, S100A2, DST, COL17A1, BCAM, ITGA6, SOX2, NGFR, EGFR
+- CXCL14, BNC1, F3, LAMB3, LAMC2, KRT17, ALDH3A1, GPX2, CD44, ANXA1
+
+### Ciliated cell of the nasal epithelium
+
+Description: Terminally differentiated epithelial cells possessing motile cilia responsible for mucociliary clearance in the nasal cavity.
+
+Genes:
+- CAPS, FOXJ1, TPPP3, SNTN, RSPH4A, RSPH1, DNAH5, DNAH11, DNAI1, DNAI2, TEKT2, TEKT4
+- C20orf85, CCDC39, CCDC40, PIFO, C1orf193, FAM183B, ODF2, TUBB4B, AK7, C9orf24, SPAG6, EFHC1
+
+### Goblet cell of the nasal epithelium
+
+Description: Secretory cells of the nasal mucosa specialized in producing and secreting mucins and antimicrobial proteins to trap inhaled pathogens and particulates.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, GPX6, TFF3, TFF1, AGR2, BPIFB1, BPIFA1, SCGB1A1, MUC2, FCGBP
+- CLCA1, REG4, S100A9, S100A8, WFDC2, SLPI, LCN2, PIGR
+
+### Ionocyte of the nasal epithelium
+
+Description: A rare, specialized epithelial cell type in the nasal mucosa that regulates fluid and pH balance via high expression of CFTR and vacuolar proton ATPases.
+
+Genes:
+- FOXI1, CFTR, ASGR1, ATP6V1B1, ATP6V0A4, BSND, CLCNKB, SCNN1G, KRT19, S100A14, TMEM229B, IL1RAPL2
+- LINC00968, FXYD3, ALDH1A3, CA12, SLC26A9, GSTA1, GSTA2, HSPB1
+
+### Olfactory sensory neuron
+
+Description: Bipolar sensory neurons located in the olfactory neuroepithelium of the upper nasal cavity, responsible for detecting odorants and transmitting signals to the olfactory bulb.
+
+Genes:
+- OMP, CNGB1, CNGA2, GNAL, ADCY3, STMN2, GAP43, TUBB3, NCAM1, LHX2, SOX11, CALM1
+- RTN1, ELAVL3, ELAVL4, MAP2, SNAP25, SYT1, GNG13, RIC3, ANO2, PDE1C
+
+## ionocyte
+
+### Ionocyte
+
+Description: Rare specialized airway epithelial cells characterized by high expression of FOXI1 and CFTR, critical for regulating pH and hydration of the airway surface liquid.
+
+Genes:
+- FOXI1, CFTR, ASCL3, ATP6V1B1, ATP6V0A4, ATP6V1G3, ATP6V0B, BSND, CLCNKB, SCNN1G, SCNN1B, KCNMA1
+- CA12, CA2, S100A14, S100A16, TMEM61, LINC00968, ALOX5AP, IGFBP6, WFDC2, SPINK5, C1orf186, GSTA1
+- GSTA2
+
+### Neuroendocrine cell
+
+Description: Rare pulmonary neuroendocrine cells (PNECs) that integrate environmental signals and secrete neuropeptides and biogenic amines to regulate airway tone and immune responses.
+
+Genes:
+- CHGA, CHGB, SYP, INSM1, ASCL1, CALCA, GRP, SCG2, SCG3, PCSK1, CPLX2, SNAP25
+- VAMP2, UCHL1, NCAM1, TTR, NEUROD1, FEV, SRRM4, BEX1, CPLX1, SST
+
+### Secretory cell
+
+Description: Abundant nasal epithelial cells responsible for producing mucus, antimicrobial proteins, and cytokines to maintain the mucosal barrier and defend against inhaled pathogens.
+
+Genes:
+- SCGB1A1, SCGB3A1, BPIFA1, BPIFB1, MUC5B, MUC5AC, LTF, LCN2, SLPI, WFDC2, PIGR, TFF3
+- TFF1, GPX2, CYP2F1, ALDH3A1, GSTP1, S100A8, S100A9, CEACAM5, KRT7, KRT19
+
+### Tuft cell
+
+Description: Chemosensory epithelial cells (also known as brush cells) that express POU2F3 and TRPM5, involved in sensing pathogens and initiating type 2 immune responses in the nasal mucosa.
+
+Genes:
+- POU2F3, TRPM5, GNAT3, IL25, ALOX5, HPGDS, PTGS1, BMX, AVIL, LRMP, SH2D6, PLCG2
+- PIK3CG, GNG13, TAS1R3, TAS2R38, CHAT, SOX9, KRT18, KRT8, GFI1B, SPIB, DCLK1, IL17RB
+
+## lung macrophage
+
+### Alveolar-like Macrophages (Nasal)
+
+Description: Resident macrophages of the upper respiratory tract that share transcriptional profiles with lung alveolar macrophages, characterized by high expression of lipid metabolism and scavenger receptor genes.
+
+Genes:
+- FABP4, MARCO, MCEMP1, APOC1, APOE, CHIT1, MSR1, CD163, SIGLEC1, CCL18, CCL22, C1QA
+- C1QB, C1QC, FTL, FTH1, LPL, CD52, S100A9, S100A8, LYZ, A2M, CTSB, CTSD
+- GPNMB
+
+### Interstitial Macrophages (Nasal)
+
+Description: Nasal mucosal interstitial macrophages involved in antigen presentation and tissue surveillance, expressing high levels of MHC class II molecules and classical monocyte-derived markers.
+
+Genes:
+- CX3CR1, CSF1R, CD14, FCGR3A, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD86, ITGB2, TYROBP, FCER1G
+- AIF1, MS4A7, MS4A6A, CD68, IL1B, TNF, CXCL8, CCL3, CCL4, NFKB1, JUN, FOS
+
+### Microglial-like Border Macrophages
+
+Description: Specialized macrophages residing near the olfactory sensory borders in the nasal cavity, sharing a lipid-associated and phagocytic gene signature with microglia and disease-associated macrophages.
+
+Genes:
+- TREM2, APOE, C1QA, C1QB, C1QC, GPNMB, SPP1, CD9, LPL, CTSZ, CTSB, PLD3
+- HEXB, GLDN, P2RY12, TMEM119, SALL1, CX3CR1, FTL, FTH1
+
+### Monocyte-Derived Dendritic Cells
+
+Description: Antigen-presenting cells in the nasal mucosa that are frequently confused with macrophages due to shared myeloid lineage markers but distinguished by high CD1C, FCER1A, and dendritic morphology genes.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, CD1E, CD207, ANXA1, S100A12, FSCN1, CCR7, CCL17
+- CCL22, IL4I1, IDO1, CD80, CD83, LAMP3, IRF4, BATF3
+
+## mast cell
+
+### Alveolar/Tissue Macrophages
+
+Description: Nasal submucosal myeloid cells that can be confused with mast cells due to shared expression of certain Fc receptors and myeloid lineage markers, but distinguished by high expression of scavenger receptors and complement components.
+
+Genes:
+- CD68, CD163, MRC1, MSR1, C1QA, C1QB, C1QC, APOE, APOC1, TYROBP, FCER1G, FCGR3A
+- LYZ, AIF1, MS4A6A, CD14, CSF1R, HLA-DRA, HLA-DRB1, CTSB, CTSD, LGALS3
+
+### Basophils
+
+Description: Circulating granulocytes that infiltrate the nasal mucosa during allergic inflammation, sharing high expression of FCER1A and HDC with mast cells but distinguished by CD123 and CLC expression.
+
+Genes:
+- CD123, IL3RA, FCER1A, MS4A2, HDC, HPGDS, ALOX5AP, GATA2, LTC4S, CD203C, ENPP3, CLC
+- CCR3, IL4, IL13, ANXA1, S100A9, S100A8, FUT4, CD63, PTGDR2, PLD1
+
+### Connective Tissue Mast Cells (MC_TC)
+
+Description: A mast cell subtype localized to the nasal submucosa and connective tissues, co-expressing chymase (CMA1), carboxypeptidase A3 (CPA3), and tryptases.
+
+Genes:
+- CMA1, CPA3, TPSG1, KIT, FCER1A, MS4A2, HPGDS, CTSG, CD63, SLC18A2, HDC, RGS13
+- PTGDR2, ALOX5, MAOB, VAMP8, SYK, BTK, LTC4S, GATA2
+
+### Mucosal Mast Cells (MC_T)
+
+Description: A subtype of mast cells predominantly found in mucosal tissues of the nasal cavity, characterized by high expression of tryptases (TPSAB1, TPSB2) and involvement in allergic rhinitis pathogenesis.
+
+Genes:
+- TPSB2, TPSAB1, HPGDS, MS4A2, FCER1A, CPA3, KIT, GATA2, LTC4S, ALOX5AP, HDAC11, SLC18A2
+- HDC, RGS13, MLPH, SCG2, PTGS1, ANXA1, CD63, ENPP3, CTSG, CMA1
+
+## mucus secreting cell
+
+### Ciliated cells
+
+Description: Terminally differentiated epithelial cells possessing motile cilia for mucociliary clearance, frequently confused with secretory cells in low-quality or transitional states.
+
+Genes:
+- FOXJ1, TPPP3, CAPS, SNTN, RSPH1, RSPH4A, RSPH9, DNAH5, DNAH11, DNAI1, DNAI2, TEKT2
+- TEKT4, CCDC39, CCDC40, SPEF2, PIFO, C20orf85, FAM183B, EFHC1, CETN2, TUBB4B
+
+### Club-like secretory cells
+
+Description: Secretory progenitor-like cells of the airway epithelium that express secretoglobins and play a role in host defense and mucosal detoxification.
+
+Genes:
+- SCGB1A1, SCGB3A1, SCGB3A2, BPIFA1, CYP2F1, ALDH3A1, GSTP1, GPX2, S100A14, S100A16, KRT4, KRT19
+- SLPI, WFDC2, PIGR, CD24, ELF3, CEACAM6, MSLN, MUC16, MUC1
+
+### Goblet cells (MUC5AC-high)
+
+Description: Classical secretory goblet cells of the nasal epithelium characterized by high expression of gel-forming mucins and associated processing machinery.
+
+Genes:
+- MUC5AC, SPDEF, TFF1, TFF3, AGR2, FCGBP, BPIFB1, CLCA1, PLA2G10, S100A9, S100A8, REG4
+- GSTA1, CEACAM5, GALNT2, CREB3L4, ERN2, PDIA3, TXNDC5, MUC2, TFF2, SST, GPX2, SLPI
+
+### Ionocytes
+
+Description: Rare specialized airway epithelial cells regulating pH and water transport via high expression of CFTR and vacuolar ATPases, which can be misannotated as secretory cells.
+
+Genes:
+- FOXI1, CFTR, ASGR1, ATP6V1G3, ATP6V0D2, BSG, CLCNKB, CA2, CA12, SCNN1G, SCNN1B, KRT18
+- KRT19, L1CAM, IL1RAPL1, FOXI2, HCN4, TMEM229B, G3BP2, VAMP8
+
+### Serous cells (MUC5B/LTF-high)
+
+Description: Glandular and surface secretory cells producing fluid rich in antimicrobial proteins, lysozyme, and MUC5B rather than MUC5AC.
+
+Genes:
+- MUC5B, LTF, LCN2, LYZ, BPIFB2, PIP, AZGP1, DMBT1, SCGB1A1, SCGB2A2, PRR4, CST3
+- ZG16B, ODF3B, PIGR, WFDC2, SLPI, S100A6, S100A4, MSMB, ALDH1A3, GPX3
+
+## multiciliated columnar cell of tracheobronchial tree
+
+### nasal deuterosomal cell
+
+Description: Transient precursor cells undergoing active centriole amplification via deuterosomes prior to committing to a fully multiciliated fate.
+
+Genes:
+- DEUP1, CCNO, MCIDAS, CDC20B, FOXJ1, CEP152, SASS6, PLK4, CENPF, MKI67, TOP2A, CDK1
+- TPX2, NUSAP1, BIRC5, UBE2C, CCNB1, CCNB2, CENPE, KIF2C
+
+### nasal goblet cell
+
+Description: Secretory cells of the nasal epithelium that produce mucins and antimicrobial proteins to form the protective airway mucus gel.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, GPX2, AGR2, TFF3, TFF1, BPIFB1, BPIFA1, FCGBP, CLCA1, SCGB1A1
+- S100A8, S100A9, LYZ, ALDH3A1, GSTP1, CEACAM5, MUC16, GALNT2
+
+### nasal microvillous cell
+
+Description: Chemosensory epithelial cells of the nasal cavity, also known as brush cells or tuft cells, which detect chemical stimuli and initiate protective immune reflexes.
+
+Genes:
+- TRPM5, CHAT, GNAT3, PLCG2, ALOX5AP, HPGDS, ASCL2, AVIL, SOX9, LRMP, SH2D6, BMX
+- GNG13, TAS1R3, TAS2R38, ADCY3, CALCA, IL25, IL17RB, CDHR2
+
+### nasal multiciliated cell
+
+Description: Mature ciliated epithelial cells of the nasal mucosa responsible for mucociliary clearance, characterized by high expression of axonemal dyneins and ciliogenesis transcription factors.
+
+Genes:
+- CAPS, TPPP3, SNTN, RSPH4A, RSPH1, DNAH5, DNAH11, DNAI1, DNAI2, FOXJ1, MCIDAS, CCNO
+- CDC20B, C21orf58, C1orf198, CETN2, PIFO, TEKT2, TEKT3, ODF2, AK7, CCDC39, CCDC40, GAS8
+- LRRC36
+
+## multiciliated epithelial cell
+
+### Deuterosomal cell
+
+Description: A transient, highly specialized precursor state undergoing massive centriole amplification via deuterosomes prior to final maturation into a multiciliated cell.
+
+Genes:
+- CCNO, MCIDAS, CDC20B, DEUP1, PLK4, SASS6, CEP152, CENPF, MYB, FOXN4, TP73, STIL
+- E2F5, NEK2, CETN2, CETN3, SPAG5, KIF2C, SGO1, BUB1
+
+### Goblet cell
+
+Description: Secretory epithelial cells responsible for producing and releasing gel-forming mucins that constitute the protective mucus layer of the nasal passage.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, FOXA3, AGR2, TFF3, TFF1, BPIFB1, GPX2, FCGBP, CLCA1, SCGB1A1
+- S100A8, S100A9, MUC16, GALNT2, GCNT3, CREB3L1, TXNDC5, JCHAIN
+
+### Mature multiciliated cell
+
+Description: Fully differentiated airway epithelial cells possessing hundreds of motile cilia driven by master regulator FOXJ1 to facilitate mucociliary clearance in the nasal cavity.
+
+Genes:
+- FOXJ1, TPPP3, SNTN, CAPS, RSPH4A, RSPH1, DNAH5, DNAH11, DNAI1, DNAI2, CCDC39, CCDC40
+- SPEF2, GAS8, DRC1, ODF2, TEKT2, TEKT4, AK7, C21orf59, PIFO, CFAP43, CFAP44, CFAP57
+- EFHC1
+
+### Microvillous cell
+
+Description: Chemosensory tuft-like epithelial cells of the nasal mucosa that express taste transduction machinery and act as sentinels to trigger inflammatory or protective reflexes.
+
+Genes:
+- TRPM5, CHAT, GNAT3, GNG13, PLCG2, ALOX5, HPGDS, IL25, POU2F3, SOX9, AVIL, ADCY2
+- LRMP, SH2D6, BMX, PIK3CG, PTGS1, PTGDS, HCAR3, GPR113
+
+## nasal mucosa goblet cell
+
+### Club-like Secretory Cell
+
+Description: Transitioning or distinct secretory cells of the upper airway that express secretoglobins and xenobiotic metabolizing enzymes rather than gel-forming mucins.
+
+Genes:
+- SCGB1A1, SCGB3A1, SCGB3A2, CYP2F1, ALDH1A1, ALDH3A1, GSTP1, GPX3, SFTPA1, SFTPB, BPIFA1, WFDC2
+- SLPI, KRT19, MUC16, MSLN, CPB2, HP, SERPINB1, RARRES1
+
+### Goblet-1 (MUC5AC-high secretory)
+
+Description: Classic superficial goblet cells of the nasal mucosa characterized by high expression of gel-forming mucins and anterior gradient proteins involved in mucus production and viscosity.
+
+Genes:
+- MUC5AC, TFF1, TFF3, AGR2, SPDEF, FCGBP, BPIFB1, GPX2, S100A9, S100A8, LCN2, SLPI
+- WFDC2, PIGR, CEACAM5, MUC5B, GALNT2, CREB3L1, GCNT3, TFF2, KRT8, KRT18, CLDN4, JCHAIN
+
+### Goblet-2 (Inflammatory/Interferon-stimulated)
+
+Description: A specialized subpopulation of nasal goblet cells showing strong upregulation of interferon-stimulated genes, active in antiviral defense and mucosal inflammation.
+
+Genes:
+- MUC5AC, IFI6, ISG15, MX1, OAS1, IFIT1, IFIT3, STAT1, IRF7, BST2, CXCL10, CXCL11
+- SAMD9, USP18, CMPK2, RSAD2, SP100, EPSTI1, APOBEC3A, LY6E, LGP2
+
+### Nasal Serous Cell
+
+Description: A neighboring secretory cell type primarily located in submucosal glands that produces watery, antimicrobial-rich secretions, often transcriptionally confused with goblet cells.
+
+Genes:
+- LTF, LYZ, PRB1, PRB2, PRH1, PRH2, PIP, AZGP1, DMBT1, BPIFA1, BPIFB2, ODAM
+- CST3, CST4, SEC11C, SCGB1A1, SCGB2A2, MUC7, ZG16B, PIGR, SOX9
+
+## natural killer cell
+
+### CD56bright CD16- NK cells
+
+Description: Immature or immunomodulatory natural killer cells that produce high levels of cytokines like IFN-gamma upon stimulation and express low levels of cytotoxic molecules.
+
+Genes:
+- NCAM1, SELL, KLRC1, IL7R, GZMK, XCL1, XCL2, CSF2, IFNG, TNF, LTB, IL2RB
+- CD44, TCF7, CCR7, CAPG, RUNX2, MYC, CD2, IL18RAP, TNFSF10, GPR183
+
+### CD56dim CD16+ NK cells
+
+Description: Highly cytotoxic, mature natural killer cells circulating through or residing in the nasal mucosa, characterized by high expression of CD16, perforin, and granzymes.
+
+Genes:
+- FCGR3A, FGFBP2, CX3CR1, PRF1, GZMB, GZMH, GNLY, SPON2, KLRG1, ADGRG1, TBX21, ZEB2
+- S1PR5, CLIC3, S100A4, S100A6, PRF1, NKG7, CST7, KLRD1, KLRF1, CD244, IL2RB, HOPX
+
+### Group 1 Innate Lymphoid Cells (ILC1)
+
+Description: Helper-like innate lymphoid cells residing in the nasal mucosa that produce IFN-gamma but lack the high cytotoxic machinery and lineage markers of classical NK cells.
+
+Genes:
+- IKZF3, TBX21, IL7R, CXCR6, KLRB1, CD160, EOMES, IFNG, TNF, IL12RB2, IL18R1, LTA
+- ID2, TOX, RUNX3, CD2, CD27, TNFSF14, GZMA, AREG
+
+### Tissue-resident memory CD8+ T cells
+
+Description: Nasal mucosal-resident CD8+ T cells that share phenotypic markers with NK cells, such as CD69 and CD103, but are distinguished by TCR complex and CD8 expression.
+
+Genes:
+- CD8A, CD8B, CD3D, CD3E, CD3G, ITGA1, ITGAE, CD69, CXCR6, CRTAM, JAML, DUSP6
+- ZNF683, PRDM1, RUNX3, GZMA, GZMB, IFNG, CCL5, IL7R, KLRG1, CD2
+
+## non-classical monocyte
+
+### Alveolar-like/Interstitial Macrophage
+
+Description: Tissue-resident macrophages of the respiratory tract that clear debris and regulate local immune homeostasis, often confused with non-classical monocytes due to shared expression of C1Q genes and CD163.
+
+Genes:
+- APOE, C1QA, C1QB, C1QC, CD163, MRC1, MSR1, CD68, FABP4, MARCO, PPARG, GPX3
+- PLTP, CTSD, CTSB, LGALS3, C5AR1, FOLR2, SEPP1, MS4A4A, CD209, VSIG4, SIGLEC1
+
+### Classical monocyte (CD14+)
+
+Description: Inflammatory monocytes recruited to the nasal mucosa during injury or infection, expressing high levels of CD14, S100 alarmins, and CCR2.
+
+Genes:
+- CD14, S100A8, S100A9, S100A12, VCAN, FCN1, LYZ, CD300E, CLEC12A, IL1B, CXCL8, CCR2
+- CD44, MNDA, GRN, CTSS, LGALS3, CD68, HLA-DRA, HLA-DRB1, IER3, NFKBIA, JUNB, FOS
+- NAMPT
+
+### Conventional Dendritic Cell 2 (cDC2)
+
+Description: Antigen-presenting cells in the nasal mucosa that can be confused with monocytes but are distinguished by high expression of CD1C, CLEC10A, and MHC class II molecules.
+
+Genes:
+- CLEC10A, FCER1A, CD1C, HLA-DQA1, HLA-DQB1, HLA-DPA1, HLA-DPB1, CD1E, ENHO, PKIB, GSN, CPVL
+- CD2, CXCL16, IL12B, CCR7, FSCN1, LAMP3, CD80, CD86, CD40
+
+### Non-classical monocyte (FCGR3A+)
+
+Description: A subtype of circulating monocytes that patrol the vascular endothelium of the nasal mucosa, characterized by high expression of FCGR3A (CD16) and CX3CR1.
+
+Genes:
+- FCGR3A, CX3CR1, LST1, AIF1, MS4A7, IFITM3, COTL1, FTL, FTH1, LYN, HCK, C1QA
+- C1QB, C1QC, CSF1R, RHOC, SPI1, CD300A, SIGLEC10, PECAM1, ITGAL, SELPLG, TNFSF10, VNN2
+- LILRB1, LILRB2
+
+## plasma cell
+
+### IgA Plasma Cell
+
+Description: The predominant plasma cell subtype in the nasal mucosa, specialized in secreting dimeric IgA antibodies across the mucosal epithelium to neutralize pathogens.
+
+Genes:
+- IGHA1, IGHA2, IGHM, IGKC, IGLC1, IGLC2, IGLC3, JCHAIN, MZB1, DERL3, PRDM1, XBP1
+- IRF4, SLAMF7, SDC1, CD38, TNFRSF17, FKBP11, SSR4, SEC61B, SEC11C, HERPUD1, MANF, CRELD2
+- SDF2L1
+
+### IgG Plasma Cell
+
+Description: A plasma cell subtype found in the nasal mucosa, particularly during chronic inflammation or secondary immune responses, secreting IgG antibodies for systemic-like defense.
+
+Genes:
+- IGHG1, IGHG2, IGHG3, IGHG4, IGKC, IGLC1, IGLC2, IGLC3, JCHAIN, MZB1, DERL3, PRDM1
+- XBP1, IRF4, SLAMF7, SDC1, CD38, TNFRSF17, FKBP11, SSR4, SEC61B, SEC11C, TXNDC5, PDIK1L
+- FAM46C
+
+### Memory B Cell
+
+Description: A quiescent B cell lineage neighbor in the nasal tissue that represents an earlier differentiation stage, lacking the massive secretory machinery and high immunoglobulin transcription of plasma cells.
+
+Genes:
+- MS4A1, CD19, CD22, CD79A, CD79B, BANK1, TNFRSF13B, CLEC17A, HVCN1, FCRL1, FCRL5, LTB
+- CD52, CXCR4, CCR7, SELL, TXNIP, CD24, CD27, AIM2, Ighd, IGHM
+
+### Plasmacytoid Dendritic Cell
+
+Description: A neighboring immune cell type in the nasal mucosa often confused with plasma cells due to shared secretory morphology and high expression of certain ER-stress and secretory pathway genes, but specialized in producing Type I Interferons.
+
+Genes:
+- CLEC4C, LILRA4, IL3RA, NRP1, TCF4, IRF7, IRF8, PACSIN1, PLD4, GZMB, SERPINF1, ITM2C
+- MAP1A, APP, SCT, SPIB, RUNX2, CCDC50, LAMP5, SCAMP5, PTGDS, SOX4
+
+## plasmacytoid dendritic cell
+
+### Conventional dendritic cell type 1
+
+Description: A neighboring dendritic cell subset specialized in cross-presentation of viral and necrotic antigens to CD8+ T cells, occasionally confused with pDCs due to shared HLA-DR and FLT3 expression.
+
+Genes:
+- CLEC9A, XCR1, CADM1, WDFY4, BATF3, FLT3, IDO1, CPVL, CLNK, S100A2, C1orf54, APP
+- ANPEP, DPP4, LTA4H, GPR141, S100B, PSTPIP2, BTLA, LY75
+
+### Conventional dendritic cell type 2
+
+Description: The major myeloid dendritic cell subset in the nasal mucosa, highly efficient at MHC-II antigen presentation to CD4+ T cells, which can be distinguished from pDCs by CD1c and myeloid marker expression.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DQA1, HLA-DQB1, CD1E, SIRPA, ITGAX, ZEB2, CX3CR1, COBLL1, PLD3
+- ENPP1, PKIB, S100A9, S100A8, FCN1, CSF1R, CD14, LYZ
+
+### Plasmacytoid dendritic cell
+
+Description: Classic plasmacytoid dendritic cells specialized in rapid, high-volume secretion of type I interferons in response to viral pathogens in the nasal mucosa.
+
+Genes:
+- LILRA4, CLEC4C, PTGDS, GZMB, TCF4, IRF7, IRF8, NRP1, IL3RA, SCT, PACSIN1, PLD4
+- MAP1A, APP, DERL3, MZB1, TXNIP, SPIB, RUNX2, CCDC50, JCHAIN, IGKC, LAMP5, SERPINF1
+- ITM2C
+
+### Pre-dendritic cell
+
+Description: A transitional circulating dendritic cell precursor that shares markers with both pDCs (e.g., IL3RA, LILRA4) and cDCs, frequently causing annotation confusion in mucosal tissues.
+
+Genes:
+- AXL, SIGLEC6, PPP1R14B, CD2, CX3CR1, IL3RA, LILRA4, CLEC4C, TCF4, MZB1, SCT, GZMB
+- CADM1, CLEC9A, CD1C, FCER1A, CD101, ITGAX, ZBTB46, FLT3
+
+## pulmonary artery endothelial cell
+
+### Nasal arterial endothelial cell
+
+Description: Arterial endothelial cells of the nasal vasculature that regulate blood flow and pressure, expressing classic arterial markers like EFNB2 and DLL4.
+
+Genes:
+- EFNB2, DLL4, HEY1, SOX17, BMX, GJA4, GJA5, ALDH1A1, DKK2, SFTPA1, VWF, PECAM1
+- CD34, CLDN5, FBLN5, ELN, MECOM, PRSS23, S100A4, S100A6
+
+### Nasal capillary endothelial cell
+
+Description: Microvascular endothelial cells forming the dense capillary networks of the nasal mucosa, highly active in leukocyte trafficking and fluid exchange.
+
+Genes:
+- PLVAP, CAV1, CAV2, CD36, SGIP1, VWF, PECAM1, CD34, CLDN5, EMCN, RAMP2, ENG
+- ICAM1, VCAM1, SELE, CXCL1, CXCL2, CXCL8, IL6, FOS, JUN
+
+### Nasal lymphatic endothelial cell
+
+Description: Lymphatic endothelial cells lining the nasal lymphatic vessels, characterized by the expression of PROX1 and LYVE1, often confused with blood vascular endothelial cells.
+
+Genes:
+- PROX1, LYVE1, PDPN, FLT4, CCL21, TFPI, MMRN1, BBOX1, ANXA2, FABP4, FCN3, CLDN5
+- EMCN, CALCRL, RAMP2, RAMP3, GPR182, SOHLH2, PTPRB, PECAM1, CD34, VWF
+
+### Nasal venous endothelial cell
+
+Description: Venous endothelial cells of the nasal mucosa, particularly abundant in the cavernous sinusoids of the turbinates, expressing EPHB4 and ACKR1.
+
+Genes:
+- EPHB4, ACKR1, SELE, VCAM1, ICAM1, VWF, PECAM1, CD34, CLDN5, EMCN, NRP2, IL1R1
+- CXCL8, CCL2, POSTN, COL1A1, COL3A1, FN1, BGN, DCN
+
+## respiratory basal cell
+
+### Hillock Cell
+
+Description: A transitional, stratified epithelial cell type in the nose that expresses high levels of squamous-differentiation markers and acts as an intermediate between basal and luminal cells.
+
+Genes:
+- KRT13, KRT4, SERPINB3, SPINK5, CLDN4, ALDH3A1, S100A9, S100A8, PI3, IVL, SPRRIB, TMPRSS11D
+- KRT16, KRT6A, LCN2, SLPI, BPIFA1, MUC21, CSTA, TGM1, ANXA1, GPX2
+
+### Olfactory Horizontal Basal Cell
+
+Description: The reserve stem cells of the olfactory neuroepithelium that remain quiescent under steady-state but proliferate and differentiate upon severe tissue injury.
+
+Genes:
+- ICAM1, KRT5, KRT14, TP63, SOX2, EGFR, CD44, CXCL1, CXCL2, IL6, CCL2, NFKB1
+- RELB, TNFAIP3, IER3, GADD45B, SOD2, BIRC3, LIF, CSF2
+
+### Olfactory Microvillar Cell
+
+Description: A specialized chemosensory epithelial cell type in the nasal cavity, sharing transcriptional features with tuft cells, including TRPM5 and ASCL3 expression.
+
+Genes:
+- ASCL3, TRPM5, CHAT, IL25, PLCG2, ALOX5AP, GNAT3, SOX9, KRT18, KRT8, CDHR2, ESPN
+- VAV1, SH2D3C, AVIL, PIK3CG, HCK, FGR, RAC2, GNG13
+
+### Respiratory Basal Cell (True)
+
+Description: The multipotent stem cells of the respiratory epithelium, characterized by high expression of TP63, basal keratins, and cell-substrate adhesion molecules.
+
+Genes:
+- TP63, KRT5, KRT14, KRT15, DST, BCAM, COL17A1, ITGA6, ITGB4, S100A2, S100A14, S100A16
+- TRIM29, GAL, NGFR, EGFR, SOX2, KRT17, CXCL14, AREG, LAMB3, LAMC2, LAMA3, CD44
+- FOS, JUNB
+
+## respiratory tract hillock cell
+
+### nasal basal cell
+
+Description: The resident multipotent progenitor cell of the nasal epithelium, located along the basement membrane and characterized by high expression of TP63, KRT5, and KRT14.
+
+Genes:
+- TP63, KRT5, KRT14, KRT15, BCAM, COL17A1, DST, EGFR, NGFR, S100A2, DLX5, SOX2
+- ITGA6, ITGB4, KRT17, CXCL14, BNC1, ANXA1, FGFBP1, AREG, HB-EGF, CD44
+
+### nasal club cell
+
+Description: Secretory cells of the nasal and airway mucosa that produce immunomodulatory proteins, host defense molecules, and surfactant-associated proteins.
+
+Genes:
+- SCGB1A1, SCGB3A1, SCGB3A2, BPIFA1, BPIFB1, CYP2F1, ALDH1A3, WFDC2, SLPI, SFTPA1, SFTPB, MUC5B
+- GPX2, GSTP1, HP, PIGR, LYZ, CXCL17, TFF3, CEACAM6
+
+### nasal squamous epithelial cell
+
+Description: Fully differentiated cells of the stratified squamous epithelium lining the nasal vestibule, characterized by late cornification markers and barrier-forming keratins.
+
+Genes:
+- KRT1, KRT10, SBSN, SPINK5, FLG, LOR, EVPL, PPL, DSG1, DSC1, CDSN, CNFN
+- KRT2, SPRR1A, SPRR2A, DMKN, TGM3, S100A7, FABP5, CALML5
+
+### respiratory tract hillock cell
+
+Description: A transitional, stratified squamous-like epithelial cell type found in high-shear zones of the respiratory tract, characterized by high expression of keratins 4 and 13 and squamous differentiation markers.
+
+Genes:
+- KRT13, KRT4, S100A9, S100A8, SPINK5, CLCA4, PI3, IVL, SPRRIB, ALOX12B, TGM1, KRT15
+- KRT6A, KRT16, SERPINB3, SERPINB4, CD24, LCN2, SLPI, WFDC2, MAL, TMPRSS11D, CSTA, CSTB
+- DSP
+
+## serous secreting cell
+
+### Goblet cell (surface epithelium)
+
+Description: Surface epithelial secretory cells that produce gel-forming mucins, primarily MUC5AC, directly onto the nasal mucosal surface in response to environmental stimuli.
+
+Genes:
+- MUC5AC, SPDEF, TFF3, AGR2, GPX2, S100A11, CEACAM5, KRT8, KRT18, MUC16, BPIFA1, TFF1
+- PLA2G10, ALDH3A1, CYP2F1, CLCA1, FCGBP, S100A16, CAPN13, CDHR3
+
+### Mucous secreting cell (glandular)
+
+Description: Glandular mucous cells that produce high-molecular-weight mucins like MUC5B to form the viscous biophysical barrier of the nasal airway.
+
+Genes:
+- MUC5B, MUC5AC, TFF3, TFF1, AGR2, FCGBP, B3GNT6, GALNT12, SPDEF, FOXA3, ST3GAL1, GCNT3
+- SST, CH3L1, CLCA1, ZG16B, BPIFB2, GPX2, TSPAN8, S100A14
+
+### Myoepithelial cell
+
+Description: Contractile cells wrapping around the nasal submucosal gland acini that express smooth muscle markers and facilitate the expulsion of secretory products.
+
+Genes:
+- ACTA2, MYLK, MYH11, CNN1, TP63, KRT5, KRT14, DST, TAGLN, CALD1, S100A4, OXTR
+- KRT17, COL4A1, LAMA3, ITGA6, CA3, C9orf46, MEG3, ACTG2
+
+### Serous secreting cell (glandular)
+
+Description: Classical serous cells of the submucosal glands in the nasal mucosa, specialized in secreting antimicrobial proteins, lysozyme, and lactoferrin to defend against pathogens.
+
+Genes:
+- LTF, LCN2, ODAM, PIP, BPIFA1, BPIFB1, DMBT1, PIGR, SCGB1A1, SCGB2A1, PRR4, PRB1
+- PRB2, PRH1, CST1, CST2, CST4, MUC7, S100A8, S100A9, LYZ, LACRT, AZGP1, WFDC2
+- SLPI
+
+## t cell
+
+### CD4+ T helper cells
+
+Description: CD4+ helper T cells that orchestrate adaptive immune responses in the nasal mucosa, including regulatory T cells and follicular helper T cells.
+
+Genes:
+- CD4, IL7R, LTB, CD3D, CD3E, CD3G, TRAC, TRBC1, TRBC2, CCR7, SELL, TCF7
+- MAL, LDHB, IL2RA, FOXP3, CTLA4, TIGIT, ICOS, TNFRSF4, TNFRSF18, CXCR5, BCL6, CD40LG
+
+### CD8+ cytotoxic T cells
+
+Description: CD8+ cytotoxic T cells specialized in surveillance, direct killing of virally infected cells, and cytokine production in the nasal epithelium.
+
+Genes:
+- CD8A, CD8B, GZMA, GZMB, GZMH, GZMK, PRF1, NKG7, GNLY, CST7, FGFBP2, FCGR3A
+- CX3CR1, KLRG1, CD244, EOMES, TBX21, CCL5, CCL4, HCST
+
+### Mucosal-Associated Invariant T (MAIT) cells
+
+Description: Innate-like T cells highly abundant in mucosal tissues like the nose, recognizing bacterial metabolites presented by MR1.
+
+Genes:
+- SLC4A10, TRAV1-2, KLRB1, ZBTB16, IL18RAP, RORC, CCR6, DPP4, GZMK, NCR3, IKZF2, CD161
+- ANXA1, IL7R, LTB, CD3D, CD3E, TRAC, RUNX3
+
+### Natural Killer (NK) cells
+
+Description: Innate lymphoid cells that lack CD3 but share cytotoxic machinery with CD8+ T cells, frequently confused with T cells in low-resolution annotations.
+
+Genes:
+- NCAM1, NCR1, NCR3, KLRD1, KLRF1, KLRB1, KLRC1, CD160, XCL1, XCL2, SPON2, PRF1
+- GZMB, NKG7, GNLY, FCGR3A, TYROBP, FCER1G, SH2D1B, HOPX
+
+## tracheobronchial goblet cell
+
+### nasal gland mucous cell
+
+Description: Specialized secretory cells residing in the submucosal glands of the nose, primarily producing MUC5B and antimicrobial proteins like lactoferrin.
+
+Genes:
+- MUC5B, LTF, LALBA, ODAM, PIP, AZGP1, SCGB1A1, SCGB2A2, BPIFA2, DMBT1, PRR4, PRB1
+- PRB2, SEC11C, ZG16B, SMR3B, CST3, CST1, CST4, PIGR
+
+### nasal goblet cell
+
+Description: Classic secretory cells of the nasal epithelium that produce gel-forming mucins like MUC5AC and MUC5B to trap inhaled pathogens and particulates.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, GPX2, TFF1, TFF3, AGR2, BPIFA1, BPIFB1, S100A8, S100A9, LCN2
+- SLPI, WFDC2, PIGR, GALNT2, TFF2, MUC16, CEACAM5, SST, CXCL8, IL1RN, PLA2G2A, LYZ
+- ALDH3A1
+
+### nasal multiciliated cell
+
+Description: Terminally differentiated epithelial cells equipped with hundreds of motile cilia that coordinate mucociliary clearance in the nasal cavity.
+
+Genes:
+- CAPS, FOXJ1, TPPP3, SNTN, RSPH1, RSPH4A, RSPH9, DNAH5, DNAH11, DNAI1, DNAI2, CCDC39
+- CCDC40, TEKT2, TEKT4, SPEF2, PIFO, CFAP43, CFAP44, ODF2, C21orf59, ERICH3, FAM183B, C1orf193
+- CCNO
+
+### nasal transitional/secretory cell
+
+Description: An intermediate cell state in the nasal mucosa transitioning from basal cells to mature secretory or squamous lineages, characterized by specific cytokeratins and barrier proteins.
+
+Genes:
+- KRT4, KRT13, KRT19, S100A2, S100A14, SPRRI, SPRR2A, IVL, CLDN4, ELF3, DST, ANXA1
+- FABP5, LY6D, GJB2, KRT15, KRT23, SERPINB3, CD24, ALDH1A3
+
+## tracheobronchial serous cell
+
+### Bowman's gland cell
+
+Description: Specialized secretory cells of the olfactory mucosa that produce odorant-binding proteins and xenobiotic-metabolizing enzymes to protect and clear the olfactory epithelium.
+
+Genes:
+- OBP2A, OBP2B, LCN2, GPX3, SOX9, SST, CYP2A13, CYP2G1P, UGT2A1, UGT2A2, GSTP1, ALDH1A1
+- ALDH3A1, CBR1, ADH1C, ME1, PON1, TF, LBP, BPIFA2, SEC14L3
+
+### Nasal goblet cell
+
+Description: Superficial airway epithelial secretory cells that produce gel-forming mucins to trap inhaled pathogens and particulates in the nasal passage.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, AGR2, TFF3, FCGBP, BPIFA1, GPX2, S100A14, S100A16, KRT4, KRT19
+- CLCA1, TFF1, CEACAM5, GALNT2, GCNT3, B3GNT6, SST, PLA2G10, ALDH3A1, CYP2F1
+
+### Nasal multiciliated cell
+
+Description: Terminally differentiated airway epithelial cells possessing motile cilia that function to propel mucus and cleared particles out of the nasal cavity.
+
+Genes:
+- FOXJ1, TPPP3, CAPS, SNTN, RSPH4A, RSPH1, DNAH5, DNAH11, DNAI1, DNAI2, CCDC39, CCDC40
+- SPEF2, PIFO, TEKT2, TEKT4, AK7, C21orf59, ODF2, CFAP43, CFAP44, GAS8, EFHC1
+
+### Nasal serous cell
+
+Description: The true resident secretory cell of the submucosal glands in the nasal cavity, characterized by high expression of antimicrobial proteins, lactoferrin, and lipocalins.
+
+Genes:
+- LTF, LCN2, ODAM, BPIFA1, BPIFB1, PIP, AZGP1, PRR4, DMBT1, MUC7, CST3, CST4
+- CST1, S100A8, S100A9, LYZ, PIGR, WFDC2, SLPI, SCGB1A1, SCGB2A1, TFF3, TFF1, GPX3
+- ALDH1A3
+
+## tracheobronchial smooth muscle cell
+
+### Myofibroblast
+
+Description: Activated contractile fibroblasts expressing alpha-smooth muscle actin and high levels of fibrillar collagens, typically localized to areas of mucosal repair or chronic inflammation in the nose.
+
+Genes:
+- ACTA2, TAGLN, COL1A1, COL3A1, COL5A1, POSTN, TNC, FN1, SPARC, CTGF, CYR61, COMP
+- ELN, LOX, LOXL1, LOXL2, FAP, PDGFRB, CALD1, TPM1, TPM2, MYL9
+
+### Nasal mucosal fibroblast
+
+Description: Stromal cells of the nasal lamina propria responsible for extracellular matrix deposition and tissue remodeling, often confused with smooth muscle cells due to shared mesenchymal markers.
+
+Genes:
+- DCN, LUM, COL1A1, COL1A2, COL3A1, FBLN1, FBLN2, PDGFRA, CD34, MFAP5, FBN1, APOD
+- CFD, GSN, C3, MGP, S100A4, VIM, ACTA2, POSTN, FN1, COL6A1, COL6A2, COL6A3
+
+### Nasal pericyte
+
+Description: Mural cells closely wrapping nasal capillaries and post-capillary venules, essential for blood-brain/nasal barrier integrity and microvascular stability.
+
+Genes:
+- RGS5, PDGFRB, KCNJ8, ABCC9, CSPG4, MCAM, VTN, NDUFA4L2, HEG1, GJA4, COX4I2, HIGD1B
+- COL4A1, COL4A2, SPARC, ANGPT2, TBX18, DLK1, PECAM1, CD34
+
+### Nasal vascular smooth muscle cell
+
+Description: Contractile mural cells surrounding nasal blood vessels, characterized by high expression of classical smooth muscle actin and myosin machinery alongside pericyte-associated markers.
+
+Genes:
+- ACTA2, MYH11, TAGLN, MYLK, CNN1, LMOD1, TPM2, FLNA, CALD1, RGS5, ABCC9, KCNJ8
+- PDGFRB, NOTCH3, HEG1, VTN, CSPG4, MCAM, COL4A1, COL4A2, SPARC, BGN, ACTG2, MYG1
+- AOC3
+
+## vein endothelial cell
+
+### arterial endothelial cell
+
+Description: A neighboring endothelial subtype in the nasal vasculature that regulates high-pressure blood flow, characterized by arterial-specific notch signaling pathway components and tight junction proteins.
+
+Genes:
+- EFNB2, DKK2, BMX, GJA4, GJA5, SOX17, HEY1, ALDH1A1, SFTPA1, MECOM, FBLN5, CLDN5
+- CDH5, NOTCH1, NOTCH4, VEGFC, S1PR1, PTGIS, TSPAN7, SEMA3G
+
+### capillary endothelial cell
+
+Description: Microvascular endothelial cells forming the capillary beds of the nasal turbinates, specialized for gas and nutrient exchange and characterized by high expression of lipid transport and carbonic anhydrase genes.
+
+Genes:
+- CA4, CD36, RGCC, PLPP1, PLPP3, GPIHBP1, PRX, SGCD, FCN3, BTNL9, APOLD1, GPM6B
+- SH3BP5, FABP4, LPL, PECAM1, EMCN, KDR, FLT1, VWF
+
+### lymphatic endothelial cell
+
+Description: A commonly confused neighboring lineage in the nasal mucosa responsible for fluid drainage and immune cell transport, uniquely expressing lymphatic-specific transcription factors and receptors.
+
+Genes:
+- PROX1, PDPN, LYVE1, FLT4, CCL21, TFPI, MMRN1, ANXA2, FABP5, S100A13, CALCRL, ESAM
+- CLDN11, ELAFIN, FXYD6, PIM1, NRP2, SOX18, GPR182, BBOX1
+
+### venular endothelial cell
+
+Description: True venular endothelial cells of the nasal mucosa, characterized by high expression of post-capillary venule markers, leukocyte adhesion molecules, and chemokine receptors involved in immune cell trafficking.
+
+Genes:
+- ACKR1, SELE, SELPLG, VWF, PECAM1, ICAM1, VCAM1, CCL14, CCL21, IL6, CXCL8, POSTN
+- PLAT, PLVAP, CD34, ENG, BMP4, FOS, JUN, EGR1, NFKB1, RELB, BIRC3, TNFAIP3
+

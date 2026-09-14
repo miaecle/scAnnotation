@@ -21,7 +21,7 @@ filter:
 
 selection:
   strategy: tfidf
-  n_top: 20
+  n_top: 50
   modalities: [rna, adt]
 
 input:
@@ -33,19 +33,21 @@ llm:
   backend: deepseek
   model: deepseek-v4-flash
   temperature: 0.0
-  max_tokens: 4096
+  max_tokens: 20000
   api_key_env: DEEPSEEK_API_KEY
-  concurrency: 20
+  concurrency: 10
   use_context_cache: true
   context_cache_ttl_seconds: 3600
 
 evaluation:
   label_col: celltype.l2
-  n_per_class: 1
+  hierarchy: [celltype.l1, celltype.l2]
+  n_per_class: 20
   seed: 42
-  strategies: [exact]
+  strategies: [exact, hierarchy]
   judge_backend: deepseek
-  concurrency: 20
+  concurrency: 10
+  n_bootstrap: 1000
 
 stage2:
   mode: strict  # strict | combined
@@ -54,10 +56,10 @@ stage2:
   model: deepseek-v4-flash
 
 inspect:
-  enabled: true
+  enabled: false
   cell_indices: [13748, 48, 6148]  # e.g. [13748]
 
 output:
-  results_dir: results/debug/pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp8
-  experiment_name: pbmc_l2_knn_k10_1pc_stg2_tirosh_tfidf20_seed42_deepseek_v4_flash_exp8
+  results_dir: results/pbmc_new/pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_deepseek_v4_flash
+  experiment_name: pbmc_l2_knn_k10_20pc_stg2_tirosh_tfidf50_deepseek_v4_flash
   save_results: true

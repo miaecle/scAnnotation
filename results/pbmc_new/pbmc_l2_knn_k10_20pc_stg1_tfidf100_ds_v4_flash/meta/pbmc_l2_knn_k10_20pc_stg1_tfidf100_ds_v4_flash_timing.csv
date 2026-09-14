@@ -1,0 +1,2 @@
+experiment_name,start_time,end_time,duration_seconds,duration_minutes
+pbmc_l2_knn_k10_20pc_stg1_tfidf100_ds_v4_flash,2026-07-27 14:07:14,2026-07-27 14:14:07,413.4659433364868,6.891099055608113

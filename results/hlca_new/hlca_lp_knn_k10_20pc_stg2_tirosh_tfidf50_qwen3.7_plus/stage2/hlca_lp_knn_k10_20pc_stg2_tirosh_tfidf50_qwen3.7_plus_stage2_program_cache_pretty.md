@@ -1,0 +1,2366 @@
+# Stage-2 Precomputed Programs
+
+- tissue: lung parenchyma
+- n_program_genes: 50
+- n_cached_cell_types: 48
+
+## acinar cell
+
+### Alveolar Type 1 (AT1) cell
+
+Description: Thin, squamous epithelial cells covering most of the alveolar surface, essential for gas exchange and barrier function.
+
+Genes:
+- AGER, CAV1, CAV2, SFTPC, SFTPD, MUC1, CLDN18, CLDN4, CLDN3, OCLN, TJP1, AQP5
+- AQP3, EGFR, KRT19, KRT8, KRT18, EPCAM, CDH1, ITGA6, ITGB4, LAMA3, LAMC2, COL17A1
+- DSP, DSG2, FXYD3, TACSTD2, MMP7, MUC16
+
+### Alveolar Type 2 (AT2) cell
+
+Description: Cuboidal surfactant-producing cells that maintain alveolar surface tension and serve as progenitors for AT1 cells.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, NKX2-1, AGER, LYN, CYP4B1, SCGB1A1, SCGB3A2
+- SCGB1D1, SCGB2A1, SCGB2B2, FAM13A, DSP, EPCAM, KRT8, KRT18, KRT19, CDH1, NAPSA, CTSC
+- LAMP3, ITGB6, ITGAV, MUC1, HLA-DRB1, TM4SF1
+
+### Basal cell
+
+Description: Multipotent stem cells located in the proximal airway epithelium that self-renew and differentiate into ciliated and secretory cells.
+
+Genes:
+- KRT5, KRT17, KRT14, KRT6A, KRT6B, KRT6C, TP63, CD44, ITGA6, ITGB4, ITGB1, COL17A1
+- DSP, DSG2, SFN, S100A2, S100A6, S100A10, S100A11, ANXA1, ANXA2, EGFR, NOTCH1, NOTCH2
+- HES1, DLL1, JAG1, NGFR, ACAN, LAMA3
+
+### Ciliated cell
+
+Description: Motile ciliated epithelial cells that drive mucociliary clearance by coordinated beating of cilia along the airway surface.
+
+Genes:
+- FOXJ1, DNAI1, DNAI2, DNAH5, DNAH9, DNAH11, DNAL1, CCDC39, CCDC40, CCDC65, DYNC2H1, TTC25
+- CFAP44, CFAP53, CFAP54, MCIDAS, MYO1A, KRT13, KRT4, EPCAM, DSP, CDH1, AQR, HYDIN
+- PIFO, GAS8, SPEF2, RSPH4A, RSPH9, TXNDC12
+
+### Club (Clara) cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins, detoxify xenobiotics, and act as progenitors in distal airways.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB1D1, SCGB2A1, SCGB2B2, SCGB3A1, SCGB1A2, MUC5B, MUC5AC, FOXI1, CFTR, SLC34A2
+- CYP2F1, CYP4B1, AHR, NKX2-1, EPCAM, KRT5, KRT19, DSP, CDH1, AGR2, AGR3, TFF1
+- TFF2, TFF3, PLUNC, SPLUNC1, SPLUNC2, BPIFA1
+
+## alveolar adventitial fibroblast
+
+### alveolar_adventitial_fibroblast
+
+Description: Perivascular fibroblasts located in the adventitial sheath of alveolar capillaries and small vessels, producing extracellular matrix and contributing to vascular remodeling.
+
+Genes:
+- DCN, LUM, COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3, FN1, FBN1
+- FBN2, ELN, BGN, FMOD, POSTN, THBS2, SFRP2, WNT5A, PDGFRA, FAP, ACTA2, TAGLN
+- MYH11, DES, CSPG4, PDGFRB, RGS5, ABCC8
+
+### alveolar_interstitial_fibroblast
+
+Description: Interstitial fibroblasts residing within the alveolar septa, responsible for maintaining the extracellular matrix scaffold and participating in tissue repair and fibrosis.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, BGN, FMOD, FN1, FBN1, FBN2, ELN, THBS1
+- THBS2, SFRP2, WNT5A, PDGFRA, FAP, ACTA2, TAGLN, CSPG4, PDGFRB, RGS5, ABCC8, COL6A1
+- COL6A2, COL6A3, POSTN, S100A4, MMP2, TIMP3
+
+### lipofibroblast
+
+Description: Lipid-laden fibroblasts that store neutral lipids and support alveolar type 2 cell surfactant production and alveolar development.
+
+Genes:
+- PLIN2, PLIN3, PLIN4, FABP4, FABP5, LPL, DGAT1, DGAT2, ADIPOQ, LEP, SCD, FASN
+- ACSL1, ACSL3, LIPC, PPARG, CIDEA, CIDEC, COL1A1, DCN, LUM, BGN, PDGFRA, WNT5A
+- SFRP2, FBN1, ELN, APOE, APOD, LAMP3
+
+### myofibroblast
+
+Description: Contractile fibroblasts expressing alpha-smooth muscle actin, prominent during wound healing and fibrotic remodeling in the lung parenchyma.
+
+Genes:
+- ACTA2, TAGLN, MYH11, CNN1, DES, TPM1, TPM2, LMOD1, LMOD2, COL1A1, COL1A2, COL3A1
+- FN1, EDNRA, EDNRB, PDGFRA, PDGFRB, FAP, S100A4, MMP2, MMP14, TIMP1, TIMP3, TGFBR1
+- TGFBR2, SMAD2, SMAD3, CTGF, CCN2, THBS1
+
+### pericyte
+
+Description: Perivascular mural cells enveloping capillaries and microvessels in the alveolar septa, regulating vascular stability, tone, and angiogenesis.
+
+Genes:
+- PDGFRB, RGS5, ABCC8, CSPG4, ACTA2, TAGLN, MYH11, DES, CNN1, NG2, MCAM, CDH5
+- VWF, PECAM1, COL1A1, COL3A1, DCN, LUM, FN1, FBN1, SFRP2, WNT5A, PDGFRA, FAP
+- S100A4, MMP2, TIMP3, THBS1, EDNRA, KCNJ8
+
+## alveolar macrophage
+
+### alveolar macrophage
+
+Description: Tissue-resident macrophages in the alveolar space that clear surfactant, inhaled particles, and microbes via scavenger and phagocytic receptors.
+
+Genes:
+- MARCO, FABP4, LYZ, C1QA, C1QB, C1QC, MRC1, CD209, SIGLEC1, PPARG, NR1H3, FOLR2
+- CSF1R, ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, FCGR3A, CD9, TREM2, APOE, CYP27A1
+- LIPA, CTSB, CTSD, GPNMB, SPP1, FOLR1
+
+### cDC1 (conventional dendritic cell type 1)
+
+Description: Cross-presenting dendritic cells specialized for priming CD8+ T cell and Th1 responses, marked by CLEC9A and XCR1.
+
+Genes:
+- CLEC9A, IRF8, BATF3, XCR1, CD1C, FCER1A, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, ITGAX
+- ITGAE, CXCR3, CXCL10, CXCL9, CXCL11, IDO1, LAMP3, CCR7, CCL19, CCL22, CD40, CD86
+- CD80, VCAN, LYZ, CST3, FCN1, NAMPT
+
+### cDC2 (conventional dendritic cell type 2)
+
+Description: Antigen-presenting dendritic cells in the lung parenchyma that prime CD4+ T cell responses and migrate to draining lymph nodes upon activation.
+
+Genes:
+- FCER1A, CLEC10A, CD1C, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, ITGAX, ITGAM
+- FCGR2B, FCGR1A, CD40, CD86, CD80, CCR7, LAMP3, CCL22, CCL17, CXCL16, FABP5, VCAN
+- FCN1, LYZ, CST3, CTSB, CTSD, NAMPT
+
+### interstitial macrophage
+
+Description: Macrophages residing in the lung interstitium that survey the extracellular matrix, remodel tissue, and present antigen to T cells.
+
+Genes:
+- CD163, MRC1, LYVE1, FOLR2, MERTK, TIMP3, COL1A1, COL3A1, DCN, LUM, VCAN, C1QA
+- C1QB, C1QC, HLA-DRA, HLA-DRB1, CD9, CD63, FABP5, LIPA, CTSB, CTSD, GPNMB, SPP1
+- MMP14, ADAMDEC1, FCN1, CCL18, CD14, ITGAX
+
+### monocyte-derived macrophage
+
+Description: Inflammatory macrophages recruited from circulating monocytes during infection or injury, expressing high levels of S100 alarmins and chemokines.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A4, S100A6, S100A10, S100A11, LYZ, CST3, CTSB, CTSD, VCAN
+- FCGR3A, CD14, CCR2, CX3CR1, IL1B, TNF, IL6, CCL3, CCL4, NAMPT, FABP5, HLA-DRA
+- HLA-DRB1, MMP9, MMP14, ADAMDEC1, FOLR2, MRC1
+
+## alveolar type 1 fibroblast cell
+
+### airway smooth muscle cell
+
+Description: Contractile smooth muscle cells of the bronchiolar wall that regulate airway tone and can be confused with alveolar myofibroblasts.
+
+Genes:
+- ACTA2, TAGLN, MYH11, CNN1, DES, TPM2, LMOD1, SMTN, CALD1, MYLK, MYL9, MYL12A
+- MYL12B, LMNA, VIM, COL1A1, COL3A1, FN1, EDNRA, EDNRB, TGFBR1, TGFBR2, SMAD2, SMAD3
+- CTGF, CCN2, S100A4, FAP, PDGFRA, THY1, IL11, CXCL12, LIF, CRLF1, WNT5A
+
+### alveolar fibroblast
+
+Description: Matrix-producing fibroblasts residing in the alveolar interstitium that maintain extracellular matrix homeostasis and respond to injury.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, FAP, PDGFRA, THY1, FN1, COL6A1, COL6A2, COL6A3
+- COL5A1, COL5A2, COL14A1, SFRP2, WNT5A, FBLN1, FBLN2, POSTN, BGN, FMOD, ECM1, TNC
+- S100A4, ACTA2, TAGLN, MYH11, DES, CRLF1, IL11, LIF, CXCL12, CXCL14
+
+### lipofibroblast
+
+Description: Lipid-storing interstitial fibroblasts that support alveolar type 2 cell surfactant production and alveolar development.
+
+Genes:
+- PLIN2, PLIN4, FABP4, FABP5, LIPC, LPL, DGAT1, DGAT2, ADIPOQ, LEP, SCD, FASN
+- LIPG, PPARG, CIDEA, CIDEC, ADRP, MEST, DLK1, GATA2, SOX9, PDGFRA, DCN, LUM
+- COL1A1, COL3A1, WNT5A, BMP4, FGF10, ECM1
+
+### myofibroblast
+
+Description: Contractile, alpha-smooth muscle actin-expressing fibroblasts that emerge during lung injury and fibrotic remodeling.
+
+Genes:
+- ACTA2, TAGLN, MYH11, CNN1, DES, TPM2, LMOD1, SMTN, CALD1, MYLK, COL1A1, COL3A1
+- FN1, EDNRA, EDNRB, TGFBR1, TGFBR2, SMAD2, SMAD3, CTGF, CCN2, S100A4, FAP, PDGFRA
+- THY1, VIM, POSTN, TNC, IL11, CXCL12
+
+### pericyte
+
+Description: Perivascular mural cells wrapping alveolar capillaries that regulate vascular stability and angiogenesis.
+
+Genes:
+- PDGFRB, CSPG4, RGS5, ABCC9, DES, ACTA2, TAGLN, MYH11, CNN1, MCAM, NG2, KCNJ8
+- KCNJ11, ABCC8, NOTCH3, JAG1, HEY1, HES1, VIM, COL1A1, COL3A1, FN1, S100A4, FAP
+- DCN, LUM, CD146, MRC1, PECAM1, VWF
+
+## b cell
+
+### Macrophage
+
+Description: Tissue-resident macrophages in lung parenchyma that can be confused with B cells due to high HLA class II and antigen presentation gene expression.
+
+Genes:
+- CD68, CD14, CSF1R, C1QA, C1QB, C1QC, TYROBP, FCGR1A, FCGR3A, ITGAM, ITGAX, HLA-DRA
+- HLA-DRB1, HLA-DQA1, HLA-DQB1, LYZ, S100A4, S100A6, S100A8, S100A9, VCAN, FTH1, FTL, APOE
+- TREM2
+
+### Memory B cell
+
+Description: Antigen-experienced memory B cells capable of rapid response upon re-exposure, often expressing switched isotypes and activation markers.
+
+Genes:
+- MS4A1, CD19, CD79A, CD79B, CD27, TCL1A, TCL1B, BANK1, BLK, CD83, FCRL4, FCRL5
+- ITGAX, CD44, CD69, CXCR3, CXCR4, IGHG1, IGHA1, IGHM, SPIB, PAX5, IKZF3, CD38
+- PRDM1
+
+### Naive B cell
+
+Description: Circulating or tissue-resident naive B lymphocytes expressing surface immunoglobulins and B-cell receptor signaling components.
+
+Genes:
+- MS4A1, CD19, CD79A, CD79B, BANK1, BLK, FCER2, TCL1A, TCL1B, CD24, IGHM, IGHD
+- PAX5, SPIB, IKZF3, CD22, CD40, CR2, SELL, CXCR5, FCRL2, FCRL1, IGHA1, IGHG1
+- CD83
+
+### Plasma cell
+
+Description: Antibody-secreting terminally differentiated B cells with high immunoglobulin and endoplasmic reticulum chaperone expression.
+
+Genes:
+- CD38, CD27, SDC1, MZB1, JCHAIN, IGHG1, IGHA1, IGKC, IGLC2, XBP1, PRDM1, IRF4
+- TNFRSF17, DERL3, HSP90B1, FKBP11, DNAJC3, SEC61A1, IGHM, IGLL5, CD79A, CD79B, PAX5, SPIB
+- CD19
+
+### T cell
+
+Description: T lymphocytes commonly misannotated as B cells due to shared lymphoid markers; identified by T-cell receptor signaling and cytotoxic or helper gene programs.
+
+Genes:
+- CD3D, CD3E, CD3G, CD2, CD7, CD5, LCK, ZAP70, ITK, THEMIS, GZMB, GZMA
+- PRF1, NKG7, GNLY, CST7, IL7R, CCR7, LEF1, TCF7, MAL, TRAT1, CD28, ICOS
+- CTLA4
+
+## bronchial goblet cell
+
+### basal_cell
+
+Description: Multipotent stem cells located in the basal layer of the airway epithelium that self-renew and differentiate into other airway cell types.
+
+Genes:
+- KRT5, KRT14, KRT15, KRT17, TP63, CD44, ITGA6, ITGB4, COL17A1, LAMA3, LAMB3, LAMC2
+- DSG2, DSC2, JUP, CTNNB1, S100A2, S100A16, S100P, S100Z, S100A1, S100A3, S100A4, S100A5
+- S100A6, S100A10, S100A11, S100A12, S100A13, S100A14, S100B, S100C, S100D, S100E, S100F, S100G
+- S100H, S100I, S100J, S100K, S100L, S100M, S100N, S100O, S100P, S100Q, S100R, S100S
+- S100T
+
+### bronchial_goblet_cell
+
+Description: Mucus-secreting epithelial cells in the conducting airways that produce mucins and antimicrobial peptides to protect the respiratory tract.
+
+Genes:
+- MUC5AC, MUC5B, TFF1, TFF2, AGR2, AGR3, SPDEF, CLCA1, CLCA4, FCGBP, ITLN1, TFF3
+- MUC16, MUC19, MUC20, CFTR, SCGB1A1, SCGB1D2, SCGB2A1, SCGB2B1, SCGB3A1, SCGB3A2, SCGB3B1, SCGB3B2
+- SCGB3B3, SCGB3B4, SCGB3B5, SCGB3B6, SCGB3B7, SCGB3B8, SCGB3B9, SCGB3B10, SCGB3B11, SCGB3B12, SCGB3B13, SCGB3B14
+- SCGB3B15, SCGB3B16, SCGB3B17, SCGB3B18, SCGB3B19, SCGB3B20, SCGB3B21, SCGB3B22, SCGB3B23, SCGB3B24, SCGB3B25, SCGB3B26
+- SCGB3B27, SCGB3B28
+
+### ciliated_cell
+
+Description: Motile ciliated epithelial cells that line the airways and coordinate mucociliary clearance through rhythmic ciliary beating.
+
+Genes:
+- DNAI1, DNAI2, DNAH1, DNAH2, DNAH3, DNAH5, DNAH6, DNAH7, DNAH8, DNAH9, DNAH10, DNAH11
+- DNAH12, DNAH13, DNAH14, DNAH17, DNAI3, DNAI4, DNAL1, DNAL4, CCDC39, CCDC40, CCDC65, CCDC103
+- CCDC114, CCDC164, CCNO, MCIDAS, FOXJ1, DYNC2H1, DYNC2I1, DYNC2I2, IFT88, IFT140, IFT172, WDR19
+- WDR35, TTC21B, TTC25, TTC26, TTC29, TTC30A, TTC30B, TTC36, TTC37, TTC38, TTC39A, TTC39B
+- TTC39C
+
+### club_cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins, detoxify harmful substances, and serve as progenitors for airway repair.
+
+Genes:
+- SCGB1A1, SCGB1D2, SCGB2A1, SCGB2B1, SCGB3A1, SCGB3A2, SCGB3B1, SCGB3B2, SCGB3B3, SCGB3B4, SCGB3B5, SCGB3B6
+- SCGB3B7, SCGB3B8, SCGB3B9, SCGB3B10, SCGB3B11, SCGB3B12, SCGB3B13, SCGB3B14, SCGB3B15, SCGB3B16, SCGB3B17, SCGB3B18
+- SCGB3B19, SCGB3B20, SCGB3B21, SCGB3B22, SCGB3B23, SCGB3B24, SCGB3B25, SCGB3B26, SCGB3B27, SCGB3B28, CYP2F1, CYP2S1
+- CYP2U1, CYP4B1, CYP4X1, CYP4Z1, CYP4A11, CYP4A22, CYP4F2, CYP4F3, CYP4F8, CYP4F11, CYP4F12, CYP4F22
+- CYP4F3A, CYP4F3B
+
+### pulmonary_ionocyte
+
+Description: Rare airway epithelial cells that regulate ion and pH homeostasis through high expression of CFTR and proton pump components.
+
+Genes:
+- CFTR, FOXI1, ATP6V1G3, ATP6V0D1, ATP6V0E1, ATP6V1A, ATP6V1B1, ATP6V1B2, ATP6V1C1, ATP6V1C2, ATP6V1D1, ATP6V1D2
+- ATP6V1E1, ATP6V1E2, ATP6V1F, ATP6V1G1, ATP6V1G2, ATP6V1H, ATP6V0A1, ATP6V0A2, ATP6V0B, ATP6V0C, ATP6V0D1, ATP6V0D2
+- ATP6V0E1, ATP6V0E2, ATP6V0F, ATP6V0G1, ATP6V0G2, ATP6V0G3, ATP6V1A, ATP6V1B1, ATP6V1B2, ATP6V1C1, ATP6V1C2, ATP6V1D1
+- ATP6V1D2, ATP6V1E1, ATP6V1E2, ATP6V1F, ATP6V1G1, ATP6V1G2, ATP6V1H, ATP6V0A1, ATP6V0A2, ATP6V0B, ATP6V0C, ATP6V0D1
+- ATP6V0D2, ATP6V0E1
+
+## bronchus fibroblast of lung
+
+### alveolar fibroblast
+
+Description: Alveolar interstitial fibroblast that maintains the alveolar extracellular matrix and participates in gas-exchange region structural integrity.
+
+Genes:
+- PDGFRA, COL1A1, COL3A1, DCN, LUM, FBLN1, FBN1, FN1, THY1, COL6A1, COL6A2, COL6A3
+- ECM1, FAP, SFRP2, WNT5A, POSTN, BGN, FMOD, IGFBP3, IGFBP7, SERPINF1, CFD, C7
+- ADAM12, PLA2G2A, PLA2G2F, PLA2G5, RGS4, RGS5
+
+### bronchus fibroblast of lung
+
+Description: Airway-associated fibroblast population in the lung that produces extracellular matrix and contributes to bronchial structural support and remodeling.
+
+Genes:
+- COL1A1, COL3A1, DCN, LUM, FBLN1, FBN1, FN1, PDGFRA, THY1, COL6A1, COL6A2, COL6A3
+- COL14A1, COL15A1, ECM1, FAP, SFRP2, WNT5A, POSTN, BGN, FMOD, IGFBP3, IGFBP7, SERPINF1
+- CFD, C7, ADAM12, PLA2G2A, PLA2G2F, PLA2G5
+
+### lipofibroblast
+
+Description: Lipid-laden interstitial fibroblast in the alveolar niche that stores neutral lipids and supports surfactant production by type 2 alveolar epithelial cells.
+
+Genes:
+- PLIN2, PLIN4, FABP4, FABP5, ADIPOQ, LPL, DGAT1, DGAT2, SCD, FASN, PPARG, CIDEA
+- CIDEC, LIPC, APOE, APOD, LUM, DCN, PDGFRA, COL1A1, COL3A1, THY1, FBLN1, FBN1
+- FN1, COL6A1, COL6A2, COL6A3, ECM1, BGN
+
+### myofibroblast
+
+Description: Contractile fibroblast expressing alpha-smooth muscle actin that drives extracellular matrix deposition and tissue remodeling, often expanded during lung injury and fibrosis.
+
+Genes:
+- ACTA2, TAGLN, CNN1, MYH11, DES, LMOD1, TPM2, TNN, COL1A1, COL3A1, FN1, EDNRA
+- PDGFRA, THY1, DCN, LUM, FBLN1, FBN1, COL6A1, COL6A2, COL6A3, ECM1, FAP, SFRP2
+- WNT5A, POSTN, BGN, FMOD, IGFBP3, IGFBP7
+
+### pericyte
+
+Description: Perivascular mural cell wrapping capillaries in the lung parenchyma that regulates microvascular stability, angiogenesis, and vascular tone.
+
+Genes:
+- RGS5, PDGFRB, CSPG4, ABCC9, DES, ACTA2, TAGLN, MYH11, CNN1, LMOD1, TPM2, TNN
+- COL1A1, COL3A1, DCN, LUM, FBLN1, FN1, THY1, COL6A1, COL6A2, COL6A3, ECM1, SFRP2
+- WNT5A, BGN, FMOD, IGFBP3, IGFBP7, CFD
+
+## brush cell of tracheobronchial tree
+
+### brush cell of tracheobronchial tree
+
+Description: Chemosensory epithelial cells in the tracheobronchial tree characterized by expression of TRPM5 and taste receptor signaling components, functioning as solitary chemosensory cells.
+
+Genes:
+- TRPM5, POU2F3, KRT18, KRT19, CHRM3, PLCB2, ITPR3, CFTR, SCNN1A, SCNN1B, SCNN1G, FOXJ1
+- TUBB4B, TUBA1A, ACTB, ACTG1, EPCAM, CDH1, KRT8, KRT17, TAS2R16, TAS2R38, GNA14, GNAQ
+- GNAT3, GNB3, GNG13, TRPM4, TRPM8, TRPA1
+
+### ciliated cell
+
+Description: Airway epithelial cells with motile cilia that generate coordinated beating to clear mucus and trapped particles from the respiratory tract.
+
+Genes:
+- FOXJ1, DNAI1, DNAI2, DNAH1, DNAH2, DNAH3, DNAH5, DNAH6, DNAH7, DNAH8, DNAH9, DNAH10
+- DNAH11, DNAH12, DNAH17, DNAL1, DNALI1, CCDC39, CCDC40, CCDC65, CCDC103, CCDC164, DYNC2H1, DYNC2I1
+- DYNC2I2, IFT88, IFT140, IFT172, TTC21B, TTC25
+
+### goblet cell
+
+Description: Mucus-secreting epithelial cells in the airways that produce mucins and other glycoproteins to trap inhaled particles and pathogens.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, AGR2, AGR3, TFF1, TFF2, TFF3, CLCA1, CLCA4, MUC19, MUC20
+- MUC16, MUC1, MUC4, FCGBP, VWA1, GALNT2, GALNT3, GALNT6, GALNT7, GALNT11, GALNT12, GALNT14
+- GALNT18, GALNAC1, GALNAC2, GALNAC3, GALNAC4, GALNAC5
+
+### ionocyte
+
+Description: Rare airway epithelial cells specialized for ion transport and pH regulation, characterized by high expression of CFTR and FOXI1 transcription factor.
+
+Genes:
+- CFTR, FOXI1, SLC9A3, SLC26A4, ATP6V1G1, ATP6V0D1, ATP6V1A, ATP6V1B1, ATP6V1C1, ATP6V1D, ATP6V1E1, ATP6V1F
+- ATP6V1H, ATP6V0A1, ATP6V0B, ATP6V0C, ATP6V0E1, ATP6V0E2, SLC9A1, SLC4A7, SLC4A1, SLC4A4, SLC4A8, SLC4A9
+- SLC4A10, SLC4A11, SLC26A9, SLC26A11, SLC26A3
+
+### pulmonary neuroendocrine cell
+
+Description: Rare airway epithelial cells that form neuroepithelial bodies and secrete bioactive amines and peptides like CGRP in response to hypoxia and mechanical stimuli.
+
+Genes:
+- CHGA, CHGB, ASCL1, INSM1, NEUROD1, HES6, SCG2, SCG3, SCG5, SCGN, PCSK1, PCSK2
+- GRPR, CALCA, CALCB, CGRP, SYP, ENO2, NCAM1, PHOX2B, DLL1, HES1, NOTCH1, NOTCH2
+- DLL4, JAG1, HES5, ASCL1, NEUROG3, POMC
+
+## capillary endothelial cell
+
+### aerocyte capillary endothelial cell (aCap)
+
+Description: Thin-walled alveolar capillary endothelial cells specialized for gas exchange, expressing high levels of carbonic anhydrase 4 (CA4) and carboxypeptidase M-related protein (CAR4).
+
+Genes:
+- CAR4, CA4, EDNRB, PLVAP, ESAM, APLNR, ENG, PECAM1, CDH5, VWF, CLDN5, ESAM
+- ITM2A, TIE1, TEK, FLT1, KDR, CD34, CD36, LYVE1, PROX1, SLC38A5, SLC6A20, ACE2
+- TMPRSS2, FUT1, FUT2, GATA2, ERG, FLI1
+
+### arterial endothelial cell
+
+Description: Arterial endothelial cells forming the arterial vasculature of the lung, marked by Notch signaling components (DLL4, HEY1/2) and Ephrin B2.
+
+Genes:
+- EFNB2, EPHB4, DLL4, NOTCH1, NOTCH4, HEY1, HEY2, HES1, GJA4, GJA5, PECAM1, CDH5
+- VWF, CLDN5, ESAM, ENG, FLT1, KDR, TEK, TIE1, CD34, CD36, ITM2A, PLVAP
+- APLNR, EDNRB, GATA2, ERG, FLI1, NR2F2
+
+### general capillary endothelial cell (gCap)
+
+Description: General capillary endothelial cells with intermediate characteristics between aerocyte and venous endothelium, marked by interferon-induced transmembrane proteins (IFITMs) and EMP family members.
+
+Genes:
+- EMP1, EMP3, IFI27, IFITM1, IFITM2, IFITM3, BST2, LY6A, LY6C1, LY6E, SCA1, PECAM1
+- CDH5, VWF, CLDN5, ESAM, ENG, FLT1, KDR, TEK, TIE1, CD34, CD36, ITM2A
+- PLVAP, APLNR, EDNRB, GATA2, ERG, FLI1
+
+### pulmonary fibroblast (confused neighbor)
+
+Description: Interstitial fibroblasts in the lung parenchyma that can be confused with endothelial cells due to their perivascular location and expression of some overlapping markers like PECAM1 in certain contexts.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, COL5A1, COL6A1, COL6A2, COL6A3, FN1, DCN, LUM, BGN, FMOD
+- PDGFRA, FAP, THY1, CD90, ACTA2, TAGLN, CNN1, MYH11, DES, VIM, S100A4, POSTN
+- WNT2, WNT5A, FZD1, FZD2, LRP5, LRP6
+
+### venous endothelial cell
+
+Description: Venous endothelial cells lining post-capillary venules in the lung, characterized by nuclear receptor NR2F2 (COUP-TFII) and Ephrin B2 signaling components.
+
+Genes:
+- NR2F2, COUP-TFII, EFNB2, EPHB4, NRP2, PROX1, LYVE1, PECAM1, CDH5, VWF, CLDN5, ESAM
+- ENG, FLT1, KDR, TEK, TIE1, CD34, CD36, ITM2A, PLVAP, APLNR, EDNRB, GATA2
+- ERG, FLI1, SLC38A5, SLC6A20, ACE2, TMPRSS2
+
+## cd1c-positive myeloid dendritic cell
+
+### Macrophage
+
+Description: Alveolar or interstitial macrophage commonly confused with CD1c+ DCs due to overlapping MHC-II and myeloid markers, distinguished by high CD68, CD163, and complement genes.
+
+Genes:
+- CD68, CD163, MRC1, C1QA, C1QB, C1QC, CSF1R, FCGR1A, FCGR2A, FCGR3A, ITGAM, ITGAX
+- LYZ, CTSB, CTSD, CTSL, CTSS, APOE, TREM2, GPNMB, FOLR2, MMP12, CCL18, CCL3
+- CCL4, CXCL8, IL1B, TNF, HLA-DRA, HLA-DRB1, CD74
+
+### Monocyte
+
+Description: Classical or intermediate monocyte often confused with CD1c+ DCs due to shared myeloid and MHC-II expression, distinguished by high CD14, S100A8/A9, and FCGR3A.
+
+Genes:
+- CD14, FCGR3A, LYZ, S100A8, S100A9, S100A4, S100A6, VCAN, FCN1, FPR1, FPR2, ITGAM
+- CSF3R, CCR2, CX3CR1, CD36, LST1, CFP, MNDA, TYMP, NAMPT, IL1B, TNF, CCL3
+- CCL4, CXCL8, HLA-DRA, HLA-DRB1, CD74, FCGR1A
+
+### cDC1
+
+Description: Classical type 1 conventional dendritic cell (cDC1) specialized in cross-presentation to CD8+ T cells, marked by CLEC9A, BDCA3/CD141, and XCR1.
+
+Genes:
+- CLEC9A, BDCA3, IRF8, BATF3, XCR1, CD141, THBD, TLR3, CXCR3, IDO1, IDO2, CD36
+- FCRL3, FCRL2, FCRL1, LAMP3, CCR7, CCL19, CCL21, HLA-DRA, HLA-DRB1, CD74, ITGAX, ITGAL
+- NKG7, GZMB, GZMA, PRF1, ZBTB46, FCER1A
+
+### cDC2
+
+Description: Classical type 2 conventional dendritic cell (cDC2) specialized in antigen presentation to CD4+ T cells, characterized by high expression of MHC class II and FcεRIα.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, HLA-DRA, HLA-DRB1, HLA-DQA1, HLA-DQB1, HLA-DPA1, HLA-DPB1, CD74, ITGAX, ITGAM
+- FCGR2B, FCGR1A, CD86, CD80, CD40, CCR7, LAMP3, CCL22, CCL17, IRF4, ZBTB46, CLEC4C
+- TREM1, TREM2, MRC1, CD1A, FSCN1, GAL3
+
+### pDC
+
+Description: Plasmacytoid dendritic cell (pDC) specialized in type I interferon production in response to viral infection, marked by CLEC4C/BDCA2, IL3RA/CD123, and TCF4.
+
+Genes:
+- CLEC4C, NRP1, IL3RA, TCF4, RUNX2, SERPINF1, GZMB, IRF7, TLR7, TLR9, FCER1A, HLA-DRA
+- HLA-DRB1, CD74, CD22, CD303, LILRA4, ITM2C, CD300E, CD300C, CD300A, CD300H, CD2, CD5
+- CD7, CD1C, FCGR2B, CD86, CD40, CXCR4
+
+## cd4-positive, alpha-beta t cell
+
+### Central memory CD4+ T cell
+
+Description: Memory CD4+ T cells retaining lymphoid homing capacity with enhanced proliferative potential and secondary lymphoid tissue residency.
+
+Genes:
+- CCR7, IL7R, CD28, CD40LG, TCF7, LEF1, SELL, ITGB1, CD27, LTB, GIMAP2, GIMAP5
+- GIMAP6, GIMAP7, GIMAP8, TRAT1, BACH2, KLF2, FOXO1, S1PR1, RGS16, CD5, CD3D, CD3E
+- CD2, MAL, MYC, CD69, ICOS, TNFRSF9
+
+### Effector memory CD4+ T cell
+
+Description: Differentiated CD4+ T cells lacking CCR7 with tissue-homing capacity and effector functions including cytotoxic potential in peripheral tissues.
+
+Genes:
+- GZMB, GZMA, GZMH, GZMK, PRF1, NKG7, GNLY, CCL4, CCL3, CCL5, IFNG, TNF
+- IL2RA, CXCR3, CXCR6, ITGAE, ITGAM, ITGA1, ITGA4, ITGB1, CD69, CD44, KLRB1, KLRD1
+- KLRC1, KLRK1, FGFBP2, HOPX, EOMES, TBX21, CD3D, CD3E
+
+### Naive CD4+ T cell
+
+Description: Antigen-inexperienced CD4+ T cells expressing lymphoid homing receptors CCR7 and L-selectin, poised for primary immune responses.
+
+Genes:
+- CCR7, LEF1, SELL, TCF7, MAL, IL7R, ITGB1, CD27, CD28, LTB, CD40LG, GIMAP2
+- GIMAP5, GIMAP6, GIMAP7, GIMAP8, TRAT1, MYC, BACH2, KLF2, KLF4, FOXO1, S1PR1, AC005224.2
+- RGS10, RGS16, ITGA4, CD69, CD5, CD3D, CD3E, CD2
+
+### Regulatory T cell (Treg)
+
+Description: Immunosuppressive CD4+ T cells maintaining immune tolerance through FOXP3-driven transcriptional programs and inhibitory receptor expression.
+
+Genes:
+- FOXP3, IL2RA, CTLA4, TNFRSF18, TNFRSF4, IKZF2, TIGIT, LAG3, ENTPD1, ITGAE, ITGB1, ITGA4
+- CCR8, CCR4, GZMB, PRF1, IL1R1, IL1R2, IKZF3, BACH2, SATB1, STAT5A, STAT5B, HLA-DRA
+- HLA-DRB1, HLA-DQA1, HLA-DQB1, CD3D, CD3E, CD4, CD2
+
+### T follicular helper (Tfh) cell
+
+Description: CD4+ T cells specialized in B cell help within germinal centers, characterized by CXCR5 expression and ICOS-mediated co-stimulation.
+
+Genes:
+- CXCR5, ICOS, PDCD1, BCL6, MAF, IL21, IL21R, CD40LG, CD28, SLAM, CD84, CD6
+- BATF, IRF4, STAT3, CXCR4, CCR7, SELL, LEF1, TCF7, IL7R, ITGB1, LTB, CD4
+- CD3D, CD3E, CD2, SH2D1A, CD40, TNFRSF4
+
+## cd8-positive, alpha-beta t cell
+
+### Alveolar macrophage
+
+Description: Large phagocytic macrophages residing in the alveolar space that are frequently misannotated as lymphocytes due to high HLA and transcript capture complexity.
+
+Genes:
+- MARCO, MSR1, SIGLEC1, LYVE1, MRC1, CD209, FOLR2, CYP4F22, CYP4F3, GGT1, TREM2, FABP4
+- LIPA, CSF1R, CD68, CD163, C1QA, C1QB, C1QC, CTSB, CTSD, CTSL, CTSS, HLA-DRA
+- HLA-DRB1, HLA-DPA1, HLA-DPB1, FCGR3A, ITGAM, ITGAX
+
+### Central memory CD8 T cell (Tcm)
+
+Description: Lymphoid-homing central memory CD8 T cells with high proliferative capacity and self-renewal potential found in lung-draining lymph nodes and parenchyma.
+
+Genes:
+- CCR7, LEF1, TCF7, SELL, IL7R, CD27, CD28, CD44, CD8A, CD8B, CD3D, CD3E
+- LCK, ZAP70, MAL, ITK, GADS, LAT, CD2, CD5, CD7, CD6, CD9, CD81
+- CD82, CD53, CD63, CD69, CD74, HLA-DRB1
+
+### Effector memory CD8 T cell (Tem)
+
+Description: Circulating effector-memory CD8 T cells with high cytotoxic potential that can be recruited into lung tissue during inflammation.
+
+Genes:
+- GZMB, PRF1, NKG7, GNLY, GZMA, GZMH, GZMK, IFNG, FASLG, CCL4, CCL3, CX3CR1
+- CXCR3, CCR5, CD8A, CD8B, CD3D, CD3E, LCK, ZAP70, EOMES, TBX21, ITGAE, KLRD1
+- KLRC1, KLRK1, KLRB1, FCGR3A, TYROBP, SYK
+
+### Mucosal-associated invariant T cell (MAIT)
+
+Description: Innate-like T cells enriched at mucosal sites including the lung that recognize MR1-presented bacterial metabolites and rapidly produce cytokines.
+
+Genes:
+- TRAV1-2, KLRB1, CD161, SLC4A10, RORC, IL18R1, IL18RAP, IL7R, CXCR6, ITGAE, CD8A, CD8B
+- CD3D, CD3E, NKG7, GZMK, GZMA, GZMB, PRF1, IFNG, TNF, IL17A, IL23R, CCR6
+- CXCR3, CXCR6, ZBTB16, THRB, PLZF, SLC16A2
+
+### Tissue-resident memory CD8 T cell (Trm)
+
+Description: Long-lived CD8 T cells residing in lung parenchyma that provide rapid local recall responses to respiratory pathogens.
+
+Genes:
+- ITGAE, CXCR6, XCR1, CXCR3, GZMK, EOMES, PDCD1, CXCR4, ITGA1, ITGA4, CX3CR1, CD69
+- ZEB2, HOBIT, RUNX3, TCF7, IL7R, CCR5, GZMA, PRF1, NKG7, GNLY, GZMB, IFNG
+- FASLG, CD8A, CD8B, LCK, ZAP70, CD3D, CD3E
+
+## classical monocyte
+
+### alveolar macrophage
+
+Description: Tissue-resident alveolar macrophages in the lung parenchyma expressing scavenger receptors MARCO and MRC1, specialized for surfactant clearance and immune homeostasis in the alveolar space.
+
+Genes:
+- MARCO, MRC1, CD163, FOLR2, TREM2, LYZ, CST3, CTSS, FCN1, VCAN, S100A8, S100A9
+- S100A12, HLA-DRA, HLA-DRB1, CD74, ITGAM, ITGB2, CD36, MSR1, SIGLEC1, C1QA, C1QB, C1QC
+- CCL3, CCL4, CXCL10, IL1B, TNF
+
+### classical monocyte
+
+Description: CD14++ FCGR3A- classical monocytes characterized by high expression of S100 calcium-binding proteins and Fc-gamma receptors, involved in innate immune surveillance and phagocytosis in lung tissue.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A12, LYZ, VCAN, FCGR3A, CD14, CST3, CTSS, TYMP, MNDA
+- S100A4, S100A6, FGL2, CFP, LST1, IFITM2, IFITM3, NCF1, NCF2, NCF4, CYBB, CYBA
+- RAC2, RAB37, ITGAM, ITGB2, CCR2, SELL
+
+### dendritic cell
+
+Description: Lung parenchymal dendritic cells with high MHC class II expression and antigen presentation machinery, bridging innate and adaptive immunity through T cell activation.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, CIITA
+- RFX5, RFXAP, LYZ, CST3, CTSS, VCAN, FCN1, S100A8, S100A9, S100A12, CD14, FCGR3A
+- CCR7, CCL22, IRF4, BATF3, ZBTB46, FLT3
+
+### intermediate monocyte
+
+Description: CD14++ FCGR3A+ intermediate monocytes with enhanced antigen presentation capacity, expressing high levels of MHC class II molecules and transitioning between classical and non-classical states.
+
+Genes:
+- FCGR3A, CD14, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, FCN1, LYZ, VCAN, S100A8
+- S100A9, S100A12, CST3, CTSS, TYMP, MNDA, CFP, FGL2, ITGAM, ITGB2, CCR2, CX3CR1
+- CD74, HLA-DMB, HLA-DOB, CIITA, RFX5, RFXAP
+
+### non-classical monocyte
+
+Description: CD14dim FCGR3A++ non-classical monocytes patrolling the lung vasculature, characterized by CX3CR1 expression and involved in endothelial surveillance and tissue repair.
+
+Genes:
+- FCGR3A, CX3CR1, LYN, MS4A7, CDKN1C, FCER1A, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, VCAN
+- FCN1, LYZ, S100A10, ANXA2, CST3, CTSS, TYMP, MNDA, ITGAL, ITGB2, CCR5, CXCR3
+- CD36, TREM1, TREM2, FOLR2, MRC1, CD163
+
+## club cell
+
+### alveolar type 1 cell
+
+Description: Thin, squamous epithelial cells covering >95% of the alveolar surface, specialized for gas exchange and barrier function.
+
+Genes:
+- AGER, SFTPC, SFTPD, SFTPA1, SFTPA2, SFTPB, ABCA3, NKX2-1, PDPN, CAV1, CAV2, AQP5
+- AQP3, AQP4, CLDN18, CLDN4, CLDN5, OCLN, TJP1, TJP2, TJP3, CDH5, PECAM1, VWF
+- ENG, FLT1, KDR, TEK, TIE1, CDH1, CDH2, CDH3, CDH4, CDH5, CDH6, CDH7
+- CDH8, CDH9, CDH10, CDH11, CDH12, CDH13, CDH14, CDH15, CDH16, CDH17, CDH18, CDH19
+- CDH20
+
+### alveolar type 2 cell
+
+Description: Cuboidal epithelial cells that synthesize and secrete pulmonary surfactant to reduce alveolar surface tension and act as progenitors for AT1 cells.
+
+Genes:
+- SFTPC, SFTPA1, SFTPA2, SFTPB, ABCA3, NKX2-1, AGER, PDPN, CAV1, CAV2, AQP5, AQP3
+- AQP4, CLDN18, CLDN4, CLDN5, OCLN, TJP1, TJP2, TJP3, CDH5, PECAM1, VWF, ENG
+- FLT1, KDR, TEK, TIE1, CDH1, CDH2, CDH3, CDH4, CDH5, CDH6, CDH7, CDH8
+- CDH9, CDH10, CDH11, CDH12, CDH13, CDH14, CDH15, CDH16, CDH17, CDH18, CDH19, CDH20
+- CDH21, CDH22
+
+### basal cell
+
+Description: Multipotent progenitor cells located in the basal layer of the airway epithelium that self-renew and differentiate into ciliated and secretory cells.
+
+Genes:
+- TP63, KRT5, KRT14, KRT15, KRT17, ITGA6, ITGB4, CD44, NGFR, SOX2, DLK1, DLK2
+- DLK3, DLK4, DLK5, DLK6, DLK7, DLK8, DLK9, DLK10, DLK11, DLK12, DLK13, DLK14
+- DLK15, DLK16, DLK17, DLK18, DLK19, DLK20, DLK21, DLK22, DLK23, DLK24, DLK25, DLK26
+- DLK27, DLK28, DLK29, DLK30, DLK31, DLK32, DLK33, DLK34, DLK35, DLK36, DLK37, DLK38
+- DLK39, DLK40
+
+### ciliated cell
+
+Description: Epithelial cells with motile cilia that generate coordinated beating to clear mucus and inhaled particles from the airways.
+
+Genes:
+- FOXJ1, DNAI1, DNAI2, DNAH5, DNAH1, DNAH2, DNAH3, DNAH7, DNAH8, DNAH9, DNAH10, DNAH11
+- DNAH12, DNAH13, DNAH14, DNAH17, DNAH18, DNAH19, DNAH20, DNAH21, DNAH22, DNAH23, DNAH24, DNAH25
+- DNAH26, DNAH27, DNAH28, DNAH29, DNAH30, DNAH31, DNAH32, DNAH33, DNAH34, DNAH35, DNAH36, DNAH37
+- DNAH38, DNAH39, DNAH40, DNAH41, DNAH42, DNAH43, DNAH44, DNAH45, DNAH46, DNAH47, DNAH48, DNAH49
+- DNAH50, DNAH51
+
+### club cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins and detoxify inhaled xenobiotics via cytochrome P450 enzymes.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB3A1, SCGB1D1, SCGB2A2, SCGB2B11, SCGB2B26, CYP2F2, CYP2S1, CYP4B1, CYP4F18, CYP4F22
+- CYP4F3, CYP4F8, CYP4F11, CYP4F12, CYP4F14, CYP4F15, CYP4F16, CYP4F17, CYP4F19, CYP4F21, CYP4F23, CYP4F24
+- CYP4F26, CYP4F27, CYP4F28, CYP4F29, CYP4F30, CYP4F31, CYP4F32, CYP4F33, CYP4F34, CYP4F35, CYP4F36, CYP4F37
+- CYP4F38, CYP4F39, CYP4F40, CYP4F41, CYP4F42, CYP4F43, CYP4F44, CYP4F45, CYP4F46, CYP4F47, CYP4F48, CYP4F49
+- CYP4F50, CYP4F51
+
+## conventional dendritic cell
+
+### LAMP3+ mature DC
+
+Description: Mature, activated dendritic cell state characterized by high LAMP3 and CCR7 expression, representing terminal maturation of cDCs migrating to lymph nodes or responding to inflammation.
+
+Genes:
+- LAMP3, CCR7, CD83, CD86, CD40, FSCN1, CCL19, CCL22, CCL17, CCL21, CXCL9, CXCL10
+- CXCL11, IDO1, IDO2, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, TNFSF4, TNFSF13B, IL15RA, CD274
+- MARCHF1, TSPAN14, NEK7, RASGRP2, THBS1, CADM1, FCER1A, ITGAX, CD1C, CLEC9A, XCR1, BATF3
+- IRF8, IRF4, FCGR3A
+
+### Macrophage
+
+Description: Alveolar and interstitial macrophages that are frequently confused with dendritic cells due to overlapping antigen presentation markers and myeloid morphology.
+
+Genes:
+- CD68, CD163, MRC1, CD209, MSR1, CSF1R, C1QA, C1QB, C1QC, TREM2, GPNMB, FOLR2
+- LYVE1, MARCO, FCGR1A, FCGR2A, FCGR3A, ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, S100A4
+- S100A6, S100A8, S100A9, ANXA1, ANXA2, CD36, GAL3C, LGALS3, LGALS9, IL1B, IL6, TNF
+- CCL3, CCL4, CXCL8, VEGFA, TGFB1
+
+### Monocyte
+
+Description: Circulating and tissue-infiltrating monocytes that can be confused with dendritic cells due to shared myeloid markers and antigen presentation capacity.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A12, S100A6, LYZ, CST3, CD14, VCAN, FCGR3A, ITGAM, ITGAX
+- HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CCR2, CX3CR1, CSF3R, IL1B, IL6, TNF, CCL3, CCL4
+- CXCL8, NAMPT, NCF1, NCF2, NCF4, CYBA, CYBB, FCN1, FCGR1A, CD68, CD163, MRC1
+- LGALS3
+
+### cDC1
+
+Description: Classical type 1 conventional dendritic cell specializing in cross-presentation of viral and tumor antigens to CD8+ T cells, marked by CLEC9A and XCR1.
+
+Genes:
+- CLEC9A, IRF8, BATF3, XCR1, IDO1, CADM1, THBS1, FCER1A, CD1C, ITGAX, HLA-DRA, HLA-DRB1
+- HLA-DPA1, HLA-DPB1, LAMP3, CCR7, FSCN1, NEK7, TSPAN14, RASGRP2, TNFSF13B, IL15RA, CD274, CXCL9
+- CXCL10, IDO1, IDO2, WDFY4, SHPK, MARCHF1, CD83, CD86, CD40, CCL17, CCL22, FCER1A
+
+### cDC2
+
+Description: Classical type 2 conventional dendritic cell specialized in CD4+ T cell priming and antigen presentation, characterized by FCER1A and CD1C expression.
+
+Genes:
+- FCER1A, CD1C, CLEC10A, CD1A, IRF4, FSCN1, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1
+- LAMP3, CCR7, CD83, CD86, CD40, CCL17, CCL22, CCL19, CCL21, TNFSF4, TNFSF13B, IL1B
+- IL6, CXCL11, FCGR3A, S100A4, S100A6, S100A10, ANXA2, ANXA1, MRC1, CD209, CD36, TREM2
+- GPNMB, FOLR2, GAL3C
+
+## dendritic cell
+
+### cDC1
+
+Description: Classical type 1 conventional dendritic cell specialized in cross-presentation of viral and tumor antigens to CD8+ T cells.
+
+Genes:
+- IRF8, BATF3, CLEC9A, XCR1, IDO1, CD141, THBD, CADM1, NDRG2, TREM3, FCER1A, HLA-DRA
+- HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, ITGAX, FCGR3A, CXCR3, LAMP3, CCR7, FSCN1
+- CCL19, CCL22
+
+### cDC2
+
+Description: Classical type 2 conventional dendritic cell specialized in antigen presentation to CD4+ T cells and Th17 polarization.
+
+Genes:
+- IRF4, FCER1A, CD1C, CLEC10A, CD1A, FCEG1A, FCER1G, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1
+- HLA-DQB1, CD74, ITGAX, CD14, FCGR1A, FCGR2A, FCGR3A, CCL22, CCL17, CXCR4, LAMP3, CCR7
+- FSCN1, MRC1
+
+### macrophage
+
+Description: Alveolar or interstitial macrophage often confused with dendritic cells due to shared antigen-presenting capacity and overlapping marker expression.
+
+Genes:
+- CD68, CD163, MRC1, LYZ, C1QA, C1QB, C1QC, CSF1R, MARCO, MSR1, FCGR1A, FCGR2A
+- FCGR3A, ITGAM, ITGAX, S100A8, S100A9, VCAN, FCN1, CST3, CTSB, CTSD, CTSL, HLA-DRA
+- HLA-DRB1, CD74
+
+### moDC
+
+Description: Monocyte-derived dendritic cell arising from circulating monocytes that migrate into inflamed lung tissue.
+
+Genes:
+- CD14, FCGR3A, CD68, CD163, MRC1, LYZ, S100A8, S100A9, S100A4, S100A6, VCAN, FCN1
+- CST3, CTSB, CTSD, CTSL, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, ITGAX, ITGAM, CCR2
+- CCL3, CCL4
+
+### pDC
+
+Description: Plasmacytoid dendritic cell specialized in type I interferon production in response to viral infections.
+
+Genes:
+- CLEC4C, NRP1, IL3RA, TCF4, IRF7, SERPINF1, LILRA4, CD303, CD304, HLA-DRA, HLA-DRB1, HLA-DPA1
+- HLA-DPB1, CD74, FCER1A, FCER1G, ITGAX, CXCR3, CXCR4, CD2, CD7, CD79A, MZB1, JCHAIN
+- IGHM, IGKC
+
+## elicited macrophage
+
+### Alveolar Macrophage
+
+Description: Tissue-resident macrophages of the alveolar space that clear surfactant, inhaled particles, and microbes via high phagocytic and lipid-metabolic activity.
+
+Genes:
+- MARCO, FABP4, LYZ, C1QA, C1QB, C1QC, MRC1, CD163, SIGLEC1, MSR1, FOLR2, PPARG
+- NR1H3, ABCA1, TREM2, APOE, CYP27A1, LIPA, GPNMB, ITGAM, CSF1R, FCGR3A, HLA-DRA, HLA-DRB1
+- CD9
+
+### Dendritic Cell
+
+Description: Antigen-presenting dendritic cells of the lung parenchyma, often confused with macrophages due to shared myeloid and MHC-II gene expression.
+
+Genes:
+- CLEC9A, BATF3, IRF8, CD1C, FCER1A, HLA-DRA, HLA-DRB1, HLA-DQA1, HLA-DQB1, CD74, CCR7, LAMP3
+- FSCN1, ITGAX, ITGAM, CD14, LYZ, VCAN, CFP, C1QA, C1QB, C1QC, TREM2, APOE
+- GPNMB
+
+### Inflammatory Monocyte
+
+Description: Circulating classical monocytes recruited to inflamed lung parenchyma, often confused with monocyte-derived macrophages due to overlapping S100 and inflammatory gene signatures.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A12, LYZ, VCAN, IL1B, TNF, CXCL8, CCL3, CCL4, CCR2
+- CD14, FPR1, FPR2, NAMPT, MMP9, SERPINA1, LTF, CTSD, CTSB, CFP, FCGR3A, ITGAM
+- HLA-DRA
+
+### Interstitial Macrophage
+
+Description: Tissue-resident macrophages of the lung interstitium involved in extracellular matrix remodeling, antigen presentation, and immune regulation.
+
+Genes:
+- MRC1, CD163, LYVE1, FOLR2, TIMP3, COL1A1, COL3A1, DCN, LUM, FBLN1, FBN1, VCAN
+- HAS1, PDGFRA, PDGFRB, ABCA1, APOE, TREM2, GPNMB, MMP14, CTSC, CTSB, CTSD, C1QA
+- C1QB
+
+### Monocyte-derived Macrophage
+
+Description: Inflammatory macrophages recruited from circulating monocytes during infection or injury, characterized by high S100 calcium and pro-inflammatory cytokine expression.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A12, LYZ, VCAN, CFP, IL1B, TNF, CXCL8, CCL3, CCL4
+- CCR2, ITGAM, CD14, FCGR3A, FPR1, FPR2, NAMPT, MMP9, SERPINA1, LTF, CTSD, CTSB
+- HLA-DRA
+
+## endothelial cell of lymphatic vessel
+
+### alveolar type 1 cell (AT1)
+
+Description: Alveolar type 1 epithelial cells covering the alveolar surface for gas exchange, often confused with endothelial cells due to thin morphology and shared markers like PDPN.
+
+Genes:
+- AQP5, AGER, SFTPC, SFTPA1, SFTPA2, SFTPD, SCGB3A1, SCGB3A2, MUC1, MUC5B, NKX2-1, HOPX
+- PDPN, CLDN18, CLDN4, OCLN, DSP, KRT19, KRT8, KRT18, EPCAM, CDH1, CD24, AXIN2
+- WNT2
+
+### blood vascular endothelial cell (BEC)
+
+Description: Blood vascular endothelial cells forming the lung capillary and arterial/venous networks, distinguished by CDH5, PECAM1, and VWF expression and involved in gas exchange and blood filtration.
+
+Genes:
+- PECAM1, CDH5, VWF, ENG, ESAM, CLDN5, OCLN, TIE1, TEK, KDR, FLT1, NOTCH1
+- DLL4, HEY1, EPHB4, EFNB2, PLVAP, ERG, SOX18, GATA2, CD34, ICAM1, VCAM1, SELE
+- SELP
+
+### lymphatic endothelial cell (LEC)
+
+Description: Lymphatic endothelial cells lining lymphatic vessels in the lung parenchyma, characterized by PROX1 and LYVE1 expression and involved in immune cell trafficking and fluid drainage.
+
+Genes:
+- PROX1, LYVE1, PDPN, CCL21, FLT4, VEGFR3, RELN, FOXC2, GATA6, NRP2, SEMA3C, ADAMTS9
+- EMILIN1, CCBE1, ADAMTSL2, FAP, SLC38A4, MEG3, NR2F2, COUP-TFII, ITGA9, CD9, FABP4, ESAM
+- PLVAP
+
+### mesothelial cell
+
+Description: Mesothelial cells lining the pleural surface of the lung, expressing CALB2 and MSLN, sometimes misannotated as lymphatic endothelium due to PDPN expression and location near lymphatics.
+
+Genes:
+- CALB2, MSLN, UPK3B, WT1, MECOM, LRRN2, HOXB2, HOXB5, PDPN, CLDN1, CLDN4, DSP
+- KRT19, EPCAM, CDH1, THY1, DCN, LUM, COL1A1, COL3A1, FN1, VIM, ACTA2, TAGLN
+- DES
+
+## epithelial cell of lower respiratory tract
+
+### Alveolar macrophage
+
+Description: Resident macrophages in the alveolar space that clear inhaled particles, surfactant, and pathogens.
+
+Genes:
+- MARCO, FCN1, CD68, CD163, C1QA, C1QB, C1QC, CSF1R, MRC1, MSR1, TREM2, FOLR2
+- LYZ, CTSB, CTSD, CTSL, CTSS, NAPSA, SPP1, APOE, APOC1, FABP5, LIPA, GPNMB
+- ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1
+
+### Alveolar type 1 (AT1) cell
+
+Description: Thin, squamous epithelial cells covering most of the alveolar surface and specialized for gas exchange.
+
+Genes:
+- AGER, EDNRB, CAV1, CAV2, SFTPC, SFTPD, MUC1, CLDN18, CLDN4, TJP1, AQP5, HOPX
+- PDPN, EGFR, KRT19, KRT8, KRT18, EPCAM, CDH1, ITGA6, ITGB1, LAMA3, LAMB3, LAMC2
+- COL17A1, ITGB4, DSP, JUP, CTNNB1, VIM
+
+### Alveolar type 2 (AT2) cell
+
+Description: Cuboidal surfactant-producing cells that maintain alveolar surface tension and serve as progenitors for AT1 cells.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, NKX2-1, HOPX, AGER, EPCAM, KRT8, KRT18
+- KRT19, CDH1, CLDN18, CLDN4, DSP, JUP, CTNNB1, LAMP3, NPC2, LPCAT1, CHGA, SCGB1A1
+- SCGB3A2, SCGB1D1, SCGB2A1, SCGB2B2, MUC1, TFF2
+
+### Capillary endothelial cell
+
+Description: Endothelial cells lining the pulmonary capillaries that form the blood–air barrier with alveolar epithelium.
+
+Genes:
+- PECAM1, CDH5, VWF, CLDN5, ESAM, ENG, TEK, KDR, FLT1, ERG, FLI1, SOX18
+- CAV1, CAV2, PLVAP, EMP2, RAMP2, APLN, EDNRB, EDN1, NOS3, PTPRB, ITGAV, ITGB3
+- COL4A1, COL4A2, LAMA4, LAMB1, LAMC1, HSPG2
+
+### Lung fibroblast
+
+Description: Mesenchymal cells in the alveolar interstitium that produce extracellular matrix and regulate tissue repair.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3, FN1, DCN, LUM, BGN
+- FBN1, FBN2, ELN, PDGFRA, PDGFRB, ACTA2, TAGLN, MYH11, DES, VIM, THY1, FAP
+- POSTN, WNT5A, TGFBR1, TGFBR2, MMP2, TIMP3
+
+## fibroblast
+
+### adventitial_fibroblast
+
+Description: Perivascular fibroblasts located in the adventitia of airways and blood vessels that contribute to vascular remodeling and ECM maintenance.
+
+Genes:
+- PDGFRB, PDGFRA, COL1A1, COL1A2, COL3A1, DCN, LUM, FBLN1, FBLN2, FBN1, FBN2, ELN
+- THY1, FAP, SFRP2, WNT5A, DPT, RSPO3, GLI1, PTCH1, POSTN, FN1, VIM, CDH11
+- CTGF, CYR61, MMP2, TIMP1, SERPINE1, LOX, LOXL2, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3
+- BGN, FMOD, ASPN, PRELP
+
+### alveolar_fibroblast
+
+Description: Interstitital fibroblasts within the alveolar niche that regulate alveolar structure and support epithelial cell homeostasis.
+
+Genes:
+- PDGFRA, THY1, DPT, RSPO3, WIF1, PTGDS, DCN, LUM, COL1A1, COL3A1, FBLN1, FBLN2
+- FBN1, ELN, SFRP2, WNT5A, FAP, POSTN, FN1, VIM, CDH11, CTGF, MMP2, TIMP1
+- LOX, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3, BGN, FMOD, ASPN, PRELP, SERPINE1, PDGFRB
+- EDNRB, RARRES2, ADH1B, EGFR
+
+### lipofibroblast
+
+Description: Lipid-rich stromal cells that support alveolar type 2 cell differentiation and surfactant production during lung development and repair.
+
+Genes:
+- PLIN2, PLIN4, FABP4, FABP5, LIPC, DGAT1, DGAT2, SCD, FASN, ACSL1, ACSL3, LPL
+- CD36, LALBA, SCARB1, APOE, APOD, LUM, DCN, COL1A1, COL3A1, PDGFRA, WIF1, PTGDS
+- RARRES2, ADH1B, ADH1C, DHRS3, EGFR, EDNRB
+
+### myofibroblast
+
+Description: Contractile, ECM-producing fibroblasts that drive tissue remodeling and fibrosis in response to injury and TGF-beta signaling.
+
+Genes:
+- ACTA2, TAGLN, CNN1, DES, MYH11, LMOD1, TPM2, TNN, MYLK, FHL1, SMTN, COL1A1
+- COL1A2, COL3A1, COL5A1, COL5A2, FN1, EDNRA, EDNRB, TGFBR1, TGFBR2, PDGFRA, PDGFRB, FAP
+- THY1, DCN, LUM, POSTN, SFRP2, WNT5A, CTGF, CYR61, LOX, LOXL2, MMP2, TIMP1
+- TIMP3, SERPINE1, VIM, CDH11
+
+### peribronchial_fibroblast
+
+Description: Fibroblasts surrounding bronchi and bronchioles that regulate airway wall structure, ECM deposition, and responses to inflammatory signals.
+
+Genes:
+- PDGFRB, FAP, THY1, COL1A1, COL1A2, COL3A1, DCN, LUM, FN1, VIM, CDH11, CTGF
+- CYR61, MMP2, MMP14, TIMP1, TIMP3, SERPINE1, LOX, LOXL2, COL5A1, COL5A2, COL6A1, COL6A2
+- COL6A3, BGN, FMOD, POSTN, SFRP2, WNT5A, FBLN1, FBLN2, FBN1, ELN, PDGFRA, EDNRA
+- EDNRB, TGFBR1, TGFBR2, ACTA2
+
+## hematopoietic stem cell
+
+### HSC (CD34+ CD38- CD90+ CD45RA-)
+
+Description: Primitive hematopoietic stem cells residing in the lung marrow niche, characterized by long-term self-renewal and multipotent differentiation capacity.
+
+Genes:
+- CD34, THY1, CD90, CD44, ITGA6, ITGAV, CXCR4, MPL, PROM1, ENG, CD133, SOX4
+- HOXA9, MEIS1, MYB, GATA2, TAL1, LMO2, RUNX1, SCL, ERG, FLI1, LYL1, BMI1
+- HMGA2, HMGB3, CBX7, CBX8, EZH2, DNMT3B, TERT, TCL1A, CD63, CD82, CD47, CD49D
+- CD49E, CD51, CD54, CD58, CD59, CD61, CD62L, CD62P, CD62E, CD62P, CD62L, CD62E
+
+### LMPP (Lymphoid-Primed Multipotent Progenitor)
+
+Description: Lymphoid-primed multipotent progenitors with emerging lymphoid potential, representing an intermediate stage between HSCs and committed lymphoid progenitors.
+
+Genes:
+- CD34, CD38, CD45RA, CD90, CD133, CXCR4, MPL, CD44, ITGA6, CD63, CD82, CD47
+- CD49D, CD49E, CD51, CD54, CD58, CD59, CD61, CD62L, CD62P, CD62E, SOX4, HOXA9
+- MEIS1, MYB, GATA2, TAL1, LMO2, RUNX1, SCL, ERG, FLI1, LYL1, BMI1, HMGA2
+- HMGB3, CBX7, CBX8, EZH2, DNMT3B, TERT, TCL1A, CD133, PROM1, ENG, THY1, FLT3
+- IL7R
+
+### MPP (Multipotent Progenitor)
+
+Description: Multipotent progenitor cells with limited self-renewal capacity, giving rise to various blood cell lineages in the lung microenvironment.
+
+Genes:
+- CD34, CD38, CD45RA, CD90, CD133, CXCR4, MPL, CD44, ITGA6, CD63, CD82, CD47
+- CD49D, CD49E, CD51, CD54, CD58, CD59, CD61, CD62L, CD62P, CD62E, SOX4, HOXA9
+- MEIS1, MYB, GATA2, TAL1, LMO2, RUNX1, SCL, ERG, FLI1, LYL1, BMI1, HMGA2
+- HMGB3, CBX7, CBX8, EZH2, DNMT3B, TERT, TCL1A, CD133, PROM1, ENG, THY1
+
+### Monocyte (CD14+ CD16-)
+
+Description: Classical monocytes that can be confused with HSCs due to overlapping surface marker expression, particularly CD34 and CD45RA, but lack self-renewal capacity.
+
+Genes:
+- CD14, FCGR3A, CD16, CD64, CD11b, CD11c, CD18, CD49d, CD49e, CD49f, CD51, CD54
+- CD58, CD59, CD61, CD62L, CD62P, CD62E, CD63, CD82, CD47, CXCR4, MPL, CD44
+- ITGA6, ITGAV, PROM1, ENG, SOX4, HOXA9, MEIS1, MYB, GATA2, TAL1, LMO2, RUNX1
+- SCL, ERG, FLI1, LYL1, BMI1, HMGA2, HMGB3, CBX7, CBX8, EZH2, DNMT3B, TERT
+- TCL1A
+
+### Plasmacytoid Dendritic Cell (pDC)
+
+Description: Plasmacytoid dendritic cells that share CD34 and CD45RA expression with HSCs, but are specialized for type I interferon production in response to viral infections.
+
+Genes:
+- CD123, IL3RA, CD303, CD304, CD2, CD4, CD45RA, CD34, CD38, CD90, CD133, CXCR4
+- MPL, CD44, ITGA6, ITGAV, PROM1, ENG, SOX4, HOXA9, MEIS1, MYB, GATA2, TAL1
+- LMO2, RUNX1, SCL, ERG, FLI1, LYL1, BMI1, HMGA2, HMGB3, CBX7, CBX8, EZH2
+- DNMT3B, TERT, TCL1A, CD63, CD82, CD47, CD49D, CD49E, CD51, CD54, CD58, CD59
+- CD61, CD62L
+
+## ionocyte
+
+### Basal_cell
+
+Description: Progenitor cells of the airway epithelium that maintain tissue homeostasis and repair, marked by KRT5 and TP63 expression.
+
+Genes:
+- KRT5, KRT17, KRT14, TP63, ITGA6, ITGB4, CD44, EGFR, NGFR, SOX2, DLK1, FABP5
+- FABP7, FABP4, FABP3, FABP5, FABP7, FABP4, FABP3, FABP5, FABP7, FABP4, FABP3, FABP5
+- FABP7, FABP4, FABP3, FABP5, FABP7, FABP4, FABP3, FABP5, FABP7, FABP4, FABP3, FABP5
+- FABP7, FABP4, FABP3, FABP5, FABP7
+
+### Club_cell
+
+Description: Non-ciliated bronchiolar epithelial cells involved in detoxification and surfactant production, marked by secretoglobin family genes.
+
+Genes:
+- SCGB1A1, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, SCGB3A2, SCGB3A8, SCGB3A10, SCGB3B1, SCGB3B2, SCGB3B3, SCGB3B4
+- SCGB3B5, SCGB3B6, SCGB3B7, SCGB3B8, SCGB3B9, SCGB3B10, SCGB3B11, SCGB3B12, SCGB3B13, SCGB3B14, SCGB3B15, SCGB3B16
+- SCGB3B17, SCGB3B18, SCGB3B19, SCGB3B20, SCGB3B21, SCGB3B22, SCGB3B23, SCGB3B24, SCGB3B25, SCGB3B26, SCGB3B27, SCGB3B28
+- SCGB3B29, SCGB3B30, SCGB3B31, SCGB3B32, SCGB3B33
+
+### Goblet_cell
+
+Description: Mucus-secreting epithelial cells characterized by high expression of mucin genes and the master regulator SPDEF.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, AGR2, AGR3, TFF1, TFF2, TFF3, CLCA1, CLCA4, MUC19, MUC16
+- MUC4, MUC20, FCGBP, PDZD2, ZG16B, DCD, SCGB1A1, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, SCGB3A2
+- SCGB3A8, SCGB3A10, SCGB3B1, SCGB3B2, SCGB3B3, SCGB3B4, SCGB3B5, SCGB3B6, SCGB3B7, SCGB3B8, SCGB3B9, SCGB3B10
+- SCGB3B11, SCGB3B12, SCGB3B13, SCGB3B14, SCGB3B15
+
+### Ionocyte
+
+Description: Rare airway epithelial cells specialized for acid-base regulation and ion transport, marked by FOXI1 and CFTR expression.
+
+Genes:
+- FOXI1, CFTR, ASCL1, TMEM16A, SLC9A3, SLC26A4, ATP6V1G3, ATP6V0D2, ATP6V1C1, ATP6V1A, ATP6V1B1, ATP6V1E1
+- ATP6V1F, ATP6V0A1, ATP6V0B, ATP6V0C, ATP6V0E1, ATP6V0E2, SLC4A4, SLC4A7, SLC4A8, SLC26A5, SLC26A7, SLC26A9
+- SLC26A11, CA2, CA4, CA12, CA14, KCNK3, KCNK9, KCNK15, KCNMA1, KCNN4, KCNE1, KCNE2
+- KCNE3, KCNE5, KCNQ1, KCNQ4, KCNQ5
+
+### Pulmonary_neuroendocrine_cell
+
+Description: Chemosensory epithelial cells that sense airway hypoxia and release neuropeptides, marked by ASCL1 and chromogranin expression.
+
+Genes:
+- CHGA, CHGB, SCG2, SCG3, SCG5, ASCL1, HES6, NEUROD1, NEUROD4, INSM1, ASCL1, DLL1
+- DLL3, HES1, HES5, NOTCH1, NOTCH2, NOTCH3, NOTCH4, JAG1, JAG2, DLL4, HES6, HES7
+- HEY1, HEY2, HEYL, SOX2, SOX9, SOX11, SOX21, SOX4, SOX14, SOX18, SOX21, SOX30
+- SOX31, SOX32, SOX33, SOX34, SOX35
+
+## lung macrophage
+
+### Alveolar macrophage
+
+Description: Tissue-resident macrophages of the alveolar space that clear surfactant, inhaled particles, and microbes via scavenger receptors and lipid metabolism programs.
+
+Genes:
+- MARCO, SPP1, FABP4, PPARG, LYZ, C1QA, C1QB, C1QC, MRC1, CD163, MSR1, FCN1
+- ITGAM, ITGAX, CSF1R, TREM2, APOE, APOC1, LIPA, CTSD, CTSB, GPNMB, FOLR2, CD209
+- HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CSTB, CTSL, CTSS, NAPSA, SERPINA1, SERPINA3, CCL18, CHI3L1
+- MMP12, MMP14, ADAMDEC1, FOLR1
+
+### Dendritic cell type 2 (cDC2)
+
+Description: Antigen-presenting dendritic cells in the lung interstitium that prime CD4+ T cell responses and are frequently confused with interstitial macrophages due to shared myeloid markers.
+
+Genes:
+- CD1C, FCER1A, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, HLA-DMB, HLA-DMA, CD74, CLEC10A
+- CLEC4C, FCGR1A, FCGR2A, FCGR3A, ITGAX, ITGAM, CSF1R, IRF4, CIITA, MHC2TA, CD83, CCR7
+- CCL22, FAP, VCAN, FGL2, TNFAIP6, NAMPT, LYZ, CST3, CTSB, CTSD, CTSL, CTSS
+- CSTB, MMP14, ADAMDEC1, SERPINA1, SERPINA3, CFD, F13A1, LTF
+
+### Interstitial macrophage
+
+Description: Tissue-resident macrophages of the lung interstitium involved in immune surveillance, antigen presentation, and efferocytosis within the alveolar septa.
+
+Genes:
+- LYVE1, MRC1, MRC2, CD163, CD209, FOLR2, FOLR1, TIMD4, C1QA, C1QB, C1QC, MS4A4A
+- MS4A6A, MHC2TA, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DMB, HLA-DMA, CD74, FCGR1A, FCGR2A, FCGR3A
+- ITGAX, ITGAM, CSF1R, MERTK, AXL, SIGLEC1, TREM2, GPNMB, LIPA, CTSB, CTSD, CTSL
+- CTSS, CSTB, NAPSA, MMP14
+
+### Mast cell
+
+Description: Tissue-resident granulated immune cells in the lung interstitium that mediate allergic and innate immune responses via FcεRI-dependent degranulation.
+
+Genes:
+- KIT, CPA3, CPB1, CMA1, CTSG, TPSAB1, TPSB2, TPSD1, TPSG1, MS4A2, FCER1A, FCER1G
+- HDC, HPGDS, HPRT1, IL1RL1, IL13RA1, IL13RA2, SYK, LYN, BTK, GATA2, MS4A9, MS4A4A
+- CD9, CD63, CD200R1, CD200R1L, ADORA3, HRH1, HRH2, CSF1R, LYZ, CST3, CTSB, CTSD
+- CTSL, CTSS, CSTB, SERPINA1, SERPINA3, MMP9, MMP14, VCAN, FGL2, NAMPT
+
+### Monocyte-derived macrophage
+
+Description: Recruited blood monocytes that differentiate into macrophages in inflamed or injured lung parenchyma, characterized by inflammatory and antimicrobial gene programs.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A10, S100A11, S100A12, S100A4, S100A6, LYZ, CST3, CTSB, CTSD
+- CTSL, CTSS, CSTB, NCF1, NCF2, NCF4, CYBA, CYBB, FCGR3A, FCGR1A, FCGR2A, CCR2
+- CX3CR1, ITGAM, ITGAX, CSF1R, VCAN, FGL2, TNFAIP6, IL1B, IL1R2, TNF, CCL3, CCL4
+- CXCL8, NAMPT, MMP9, MMP14, SERPINA1, SERPINA3, LTF, CFD, F13A1
+
+## lung pericyte
+
+### endothelial_cell
+
+Description: Vascular endothelial cells from capillaries and microvessels that share some markers with pericytes and can be confused in sparse datasets.
+
+Genes:
+- PECAM1, CDH5, VWF, ENG, TEK, FLT1, KDR, NRP1, NRP2, PLVAP, ESAM, CLDN5
+- OCLN, TJP1, VIM, CDH2, ITGA5, ITGB1, COL4A1, COL4A2, LAMA4, LAMB1, FN1, SHPK
+- APLN
+
+### lung_fibroblast
+
+Description: Interstitial fibroblasts in lung parenchyma that share ECM gene expression with fibrogenic pericytes and can be misannotated as pericytes.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, FBLN1, FBLN2, FMOD, BGN, PRELP, PDGFRA, FAP
+- THY1, CD90, VIM, FN1, ITGA5, ITGB1, CDH2, SFRP2, WNT5A, DPT, CFD, C7
+- C3
+
+### pericyte_type_1
+
+Description: Mature contractile pericytes with high expression of smooth muscle markers, found on capillaries and small vessels in lung parenchyma.
+
+Genes:
+- PDGFRB, CSPG4, RGS5, ABCC9, DES, ACTA2, MYH11, TAGLN, CNN1, TPM2, LMOD1, SMTN
+- MYLK, ITGA11, CDH2, VIM, COL4A1, COL4A2, LAMA4, LAMB1, ITGA5, ITGB1, NOTCH3, JAG1
+- HES1
+
+### pericyte_type_2
+
+Description: Fibrogenic pericytes with extracellular matrix production capacity, representing a transitional state between pericytes and fibroblasts.
+
+Genes:
+- PDGFRB, CSPG4, RGS5, ABCC9, DCN, LUM, COL1A1, COL1A2, COL3A1, FBLN1, FBLN2, FMOD
+- BGN, PRELP, ADAMDEC1, PLVAP, VWF, PECAM1, CDH5, ENG, TEK, FLT1, KDR, NRP1
+- NRP2
+
+### vascular_smooth_muscle_cell
+
+Description: Vascular smooth muscle cells from arterioles and larger vessels, often confused with pericytes due to shared smooth muscle marker expression.
+
+Genes:
+- ACTA2, MYH11, TAGLN, CNN1, DES, TPM2, LMOD1, SMTN, MYLK, MYL9, MYL12A, MYL12B
+- LMNA, VIM, COL1A1, COL3A1, PDGFRB, CSPG4, RGS5, ABCC9, ITGA11, ITGB1, CDH2, NOTCH3
+- JAG1
+
+## mast cell
+
+### Alveolar macrophage
+
+Description: Tissue-resident alveolar macrophage in lung parenchyma characterized by high expression of scavenger receptors MARCO/MSR1, MHC-II, and lipid metabolism genes.
+
+Genes:
+- MARCO, MSR1, CD163, MRC1, LYZ, C1QA, C1QB, C1QC, FOLR2, PPARG, NR1H3, SIGLEC1
+- CD68, CD36, FCGR3A, ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CTSB, CTSD, CTSL
+- CTSS, GPNMB, FABP4, TREM2, APOE, APOC1
+
+### Basophil
+
+Description: Circulating basophil that can infiltrate lung tissue, sharing FcεRI and TPSAB1 expression with mast cells but lacking CMA1/CTSG and expressing CD200R1/CSAR2.
+
+Genes:
+- FCER1A, MS4A2, KIT, TPSAB1, IL1RL1, CD200R1, CD200R1L, CSAR2, HPGDS, GATA2, EPOR, CRLF2
+- TSLPR, SIGLEC8, CD63, SYK, LYN, FYN, PLCG2, PLCB2, PRKCB, RAB27A, VAMP8, SNAP23
+- STIM1, ORAI1, TRPC6, SLC22A3, SLC29A1, LILRA2
+
+### Dendritic cell (cDC2)
+
+Description: Conventional type 2 dendritic cell (cDC2) in lung parenchyma characterized by FCER1A, CLEC10A, CD1C, and high MHC-II expression for CD4+ T cell antigen presentation.
+
+Genes:
+- FCER1A, CLEC10A, CD1C, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, ITGAX, ITGAM
+- FCGR1A, FCGR2A, FCGR3A, CD14, LYZ, CCL22, CCL17, MRC1, CD209, LAMP3, CCR7, FSCN1
+- IRF4, BATF3, ZBTB46, CD83, CD86, CD40
+
+### Mast cell (lung parenchyma)
+
+Description: Tissue-resident mast cell in lung parenchyma characterized by high expression of KIT, FcεRI components, and mast cell-specific proteases TPSAB1/TPSB2/CPA3/CMA1.
+
+Genes:
+- KIT, TPSAB1, TPSB2, CPA3, MS4A2, FCER1A, HDC, HPGDS, CMA1, CTSG, GATA2, IL1RL1
+- CD9, CD63, LILRA2, MS4A4A, SYK, LYN, FYN, PLCG2, PLCB2, PRKCB, RAB27A, VAMP8
+- SNAP23, STIM1, ORAI1, TRPC6, SLC22A3, SLC29A1
+
+### Monocyte-derived macrophage
+
+Description: Monocyte-derived macrophage recruited to lung parenchyma, distinguished from alveolar macrophages by high FCN1, S100A8/A9, and inflammatory chemokine expression.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A10, S100A11, S100A12, LYZ, CD14, VCAN, FCGR3A, CCR2, CX3CR1
+- ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CTSB, CTSD, CTSL, CTSS, MMP9, MMP12
+- TNF, IL1B, CCL3, CCL4, NAMPT, FOS
+
+## mesothelial cell
+
+### alveolar type 1 cell
+
+Description: Thin, squamous epithelial cells covering most of the alveolar surface, specialized for gas exchange.
+
+Genes:
+- AGER, SFTPC, SFTPD, SCGB3A2, SCGB1A1, SCGB3A1, SCGB1D2, SCGB2A1, SCGB2A2, SCGB1B1, SCGB1B2, SCGB1C1
+- SCGB1C2, SCGB1D1, SCGB2B1, SCGB2B2, SCGB3B1, SCGB3B2, SCGB3C1, SCGB3C2, SCGB3D1, SCGB3D2, SCGB3E1, SCGB3E2
+- SCGB3F1, SCGB3F2, SCGB3G1, SCGB3G2, SCGB3H1, SCGB3H2, SCGB3I1, SCGB3I2, SCGB3J1, SCGB3J2, SCGB3K1, SCGB3K2
+- SCGB3L1, SCGB3L2, SCGB3M1, SCGB3M2
+
+### alveolar type 2 cell
+
+Description: Cuboidal epithelial cells that produce pulmonary surfactant and serve as progenitors for alveolar type 1 cells.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, NKX2-1, CHGA, SCGB1A1, SCGB3A2, SCGB1D2, SCGB2A1
+- SCGB2A2, SCGB1B1, SCGB1B2, SCGB1C1, SCGB1C2, SCGB1D1, SCGB2B1, SCGB2B2, SCGB3A1, SCGB3B1, SCGB3B2, SCGB3C1
+- SCGB3C2, SCGB3D1, SCGB3D2, SCGB3E1, SCGB3E2, SCGB3F1, SCGB3F2, SCGB3G1, SCGB3G2, SCGB3H1, SCGB3H2, SCGB3I1
+- SCGB3I2, SCGB3J1, SCGB3J2, SCGB3K1, SCGB3K2
+
+### endothelial cell
+
+Description: Vascular lining cells forming the endothelium of blood and lymphatic vessels throughout the lung parenchyma.
+
+Genes:
+- PECAM1, CDH5, VWF, CLDN5, ESAM, ENG, TEK, KDR, FLT1, NRP1, NRP2, PLVAP
+- EMCN, RAMP2, APLN, GATA2, SOX17, ERG, FLI1, ETV2, TIE1, CD34, PROX1, LYVE1
+- CCL21, CXCL12, NOS3, CAV1, CAV2, CAV3, ITGAV, ITGB3, ITGB5, ITGB6, THBS1, THBS2
+- SPARC, SPP1, POSTN, FN1
+
+### fibroblast
+
+Description: Mesenchymal cells in the lung interstitium that produce extracellular matrix and play key roles in tissue remodeling and repair.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3, DCN, LUM, FMOD, BGN
+- FAP, PDGFRA, PDGFRB, ACTA2, TAGLN, CNN1, DES, VIM, FN1, THY1, CDH11, ITGA5
+- ITGB1, MMP2, MMP14, TIMP1, TIMP2, TIMP3, SERPINE1, SERPINH1, PLOD2, LOX, LOXL2, FBLN1
+- FBLN2, EFEMP1, EFEMP2, FBN1
+
+### mesothelial cell
+
+Description: Serous epithelial cells lining the pleural and peritoneal surfaces of the lung, providing a lubricated protective barrier.
+
+Genes:
+- CALB2, MSLN, UPK3B, WT1, MECOM, LHX9, HOXA11, PDPN, DCN, LUM, COL3A1, COL1A1
+- FN1, ITGA6, ITGB1, CLDN15, UPK1B, S100A6, S100A10, ANXA2, FOLR1, MUC1, KRT19, EPCAM
+- CDH1, UPK2, UPK3A, MS4A1, LYN, FAP
+
+## mucus secreting cell
+
+### Alveolar type 1 cell
+
+Description: Thin, squamous epithelial cell covering most of the alveolar surface, essential for gas exchange and expressing surfactant proteins.
+
+Genes:
+- AGER, SFTPC, SFTPD, SFTPA1, SFTPA2, SFTPB, SFTPD, NKX2-1, HOPX, CAV1, CAV2, CAV3
+- PECAM1, CDH5, VWF, ENG, TEK, KDR, FLT1, NRP1, NRP2, PLVAP, ESAM, CLDN5
+- OCLN, TJP1, TJP2, TJP3, CDH1, CDH2, CDH3, CDH4, CDH6, CDH7, CDH8, CDH9
+- CDH10, CDH11, CDH12, CDH13
+
+### Alveolar type 2 cell
+
+Description: Cuboidal epithelial cell that produces and secretes pulmonary surfactant, maintains alveolar structure, and serves as a progenitor for alveolar regeneration.
+
+Genes:
+- SFTPC, SFTPD, SFTPA1, SFTPA2, SFTPB, NKX2-1, HOPX, AGER, CAV1, CAV2, CAV3, PECAM1
+- CDH5, VWF, ENG, TEK, KDR, FLT1, NRP1, NRP2, PLVAP, ESAM, CLDN5, OCLN
+- TJP1, TJP2, TJP3, CDH1, CDH2, CDH3, CDH4, CDH6, CDH7, CDH8, CDH9, CDH10
+- CDH11, CDH12, CDH13, CDH14
+
+### Club cell
+
+Description: Non-ciliated bronchiolar epithelial cell that secretes protective proteins, detoxifies harmful substances, and acts as a progenitor for airway repair.
+
+Genes:
+- SCGB1A1, SCGB1A2, SCGB2A1, SCGB2A2, SCGB3A1, SCGB3A2, SCGB3A10, SCGB3A11, SCGB3A12, SCGB3A13, SCGB3A14, SCGB3A15
+- SCGB3A16, SCGB3A17, SCGB3A18, SCGB3A19, SCGB3A20, SCGB3A21, SCGB3A22, SCGB3A23, SCGB3A24, SCGB3A25, SCGB3A26, SCGB3A27
+- SCGB3A28, SCGB3A29, SCGB3A30, SCGB3A31, SCGB3A32, SCGB3A33, SCGB3A34, SCGB3A35, SCGB3A36, SCGB3A37, SCGB3A38, SCGB3A39
+- SCGB3A40, SCGB3A41, SCGB3A42, SCGB3A43
+
+### Goblet cell
+
+Description: Mucus-secreting epithelial cell in the airway that produces mucins and antimicrobial proteins to protect and lubricate the respiratory tract.
+
+Genes:
+- MUC5AC, MUC5B, AGR2, AGR3, TFF1, TFF2, TFF3, CLCA1, CLCA4, FCGBP, VWA1, CFTR
+- SLC9A4, SPDEF, FOXA3, KRT19, KRT7, MUC1, MUC4, MUC16, MUC20, DCD, SCGB1A1, SCGB2A1
+- SCGB2A2, SCGB3A1, SCGB3A2, SCGB3A10, SCGB3A11, SCGB3A12, SCGB3A13, SCGB3A14, SCGB3A15, SCGB3A16, SCGB3A17, SCGB3A18
+- SCGB3A19, SCGB3A20, SCGB3A21, SCGB3A22
+
+### Ionocyte
+
+Description: Rare airway epithelial cell specialized in ion transport and pH regulation, expressing high levels of CFTR and other ion channels.
+
+Genes:
+- CFTR, FOXI1, ASCL1, SLC9A4, SLC4A1, SLC4A4, SLC4A7, SLC4A8, SLC4A9, SLC4A10, SLC4A11, SLC9A1
+- SLC9A2, SLC9A3, SLC9A5, SLC9A6, SLC9A7, SLC9A8, SLC9A9, SLC9A10, SLC9A11, SLC9A12, SLC9A13, SLC9A14
+- SLC9A15, SLC9A16, SLC9A17, SLC9A18, SLC9A19, SLC9A20, SLC9A21, SLC9A22, SLC9A23, SLC9A24, SLC9A25, SLC9A26
+- SLC9A27, SLC9A28, SLC9A29, SLC9A30
+
+## multiciliated columnar cell of tracheobronchial tree
+
+### Alveolar type 2 cell
+
+Description: Alveolar type 2 pneumocyte that produces pulmonary surfactant and serves as a progenitor for alveolar type 1 cells.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, NKX2-1, FOXA2, FOXA3, ETV5, ID2, AGER
+- LYZ, CCL3, CCL4, CXCL10, CXCL11, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74
+- H2-DMB, H2-DMB1, H2-DMB2, H2-DMB3, H2-DMB4, H2-DMB5
+
+### Basal cell
+
+Description: Airway basal stem/progenitor cell located at the basement membrane that self-renews and differentiates into ciliated and secretory cells.
+
+Genes:
+- TP63, KRT5, KRT17, KRT14, KRT6A, KRT6B, KRT6C, KRT15, KRT19, ITGA6, ITGB4, CD44
+- NGFR, AXL, EGFR, ERBB2, ERBB3, NOTCH1, NOTCH2, HES1, ASCL1, DLL1, JAG1, JAG2
+- HES5, SOX2, SOX9, FOXM1, MKI67, PCNA
+
+### Deuterosomal cell
+
+Description: Airway progenitor cell that generates multiple basal bodies via deuterosomes to produce multiciliated cells.
+
+Genes:
+- CCNO, MCIDAS, DEUP1, ODF2, CEP164, CEP152, CEP63, CEP192, PLK4, STIL, SAS6, SAS4
+- CDK5RAP2, PCNT, CEP215, CEP135, CEP170, CEP290, NME7, FOXJ1, MYB, E2F4, TRIM71, LIN9
+- LIN37, LIN52, LIN54, RBL2, DP1, E2F5
+
+### Multiciliated cell
+
+Description: Mature multiciliated epithelial cell in the airway epithelium characterized by motile cilia for mucociliary clearance.
+
+Genes:
+- FOXJ1, DNAI1, DNAH5, DNAH9, DNAI2, DNALI1, CCNO, MCIDAS, CFAP44, CFAP53, CFAP54, CFAP57
+- CFAP73, CFAP74, CFAP221, CFAP251, CFAP299, CFAP410, CFAP413, CFAP414, CFAP415, CFAP416, CFAP417, CFAP418
+- CFAP419, CFAP420, CFAP421, CFAP422, CFAP423, CFAP424, CFAP425, CFAP426, CFAP427, CFAP428, CFAP429, CFAP430
+- CFAP431, CFAP432, CFAP433, CFAP434
+
+### Secretory cell
+
+Description: Airway secretory cell producing mucins and antimicrobial proteins for airway surface liquid and mucociliary defense.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB1D1, SCGB2A2, SCGB3A1, MUC5B, MUC5AC, AGR2, AGR3, SPDEF, FOXA3, FOXA2
+- NKX2-1, TFF1, TFF3, CLCA1, CLCA4, CFTR, SLC9A3, SLC26A4, ATP12A, ATP6V0D2, CA2, CA4
+- CA12, CA14, BSG, AQP5, AQP3, AQP4
+
+## multiciliated epithelial cell
+
+### basal cell
+
+Description: Airway progenitor/stem cells residing in the basal layer that self-renew and differentiate into secretory and ciliated lineages.
+
+Genes:
+- TP63, KRT5, KRT17, KRT14, ITGA6, ITGB4, CD44, NGFR, COL17A1, LAMA3, LAMB3, LAMC2
+- DSP, DSG2, S100A2, S100A16, S100A14, S100A11, S100A10, ANXA1, ANXA2, ANXA3, ANXA5, CLDN4
+- CLDN7, EGFR, ERBB2, ERBB3, FGFR2, NOTCH1
+
+### club cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins, detoxify xenobiotics, and act as facultative progenitors.
+
+Genes:
+- SCGB1A1, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, SCGB3A2, SCGB3B1, SCGB3B2, SCGB3A3, SCGB3A4, SCGB3A5, SCGB3A6
+- SCGB3A7, SCGB3A8, SCGB3A9, SCGB3A10, SCGB3A11, SCGB3A12, SCGB3A13, SCGB3A14, SCGB3A15, SCGB3A16, SCGB3A17, SCGB3A18
+- SCGB3A19, SCGB3A20, SCGB3A21, SCGB3A22, SCGB3A23, SCGB3A24
+
+### deuterosomal multiciliated cell
+
+Description: A developmental multiciliated cell subtype that generates basal bodies via deuterosomes, enabling massive amplification of cilia.
+
+Genes:
+- MCIDAS, CCNO, FOXJ1, DEUP1, ODF2, CEP164, CEP192, PLK4, STIL, SAS6, SAS4, CDK2
+- E2F4, MYB, MYBL2, GEMC1, TOPBP1, CDC20B, CDC25A, CCNA2, CCNB1, CCNE1, CCNE2, CDKN1C
+- CDKN1B, E2F1, E2F5, DP1, RBL2, TFDP1
+
+### goblet cell
+
+Description: Secretory airway epithelial cells that produce and release mucins to form the protective mucus layer of the airway surface.
+
+Genes:
+- MUC5AC, MUC5B, SPDEF, AGR2, AGR3, TFF1, TFF2, TFF3, CLCA1, CLCA4, CFTR, SLC9A4
+- SLC26A4, SLC26A9, ATP12A, ATP1A1, ATP1B1, KRT8, KRT18, KRT19, CEACAM5, CEACAM6, CEACAM8, MUC1
+- MUC4, MUC16, MUC20, FCGBP, VWA1, PDZK1IP1
+
+### multiciliated epithelial cell
+
+Description: Airway epithelial cells bearing numerous motile cilia that drive mucociliary clearance of inhaled particles and pathogens.
+
+Genes:
+- FOXJ1, DNAI1, DNAI2, DNAH5, DNAH9, DNAH11, DNALI1, CCDC39, CCDC40, CCDC65, CCNO, MCIDAS
+- CFAP299, CFAP44, CFAP53, CFAP54, CFAP57, CFAP61, CFAP73, CFAP74, DYNC2H1, HYDIN, NME8, RSPH1
+- RSPH4A, RSPH9, TXNDC2, TTC25, TTC29, ZMYND3
+
+## myofibroblast cell
+
+### ACTA2+ myofibroblast
+
+Description: Contractile, ECM-producing fibroblasts marked by alpha-SMA that drive fibrotic remodeling in lung parenchyma.
+
+Genes:
+- ACTA2, TAGLN, CNN1, DES, MYH11, LMOD1, TPM2, TPM1, MYLK, VIM, COL1A1, COL1A2
+- COL3A1, FN1, FAP, PDPN, THY1, DCN, LUM, COL5A1, COL5A2, COL6A1, COL6A2, ITGA11
+- ITGB1, SNAI2, TWIST1, EDNRA, PDGFRA, WNT5A
+
+### COL1A1+ resident fibroblast
+
+Description: Quiescent parenchymal fibroblasts producing interstitial collagen, serving as precursors that can activate into myofibroblasts.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, DCN, LUM, FMOD, PRELP, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3
+- FN1, VIM, FAP, PDGFRA, THY1, PDPN, SFRP2, WNT5A, DPT, FBLN1, FBLN2, EFEMP1
+- ITGA5, ITGB1, SNAI1, TWIST1, ACTA2, TAGLN
+
+### Mesothelial cell
+
+Description: Pleural and subpleural mesothelial cells that can undergo mesothelial-to-mesenchymal transition and be confused with myofibroblasts.
+
+Genes:
+- CALB2, MSLN, UPK3B, WT1, DAB2, CLDN4, CLDN15, EPCAM, KRT19, KRT18, KRT8, MUC1
+- CDH1, ITGA6, ITGB4, LAMA3, LAMC2, COL4A1, COL4A2, FN1, VIM, DCN, LUM, FAP
+- PDGFRA, THY1, PDPN, ACTA2, TAGLN, COL1A1
+
+### PDGFRB+ pericyte
+
+Description: Perivascular mural cells surrounding capillaries and small vessels, often confused with myofibroblasts due to shared contractile markers.
+
+Genes:
+- PDGFRB, CSPG4, ABCC9, DES, ACTA2, RGS5, MCAM, NG2, CSPG4, KCNJ8, PDGFRA, COL1A1
+- COL3A1, DCN, LUM, FN1, VIM, TAGLN, MYH11, CNN1, LMOD1, TPM2, TPM1, ITGA5
+- ITGB1, SNAI2, EDNRA, WNT5A, FAP, THY1
+
+### Vascular smooth muscle cell
+
+Description: Contractile cells of arterial and venous walls in the lung, frequently misannotated as myofibroblasts due to overlapping SMA/TAGLN expression.
+
+Genes:
+- MYH11, ACTA2, TAGLN, CNN1, DES, LMOD1, TPM2, TPM1, MYLK, LMNA, VIM, COL1A1
+- COL3A1, FN1, PDGFRB, EDNRA, ITGA11, ITGB1, SNAI2, TWIST1, WNT5A, FAP, THY1, DCN
+- LUM, COL5A1, COL6A1, MYL9, MYH9, CALD1
+
+## nasal mucosa goblet cell
+
+### Alveolar type 2 cell
+
+Description: Alveolar epithelial cell producing pulmonary surfactant, occasionally misannotated as goblet cells due to shared secretory and surfactant-related gene expression.
+
+Genes:
+- SFTPC, SFTPA1, SFTPA2, SFTPB, SFTPD, ABCA3, NKX2-1, FOXA3, FOXA2, AGER, LYN, CD9
+- DSP, KRT8, KRT18, KRT19, EPCAM, SCGB1A1, SCGB3A2, SCGB3A1, SCGB1A2, SCGB1B1, SCGB1D1, SCGB2A1
+- SCGB2A2, SCGB2B1, SCGB2B2, SCGB2B4, SCGB2B10, SCGB2B11, SCGB2B12, SCGB1D2, SPLUNC1, SPLUNC2, PLUNC, DCD
+- WFDC2, SLPI, ELF3, AGR2, AGR3, SPDEF, MUC5B
+
+### Club cell
+
+Description: Non-ciliated bronchiolar secretory cell producing secretoglobins and detoxification enzymes, commonly confused with goblet cells due to shared secretory lineage markers.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB3A1, SCGB1A2, SCGB1B1, SCGB1D1, SCGB2A1, SCGB2A2, SCGB2B1, SCGB2B2, SCGB2B4, SCGB2B10
+- SCGB2B11, SCGB2B12, SCGB1D2, SCGB3A1, SCGB3A2, SCGB1A1, SCGB1A2, SCGB1B1, SCGB1D1, SCGB2A1, SCGB2A2, SCGB2B1
+- SCGB2B2, SCGB2B4, SCGB2B10, SCGB2B11, SCGB2B12, SCGB1D2, SPLUNC1, SPLUNC2, PLUNC, DCD, WFDC2, SLPI
+- ELF3, AGR2, AGR3, SPDEF
+
+### Ionocyte
+
+Description: Rare airway epithelial cell specialized in ion transport and pH regulation, expressing high levels of CFTR and FOXI1, sometimes misannotated as goblet cells due to overlapping secretory markers.
+
+Genes:
+- CFTR, FOXI1, ASCL3, TMEM16A, ANO1, SLC9A3, SLC4A4, ATP6V1G1, ATP6V0D2, ATP6V1A, ATP6V1B2, ATP6V1C1
+- ATP6V1E1, ATP6V1F, ATP6V0A1, ATP6V0B, ATP6V0C, ATP6V0E1, ATP6V0E2, ATP6V1D, ATP6V1H, ATP6V1G2, ATP6V1G3, ATP6V0A2
+- ATP6V0A4, ATP6V0B, ATP6V0C, ATP6V0D1, ATP6V0D2, ATP6V0E1, ATP6V0E2, KRT19, KRT17, FOXA2, FOXA3, SPDEF
+- AGR2, AGR3, TFF1, TFF2, MUC5B
+
+### MUC5AC+ goblet cell
+
+Description: Airway secretory cell producing the gel-forming mucin MUC5AC, enriched in the nasal and proximal airway epithelium but occasionally misannotated in distal lung.
+
+Genes:
+- MUC5AC, MUC5B, TFF1, TFF2, AGR2, AGR3, CLCA1, CFTR, SPDEF, FOXA3, KRT19, KRT17
+- SCGB1A1, SCGB3A2, SCGB3A1, MUC16, MUC19, MUC4, MUC1, DCD, WFDC2, SLPI, ELF3, PLUNC
+- SPLUNC1, SPLUNC2, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, SCGB3A2, SCGB1A1, SCGB1A2, SCGB1B1, SCGB1D1, SCGB2B1
+- SCGB2B2, SCGB2B4, SCGB2B10, SCGB2B11, SCGB2B12
+
+### MUC5B+ goblet cell
+
+Description: Airway secretory cell producing the gel-forming mucin MUC5B, the dominant mucin in distal airways and alveolar ducts, often confused with MUC5AC+ goblet cells.
+
+Genes:
+- MUC5B, MUC5AC, AGR2, AGR3, TFF1, TFF2, TFF3, SPDEF, FOXA3, FOXA2, KRT19, KRT17
+- CLCA1, CFTR, MUC16, MUC19, MUC4, MUC1, DCD, WFDC2, SLPI, ELF3, PLUNC, SPLUNC1
+- SCGB1A1, SCGB3A2, SCGB3A1, SCGB1A2, SCGB1B1, SCGB1D1, SCGB2A1, SCGB2A2, SCGB2B1, SCGB2B2, SCGB2B4, SCGB2B10
+- SCGB2B11, SCGB2B12, SCGB1D2, SPLUNC2
+
+## natural killer cell
+
+### Mucosal-associated invariant T cell (MAIT)
+
+Description: MR1-restricted MAIT cells with semi-invariant TCR in lung parenchyma, expressing high KLRB1/CD161 and mucosal homing receptors, bridging innate and adaptive immunity.
+
+Genes:
+- TRAV1-2, SLC4A10, KLRB1, CD161, IL18R1, IL7R, CXCR6, ITGAE, ITGAM, CD69, CD103, EOMES
+- TBX21, IFNG, TNF, IL17A, IL17F, GNLY, GZMB, GZMH, PRF1, NKG7, NKG2D, KLRK1
+- CD2, CD7, CD38, CXCR3, CCR6, CCR9, IL23R, RORC, TYROBP, FCER1G, CD160, NCR1
+- NCR3, KLRG1, CD94, KLRD1
+
+### NK cell (CD56bright)
+
+Description: Immunoregulatory NK cells enriched in lung parenchyma with high CD56/NCAM1 expression, low cytotoxicity, and strong cytokine production capacity.
+
+Genes:
+- NCAM1, FCGR3A, NKG7, KLRD1, KLRC1, KLRK1, GNLY, GZMB, GZMH, PRF1, TYROBP, FCER1G
+- EOMES, TBX21, IL2RB, ITGAE, CD69, CXCR3, CXCR4, CD38, CD7, CD2, CD160, TNFRSF10A
+- TNFRSF10B, FASLG, TRAIL, NCR1, NCR2, NCR3, KLRB1, KLRF1, KLRG1, CD94, NKG2A, NKG2C
+- NKG2D, KIR2DL1, KIR2DL3, KIR3DL1
+
+### NK cell (CD56dim cytotoxic)
+
+Description: Highly cytotoxic CD56dim NK cells in lung parenchyma expressing perforin, granzymes, and natural cytotoxicity receptors for target cell killing.
+
+Genes:
+- FCGR3A, NKG7, GNLY, GZMB, GZMA, GZMH, GZMK, PRF1, FGFBP2, CST7, KLRD1, KLRK1
+- KLRC1, NCAM1, TYROBP, FCER1G, CD2, CD7, CD160, TNFRSF10B, FASLG, NCR1, NCR3, KLRB1
+- KLRF1, KLRG1, CD94, NKG2A, NKG2C, NKG2D, EOMES, TBX21, IL2RB, ITGAE, CX3CR1, CXCR3
+- CD69, CD38, TRAIL, TNFRSF10A
+
+### Tissue-resident NK cell
+
+Description: CXCR6+ tissue-resident NK cells adapted to lung parenchyma microenvironment with integrin-mediated tissue retention and local surveillance functions.
+
+Genes:
+- CXCR6, CXCL16, ITGAE, ITGAM, CD69, CD103, NKG7, GNLY, GZMB, PRF1, KLRD1, KLRC1
+- KLRK1, NCAM1, FCGR3A, EOMES, TBX21, IL2RB, IL7R, TYROBP, FCER1G, CD2, CD7, CD160
+- NCR1, NCR3, KLRB1, KLRG1, CD94, NKG2A, NKG2D, CXCR3, CXCR4, CCR5, CCR7, SELL
+- ITGA1, ITGA4, ITGB1, ITGB2
+
+### Type 1 innate lymphoid cell (ILC1)
+
+Description: T-bet+ ILC1s producing IFN-gamma in lung parenchyma, sharing NK cell markers but lacking cytotoxic granule machinery and expressing ILC-specific transcription factors.
+
+Genes:
+- TBX21, EOMES, ID2, IL7R, IL18R1, IL12RB1, IL12RB2, IFNG, TNF, NCR1, NCR2, NCR3
+- CD161, KLRB1, CXCR3, CXCR6, CD127, IL2RB, CD2, CD7, CD38, CD69, CD103, ITGAE
+- ITGAM, ITGA1, ITGB1, ITGB2, GNLY, GZMB, GZMH, PRF1, NKG7, TYROBP, FCER1G, KLRD1
+- KLRK1, NCAM1, FCGR3A, TRAIL
+
+## non-classical monocyte
+
+### alveolar macrophage
+
+Description: Alveolar macrophages residing in lung alveoli, characterized by lipid metabolism genes and scavenger receptors, essential for surfactant clearance and immune homeostasis.
+
+Genes:
+- FABP4, CYP4F3, PPARG, MARC1, MRC1, CD163, MSR1, SIGLEC1, LYZ, CST3, CTSB, CTSD
+- CTSL, CTSS, GPNMB, FOLR2, TREM2, AXL, MERTK, TYRO3, GAS6, PROS1, C1QA, C1QB
+- C1QC, CD74, HLA-DRA, HLA-DRB1, FCN1, VCAN
+
+### classical monocyte
+
+Description: Classical monocytes characterized by high expression of FCN1, S100A8/A9, and CD14, involved in acute inflammation and phagocytosis in lung tissue.
+
+Genes:
+- FCN1, S100A8, S100A9, S100A12, LYZ, VCAN, CD14, FCGR3A, CST3, TYMP, FPR1, FPR2
+- S100A6, S100A4, S100A10, S100A11, S100A13, S100A14, S100A16, S100B, IL1B, TNF, CXCL8, CCL3
+- CCL4, CCL5, CCR2, ITGAM, CD36, MMP9
+
+### intermediate monocyte
+
+Description: Intermediate monocytes expressing both classical markers (CD14, FCN1) and non-classical markers (FCGR3A), with enhanced antigen presentation capacity.
+
+Genes:
+- FCGR3A, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, FCN1, VCAN, LYZ, CST3
+- TYMP, S100A8, S100A9, S100A12, CD14, CCR2, ITGAM, MMP9, TNF, IL1B, CXCL8, CCL3
+- CCL4, FPR1, FPR2, CD36, MMP8, CTSD
+
+### interstitial macrophage
+
+Description: Interstitial macrophages located in lung interstitium, involved in tissue remodeling and immune regulation with overlapping markers with alveolar macrophages.
+
+Genes:
+- MRC1, CD163, MSR1, LYZ, CST3, CTSB, CTSD, CTSL, CTSS, GPNMB, FOLR2, TREM2
+- AXL, MERTK, TYRO3, GAS6, PROS1, C1QA, C1QB, C1QC, CD74, HLA-DRA, HLA-DRB1, FCN1
+- VCAN, S100A8, S100A9, S100A12, CD14, FPR1
+
+### non-classical monocyte
+
+Description: Non-classical monocytes characterized by high FCGR3A expression and patrolling behavior, involved in vascular surveillance and tissue repair in lung parenchyma.
+
+Genes:
+- FCGR3A, MS4A7, LILRB2, LILRB1, LILRA5, LILRA3, TREM1, CDKN1C, CX3CR1, SIGLEC10, VCAN, LYZ
+- CST3, TYMP, FCN1, S100A8, S100A9, S100A12, CD14, FPR1, ITGAM, CD36, MMP9, CCR2
+- FPR2, TNF, IL1B, CXCL8, CCL3, CCL4
+
+## plasma cell
+
+### Alveolar macrophage
+
+Description: Tissue-resident alveolar macrophage lining the airspaces of lung parenchyma, frequently confused with plasma cells due to shared high lysosomal and HLA expression.
+
+Genes:
+- MARCO, FCN1, CYP4F3, SIGLEC1, MRC1, CD163, LYZ, CST3, CTSB, CTSD, CTSL, CTSS
+- C1QA, C1QB, C1QC, CD68, CD14, TLR2, TLR4, ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1
+- HLA-DPB1, FCGR1A, FCGR2A, FCGR3A, FOLR2, PPARG, NR1H3, LIPA, APOE, APOC1, TREM2, GPNMB
+- FABP5, LGMN, NAPSB, CCL18
+
+### IgA plasma cell
+
+Description: Mucosal IgA-committed plasma cell residing in lung interstitium, specialized for secretory antibody production at barrier surfaces.
+
+Genes:
+- JCHAIN, MZB1, IGHA1, IGHA2, DERL3, XBP1, PRDM1, IRF4, SDC1, TNFRSF17, CD27, CD38
+- FCER2, ITGAX, PAX5, BLK, BANK1, CD79A, CD79B, IGLL5, VPREB3, TCL1A, FCRL4, MME
+- CD24, IGHM, IGHD, IGHG1, IGHG2, IGHG3, IGHG4, IGKC, IGLC2, IGLC7, HVCN1, SSR4
+- DNAJC3, HERPUD1, SYNDIG1, FKBP11
+
+### IgG plasma cell
+
+Description: IgG-switched long-lived plasma cell in lung parenchyma producing systemic and local opsonizing antibodies, often derived from germinal center reactions.
+
+Genes:
+- JCHAIN, MZB1, IGHG1, IGHG2, IGHG3, IGHG4, DERL3, XBP1, PRDM1, IRF4, SDC1, TNFRSF17
+- CD38, CD27, FCGR2B, FCGR3A, CD79A, CD79B, IGLL5, VPREB3, PAX5, BLK, BANK1, TCL1A
+- FCRL4, MME, CD24, IGHM, IGHD, IGHA1, IGHA2, IGKC, IGLC2, IGLC7, HVCN1, SSR4
+- DNAJC3, HERPUD1, SYNDIG1, FKBP11
+
+### Mast cell
+
+Description: Tissue-resident mast cell in lung interstitium with abundant cytoplasmic granules, sometimes misannotated as plasma cell due to high RNA content and granular morphology.
+
+Genes:
+- KIT, CPA3, CMA1, CTSG, TPSAB1, TPSB2, TPSD1, MS4A2, FCER1A, HDC, HPGDS, IL1RL1
+- GATA2, SYK, LYN, FCGR2B, CD9, CD63, LST1, GSTM2, GSTM3, ALDH1A1, ALDH2, NCF1
+- NCF2, NCF4, CYBA, CYBB, RAB27A, RAB3D, VAMP8, STX11, SNAP23, MS4A5, ADGRE2, FCN1
+- CD93, IL1R1, IL1R2, PTGDR2
+
+### Plasmablast
+
+Description: Proliferative antibody-secreting plasmablast migrating through lung interstitium en route to terminal plasma cell differentiation.
+
+Genes:
+- MZB1, DERL3, XBP1, PRDM1, IRF4, SDC1, TNFRSF17, CD38, CD27, CD79A, CD79B, IGLL5
+- VPREB3, PAX5, BLK, BANK1, TCL1A, FCRL4, MME, CD24, IGHM, IGHD, IGHA1, IGHA2
+- IGHG1, IGHG2, IGHG3, IGHG4, IGKC, IGLC2, IGLC7, HVCN1, SSR4, DNAJC3, HERPUD1, SYNDIG1
+- FKBP11, JCHAIN, MKI67, TOP2A
+
+## plasmacytoid dendritic cell
+
+### B cell / plasmablast (confusable lymphoid neighbor)
+
+Description: B cells and plasmablasts in lung parenchyma that can be misannotated as pDC due to shared SPIB, HLA-DR, and immunoglobulin-related transcripts, especially in inflamed or aged lung.
+
+Genes:
+- CD79A, CD79B, MS4A1, CD19, CD22, FCRL4, IGHM, IGHD, IGHA1, IGHG1, MZB1, JCHAIN
+- DERL3, SDC1, TNFRSF17, XBP1, IRF4, BLIMP1, PRDM1, PAX5, BCL11A, SPIB, BLK, BANK1
+- CD24, CD38, TCL1A, FCMR, FCRL5, CD55, CD59, ITGAX, FCER1A, HLA-DRA, HLA-DRB1, CD74
+- LYZ, CST3, TYROBP
+
+### cDC2 (confusable conventional dendritic cell 2)
+
+Description: Conventional type 2 dendritic cell frequently confused with pDC due to shared FCER1A/HLA-DR expression but distinguished by CD1C, CLEC10A, and IRF4-driven transcriptional programs.
+
+Genes:
+- CD1C, FCER1A, CLEC10A, ITGAX, FCN1, S100A4, S100A6, VCAN, LYZ, CST3, TYROBP, FCER1G
+- HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, CFD, C1QA, C1QB, C1QC, MRC1, MS4A4A, MS4A7
+- FOLR2, TREM2, IRF4, BATF3, ZBTB46, CD79A, CD79B, CD19, CD22, FCRL4, IGHM, IGHD
+- MZB1, JCHAIN, DERL3
+
+### pDC1 (CD123-high classical pDC)
+
+Description: Classical interferon-producing plasmacytoid dendritic cell subset characterized by high IL3RA/CD123 expression and robust TLR7/9-mediated type I interferon responses.
+
+Genes:
+- TCF4, IRF7, IRF8, SPIB, LILRA4, CD303, CD304, NRP1, IL3RA, CD2AP, BCL11A, PAX5
+- BCL6, TOX, RUNX2, GZMB, CXCR3, CXCR4, FCER1A, FCER1G, TYROBP, CTLA4, ITGAX, HLA-DRA
+- HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, SERPINF1, CLEC4C, GZMA, GZMH, GZMK, PRF1
+- NKG7, GNLY, CST3, FCGR3A
+
+### pDC2 (CD11c+ transitional pDC)
+
+Description: Transitional pDC subset with partial myeloid/DC2 features including elevated ITGAX and antigen-processing genes, representing an intermediate state between pDC and cDC2.
+
+Genes:
+- ITGAX, CD1C, FCER1A, CLEC10A, FCN1, S100A4, S100A6, S100A8, S100A9, S100A10, S100A11, VCAN
+- LYZ, CST3, TYROBP, FCER1G, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, CD74, CFD, C1QA, C1QB
+- C1QC, MRC1, MS4A4A, MS4A7, FOLR2, TREM2, IRF8, TCF4, SPIB, LILRA4, IL3RA, NRP1
+- CXCR3, GZMB, NKG7
+
+### pDC3 (activated/mature pDC)
+
+Description: Activated/mature pDC subset upregulating CCR7, co-stimulatory molecules, and interferon-stimulated genes, reflecting migration-competent and antigen-presenting states in inflamed lung tissue.
+
+Genes:
+- CD83, CD86, CCR7, CCL19, CCL21, CCL22, IL3RA, LILRA4, CD303, CD304, NRP1, IRF7
+- TCF4, SPIB, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, CD74, FCER1A, FCER1G, TYROBP
+- CXCR4, CXCR3, GZMB, NKG7, PRF1, GZMH, CST3, TNF, IL6, CXCL10, IFIT1, IFI44
+- IFI27, ISG15, MX1, OAS1
+
+## pulmonary alveolar epithelial cell
+
+### Alveolar Macrophage
+
+Description: Resident macrophages in the alveolar space that clear debris, surfactant, and inhaled particles while maintaining immune homeostasis.
+
+Genes:
+- CD68, CD163, MRC1, MARCO, SIGLEC1, LYZ, CSTB, CTSB, CTSD, CTSL, CTSS, C1QA
+- C1QB, C1QC, FCGR3A, ITGAM, ITGAX, HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, TREM2, PPARG, NR1H3
+- FABP4, APOE, APOC1, GPNMB, SPP1, MMP12
+
+### Alveolar Type 1 (AT1) cell
+
+Description: Thin, squamous epithelial cells covering ~95% of the alveolar surface, essential for gas exchange and barrier function.
+
+Genes:
+- AGER, SFTPC, CLDN18, CAV1, CAV2, AQP5, MUC1, EGFR, KRT19, TJP1, CDH5, PECAM1
+- VWF, ENG, CDH1, ITGA6, ITGB4, LAMA3, LAMB3, LAMC2, COL17A1, SDC1, PLAUR, F3
+- EDNRB, PDPN, LY6A, THY1, CD44, ITGB1
+
+### Alveolar Type 2 (AT2) cell
+
+Description: Cuboidal surfactant-producing cells that maintain alveolar surface tension, act as progenitors for AT1 cells, and contribute to innate immunity.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, NKX2-1, CHGA, SCGB1A1, SCGB3A2, SCGB3A1, MUC5B
+- MUC1, EPCAM, CDH1, KRT8, KRT18, KRT19, DSP, CLDN18, OAS1F, LYZ, CCL2, CXCL10
+- IFIT1, IFIT3, ISG15, MX1, RSAD2, IFI44L
+
+### Bronchiolar Secretory (Club) cell
+
+Description: Non-ciliated secretory cells in distal airways that produce protective proteins, detoxify xenobiotics, and serve as airway progenitors.
+
+Genes:
+- SCGB1A1, SCGB3A1, SCGB3A2, SCGB2B2, SCGB1D1, MUC5B, MUC1, FOXI1, CFTR, ASCL1, NOTCH2, HES1
+- SPDEF, AGR2, TFF2, TFF3, KRT5, KRT17, TP63, ITGA6, ITGB4, CDH1, EPCAM, CLDN10
+- CLDN18, CYP2F2, CYP2S1, CYP4B1, EPHX2, FMO3
+
+### Lung Interstitial Macrophage
+
+Description: Macrophages residing in the lung interstitium that sample antigens, regulate inflammation, and interact with structural cells and lymphocytes.
+
+Genes:
+- LYVE1, MRC1, MHC2, CD209, FOLR2, TIMD4, CD163, CD68, C1QA, C1QB, C1QC, MERTK
+- AXL, MERTK, TREM2, GPNMB, FABP5, LIPA, CTSB, CTSD, CTSL, CTSS, LYZ, CSTB
+- HLA-DRA, HLA-DRB1, FCGR1A, FCGR2A, FCGR3A, ITGAM, ITGAX
+
+## pulmonary alveolar type 1 cell
+
+### lung fibroblast
+
+Description: Mesenchymal cells in the lung interstitium that produce extracellular matrix and regulate tissue structure, repair, and fibrotic responses.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3, FN1, LUM, DCN, BGN
+- FMOD, COL4A1, COL4A2, PDGFRA, PDGFRB, FAP, THY1, ACTA2, TAGLN, MYH11, DES, VIM
+- S100A4, POSTN, WNT5A, RSPO3, GREM1, BMP4, FGF7, FGF10, HGF, IGF1, IGF2, TGFB1
+- TGFB2, TGFB3, MMP2, MMP14, TIMP1, TIMP2, TIMP3, SERPINE1, SERPINH1, PLOD2
+
+### lung interstitial macrophage
+
+Description: Macrophages residing in the lung interstitium that sample antigens and regulate local immune responses and tissue repair.
+
+Genes:
+- MRC1, CD163, CD68, MARCO, MSR1, C1QA, C1QB, C1QC, CSF1R, ITGAM, ITGAX, FCGR3A
+- HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, TYROBP, TREM2, APOE, APOC1, LPL, FABP4
+- FABP5, LIPA, CTSB, CTSD, CTSL, CTSS, CSTB, CST3, LYZ, S100A4, S100A6, S100A8
+- S100A9, S100A10, S100A11, FCN1, CFD, C3, C4A, C4B, CD209
+
+### pulmonary alveolar macrophage
+
+Description: Resident macrophages in the alveolar space that phagocytose debris, surfactant, and pathogens while maintaining immune homeostasis.
+
+Genes:
+- CD68, CD163, MARCO, MSR1, MRC1, C1QA, C1QB, C1QC, CSF1R, ITGAM, ITGAX, FCGR3A
+- HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, TYROBP, TREM2, APOE, APOC1, LPL, FABP4
+- FABP5, LIPA, CTSB, CTSD, CTSL, CTSS, CSTB, CST3, LYZ, S100A4, S100A6, S100A8
+- S100A9, S100A10, S100A11, FCN1, CFD, C3, C4A, C4B
+
+### pulmonary alveolar type 1 cell (AT1)
+
+Description: Thin, squamous epithelial cells covering ~95% of the alveolar surface, essential for gas exchange and forming the blood-air barrier.
+
+Genes:
+- AGER, SFTPC, CLDN18, CLDN4, AQP5, MUC1, KRT19, KRT8, KRT18, EPCAM, CDH1, TJP1
+- OCLN, CAV1, CAV2, PLAUR, LYN, FABP4, PECAM1, VWF, ENG, FLT1, TEK, PDGFRB
+- ACTA2, COL1A1, COL3A1, FN1, LUM, DCN, COL4A1, COL4A2, HOPX, PDPN, SFTPB, SFTPA1
+- SFTPA2, NKX2-1, FOXM1, ID2
+
+### pulmonary alveolar type 2 cell (AT2)
+
+Description: Cuboidal surfactant-producing epithelial cells that also serve as progenitors for AT1 cells during alveolar repair.
+
+Genes:
+- SFTPC, SFTPB, SFTPA1, SFTPA2, ABCA3, NKX2-1, CHGA, SCGB1A1, SCGB3A2, SCGB3A1, MUC5B, MUC1
+- EPCAM, KRT8, KRT18, KRT19, CLDN4, CLDN18, AGER, HOPX, PDPN, AQP5, CAV1, CAV2
+- TJP1, OCLN, CDH1, LYN, FABP4, PECAM1, VWF, ENG, FLT1, TEK, PDGFRB, ACTA2
+- COL1A1, COL3A1, FN1, LUM, DCN, COL4A1, COL4A2, FOXM1, ID2, PLAUR
+
+## pulmonary alveolar type 2 cell
+
+### alveolar macrophage
+
+Description: Tissue-resident macrophages in the alveolar space that phagocytose debris, surfactant, and inhaled particles.
+
+Genes:
+- CD68, CD163, MARC1, MARC2, MSR1, SIGLEC1, C1QA, C1QB, C1QC, CSF1R, ITGAM, ITGAX
+- HLA-DRA, HLA-DRB1, HLA-DPA1, HLA-DPB1, HLA-DQA1, HLA-DQB1, FCGR1A, FCGR2A, FCGR3A, FCER1G, TYROBP, SYK
+- LCK, ZAP70, LAT, PLCG2, PIK3CG, PIK3R1, PIK3R2, PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3CG
+- PIK3R1, PIK3R2, PIK3R3, PIK3CA, PIK3CB, PIK3CD, PIK3CG, PIK3R1, PIK3R2, PIK3R3, PIK3CA, PIK3CB
+- PIK3CD
+
+### club cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins and act as progenitors in the distal airways.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB3A1, SCGB2B, SCGB1D1, SCGB2A2, SCGB2A1, SCGB1D2, SCGB3A3, SCGB1A2, SCGB1D3, SCGB1D4
+- SCGB2B2, SCGB2B3, SCGB2B4, SCGB2B5, SCGB2B6, SCGB2B7, SCGB2B8, SCGB2B9, SCGB2B10, SCGB2B11, SCGB2B12, SCGB2B13
+- SCGB2B14, SCGB2B15, SCGB2B16, SCGB2B17, SCGB2B18, SCGB2B19, SCGB2B20, SCGB1A1, SCGB3A2, SCGB3A1, SCGB2B, SCGB1D1
+- SCGB2A2, SCGB2A1, SCGB1D2, SCGB3A3, SCGB1A2, SCGB1D3, SCGB1D4, SCGB2B2, SCGB2B3, SCGB2B4, SCGB2B5, SCGB2B6
+- SCGB2B7
+
+### pulmonary alveolar type 1 cell
+
+Description: Thin, squamous epithelial cells covering most of the alveolar surface and specialized for gas exchange.
+
+Genes:
+- AGER, CAV1, CAV2, CAV3, AQP5, PODXL, CLDN18, CLDN4, TJP1, PDGFRA, EDNRB, SLC34A2
+- CDH5, PECAM1, VWF, ENG, FLT1, KDR, TEK, CDH5, PECAM1, VWF, ENG, FLT1
+- KDR, TEK, CDH5, PECAM1, VWF, ENG, FLT1, KDR, TEK, CDH5, PECAM1, VWF
+- ENG, FLT1, KDR, TEK, CDH5, PECAM1, VWF, ENG, FLT1, KDR, TEK
+
+### pulmonary alveolar type 2 cell (A2)
+
+Description: Surfactant-producing epithelial cells that reduce surface tension in alveoli and serve as progenitors for type 1 cells.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, LAMP3, NKX2-1, AGER, MUC1, SCGB3A2, SCGB1A1
+- SCGB3A1, SCGB2B, SCGB1D1, SCGB2A2, SCGB2A1, SCGB1D2, SCGB3A3, SCGB1A2, SCGB1D3, SCGB1D4, SCGB2B2, SCGB2B3
+- SCGB2B4, SCGB2B5, SCGB2B6, SCGB2B7, SCGB2B8, SCGB2B9, SCGB2B10, SCGB2B11, SCGB2B12, SCGB2B13, SCGB2B14, SCGB2B15
+- SCGB2B16, SCGB2B17, SCGB2B18, SCGB2B19, SCGB2B20
+
+### pulmonary alveolar type 2 cell (A2) - KRT5+ transitional
+
+Description: A transitional or injury-responsive AT2 state co-expressing surfactant genes and basal/squamous keratins during alveolar repair.
+
+Genes:
+- KRT5, KRT17, KRT14, KRT6A, KRT6B, KRT6C, KRT16, TP63, SFTPC, SFTPB, ABCA3, SFTPA1
+- SFTPA2, SFTPD, SCGB3A2, SCGB1A1, SCGB3A1, SCGB2B, SCGB1D1, SCGB2A2, SCGB2A1, SCGB1D2, SCGB3A3, SCGB1A2
+- SCGB1D3, SCGB1D4, SCGB2B2, SCGB2B3, SCGB2B4, SCGB2B5, SCGB2B6, SCGB2B7, SCGB2B8, SCGB2B9, SCGB2B10, SCGB2B11
+- SCGB2B12, SCGB2B13, SCGB2B14, SCGB2B15, SCGB2B16, SCGB2B17, SCGB2B18, SCGB2B19, SCGB2B20
+
+## pulmonary artery endothelial cell
+
+### pulmonary artery endothelial cell
+
+Description: Arterial endothelial cells of the pulmonary vasculature characterized by Notch signaling and arterial identity markers.
+
+Genes:
+- EFNB2, SOX17, DLL4, HEY1, NOTCH1, GJA5, ABCG2, SLC38A5, SEMA3G, CXCR4, ROBO4, ERG
+- FLI1, KLF2, KLF4, ESAM, CDH5, PECAM1, VWF, ENG, ACVRL1, BMP10, PLVAP, CLEC14A
+- APJ, EDN1, EDNRA, PTPRB, TIE1, TEK
+
+### pulmonary capillary endothelial cell (aCap)
+
+Description: General capillary endothelial cells (aCap) in alveolar septa involved in gas exchange, marked by CAR4 and EDNRB.
+
+Genes:
+- CAR4, EDNRB, PLVAP, FCN3, EMP2, CA4, SLC38A5, GPIHBP1, LPL, FABP4, FABP5, CD36
+- PECAM1, CDH5, ERG, FLI1, VWF, PTPRB, TIE1, TEK, ESAM, ROBO4, CLEC14A, ENG
+- ACVRL1, KLF2, KLF4, NRP2, PROX1, LYVE1
+
+### pulmonary capillary endothelial cell (gCap)
+
+Description: General capillary endothelial cells (gCap) enriched for amino acid and solute transporters, distinct from aCap.
+
+Genes:
+- ACE2, SLC38A2, SLC38A1, SLC7A7, SLC7A11, SLC1A5, SLC1A3, SLC1A2, SLC16A1, SLC16A7, SLC25A1, SLC25A5
+- SLC25A6, SLC25A11, SLC25A13, SLC25A15, SLC25A18, SLC25A22, SLC25A27, SLC25A31, SLC25A32, SLC25A33, SLC25A34, SLC25A36
+- SLC25A37, SLC25A38, SLC25A39, SLC25A40, SLC25A41
+
+### pulmonary lymphatic endothelial cell
+
+Description: Lymphatic endothelial cells of the pulmonary lymphatic vasculature marked by PROX1, LYVE1, and podoplanin.
+
+Genes:
+- PROX1, LYVE1, PDPN, CCL21, VEGFR3, FLT4, NRP2, FOXC2, GJC2, RELA, RELB, NFATC1
+- NFATC2, NFATC3, NFATC4, NFAT5, NFATC2IP, NFATC2B, NFATC2C, NFATC2D, NFATC2E, NFATC2F, NFATC2G, NFATC2H
+- NFATC2I, NFATC2J, NFATC2K, NFATC2L, NFATC2M, NFATC2N
+
+### pulmonary venous endothelial cell
+
+Description: Venous endothelial cells of the pulmonary vasculature marked by COUP-TFII/NR2F2 and Ephrin signaling.
+
+Genes:
+- NR2F2, EPHB4, EFNB1, COUP-TFII, SLC6A20, CXCR7, ACKR3, NRP2, PROX1, LYVE1, CDH5, PECAM1
+- ERG, FLI1, VWF, PTPRB, TIE1, TEK, ESAM, ROBO4, CLEC14A, PLVAP, ENG, ACVRL1
+- KLF2, KLF4, GJA5, ABCG2, SEMA3G, HEY1
+
+## pulmonary neuroendocrine cell
+
+### alveolar_type_2_cell
+
+Description: Alveolar epithelial cells that produce pulmonary surfactant and act as progenitors for alveolar type 1 cells during repair.
+
+Genes:
+- SFTPA1, SFTPA2, SFTPB, SFTPC, SFTPD, ABCA3, LAMP3, NKX2-1, FOXA2, FOXA3, ETV5, FLI1
+- ID1, ID2, ID3, AGER, LYN, HOPX, SCGB3A2, SCGB1A1, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1
+- MUC5B, MUC5AC, AGR2, AGR3, SPDEF, EPCAM, KRT19, CFTR, SFTPA1, SFTPA2, SFTPB, SFTPC
+- SFTPD, ABCA3, LAMP3, NKX2-1
+
+### ciliated_cell
+
+Description: Airway epithelial cells with motile cilia that drive mucociliary clearance of inhaled particles and pathogens.
+
+Genes:
+- FOXJ1, DNAI1, DNAI2, DNAH5, DNAH9, DNAH11, CCDC39, CCDC40, DYNC2H1, TUBB4B, TUBB1, KRT19
+- EPCAM, MCIDAS, MYB, NOTCH1, NOTCH2, FOXN4, CCNO, CFAP43, CFAP44, CFAP53, CFAP54, CFAP56
+- CFAP57, CFAP61, CFAP69, CFAP73, CFAP74, CFAP77, FOXJ1, DNAI1, DNAI2, DNAH5, DNAH9, DNAH11
+- CCDC39, CCDC40, DYNC2H1, TUBB4B
+
+### club_cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins and serve as progenitors for airway repair.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, CC10, MUC5B, MUC5AC, AGR2, AGR3, SPDEF
+- FOXA2, NKX2-1, EPCAM, KRT19, CFTR, SCGB1A1, SCGB3A2, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, MUC5B
+- MUC5AC, AGR2, AGR3, SPDEF, FOXA2, NKX2-1, EPCAM, KRT19, CFTR, SCGB1A1, SCGB3A2, SCGB1D2
+- SCGB2A1, SCGB2A2, SCGB3A1, MUC5B
+
+### pulmonary_neuroendocrine_cell
+
+Description: Rare airway epithelial cells that sense luminal stimuli and secrete neuropeptides and amines to regulate local immune and epithelial responses.
+
+Genes:
+- CHGA, CHGB, ASCL1, INSM1, SCGN, SCG2, SCG3, SCG5, PCSK1, PCSK2, EML4, GRIP1
+- CALCA, CALCB, GRP, SST, HES6, NEUROD1, NEUROG3, PHOX2A, PHOX2B, DLL1, HES1, HES5
+- NOTCH1, NOTCH2, NOTCH3, DLL3, ASCL1, INSM1, SCGN, CHGA, CHGB, SCG2, SCG3, PCSK1
+- PCSK2, CALCA, GRP, SST, NEUROD1, PHOX2B
+
+### pulmonary_neuroendocrine_cell_cluster
+
+Description: Multicellular clusters of pulmonary neuroendocrine cells interspersed with supporting cells that act as chemosensory niches in the airway epithelium.
+
+Genes:
+- CHGA, CHGB, SCGN, INSM1, ASCL1, SCG2, SCG3, PCSK1, PCSK2, CALCA, CALCB, GRP
+- SST, NEUROD1, PHOX2B, HES6, DLL1, NOTCH2, EML4, GRIP1, SCG5, NEUROG3, PHOX2A, HES1
+- HES5, NOTCH1, NOTCH3, DLL3, PCSK1, PCSK2, CALCA, GRP, SST, NEUROD1, PHOX2B, CHGA
+- CHGB, SCGN, INSM1, ASCL1
+
+## respiratory basal cell
+
+### basal_cell
+
+Description: Multipotent progenitor cells located in the basal layer of the airway epithelium that can differentiate into ciliated and secretory cells.
+
+Genes:
+- KRT5, KRT14, TP63, CD44, ITGA6, ITGB4, COL17A1, DSP, DSG2, SFN, S100A2, S100A6
+- S100A10, S100A11, S100P, ANXA1, ANXA2, EGFR, NGFR, NOTCH1, JAG1, HES1, HEY1, MMP7
+- MMP10, SERPINB3, SERPINB4, PI3, SCGB1A1, SCGB2A1, SCGB2A2, MUC5B, MUC5AC, FOXJ1, SCGB3A2, SCGB1A2
+- SCGB1D1, SCGB1B1, SCGB1B2, SCGB1B3
+
+### ciliated_cell
+
+Description: Cells with motile cilia that coordinate beating to move mucus and trapped particles out of the airways.
+
+Genes:
+- FOXJ1, DNAH5, DNAH1, DNAH2, DNAH3, DNAH7, DNAH8, DNAH9, DNAH10, DNAH11, DNAH12, DNAH13
+- DNAH14, DNAH17, DNAI1, DNAI2, DNAL1, DNAL4, DNAJB1, DNAJB2, DNAJB3, DNAJB4, DNAJB5, DNAJB6
+- DNAJB7, DNAJB8, DNAJB9, DNAJB10, DNAJB11, DNAJB12, DNAJB13, DNAJB14, DNAJC1, DNAJC2, DNAJC3, DNAJC4
+- DNAJC5, DNAJC6, DNAJC7, DNAJC8
+
+### club_cell
+
+Description: Non-ciliated secretory cells that produce protective proteins and serve as progenitors for ciliated cells in the distal airways.
+
+Genes:
+- SCGB1A1, SCGB1A2, SCGB1B1, SCGB1B2, SCGB1B3, SCGB1D1, SCGB1D2, SCGB2A1, SCGB2A2, SCGB3A1, SCGB3A2, SCGB3A3
+- SCGB3B1, SCGB3B2, SCGB3B3, SCGB3C1, SCGB3D1, SCGB3D2, SCGB3D3, SCGB3D4, SCGB3E1, SCGB3E2, SCGB3E3, SCGB3E4
+- SCGB3F1, SCGB3F2, SCGB3F3, SCGB3F4, SCGB3G1, SCGB3G2, SCGB3G3, SCGB3G4, SCGB3H1, SCGB3H2, SCGB3H3, SCGB3H4
+- SCGB3I1, SCGB3I2, SCGB3I3, SCGB3I4
+
+### goblet_cell
+
+Description: Mucus-secreting cells that produce and release mucins to protect and lubricate the airway surface.
+
+Genes:
+- MUC5AC, MUC5B, AGR2, AGR3, TFF1, TFF2, TFF3, CLCA1, CLCA4, SPDEF, NKCC1, CFTR
+- SCNN1A, SCNN1B, SCNN1G, SLC26A4, SLC9A3, ATP12A, ATP1A1, ATP1B1, KRT8, KRT18, KRT19, CEACAM5
+- CEACAM6, MUC1, MUC4, MUC16, MUC20, FCGBP, VWA1, DMBT1, GKN1, GKN2, ANXA10, ANXA11
+- ANXA13, ANXA14, RETNLB, REG3A
+
+### suprabasal_cell
+
+Description: Differentiated cells arising from basal cells that express stratification markers and begin to acquire secretory characteristics.
+
+Genes:
+- KRT4, KRT13, KRT15, KRT19, SPRR1A, SPRR1B, SPRR2A, SPRR2D, SPRR3, SPRR4, IVL, LOR
+- TGM1, TGM3, ELF3, GRHL3, NOTCH2, HES5, SPDEF, MUC5AC, MUC5B, SCGB1A1, SCGB2A1, SCGB2A2
+- SCGB3A2, AGR2, AGR3, XBP1, FKBP11, P4HB, PDIA3, PDIA4, PDIA6, ERP29, CALR, HSPA5
+- DNAJC3, HERPUD1, ATF6, IRE1, XBP1
+
+## respiratory tract hillock cell
+
+### Basal cell
+
+Description: Airway progenitor/stem cells located in the basal layer of pseudostratified epithelium, marked by high KRT5 and TP63 expression.
+
+Genes:
+- KRT5, KRT17, KRT14, TP63, CD44, ITGA6, ITGB4, COL17A1, LAMA3, LAMB3, LAMC2, DSG2
+- DSC2, JUP, CTTN, SFN, SERPINB3, SERPINB2, MMP1, MMP3, MMP10, FGFBP1, EGFR, ERBB2
+- NOTCH1, HES1, ASCL1, SOX2, AKT1, PIK3CA
+
+### Ciliated cell
+
+Description: Airway epithelial cells with motile cilia that drive mucociliary clearance, marked by high FOXJ1 and dynein arm gene expression.
+
+Genes:
+- FOXJ1, DNAH5, DNAI1, DNAH1, DNAH2, DNAH3, DNAH7, DNAH8, DNAH9, DNAH11, DNAH12, DNAH14
+- DNAH17, CCDC39, CCDC40, CCDC65, CCDC114, RSPH4A, RSPH9, RSPH1, RSPH3, HYDIN, CFAP43, CFAP44
+- MCIDAS, MYB, E2F4, NOTCH2, PIFO, GAS2L3
+
+### Goblet cell
+
+Description: Mucin-secreting airway epithelial cells that produce the protective mucus layer, marked by high MUC5AC and SPDEF expression.
+
+Genes:
+- MUC5AC, MUC5B, AGR2, TFF1, TFF2, TFF3, SPDEF, CLCA1, ANO1, SCGB1A1, SCGB3A2, CFTR
+- SLC9A3, SLC26A4, NKCC1, SLC12A2, ATP1A1, ATP1B1, CLDN10, CLDN18, MUC16, MUC19, MUC20, RETNLB
+- FCGBP, PDZK1IP1, TSPAN1, KRT19, KRT18, EPCAM
+
+### Hillock cell
+
+Description: Rare ionocyte-like cells at airway branch points (hillocks) characterized by high CFTR expression and a distinct ciliated/goblet gene signature.
+
+Genes:
+- FOXJ1, CFTR, SCGB1A1, SCGB3A2, MUC5B, MUC5AC, AGR2, TFF2, SPDEF, NKCC1, SLC12A2, ATP1A1
+- ATP1B1, CLCA1, ANO1, SLC26A4, SLC9A3, CFAP299, DNAH5, DNAI1, CCDC39, CCDC40, RSPH4A, RSPH9
+- HYDIN, MCIDAS, MYB, E2F4, TRP53, NOTCH2
+
+### Ionocyte
+
+Description: Rare airway epithelial cells specialized for ion transport and pH regulation, marked by high CFTR and V-ATPase subunit expression.
+
+Genes:
+- FOXJ1, CFTR, ASCL3, SLC4A4, ATP6V1G3, ATP6V0D2, ATP6V0E1, ATP6V1A, ATP6V1B2, ATP6V1C1, ATP6V1E1, ATP6V1F
+- ATP6V1H, SLC9A3, SLC26A4, SLC26A7, ANO1, CLCA1, NKCC1, SLC12A2, AQP1, AQP5, SCNN1A, SCNN1B
+- SCNN1G, KCNJ16, KCNJ10, HSD17B6, CYP4F3
+
+## smooth muscle cell
+
+### Airway smooth muscle cell
+
+Description: Contractile smooth muscle cells of the bronchial and bronchiolar airways that regulate airway caliber and bronchoconstriction.
+
+Genes:
+- ACTA2, MYH11, TAGLN, CNN1, DES, LMOD1, TPM2, MYLK, CALD1, LMOD2, ACTG2, TNN
+- SMTN, MYL9, MYH9, VIM, ITGA8, CDH2, GJA5, FHL1, PLN, CASQ2, RYR2, ATP2A2
+- CHRM2, ADRB2, PTGIS, EDNRA, NOTCH3, KCNMA1
+
+### Fibroblast
+
+Description: Residential lung fibroblasts that maintain the extracellular matrix scaffold and participate in tissue repair and immune crosstalk.
+
+Genes:
+- COL1A1, COL1A2, COL3A1, FN1, VIM, DCN, LUM, COL6A1, COL6A2, COL6A3, FAP, THY1
+- PDGFRA, POSTN, FBLN1, SFRP2, WNT5A, TGFBR1, TGFBR2, CTGF, LOX, LOXL2, MMP2, TIMP1
+- ITGA11, ITGB1, CDH11, FBLN2, EFEMP2, FBN1
+
+### Myofibroblast
+
+Description: Activated fibroblasts expressing alpha-smooth muscle actin that deposit extracellular matrix and drive fibrotic remodeling in lung injury.
+
+Genes:
+- ACTA2, TAGLN, COL1A1, COL1A2, COL3A1, FN1, VIM, DES, FAP, THY1, PDGFRA, DCN
+- LUM, COL6A1, COL6A2, COL6A3, POSTN, FBLN1, SFRP2, WNT5A, TGFBR1, TGFBR2, CTGF, LOX
+- LOXL2, MMP2, TIMP1, ITGA11, ITGB1, CDH11
+
+### Pericyte
+
+Description: Perivascular mural cells wrapping capillaries and small vessels that regulate microvascular stability, permeability, and angiogenesis.
+
+Genes:
+- PDGFRB, CSPG4, ABCC9, DES, ACTA2, TAGLN, RGS5, MCAM, CDH2, VIM, ITGA8, MYH9
+- MYL9, LMOD1, TPM2, CNN1, CALD1, PLN, CASQ2, EDNRA, NOTCH3, KCNMA1, GJA5, FHL1
+- RYR2, ATP2A2, SMTN, TNN, MYLK, TEAD1
+
+### Vascular smooth muscle cell
+
+Description: Smooth muscle cells of pulmonary arteries and veins that regulate vascular tone and blood flow in the lung.
+
+Genes:
+- ACTA2, MYH11, TAGLN, CNN1, DES, LMOD1, TPM2, MYLK, CALD1, MYL9, MYH9, VIM
+- ITGA8, CDH2, GJA5, FHL1, PLN, CASQ2, RYR2, ATP2A2, EDNRA, NOTCH3, KCNMA1, ABCC9
+- GUCY1A2, GUCY1B2, MYOCD, SRF, TEAD1, PDLIM5
+
+## stromal cell
+
+### Adventitial fibroblast
+
+Description: Perivascular fibroblasts surrounding pulmonary vessels that regulate vascular remodeling and express Notch signaling components.
+
+Genes:
+- PDGFRB, RGS5, ABCC9, CSPG4, MCAM, CD146, NOTCH3, JAG1, HEY1, HES1, ACTA2, TAGLN
+- COL1A1, COL3A1, FN1, FAP, PDPN, DCN, LUM, BGN, COL6A1, COL6A2, VCAN, SERPINE1
+- PLAUR, MMP2, MMP14, TIMP1, TIMP3, ADAMTS1
+
+### Airway fibroblast
+
+Description: Peribronchial smooth muscle-like fibroblasts with contractile gene expression that contribute to airway remodeling and fibrosis.
+
+Genes:
+- ACTA2, TAGLN, CNN1, MYH11, DES, LMOD1, TPM2, TNN, SMTN, MYLK, FHL1, VIM
+- COL1A1, COL1A2, COL3A1, FN1, FAP, PDPN, CD90, THY1, ITGA11, ITGB1, PDGFRA, PDGFRB
+- DCN, LUM, BGN, FMOD, SFRP4, DKK2
+
+### Alveolar fibroblast
+
+Description: WNT-responsive extracellular matrix-producing fibroblasts located in the alveolar interstitium that regulate lung repair and matrix homeostasis.
+
+Genes:
+- PDGFRA, DCN, LUM, COL1A1, COL3A1, FBLN1, FBN1, FBN2, ECM1, ECM2, COL6A1, COL6A2
+- COL6A3, COL14A1, COL15A1, COL16A1, BGN, FMOD, ASPN, OGN, PRELP, OPTC, SFRP2, WIF1
+- DPT, RSPO3, AXIN2, FZD4, LEF1, TCF7L2
+
+### Lipofibroblast
+
+Description: Lipid-storing interstitial fibroblasts that support alveolar type 2 cell surfactant production and alveolar homeostasis.
+
+Genes:
+- PLIN2, PLIN4, FABP4, FABP5, ADIPOQ, LPL, DGAT1, DGAT2, SCD, FASN, PPARG, CIDEA
+- CIDEC, LIPC, LIPG, APOE, APOD, DCN, PDGFRA, WIF1, SFRP2, LEPR, ADRP, ADIG
+- MLXIPL, RXRA, RXRG, NR1H3, ABCA1, ABCG1
+
+### Myofibroblast
+
+Description: Activated contractile fibroblasts expressing alpha-smooth muscle actin and abundant extracellular matrix genes, prominent in fibrotic lung disease.
+
+Genes:
+- ACTA2, TAGLN, COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, FN1, FAP, PDPN, THY1, CD90
+- PDGFRA, PDGFRB, TGFBR1, TGFBR2, SMAD2, SMAD3, SMAD7, CTGF, CCN2, EDN1, EDNRA, MMP2
+- MMP9, MMP14, TIMP1, TIMP2, SERPINE1, PLAUR
+
+## t cell
+
+### CD4+ tissue-resident memory T cell
+
+Description: CD4+ T cells with tissue-resident memory phenotype in lung parenchyma, involved in orchestrating adaptive immune responses and maintaining local immune homeostasis.
+
+Genes:
+- CD4, ITGAE, CXCR6, CXCR3, CCR5, IL7R, SELL, LEF1, TCF7, CD69, CD44, ICOS
+- PDCD1, CTLA4, FOXP3, IL2RA, STAT3, BCL2, BACH2, TOX, MAF, IRF4, GATA3, TBX21
+- RORC
+
+### CD8+ effector memory T cell
+
+Description: Cytotoxic CD8+ T cells residing in lung parenchyma that provide antiviral and antitumor immunity through perforin/granzyme-mediated killing.
+
+Genes:
+- CD8A, CD8B, GZMB, GZMA, PRF1, NKG7, GNLY, IFNG, CX3CR1, EOMES, TBX21, FASLG
+- CCL4, CCL5, GZMH, GZMK, KLRD1, KLRB1, CD27, CD44, ITGAE, CXCR3, IL2RA, STAT4
+- RUNX3
+
+### Gamma-delta T cell
+
+Description: Tissue-resident gamma-delta T cells in lung parenchyma that bridge innate and adaptive immunity through rapid cytokine production and cytotoxic responses.
+
+Genes:
+- TRDC, TRGC2, TRGC1, CD8A, NKG7, GNLY, GZMB, GZMA, KLRD1, KLRC1, KLRK1, CD27
+- CXCR6, IL7R, IL1R1, IL23R, RORC, CCR6, CD44, ITGAE, CD69, PRF1, CCL3, CCL4
+- IFNG
+
+### Natural killer T cell (confused neighbor)
+
+Description: Invariant NKT cells or related innate-like T cells that can be confused with conventional T cells due to shared markers but recognize lipid antigens presented by CD1d.
+
+Genes:
+- CD3D, CD3E, CD4, CD8A, NKG7, GNLY, GZMB, PRF1, KLRD1, KLRC1, KLRB1, CXCR6
+- IL7R, CD69, CD44, IFNG, TNF, IL17A, RORC, GATA3, TBX21, EOMES, PLZF, ZBTB16
+- CD1D
+
+### Regulatory T cell (Treg)
+
+Description: Immunosuppressive CD4+ T cells that maintain tolerance and prevent excessive inflammation in lung tissue through IL-10 and TGF-beta signaling.
+
+Genes:
+- FOXP3, IL2RA, CTLA4, TNFRSF18, TNFRSF4, IKZF2, TIGIT, LAG3, PDCD1, CD4, CD25, HLA-DRB1
+- HLA-DRA, CD38, CCR8, IKZF3, BATF, IRF4, STAT5A, STAT5B, BCL2, TCF7, LEF1, SELL
+- ITGAE
+
+## tracheobronchial goblet cell
+
+### alveolar_macrophage
+
+Description: Resident macrophages in the alveolar space that phagocytose debris, surfactant, and inhaled particles.
+
+Genes:
+- CD68, CD163, MARCO, MSR1, LYZ, CSTB, CTSB, CTSD, CTSL, CTSS, C1QA, C1QB
+- C1QC, C3, C4A, C4B, C5, C6, C7, C8A, C8B, C9, CFB, CFD
+- CFH, CFI, CFP, C1R, C1S, C2, SERPINA1, SERPINA3, SERPINA4, SERPINA5, SERPINA6, SERPINA7
+- SERPINA8, SERPINA9, SERPINA10, SERPINA11, SERPINA12, SERPINA13, SERPINA14, SERPINA15, SERPINA16, SERPINA17, SERPINA18, SERPINA19
+- SERPINA20
+
+### alveolar_type_1_cell
+
+Description: Thin, squamous epithelial cells covering most of the alveolar surface and essential for gas exchange.
+
+Genes:
+- AGER, SFTPC, SFTPD, SFTPA1, SFTPA2, SFTPB, CAV1, CAV2, CAV3, PECAM1, VWF, CDH5
+- CLDN18, CLDN4, CLDN3, CLDN7, CLDN1, CLDN2, CLDN5, CLDN8, CLDN10, CLDN11, CLDN12, CLDN13
+- CLDN14, CLDN15, CLDN16, CLDN17, CLDN18, CLDN19, CLDN20, CLDN21, CLDN22, CLDN23, CLDN24, CLDN25
+- CLDN26, CLDN27, CLDN28, CLDN29, CLDN30, CLDN31, CLDN32, CLDN33, CLDN34, CLDN35, CLDN36, CLDN37
+- CLDN38, CLDN39
+
+### alveolar_type_2_cell
+
+Description: Cuboidal surfactant-producing cells that maintain alveolar surface tension and serve as progenitors for type 1 cells.
+
+Genes:
+- SFTPC, SFTPD, SFTPA1, SFTPA2, SFTPB, ABCA3, NKX2-1, LYZ, CHGA, CHGB, SCGB1A1, SCGB3A2
+- SCGB3A1, SCGB1D1, SCGB2A2, SCGB1B1, SCGB2A1, SCGB3A3, SCGB1A2, SCGB1D2, SCGB1D3, SCGB1D4, SCGB1D5, SCGB1D6
+- SCGB1D7, SCGB1D8, SCGB1D9, SCGB1D10, SCGB1D11, SCGB1D12, SCGB1D13, SCGB1D14, SCGB1D15, SCGB1D16, SCGB1D17, SCGB1D18
+- SCGB1D19, SCGB1D20, SCGB1D21, SCGB1D22, SCGB1D23, SCGB1D24, SCGB1D25, SCGB1D26, SCGB1D27, SCGB1D28, SCGB1D29, SCGB1D30
+- SCGB1D31, SCGB1D32
+
+### club_cell
+
+Description: Non-ciliated bronchiolar epithelial cells that secrete protective proteins and act as progenitors for airway repair.
+
+Genes:
+- SCGB1A1, SCGB3A2, SCGB3A1, SCGB1D1, SCGB2A2, SCGB1B1, SCGB2A1, SCGB3A3, SCGB1A2, SCGB1D2, SCGB1D3, SCGB1D4
+- SCGB1D5, SCGB1D6, SCGB1D7, SCGB1D8, SCGB1D9, SCGB1D10, SCGB1D11, SCGB1D12, SCGB1D13, SCGB1D14, SCGB1D15, SCGB1D16
+- SCGB1D17, SCGB1D18, SCGB1D19, SCGB1D20, SCGB1D21, SCGB1D22, SCGB1D23, SCGB1D24, SCGB1D25, SCGB1D26, SCGB1D27, SCGB1D28
+- SCGB1D29, SCGB1D30, SCGB1D31, SCGB1D32, SCGB1D33, SCGB1D34, SCGB1D35, SCGB1D36, SCGB1D37, SCGB1D38, SCGB1D39, SCGB1D40
+- SCGB1D41, SCGB1D42
+
+### pulmonary_endothelial_cell
+
+Description: Endothelial cells lining the pulmonary vasculature, critical for gas exchange and vascular homeostasis.
+
+Genes:
+- PECAM1, VWF, CDH5, CLDN5, ESAM, ENG, TEK, KDR, FLT1, FLT4, NRP1, NRP2
+- PLVAP, CD34, CD36, CD44, CD47, CD59, CD73, CD90, CD105, CD146, CD164, CD166
+- CD200, CD248, CD276, CD320, CD363, CD366, CD14, CD16, CD32, CD64, CD89, CD115
+- CD116, CD117, CD135, CD184, CD195, CD196, CD197, CD198, CD199, CD200R1, CD200R1L, CD200R1L2
+- CD200R1L3, CD200R1L4
+
+## tracheobronchial smooth muscle cell
+
+### airway_smooth_muscle_cell
+
+Description: Contractile smooth muscle cells of the airway wall that regulate bronchomotor tone and contribute to airway remodeling in disease.
+
+Genes:
+- ACTA2, MYH11, TAGLN, CNN1, DES, LMOD1, TPM2, MYLK, LMOD2, ACTG2, CALD1, SMTN
+- TNN, TNNC1, TNNT1, MYL9, MYL12A, MYL12B, CHRM2, ADRB2, ITGA8, ITGB1, VIM, CAV1
+- CAV2, CAVIN1, FHL1, LAMA4, LAMB1, COL1A1, COL3A1, FN1, DCN, BGN, LUM, FBLN1
+- ELN, MFAP4, FBN1, SFRP1
+
+### lung_fibroblast
+
+Description: Resident parenchymal fibroblasts that maintain lung extracellular matrix homeostasis and participate in WNT and Hedgehog signaling niches.
+
+Genes:
+- PDGFRA, DCN, LUM, BGN, COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3
+- FN1, FBLN1, FBN1, FAP, PDPN, THY1, VIM, CFD, ADAMDEC1, SLC38A2, SLC7A5, ITGA5
+- ITGB1, PDGFRB, CAV1, CAV2, ELN, MFAP4, LAMA4, LAMB1, WNT5A, RSPO3, GLI1, PTCH1
+- SMO, LEF1, AXIN2
+
+### myofibroblast
+
+Description: Activated fibroblasts with smooth muscle-like contractile features that deposit extracellular matrix and drive fibrotic remodeling in the lung parenchyma.
+
+Genes:
+- ACTA2, COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, COL6A1, COL6A2, COL6A3, FN1, EDA, EDNRA
+- TGFBR1, TGFBR2, SMAD2, SMAD3, TGFB1, CTGF, CCN2, DCN, BGN, LUM, FBLN1, FBN1
+- FAP, PDPN, THY1, VIM, DES, TAGLN, CNN1, LMOD1, TPM2, CALD1, SMTN, MYLK
+- ITGA5, ITGB1, ITGAV, PDGFRA
+
+### pericyte
+
+Description: Perivascular mural cells wrapping pulmonary capillaries and small vessels that regulate microvascular stability and angiogenesis.
+
+Genes:
+- CSPG4, PDGFRB, ABCC9, KCNJ8, NOTCH3, DES, ACTA2, TAGLN, CNN1, VIM, CAV1, CAV2
+- CAVIN1, NG2, MCAM, RGS5, STEAP4, SLC6A12, SLC7A5, SLC38A5, COL1A1, COL3A1, FN1, DCN
+- LUM, BGN, LAMA4, LAMB1, FBLN1, ELN, MFAP4, ITGA5, ITGB1, PECAM1, VWF, CDH5
+- FLT1, KDR, TEK, ANGPT1
+
+### vascular_smooth_muscle_cell
+
+Description: Smooth muscle cells of pulmonary arteries and veins that regulate vascular tone and are distinct from airway smooth muscle in their regulatory gene expression.
+
+Genes:
+- ACTA2, MYH11, TAGLN, CNN1, DES, LMOD1, TPM2, MYLK, MYL9, MYL12A, MYL12B, ACTG2
+- CALD1, SMTN, TNN, TNNC1, TNNT1, VIM, CAV1, CAV2, CAVIN1, ABCC9, KCNJ8, NOTCH3
+- EDNRA, EDNRB, PDGFRB, ITGA8, ITGB1, LAMA4, LAMB1, COL1A1, COL3A1, FN1, DCN, BGN
+- LUM, FBLN1, ELN, MFAP4
+
+## vein endothelial cell
+
+### lymphatic_endothelial_cell
+
+Description: Lymphatic endothelial cells expressing PROX1, LYVE1, and PDPN, forming lymphatic vessels that drain interstitial fluid and immune cells from the lung parenchyma.
+
+Genes:
+- PROX1, LYVE1, PDPN, FLT4, VEGFR3, CDH5, PECAM1, VWF, CLDN5, ESAM, ENG, TIE1
+- TEK, SOX18, ERG, FLI1, GATA2, MECOM, EMCN, ITGA5, ITGB1, CFD, FBLN2, ABCB1
+- ABCC4, SLC38A5, SEMA3E, NRP2, COUP-TFII, NR2F2, PLVAP, RELA, CCL21, VEGFC, VEGFD
+
+### pulmonary_artery_endothelial_cell
+
+Description: Endothelial cells of pulmonary arteries marked by arterial identity genes such as EFNB2, EPHB2, and GJA5, governing arterial blood flow and vascular remodeling.
+
+Genes:
+- CDH5, PECAM1, VWF, CLDN5, ESAM, ENG, TIE1, TEK, KDR, FLT1, SOX18, ERG
+- FLI1, GATA2, NOTCH4, DLL4, HEY1, EFNB2, EPHB2, SEMA3G, CXCR4, ROBO4, PLVAP, MECOM
+- ABCG2, ABCB1, FBLN5, FBLN2, EMCN, ITGA5, ITGB1, CFD, SLC38A5, GJA5, HEY2, NR2F1
+
+### pulmonary_capillary_aerocyte
+
+Description: A specialized capillary endothelial subtype (aerocyte) expressing CAR4 and EDNRB, optimized for gas exchange at the alveolar air-blood barrier.
+
+Genes:
+- CAR4, EDNRB, PLVAP, EMP2, CA4, CA12, SLC6A4, AQP1, CDH5, PECAM1, VWF, CLDN5
+- ESAM, ENG, TIE1, TEK, KDR, FLT1, SOX18, ERG, FLI1, GATA2, ROBO4, MECOM
+- EMCN, LYVE1, PROX1, ITGA5, ITGB1, CFD, FBLN2, ABCB1, ABCC4, SLC38A5, SLC6A12, SEMA3E
+
+### pulmonary_capillary_gEnd_cell
+
+Description: A general capillary endothelial subtype (gEnd) marked by APLNR and ACE, serving as the predominant capillary population involved in vascular homeostasis and immune cell trafficking.
+
+Genes:
+- APLNR, G0S2, CD36, SLC6A4, ACE, EDN1, VWF, CDH5, PECAM1, CLDN5, ESAM, ENG
+- TIE1, TEK, KDR, FLT1, SOX18, ERG, FLI1, GATA2, ROBO4, MECOM, EMCN, ITGA5
+- ITGB1, CFD, FBLN2, ABCB1, ABCC4, SLC38A5, SEMA3G, PLVAP, CAR4, EDNRB, CA4, AQP1
+
+### pulmonary_vein_endothelial_cell
+
+Description: Endothelial cells lining pulmonary veins characterized by venous markers such as NRP2, EPHB4, and NR2F2, regulating venous return and vascular tone in the lung.
+
+Genes:
+- NRP2, CDH5, PECAM1, VWF, CLDN5, ESAM, ENG, TIE1, TEK, KDR, FLT1, SOX18
+- ERG, FLI1, GATA2, NOTCH4, DLL4, HEY1, EPHB4, COUP-TFII, NR2F2, SEMA3E, PLVAP, MECOM
+- SLC38A5, SLC6A12, ABCB1, ABCC4, CFD, FBLN2, EMCN, LYVE1, PROX1, ITGA5, ITGB1
+
